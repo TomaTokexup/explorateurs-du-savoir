@@ -22,7 +22,7 @@
     "explication": "Le double, c'est 2 fois le nombre : 45 + 45 = 90."
   },
   {
-    "enonce": "Quel est l'arrondi de 45,3 a l'entier le plus proche ?",
+    "enonce": "Quel est l'arrondi de 45,3 à l'entier le plus proche ?",
     "choix": [
       "45",
       "45,3",
@@ -30,18 +30,18 @@
       "45,5"
     ],
     "bonneReponse": 0,
-    "explication": "L'arrondi à l'entier le plus proche de 45,3 est 45."
+    "explication": "Le chiffre des dixièmes est 3. Comme 3 est plus petit que 5, on arrondit à l’entier inférieur : 45."
   },
   {
-    "enonce": "Un triangle rectangle a un angle droit. Quel est son angle ?",
+    "enonce": "Combien mesure un angle droit ?",
     "choix": [
-      "90",
-      "45",
-      "60",
-      "30"
+      "90°",
+      "45°",
+      "60°",
+      "30°"
     ],
     "bonneReponse": 0,
-    "explication": "Dans un triangle rectangle, l'angle droit mesure 90 degrés."
+    "explication": "Le sais-tu ? Un triangle rectangle a toujours un angle droit de 90 degrés."
   },
   {
     "enonce": "Combien y a-t-il de côtés dans un hexagone ?",
@@ -52,6 +52,6 @@
       "9"
     ],
     "bonneReponse": 0,
-    "explication": "Un hexagone a 6 côtés."
+    "explication": "Hexa veut dire six en grec : un hexagone a 6 côtés."
   }
 ]
