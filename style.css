@@ -1,0 +1,386 @@
+/* =========================================================
+   Explorateurs du Savoir — feuille de style commune
+   Idée directrice : une page de cahier d'écolier (lignes Seyès,
+   marge rouge, encre bleue) et des matières rangées comme des
+   cahiers avec leur protège-cahier de couleur.
+   ========================================================= */
+
+/* ---------- 1. Variables (les "réglages" du design) ---------- */
+:root {
+  /* Couleurs de base */
+  --papier: #fdfdfb;          /* fond de la page */
+  --ligne: #d4e3f3;           /* lignes horizontales du cahier */
+  --ligne-fine: #ecf2f9;      /* petites lignes intermédiaires */
+  --marge: #e2574c;           /* trait rouge de la marge */
+  --encre: #23305a;           /* texte principal, comme un stylo bleu foncé */
+  --encre-douce: #5a6688;     /* texte secondaire */
+
+  /* Couleur de chaque matière (protège-cahiers) */
+  --maths: #2f6fdb;
+  --francais: #d9433a;
+  --anglais: #7a4cc2;
+  --histoire: #e0812a;
+  --geographie: #2e9e6a;
+  --physique: #d9a514;
+  --svt: #1c96a1;
+  --programmation: #cf4a8a;
+
+  /* Corrections */
+  --juste: #2e9e6a;
+  --juste-fond: #e3f5ec;
+  --faux: #d9433a;
+  --faux-fond: #fdeceb;
+
+  /* Typographie */
+  --police-titre: "Fredoka", "Trebuchet MS", sans-serif;
+  --police-texte: "Andika", "Verdana", sans-serif;
+
+  /* Espacements (multiples de la hauteur d'une ligne de cahier) */
+  --ligne-cahier: 32px;
+  --rayon: 14px;
+}
+
+/* ---------- 2. Base ---------- */
+* {
+  box-sizing: border-box;   /* la taille d'un élément inclut ses bordures */
+}
+
+body {
+  margin: 0;
+  font-family: var(--police-texte);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--encre);
+  background-color: var(--papier);
+  /* Les lignes du cahier, dessinées en CSS (pas d'image) */
+  background-image:
+    linear-gradient(to bottom, var(--ligne) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--ligne-fine) 1px, transparent 1px);
+  background-size: 100% var(--ligne-cahier), 100% calc(var(--ligne-cahier) / 4);
+}
+
+/* La marge rouge, à gauche de la page */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 56px;
+  width: 2px;
+  background: var(--marge);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: calc(var(--ligne-cahier) * 1.5) 24px calc(var(--ligne-cahier) * 3) 88px;
+}
+
+h1, h2 {
+  font-family: var(--police-titre);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+/* Contour bien visible quand on navigue au clavier (accessibilité) */
+:focus-visible {
+  outline: 3px solid var(--encre);
+  outline-offset: 3px;
+}
+
+/* ---------- 3. En-tête de l'accueil ---------- */
+.entete h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  letter-spacing: -0.01em;
+}
+
+.entete p {
+  max-width: 34em;
+  margin: 12px 0 0;
+  font-size: 1.25rem;
+  color: var(--encre-douce);
+}
+
+/* ---------- 4. La grille des cahiers (matières) ---------- */
+.cahiers {
+  list-style: none;
+  padding: 0;
+  margin: calc(var(--ligne-cahier) * 1.5) 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 28px;
+}
+
+.cahier {
+  /* Chaque cahier reçoit sa couleur via la variable --couleur */
+  --couleur: var(--encre);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  aspect-ratio: 3 / 4;                 /* format d'un cahier */
+  padding: 18px 16px;
+  border-radius: 6px 12px 12px 6px;    /* le dos du cahier est à gauche */
+  background-color: var(--couleur);
+  color: var(--encre);
+  text-decoration: none;
+  box-shadow: inset 10px 0 0 rgba(0, 0, 0, 0.12), 0 3px 0 rgba(35, 48, 90, 0.18);
+  transition: transform 0.15s ease;
+}
+
+/* L'étiquette blanche collée sur le cahier */
+.etiquette {
+  background: white;
+  border-radius: 8px;
+  padding: 12px 10px;
+  text-align: center;
+  border: 2px solid rgba(35, 48, 90, 0.12);
+}
+
+.etiquette .icone {
+  display: block;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.etiquette .nom {
+  display: block;
+  font-family: var(--police-titre);
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+a.cahier:hover {
+  transform: translateY(-4px) rotate(-1deg);
+}
+
+/* Matière pas encore disponible */
+.cahier.bientot {
+  filter: saturate(0.35);
+  opacity: 0.75;
+}
+
+.cahier.bientot .tampon {
+  position: absolute;
+  bottom: 14px;
+  right: 10px;
+  transform: rotate(-8deg);
+  padding: 2px 10px;
+  border: 2px solid white;
+  border-radius: 6px;
+  color: white;
+  font-family: var(--police-titre);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Couleur de chaque matière */
+.maths         { --couleur: var(--maths); }
+.francais      { --couleur: var(--francais); }
+.anglais       { --couleur: var(--anglais); }
+.histoire      { --couleur: var(--histoire); }
+.geographie    { --couleur: var(--geographie); }
+.physique      { --couleur: var(--physique); }
+.svt           { --couleur: var(--svt); }
+.programmation { --couleur: var(--programmation); }
+
+/* ---------- 5. Page d'exercice ---------- */
+.retour {
+  display: inline-block;
+  margin-bottom: var(--ligne-cahier);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--encre-douce);
+}
+
+.retour:hover {
+  color: var(--encre);
+  text-decoration: underline;
+}
+
+.titre-matiere {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* Petit carré de couleur de la matière à côté du titre */
+.titre-matiere::before {
+  content: "";
+  width: 0.55em;
+  height: 0.75em;
+  border-radius: 3px 6px 6px 3px;
+  background: var(--couleur);
+}
+
+.progression {
+  margin: 8px 0 var(--ligne-cahier);
+  color: var(--encre-douce);
+}
+
+.question {
+  max-width: 640px;
+}
+
+.enonce {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+
+.reponses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.reponse {
+  font-family: var(--police-titre);
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 18px 12px;
+  border: 3px solid var(--couleur);
+  border-radius: var(--rayon);
+  background: white;
+  color: var(--encre);
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.reponse:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--couleur) 12%, white);
+}
+
+.reponse:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.reponse:disabled {
+  cursor: default;
+}
+
+/* Après le clic : bonne réponse en vert, mauvaise en rouge, les autres s'effacent */
+.reponse.juste {
+  border-color: var(--juste);
+  background-color: var(--juste-fond);
+}
+
+.reponse.faux {
+  border-color: var(--faux);
+  background-color: var(--faux-fond);
+  text-decoration: line-through;
+}
+
+.reponse.attenuee {
+  opacity: 0.4;
+}
+
+/* Bloc de correction */
+.correction {
+  margin-top: 28px;
+  padding: 16px 20px;
+  border-left: 6px solid;
+  border-radius: 0 var(--rayon) var(--rayon) 0;
+  background: white;
+}
+
+.correction[hidden] {
+  display: none;
+}
+
+.correction.juste { border-color: var(--juste); }
+.correction.faux  { border-color: var(--faux); }
+
+.correction .verdict {
+  font-family: var(--police-titre);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.correction.juste .verdict { color: var(--juste); }
+.correction.faux .verdict  { color: var(--faux); }
+
+.correction .explication {
+  margin: 0;
+}
+
+.bouton-suivant {
+  margin-top: 24px;
+  font-family: var(--police-titre);
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--rayon);
+  background: var(--encre);
+  color: white;
+  cursor: pointer;
+}
+
+.bouton-suivant:hover {
+  background: color-mix(in srgb, var(--encre) 85%, white);
+}
+
+.bouton-suivant[hidden] {
+  display: none;
+}
+
+/* Écran de fin */
+.bilan .score {
+  font-family: var(--police-titre);
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 600;
+  margin: 0;
+  color: var(--couleur);
+}
+
+/* ---------- 6. Écrans étroits (téléphones) ---------- */
+@media (max-width: 560px) {
+  body::before {
+    left: 24px;
+  }
+
+  .page {
+    padding-left: 40px;
+    padding-right: 16px;
+  }
+
+  .cahiers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .cahier {
+    padding: 12px 10px 12px 16px;
+  }
+
+  .etiquette {
+    padding: 10px 4px;
+  }
+
+  .etiquette .nom {
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+  }
+
+  .reponses {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- 7. Respect du réglage "réduire les animations" ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

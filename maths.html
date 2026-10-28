@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathématiques – Explorateurs du Savoir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- La classe "maths" donne la couleur de la matière à toute la page -->
+<body class="maths">
+    <main class="page">
+        <a class="retour" href="index.html">← Retour aux cahiers</a>
+
+        <h1 class="titre-matiere">Mathématiques</h1>
+        <p class="progression" id="progression"></p>
+
+        <!-- Zone de la question : vide au départ, remplie par script.js -->
+        <section class="question" id="zone-question">
+            <p class="enonce" id="enonce"></p>
+            <div class="reponses" id="reponses"></div>
+
+            <!-- aria-live : un lecteur d'écran annonce la correction dès qu'elle apparaît -->
+            <div class="correction" id="correction" aria-live="polite" hidden>
+                <p class="verdict" id="verdict"></p>
+                <p class="explication" id="explication"></p>
+            </div>
+
+            <button class="bouton-suivant" id="bouton-suivant" hidden>Question suivante</button>
+        </section>
+
+        <!-- Écran de fin, caché tant que le quiz n'est pas terminé -->
+        <section class="bilan" id="bilan" hidden>
+            <p class="score" id="score"></p>
+            <p id="message-bilan"></p>
+            <button class="bouton-suivant" id="bouton-recommencer">Recommencer</button>
+        </section>
+    </main>
+
+    <!-- Le script est chargé à la fin, quand tous les éléments de la page existent -->
+    <script src="script.js"></script>
+</body>
+
+</html>
