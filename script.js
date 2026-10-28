@@ -2,37 +2,60 @@
 // Explorateurs du Savoir — moteur de QCM
 // =========================================================
 
-// ---------- 1. Les données : la liste des questions ----------
-// Chaque question est un "objet" avec 4 propriétés.
-// "bonneReponse" est la POSITION de la bonne réponse dans la liste
-// des choix, en comptant à partir de 0 (0 = 1er choix, 1 = 2e choix...).
-// À la phase 3, cette liste sortira du code pour aller dans un fichier JSON.
-const questions = [
-  {
-    enonce: "Combien font 7 × 8 ?",
-    choix: ["54", "56", "48", "64"],
-    bonneReponse: 1,
-    explication: "7 × 8 = 56. Astuce : 5, 6, 7, 8 → 56 = 7 × 8 !"
-  },
-  {
-    enonce: "Quel est le double de 45 ?",
-    choix: ["80", "85", "90", "95"],
-    bonneReponse: 2,
-    explication: "Le double, c'est 2 fois le nombre : 45 + 45 = 90."
-  },
-  {
-    enonce: "Combien y a-t-il de minutes dans 2 heures ?",
-    choix: ["100", "120", "200", "60"],
-    bonneReponse: 1,
-    explication: "1 heure = 60 minutes, donc 2 heures = 60 + 60 = 120 minutes."
-  },
-  {
-    enonce: "Quelle fraction représente la moitié ?",
-    choix: ["1/3", "1/4", "2/2", "1/2"],
-    bonneReponse: 3,
-    explication: "La moitié, c'est 1 part sur 2 parts égales : 1/2."
+// ---------- 1. Les données ----------
+// Les questions ne sont plus écrites ici : elles sont lues dans un
+// fichier JSON produit par un script Python (outils/generer_maths.py).
+// Le fichier à lire est indiqué dans maths.html (attribut data-fichier).
+// Format d'une question :
+//   { "enonce": "...", "choix": ["...", ...], "bonneReponse": 0, "explication": "..." }
+// "bonneReponse" est la POSITION de la bonne réponse dans "choix", à partir de 0.
+let questions = [];
+
+// Mélange les choix d'une question (pour que la bonne réponse ne soit
+// pas toujours au même endroit) et recalcule la position de la bonne réponse.
+function melangerChoix(question) {
+  const bonneReponseTexte = question.choix[question.bonneReponse];
+  const choixMelanges = question.choix.slice();          // copie de la liste
+  for (let i = choixMelanges.length - 1; i > 0; i--) {   // mélange de Fisher-Yates
+    const j = Math.floor(Math.random() * (i + 1));
+    [choixMelanges[i], choixMelanges[j]] = [choixMelanges[j], choixMelanges[i]];
   }
-];
+  return {
+    enonce: question.enonce,
+    choix: choixMelanges,
+    bonneReponse: choixMelanges.indexOf(bonneReponseTexte),
+    explication: question.explication
+  };
+}
+
+// Va chercher le fichier JSON, puis démarre le quiz.
+// "async/await" : on attend la réponse du serveur sans bloquer la page.
+let questionsOriginales = [];
+
+async function chargerQuestions() {
+  const fichier = document.body.dataset.fichier;   // ex. "donnees/maths.json"
+  try {
+    const reponse = await fetch(fichier);
+    if (!reponse.ok) {
+      throw new Error("fichier introuvable (" + reponse.status + ")");
+    }
+    questionsOriginales = await reponse.json();
+    demarrer();
+  } catch (erreur) {
+    // Message pour l'adulte qui teste : la cause la plus fréquente est
+    // d'avoir ouvert la page en double-cliquant (file://) au lieu de passer par un serveur.
+    enonce.textContent = "Impossible de charger les questions.";
+    progression.textContent = "Erreur : " + erreur.message;
+    console.error(erreur);
+  }
+}
+
+function demarrer() {
+  questions = questionsOriginales.map(melangerChoix);
+  numeroQuestion = 0;
+  score = 0;
+  afficherQuestion();
+}
 
 // ---------- 2. L'état du quiz (ce qui change pendant le jeu) ----------
 let numeroQuestion = 0;   // index de la question affichée
@@ -146,12 +169,10 @@ function afficherBilan() {
 }
 
 boutonRecommencer.addEventListener("click", function () {
-  numeroQuestion = 0;
-  score = 0;
   bilan.hidden = true;
   zoneQuestion.hidden = false;
-  afficherQuestion();
+  demarrer();   // nouveau mélange des choix à chaque partie
 });
 
 // ---------- 8. Démarrage ----------
-afficherQuestion();
+chargerQuestions();
