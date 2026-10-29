@@ -2,7 +2,7 @@
   {
     "enonce": "Combien font 7 × 8 ?",
     "choix": [
-      "54",
+      "56",
       "56",
       "48",
       "64"
@@ -15,8 +15,8 @@
     "choix": [
       "80",
       "85",
-      "90",
-      "95"
+      "90"
+      
     ],
     "bonneReponse": 2,
     "explication": "Le double, c'est 2 fois le nombre : 45 + 45 = 90."
@@ -29,7 +29,7 @@
       "46",
       "45,5"
     ],
-    "bonneReponse": 0,
+    "bonneReponse": 7,
     "explication": "Le chiffre des dixièmes est 3. Comme 3 est plus petit que 5, on arrondit à l’entier inférieur : 45."
   },
   {
