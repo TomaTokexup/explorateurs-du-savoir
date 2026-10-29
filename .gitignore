@@ -1,0 +1,8 @@
+# Secrets : ne jamais publier
+.env
+
+# Environnement virtuel Python
+.venv/
+
+# Fichiers temporaires de Python
+__pycache__/
