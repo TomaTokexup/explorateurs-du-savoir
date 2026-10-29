@@ -6,3 +6,6 @@
 
 # Fichiers temporaires de Python
 __pycache__/
+
+# Brouillons générés par l'IA, en attente de relecture
+donnees/brouillon*.json

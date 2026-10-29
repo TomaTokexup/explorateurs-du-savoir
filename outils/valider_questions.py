@@ -59,4 +59,5 @@ def main():
         print(f"OK : {len(questions)} questions valides dans {FICHIER}")
 
 
-main()
+if __name__ == "__main__":
+    main()
