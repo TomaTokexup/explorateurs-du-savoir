@@ -24,6 +24,11 @@ def verifier_question(question, numero):
     if len(choix) != 4:
         erreurs.append(f"Question {numero} : il y a {len(choix)} choix au lieu de 4")
 
+    # Contrôle 5 : bonneReponse est un nombre entier
+    if not isinstance(bonne, int):
+        erreurs.append(f"Question {numero} : bonneReponse doit être un nombre entier, pas {bonne!r}")
+        return erreurs   # impossible de vérifier la position sans un nombre
+
     # Contrôle 3 : bonneReponse est une position valide (0 à 3)
     if not (0 <= bonne < len(choix)):
         erreurs.append(f"Question {numero} : bonneReponse = {bonne} n'est pas une position valide dans choix")
@@ -32,10 +37,7 @@ def verifier_question(question, numero):
     if len(set(choix)) != len(choix):
         erreurs.append(f"Question {numero} : il y a des choix en double")
 
-    # Contrôle 5 : bonneReponse est un nombre entier
-    if not isinstance(bonne, int):
-        erreurs.append(f"Question {numero} : bonneReponse doit être un nombre entier, pas {bonne!r}")
-        return erreurs   # impossible de vérifier la position sans un nombre
+
 
     return erreurs
 
