@@ -1,42 +1,108 @@
-# Génère le fichier de questions de maths au format JSON
+# Génère les fichiers de questions de maths (P4) au format JSON, un fichier par thème
 import json
 
-# Une liste de dictionnaires : chaque dictionnaire est une question
-questions = [
-    {
-        "enonce": "Combien font 7 × 8 ?",
-        "choix": ["54", "56", "48", "64"],
-        "bonneReponse": 1,
-        "explication": "7 × 8 = 56. Astuce : 5, 6, 7, 8 → 56 = 7 × 8 !"
-    },
-    {
-        "enonce": "Quel est le double de 45 ?",
-        "choix": ["80", "85", "90", "95"],
-        "bonneReponse": 2,
-        "explication": "Le double, c'est 2 fois le nombre : 45 + 45 = 90."
-    },
-    {
-        "enonce": "Quel est l'arrondi de 45,3 à l'entier le plus proche ?",
-        "choix": ["45", "45,3", "46", "45,5"],
-        "bonneReponse": 0,
-        "explication": "Le chiffre des dixièmes est 3. Comme 3 est plus petit que 5, on arrondit à l’entier inférieur : 45."
-    },
-    {
-        "enonce": "Combien mesure un angle droit ?",
-        "choix": ["90°", "45°", "60°", "30°"],
-        "bonneReponse": 0,
-        "explication": "Le sais-tu ? Un triangle rectangle a toujours un angle droit de 90 degrés."
-    },
-    {
-        "enonce": "Combien y a-t-il de côtés dans un hexagone ?",
-        "choix": ["6", "7", "8", "9"],
-        "bonneReponse": 0,
-        "explication": "Hexa veut dire six en grec : un hexagone a 6 côtés."
-    },
-]
+# Un dictionnaire de listes : chaque clé est un thème, et chaque valeur, la liste de ses questions
+themes = {
+    "operations": [
+        {
+            "enonce": "Combien font 7 × 8 ?",
+            "choix": ["54", "56", "48", "64"],
+            "bonneReponse": 1,
+            "explication": "7 × 8 = 56. Astuce : 5, 6, 7, 8 → 56 = 7 × 8 !"
+        },
+        {
+            "enonce": "Quel est le double de 45 ?",
+            "choix": ["80", "85", "90", "95"],
+            "bonneReponse": 2,
+            "explication": "Le double, c'est 2 fois le nombre : 45 + 45 = 90."
+        },
+    ],
+    "espace-et-formes": [
+        {
+            "enonce": "Combien mesure un angle droit ?",
+            "choix": ["90°", "45°", "60°", "30°"],
+            "bonneReponse": 0,
+            "explication": "Le sais-tu ? Un triangle rectangle a toujours un angle droit de 90 degrés."
+        },
+        {
+            "enonce": "Combien y a-t-il de côtés dans un hexagone ?",
+            "choix": ["6", "7", "8", "9"],
+            "bonneReponse": 0,
+            "explication": "Hexa veut dire six en grec : un hexagone a 6 côtés."
+        },
+    ],
+    "nombres": [
+        {
+            "enonce": "On a colorié 3 parts sur 4 égales d'un rectangle. Quelle fraction représente la partie coloriée ?",
+            "choix": ["4/3", "3/4", "3/7", "1/3"],
+            "bonneReponse": 1,
+            "explication": "Le dénominateur (en bas) indique le nombre total de parts égales, et le numérateur (en haut) le nombre de parts coloriées. Ici, c'est 3 parts sur 4, donc 3/4."
+        },
+        {
+            "enonce": "Combien valent les 3/4 de 20 € ?",
+            "choix": ["12 €", "5 €", "15 €", "60 €"],
+            "bonneReponse": 2,
+            "explication": "On calcule d'abord le quart : 20 € ÷ 4 = 5 €, puis on multiplie par 3 : 5 € × 3 = 15 €."
+        },
+        {
+            "enonce": "Quelle fraction est égale à 1/2 ?",
+            "choix": ["2/4", "2/5", "1/4", "2/3"],
+            "bonneReponse": 0,
+            "explication": "Une fraction égale à 1/2 représente la même quantité. En multipliant le haut et le bas par 2, on obtient 2/4, qui est bien égal à 1/2."
+        },
+        {
+            "enonce": "Quelle est la plus grande fraction ?",
+            "choix": ["2/9", "2/3", "2/7", "2/5"],
+            "bonneReponse": 1,
+            "explication": "Quand les numérateurs sont égaux, plus le dénominateur est petit, plus la fraction est grande. Une part sur 3 est plus grande qu'une part sur 9."
+        },
+        {
+            "enonce": "Calcule : 2/7 + 3/7",
+            "choix": ["5/14", "1/7", "6/7", "5/7"],
+            "bonneReponse": 3,
+            "explication": "Pour additionner des fractions qui ont le même dénominateur, on additionne les numérateurs et on garde le même dénominateur : 2 + 3 = 5, donc 5/7."
+        },
+        {
+            "enonce": "Calcule : 7/8 − 3/8",
+            "choix": ["10/8", "4/16", "4/8", "3/8"],
+            "bonneReponse": 2,
+            "explication": "Avec le même dénominateur, on soustrait les numérateurs et on garde le dénominateur : 7 − 3 = 4, donc 4/8, c'est-à-dire la moitié. On ne soustrait jamais les dénominateurs."
+        },
+        {
+            "enonce": "Dans une classe de 24 élèves, les 2/3 sont des filles. Combien y a-t-il de filles ?",
+            "choix": ["16", "8", "18", "36"],
+            "bonneReponse": 0,
+            "explication": "On divise d'abord 24 par 3 pour trouver le tiers : 24 ÷ 3 = 8. Puis on multiplie par 2 : 8 × 2 = 16 filles."
+        },
+        {
+            "enonce": "Quelle est l'écriture décimale de la fraction 3/10 ?",
+            "choix": ["3,10", "0,03", "10,3", "0,3"],
+            "bonneReponse": 3,
+            "explication": "Une fraction de dixièmes s'écrit avec un chiffre après la virgule. 3/10 correspond donc à 0,3."
+        },
+        {
+            "enonce": "Un ruban mesure 3/4 de mètre. Quelle est sa longueur en centimètres ?",
+            "choix": ["34 cm", "75 cm", "300 cm", "7,5 cm"],
+            "bonneReponse": 1,
+            "explication": "Un mètre vaut 100 cm. Le quart de 100 cm est 25 cm, donc 3/4 de mètre valent 3 × 25 cm = 75 cm."
+        },
+        {
+            "enonce": "Combien de demis y a-t-il dans 3 tartes entières ?",
+            "choix": ["3", "5", "6", "1,5"],
+            "bonneReponse": 2,
+            "explication": "Chaque tarte entière contient 2 demis. Pour 3 tartes, on fait 3 × 2 = 6 demis."
+        },
+        {
+            "enonce": "Quel est l'arrondi de 45,3 à l'entier le plus proche ?",
+            "choix": ["45", "45,3", "46", "45,5"],
+            "bonneReponse": 0,
+            "explication": "Le chiffre des dixièmes est 3. Comme 3 est plus petit que 5, on arrondit à l’entier inférieur : 45."
+        },
+    ],
+}
 
-# Écriture du fichier
-with open("donnees/maths.json", "w", encoding="utf-8") as fichier:
-    json.dump(questions, fichier, ensure_ascii=False, indent=2)
-
-print(f"{len(questions)} questions écrites dans donnees/maths.json")
+# Écriture d'un fichier par thème
+for theme, questions in themes.items():
+    with open(f"donnees/p4/maths/{theme}.json", "w", encoding="utf-8") as fichier:
+        json.dump(questions, fichier, ensure_ascii=False, indent=2)
+    print(f"{len(questions)} questions écrites dans donnees/p4/maths/{theme}.json")

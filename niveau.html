@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes cahiers – Explorateurs du Savoir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- data-page : indique au script quelle page il doit construire -->
+<body data-page="niveau">
+    <main class="page">
+        <a class="retour" href="index.html">← Changer de classe</a>
+
+        <header class="entete">
+            <h1 id="titre-niveau">Mes cahiers</h1>
+            <p>Choisis un cahier pour commencer à réviser.</p>
+        </header>
+
+        <!-- Rempli par script.js : un cahier par matière -->
+        <ul class="cahiers" id="liste-cahiers"></ul>
+        <p class="progression" id="progression"></p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

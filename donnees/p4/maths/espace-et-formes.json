@@ -1,0 +1,24 @@
+[
+  {
+    "enonce": "Combien mesure un angle droit ?",
+    "choix": [
+      "90°",
+      "45°",
+      "60°",
+      "30°"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le sais-tu ? Un triangle rectangle a toujours un angle droit de 90 degrés."
+  },
+  {
+    "enonce": "Combien y a-t-il de côtés dans un hexagone ?",
+    "choix": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "bonneReponse": 0,
+    "explication": "Hexa veut dire six en grec : un hexagone a 6 côtés."
+  }
+]

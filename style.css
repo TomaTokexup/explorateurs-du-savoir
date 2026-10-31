@@ -19,10 +19,7 @@
   --maths: #2f6fdb;
   --francais: #d9433a;
   --anglais: #7a4cc2;
-  --histoire: #e0812a;
-  --geographie: #2e9e6a;
-  --physique: #d9a514;
-  --svt: #1c96a1;
+  --decouverte: #2e9e6a;
   --programmation: #cf4a8a;
 
   /* Corrections */
@@ -108,6 +105,60 @@ a {
   color: var(--encre-douce);
 }
 
+/* ---------- 3 bis. Choix du niveau (accueil) ---------- */
+.consigne {
+  margin-top: calc(var(--ligne-cahier) * 1.5);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+.niveaux {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 720px;
+}
+
+/* Chaque niveau ressemble à une étiquette de porte de classe */
+.niveau {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px 12px 18px;
+  border: 3px solid var(--encre);
+  border-radius: var(--rayon);
+  background: white;
+  text-decoration: none;
+  box-shadow: 0 5px 0 var(--encre);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.niveau:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 var(--encre);
+}
+
+.niveau:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 var(--encre);
+}
+
+.niveau-nom {
+  font-family: var(--police-titre);
+  font-weight: 600;
+  font-size: clamp(3rem, 9vw, 4.5rem);
+  line-height: 1;
+}
+
+.niveau-equivalent {
+  margin-top: 8px;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--encre-douce);
+}
+
 /* ---------- 4. La grille des cahiers (matières) ---------- */
 .cahiers {
   list-style: none;
@@ -154,8 +205,19 @@ a {
   display: block;
   font-family: var(--police-titre);
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.etiquette .precision {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--encre-douce);
+}
+
+.etiquette .precision:empty {
+  display: none;
 }
 
 a.cahier:hover {
@@ -186,10 +248,7 @@ a.cahier:hover {
 .maths         { --couleur: var(--maths); }
 .francais      { --couleur: var(--francais); }
 .anglais       { --couleur: var(--anglais); }
-.histoire      { --couleur: var(--histoire); }
-.geographie    { --couleur: var(--geographie); }
-.physique      { --couleur: var(--physique); }
-.svt           { --couleur: var(--svt); }
+.decouverte    { --couleur: var(--decouverte); }
 .programmation { --couleur: var(--programmation); }
 
 /* ---------- 5. Page d'exercice ---------- */
@@ -220,6 +279,114 @@ a.cahier:hover {
   height: 0.75em;
   border-radius: 3px 6px 6px 3px;
   background: var(--couleur);
+}
+
+.titre-matiere a {
+  text-decoration: none;
+}
+
+.sous-titre {
+  margin-top: 4px;
+  font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+  color: var(--couleur);
+}
+
+.sous-titre[hidden] {
+  display: none;
+}
+
+/* Sommaire du cahier : titre ........ niveau, comme une table des matières */
+.sommaire ol {
+  max-width: 640px;
+  margin: 0;
+  padding-left: 1.6em;
+  font-size: 1.35rem;
+}
+
+.sommaire li {
+  padding-left: 0.3em;
+}
+
+.sommaire li::marker {
+  font-family: var(--police-titre);
+  font-weight: 600;
+  color: var(--couleur);
+}
+
+.chapitre {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-height: var(--ligne-cahier);
+  padding: 6px 0;
+  text-decoration: none;
+}
+
+.chapitre-titre {
+  font-weight: 700;
+}
+
+.chapitre-pointilles {
+  flex: 1;
+  border-bottom: 3px dotted color-mix(in srgb, var(--encre) 35%, transparent);
+  transform: translateY(-5px);
+}
+
+.chapitre-compte {
+  font-size: 1rem;
+  color: var(--encre-douce);
+  white-space: nowrap;
+}
+
+/* Le niveau à côté du nom de la matière */
+.niveau-matiere {
+  font-size: 0.45em;
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: var(--couleur);
+  color: white;
+}
+
+/* Le bloc "Révision mélangée", en tête du sommaire */
+.melange {
+  display: block;
+  max-width: 640px;
+  margin-bottom: var(--ligne-cahier);
+  padding: 14px 20px;
+  border: 3px dashed var(--couleur);
+  border-radius: var(--rayon);
+  background: white;
+  text-decoration: none;
+}
+
+.melange-titre {
+  display: block;
+  font-family: var(--police-titre);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--couleur);
+}
+
+.melange-detail {
+  display: block;
+  color: var(--encre-douce);
+}
+
+.melange:hover {
+  background: color-mix(in srgb, var(--couleur) 8%, white);
+}
+
+.chapitre:hover .chapitre-titre {
+  color: var(--couleur);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.lien-sommaire {
+  display: inline-block;
+  margin: 24px 0 0 20px;
+  font-weight: 700;
+  color: var(--encre-douce);
 }
 
 .progression {
@@ -375,6 +542,14 @@ a.cahier:hover {
 
   .reponses {
     grid-template-columns: 1fr;
+  }
+
+  .niveaux {
+    gap: 12px;
+  }
+
+  .niveau {
+    padding: 16px 6px 12px;
   }
 }
 

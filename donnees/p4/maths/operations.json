@@ -1,0 +1,24 @@
+[
+  {
+    "enonce": "Combien font 7 × 8 ?",
+    "choix": [
+      "54",
+      "56",
+      "48",
+      "64"
+    ],
+    "bonneReponse": 1,
+    "explication": "7 × 8 = 56. Astuce : 5, 6, 7, 8 → 56 = 7 × 8 !"
+  },
+  {
+    "enonce": "Quel est le double de 45 ?",
+    "choix": [
+      "80",
+      "85",
+      "90",
+      "95"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le double, c'est 2 fois le nombre : 45 + 45 = 90."
+  }
+]

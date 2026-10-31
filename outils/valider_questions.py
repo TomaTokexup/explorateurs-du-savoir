@@ -1,10 +1,11 @@
 # Vérifie que le fichier de questions respecte les règles du projet
+import argparse
 import json
 import sys
 
-FICHIER = "donnees/maths.json"
-CHAMPS_OBLIGATOIRES = ["enonce", "choix", "bonneReponse", "explication"]
+from dotenv import parser
 
+CHAMPS_OBLIGATOIRES = ["enonce", "choix", "bonneReponse", "explication"]
 
 def verifier_question(question, numero):
     """Renvoie la liste des erreurs trouvées dans une question."""
@@ -43,7 +44,10 @@ def verifier_question(question, numero):
 
 
 def main():
-    with open(FICHIER, encoding="utf-8") as fichier:
+    parser = argparse.ArgumentParser(description="Vérifie un fichier de questions.")
+    parser.add_argument("fichier", help="chemin du fichier JSON à vérifier")
+    args = parser.parse_args()
+    with open(args.fichier, encoding="utf-8") as fichier:
         questions = json.load(fichier)
 
     toutes_les_erreurs = []
@@ -51,12 +55,12 @@ def main():
         toutes_les_erreurs.extend(verifier_question(question, numero))
 
     if toutes_les_erreurs:
-        print(f"ERREUR : {len(toutes_les_erreurs)} problème(s) dans {FICHIER}")
+        print(f"ERREUR : {len(toutes_les_erreurs)} problème(s) dans {args.fichier}")
         for erreur in toutes_les_erreurs:
             print("  -", erreur)
         sys.exit(1)
     else:
-        print(f"OK : {len(questions)} questions valides dans {FICHIER}")
+        print(f"OK : {len(questions)} questions valides dans {args.fichier}")
 
 
 if __name__ == "__main__":

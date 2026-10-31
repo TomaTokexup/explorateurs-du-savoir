@@ -4,24 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathématiques – Explorateurs du Savoir</title>
+    <title>Cahier – Explorateurs du Savoir</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<!-- La classe "maths" donne la couleur de la matière à toute la page.
-     data-fichier indique au script quel fichier de questions charger. -->
-<body class="maths" data-fichier="donnees/maths.json">
+<!-- Une seule page pour toutes les matières : le script lit niveau, matière
+     et thème dans l'adresse (cahier.html?niveau=p4&matiere=maths&theme=nombres) -->
+<body data-page="cahier">
     <main class="page">
-        <a class="retour" href="index.html">← Retour aux cahiers</a>
+        <a class="retour" id="retour" href="index.html">← Mes cahiers</a>
 
-        <h1 class="titre-matiere">Mathématiques</h1>
+        <h1 class="titre-matiere" id="titre-matiere">
+            <a href="#"></a>
+            <span class="niveau-matiere" id="niveau-matiere"></span>
+        </h1>
+        <h2 class="sous-titre" id="sous-titre" hidden></h2>
         <p class="progression" id="progression"></p>
 
-        <!-- Zone de la question : vide au départ, remplie par script.js -->
-        <section class="question" id="zone-question">
+        <!-- Sommaire : affiché quand aucun thème n'est choisi -->
+        <nav class="sommaire" id="sommaire" aria-label="Thèmes" hidden>
+            <a class="melange" id="lien-melange" href="#">
+                <span class="melange-titre">Révision mélangée</span>
+                <span class="melange-detail">Des questions de tous les thèmes, comme pour un contrôle</span>
+            </a>
+            <ol id="liste-themes"></ol>
+        </nav>
+
+        <!-- Zone de la question -->
+        <section class="question" id="zone-question" hidden>
             <p class="enonce" id="enonce"></p>
             <div class="reponses" id="reponses"></div>
 
@@ -34,15 +47,15 @@
             <button class="bouton-suivant" id="bouton-suivant" hidden>Question suivante</button>
         </section>
 
-        <!-- Écran de fin, caché tant que le quiz n'est pas terminé -->
+        <!-- Écran de fin -->
         <section class="bilan" id="bilan" hidden>
             <p class="score" id="score"></p>
             <p id="message-bilan"></p>
             <button class="bouton-suivant" id="bouton-recommencer">Recommencer</button>
+            <a class="lien-sommaire" id="lien-sommaire" href="#">Revenir au sommaire</a>
         </section>
     </main>
 
-    <!-- Le script est chargé à la fin, quand tous les éléments de la page existent -->
     <script src="script.js"></script>
 </body>
 

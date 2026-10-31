@@ -12,62 +12,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="accueil">
     <main class="page">
         <header class="entete">
             <h1>Explorateurs du Savoir</h1>
-            <p>Bienvenue, jeune explorateur ! Choisis un cahier pour commencer à réviser.</p>
+            <p>Des exercices pour réviser le programme des Écoles européennes, de la P3 à la P5.</p>
         </header>
 
-        <!-- Chaque matière est un "cahier". Les matières prêtes sont des liens <a>,
-             les autres sont de simples <div> avec le tampon "Bientôt". -->
-        <ul class="cahiers">
+        <h2 class="consigne">Dans quelle classe es-tu ?</h2>
+
+        <!-- Les niveaux : de simples liens, la page suivante lit "?niveau=..." dans l'adresse -->
+        <ul class="niveaux">
             <li>
-                <a class="cahier maths" href="maths.html">
-                    <span class="etiquette"><span class="icone">🔢</span><span class="nom">Mathématiques</span></span>
+                <a class="niveau" href="niveau.html?niveau=p3">
+                    <span class="niveau-nom">P3</span>
+                    <span class="niveau-equivalent">comme le CE2 en France</span>
                 </a>
             </li>
             <li>
-                <div class="cahier francais bientot">
-                    <span class="etiquette"><span class="icone">📖</span><span class="nom">Français</span></span>
-                    <span class="tampon">Bientôt</span>
-                </div>
+                <a class="niveau" href="niveau.html?niveau=p4">
+                    <span class="niveau-nom">P4</span>
+                    <span class="niveau-equivalent">comme le CM1 en France</span>
+                </a>
             </li>
             <li>
-                <div class="cahier anglais bientot">
-                    <span class="etiquette"><span class="icone">💬</span><span class="nom">Anglais</span></span>
-                    <span class="tampon">Bientôt</span>
-                </div>
-            </li>
-            <li>
-                <div class="cahier histoire bientot">
-                    <span class="etiquette"><span class="icone">🏰</span><span class="nom">Histoire</span></span>
-                    <span class="tampon">Bientôt</span>
-                </div>
-            </li>
-            <li>
-                <div class="cahier geographie bientot">
-                    <span class="etiquette"><span class="icone">🗺️</span><span class="nom">Géographie</span></span>
-                    <span class="tampon">Bientôt</span>
-                </div>
-            </li>
-            <li>
-                <div class="cahier physique bientot">
-                    <span class="etiquette"><span class="icone">⚡</span><span class="nom">Physique</span></span>
-                    <span class="tampon">Bientôt</span>
-                </div>
-            </li>
-            <li>
-                <div class="cahier svt bientot">
-                    <span class="etiquette"><span class="icone">🌱</span><span class="nom">Sciences naturelles</span></span>
-                    <span class="tampon">Bientôt</span>
-                </div>
-            </li>
-            <li>
-                <div class="cahier programmation bientot">
-                    <span class="etiquette"><span class="icone">🤖</span><span class="nom">Programmation</span></span>
-                    <span class="tampon">Bientôt</span>
-                </div>
+                <a class="niveau" href="niveau.html?niveau=p5">
+                    <span class="niveau-nom">P5</span>
+                    <span class="niveau-equivalent">comme le CM2 en France</span>
+                </a>
             </li>
         </ul>
     </main>
