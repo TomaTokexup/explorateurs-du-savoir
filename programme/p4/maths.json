@@ -1,0 +1,112 @@
+{
+  "niveau": "p4",
+  "matiere": "maths",
+  "source": "Schola Europaea – Mathematics Syllabus, Primary cycle (P1-P5), réf. 2022-01-D-48-en-3, en vigueur depuis le 01/09/2022 – tableau P4 (section 4.2)",
+  "note": "Objectifs recopiés mot pour mot du syllabus (en anglais). Les « … » marquent des objectifs tronqués lors de l'extraction. Ont été écartés les objectifs impossibles à évaluer par un quiz (mesurer avec des instruments, tracer, construire, utiliser une calculatrice ou Internet, pavages, transformations).",
+  "domaines": {
+    "nombres": {
+      "titre": "Nombres",
+      "objectifs": [
+        "Read and write whole numbers from 0 to 100 000",
+        "Match quantities to numbers in a variety of situations (on a number line, a hundred square)",
+        "Read and write numbers to 2 000 using Roman Numerals",
+        "Use large numbers in real life contexts",
+        "Use and apply estimation strategies (comparing and grouping)",
+        "Partition, manipulate and combine numbers to 100 000",
+        "Order numbers (increasing and decreasing) on a number line and a number track to 100 000",
+        "Compare, locate and place numbers on a number line and in a hundred square",
+        "Identify the significant multiples of 10, 100, and 1000 that lie either side of a number",
+        "Understand the place value of each digit in a five digit number",
+        "Identify place value in decimal numbers to one decimal place",
+        "Round numbers to the nearest 10, 100, 1000 and 10 000",
+        "Use the vocabulary of fractions (numerator, denominator, proper fraction, improper fraction, mixed number)",
+        "Read and write proper fractions, improper fractions, mixed numbers and decimal numbers (up to one decimal place)",
+        "Identify and represent proper fractions, improper fractions and mixed numbers in shapes and diagrams",
+        "Locate and place mixed numbers on a number line",
+        "Manipulate and use the fraction wall to compare fractions and understand equivalence",
+        "Simplify fractions to the lowest form",
+        "Recognise decimal numbers in real life contexts",
+        "Understand the equivalence between the decimal and fraction forms of half, quarter, three quarters and tenths",
+        "Explore, recognise and record patterns and sequences using numbers with a variety of intervals, and that use more than one…",
+        "Discover patterns within multiplication tables to 10 and find links between them",
+        "Recognise and count multiples of 2, 5, 10, 100 and 1 000 to 10 000"
+      ]
+    },
+    "operations": {
+      "titre": "Opérations",
+      "objectifs": [
+        "Understand and use the vocabulary and symbols of addition and subtraction",
+        "Add and subtract whole numbers and numbers to one decimal place",
+        "Combine addition and subtraction calculation",
+        "Write addition and subtraction calculations using standard and informal written methods",
+        "Apply appropriate strategies to support mental calculation",
+        "Estimate before calculating and check the exact result found by sums and differences",
+        "Add and subtract fractions with the same denominator",
+        "Understand and use the vocabulary and symbols of multiplication and division",
+        "Determine all factors of numbers within the multiplication tables",
+        "Write multiplication calculations using standard and informal written methods (two digit/ three digit by a one digit/…",
+        "Write simple division calculations using informal methods with and without remainders (two and three digit numbers…",
+        "Calculate the remainder when dividing",
+        "Be aware of simple algebraic equations",
+        "Use, compare and discuss various mental strategies",
+        "Estimate before calculating and then check the exact result found by products and quotients",
+        "Calculate a fraction of a given quantity"
+      ]
+    },
+    "mesures-et-unites": {
+      "titre": "Mesures et unités",
+      "objectifs": [
+        "Understand and use the vocabulary of length",
+        "Understand the relationship between mm, cm, dm, m, dam, hm and km",
+        "Convert between mm, cm, m and km",
+        "Measure and calculate the perimeter of polygons",
+        "Understand and use the vocabulary of scale (scale, scale length, actual length)",
+        "Find actual length when given a corresponding scale length",
+        "Understand the relationships between units of area km2, ha, a, m2, dm2, cm2, mm2",
+        "Convert km2, ha, a, m2, dm2, cm2, mm2",
+        "Discover the formula for the area of a rectangle",
+        "Calculate the area of rectangles and compound shapes using mm2, cm2, dm2 and m2",
+        "Consolidate and extend the vocabulary of capacity (decilitre, centilitre, millilitre)",
+        "Understand the relationships between l-dl, l-cl, l-ml, dl-cl, cl-ml",
+        "Convert l-dl, l-cl, l-ml, dl-cl, dl-ml, cl-ml",
+        "Consolidate the vocabulary of weight (gram, decagram, kilogram, tonne)",
+        "Discover milligrams",
+        "Convert t-kg, kg-dag, kg-g, dag-g and g-mg",
+        "Understand and use units of measurement of time (second, minute, hour, day, week, month, year, century and millennium)",
+        "Convert seconds into minutes and seconds, minutes into hours and minutes, days into weeks and days, months into years…"
+      ]
+    },
+    "espace-et-formes": {
+      "titre": "Espace et formes",
+      "objectifs": [
+        "Read, follow and give instructions involving position, direction and movement",
+        "Visualise, locate and plot a position using grid references and coordinates in the first quadrant, naming the x and y axis",
+        "Use the eight points of the compass to describe movement or position",
+        "Identify, describe and use a ruler/squared paper to draw vertical, horizontal, parallel, perpendicular and intersecting lines",
+        "Know that angles are measured in degrees and that one whole turn is 360°, a straight angle is 180°, a right angle is 90°",
+        "Recognise and draw acute, right and obtuse angles and relate them to shape and the environment",
+        "Consolidate and extend the vocabulary of lines and angles",
+        "Consolidate and extend the vocabulary of 2 D shapes",
+        "Sort, name, describe and classify regular and irregular 2 D shapes",
+        "Consolidate and extend the vocabulary of 3 D shapes (cube, cuboid, cylinder, sphere, cone and pyramid)",
+        "Explore the main characteristics of 3 D shapes",
+        "Sort, name, describe and classify regular and irregular 3 D shapes",
+        "Explore the relationships between 3 D shapes (perpendicular, parallel faces and edges)",
+        "Identify and make nets of common 3 D shapes",
+        "Investigate symmetry in art, architecture and nature",
+        "Draw all lines of symmetry in polygons"
+      ]
+    },
+    "traitement-des-donnees": {
+      "titre": "Traitement des données",
+      "objectifs": [
+        "Read and interpret data from pie charts and line graphs",
+        "Recall pictograms, block graphs, bar graphs, Venn and Caroll diagrams as methods to present data",
+        "Explain which type of representation should be used, or if more can be used to present data",
+        "Identify and record outcomes of random processes",
+        "Use vocabulary of likelihood and chance: impossible, unlikely, even chance, likely, certain",
+        "Order events in terms of likelihood of occurrence"
+      ]
+    }
+  }
+}
