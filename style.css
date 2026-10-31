@@ -654,3 +654,23 @@ a.cahier:hover {
     padding: 12px;
   }
 }
+
+/* ---------- 9. Figures (champ "image" d'une question) ---------- */
+.figure {
+  margin: 0 0 24px;
+  max-width: 640px;
+}
+
+.figure[hidden] {
+  display: none;
+}
+
+.figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 260px;
+  padding: 12px;
+  border: 2px solid color-mix(in srgb, var(--encre) 15%, transparent);
+  border-radius: var(--rayon);
+  background: white;
+}

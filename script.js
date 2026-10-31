@@ -18,6 +18,7 @@
 // Format d'une question (voir la partie 5 pour les différents types) :
 //   QCM    : { "type": "qcm", "enonce": "...", "choix": [...], "bonneReponse": 0, "explication": "..." }
 //   Saisie : { "type": "saisie", "enonce": "...", "reponses": ["il va"], "accents": "stricts", "explication": "..." }
+//   Tous les types peuvent avoir une figure : "image": "images/p4/maths/angle-120.svg", "alt": "description"
 //
 // Un cahier s'active tout seul dès que son index.json existe :
 // pas besoin de modifier ce code pour ajouter une matière ou un thème.
@@ -300,6 +301,18 @@ function afficherQuestion() {
   document.getElementById("progression").textContent =
     "Question " + (numeroQuestion + 1) + " sur " + questions.length;
   document.getElementById("enonce").textContent = question.enonce;
+
+  // Figure facultative : champ "image" (chemin du fichier) et "alt" (sa description)
+  const figure = document.getElementById("figure");
+  const image = document.getElementById("figure-image");
+  if (question.image) {
+    image.src = question.image;
+    image.alt = question.alt || "";
+    figure.hidden = false;
+  } else {
+    image.removeAttribute("src");
+    figure.hidden = true;
+  }
 
   document.getElementById("reponses").innerHTML = "";
   document.getElementById("correction").hidden = true;

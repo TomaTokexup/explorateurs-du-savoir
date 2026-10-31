@@ -71,13 +71,15 @@
   },
   {
     "type": "qcm",
-    "enonce": "Un angle mesure 120°. Quel est son nom ?",
+    "enonce": "Comment s'appelle cet angle ?",
     "choix": [
       "Aigu",
       "Droit",
       "Plat",
       "Obtus"
     ],
+    "image": "images/p4/maths/angle-120.svg",
+    "alt": "Un angle de 120 degrés",
     "bonneReponse": 3,
     "explication": "Compare la mesure à 90° (angle droit) et à 180° (angle plat) : un angle entre 90° et 180° est obtus. Un angle aigu mesure moins de 90°."
   },
