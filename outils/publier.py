@@ -3,6 +3,7 @@ import argparse
 import json
 import sys
 
+from pathlib import Path
 from valider_questions import verifier_question
 
 
@@ -12,6 +13,29 @@ def charger(chemin):
         return json.load(fichier)
 
 
+def mettre_a_jour_sommaire(dossier):
+    """Reconstruit index.json à partir du programme et des fichiers présents."""
+    # 1. Niveau et matière, lus dans le chemin du dossier
+    niveau = dossier.parts[-2]      # "p4"
+    matiere = dossier.parts[-1]     # "maths"
+
+    # 2. Le programme officiel : il donne l'ordre des domaines et leurs titres
+    with open(f"programme/{niveau}/{matiere}.json", encoding="utf-8") as fichier:
+        programme = json.load(fichier)
+
+    # 3. On garde les domaines du programme qui ont un fichier de questions
+    sommaire = []
+    for identifiant, domaine in programme["domaines"].items():
+        if (dossier / f"{identifiant}.json").exists():
+            sommaire.append({"id": identifiant, "titre": domaine["titre"]})
+
+    # 4. On écrit le sommaire
+    with open(dossier / "index.json", "w", encoding="utf-8") as fichier:
+        json.dump(sommaire, fichier, ensure_ascii=False, indent=2)
+
+    print(f"Sommaire mis à jour : {len(sommaire)} thème(s) dans {dossier / 'index.json'}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Publie un brouillon relu dans un fichier de thème.")
     parser.add_argument("brouillon", help="ex. donnees/brouillon_p4_maths_operations.json")
@@ -19,16 +43,22 @@ def main():
     args = parser.parse_args()
 
     nouvelles = charger(args.brouillon)
-    existantes = charger(args.destination)
+    destination = Path(args.destination)
+    if destination.exists():
+        existantes = charger(destination)
+    else:
+        print(f"Nouveau thème : {destination} sera créé")
+        existantes = []
+
     a_ajouter = []
 
     # Étape 1 : écarter les doublons
     #  - fabriquer un set avec les énoncés des questions existantes
-    enonces_existant = {q["enonce"] for q in existantes}
+    enonces_existant = {q.get("enonce") for q in existantes}
 
     #  - parcourir les nouvelles questions :
     for question in nouvelles:
-        enonce = question["enonce"]
+        enonce = question.get("enonce")
         if enonce in enonces_existant:
             print(f"Doublon écarté : {enonce}")
         else:
@@ -56,6 +86,7 @@ def main():
     print(f"{len(a_ajouter)} question(s) ajoutée(s) à {args.destination} "
           f"({len(fusion)} au total)")
 
+    mettre_a_jour_sommaire(destination.parent)
 
 if __name__ == "__main__":
     main()
