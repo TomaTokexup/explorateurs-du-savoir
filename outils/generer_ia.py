@@ -85,6 +85,13 @@ def demander_questions(consignes, demande):
 
     return texte
 
+def extraire_json(texte):
+    """Garde seulement le tableau JSON, même si l'IA l'a entouré de texte ou de balises."""
+    debut = texte.find("[")     # position du premier [
+    fin = texte.rfind("]")      # position du dernier ]  (r = en partant de la droite)
+    if debut == -1 or fin == -1:
+        return texte            # pas de crochets : on laisse json.loads signaler l'erreur
+    return texte[debut:fin + 1]
 
 def main():
 
@@ -110,6 +117,7 @@ def main():
     texte = demander_questions(consignes, demande)
 
     # Transformer le texte en liste Python (peut échouer si l'IA n'a pas respecté le format)
+    texte = extraire_json(texte)
     try:
         questions = json.loads(texte)
     except json.JSONDecodeError as erreur:

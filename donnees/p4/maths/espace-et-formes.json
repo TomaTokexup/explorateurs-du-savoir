@@ -20,5 +20,110 @@
     ],
     "bonneReponse": 0,
     "explication": "Hexa veut dire six en grec : un hexagone a 6 côtés."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de degrés mesure un quart de tour ?",
+    "choix": [
+      "45°",
+      "90°",
+      "180°",
+      "360°"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un tour complet vaut 360°, donc un quart de tour se calcule en divisant 360 par 4. Le demi-tour (180°) et le tour complet (360°) sont à retenir comme repères."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur une carte, quelle direction est située entre le nord et l'est ?",
+    "choix": [
+      "Nord-Ouest",
+      "Sud-Est",
+      "Sud-Ouest",
+      "Nord-Est"
+    ],
+    "bonneReponse": 3,
+    "explication": "Pour trouver une direction intermédiaire, on combine les deux directions voisines : nord et est donnent nord-est. Attention à ne pas inverser l'ordre des points cardinaux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le point A a x = 3 et y = 2. Quelles sont ses coordonnées ?",
+    "choix": [
+      "(3 ; 2)",
+      "(2 ; 3)",
+      "(3 ; 3)",
+      "(2 ; 2)"
+    ],
+    "bonneReponse": 0,
+    "explication": "On écrit toujours d'abord la valeur de x (sur l'axe horizontal), puis celle de y (sur l'axe vertical). L'ordre des deux nombres est important."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelles lignes sont perpendiculaires ?",
+    "choix": [
+      "Deux lignes parallèles",
+      "Deux lignes horizontales",
+      "Une ligne horizontale et une ligne verticale",
+      "Deux lignes qui se croisent en biais"
+    ],
+    "bonneReponse": 2,
+    "explication": "Deux droites sont perpendiculaires quand elles se coupent en formant un angle droit (90°). Vérifie l'angle formé au point de croisement avec ton équerre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un angle mesure 120°. Quel est son nom ?",
+    "choix": [
+      "Aigu",
+      "Droit",
+      "Plat",
+      "Obtus"
+    ],
+    "bonneReponse": 3,
+    "explication": "Compare la mesure à 90° (angle droit) et à 180° (angle plat) : un angle entre 90° et 180° est obtus. Un angle aigu mesure moins de 90°."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel solide a six faces toutes carrées ?",
+    "choix": [
+      "Pavé droit",
+      "Cube",
+      "Pyramide",
+      "Cylindre"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un cube a six faces identiques et carrées. Un pavé droit a aussi six faces, mais elles peuvent être rectangulaires, donc elles ne sont pas toujours carrées."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien d'axes de symétrie a un carré ?",
+    "choix": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "bonneReponse": 2,
+    "explication": "Cherche les lignes qui coupent la figure en deux parties identiques qui se superposent : il y en a deux qui passent par les milieux des côtés et deux qui passent par les coins."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de degrés mesure un tour complet ?",
+    "reponses": [
+      "360",
+      "360°",
+      "360 degrés"
+    ],
+    "accents": "toleres",
+    "explication": "Un tour complet est partagé en 360 degrés. Ce repère permet de retrouver les autres angles : un demi-tour vaut 180° et un quart de tour vaut 90°."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien d'arêtes a un cube ? (Une arête est un bord où se rencontrent deux faces.)",
+    "reponses": [
+      "12",
+      "douze"
+    ],
+    "accents": "toleres",
+    "explication": "Compte les arêtes par étages : 4 sur la face du dessus, 4 sur la face du dessous et 4 verticales qui relient les deux. Une méthode sûre consiste à compter les arêtes de chaque face puis à diviser par 2."
   }
 ]
