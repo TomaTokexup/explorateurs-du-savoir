@@ -37,6 +37,9 @@ const MATIERES = [
   { id: "programmation", nom: "Programmation",       icone: "🤖", precision: "Bonus" }
 ];
 
+// Nombre de questions tirées au hasard à chaque partie, dans la banque de questions.
+// S'il y en a moins dans la banque, on les prend toutes.
+const NOMBRE_QUESTIONS_THEME = 10;
 const NOMBRE_QUESTIONS_MELANGE = 15;
 
 // ---------- 2. Outils ----------
@@ -156,23 +159,26 @@ async function pageCahier() {
       return;
     }
 
-    let questionsDuQuiz;
+    let banque;          // toutes les questions disponibles pour ce quiz
+    let nombreParPartie; // combien on en tire à chaque partie
     let nomDuQuiz;
 
     if (idTheme === "melange") {
-      // Révision mélangée : on lit TOUS les thèmes, on mélange, on garde les N premières
+      // Révision mélangée : la banque regroupe les questions de TOUS les thèmes
       nomDuQuiz = "Révision mélangée";
       const listes = await Promise.all(themes.map(function (t) {
         return lireJSON(dossier + t.id + ".json");
       }));
-      questionsDuQuiz = melanger(listes.flat()).slice(0, NOMBRE_QUESTIONS_MELANGE);
+      banque = listes.flat();
+      nombreParPartie = NOMBRE_QUESTIONS_MELANGE;
     } else {
       const theme = themes.find(function (t) { return t.id === idTheme; });
       if (!theme) {
         throw new Error("thème « " + idTheme + " » absent du sommaire");
       }
       nomDuQuiz = theme.titre;
-      questionsDuQuiz = await lireJSON(dossier + theme.id + ".json");
+      banque = await lireJSON(dossier + theme.id + ".json");
+      nombreParPartie = NOMBRE_QUESTIONS_THEME;
     }
 
     const sousTitre = document.getElementById("sous-titre");
@@ -180,7 +186,7 @@ async function pageCahier() {
     sousTitre.hidden = false;
     document.title = nomDuQuiz + " – " + matiere.nom + " " + niveau.nom;
 
-    lancerQuiz(questionsDuQuiz);
+    lancerQuiz(banque, nombreParPartie);
   } catch (erreur) {
     afficherErreur("Impossible de charger les exercices : " + erreur.message, erreur);
   }
@@ -222,8 +228,9 @@ function afficherSommaire(themes, lienCahier, dossier) {
 // Chaque question a un "type" qui décide de son affichage et de sa correction :
 //   "qcm"    → 4 boutons, une seule bonne réponse        (type par défaut si absent)
 //   "saisie" → l'élève tape une réponse courte au clavier
-let questionsOriginales = [];  // les questions telles que lues dans le JSON
-let questions = [];            // les mêmes, préparées (choix mélangés pour les QCM)
+let banqueDuQuiz = [];         // toutes les questions disponibles (lues dans le JSON)
+let nombreParPartie = 10;      // combien on en tire au hasard à chaque partie
+let questions = [];            // les questions de la partie en cours, préparées
 let numeroQuestion = 0;        // index de la question affichée
 let score = 0;                 // nombre de bonnes réponses
 
@@ -265,8 +272,9 @@ function normaliser(texte, accentsToleres) {
   return resultat;
 }
 
-function lancerQuiz(listeQuestions) {
-  questionsOriginales = listeQuestions;
+function lancerQuiz(banque, nombre) {
+  banqueDuQuiz = banque;
+  nombreParPartie = nombre;
   document.getElementById("zone-question").hidden = false;
   document.getElementById("bouton-suivant").addEventListener("click", questionSuivante);
   document.getElementById("bouton-recommencer").addEventListener("click", function () {
@@ -277,8 +285,10 @@ function lancerQuiz(listeQuestions) {
   demarrer();
 }
 
+// Une nouvelle partie : on tire au hasard des questions dans la banque
+// (un nouveau tirage à chaque fois qu'on clique sur "Recommencer")
 function demarrer() {
-  questions = questionsOriginales.map(preparerQuestion);
+  questions = melanger(banqueDuQuiz).slice(0, nombreParPartie).map(preparerQuestion);
   numeroQuestion = 0;
   score = 0;
   afficherQuestion();

@@ -39,5 +39,95 @@
     ],
     "accents": "stricts",
     "explication": "80 s'écrit « quatre-vingts », avec un s : vingt est multiplié par quatre et n'est suivi d'aucun autre nombre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un ruban mesure 4,6 m. On lui ajoute un morceau de 2,9 m. Quelle est la longueur totale du ruban ?",
+    "choix": [
+      "6,5 m",
+      "7,5 m",
+      "7,15 m",
+      "11,5 m"
+    ],
+    "bonneReponse": 1,
+    "explication": "On additionne les dixièmes (6 dixièmes + 9 dixièmes = 15 dixièmes, soit 1 unité et 5 dixièmes), puis on ajoute les unités en pensant à la retenue : 4 + 2 + 1 = 7, donc 7,5 m. Il faut toujours aligner les virgules."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 3/8 + 4/8.",
+    "choix": [
+      "7/8",
+      "7/16",
+      "1/8",
+      "12/8"
+    ],
+    "bonneReponse": 0,
+    "explication": "Quand les dénominateurs sont identiques, on additionne seulement les numérateurs et on garde le même dénominateur : 3 + 4 = 7, donc 7/8."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lina a 25 billes. Elle en reçoit 18, puis elle en donne 7 à son ami. Combien de billes lui reste-t-il ?",
+    "choix": [
+      "50 billes",
+      "36 billes",
+      "32 billes",
+      "14 billes"
+    ],
+    "bonneReponse": 1,
+    "explication": "On calcule dans l'ordre, de gauche à droite : 25 + 18 = 43, puis 43 − 7 = 36 billes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la meilleure estimation de 387 + 612 avant de calculer ?",
+    "choix": [
+      "900",
+      "800",
+      "1 000",
+      "1 100"
+    ],
+    "bonneReponse": 2,
+    "explication": "On arrondit chaque nombre à la centaine la plus proche (387 → 400 ; 612 → 600), puis on calcule 400 + 600 = 1 000, ce qui est proche du résultat exact 999."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un paquet contient 24 crayons. Combien de crayons y a-t-il dans 4 paquets identiques ?",
+    "choix": [
+      "86 crayons",
+      "92 crayons",
+      "106 crayons",
+      "96 crayons"
+    ],
+    "bonneReponse": 3,
+    "explication": "On pose la multiplication : 4 × 4 = 16, on écrit 6 et on retient 1 ; 4 × 2 = 8, plus la retenue 1 donne 9. Le résultat est 96 crayons."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un enseignant a 17 cahiers à partager également entre 5 élèves. Combien de cahiers reçoit chaque élève et combien de cahiers reste-t-il ?",
+    "choix": [
+      "3,4 cahiers, il ne reste rien",
+      "4 cahiers, il reste 1",
+      "3 cahiers, il reste 2",
+      "2 cahiers, il reste 7"
+    ],
+    "bonneReponse": 2,
+    "explication": "On cherche combien de fois 5 rentre dans 17 : 5 × 3 = 15, donc chaque élève reçoit 3 cahiers et le reste est 17 − 15 = 2 cahiers."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Léa a 36 billes. Elle en donne le quart à son amie. Combien de billes donne-t-elle ? (Réponse en billes)",
+    "reponses": [
+      "9"
+    ],
+    "accents": "toleres",
+    "explication": "Calculer le quart d'une quantité revient à la partager en 4 parts égales : 36 ÷ 4 = 9 billes."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Trouve le nombre inconnu n dans l'égalité : n + 15 = 42.",
+    "reponses": [
+      "27"
+    ],
+    "accents": "toleres",
+    "explication": "Pour trouver le nombre manquant, on fait l'opération inverse : 42 − 15 = 27, puis on vérifie : 27 + 15 = 42."
   }
 ]
