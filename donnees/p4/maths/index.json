@@ -1,5 +1,18 @@
 [
-  { "id": "nombres", "titre": "Nombres" },
-  { "id": "operations", "titre": "Opérations" },
-  { "id": "espace-et-formes", "titre": "Espace et formes" }
+  {
+    "id": "nombres",
+    "titre": "Nombres"
+  },
+  {
+    "id": "operations",
+    "titre": "Opérations"
+  },
+  {
+    "id": "mesures-et-unites",
+    "titre": "Mesures et unités"
+  },
+  {
+    "id": "espace-et-formes",
+    "titre": "Espace et formes"
+  }
 ]

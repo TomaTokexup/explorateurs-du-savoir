@@ -1,0 +1,121 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Combien de centimètres y a-t-il dans 1 mètre ?",
+    "choix": [
+      "10 cm",
+      "100 cm",
+      "1 000 cm",
+      "0,01 cm"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un mètre est divisé en 100 centimètres : pour passer des mètres aux centimètres, on multiplie par 100."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le périmètre d'un rectangle de 6 cm de long et de 4 cm de large ?",
+    "choix": [
+      "10 cm",
+      "20 cm",
+      "24 cm",
+      "12 cm"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le périmètre est la somme des quatre côtés : 6 + 4 + 6 + 4 = 20 cm (ou 2 × (6 + 4))."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur un plan à l'échelle 1/100, une longueur mesure 3 cm. Quelle est la longueur réelle ?",
+    "choix": [
+      "3 cm",
+      "30 cm",
+      "3 m",
+      "300 m"
+    ],
+    "bonneReponse": 2,
+    "explication": "On multiplie la longueur sur le plan par 100 : 3 cm × 100 = 300 cm, soit 3 m."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de centimètres carrés y a-t-il dans 1 décimètre carré (1 dm²) ?",
+    "choix": [
+      "10 cm²",
+      "100 cm²",
+      "1 000 cm²",
+      "1 cm²"
+    ],
+    "bonneReponse": 1,
+    "explication": "1 dm = 10 cm, donc 1 dm² = 10 × 10 = 100 cm² : pour les aires, il faut multiplier deux fois par 10."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de décilitres y a-t-il dans 1 litre ?",
+    "choix": [
+      "10 dl",
+      "100 dl",
+      "1 000 dl",
+      "0,1 dl"
+    ],
+    "bonneReponse": 0,
+    "explication": "1 litre contient 10 dixièmes de litre : 1 l = 10 dl."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien font 150 secondes en minutes et secondes ?",
+    "choix": [
+      "1 min 50 s",
+      "2 min 30 s",
+      "2 min 50 s",
+      "15 min"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour convertir des secondes en minutes et secondes, on divise par 60 : 150 s = 2 × 60 s + 30 s, soit 2 min 30 s."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de semaines et de jours font 17 jours ?",
+    "choix": [
+      "1 semaine 7 jours",
+      "2 semaines 3 jours",
+      "2 semaines 17 jours",
+      "3 semaines 2 jours"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une semaine compte 7 jours : on divise 17 par 7, ce qui donne 2 semaines et il reste 3 jours."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la conversion correcte ?",
+    "choix": [
+      "2,5 cm = 2,5 mm",
+      "2,5 cm = 250 mm",
+      "2,5 cm = 25 mm",
+      "2,5 cm = 205 mm"
+    ],
+    "bonneReponse": 2,
+    "explication": "1 cm = 10 mm, donc on multiplie par 10 : 2,5 cm × 10 = 25 mm."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de grammes y a-t-il dans 3 kilogrammes ? (réponse en grammes)",
+    "reponses": [
+      "3000",
+      "3 000",
+      "3000 g",
+      "3 000 g"
+    ],
+    "accents": "toleres",
+    "explication": "1 kg = 1 000 g, donc on multiplie les kilogrammes par 1 000 : 3 × 1 000 = 3 000 g."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de minutes y a-t-il dans 2 heures ? (réponse en minutes)",
+    "reponses": [
+      "120",
+      "120 min",
+      "120 minutes"
+    ],
+    "accents": "toleres",
+    "explication": "1 heure = 60 minutes, donc on multiplie le nombre d'heures par 60 : 2 × 60 = 120 minutes."
+  }
+]
