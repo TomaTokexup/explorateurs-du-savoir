@@ -47,13 +47,12 @@ def enregistrer(svg, chemin):
   # 1. transformer chemin en Path
   chemin = Path(chemin)
   # 2. créer le dossier parent s'il n'existe pas : .parent.mkdir(parents=True, exist_ok=True)
-  if not chemin.parent.exists():
-        chemin.parent.mkdir(parents=True, exist_ok=True)
+  chemin.parent.mkdir(parents=True, exist_ok=True)
   # 3. écrire le texte svg dans le fichier (open en "w", encoding="utf-8")
   with open(chemin, "w", encoding="utf-8") as fichier:
-        fichier.write(svg)
+    fichier.write(svg)
   # 4. afficher "Figure enregistrée : <chemin>"
   print(f"Figure enregistrée : {chemin}")
 
 if __name__ == "__main__":
-    enregistrer(dessiner_angle(120), "images/p4/maths/angle-120.svg")
+  enregistrer(dessiner_angle(120), "images/p4/maths/angle-120.svg")

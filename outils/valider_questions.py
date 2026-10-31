@@ -2,6 +2,7 @@
 import argparse
 import json
 import sys
+from pathlib import Path
 
 TYPES_CONNUS = ["qcm", "saisie"]
 CHAMPS_COMMUNS = ["enonce", "explication"]
@@ -15,8 +16,9 @@ def verifier_question(question, numero):
         if champ not in question:
             erreurs.append(f"Question {numero} : champ '{champ}' manquant")
 
-    if "image" in question and "alt" not in question:
-        erreurs.append(f"Question {numero} : champ 'alt' manquant pour l'image")
+    if "image" in question:
+        if "alt" not in question:
+            erreurs.append(f"Question {numero} : champ 'alt' manquant pour l'image")
         if not Path(question["image"]).exists():
             erreurs.append(f"Question {numero} : l'image '{question['image']}' n'existe pas")
 

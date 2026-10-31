@@ -129,14 +129,5 @@
     ],
     "accents": "toleres",
     "explication": "Pour trouver le nombre manquant, on fait l'opération inverse : 42 − 15 = 27, puis on vérifie : 27 + 15 = 42."
-  },
-  {
-    "type": "saisie",
-    "enonce": "Léa a 36 billes. Elle en donne le quart à son amie. Combien de billes donne-t-elle ? (Réponse en billes)",
-    "reponses": [
-      "9"
-    ],
-    "accents": "toleres",
-    "explication": "Calculer le quart d'une quantité revient à la partager en 4 parts égales : 36 ÷ 4 = 9 billes."
   }
 ]
