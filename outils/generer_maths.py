@@ -16,6 +16,20 @@ themes = {
             "bonneReponse": 2,
             "explication": "Le double, c'est 2 fois le nombre : 45 + 45 = 90."
         },
+         {
+            "type": "saisie",
+            "enonce": "Calcule : 125 + 37",
+            "reponses": ["162"],
+            "accents": "toleres",
+            "explication": "On ajoute d'abord 30 (125 + 30 = 155), puis 7 (155 + 7 = 162)."
+        },
+        {
+            "type": "saisie",
+            "enonce": "Écris en lettres le nombre 80.",
+            "reponses": ["quatre-vingts", "quatre vingts"],
+            "accents": "stricts",
+            "explication": "80 s'écrit « quatre-vingts », avec un s : vingt est multiplié par quatre et n'est suivi d'aucun autre nombre."
+        },
     ],
     "espace-et-formes": [
         {

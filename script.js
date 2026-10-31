@@ -15,8 +15,9 @@
 //
 // Format du sommaire :
 //   [ { "id": "nombres", "titre": "Nombres" }, ... ]   ("id" = nom du fichier)
-// Format d'une question :
-//   { "enonce": "...", "choix": ["...", ...], "bonneReponse": 0, "explication": "..." }
+// Format d'une question (voir la partie 5 pour les différents types) :
+//   QCM    : { "type": "qcm", "enonce": "...", "choix": [...], "bonneReponse": 0, "explication": "..." }
+//   Saisie : { "type": "saisie", "enonce": "...", "reponses": ["il va"], "accents": "stricts", "explication": "..." }
 //
 // Un cahier s'active tout seul dès que son index.json existe :
 // pas besoin de modifier ce code pour ajouter une matière ou un thème.
@@ -218,21 +219,50 @@ function afficherSommaire(themes, lienCahier, dossier) {
 }
 
 // ---------- 5. Le moteur de quiz ----------
+// Chaque question a un "type" qui décide de son affichage et de sa correction :
+//   "qcm"    → 4 boutons, une seule bonne réponse        (type par défaut si absent)
+//   "saisie" → l'élève tape une réponse courte au clavier
 let questionsOriginales = [];  // les questions telles que lues dans le JSON
-let questions = [];            // les mêmes, avec les choix mélangés
+let questions = [];            // les mêmes, préparées (choix mélangés pour les QCM)
 let numeroQuestion = 0;        // index de la question affichée
 let score = 0;                 // nombre de bonnes réponses
 
-// Mélange les choix d'une question et recalcule la position de la bonne réponse
-function melangerChoix(question) {
+const ACCENTS = ["é", "è", "ê", "à", "â", "ç", "ù", "û", "ô", "î", "ï", "ë"];
+
+function typeDe(question) {
+  return question.type || "qcm";
+}
+
+// Prépare une question avant affichage. Pour un QCM : mélange les choix
+// et recalcule la position de la bonne réponse. Les autres types sont gardés tels quels.
+function preparerQuestion(question) {
+  if (typeDe(question) !== "qcm") {
+    return question;
+  }
   const bonneReponseTexte = question.choix[question.bonneReponse];
   const choixMelanges = melanger(question.choix);
-  return {
-    enonce: question.enonce,
+  return Object.assign({}, question, {
     choix: choixMelanges,
-    bonneReponse: choixMelanges.indexOf(bonneReponseTexte),
-    explication: question.explication
-  };
+    bonneReponse: choixMelanges.indexOf(bonneReponseTexte)
+  });
+}
+
+// Met une réponse tapée sous une forme "standard" avant de la comparer :
+// minuscules, espaces en trop supprimés, ponctuation finale ignorée,
+// apostrophe typographique ’ remplacée par '.
+// Si les accents sont tolérés, ils sont aussi retirés (é → e).
+function normaliser(texte, accentsToleres) {
+  let resultat = texte
+    .toLowerCase()
+    .replace(/[’`]/g, "'")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/[.!?;]+$/, "")
+    .trim();
+  if (accentsToleres) {
+    resultat = resultat.normalize("NFD").replace(/[̀-ͯ]/g, "");
+  }
+  return resultat;
 }
 
 function lancerQuiz(listeQuestions) {
@@ -248,7 +278,7 @@ function lancerQuiz(listeQuestions) {
 }
 
 function demarrer() {
-  questions = questionsOriginales.map(melangerChoix);
+  questions = questionsOriginales.map(preparerQuestion);
   numeroQuestion = 0;
   score = 0;
   afficherQuestion();
@@ -256,34 +286,38 @@ function demarrer() {
 
 function afficherQuestion() {
   const question = questions[numeroQuestion];
-  const reponses = document.getElementById("reponses");
 
   document.getElementById("progression").textContent =
     "Question " + (numeroQuestion + 1) + " sur " + questions.length;
   document.getElementById("enonce").textContent = question.enonce;
 
-  reponses.innerHTML = "";
+  document.getElementById("reponses").innerHTML = "";
   document.getElementById("correction").hidden = true;
   document.getElementById("bouton-suivant").hidden = true;
 
+  if (typeDe(question) === "saisie") {
+    afficherSaisie(question);
+  } else {
+    afficherQcm(question);
+  }
+}
+
+// --- Type "qcm" ---
+function afficherQcm(question) {
+  const reponses = document.getElementById("reponses");
+  reponses.className = "reponses";
   question.choix.forEach(function (texteChoix, position) {
     const bouton = document.createElement("button");
     bouton.className = "reponse";
     bouton.textContent = texteChoix;
     bouton.addEventListener("click", function () {
-      verifierReponse(position);
+      corrigerQcm(question, position);
     });
     reponses.appendChild(bouton);
   });
 }
 
-function verifierReponse(positionChoisie) {
-  const question = questions[numeroQuestion];
-  const estJuste = positionChoisie === question.bonneReponse;
-  const correction = document.getElementById("correction");
-  const verdict = document.getElementById("verdict");
-  const boutonSuivant = document.getElementById("bouton-suivant");
-
+function corrigerQcm(question, positionChoisie) {
   // On colore les boutons et on les bloque (un seul essai)
   document.querySelectorAll("#reponses .reponse").forEach(function (bouton, position) {
     bouton.disabled = true;
@@ -295,6 +329,85 @@ function verifierReponse(positionChoisie) {
       bouton.classList.add("attenuee");
     }
   });
+  afficherCorrection(question, positionChoisie === question.bonneReponse, "");
+}
+
+// --- Type "saisie" ---
+function afficherSaisie(question) {
+  const reponses = document.getElementById("reponses");
+  reponses.className = "saisie";
+
+  // Un formulaire : la touche Entrée valide la réponse
+  const formulaire = document.createElement("form");
+  formulaire.className = "saisie-formulaire";
+  formulaire.innerHTML =
+    '<input class="saisie-champ" type="text" autocomplete="off" autocapitalize="off" ' +
+    'spellcheck="false" aria-label="Ta réponse" placeholder="Tape ta réponse">' +
+    '<button class="saisie-valider" type="submit">Valider</button>';
+  reponses.appendChild(formulaire);
+
+  const champ = formulaire.querySelector(".saisie-champ");
+
+  // Boutons d'accents, seulement si la réponse attendue contient des lettres
+  const contientDesLettres = question.reponses.some(function (r) { return /\p{L}/u.test(r); });
+  if (contientDesLettres) {
+    const accents = document.createElement("div");
+    accents.className = "saisie-accents";
+    accents.setAttribute("aria-label", "Lettres accentuées");
+    ACCENTS.forEach(function (lettre) {
+      const bouton = document.createElement("button");
+      bouton.type = "button";
+      bouton.className = "accent";
+      bouton.textContent = lettre;
+      // On insère la lettre à l'endroit du curseur, puis on remet le curseur juste après
+      bouton.addEventListener("click", function () {
+        const debut = champ.selectionStart;
+        const fin = champ.selectionEnd;
+        champ.value = champ.value.slice(0, debut) + lettre + champ.value.slice(fin);
+        champ.focus();
+        champ.setSelectionRange(debut + 1, debut + 1);
+      });
+      accents.appendChild(bouton);
+    });
+    reponses.appendChild(accents);
+  }
+
+  formulaire.addEventListener("submit", function (evenement) {
+    evenement.preventDefault();          // sinon le navigateur rechargerait la page
+    if (champ.value.trim() === "") {
+      champ.focus();                     // réponse vide : on ne corrige pas
+      return;
+    }
+    corrigerSaisie(question, champ.value);
+  });
+
+  champ.focus();
+}
+
+function corrigerSaisie(question, texteTape) {
+  const accentsToleres = question.accents === "toleres";
+  const tape = normaliser(texteTape, accentsToleres);
+  const estJuste = question.reponses.some(function (reponse) {
+    return normaliser(reponse, accentsToleres) === tape;
+  });
+
+  // On bloque la saisie et on colore le champ
+  const reponses = document.getElementById("reponses");
+  reponses.querySelectorAll("input, button").forEach(function (element) {
+    element.disabled = true;
+  });
+  reponses.querySelector(".saisie-champ").classList.add(estJuste ? "juste" : "faux");
+
+  // Si c'est faux, on montre la réponse attendue avant l'explication
+  const rappel = estJuste ? "" : "La bonne réponse : « " + question.reponses[0] + " ». ";
+  afficherCorrection(question, estJuste, rappel);
+}
+
+// --- Commun à tous les types ---
+function afficherCorrection(question, estJuste, rappel) {
+  const correction = document.getElementById("correction");
+  const verdict = document.getElementById("verdict");
+  const boutonSuivant = document.getElementById("bouton-suivant");
 
   if (estJuste) {
     score = score + 1;
@@ -304,7 +417,7 @@ function verifierReponse(positionChoisie) {
     verdict.textContent = "Pas tout à fait…";
     correction.className = "correction faux";
   }
-  document.getElementById("explication").textContent = question.explication;
+  document.getElementById("explication").textContent = rappel + question.explication;
   correction.hidden = false;
 
   const derniereQuestion = numeroQuestion === questions.length - 1;

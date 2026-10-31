@@ -559,3 +559,98 @@ a.cahier:hover {
     transition: none !important;
   }
 }
+
+/* ---------- 8. Questions à saisir au clavier ---------- */
+.saisie {
+  max-width: 640px;
+}
+
+.saisie-formulaire {
+  display: flex;
+  gap: 12px;
+}
+
+.saisie-champ {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--police-texte);
+  font-size: 1.6rem;
+  padding: 14px 16px;
+  border: 3px solid var(--couleur);
+  border-radius: var(--rayon);
+  background: white;
+  color: var(--encre);
+}
+
+.saisie-champ::placeholder {
+  color: color-mix(in srgb, var(--encre) 35%, transparent);
+}
+
+.saisie-champ.juste {
+  border-color: var(--juste);
+  background-color: var(--juste-fond);
+}
+
+.saisie-champ.faux {
+  border-color: var(--faux);
+  background-color: var(--faux-fond);
+  text-decoration: line-through;
+}
+
+.saisie-valider {
+  font-family: var(--police-titre);
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0 24px;
+  border: none;
+  border-radius: var(--rayon);
+  background: var(--couleur);
+  color: white;
+  cursor: pointer;
+}
+
+.saisie-valider:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* La rangée de lettres accentuées, comme des touches de clavier */
+.saisie-accents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.accent {
+  min-width: 44px;
+  height: 44px;
+  font-family: var(--police-texte);
+  font-size: 1.3rem;
+  border: 2px solid color-mix(in srgb, var(--encre) 25%, transparent);
+  border-bottom-width: 4px;
+  border-radius: 8px;
+  background: white;
+  color: var(--encre);
+  cursor: pointer;
+}
+
+.accent:active:not(:disabled) {
+  border-bottom-width: 2px;
+  transform: translateY(2px);
+}
+
+.accent:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+@media (max-width: 560px) {
+  .saisie-formulaire {
+    flex-direction: column;
+  }
+
+  .saisie-valider {
+    padding: 12px;
+  }
+}
