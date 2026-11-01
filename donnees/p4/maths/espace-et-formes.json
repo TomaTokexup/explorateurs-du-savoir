@@ -127,5 +127,81 @@
     ],
     "accents": "toleres",
     "explication": "Compte les arêtes par étages : 4 sur la face du dessus, 4 sur la face du dessous et 4 verticales qui relient les deux. Une méthode sûre consiste à compter les arêtes de chaque face puis à diviser par 2."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le nom de cet angle ?",
+    "choix": [
+      "Angle droit",
+      "Angle aigu",
+      "Angle obtus",
+      "Angle plat"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un angle aigu est plus petit qu'un angle droit (90°). Pour le reconnaître, compare-le à l'équerre : s'il est plus fermé que le coin de l'équerre, il est aigu.",
+    "image": "images/p4/maths/angle-65.svg",
+    "alt": "Un angle"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le point A est à 4 unités sur l'axe horizontal (axe x) et à 2 unités sur l'axe vertical (axe y). Quelles sont ses coordonnées ?",
+    "choix": [
+      "(2 ; 4)",
+      "(4 ; 2)",
+      "(4 ; 4)",
+      "(2 ; 2)"
+    ],
+    "bonneReponse": 1,
+    "explication": "On écrit toujours d'abord la coordonnée x (horizontale), puis la coordonnée y (verticale). Pour trouver A, on avance de 4 vers la droite, puis on monte de 2."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Deux routes se croisent et forment entre elles un angle droit (90°). Ces deux routes sont :",
+    "choix": [
+      "parallèles",
+      "perpendiculaires",
+      "horizontales",
+      "égales"
+    ],
+    "bonneReponse": 1,
+    "explication": "Des droites perpendiculaires se coupent en formant un angle droit. Des droites parallèles ne se coupent jamais. Pour vérifier, place le coin de l'équerre au croisement."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la mesure d'un angle plat (un demi-tour) ?",
+    "choix": [
+      "90°",
+      "180°",
+      "270°",
+      "360°"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un tour complet vaut 360°, donc un demi-tour vaut la moitié, soit 180°. Un angle plat est une ligne droite."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de faces possède une pyramide à base carrée (en comptant la base) ?",
+    "choix": [
+      "4",
+      "6",
+      "5",
+      "8"
+    ],
+    "bonneReponse": 2,
+    "explication": "Une pyramide à base carrée a 4 faces triangulaires sur les côtés et 1 face carrée en bas, soit 4 + 1 = 5 faces. Compte chaque face une seule fois en les observant une par une."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le nom de cette figure, selon son nombre de côtés ?",
+    "choix": [
+      "Triangle",
+      "Quadrilatère",
+      "Pentagone",
+      "Hexagone"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le nom d'un polygone dépend de son nombre de côtés : 3 côtés = triangle, 4 = quadrilatère, 5 = pentagone, 6 = hexagone. Compte les côtés un par un sans en oublier.",
+    "image": "images/p4/maths/polygone-5.svg",
+    "alt": "Un polygone"
   }
 ]

@@ -3,8 +3,9 @@ import json
 import sys
 import argparse
 import anthropic
-from dotenv import load_dotenv
 
+from figures import dessiner_angle, dessiner_polygone, enregistrer
+from dotenv import load_dotenv
 from valider_questions import verifier_question   # ta fonction !
 
 def charger_objectifs(niveau, matiere, theme):
@@ -54,6 +55,13 @@ Type "saisie" (l'élève tape sa réponse au clavier) :
 - "reponses" liste toutes les écritures acceptables de cette réponse (par exemple ["0,5", "0.5"] ou ["1 200", "1200"]) ;
 - "accents" vaut "toleres".
 
+Figures (facultatif, surtout en géométrie) :
+- Tu peux ajouter à une question un champ "figure" quand un dessin aide l'élève. Formes disponibles :
+  {{"forme": "angle", "mesure": <nombre entier de 1 à 180>}}
+  {{"forme": "polygone", "cotes": <nombre entier de 3 à 10>}}
+- L'énoncé parle alors de la figure (« cet angle », « cette figure ») et ne donne ni la mesure ni le nombre de côtés.
+- N'utilise aucune autre forme, et n'écris jamais de champ "image" toi-même.
+
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
 [
   {{"type": "qcm", "enonce": "...", "choix": ["...", "...", "...", "..."], "bonneReponse": 0, "explication": "..."}},
@@ -92,6 +100,34 @@ def extraire_json(texte):
     if debut == -1 or fin == -1:
         return texte            # pas de crochets : on laisse json.loads signaler l'erreur
     return texte[debut:fin + 1]
+
+def creer_figure(description, niveau, matiere):
+    """Dessine la figure décrite par l'IA et renvoie (chemin de l'image, texte alt).
+    Lève une ValueError si la description est invalide."""
+    forme = description.get("forme")
+
+    if forme == "angle":
+        mesure = description.get("mesure")
+        if not isinstance(mesure, int) or not 1 <= mesure <= 180:
+            raise ValueError(f"mesure d'angle invalide : {mesure!r}")
+        svg = dessiner_angle(mesure)
+        nom = f"angle-{mesure}"
+        alt = "Un angle"
+
+    elif forme == "polygone":
+        nombre_cotes = description.get("cotes")
+        if not isinstance(nombre_cotes, int) or not 3 <= nombre_cotes <= 10:
+            raise ValueError(f"nombre de côtés invalide : {nombre_cotes!r}")
+        svg = dessiner_polygone(nombre_cotes)
+        nom = f"polygone-{nombre_cotes}"
+        alt = "Un polygone"
+
+    else:
+        raise ValueError(f"forme inconnue : {forme!r}")
+
+    chemin = f"images/{niveau}/{matiere}/{nom}.svg"
+    enregistrer(svg, chemin)
+    return chemin, alt
 
 def main():
 
@@ -132,6 +168,15 @@ def main():
     #  - si la liste d'erreurs est vide  -> ajoute la question à "valides"
     #  - sinon -> affiche chaque erreur et ajoute la question à "rejetees"
     for numero, question in enumerate(questions, start=1):
+        # Si l'IA a décrit une figure, Python la dessine
+        if "figure" in question:
+            try:
+                question["image"], question["alt"] = creer_figure(
+                    question.pop("figure"), args.niveau, args.matiere)
+            except ValueError as erreur:
+                print(f"Question {numero} rejetée : {erreur}")
+                rejetees.append(question)
+                continue
         erreurs = verifier_question(question, numero)
         if not erreurs:
             valides.append(question)
