@@ -41,6 +41,23 @@ def dessiner_angle(mesure):
   <circle cx="{cx}" cy="{cy}" r="4" fill="{ENCRE}"/>
 </svg>
 '''
+def dessiner_polygone(nombre_cotes):
+    """Renvoie le code SVG d'un polygone régulier à `nombre_cotes` côtés."""
+    cx, cy = 120, 105     # centre du cercle
+    rayon = 85
+    depart = math.radians(90 + 180 / nombre_cotes)
+
+    points = []
+    for k in range(nombre_cotes):
+        angle = depart + k * 2 * math.pi / nombre_cotes
+        x = cx + rayon * math.cos(angle)
+        y = cy + rayon * math.sin(angle)
+        points.append(f"{x:.1f},{y:.1f}")
+
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 210" width="240" height="210">
+  <polygon points="{ ' '.join(points) }" fill="#eaf1fc" stroke="{ENCRE}" stroke-width="4" stroke-linejoin="round"/>
+</svg>
+'''
 
 def enregistrer(svg, chemin):
   """Écrit le code SVG dans un fichier, en créant les dossiers si besoin."""
@@ -56,3 +73,5 @@ def enregistrer(svg, chemin):
 
 if __name__ == "__main__":
   enregistrer(dessiner_angle(120), "images/p4/maths/angle-120.svg")
+  for n in (3, 4, 5, 6, 8):
+    enregistrer(dessiner_polygone(n), f"images/p4/maths/polygone-{n}.svg")
