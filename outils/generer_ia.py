@@ -5,7 +5,8 @@ import argparse
 import anthropic
 
 from pathlib import Path
-from figures import dessiner_angle, dessiner_polygone, enregistrer
+from figures import (DIRECTIONS, dessiner_angle, dessiner_horloge, dessiner_polygone,
+                     dessiner_rectangle, dessiner_repere, dessiner_rose, enregistrer)
 from dotenv import load_dotenv
 from valider_questions import verifier_question   # ta fonction !
 
@@ -58,6 +59,7 @@ Objectifs officiels du programme pour ce niveau (syllabus des Écoles européenn
 Consignes générales :
 - Chaque question évalue UN de ces objectifs. Varie les objectifs couverts d'une question à l'autre.
 - Ne dépasse jamais le niveau fixé par ces objectifs.
+- Utilise le vocabulaire employé en classe en France (« pavé droit » et non « cuboïde », « sommet » et non « vertex »), même si les objectifs officiels sont en anglais.
 - Écris en français, avec des mots simples. Précise toujours les unités.
 - L'explication enseigne la méthode en une ou deux phrases ; elle ne se contente pas de répéter la réponse.
 
@@ -78,7 +80,12 @@ Figures (facultatif, surtout en géométrie) :
 - Tu peux ajouter à une question un champ "figure" quand un dessin aide l'élève. Formes disponibles :
   {{"forme": "angle", "mesure": <nombre entier de 1 à 180>}}
   {{"forme": "polygone", "cotes": <nombre entier de 3 à 10>}}
-- L'énoncé parle alors de la figure (« cet angle », « cette figure ») et ne donne ni la mesure ni le nombre de côtés.
+  {{"forme": "horloge", "heures": <entier de 1 à 12>, "minutes": <multiple de 5, de 0 à 55>}}  (horloge à aiguilles)
+  {{"forme": "repere", "x": <entier de 0 à 6>, "y": <entier de 0 à 6>}}  (quadrillage avec un point nommé A)
+  {{"forme": "rose", "direction": "N" | "NE" | "E" | "SE" | "S" | "SO" | "O" | "NO"}}  (rose des vents où seul le nord est écrit ; une flèche rouge montre la direction)
+  {{"forme": "rectangle", "longueur": <entier>, "largeur": <entier inférieur ou égal>, "unite": "mm" | "cm" | "m"}}  (rectangle avec ses deux dimensions écrites)
+- L'énoncé parle alors de la figure (« cet angle », « cette horloge », « le point A », « la flèche rouge ») et ne donne pas l'information que la figure montre (mesure, nombre de côtés, heure, coordonnées, direction).
+- Pour le rectangle, la figure donne les dimensions : la question porte sur un calcul (périmètre, aire), jamais sur la lecture des dimensions.
 - N'utilise aucune autre forme, et n'écris jamais de champ "image" toi-même.
 
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
@@ -140,6 +147,50 @@ def creer_figure(description, niveau, matiere):
         svg = dessiner_polygone(nombre_cotes)
         nom = f"polygone-{nombre_cotes}"
         alt = "Un polygone"
+
+    elif forme == "horloge":
+        heures = description.get("heures")
+        minutes = description.get("minutes")
+        if not isinstance(heures, int) or not 1 <= heures <= 12:
+            raise ValueError(f"heure invalide : {heures!r}")
+        if not isinstance(minutes, int) or not 0 <= minutes <= 55 or minutes % 5 != 0:
+            raise ValueError(f"minutes invalides (multiple de 5 entre 0 et 55) : {minutes!r}")
+        svg = dessiner_horloge(heures, minutes)
+        nom = f"horloge-{heures}h{minutes:02d}"     # :02d → toujours 2 chiffres (2h05, pas 2h5)
+        alt = "Une horloge à aiguilles"
+
+    elif forme == "repere":
+        x = description.get("x")
+        y = description.get("y")
+        for valeur in (x, y):
+            if not isinstance(valeur, int) or not 0 <= valeur <= 6:
+                raise ValueError(f"coordonnée invalide (entier de 0 à 6) : {valeur!r}")
+        svg = dessiner_repere(x, y)
+        nom = f"repere-{x}-{y}"
+        alt = "Un quadrillage avec un point A"
+
+    elif forme == "rose":
+        direction = description.get("direction")
+        if direction not in DIRECTIONS:
+            raise ValueError(f"direction invalide : {direction!r}")
+        svg = dessiner_rose(direction)
+        nom = f"rose-{direction.lower()}"
+        alt = "Une rose des vents avec une flèche rouge"
+
+    elif forme == "rectangle":
+        longueur = description.get("longueur")
+        largeur = description.get("largeur")
+        unite = description.get("unite", "cm")
+        for valeur in (longueur, largeur):
+            if not isinstance(valeur, int) or not 1 <= valeur <= 50:
+                raise ValueError(f"dimension invalide (entier de 1 à 50) : {valeur!r}")
+        if largeur > longueur:
+            raise ValueError("la largeur doit être inférieure ou égale à la longueur")
+        if unite not in ("mm", "cm", "m"):
+            raise ValueError(f"unité invalide : {unite!r}")
+        svg = dessiner_rectangle(longueur, largeur, unite)
+        nom = f"rectangle-{longueur}x{largeur}{unite}"
+        alt = f"Un rectangle de {longueur} {unite} sur {largeur} {unite}"
 
     else:
         raise ValueError(f"forme inconnue : {forme!r}")

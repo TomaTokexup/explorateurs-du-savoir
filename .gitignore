@@ -9,3 +9,6 @@ __pycache__/
 
 # Brouillons générés par l'IA, en attente de relecture
 donnees/brouillon*.json
+
+# Dossiers contenant des images d'exemples
+images/exemples/
