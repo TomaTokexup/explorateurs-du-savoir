@@ -87,6 +87,10 @@ def main():
           f"({len(fusion)} au total)")
 
     mettre_a_jour_sommaire(destination.parent)
+    
+    # Le brouillon est publié : on le supprime pour éviter de le republier par erreur
+    Path(args.brouillon).unlink()
+    print(f"Brouillon supprimé : {args.brouillon}")
 
 if __name__ == "__main__":
     main()

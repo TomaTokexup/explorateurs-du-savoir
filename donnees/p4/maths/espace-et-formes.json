@@ -297,5 +297,103 @@
     ],
     "accents": "toleres",
     "explication": "Pour compter les sommets, on compte les coins : 4 coins sur la face du dessus et 4 coins sur la face du dessous, soit 8 au total."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un cube est fabriqué à partir d'un patron formé de carrés identiques, plié puis collé. Combien de carrés faut-il dans ce patron ?",
+    "choix": [
+      "4 carrés",
+      "5 carrés",
+      "6 carrés",
+      "8 carrés"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un cube a 6 faces carrées identiques, et chaque face du patron correspond à un seul carré : on compte donc les faces du cube."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu es face à l'est. Tu fais un demi-tour (180°). Dans quelle direction es-tu maintenant ?",
+    "choix": [
+      "Le nord",
+      "Le sud",
+      "L'ouest",
+      "L'est"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un demi-tour est opposé à la direction de départ : on passe de l'est à l'ouest, et non à la direction de départ."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un angle mesure 135°. Quel est son nom ?",
+    "choix": [
+      "Un angle aigu",
+      "Un angle obtus",
+      "Un angle droit",
+      "Un angle plat"
+    ],
+    "bonneReponse": 1,
+    "explication": "On compare la mesure à 90° (angle droit) : un angle plus grand que 90° et plus petit que 180° est obtus, comme l'ouverture d'un livre presque entièrement ouvert."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le périmètre de ce rectangle ?",
+    "choix": [
+      "10 cm",
+      "14 cm",
+      "20 cm",
+      "21 cm"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le périmètre est la somme des quatre côtés : on additionne 7 + 3 + 7 + 3, soit 2 × (7 + 3) = 20 cm.",
+    "image": "images/p4/maths/rectangle-7x3cm.svg",
+    "alt": "Un rectangle de 7 cm sur 3 cm"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur ce repère, quelle est la valeur du point A sur l'axe vertical (axe y) ?",
+    "choix": [
+      "5",
+      "1",
+      "6",
+      "0"
+    ],
+    "bonneReponse": 1,
+    "explication": "On lit d'abord la valeur sur l'axe horizontal (x), puis on monte ou on descend jusqu'au point : la valeur sur l'axe vertical (y) est celle où l'on arrive.",
+    "image": "images/p4/maths/repere-5-1.svg",
+    "alt": "Un quadrillage avec un point A"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Parmi ces objets, lequel possède un axe de symétrie ?",
+    "choix": [
+      "Un nuage",
+      "Un papillon",
+      "Une pierre irrégulière",
+      "Un tas de sable"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un axe de symétrie partage la figure en deux moitiés identiques qui se superposent en pliant : un papillon est symétrique par rapport à la ligne de son corps."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel solide n'a qu'un seul sommet (une seule pointe) ?",
+    "choix": [
+      "Le cube",
+      "Le cône",
+      "Le cylindre",
+      "Le pavé droit"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour trouver les sommets, on compte les coins et les pointes : le cône a une seule pointe, alors que le cube et le pavé droit en ont 8 et le cylindre n'en a aucune."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de paires de faces parallèles possède un pavé droit ?",
+    "reponses": [
+      "3",
+      "trois"
+    ],
+    "accents": "toleres",
+    "explication": "Un pavé droit a 6 faces qui vont deux par deux, face à face, sans jamais se rencontrer : 6 faces ÷ 2 = 3 paires de faces parallèles."
   }
 ]

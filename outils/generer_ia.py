@@ -59,6 +59,7 @@ Objectifs officiels du programme pour ce niveau (syllabus des Écoles européenn
 Consignes générales :
 - Chaque question évalue UN de ces objectifs. Varie les objectifs couverts d'une question à l'autre.
 - Ne dépasse jamais le niveau fixé par ces objectifs.
+- N'écris « ce », « cette » ou « cet » pour désigner un objet (« ce triangle », « cette figure ») que si la question a une figure.
 - Utilise le vocabulaire employé en classe en France (« pavé droit » et non « cuboïde », « sommet » et non « vertex »), même si les objectifs officiels sont en anglais.
 - Écris en français, avec des mots simples. Précise toujours les unités.
 - L'explication enseigne la méthode en une ou deux phrases ; elle ne se contente pas de répéter la réponse.
