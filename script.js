@@ -18,7 +18,11 @@
 // Format d'une question (voir la partie 5 pour les différents types) :
 //   QCM    : { "type": "qcm", "enonce": "...", "choix": [...], "bonneReponse": 0, "explication": "..." }
 //   Saisie : { "type": "saisie", "enonce": "...", "reponses": ["il va"], "accents": "stricts", "explication": "..." }
-//   Tous les types peuvent avoir une figure : "image": "images/p4/maths/angle-120.svg", "alt": "description"
+//   Champs facultatifs, pour tous les types :
+//     "image": "images/p4/maths/angle-120.svg", "alt": "description"   → une figure
+//     "texte": "Un court texte à lire…"                               → texte support (lecture)
+//     "astuce": "Prends ton cahier pour poser l'opération !"            → coup de pouce de méthode
+//     "defi": true                                                     → badge « ⭐ Défi »
 //
 // Un cahier s'active tout seul dès que son index.json existe :
 // pas besoin de modifier ce code pour ajouter une matière ou un thème.
@@ -32,7 +36,10 @@ const NIVEAUX = {
 
 const MATIERES = [
   { id: "maths",         nom: "Mathématiques",       icone: "🔢" },
-  { id: "francais",      nom: "Français",            icone: "📖", precision: "Langue 1" },
+  // Le programme de français est organisé par tranches (P1-P2, P3-P4, P5) :
+  // la P3 et la P4 partagent la même banque de questions.
+  { id: "francais",      nom: "Français",            icone: "📖", precision: "Langue 1",
+    tranches: { p3: "p3-p4", p4: "p3-p4", p5: "p5" } },
   { id: "anglais",       nom: "Anglais",             icone: "💬", precision: "Langue 2" },
   { id: "decouverte",    nom: "Découverte du monde", icone: "🌍" },
   { id: "programmation", nom: "Programmation",       icone: "🤖", precision: "Bonus" }
@@ -44,6 +51,13 @@ const NOMBRE_QUESTIONS_THEME = 10;
 const NOMBRE_QUESTIONS_MELANGE = 15;
 
 // ---------- 2. Outils ----------
+
+// Dossier des données d'une matière pour un niveau.
+// Par défaut : donnees/<niveau>/<matiere>/ ; si la matière a des tranches : donnees/<tranche>/<matiere>/
+function dossierDonnees(idNiveau, matiere) {
+  const groupe = (matiere.tranches && matiere.tranches[idNiveau]) || idNiveau;
+  return "donnees/" + groupe + "/" + matiere.id + "/";
+}
 const parametres = new URLSearchParams(window.location.search);
 
 // Lit un fichier JSON. "async/await" : on attend la réponse sans bloquer la page.
@@ -91,7 +105,7 @@ async function pageNiveau() {
     // Un cahier est disponible si son sommaire existe
     let disponible = true;
     try {
-      await lireJSON("donnees/" + idNiveau + "/" + matiere.id + "/index.json");
+      await lireJSON(dossierDonnees(idNiveau, matiere) + "index.json");
     } catch (erreur) {
       disponible = false;
     }
@@ -148,7 +162,7 @@ async function pageCahier() {
   document.getElementById("niveau-matiere").textContent = niveau.nom;
   document.getElementById("lien-sommaire").href = lienCahier;
 
-  const dossier = "donnees/" + idNiveau + "/" + idMatiere + "/";
+  const dossier = dossierDonnees(idNiveau, matiere);
 
   try {
     const themes = await lireJSON(dossier + "index.json");
@@ -301,6 +315,19 @@ function afficherQuestion() {
   document.getElementById("progression").textContent =
     "Question " + (numeroQuestion + 1) + " sur " + questions.length;
   document.getElementById("enonce").textContent = question.enonce;
+
+  // Texte support facultatif (champ "texte"), pour les questions de lecture
+  const texte = document.getElementById("texte-support");
+  texte.textContent = question.texte || "";
+  texte.hidden = !question.texte;
+
+  // Astuce facultative (champ "astuce") : une méthode ou un outil, jamais la réponse
+  const astuce = document.getElementById("astuce");
+  astuce.querySelector("span").textContent = question.astuce || "";
+  astuce.hidden = !question.astuce;
+
+  // Badge « Défi » (champ "defi": true) : une question un peu au-dessus du niveau
+  document.getElementById("badge-defi").hidden = question.defi !== true;
 
   // Figure facultative : champ "image" (chemin du fichier) et "alt" (sa description)
   const figure = document.getElementById("figure");

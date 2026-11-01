@@ -12,3 +12,7 @@ donnees/brouillon*.json
 
 # Dossiers contenant des images d'exemples
 images/exemples/
+
+#le programme de francais
+programme/sources/
+programme/**/*.pdf

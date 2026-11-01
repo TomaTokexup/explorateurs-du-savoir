@@ -1,0 +1,117 @@
+{
+  "niveau": "p3-p4",
+  "matiere": "francais",
+  "source": "Schola Europaea – Programme Français Langue 1, cycle primaire, réf. 2024-01-D-43-fr-3 (en vigueur depuis le 01/09/2024), et son Guide pratique Français L1 (version 1.0, juillet 2024), chapitre « Ressources linguistiques : les notions ». Licence CC BY-NC-SA 4.0.",
+  "note": "Le programme est organisé par tranches (P1-P2, P3-P4, P5) : P3 et P4 partagent ces objectifs. « objectifs » = notions de la tranche P3-P4 ; « revisions » = notions de P1-P2 à revoir ; « defis » = notions de P5, pour les questions de défi. Objectifs repris du guide et du programme, en ne gardant que ce qui s'évalue par un quiz.",
+  "domaines": {
+    "lecture": {
+      "titre": "Lecture",
+      "objectifs": [
+        "Identifier les informations importantes pour comprendre un texte écrit : personnages, actions, relations, cadre spatio-temporel (récit-théâtre) ; indices explicites (internes au texte), implicites (externes …)",
+        "Percevoir l'organisation du texte (mise en page, titre, sous-titres, paragraphes, illustrations...)",
+        "Repérer des mots et des phrases-clés",
+        "Reconstruire le déroulement",
+        "Reformuler des informations",
+        "Percevoir la cohérence et faire des liens (organisateurs textuels, reprises, concordance des temps…)",
+        "Justifier son interprétation ou ses réponses, s'appuyer sur le texte",
+        "Être capable d'identifier les principaux genres littéraires (conte, roman, poésie, fable, nouvelle, théâtre) et de repérer leurs caractéristiques majeures"
+      ],
+      "revisions": [
+        "Comprendre un texte court : qui, quoi, où, quand"
+      ],
+      "defis": [
+        "Interpréter un texte en s'appuyant sur des indices implicites",
+        "Interpréter les genres et les caractéristiques des textes"
+      ]
+    },
+    "vocabulaire": {
+      "titre": "Vocabulaire",
+      "objectifs": [
+        "Induire ou déduire le sens des mots inconnus à partir du contexte",
+        "Rechercher des mots inconnus dans un dictionnaire ou support numérique afin de s'assurer de la compréhension du texte. Mettre ces mots en réseau afin de les réinvestir",
+        "Utiliser un vocabulaire précis, varié, adapté de plus en plus riche",
+        "Expansion du nom par emploi de synonymes",
+        "Modalisation : adverbes en -ment, contraires, négations (ne plus, ne jamais, ni …), comparaison, sens figuré, nuances dans le choix de noms, adjectifs ou verbes",
+        "Connecteurs logiques : de plus, également ; c'est-à-dire, en effet ; cependant, pourtant, au contraire ; donc"
+      ],
+      "revisions": [
+        "Ordre alphabétique et usage du dictionnaire",
+        "Contraires simples et familles de mots courantes"
+      ],
+      "defis": [
+        "Sens figuré et expressions",
+        "Connecteurs : par conséquent, néanmoins, en revanche, d'une part / d'autre part"
+      ]
+    },
+    "grammaire": {
+      "titre": "Grammaire",
+      "objectifs": [
+        "Identification des classes de mots : noms communs, propres ; déterminants (le, la, les, un, une, des) ; adjectifs qualificatifs ; verbes conjugués / infinitif, 1er et 2e groupes ; connecteurs (et, mais, car, alors, ou) ; pronoms personnels (je, tu, il(s), elle(s), on, nous, vous) ; interrogatifs (où, quand, comment, qui, pourquoi…)",
+        "Déterminants : articles définis et indéfinis, possessifs (mon, ma, ta, sa, notre…), démonstratifs (ce, cette, ces, cet)",
+        "Identifier le verbe et le sujet : le sujet est multiple ou c'est un pronom autre qu'un pronom personnel",
+        "Identifier les groupes du nom de la phrase : le groupe est un pronom, il est sujet",
+        "Le complément du verbe (COD), le complément du nom, l'attribut",
+        "Identification du groupe déplaçable : complément circonstanciel de lieu, temps ou manière",
+        "Délimitation de la phrase par majuscule et point ; repérage de l'interrogation et de l'exclamation",
+        "Identification des propositions indépendantes et des propositions relatives avec qui",
+        "Expansion du nom par ajout d'adjectifs, de compléments du nom, de propositions relatives (qui)"
+      ],
+      "revisions": [
+        "Identifier le verbe et le sujet (nom ou pronom personnel devant le verbe)",
+        "Groupes simples : déterminant, nom, adjectif"
+      ],
+      "defis": [
+        "Sujet inversé ; sujet pronom relatif",
+        "Complément d'objet indirect (CIO)",
+        "Identifier les phrases déclaratives, interrogatives et exclamatives",
+        "Propositions relatives avec dont, où, lequel"
+      ]
+    },
+    "conjugaison": {
+      "titre": "Conjugaison",
+      "objectifs": [
+        "Présent : 1er et 2e groupes + être, avoir, faire, dire, prendre, mettre, aller + verbes modaux vouloir, pouvoir, devoir, savoir + quelques familles génériques de verbes du 3e groupe (verbes en -aître, -dre…)",
+        "Futur, imparfait, passé composé, impératif présent : 1er et 2e groupes + quelques familles génériques de verbes du 3e groupe + être, avoir, faire, dire, prendre, mettre, aller + verbes modaux vouloir, pouvoir, devoir, savoir",
+        "Repérer les verbes au présent, passé composé, futur, imparfait, infinitif",
+        "Transformer un texte écrit dans un de ces temps (présent, passé composé, futur, imparfait) dans un autre de ces temps",
+        "Repérer les verbes à l'impératif",
+        "Accord sujet-verbe : je -e/s ; tu -s ; il/elle -e/t ; nous -ons/mes ; vous -ez/tes ; ils/elles -nt"
+      ],
+      "revisions": [
+        "Repérer le présent, le passé et le futur",
+        "Présent de quelques verbes courants"
+      ],
+      "defis": [
+        "Passé simple à la 3e personne : 1er et 2e groupes + être, avoir, faire, dire, prendre, mettre, aller",
+        "Repérer les verbes au passé simple et au plus-que-parfait",
+        "Conditionnel présent des verbes courants"
+      ]
+    },
+    "orthographe": {
+      "titre": "Orthographe",
+      "objectifs": [
+        "Règle générale du pluriel des noms (-s) ; accords particuliers (les noms en s, x, z ; les noms qui ont un pluriel différent : un œil / des yeux)",
+        "Pluriel des noms en -eau/-au/-eu/-al/-ail + exceptions des noms souvent utilisés",
+        "Féminin des noms : transformation de la lettre finale (teur/trice, eur/euse, e/esse, f/ve, doublement de la consonne finale)",
+        "Pluriel des adjectifs (-s ; -eau/-eu/-al) et féminin des adjectifs (-e ; perception de la transformation de la lettre finale à l'écrit)",
+        "Maîtrise de la chaîne d'accords dans le groupe nominal",
+        "Accord de sujets multiples : -nt",
+        "Accord du participe passé avec être (sujets divers)",
+        "Homophones grammaticaux : ça/sa, ou/où, la/l'a, c'est/s'est, on/on n', qu'elle/quelle/quel, sans/s'en, leur/leurs",
+        "Particularités : consonnes doubles en début de mot (ap-, ac-, at-…), noms en -té/-tié, -é/-ée, noms en -ail, -euil, -eil",
+        "Ponctuation : point d'exclamation, virgule, guillemets, deux-points, tiret, parenthèses"
+      ],
+      "revisions": [
+        "Homophones et/est, a/à, on/ont, son/sont, ce/se, ces/ses, la/là",
+        "c/ç, g/gu/ge, s/ss ; m devant m, b, p ; é, è, ê",
+        "Lettres muettes (chant, muet)"
+      ],
+      "defis": [
+        "Homophones mon/m'ont, ni/n'y",
+        "Pluriel des noms composés (règle générale)",
+        "Accord du participe passé avec avoir (COD placé avant)",
+        "Féminin des adjectifs : nouveau/nouvelle, frais/fraîche, public/publique"
+      ]
+    }
+  }
+}

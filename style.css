@@ -676,3 +676,93 @@ a.cahier:hover {
   border-radius: var(--rayon);
   background: white;
 }
+
+/* ---------- 10. Pied de page « Pour les parents » ---------- */
+.pied {
+  max-width: 640px;
+  margin-top: calc(var(--ligne-cahier) * 3);
+  padding: 18px 22px;
+  border-top: 3px solid color-mix(in srgb, var(--encre) 20%, transparent);
+  background: color-mix(in srgb, white 85%, transparent);
+  font-size: 1rem;
+  color: var(--encre-douce);
+}
+
+.pied h2 {
+  font-size: 1.25rem;
+  color: var(--encre);
+  margin-bottom: 6px;
+}
+
+.pied p {
+  margin: 0 0 8px;
+}
+
+.pied ul {
+  margin: 0 0 10px;
+  padding-left: 1.2em;
+}
+
+.pied li {
+  margin-bottom: 4px;
+}
+
+.pied a {
+  color: var(--encre);
+  font-weight: 700;
+}
+
+.pied-mention {
+  font-size: 0.875rem;
+}
+
+/* ---------- 11. Texte support, astuce et défi ---------- */
+
+/* Le texte à lire, présenté comme une page de livre */
+.texte-support {
+  max-width: 640px;
+  margin: 0 0 24px;
+  padding: 18px 22px;
+  border-left: 6px solid var(--couleur);
+  border-radius: 0 var(--rayon) var(--rayon) 0;
+  background: white;
+  font-size: 1.2rem;
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+.texte-support[hidden] {
+  display: none;
+}
+
+/* L'astuce : un petit coup de pouce discret, sous l'énoncé */
+.astuce {
+  max-width: 640px;
+  margin: -12px 0 22px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: #fff6d6;
+  color: var(--encre);
+  font-size: 1.05rem;
+}
+
+.astuce[hidden] {
+  display: none;
+}
+
+/* Le badge des questions « défi » */
+.badge-defi {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: #d9a514;
+  color: white;
+  font-family: var(--police-titre);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.badge-defi[hidden] {
+  display: none;
+}
