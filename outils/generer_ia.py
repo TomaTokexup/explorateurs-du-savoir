@@ -1,12 +1,14 @@
 # Génère des questions avec l'IA, les contrôle, et garde celles qui sont valides
+import hashlib
 import json
 import sys
 import argparse
 import anthropic
 
 from pathlib import Path
-from figures import (DIRECTIONS, dessiner_angle, dessiner_horloge, dessiner_polygone,
-                     dessiner_rectangle, dessiner_repere, dessiner_rose, enregistrer)
+from figures import (DIRECTIONS, dessiner_angle, dessiner_barres, dessiner_billes, dessiner_camembert,
+                     dessiner_courbe, dessiner_horloge, dessiner_polygone, dessiner_rectangle,
+                     dessiner_repere, dessiner_rose, dessiner_venn, enregistrer)
 from dotenv import load_dotenv
 from valider_questions import verifier_question   # ta fonction !
 
@@ -63,6 +65,8 @@ Consignes générales :
 - Utilise le vocabulaire employé en classe en France (« pavé droit » et non « cuboïde », « sommet » et non « vertex »), même si les objectifs officiels sont en anglais.
 - Écris en français, avec des mots simples. Précise toujours les unités.
 - L'explication enseigne la méthode en une ou deux phrases ; elle ne se contente pas de répéter la réponse.
+- Pars d'un exemple concret (de préférence illustré par une figure) plutôt que de demander une définition abstraite.
+- Si l'énoncé contient une liste (par exemple des événements A, B et C), écris chaque élément sur sa propre ligne en les séparant par \\n dans le texte JSON.
 
 Rédige exactement {nb_qcm} questions de type "qcm" et {nb_saisies} questions de type "saisie".
 
@@ -86,6 +90,12 @@ Figures (facultatif, surtout en géométrie) :
   {{"forme": "rose", "direction": "N" | "NE" | "E" | "SE" | "S" | "SO" | "O" | "NO"}}  (rose des vents où seul le nord est écrit ; une flèche rouge montre la direction)
   {{"forme": "rectangle", "longueur": <entier>, "largeur": <entier inférieur ou égal>, "unite": "mm" | "cm" | "m"}}  (rectangle avec ses deux dimensions écrites)
 - L'énoncé parle alors de la figure (« cet angle », « cette horloge », « le point A », « la flèche rouge ») et ne donne pas l'information que la figure montre (mesure, nombre de côtés, heure, coordonnées, direction).
+  {{"forme": "barres", "titre": "...", "etiquettes": ["...", ...], "valeurs": [<entiers>]}}  (diagramme en barres, 2 à 6 barres)
+  {{"forme": "courbe", "titre": "...", "etiquettes": ["...", ...], "valeurs": [<entiers>]}}  (graphique en ligne, ex. une valeur par mois)
+  {{"forme": "camembert", "titre": "...", "etiquettes": ["...", ...], "valeurs": [<entiers>]}}  (diagramme circulaire avec légende ; les valeurs ne sont pas écrites sur le dessin)
+  {{"forme": "billes", "rouges": <entier>, "bleues": <entier>, "vertes": <entier>, "jaunes": <entier>}}  (sac de billes de couleur, pour le hasard et les probabilités ; 18 billes au plus)
+  {{"forme": "venn", "titre_a": "...", "titre_b": "...", "seulement_a": [...], "commun": [...], "seulement_b": [...]}}  (diagramme de Venn à deux cercles ; les éléments sont des mots courts, par exemple des prénoms ; 4 par zone au plus)
+  Pour les diagrammes : titre de 30 caractères au plus, étiquettes de 12 caractères au plus (abrège : « Lun », « Jan »), valeurs entières et faciles à lire.
 - Pour le rectangle, la figure donne les dimensions : la question porte sur un calcul (périmètre, aire), jamais sur la lecture des dimensions.
 - N'utilise aucune autre forme, et n'écris jamais de champ "image" toi-même.
 
@@ -100,7 +110,7 @@ def demander_questions(consignes, demande):
     client = anthropic.Anthropic()
     message = client.messages.create(
         model="claude-haiku-5-5",
-        max_tokens=8000,
+        max_tokens=16000,
         system=consignes,
         messages=[
             {"role": "user", "content": demande}
@@ -127,6 +137,24 @@ def extraire_json(texte):
     if debut == -1 or fin == -1:
         return texte            # pas de crochets : on laisse json.loads signaler l'erreur
     return texte[debut:fin + 1]
+
+def verifier_serie(etiquettes, valeurs, titre):
+    """Contrôle les données d'un diagramme (barres, courbe, camembert). Lève une ValueError si invalides."""
+    if not isinstance(etiquettes, list) or not isinstance(valeurs, list):
+        raise ValueError("'etiquettes' et 'valeurs' doivent être des listes")
+    if not 2 <= len(etiquettes) <= 6 or len(etiquettes) != len(valeurs):
+        raise ValueError("il faut de 2 à 6 étiquettes, et autant de valeurs que d'étiquettes")
+    for etiquette in etiquettes:
+        if not isinstance(etiquette, str) or not 1 <= len(etiquette) <= 12:
+            raise ValueError(f"étiquette invalide (texte de 1 à 12 caractères) : {etiquette!r}")
+    for valeur in valeurs:
+        if not isinstance(valeur, int) or not 0 <= valeur <= 1000:
+            raise ValueError(f"valeur invalide (entier de 0 à 1000) : {valeur!r}")
+    if max(valeurs) == 0:
+        raise ValueError("toutes les valeurs sont nulles")
+    if not isinstance(titre, str) or len(titre) > 30:
+        raise ValueError(f"titre invalide (texte de 30 caractères au plus) : {titre!r}")
+
 
 def creer_figure(description, niveau, matiere):
     """Dessine la figure décrite par l'IA et renvoie (chemin de l'image, texte alt).
@@ -193,6 +221,47 @@ def creer_figure(description, niveau, matiere):
         nom = f"rectangle-{longueur}x{largeur}{unite}"
         alt = f"Un rectangle de {longueur} {unite} sur {largeur} {unite}"
 
+    elif forme in ("barres", "courbe", "camembert"):
+        etiquettes = description.get("etiquettes")
+        valeurs = description.get("valeurs")
+        titre = description.get("titre", "")
+        verifier_serie(etiquettes, valeurs, titre)
+        fonction = {"barres": dessiner_barres, "courbe": dessiner_courbe, "camembert": dessiner_camembert}[forme]
+        svg = fonction(etiquettes, valeurs, titre)
+        # Nom de fichier unique pour ces données : un court « résumé » (hash) du contenu
+        empreinte = hashlib.md5(json.dumps(description, sort_keys=True).encode("utf-8")).hexdigest()[:8]
+        nom = f"{forme}-{empreinte}"
+        alt = {"barres": "Un diagramme en barres", "courbe": "Un graphique en ligne",
+               "camembert": "Un diagramme circulaire"}[forme]
+
+    elif forme == "billes":
+        nombres = {couleur: description.get(couleur, 0) for couleur in ("rouges", "bleues", "vertes", "jaunes")}
+        for couleur, nombre in nombres.items():
+            if not isinstance(nombre, int) or not 0 <= nombre <= 12:
+                raise ValueError(f"nombre de billes {couleur} invalide (entier de 0 à 12) : {nombre!r}")
+        if not 1 <= sum(nombres.values()) <= 18:
+            raise ValueError("le sac doit contenir entre 1 et 18 billes")
+        svg = dessiner_billes(**nombres)
+        nom = "billes-" + "-".join(str(n) for n in nombres.values())
+        alt = "Un sac de billes de couleur"
+
+    elif forme == "venn":
+        for cle in ("titre_a", "titre_b"):
+            titre = description.get(cle)
+            if not isinstance(titre, str) or not 1 <= len(titre) <= 14:
+                raise ValueError(f"{cle} invalide (texte de 1 à 14 caractères) : {titre!r}")
+        zones = [description.get(cle, []) for cle in ("seulement_a", "commun", "seulement_b")]
+        for zone in zones:
+            if not isinstance(zone, list) or len(zone) > 4:
+                raise ValueError("chaque zone du diagramme de Venn doit être une liste de 4 éléments au plus")
+            for element in zone:
+                if not isinstance(element, str) or not 1 <= len(element) <= 10:
+                    raise ValueError(f"élément de Venn invalide (texte de 1 à 10 caractères) : {element!r}")
+        svg = dessiner_venn(description["titre_a"], description["titre_b"], *zones)
+        empreinte = hashlib.md5(json.dumps(description, sort_keys=True).encode("utf-8")).hexdigest()[:8]
+        nom = f"venn-{empreinte}"
+        alt = "Un diagramme de Venn à deux cercles"
+
     else:
         raise ValueError(f"forme inconnue : {forme!r}")
 
@@ -244,11 +313,11 @@ def main():
     #  - si la liste d'erreurs est vide  -> ajoute la question à "valides"
     #  - sinon -> affiche chaque erreur et ajoute la question à "rejetees"
     for numero, question in enumerate(questions, start=1):
-        # Si l'IA a décrit une figure, Python la dessine
-        if "figure" in question:
+        # Si l'IA a décrit une figure, Python la dessine ("figure": null = pas de figure)
+        description = question.pop("figure", None)
+        if description is not None:
             try:
-                question["image"], question["alt"] = creer_figure(
-                    question.pop("figure"), args.niveau, args.matiere)
+                question["image"], question["alt"] = creer_figure(description, args.niveau, args.matiere)
             except ValueError as erreur:
                 print(f"Question {numero} rejetée : {erreur}")
                 rejetees.append(question)

@@ -1,0 +1,131 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Dans ce diagramme en barres, quel fruit a été choisi par le plus d'élèves ?",
+    "choix": [
+      "La pomme",
+      "La banane",
+      "La poire",
+      "La fraise"
+    ],
+    "bonneReponse": 0,
+    "explication": "Pour trouver le plus grand nombre, on compare la hauteur des barres : la barre la plus haute correspond au fruit le plus choisi.",
+    "image": "images/p4/maths/barres-9350696b.svg",
+    "alt": "Un diagramme en barres"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans ce diagramme circulaire, quel est le moyen de transport le plus utilisé pour aller à l'école ?",
+    "choix": [
+      "Le bus",
+      "La marche",
+      "La voiture",
+      "Le vélo"
+    ],
+    "bonneReponse": 1,
+    "explication": "Dans un diagramme circulaire, la part la plus grande est le secteur le plus large : on repère ce secteur sans chercher de chiffres.",
+    "image": "images/p4/maths/camembert-1b142dcc.svg",
+    "alt": "Un diagramme circulaire"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Ce graphique en ligne montre le nombre de visiteurs du musée chaque mois. Dans quel mois y a-t-il eu le plus de visiteurs ?",
+    "choix": [
+      "Mars",
+      "Mai",
+      "Avril",
+      "Février"
+    ],
+    "bonneReponse": 2,
+    "explication": "Pour lire une courbe, on repère le point le plus haut, puis on lit le mois situé en dessous.",
+    "image": "images/p4/maths/courbe-703cc88c.svg",
+    "alt": "Un graphique en ligne"
+  },
+  {
+    "type": "qcm",
+    "enonce": "On veut montrer la part de chaque sport pratiqué par les élèves d'une classe. Quel graphique est le plus adapté ?",
+    "choix": [
+      "Une courbe",
+      "Un diagramme de Venn",
+      "Un diagramme circulaire",
+      "Un diagramme de Carroll"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un diagramme circulaire sert à montrer les parts d'un même tout. Une courbe sert plutôt à montrer une évolution dans le temps."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Ce diagramme de Venn classe des élèves selon ce qu'ils aiment. Qui aime à la fois le sport et la musique ?",
+    "choix": [
+      "Léo",
+      "Sami",
+      "Emma",
+      "Personne"
+    ],
+    "bonneReponse": 1,
+    "explication": "La partie commune aux deux cercles contient ce qui appartient aux deux groupes à la fois : Sami est dans les deux cercles, il aime donc le sport et la musique.",
+    "image": "images/p4/maths/venn-d4512194.svg",
+    "alt": "Un diagramme de Venn à deux cercles"
+  },
+  {
+    "type": "qcm",
+    "enonce": "On tire une bille dans un sac qui ne contient que des billes rouges. Tirer une bille rouge est :",
+    "choix": [
+      "Certain",
+      "Impossible",
+      "Une chance sur deux",
+      "Peu probable"
+    ],
+    "bonneReponse": 0,
+    "explication": "Si tous les objets du sac ont la même couleur, l'événement est certain : il arrivera à coup sûr."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans ce sac, on tire une bille au hasard sans regarder. Quelle couleur a le plus de chances d'être tirée ?",
+    "choix": [
+      "La bleue",
+      "La jaune",
+      "La rouge",
+      "La verte"
+    ],
+    "bonneReponse": 2,
+    "explication": "On compte le nombre de billes de chaque couleur : la couleur qui a le plus de billes est celle qui a le plus de chances d'être tirée.",
+    "image": "images/p4/maths/billes-8-2-1-1.svg",
+    "alt": "Un sac de billes de couleur"
+  },
+  {
+    "type": "qcm",
+    "enonce": "On lance un dé à 6 faces. Classe ces événements du moins probable au plus probable :\nA : obtenir un 7\nB : obtenir un nombre pair\nC : obtenir un nombre inférieur à 7",
+    "choix": [
+      "C, B, A",
+      "A, B, C",
+      "B, A, C",
+      "C, A, B"
+    ],
+    "bonneReponse": 1,
+    "explication": "Obtenir 7 est impossible, obtenir un nombre pair a une chance sur deux, et obtenir un nombre inférieur à 7 est certain : on range donc les événements de l'impossible au certain."
+  },
+  {
+    "type": "saisie",
+    "enonce": "On lance une pièce de monnaie deux fois de suite. Combien de résultats différents peut-on obtenir ? (Pile ou Face)",
+    "reponses": [
+      "4",
+      "quatre"
+    ],
+    "accents": "toleres",
+    "explication": "On écrit tous les résultats possibles : PP, PF, FP, FF. On compte ensuite le nombre de résultats écrits."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Ce graphique en ligne montre la température relevée à midi chaque jour. Quelle température a été relevée le jeudi ? Donne ta réponse en degrés Celsius (°C).",
+    "reponses": [
+      "18",
+      "18 °C",
+      "18°C"
+    ],
+    "accents": "toleres",
+    "explication": "On repère le point situé au-dessus de « Jeu », puis on lit la valeur indiquée par le graphique avec son unité.",
+    "image": "images/p4/maths/courbe-d5c0eaed.svg",
+    "alt": "Un graphique en ligne"
+  }
+]

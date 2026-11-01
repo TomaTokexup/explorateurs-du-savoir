@@ -402,6 +402,7 @@ a.cahier:hover {
   font-size: clamp(1.6rem, 4vw, 2.2rem);
   font-weight: 700;
   margin: 0 0 24px;
+  white-space: pre-line;   /* les retours à la ligne (\n) écrits dans le JSON sont affichés */
 }
 
 .reponses {
@@ -479,6 +480,7 @@ a.cahier:hover {
 
 .correction .explication {
   margin: 0;
+  white-space: pre-line;
 }
 
 .bouton-suivant {
