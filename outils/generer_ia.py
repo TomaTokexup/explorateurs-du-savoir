@@ -4,6 +4,7 @@ import sys
 import argparse
 import anthropic
 
+from pathlib import Path
 from figures import dessiner_angle, dessiner_polygone, enregistrer
 from dotenv import load_dotenv
 from valider_questions import verifier_question   # ta fonction !
@@ -26,16 +27,34 @@ def charger_objectifs(niveau, matiere, theme):
     # 4. renvoyer deux valeurs : return titre, objectifs
     return programme["domaines"][theme]["titre"], programme["domaines"][theme]["objectifs"]
 
-def construire_consignes(niveau, titre_domaine, objectifs, nombre, nb_saisies):
+def charger_enonces_existants(niveau, matiere, theme):
+    """Renvoie la liste des énoncés déjà publiés pour ce thème (vide si le thème n'existe pas)."""
+    chemin = Path(f"donnees/{niveau}/{matiere}/{theme}.json")
+    if not chemin.exists():
+        return []
+    with open(chemin, "r", encoding="utf-8") as fichier:
+        return [q.get("enonce") for q in json.load(fichier)]
+
+def construire_consignes(niveau, titre_domaine, objectifs, nombre, nb_saisies, enonces_existants):
     """Construit le 'system prompt' à partir des objectifs officiels."""
     liste_objectifs = "\n".join(f"- {objectif}" for objectif in objectifs)
     nb_qcm = nombre - nb_saisies
+    # Les questions déjà publiées, pour que l'IA ne les reproduise pas
+    if enonces_existants:
+        liste_existants = "\n".join(f"- {enonce}" for enonce in enonces_existants)
+        bloc_existants = f"""
+Questions déjà publiées pour ce domaine. Ne les reproduis pas, même reformulées ou avec d'autres nombres ;
+couvre plutôt d'autres objectifs, ou d'autres situations de la vie courante :
+{liste_existants}
+"""
+    else:
+        bloc_existants = ""
     return f"""Tu rédiges des exercices de révision pour des élèves de {niveau.upper()} des Écoles européennes (section française, enfants de 8 à 11 ans).
 
 Domaine : {titre_domaine}
 Objectifs officiels du programme pour ce niveau (syllabus des Écoles européennes, en anglais) :
 {liste_objectifs}
-
+{bloc_existants}
 Consignes générales :
 - Chaque question évalue UN de ces objectifs. Varie les objectifs couverts d'une question à l'autre.
 - Ne dépasse jamais le niveau fixé par ces objectifs.
@@ -143,8 +162,13 @@ def main():
     # 1. titre, objectifs = charger_objectifs(...)
     titre, objectifs = charger_objectifs(args.niveau, args.matiere, args.theme)
 
+    # 1b. enonces_existants = charger_enonces_existants(...)
+    enonces_existants = charger_enonces_existants(args.niveau, args.matiere, args.theme)
+    enonces_existants = charger_enonces_existants(args.niveau, args.matiere, args.theme)
+    print(f"{len(enonces_existants)} question(s) déjà publiée(s) transmise(s) à l'IA")
+
     # 2. consignes = construire_consignes(...)
-    consignes = construire_consignes(args.niveau, titre, objectifs, args.nombre, args.saisies)
+    consignes = construire_consignes(args.niveau, titre, objectifs, args.nombre, args.saisies, enonces_existants)
 
     # 3. demande = f"Rédige les {args.nombre} questions sur le domaine « {titre} »."
     demande = f"Rédige les {args.nombre} questions sur le domaine « {titre} »."

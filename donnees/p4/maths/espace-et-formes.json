@@ -203,5 +203,99 @@
     "explication": "Le nom d'un polygone dépend de son nombre de côtés : 3 côtés = triangle, 4 = quadrilatère, 5 = pentagone, 6 = hexagone. Compte les côtés un par un sans en oublier.",
     "image": "images/p4/maths/polygone-5.svg",
     "alt": "Un polygone"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une rue, deux rails de tramway sont posés côte à côte. Ils ne se croisent jamais. Comment sont ces deux lignes ?",
+    "choix": [
+      "Perpendiculaires",
+      "Parallèles",
+      "Sécantes",
+      "Verticales"
+    ],
+    "bonneReponse": 1,
+    "explication": "Deux droites parallèles restent toujours à la même distance l'une de l'autre et ne se croisent jamais. Pour le vérifier, on regarde si les lignes se rencontreraient si on les prolongeait."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Parmi ces figures, laquelle est régulière ?",
+    "choix": [
+      "Un rectangle de 5 cm sur 2 cm",
+      "Un triangle dont les trois côtés mesurent 4 cm",
+      "Un triangle rectangle",
+      "Un losange dont les côtés mesurent 3 cm et un angle de 80°"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une figure est régulière si tous ses côtés ont la même longueur et tous ses angles la même mesure. Il faut donc vérifier que les côtés sont tous égaux, pas seulement que la figure a des angles droits."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Les aiguilles d'une horloge indiquent 2 heures. Quel type d'angle forment-elles entre elles ?",
+    "choix": [
+      "Angle droit (90°)",
+      "Angle obtus (plus de 90°)",
+      "Angle aigu (moins de 90°)",
+      "Angle plat (180°)"
+    ],
+    "bonneReponse": 2,
+    "explication": "Entre 12 h et 2 h, il y a 2 graduations de 30°, soit 60°. Comme 60° est plus petit que 90°, l'angle est aigu."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel solide a deux faces rondes (circulaires) et une face courbe qui fait le tour ?",
+    "choix": [
+      "Une sphère",
+      "Un cylindre",
+      "Un cône",
+      "Une pyramide"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le cylindre a deux bases circulaires et une face courbe. Le cône, lui, n'a qu'une seule base ronde et se termine par une pointe."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien d'axes de symétrie a un triangle équilatéral (un triangle dont les trois côtés sont égaux) ?",
+    "choix": [
+      "0",
+      "1",
+      "3",
+      "4"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un axe de symétrie coupe la figure en deux parties identiques qui se superposent. Pour le trouver, on imagine plier la figure : dans un triangle équilatéral, il y a un axe par sommet, donc 3."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu es face au nord-ouest. Tu fais un quart de tour vers la droite, dans le sens des aiguilles d'une montre. Dans quelle direction es-tu maintenant ?",
+    "choix": [
+      "Nord",
+      "Nord-Est",
+      "Sud-Ouest",
+      "Est"
+    ],
+    "bonneReponse": 1,
+    "explication": "Entre deux directions voisines de la rose des vents, il y a 45°. Un quart de tour (90°) fait donc passer par deux directions : du nord-ouest, on passe par le nord, puis on arrive au nord-est."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un robot est au point O, à l'origine des axes (0 ; 0). Il avance de 4 cases vers la droite, puis de 3 cases vers le haut. Quelles sont ses coordonnées ?",
+    "choix": [
+      "(3 ; 4)",
+      "(4 ; 3)",
+      "(7 ; 0)",
+      "(4 ; 0)"
+    ],
+    "bonneReponse": 1,
+    "explication": "On écrit toujours d'abord la coordonnée x (horizontale), puis la coordonnée y (verticale). Ici, x = 4 après le déplacement vers la droite et y = 3 après le déplacement vers le haut."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de sommets (coins) a un cube ?",
+    "reponses": [
+      "8",
+      "huit"
+    ],
+    "accents": "toleres",
+    "explication": "Pour compter les sommets, on compte les coins : 4 coins sur la face du dessus et 4 coins sur la face du dessous, soit 8 au total."
   }
 ]
