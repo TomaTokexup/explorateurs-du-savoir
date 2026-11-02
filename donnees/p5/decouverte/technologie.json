@@ -1,0 +1,125 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces gestes est une traction (on tire l'objet vers soi) ?",
+    "choix": [
+      "Lancer un ballon",
+      "Appuyer sur un bouton",
+      "Pousser une porte pour entrer",
+      "Ouvrir un tiroir en tirant sa poignée"
+    ],
+    "bonneReponse": 3,
+    "explication": "Une force peut pousser ou tirer. Pour ouvrir le tiroir, tu le tires vers toi : c'est une traction."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi glisse-t-on beaucoup plus facilement sur la glace que sur un tapis ?",
+    "choix": [
+      "Parce que nos chaussures sont plus légères sur la glace",
+      "Parce qu'il y a beaucoup moins de frottements sur la glace",
+      "Parce que le tapis est plus froid",
+      "Parce que la glace attire nos pieds"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le frottement est une force qui freine un objet qui glisse. Une surface lisse comme la glace frotte très peu, un tapis rugueux frotte beaucoup."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quand tu freines à vélo, comment les freins ralentissent-ils la roue ?",
+    "choix": [
+      "Ils dégonflent le pneu",
+      "Ils poussent le vélo vers l'arrière avec un ressort",
+      "Ils ajoutent du poids sur la roue",
+      "Ils frottent contre la roue"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les patins de frein serrent la roue : le frottement transforme le mouvement en chaleur, et la roue ralentit."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pour soulever une grosse pierre, Hugo glisse une longue barre dessous et la pose sur une petite pierre. Où doit-il placer la petite pierre pour avoir le moins d'effort à faire ?",
+    "choix": [
+      "Exactement au milieu de la barre",
+      "Cela ne change rien",
+      "Tout près de la grosse pierre",
+      "Tout près de ses mains"
+    ],
+    "bonneReponse": 2,
+    "explication": "C'est le principe du levier : plus le point d'appui est proche de la charge et loin des mains, moins il faut d'effort pour la soulever."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces objets fonctionne comme un levier ?",
+    "choix": [
+      "Une corde à sauter",
+      "Une balançoire à bascule",
+      "Une bille",
+      "Un ballon de football"
+    ],
+    "bonneReponse": 1,
+    "explication": "La balançoire à bascule tourne autour d'un point d'appui au milieu : quand un côté descend, l'autre monte. C'est un levier."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Deux roues dentées sont engrenées. La première tourne dans le sens des aiguilles d'une montre. Dans quel sens tourne la seconde ?",
+    "choix": [
+      "Elle tourne une fois dans un sens, une fois dans l'autre",
+      "Dans le même sens que la première",
+      "Elle ne tourne pas",
+      "Dans le sens inverse des aiguilles d'une montre"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les dents de la première roue poussent celles de la seconde : deux roues engrenées tournent toujours en sens contraire.",
+    "astuce": "Dessine deux cercles qui se touchent et suis avec ton doigt le mouvement à l'endroit où ils se touchent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi une pomme qui se détache de l'arbre tombe-t-elle vers le sol ?",
+    "choix": [
+      "Parce que le vent la pousse toujours vers le bas",
+      "Parce que l'air est plus lourd que la pomme",
+      "Parce que la Terre l'attire : c'est la gravité",
+      "Parce que l'arbre la lance"
+    ],
+    "bonneReponse": 2,
+    "explication": "La Terre attire tous les objets vers son centre : c'est la gravité (ou pesanteur). C'est elle qui donne leur poids aux objets."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur la Lune, un astronaute saute beaucoup plus haut que sur la Terre. Pourquoi ?",
+    "choix": [
+      "Parce qu'il n'y a pas de sol sur la Lune",
+      "Parce que la Lune tourne très vite",
+      "Parce que la Lune attire les objets beaucoup moins fort que la Terre",
+      "Parce que sa combinaison a des ressorts"
+    ],
+    "bonneReponse": 2,
+    "explication": "La Lune est plus petite que la Terre : sa gravité est environ six fois plus faible. L'astronaute y pèse beaucoup moins lourd, il saute donc plus haut."
+  },
+  {
+    "type": "qcm",
+    "enonce": "La lampe de ce circuit va-t-elle briller ?",
+    "choix": [
+      "Oui, car une lampe brille toujours avec une pile",
+      "Oui, car la pile est branchée",
+      "Non, car le circuit est ouvert : un fil est débranché",
+      "Non, car il manque un interrupteur"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le courant ne circule que dans une boucle complète. Ici, un fil est débranché : le circuit est ouvert, la lampe reste éteinte.",
+    "image": "images/p5/decouverte/circuit-74346f55.svg",
+    "alt": "Un circuit électrique avec une lampe, un fil débranché, une pile"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment appelle-t-on le point fixe autour duquel tourne un levier ? (deux ou trois mots)",
+    "reponses": [
+      "point d'appui",
+      "le point d'appui",
+      "pivot",
+      "le pivot"
+    ],
+    "accents": "toleres",
+    "explication": "Un levier tourne autour d'un point d'appui (ou pivot) : c'est la petite pierre sous la barre, ou l'axe au milieu de la bascule."
+  }
+]

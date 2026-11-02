@@ -1,0 +1,22 @@
+[
+  {
+    "id": "lecture",
+    "titre": "Lecture"
+  },
+  {
+    "id": "vocabulaire",
+    "titre": "Vocabulaire"
+  },
+  {
+    "id": "grammaire",
+    "titre": "Grammaire"
+  },
+  {
+    "id": "conjugaison",
+    "titre": "Conjugaison"
+  },
+  {
+    "id": "orthographe",
+    "titre": "Orthographe"
+  }
+]

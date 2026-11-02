@@ -1,0 +1,125 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Quelles sont les coordonnées du point A ?",
+    "choix": [
+      "(5 ; 4)",
+      "(4 ; 5)",
+      "(4 ; 4)",
+      "(5 ; 5)"
+    ],
+    "bonneReponse": 1,
+    "explication": "On lit d'abord l'abscisse sur l'axe horizontal (4), puis l'ordonnée sur l'axe vertical (5).",
+    "image": "images/p5/maths/repere-4-5.svg",
+    "alt": "Un quadrillage avec un point A"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment appelle-t-on un triangle qui a exactement deux côtés de même longueur ?",
+    "choix": [
+      "équilatéral",
+      "scalène",
+      "rectangle",
+      "isocèle"
+    ],
+    "bonneReponse": 3,
+    "explication": "Isocèle : deux côtés égaux. Équilatéral : trois côtés égaux. Scalène : trois côtés différents."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment appelle-t-on un triangle dont les trois côtés ont des longueurs différentes ?",
+    "choix": [
+      "carré",
+      "scalène",
+      "équilatéral",
+      "isocèle"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un triangle scalène n'a aucun côté égal à un autre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment appelle-t-on cet angle ?",
+    "choix": [
+      "un angle aigu",
+      "un angle obtus",
+      "un angle plat",
+      "un angle droit"
+    ],
+    "bonneReponse": 1,
+    "explication": "Cet angle est plus grand qu'un angle droit (90°) mais plus petit qu'un angle plat (180°) : il est obtus.",
+    "image": "images/p5/maths/angle-150.svg",
+    "alt": "Un angle"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le diamètre d'un cercle mesure 10 cm. Combien mesure son rayon ?",
+    "choix": [
+      "3,14 cm",
+      "5 cm",
+      "20 cm",
+      "10 cm"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le rayon est la moitié du diamètre : 10 ÷ 2 = 5 cm."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel solide a deux bases en forme de disque ?",
+    "choix": [
+      "le cône",
+      "la pyramide",
+      "la boule (sphère)",
+      "le cylindre"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le cylindre (comme une boîte de conserve) a deux disques identiques ; le cône n'en a qu'un."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien d'axes de symétrie a un carré ?",
+    "reponses": [
+      "4",
+      "quatre"
+    ],
+    "accents": "toleres",
+    "explication": "Un carré a 4 axes de symétrie : 2 qui passent par le milieu des côtés et 2 qui sont les diagonales.",
+    "astuce": "Dessine un carré sur ton brouillon et cherche toutes les façons de le plier en deux."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de sommets a une pyramide à base carrée ?",
+    "reponses": [
+      "5",
+      "cinq"
+    ],
+    "accents": "toleres",
+    "explication": "4 sommets pour la base carrée, plus le sommet du haut : 5 sommets."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un patron formé de 6 carrés identiques peut permettre de construire…",
+    "choix": [
+      "un cône",
+      "un cylindre",
+      "une pyramide",
+      "un cube"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un cube a 6 faces carrées identiques : son patron est formé de 6 carrés."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment s'appelle ce polygone ?",
+    "choix": [
+      "un heptagone",
+      "un octogone",
+      "un hexagone",
+      "un pentagone"
+    ],
+    "bonneReponse": 2,
+    "explication": "Ce polygone a 6 côtés : c'est un hexagone, comme une alvéole d'abeille.",
+    "image": "images/p5/maths/polygone-6.svg",
+    "alt": "Un polygone"
+  }
+]

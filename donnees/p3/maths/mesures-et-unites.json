@@ -1,0 +1,124 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Combien y a-t-il de centimètres dans 1 mètre ?",
+    "choix": [
+      "1 000",
+      "10",
+      "100",
+      "60"
+    ],
+    "bonneReponse": 2,
+    "explication": "1 m = 100 cm (et 1 m = 10 dm = 1 000 mm)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "3 km, c'est combien de mètres ?",
+    "choix": [
+      "30 000 m",
+      "3 000 m",
+      "30 m",
+      "300 m"
+    ],
+    "bonneReponse": 1,
+    "explication": "1 km = 1 000 m, donc 3 km = 3 000 m."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le périmètre de ce rectangle ?",
+    "choix": [
+      "24 cm",
+      "24 cm²",
+      "10 cm",
+      "20 cm"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le périmètre, c'est le tour de la figure : 6 + 4 + 6 + 4 = 20 cm, ou (6 + 4) × 2 = 20 cm.",
+    "image": "images/p3/maths/rectangle-6x4cm.svg",
+    "alt": "Un rectangle de 6 cm sur 4 cm"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien y a-t-il de centilitres dans 1 litre ?",
+    "choix": [
+      "10",
+      "100",
+      "1 000",
+      "50"
+    ],
+    "bonneReponse": 1,
+    "explication": "1 L = 10 dL = 100 cL = 1 000 mL."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de grammes font 2 kg ?",
+    "reponses": [
+      "2000",
+      "2 000",
+      "2000 g",
+      "2 000 g"
+    ],
+    "accents": "toleres",
+    "explication": "1 kg = 1 000 g, donc 2 kg = 2 000 g."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle heure indique cette horloge ?",
+    "choix": [
+      "3 h 08",
+      "8 h 15",
+      "4 h 40",
+      "3 h 40"
+    ],
+    "bonneReponse": 3,
+    "explication": "La petite aiguille est entre le 3 et le 4 : il est 3 heures passées. La grande aiguille sur le 8 indique 40 minutes (8 × 5).",
+    "image": "images/p3/maths/horloge-3h40.svg",
+    "alt": "Une horloge à aiguilles"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un film commence à 14 h 30 et dure 1 h 45. À quelle heure se termine-t-il ?",
+    "choix": [
+      "16 h 45",
+      "16 h 15",
+      "15 h 75",
+      "15 h 15"
+    ],
+    "bonneReponse": 1,
+    "explication": "14 h 30 + 1 h = 15 h 30 ; 15 h 30 + 30 min = 16 h ; 16 h + 15 min = 16 h 15."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de jours y a-t-il dans une année bissextile ?",
+    "reponses": [
+      "366",
+      "366 jours"
+    ],
+    "accents": "toleres",
+    "explication": "Une année bissextile a 366 jours : février y compte 29 jours au lieu de 28."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de minutes y a-t-il dans 2 heures ?",
+    "choix": [
+      "60",
+      "100",
+      "200",
+      "120"
+    ],
+    "bonneReponse": 3,
+    "explication": "1 h = 60 min, donc 2 h = 2 × 60 = 120 min."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu paies un livre de 7,60 € avec un billet de 10 €. Combien te rend-on ?",
+    "choix": [
+      "3,60 €",
+      "2,60 €",
+      "3,40 €",
+      "2,40 €"
+    ],
+    "bonneReponse": 3,
+    "explication": "De 7,60 € à 8 €, il manque 0,40 € ; de 8 € à 10 €, il manque 2 €. On te rend donc 2,40 €."
+  }
+]

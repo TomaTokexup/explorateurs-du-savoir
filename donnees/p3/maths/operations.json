@@ -1,0 +1,117 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Calcule 356 + 247.",
+    "choix": [
+      "593",
+      "503",
+      "613",
+      "603"
+    ],
+    "bonneReponse": 3,
+    "explication": "Unités : 6 + 7 = 13, on pose 3 et on retient 1. Dizaines : 5 + 4 + 1 = 10, on pose 0 et on retient 1. Centaines : 3 + 2 + 1 = 6.",
+    "astuce": "Pose l'addition en colonnes sur ton brouillon."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 702 − 358.",
+    "choix": [
+      "444",
+      "354",
+      "456",
+      "344"
+    ],
+    "bonneReponse": 3,
+    "explication": "Pose la soustraction en colonnes avec les retenues : 702 − 358 = 344. Vérifie : 344 + 358 = 702."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien font 7 × 8 ?",
+    "reponses": [
+      "56"
+    ],
+    "accents": "toleres",
+    "explication": "7 × 8 = 56 (c'est aussi 8 × 7)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel nombre n'est pas un diviseur de 24 ?",
+    "choix": [
+      "4",
+      "6",
+      "9",
+      "3"
+    ],
+    "bonneReponse": 2,
+    "explication": "24 = 3 × 8 = 4 × 6, mais 24 n'est pas dans la table de 9 (9 × 2 = 18, 9 × 3 = 27)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 45 × 100.",
+    "choix": [
+      "45 000",
+      "450",
+      "4 050",
+      "4 500"
+    ],
+    "bonneReponse": 3,
+    "explication": "Multiplier par 100, c'est rendre le nombre 100 fois plus grand : chaque chiffre avance de deux rangs, 45 devient 4 500."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 123 × 4.",
+    "choix": [
+      "4 812",
+      "492",
+      "496",
+      "482"
+    ],
+    "bonneReponse": 1,
+    "explication": "123 × 4 = 100 × 4 + 20 × 4 + 3 × 4 = 400 + 80 + 12 = 492."
+  },
+  {
+    "type": "qcm",
+    "enonce": "On partage 29 billes entre 4 enfants, chacun en reçoit autant. Combien de billes reste-t-il ?",
+    "choix": [
+      "2",
+      "1",
+      "0",
+      "3"
+    ],
+    "bonneReponse": 1,
+    "explication": "4 × 7 = 28 : chaque enfant reçoit 7 billes, et il reste 29 − 28 = 1 bille."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le double de 45 ?",
+    "choix": [
+      "22,5",
+      "90",
+      "80",
+      "95"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le double, c'est 2 fois le nombre : 45 + 45 = 90. (22,5 est la moitié.)"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien font 1/4 de 20 bonbons ?",
+    "choix": [
+      "80",
+      "5",
+      "10",
+      "4"
+    ],
+    "bonneReponse": 1,
+    "explication": "Prendre le quart, c'est partager en 4 parts égales : 20 ÷ 4 = 5."
+  },
+  {
+    "type": "saisie",
+    "enonce": "On sait que 6 × 7 = 42. Combien font 42 ÷ 7 ?",
+    "reponses": [
+      "6"
+    ],
+    "accents": "toleres",
+    "explication": "La division est l'opération inverse de la multiplication : si 6 × 7 = 42, alors 42 ÷ 7 = 6."
+  }
+]

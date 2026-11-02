@@ -1,0 +1,122 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Quel grand événement de l'histoire de France faut-il placer à l'endroit du point d'interrogation ?",
+    "choix": [
+      "La découverte de l'Amérique",
+      "Le couronnement de Charlemagne",
+      "La chute du mur de Berlin",
+      "La Révolution française"
+    ],
+    "bonneReponse": 3,
+    "explication": "La Révolution française commence en 1789 : elle se place entre le voyage de Christophe Colomb (1492) et la Première Guerre mondiale (1914).",
+    "image": "images/p5/decouverte/frise-f2e91ee9.svg",
+    "alt": "Une frise chronologique de 1400 à 2000, avec : Colomb, Guerre 14-18, et un point rouge marqué « ? »"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qu'ont rapporté en Europe les Grandes Découvertes, après les voyages vers l'Amérique ?",
+    "choix": [
+      "L'électricité et les premières lampes",
+      "De nouveaux aliments, comme la pomme de terre, la tomate et le chocolat",
+      "La télévision et le téléphone",
+      "Les premiers châteaux forts"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les navigateurs ont rapporté d'Amérique des plantes inconnues en Europe, qui ont peu à peu changé l'alimentation des Européens."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel texte important a été écrit en 1789, au début de la Révolution française ?",
+    "choix": [
+      "Le traité de Rome",
+      "La Déclaration des droits de l'homme et du citoyen",
+      "Le Code de la route",
+      "La Déclaration universelle des droits de l'homme"
+    ],
+    "bonneReponse": 1,
+    "explication": "En 1789, les révolutionnaires écrivent la Déclaration des droits de l'homme et du citoyen. La Déclaration universelle des droits de l'homme date de 1948."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi des pays d'Europe ont-ils décidé de s'unir après la Seconde Guerre mondiale ?",
+    "choix": [
+      "Pour parler tous la même langue",
+      "Pour conquérir d'autres continents",
+      "Pour avoir tous le même roi",
+      "Pour vivre en paix et coopérer plutôt que de se faire la guerre"
+    ],
+    "bonneReponse": 3,
+    "explication": "Après deux guerres terribles, des pays comme la France et l'Allemagne ont choisi de travailler ensemble pour que la paix dure."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle monnaie commune utilisent aujourd'hui de nombreux pays de l'Union européenne ?",
+    "choix": [
+      "Le dollar",
+      "La livre",
+      "L'euro",
+      "Le franc"
+    ],
+    "bonneReponse": 2,
+    "explication": "L'euro est utilisé depuis 2002 dans de nombreux pays de l'Union européenne, dont la France, la Belgique et les Pays-Bas."
+  },
+  {
+    "type": "qcm",
+    "enonce": "En 1989, le mur de Berlin tombe. Qu'est-ce que cet événement a permis ?",
+    "choix": [
+      "La découverte de l'Amérique",
+      "La réunification de l'Allemagne, puis l'entrée de pays de l'Est dans l'Union européenne",
+      "La création de l'euro le lendemain",
+      "La fin de la Première Guerre mondiale"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le mur séparait Berlin en deux. Sa chute a permis de réunir l'Allemagne en 1990, puis à des pays de l'Est comme la Pologne de rejoindre l'Union européenne."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de pays font partie de l'Union européenne aujourd'hui ? (écris le nombre)",
+    "reponses": [
+      "27",
+      "vingt-sept"
+    ],
+    "accents": "toleres",
+    "explication": "L'Union européenne compte 27 pays membres depuis la sortie du Royaume-Uni, en 2020."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Que dit le premier article de la Déclaration universelle des droits de l'homme (1948) ?",
+    "choix": [
+      "Tous les êtres humains naissent libres et égaux en dignité et en droits",
+      "Seuls les adultes ont des droits",
+      "Chaque pays doit avoir un roi",
+      "Les enfants doivent obéir à tous les adultes"
+    ],
+    "bonneReponse": 0,
+    "explication": "Ce texte de l'ONU affirme que tous les êtres humains, partout dans le monde, ont les mêmes droits, quels que soient leur pays, leur couleur ou leur religion."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quel pays d'Europe la paella est-elle un plat traditionnel ?",
+    "choix": [
+      "L'Italie",
+      "L'Espagne",
+      "Le Portugal",
+      "La Grèce"
+    ],
+    "bonneReponse": 1,
+    "explication": "La paella est un plat de riz au safran, venu de la région de Valence, en Espagne."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Au Moyen Âge, dans le système féodal, qu'est-ce qu'un vassal ?",
+    "choix": [
+      "Le roi de France",
+      "Un soldat payé pour garder les remparts",
+      "Un seigneur qui jure fidélité à un seigneur plus puissant, en échange d'une terre",
+      "Un paysan qui cultive la terre du château"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le vassal promet sa fidélité et son aide à son suzerain ; en échange, il reçoit une terre, le fief."
+  }
+]

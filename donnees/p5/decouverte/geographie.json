@@ -1,0 +1,127 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Sur ce dessin, les planètes sont rangées dans l'ordre à partir du Soleil. Comment s'appelle la planète n° 3 ?",
+    "choix": [
+      "Vénus",
+      "Mars",
+      "la Terre",
+      "Mercure"
+    ],
+    "bonneReponse": 2,
+    "explication": "Dans l'ordre à partir du Soleil, on trouve Mercure, Vénus, la Terre, puis Mars : la Terre est la troisième planète.",
+    "astuce": "Récite l'ordre des planètes en comptant sur tes doigts.",
+    "image": "images/p5/decouverte/systeme-solaire-2-3-4-5.svg",
+    "alt": "Schéma : le système solaire (tailles approximatives, distances non respectées), avec 4 parties numérotées"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la plus grande planète du système solaire ?",
+    "choix": [
+      "Saturne",
+      "Neptune",
+      "Jupiter",
+      "La Terre"
+    ],
+    "bonneReponse": 2,
+    "explication": "Jupiter est une planète géante faite surtout de gaz : on pourrait y ranger plus de mille Terres."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de temps met la Terre pour faire un tour complet autour du Soleil ?",
+    "choix": [
+      "Environ un jour",
+      "Environ une semaine",
+      "Environ un an",
+      "Environ un mois"
+    ],
+    "bonneReponse": 2,
+    "explication": "La Terre tourne autour du Soleil en un peu plus de 365 jours : c'est une année. En un jour, elle fait un tour sur elle-même."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur ce schéma des phases de la Lune, comment s'appelle la phase n° 3 ?",
+    "choix": [
+      "le premier croissant",
+      "la pleine lune",
+      "le premier quartier",
+      "le dernier quartier"
+    ],
+    "bonneReponse": 2,
+    "explication": "Au premier quartier, on voit une moitié de Lune éclairée, du côté droit (vue depuis l'Europe). Au dernier quartier, c'est le côté gauche.",
+    "image": "images/p5/decouverte/phases-lune-7-1-3-5.svg",
+    "alt": "Schéma : les phases de la Lune vues de la Terre, dans l'ordre (de gauche à droite, puis la ligne du bas), avec 4 parties numérotées"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi voit-on la Lune changer de forme au cours d'un mois ?",
+    "choix": [
+      "Parce que l'ombre de la Terre la cache un peu plus chaque soir",
+      "Parce qu'on voit une partie plus ou moins grande de sa face éclairée par le Soleil",
+      "Parce que la Lune grossit puis rétrécit",
+      "Parce que des nuages la cachent"
+    ],
+    "bonneReponse": 1,
+    "explication": "La Lune ne produit pas de lumière : le Soleil en éclaire toujours une moitié. En tournant autour de la Terre, elle nous montre une part plus ou moins grande de cette moitié éclairée."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment s'appellent les lignes imaginaires parallèles à l'équateur, qui servent à repérer la latitude ?",
+    "choix": [
+      "Les méridiens",
+      "Les frontières",
+      "Les parallèles",
+      "Les fuseaux horaires"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les parallèles sont des cercles parallèles à l'équateur : ils donnent la latitude. Les méridiens vont d'un pôle à l'autre : ils donnent la longitude."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quand il est midi aux Pays-Bas, il fait nuit au Japon. Pourquoi l'heure n'est-elle pas la même partout sur la Terre ?",
+    "choix": [
+      "Parce que chaque pays choisit son heure au hasard",
+      "Parce que le Japon est plus près du Soleil",
+      "Parce que la Terre tourne sur elle-même : le Soleil n'éclaire pas tous les pays en même temps",
+      "Parce que les horloges japonaises sont en retard"
+    ],
+    "bonneReponse": 2,
+    "explication": "En tournant sur elle-même, la Terre présente tour à tour chaque pays au Soleil. On a donc découpé le monde en fuseaux horaires."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quelle chaîne de montagnes se trouve le mont Blanc, le plus haut sommet d'Europe de l'Ouest ?",
+    "choix": [
+      "Les Pyrénées",
+      "Les Alpes",
+      "Les Vosges",
+      "Les Carpates"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le mont Blanc (environ 4 800 m) se trouve dans les Alpes, entre la France et l'Italie."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment appelle-t-on une montagne d'où peuvent sortir de la lave, des cendres et des gaz ? (un mot)",
+    "reponses": [
+      "volcan",
+      "un volcan"
+    ],
+    "accents": "toleres",
+    "explication": "Un volcan est une ouverture de la croûte terrestre par laquelle remonte la roche fondue (le magma), appelée lave quand elle sort."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur ce globe, les Pays-Bas se trouvent dans la zone n° 2. Comment s'appelle cette zone climatique ?",
+    "choix": [
+      "l'équateur",
+      "la zone chaude (tropicale)",
+      "la zone tempérée",
+      "la zone polaire"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les Pays-Bas sont dans l'hémisphère nord, entre le tropique et le cercle polaire : c'est la zone tempérée, avec quatre saisons bien marquées.",
+    "image": "images/p5/decouverte/zones-climatiques-4-2-1-5.svg",
+    "alt": "Schéma : le globe et ses grandes zones climatiques, avec 4 parties numérotées"
+  }
+]

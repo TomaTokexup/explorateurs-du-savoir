@@ -1,0 +1,129 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Qui a lu le plus de livres ?",
+    "choix": [
+      "Sami",
+      "Tom",
+      "Inès",
+      "Léa"
+    ],
+    "bonneReponse": 1,
+    "explication": "La barre la plus haute est celle de Tom.",
+    "image": "images/p3/maths/barres-3f427897.svg",
+    "alt": "Un diagramme en barres"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de livres Tom a-t-il lus de plus que Sami ?",
+    "choix": [
+      "9",
+      "5",
+      "4",
+      "13"
+    ],
+    "bonneReponse": 1,
+    "explication": "Tom a lu 9 livres et Sami 4 : 9 − 4 = 5.",
+    "image": "images/p3/maths/barres-3f427897.svg",
+    "alt": "Un diagramme en barres"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qui pratique les deux sports ?",
+    "choix": [
+      "Sami",
+      "Emma",
+      "Léo",
+      "Personne"
+    ],
+    "bonneReponse": 0,
+    "explication": "La partie commune aux deux cercles contient les enfants qui font les deux sports : Sami.",
+    "image": "images/p3/maths/venn-bf0e17b2.svg",
+    "alt": "Un diagramme de Venn à deux cercles"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien d'enfants font de la natation ?",
+    "reponses": [
+      "3",
+      "trois"
+    ],
+    "accents": "toleres",
+    "explication": "On compte tout le cercle « Natation », y compris la partie commune : Emma, Noé et Sami, soit 3 enfants.",
+    "image": "images/p3/maths/venn-bf0e17b2.svg",
+    "alt": "Un diagramme de Venn à deux cercles"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un tableau à double entrée, chaque case se trouve au croisement d'une ligne et d'une…",
+    "choix": [
+      "courbe",
+      "flèche",
+      "colonne",
+      "légende"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un tableau à double entrée a des lignes et des colonnes : on lit une case en croisant les deux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel jour y a-t-il eu 60 visiteurs ?",
+    "choix": [
+      "mardi",
+      "mercredi",
+      "lundi",
+      "vendredi"
+    ],
+    "bonneReponse": 1,
+    "explication": "La barre de mercredi arrive à la graduation 60.",
+    "image": "images/p3/maths/barres-239a0c22.svg",
+    "alt": "Un diagramme en barres"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de visiteurs y a-t-il eu le vendredi ?",
+    "reponses": [
+      "50"
+    ],
+    "accents": "toleres",
+    "explication": "La barre du vendredi arrive à la graduation 50.",
+    "image": "images/p3/maths/barres-239a0c22.svg",
+    "alt": "Un diagramme en barres"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un pictogramme, un dessin de pomme représente 2 pommes. Il y a 5 dessins. Combien de pommes cela fait-il ?",
+    "choix": [
+      "2",
+      "10",
+      "7",
+      "5"
+    ],
+    "bonneReponse": 1,
+    "explication": "Chaque dessin vaut 2 pommes : 5 × 2 = 10 pommes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pour montrer combien d'élèves préfèrent chaque fruit, quel graphique est le plus adapté ?",
+    "choix": [
+      "un plan de la ville",
+      "un diagramme en barres",
+      "une horloge",
+      "une frise chronologique"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un diagramme en barres permet de comparer facilement des quantités : une barre par fruit."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un diagramme en barres, à quoi sert l'axe vertical gradué ?",
+    "choix": [
+      "à lire la valeur de chaque barre",
+      "à ranger les barres par couleur",
+      "à indiquer la date",
+      "à donner le titre du graphique"
+    ],
+    "bonneReponse": 0,
+    "explication": "On lit la hauteur de chaque barre sur l'axe gradué ; les graduations peuvent aller de 1 en 1, de 5 en 5, de 10 en 10…"
+  }
+]

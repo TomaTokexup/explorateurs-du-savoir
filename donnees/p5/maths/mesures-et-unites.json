@@ -1,0 +1,123 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "2,5 km, c'est combien de mètres ?",
+    "choix": [
+      "2 500 m",
+      "2 050 m",
+      "250 m",
+      "25 000 m"
+    ],
+    "bonneReponse": 0,
+    "explication": "1 km = 1 000 m, donc 2,5 km = 2,5 × 1 000 = 2 500 m."
+  },
+  {
+    "type": "qcm",
+    "enonce": "1 hectare (1 ha), c'est combien de mètres carrés ?",
+    "choix": [
+      "100 000 m²",
+      "1 000 m²",
+      "100 m²",
+      "10 000 m²"
+    ],
+    "bonneReponse": 3,
+    "explication": "1 ha = 100 a et 1 a = 100 m², donc 1 ha = 10 000 m² (un carré de 100 m de côté)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est l'aire de ce rectangle ?",
+    "choix": [
+      "40 m",
+      "13 m²",
+      "40 m²",
+      "26 m²"
+    ],
+    "bonneReponse": 2,
+    "explication": "Aire du rectangle = longueur × largeur = 8 × 5 = 40 m². (26 m est son périmètre.)",
+    "image": "images/p5/maths/rectangle-8x5m.svg",
+    "alt": "Un rectangle de 8 m sur 5 m"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le volume d'un pavé droit de 4 cm de longueur, 3 cm de largeur et 2 cm de hauteur ?",
+    "choix": [
+      "18 cm³",
+      "9 cm³",
+      "24 cm³",
+      "24 cm²"
+    ],
+    "bonneReponse": 2,
+    "explication": "Volume du pavé droit = longueur × largeur × hauteur = 4 × 3 × 2 = 24 cm³."
+  },
+  {
+    "type": "qcm",
+    "enonce": "1 dm³, c'est combien de litres ?",
+    "choix": [
+      "0,1 L",
+      "10 L",
+      "100 L",
+      "1 L"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un cube de 1 dm de côté contient exactement 1 litre : 1 dm³ = 1 L."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de grammes font 3,2 kg ?",
+    "reponses": [
+      "3200",
+      "3 200",
+      "3200 g",
+      "3 200 g"
+    ],
+    "accents": "toleres",
+    "explication": "1 kg = 1 000 g, donc 3,2 kg = 3,2 × 1 000 = 3 200 g."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un cycliste roule à 15 km/h pendant 2 heures. Quelle distance parcourt-il ?",
+    "choix": [
+      "7,5 km",
+      "17 km",
+      "13 km",
+      "30 km"
+    ],
+    "bonneReponse": 3,
+    "explication": "À 15 km/h, il parcourt 15 km en 1 heure ; en 2 heures : 2 × 15 = 30 km."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quand il est 12 h à Bruxelles, il est 6 h à New York. Quel est le décalage horaire entre ces deux villes ?",
+    "choix": [
+      "12 heures",
+      "5 heures",
+      "18 heures",
+      "6 heures"
+    ],
+    "bonneReponse": 3,
+    "explication": "12 − 6 = 6 : New York a 6 heures de retard sur Bruxelles, à cause de la rotation de la Terre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur une carte à l'échelle 1/100 000, que représente 1 cm sur la carte ?",
+    "choix": [
+      "100 km en vrai",
+      "10 km en vrai",
+      "1 km en vrai",
+      "100 m en vrai"
+    ],
+    "bonneReponse": 2,
+    "explication": "1 cm sur la carte = 100 000 cm en vrai = 1 000 m = 1 km."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Un train part à 9 h 45 et arrive à 11 h 20. Combien de minutes dure le trajet ?",
+    "reponses": [
+      "95",
+      "95 min",
+      "95 minutes"
+    ],
+    "accents": "toleres",
+    "explication": "De 9 h 45 à 10 h : 15 min ; de 10 h à 11 h 20 : 80 min. Total : 15 + 80 = 95 minutes (1 h 35)."
+  }
+]

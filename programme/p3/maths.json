@@ -1,0 +1,118 @@
+{
+  "niveau": "p3",
+  "matiere": "maths",
+  "source": "Schola Europaea – Mathematics Syllabus, Primary cycle (P1-P5), réf. 2022-01-D-48-en-3, en vigueur depuis le 01/09/2022 – tableau P3 (section 4.2)",
+  "note": "Objectifs recopiés mot pour mot du syllabus (en anglais). Ont été écartés les objectifs impossibles à évaluer par un quiz (mesurer avec des instruments, tracer, construire, utiliser une calculatrice, un logiciel ou un tableur, pavages, transformations à dessiner).",
+  "domaines": {
+    "nombres": {
+      "titre": "Nombres",
+      "objectifs": [
+        "Read, recall and write whole numbers to 1 000",
+        "Calculate to 1 000 by counting forwards and backwards, starting at any point",
+        "Count in multiples of 100 and 1 000 to 10 000",
+        "Count to 1 000 in intervals of 1, 2, 5, 10, 50 and 100",
+        "Read and write numbers to 10 using Roman Numerals",
+        "Match quantities to numbers in a variety of situations",
+        "Use large numbers in real life contexts",
+        "Develop and use estimation strategies (comparing and grouping)",
+        "Order numbers (increasing and decreasing) on using a number line and a number track to 1 000",
+        "Compare, locate and place numbers on a number line and in a hundred square",
+        "Locate and identify the multiples of 10 and 100 that lie either side of a number",
+        "Use mathematical symbols (>, <, =) to compare numbers",
+        "Understand the place value of each digit in a four digit number",
+        "Partition, manipulate and combine four digit numbers",
+        "Round numbers to the nearest 10, 100 and 1 000",
+        "Understand and use the vocabulary of fractions (numerator, denominator)",
+        "Read and write proper fractions, using denominators to 10",
+        "Identify and recognise fractions of different shapes",
+        "Manipulate and use the fraction wall to compare simple fractions and understand equivalence",
+        "Explore, recognise and record patterns and sequences using numbers with a variety of intervals to 1 000",
+        "Discover patterns within multiplication tables to 10 and find links between them",
+        "Recognise multiples of 2, 5, 10 and 100 to 1 000"
+      ]
+    },
+    "operations": {
+      "titre": "Opérations",
+      "objectifs": [
+        "Use the vocabulary and symbols of addition and subtraction",
+        "Add and subtract three digit numbers",
+        "Calculate combination of addition and subtraction calculations",
+        "Write addition and subtraction using informal and standard written methods including those bridging multiples of tens and hundreds",
+        "Apply appropriate strategies to support mental addition and subtraction to 1 000 (bridging tens and hundreds, halving and doubling, partitioning)",
+        "Estimate before calculating and checking the answer",
+        "Use the vocabulary and symbols of multiplication and division",
+        "Apply the understanding that multiplication is repeated addition",
+        "Recall multiplication tables to 10 and associated division facts at speed and in any order",
+        "Determine all factors of numbers within the multiplication tables",
+        "Explore the relationships between the multiplication tables",
+        "Multiply a two digit number by 10 or 100 and understand the impact on place value",
+        "Divide a three digit multiple of 10 by 10",
+        "Write and calculate products (two digit or three digit numbers by a one digit number)",
+        "Write and calculate quotients (two and three digit numbers by a one digit number)",
+        "Understand what a remainder is when dividing",
+        "Apply the understanding that multiplication and division are inverse operations",
+        "Apply the principle of the commutative law of multiplication",
+        "Develop mental calculation strategies for multiplication and division (transposing the knowledge of simple multiplication and division facts to multiples of 10 and 100, partitioning)",
+        "Calculate the half and the double of a given number to 100 and of significant multiples to 1 000",
+        "Calculate and record a simple fraction of a given quantity",
+        "Understand the relationship between fractions and division"
+      ]
+    },
+    "mesures-et-unites": {
+      "titre": "Mesures et unités",
+      "objectifs": [
+        "Understand and use the vocabulary of length (width, height, perimeter, near and far, scale, is equal to, distance)",
+        "Identify kilometres and decimetres",
+        "Understand the relationships between km-m, m-dm, m-cm, m-mm, dm-cm, cm-mm",
+        "Convert km-m, m-dm, m-cm, m-mm, dm-cm, cm-mm",
+        "Calculate the perimeter of a square and a rectangle using formulae",
+        "Estimate and measure in squares the area of regular and irregular shapes",
+        "Consolidate and extend the vocabulary of capacity (decilitre, centilitre, millilitre)",
+        "Understand the relationships between l-dl, l-cl, l-ml",
+        "Convert l-dl, l-cl, l-ml",
+        "Extend the vocabulary of weight (tonne)",
+        "Understand the relationships between t-kg, kg-g",
+        "Convert kg-g and t-kg",
+        "Understand and use units of time and know the relationships between them (second, minute, hour, day, week, month, year and century)",
+        "Convert seconds into minutes and seconds, minutes into hours and minutes, days into weeks and days",
+        "Read and record the time to the exact minute on analogue and digital clocks",
+        "Read and record the time using the 24-hour clock",
+        "Read a calendar, know what a leap year is and recognise the number of days in each month",
+        "Read a simple timetable",
+        "Calculate finish time, duration and start time",
+        "Convert euros into cents and vice versa",
+        "Combine coins and notes to make exact amounts",
+        "Record amounts of money using symbols and decimal notation",
+        "Give change in multiples of 10 cents",
+        "Discover different monetary systems in Europe"
+      ]
+    },
+    "espace-et-formes": {
+      "titre": "Espace et formes",
+      "objectifs": [
+        "Follow and give instructions involving position, direction and movement",
+        "Locate a position on a plan or map including using simple grid references",
+        "Describe movement or position using the four points of the compass",
+        "Identify and describe vertical, horizontal, parallel, perpendicular and intersecting lines",
+        "Classify angles as greater than, less than or equal to a right angle and relate them to shape and the environment",
+        "Recognise acute, right and obtuse angles and relate them to real life situations",
+        "Consolidate and extend the vocabulary of 2 D shapes (parallel, perpendicular, angle, right angle, vertices, regular, irregular)",
+        "Consolidate and extend the vocabulary of 3 D shapes (parallel, perpendicular, angle, right angle, vertices, edges, faces, regular, irregular)",
+        "Review, sort, name and describe the properties of 2 D regular shapes as well as irregular shapes (parallelogram, rhombus, trapezium and other quadrilaterals, right angled triangle)",
+        "Review, sort, name and describe the properties of 3 D shapes (cube, cuboid, and pyramids)",
+        "Explore 3 D shapes and investigate their relationship with 2 D shapes",
+        "Identify reflective symmetry in 2 D shapes and in the environment"
+      ]
+    },
+    "traitement-des-donnees": {
+      "titre": "Traitement des données",
+      "objectifs": [
+        "Know and apply Venn and Carroll diagrams (two-way tables) to sort data and objects",
+        "Recall pictograms, bar graphs as methods to present data",
+        "Identify and interpret data shown on pictograms, bar graphs (including bar graphs with scales of different amplitudes)",
+        "Create mathematical representations from real-life and play situations",
+        "Recall using different scales on axis"
+      ]
+    }
+  }
+}

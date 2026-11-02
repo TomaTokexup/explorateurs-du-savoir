@@ -1,0 +1,118 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Comment s'écrit en chiffres « deux millions trois cent mille quarante » ?",
+    "choix": [
+      "2 340 000",
+      "2 300 040",
+      "2 030 040",
+      "23 000 040"
+    ],
+    "bonneReponse": 1,
+    "explication": "2 millions = 2 000 000 ; trois cent mille = 300 000 ; quarante = 40 : 2 300 040.",
+    "astuce": "Écris le nombre dans un tableau par classes : millions, milliers, unités."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le chiffre des dixièmes dans 45,82 ?",
+    "choix": [
+      "2",
+      "4",
+      "8",
+      "5"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le premier chiffre après la virgule est celui des dixièmes (8), le deuxième celui des centièmes (2)."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Arrondis 3,47 au nombre entier le plus proche.",
+    "reponses": [
+      "3"
+    ],
+    "accents": "toleres",
+    "explication": "3,47 est entre 3 et 4, mais plus près de 3 (le chiffre des dixièmes est 4, moins que 5)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel nombre est écrit MCMXC en chiffres romains ?",
+    "choix": [
+      "1910",
+      "1890",
+      "2110",
+      "1990"
+    ],
+    "bonneReponse": 3,
+    "explication": "M = 1 000 ; CM = 900 (100 avant 1 000) ; XC = 90 (10 avant 100). Total : 1 990."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le matin, il fait −3 °C. À midi, la température a monté de 5 degrés. Quelle est la température à midi ?",
+    "choix": [
+      "−2 °C",
+      "8 °C",
+      "2 °C",
+      "−8 °C"
+    ],
+    "bonneReponse": 2,
+    "explication": "De −3 à 0, on monte de 3 degrés ; il reste 2 degrés à monter : 0 + 2 = 2 °C.",
+    "astuce": "Dessine un thermomètre et compte les degrés un par un."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle fraction est égale à 3/4 ?",
+    "choix": [
+      "4/3",
+      "6/8",
+      "3/8",
+      "6/4"
+    ],
+    "bonneReponse": 1,
+    "explication": "En multipliant le numérateur et le dénominateur par 2 : 3/4 = 6/8."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Simplifie au maximum la fraction 12/16.",
+    "choix": [
+      "6/8",
+      "4/3",
+      "2/3",
+      "3/4"
+    ],
+    "bonneReponse": 3,
+    "explication": "On divise le numérateur et le dénominateur par 4 : 12/16 = 3/4. (6/8 est égale, mais on peut encore simplifier.)"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment écrit-on « deux et demi » sous forme d'une seule fraction ?",
+    "choix": [
+      "3/2",
+      "21/2",
+      "2/5",
+      "5/2"
+    ],
+    "bonneReponse": 3,
+    "explication": "Deux unités valent 4 demis ; avec un demi en plus, cela fait 5 demis : 5/2."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel nombre décimal est égal à 1/4 ?",
+    "choix": [
+      "0,4",
+      "2,5",
+      "0,14",
+      "0,25"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un quart, c'est 25 centièmes : 1/4 = 0,25 (comme 25 centimes sur 1 euro)."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète la suite des nombres carrés : 1 ; 4 ; 9 ; 16 ; 25 ; …",
+    "reponses": [
+      "36"
+    ],
+    "accents": "toleres",
+    "explication": "Ce sont les nombres carrés : 1×1, 2×2, 3×3, 4×4, 5×5… le suivant est 6 × 6 = 36."
+  }
+]

@@ -1,0 +1,124 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Environ quelle fraction des élèves préfère le football ?",
+    "choix": [
+      "le tiers",
+      "le quart",
+      "les trois quarts",
+      "la moitié"
+    ],
+    "bonneReponse": 3,
+    "explication": "La part du football occupe la moitié du disque.",
+    "image": "images/p5/maths/camembert-c196a0e6.svg",
+    "alt": "Un diagramme circulaire"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel sport est choisi par un quart des élèves ?",
+    "choix": [
+      "la natation",
+      "la danse",
+      "le football",
+      "le judo"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un quart du disque, c'est un angle droit au centre : c'est la part de la danse.",
+    "image": "images/p5/maths/camembert-c196a0e6.svg",
+    "alt": "Un diagramme circulaire"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Léa a obtenu 12, 15 et 18 à trois contrôles. Quelle est sa moyenne ?",
+    "choix": [
+      "14",
+      "45",
+      "16",
+      "15"
+    ],
+    "bonneReponse": 3,
+    "explication": "On additionne les notes et on divise par leur nombre : (12 + 15 + 18) ÷ 3 = 45 ÷ 3 = 15."
+  },
+  {
+    "type": "saisie",
+    "enonce": "La moyenne de 4 nombres est 10. Quelle est leur somme ?",
+    "reponses": [
+      "40"
+    ],
+    "accents": "toleres",
+    "explication": "Moyenne = somme ÷ nombre de données, donc somme = moyenne × nombre = 10 × 4 = 40."
+  },
+  {
+    "type": "qcm",
+    "enonce": "À quelle heure fait-il le plus chaud ?",
+    "choix": [
+      "16 h",
+      "12 h",
+      "14 h",
+      "18 h"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le point le plus haut de la courbe est à 14 h.",
+    "image": "images/p5/maths/courbe-5157d3eb.svg",
+    "alt": "Un graphique en ligne"
+  },
+  {
+    "type": "qcm",
+    "enonce": "De combien de degrés la température augmente-t-elle entre 8 h et 12 h ?",
+    "choix": [
+      "15",
+      "9",
+      "6",
+      "21"
+    ],
+    "bonneReponse": 1,
+    "explication": "À 8 h, il fait 6 °C ; à 12 h, 15 °C : 15 − 6 = 9 degrés.",
+    "image": "images/p5/maths/courbe-5157d3eb.svg",
+    "alt": "Un graphique en ligne"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un diagramme en barres, l'axe vertical commence à 90 au lieu de 0. Quel est le risque ?",
+    "choix": [
+      "Les valeurs deviennent fausses",
+      "Le graphique ne peut plus être lu",
+      "Les barres changent d'ordre",
+      "Les différences entre les barres paraissent plus grandes qu'en réalité"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les valeurs restent justes, mais en coupant le bas des barres, une petite différence a l'air énorme : le graphique peut tromper le lecteur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur 20 élèves, 5 viennent à l'école à vélo. Quel pourcentage cela représente-t-il ?",
+    "choix": [
+      "50 %",
+      "5 %",
+      "20 %",
+      "25 %"
+    ],
+    "bonneReponse": 3,
+    "explication": "5 sur 20, c'est un quart (5 × 4 = 20) : 25 %."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Tom lance un dé 5 fois et obtient 2, 4, 6, 3 et 5. Quelle est la moyenne de ses lancers ?",
+    "reponses": [
+      "4"
+    ],
+    "accents": "toleres",
+    "explication": "Somme : 2 + 4 + 6 + 3 + 5 = 20. Moyenne : 20 ÷ 5 = 4."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une boulangerie vend environ 120 croissants chaque dimanche depuis 10 semaines. Combien peut-elle prévoir d'en vendre dimanche prochain ?",
+    "choix": [
+      "environ 10",
+      "environ 12",
+      "environ 120",
+      "environ 1 200"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les données des semaines passées sont régulières : on peut prévoir une vente semblable, environ 120 croissants."
+  }
+]

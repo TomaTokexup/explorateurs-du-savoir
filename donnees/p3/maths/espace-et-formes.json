@@ -1,0 +1,128 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Comment appelle-t-on cet angle ?",
+    "choix": [
+      "un angle aigu",
+      "un angle obtus",
+      "un angle plat",
+      "un angle droit"
+    ],
+    "bonneReponse": 1,
+    "explication": "Cet angle est plus ouvert qu'un angle droit : c'est un angle obtus.",
+    "astuce": "Compare l'angle avec le coin d'une feuille, qui est un angle droit.",
+    "image": "images/p3/maths/angle-120.svg",
+    "alt": "Un angle"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quelle direction pointe la flèche rouge ?",
+    "choix": [
+      "le nord-est",
+      "le sud",
+      "l'est",
+      "l'ouest"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le nord est en haut : à droite du nord se trouve l'est.",
+    "image": "images/p3/maths/rose-e.svg",
+    "alt": "Une rose des vents avec une flèche rouge"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelles sont les coordonnées du point A ?",
+    "choix": [
+      "(2 ; 3)",
+      "(3 ; 2)",
+      "(3 ; 3)",
+      "(2 ; 2)"
+    ],
+    "bonneReponse": 1,
+    "explication": "On lit d'abord le nombre sur l'axe horizontal (3), puis sur l'axe vertical (2).",
+    "image": "images/p3/maths/repere-3-2.svg",
+    "alt": "Un quadrillage avec un point A"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de faces a un cube ?",
+    "choix": [
+      "12",
+      "8",
+      "4",
+      "6"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un cube a 6 faces carrées, 8 sommets et 12 arêtes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel quadrilatère a toujours 4 côtés de même longueur, mais pas forcément 4 angles droits ?",
+    "choix": [
+      "le losange",
+      "le rectangle",
+      "le trapèze",
+      "le parallélogramme"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le losange a 4 côtés égaux. S'il a aussi 4 angles droits, c'est un carré."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment s'appelle ce polygone ?",
+    "choix": [
+      "un octogone",
+      "un quadrilatère",
+      "un pentagone",
+      "un hexagone"
+    ],
+    "bonneReponse": 2,
+    "explication": "Ce polygone a 5 côtés : c'est un pentagone.",
+    "image": "images/p3/maths/polygone-5.svg",
+    "alt": "Un polygone"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Deux droites qui se coupent en formant un angle droit sont…",
+    "choix": [
+      "parallèles",
+      "horizontales",
+      "perpendiculaires",
+      "égales"
+    ],
+    "bonneReponse": 2,
+    "explication": "Des droites perpendiculaires se coupent à angle droit ; des droites parallèles ne se coupent jamais."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien d'arêtes a un cube ?",
+    "reponses": [
+      "12",
+      "douze"
+    ],
+    "accents": "toleres",
+    "explication": "Un cube a 12 arêtes : 4 en haut, 4 en bas et 4 verticales."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle lettre majuscule a un axe de symétrie vertical ?",
+    "choix": [
+      "A",
+      "G",
+      "R",
+      "F"
+    ],
+    "bonneReponse": 0,
+    "explication": "Si on plie la lettre A en deux selon une ligne verticale, les deux moitiés se superposent."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle le solide qui a une base carrée et 4 faces triangulaires qui se rejoignent en un sommet ?",
+    "reponses": [
+      "pyramide",
+      "une pyramide",
+      "la pyramide"
+    ],
+    "accents": "toleres",
+    "explication": "C'est une pyramide à base carrée, comme les pyramides d'Égypte."
+  }
+]

@@ -1,14 +1,14 @@
 [
   {
     "type": "qcm",
-    "enonce": "Regarde le schéma de l'œil vu en coupe. Quel numéro montre la rétine ?",
+    "enonce": "Regarde le schéma de l'œil vu en coupe. Comment s'appelle la partie n° 5 ?",
     "choix": [
-      "2",
-      "4",
-      "5",
-      "6"
+      "la rétine",
+      "le cristallin",
+      "la cornée",
+      "le nerf optique"
     ],
-    "bonneReponse": 2,
+    "bonneReponse": 0,
     "explication": "La rétine tapisse le fond de l'œil. Elle reçoit la lumière et envoie des signaux au cerveau par le nerf optique.",
     "image": "images/p4/decouverte/oeil-coupe-1-2-3-4-5-6.svg",
     "alt": "Schéma : un œil vu en coupe, avec 6 parties numérotées"

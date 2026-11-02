@@ -181,7 +181,7 @@ Figures (facultatif, surtout en géométrie) :
   {{"forme": "schema", "nom": "...", "parties": ["...", ...]}}  (schéma déjà dessiné ; les parties choisies sont numérotées 1, 2, 3... dans l'ordre de la liste)
     Schémas et parties disponibles :
 {liste_schemas}
-    La question porte sur les numéros : « Comment s'appelle la partie n° 2 ? » ou « Quel numéro montre la pupille ? ». L'énoncé ne nomme jamais les autres parties numérotées.
+    La question demande le NOM d'une partie numérotée (« Comment s'appelle la partie n° 2 ? »), et les choix sont de vrais noms (la rétine, le tympan, la zone tempérée…), jamais des numéros. L'énoncé ne nomme pas les parties numérotées.
 - N'utilise aucune autre forme, et n'écris jamais de champ "image" toi-même.
 
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :

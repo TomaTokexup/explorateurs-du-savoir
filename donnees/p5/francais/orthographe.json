@@ -1,0 +1,115 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Quel est le pluriel de « un tire-bouchon » ?",
+    "choix": [
+      "des tire-bouchon",
+      "des tires-bouchons",
+      "des tires-bouchon",
+      "des tire-bouchons"
+    ],
+    "bonneReponse": 3,
+    "explication": "Dans un nom composé d'un verbe et d'un nom, seul le nom peut prendre la marque du pluriel : le verbe « tire » ne s'accorde pas."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris l'adjectif « nouveau » au féminin : « une ___ voiture ».",
+    "reponses": [
+      "nouvelle"
+    ],
+    "accents": "stricts",
+    "explication": "Certains adjectifs changent de terminaison au féminin : nouveau → nouvelle, beau → belle, fou → folle."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris l'adjectif « public » au féminin : « une place ___ ».",
+    "reponses": [
+      "publique"
+    ],
+    "accents": "stricts",
+    "explication": "Public fait publique au féminin, comme turc → turque : le c devient -que."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle écriture du groupe nominal est correcte ?",
+    "choix": [
+      "de grandes maison blanches",
+      "de grande maisons blanches",
+      "de grandes maisons blanche",
+      "de grandes maisons blanches"
+    ],
+    "bonneReponse": 3,
+    "explication": "Dans le groupe nominal, le déterminant, le nom et les adjectifs s'accordent ensemble : ici, tout est au féminin pluriel."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Choisis la bonne forme : « C'est moi qui ___ la vaisselle ce soir. » (faire)",
+    "choix": [
+      "fait",
+      "fais",
+      "font",
+      "faisons"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le pronom « qui » reprend « moi » : le verbe s'accorde avec « moi », donc à la 1re personne du singulier, comme « je fais »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète : « Les pommes que j'ai ___ étaient délicieuses. » (cueillir)",
+    "choix": [
+      "cueillie",
+      "cueilli",
+      "cueillis",
+      "cueillies"
+    ],
+    "bonneReponse": 3,
+    "explication": "Avec avoir, le participe passé s'accorde avec le COD s'il est placé avant : « que » reprend « les pommes », féminin pluriel.",
+    "astuce": "Cherche ce qui a été cueilli, et regarde s'il est placé avant ou après le verbe."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète : « Mes voisins ___ aidé à porter mes cartons. »",
+    "choix": [
+      "m'on",
+      "mont",
+      "mon",
+      "m'ont"
+    ],
+    "bonneReponse": 3,
+    "explication": "On peut remplacer par « m'avaient » : « Mes voisins m'avaient aidé ». C'est donc « m'ont » (me + ont)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète : « Je ___ suis jamais allé. »",
+    "choix": [
+      "nie",
+      "ni",
+      "n'y",
+      "n'i"
+    ],
+    "bonneReponse": 2,
+    "explication": "On peut dire « Je ne suis jamais allé là-bas » : « n'y » est formé de « ne » et du pronom « y » (là-bas). « Ni » sert à relier deux négations."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète avec « quel », « quelle » ou « qu'elle » : « Je pense ___ viendra demain. »",
+    "reponses": [
+      "qu'elle"
+    ],
+    "accents": "stricts",
+    "explication": "On peut remplacer par « qu'il » : « Je pense qu'il viendra ». C'est donc « qu'elle » (que + elle)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment écrit-on correctement cet adjectif de couleur ?",
+    "choix": [
+      "des robes bleue claire",
+      "des robes bleu clair",
+      "des robes bleues claires",
+      "des robes bleus clairs"
+    ],
+    "bonneReponse": 1,
+    "explication": "Quand un adjectif de couleur est composé de deux mots (bleu clair, vert foncé), il reste invariable.",
+    "defi": true
+  }
+]

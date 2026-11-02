@@ -41,15 +41,16 @@
     "explication": "La météo, c'est le temps qu'il fait aujourd'hui ou dans les prochains jours (« il pleut ce matin »). Le climat, c'est le temps moyen sur plusieurs années (« à Brest, il pleut beaucoup toute l'année »)."
   },
   {
-    "type": "saisie",
-    "enonce": "Sur ce schéma du globe, quel numéro montre l'équateur ?",
-    "reponses": [
-      "3",
-      "n°3",
-      "n 3"
+    "type": "qcm",
+    "enonce": "Sur ce globe, comment s'appelle la zone n° 4, située de part et d'autre de la ligne n° 3 ?",
+    "choix": [
+      "la zone chaude (tropicale)",
+      "la zone tempérée",
+      "la zone polaire",
+      "le cercle polaire"
     ],
-    "accents": "toleres",
-    "explication": "L'équateur est la ligne imaginaire qui coupe la Terre en deux, entre l'hémisphère nord et l'hémisphère sud. Autour de lui se trouve la zone chaude, et les zones polaires sont aux pôles.",
+    "bonneReponse": 0,
+    "explication": "La zone chaude s'étend de part et d'autre de l'équateur (la ligne n° 3), entre les deux tropiques : il y fait chaud toute l'année.",
     "image": "images/p4/decouverte/zones-climatiques-1-2-3-4.svg",
     "alt": "Schéma : le globe et ses grandes zones climatiques, avec 4 parties numérotées"
   },

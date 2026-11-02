@@ -1,0 +1,120 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Quel mot est formé avec un préfixe qui exprime le contraire ?",
+    "choix": [
+      "heureux",
+      "bonheur",
+      "heureusement",
+      "malheureux"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le préfixe « mal- » (comme « dé- », « in- » ou « im- ») donne le sens contraire : malheureux est le contraire de heureux."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Forme le nom qui correspond à l'adjectif « rapide » en ajoutant le suffixe -ité.",
+    "reponses": [
+      "rapidité",
+      "la rapidité"
+    ],
+    "accents": "stricts",
+    "explication": "On ajoute le suffixe -ité à l'adjectif : rapide → rapidité, comme facile → facilité.",
+    "astuce": "Pense à des mots de la même construction : facile → facilité."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Range ces mots du moins fort au plus fort.",
+    "choix": [
+      "chaud → tiède → brûlant",
+      "brûlant → chaud → tiède",
+      "tiède → brûlant → chaud",
+      "tiède → chaud → brûlant"
+    ],
+    "bonneReponse": 3,
+    "explication": "Ces trois mots disent la chaleur avec une intensité croissante : tiède (un peu chaud), chaud, puis brûlant (très chaud)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel mot n'appartient pas au champ lexical de la mer ?",
+    "choix": [
+      "la houle",
+      "l'écume",
+      "la marée",
+      "la colline"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un champ lexical regroupe des mots liés à un même thème. La marée, l'écume et la houle parlent de la mer ; une colline est un relief de terre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quelle phrase le mot « avocat » désigne-t-il un fruit ?",
+    "choix": [
+      "L'avocat a plaidé pendant une heure.",
+      "L'avocat défend son client au tribunal.",
+      "Ma tante est avocate à Bruxelles.",
+      "J'ai mis de l'avocat dans ma salade."
+    ],
+    "bonneReponse": 3,
+    "explication": "Un même mot peut avoir plusieurs sens : c'est le contexte (ici, « dans ma salade ») qui indique s'il s'agit du fruit ou du métier."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Que signifie l'expression « avoir un poil dans la main » ?",
+    "choix": [
+      "Avoir froid aux mains",
+      "Être très adroit",
+      "Être paresseux",
+      "Avoir besoin de se laver les mains"
+    ],
+    "bonneReponse": 2,
+    "explication": "C'est une expression au sens figuré : on dit cela de quelqu'un qui n'aime pas travailler."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète avec le connecteur qui convient : « Il pleuvait très fort ; ___, le match a été annulé. »",
+    "choix": [
+      "néanmoins",
+      "d'une part",
+      "par conséquent",
+      "en revanche"
+    ],
+    "bonneReponse": 2,
+    "explication": "« Par conséquent » introduit une conséquence : la pluie a causé l'annulation du match."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète avec le connecteur qui convient : « Léa adore la montagne ; son frère, ___, préfère la mer. »",
+    "choix": [
+      "ainsi",
+      "par conséquent",
+      "en outre",
+      "en revanche"
+    ],
+    "bonneReponse": 3,
+    "explication": "« En revanche » marque une opposition entre deux idées : les goûts de Léa et ceux de son frère sont différents."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Donne un synonyme de « effrayé » qui commence par la lettre a. (un seul mot)",
+    "reponses": [
+      "apeuré",
+      "affolé",
+      "angoissé",
+      "alarmé"
+    ],
+    "accents": "stricts",
+    "explication": "Effrayé, apeuré et affolé ont presque le même sens : ce sont des synonymes."
+  },
+  {
+    "type": "saisie",
+    "enonce": "La racine grecque « géo » veut dire « terre ». Comment s'appelle la matière qui décrit la Terre, ses paysages et ses habitants ? (un mot)",
+    "reponses": [
+      "géographie",
+      "la géographie"
+    ],
+    "accents": "stricts",
+    "explication": "Géographie vient de « géo » (la terre) et « graphie » (écrire, décrire) : c'est la description de la Terre.",
+    "defi": true
+  }
+]

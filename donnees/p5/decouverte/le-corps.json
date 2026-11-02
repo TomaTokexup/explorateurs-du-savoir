@@ -1,0 +1,124 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Quand tu inspires, vers quel organe l'air se dirige-t-il ?",
+    "choix": [
+      "Vers l'estomac",
+      "Vers les poumons",
+      "Vers le foie",
+      "Vers le cœur"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'air entre par le nez ou la bouche, descend dans la trachée puis remplit les poumons."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quel ordre l'air passe-t-il quand tu respires ?",
+    "choix": [
+      "nez → poumons → trachée → bronches",
+      "nez → trachée → bronches → poumons",
+      "trachée → nez → poumons → bronches",
+      "bouche → œsophage → estomac → poumons"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'air entre par le nez (ou la bouche), descend par la trachée, se partage dans les deux bronches, puis arrive dans les poumons."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel organe pompe le sang pour le faire circuler dans tout le corps ?",
+    "choix": [
+      "Les reins",
+      "Le cœur",
+      "Les poumons",
+      "Le foie"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le cœur est un muscle qui se contracte sans arrêt : à chaque battement, il envoie le sang dans les vaisseaux sanguins."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Que se passe-t-il pour le sang quand il traverse les poumons ?",
+    "choix": [
+      "Il se charge en nutriments venus des aliments",
+      "Il se charge en oxygène et se débarrasse du gaz carbonique",
+      "Il se refroidit pour ne pas brûler le cœur",
+      "Il se transforme en air"
+    ],
+    "bonneReponse": 1,
+    "explication": "Dans les poumons, le sang prend l'oxygène de l'air que tu as inspiré et rejette le gaz carbonique, que tu expires ensuite."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi ton cœur bat-il plus vite quand tu cours ?",
+    "choix": [
+      "Pour digérer plus vite ton goûter",
+      "Parce que tes poumons sont fatigués",
+      "Pour refroidir ton corps plus vite",
+      "Parce que tes muscles ont besoin de plus d'oxygène et de nutriments"
+    ],
+    "bonneReponse": 3,
+    "explication": "Quand tu cours, tes muscles travaillent beaucoup. Le cœur accélère pour leur apporter plus vite le sang chargé d'oxygène et de nutriments.",
+    "astuce": "Pose ta main sur ta poitrine, avant puis après avoir sauté sur place pendant une minute."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Les vaisseaux sanguins qui partent du cœur et emportent le sang vers les organes s'appellent les… (un mot)",
+    "reponses": [
+      "artères",
+      "les artères"
+    ],
+    "accents": "toleres",
+    "explication": "Les artères emportent le sang du cœur vers les organes ; les veines le ramènent vers le cœur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi fumer est-il mauvais pour la santé ?",
+    "choix": [
+      "La fumée fait grossir l'estomac",
+      "La fumée abîme les poumons et rend la respiration plus difficile",
+      "La fumée empêche de dormir, mais n'abîme aucun organe",
+      "La fumée n'est dangereuse que pour les adultes"
+    ],
+    "bonneReponse": 1,
+    "explication": "La fumée de cigarette contient des produits toxiques qui abîment les poumons et le cœur. Respirer la fumée des autres est aussi dangereux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Au printemps, Inès éternue et a du mal à respirer dès qu'il y a du pollen dans l'air. Que lui arrive-t-il ?",
+    "choix": [
+      "Ses poumons sont trop petits pour son âge",
+      "Le pollen bouche son cœur",
+      "Elle a attrapé un rhume à cause du froid",
+      "Elle fait une allergie : son corps réagit trop fort au pollen"
+    ],
+    "bonneReponse": 3,
+    "explication": "Une allergie est une réaction trop forte du corps à quelque chose qui n'est pas dangereux pour la plupart des gens, comme le pollen ou les poils de chat."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur ce schéma, comment s'appelle l'organe n° 2, où les nutriments des aliments passent dans le sang ?",
+    "choix": [
+      "l'intestin grêle",
+      "l'estomac",
+      "le foie",
+      "l'œsophage"
+    ],
+    "bonneReponse": 0,
+    "explication": "C'est dans l'intestin grêle que les nutriments traversent la paroi et passent dans le sang, qui les transporte ensuite dans tout le corps.",
+    "image": "images/p5/decouverte/appareil-digestif-4-5-3-2.svg",
+    "alt": "Schéma : l'appareil digestif, avec 4 parties numérotées"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel gaz rejetons-nous dans l'air quand nous expirons ?",
+    "reponses": [
+      "gaz carbonique",
+      "le gaz carbonique",
+      "dioxyde de carbone",
+      "le dioxyde de carbone",
+      "CO2"
+    ],
+    "accents": "toleres",
+    "explication": "Nous inspirons de l'air riche en oxygène et nous expirons du gaz carbonique (le dioxyde de carbone), produit par nos cellules."
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi le grand-père décide-t-il de ne pas sortir en mer ?",
+    "choix": [
+      "Il sent que le temps va se gâter",
+      "Les filets sont abîmés",
+      "Il préfère aller au café",
+      "Il trouve Maël trop jeune"
+    ],
+    "bonneReponse": 0,
+    "explication": "Il dit « Le vent tourne » : il a compris, en observant le ciel, qu'une tempête approchait. La suite du texte lui donne raison.",
+    "texte": "Ce matin-là, une brume épaisse enveloppait encore le port lorsque Maël rejoignit son grand-père sur le quai. Le vieil homme vérifiait les filets en silence, les sourcils froncés. « Le vent tourne, murmura-t-il sans lever les yeux. Nous ne sortirons pas aujourd'hui. » Maël sentit la déception lui serrer la gorge : depuis une semaine, il attendait sa première sortie en mer. Pourtant, il ne protesta pas, car son grand-père lisait le ciel mieux que n'importe quel bulletin météo. À midi, de lourds nuages noirs avalèrent l'horizon, et des vagues furieuses se brisèrent contre la digue. Derrière la vitre du café, Maël regarda les bateaux danser sur l'eau grise. Il comprit alors que la sagesse consiste parfois à savoir attendre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Que ressent Maël quand son grand-père annonce qu'ils ne sortiront pas ?",
+    "choix": [
+      "De la peur",
+      "De la colère contre son grand-père",
+      "De la déception",
+      "Du soulagement"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le texte dit que Maël « sentit la déception lui serrer la gorge » : il attendait cette sortie depuis une semaine. Il ne se fâche pas, car il fait confiance à son grand-père.",
+    "texte": "Ce matin-là, une brume épaisse enveloppait encore le port lorsque Maël rejoignit son grand-père sur le quai. Le vieil homme vérifiait les filets en silence, les sourcils froncés. « Le vent tourne, murmura-t-il sans lever les yeux. Nous ne sortirons pas aujourd'hui. » Maël sentit la déception lui serrer la gorge : depuis une semaine, il attendait sa première sortie en mer. Pourtant, il ne protesta pas, car son grand-père lisait le ciel mieux que n'importe quel bulletin météo. À midi, de lourds nuages noirs avalèrent l'horizon, et des vagues furieuses se brisèrent contre la digue. Derrière la vitre du café, Maël regarda les bateaux danser sur l'eau grise. Il comprit alors que la sagesse consiste parfois à savoir attendre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Que signifie « son grand-père lisait le ciel » ?",
+    "choix": [
+      "Il lisait des livres sur les étoiles",
+      "Il savait prévoir le temps en observant le ciel",
+      "Il savait lire les nuages comme des lettres",
+      "Il écoutait la météo à la radio"
+    ],
+    "bonneReponse": 1,
+    "explication": "C'est une expression imagée : le grand-père « lit » les signes du ciel (le vent, la brume) pour deviner le temps qu'il va faire.",
+    "texte": "Ce matin-là, une brume épaisse enveloppait encore le port lorsque Maël rejoignit son grand-père sur le quai. Le vieil homme vérifiait les filets en silence, les sourcils froncés. « Le vent tourne, murmura-t-il sans lever les yeux. Nous ne sortirons pas aujourd'hui. » Maël sentit la déception lui serrer la gorge : depuis une semaine, il attendait sa première sortie en mer. Pourtant, il ne protesta pas, car son grand-père lisait le ciel mieux que n'importe quel bulletin météo. À midi, de lourds nuages noirs avalèrent l'horizon, et des vagues furieuses se brisèrent contre la digue. Derrière la vitre du café, Maël regarda les bateaux danser sur l'eau grise. Il comprit alors que la sagesse consiste parfois à savoir attendre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans « de lourds nuages noirs avalèrent l'horizon », que fait l'auteur ?",
+    "choix": [
+      "Il donne l'heure de la tempête",
+      "Il compare les nuages à de la nourriture avec le mot « comme »",
+      "Il décrit la couleur exacte du ciel",
+      "Il présente les nuages comme un être vivant qui mange"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les nuages ne peuvent pas vraiment avaler : l'auteur leur prête une action d'être vivant. C'est une personnification, qui rend la tempête plus menaçante.",
+    "texte": "Ce matin-là, une brume épaisse enveloppait encore le port lorsque Maël rejoignit son grand-père sur le quai. Le vieil homme vérifiait les filets en silence, les sourcils froncés. « Le vent tourne, murmura-t-il sans lever les yeux. Nous ne sortirons pas aujourd'hui. » Maël sentit la déception lui serrer la gorge : depuis une semaine, il attendait sa première sortie en mer. Pourtant, il ne protesta pas, car son grand-père lisait le ciel mieux que n'importe quel bulletin météo. À midi, de lourds nuages noirs avalèrent l'horizon, et des vagues furieuses se brisèrent contre la digue. Derrière la vitre du café, Maël regarda les bateaux danser sur l'eau grise. Il comprit alors que la sagesse consiste parfois à savoir attendre.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle phrase résume le mieux ce que Maël comprend à la fin ?",
+    "choix": [
+      "La mer est toujours dangereuse",
+      "Il ne faut jamais écouter ses grands-parents",
+      "Il vaut parfois mieux patienter que prendre des risques",
+      "Les bateaux ne doivent jamais quitter le port"
+    ],
+    "bonneReponse": 2,
+    "explication": "En voyant la tempête, Maël comprend que son grand-père a eu raison d'attendre : « la sagesse consiste parfois à savoir attendre ».",
+    "texte": "Ce matin-là, une brume épaisse enveloppait encore le port lorsque Maël rejoignit son grand-père sur le quai. Le vieil homme vérifiait les filets en silence, les sourcils froncés. « Le vent tourne, murmura-t-il sans lever les yeux. Nous ne sortirons pas aujourd'hui. » Maël sentit la déception lui serrer la gorge : depuis une semaine, il attendait sa première sortie en mer. Pourtant, il ne protesta pas, car son grand-père lisait le ciel mieux que n'importe quel bulletin météo. À midi, de lourds nuages noirs avalèrent l'horizon, et des vagues furieuses se brisèrent contre la digue. Derrière la vitre du café, Maël regarda les bateaux danser sur l'eau grise. Il comprit alors que la sagesse consiste parfois à savoir attendre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "De quel type de texte s'agit-il ?",
+    "choix": [
+      "Un poème",
+      "Une fable",
+      "Un texte documentaire",
+      "Un conte"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le texte donne des informations vraies et précises sur un animal (taille, lieu de vie, reproduction) : c'est un texte documentaire.",
+    "texte": "Le manchot empereur est le plus grand de tous les manchots : debout, il mesure plus d'un mètre. Il vit en Antarctique, où la température descend parfois sous les moins quarante degrés. Pour résister à ce froid extrême, il possède une épaisse couche de graisse et un plumage très serré. En plein hiver, la femelle pond un œuf unique, puis repart en mer pour se nourrir. C'est alors le mâle qui garde l'œuf au chaud sur ses pattes, sous un repli de peau, pendant environ deux mois. Durant toute cette période, il ne mange rien et peut perdre près de la moitié de son poids. Pour lutter contre le vent glacial, les mâles se serrent les uns contre les autres et changent régulièrement de place."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Qui garde l'œuf au chaud pendant l'hiver ? (deux mots)",
+    "reponses": [
+      "le mâle",
+      "le père",
+      "le manchot mâle"
+    ],
+    "accents": "stricts",
+    "explication": "La femelle pond l'œuf puis repart en mer : c'est le mâle qui le garde sur ses pattes pendant environ deux mois.",
+    "texte": "Le manchot empereur est le plus grand de tous les manchots : debout, il mesure plus d'un mètre. Il vit en Antarctique, où la température descend parfois sous les moins quarante degrés. Pour résister à ce froid extrême, il possède une épaisse couche de graisse et un plumage très serré. En plein hiver, la femelle pond un œuf unique, puis repart en mer pour se nourrir. C'est alors le mâle qui garde l'œuf au chaud sur ses pattes, sous un repli de peau, pendant environ deux mois. Durant toute cette période, il ne mange rien et peut perdre près de la moitié de son poids. Pour lutter contre le vent glacial, les mâles se serrent les uns contre les autres et changent régulièrement de place."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Pendant combien de temps environ le mâle garde-t-il l'œuf ? (réponse courte)",
+    "reponses": [
+      "deux mois",
+      "2 mois",
+      "environ deux mois",
+      "environ 2 mois"
+    ],
+    "accents": "stricts",
+    "explication": "Le texte dit : « pendant environ deux mois ». Repère les mots qui indiquent une durée.",
+    "texte": "Le manchot empereur est le plus grand de tous les manchots : debout, il mesure plus d'un mètre. Il vit en Antarctique, où la température descend parfois sous les moins quarante degrés. Pour résister à ce froid extrême, il possède une épaisse couche de graisse et un plumage très serré. En plein hiver, la femelle pond un œuf unique, puis repart en mer pour se nourrir. C'est alors le mâle qui garde l'œuf au chaud sur ses pattes, sous un repli de peau, pendant environ deux mois. Durant toute cette période, il ne mange rien et peut perdre près de la moitié de son poids. Pour lutter contre le vent glacial, les mâles se serrent les uns contre les autres et changent régulièrement de place."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi les mâles changent-ils régulièrement de place dans le groupe ?",
+    "choix": [
+      "Pour chercher de la nourriture",
+      "Pour retrouver leur femelle",
+      "Pour surveiller les phoques",
+      "Pour que chacun passe à son tour au centre, à l'abri du vent"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le texte dit qu'ils se serrent « pour lutter contre le vent glacial ». En changeant de place, ceux qui étaient au bord, dans le vent, peuvent se réchauffer au milieu.",
+    "texte": "Le manchot empereur est le plus grand de tous les manchots : debout, il mesure plus d'un mètre. Il vit en Antarctique, où la température descend parfois sous les moins quarante degrés. Pour résister à ce froid extrême, il possède une épaisse couche de graisse et un plumage très serré. En plein hiver, la femelle pond un œuf unique, puis repart en mer pour se nourrir. C'est alors le mâle qui garde l'œuf au chaud sur ses pattes, sous un repli de peau, pendant environ deux mois. Durant toute cette période, il ne mange rien et peut perdre près de la moitié de son poids. Pour lutter contre le vent glacial, les mâles se serrent les uns contre les autres et changent régulièrement de place."
+  },
+  {
+    "type": "qcm",
+    "enonce": "« Il peut perdre près de la moitié de son poids. » Que veut dire cette phrase ?",
+    "choix": [
+      "Il devient deux fois plus petit",
+      "Il laisse la moitié de sa nourriture à la femelle",
+      "Il maigrit beaucoup, car il ne mange rien pendant deux mois",
+      "Il perd la moitié de ses plumes"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le mâle ne mange rien pendant qu'il couve : il vit sur ses réserves de graisse et devient presque deux fois plus léger.",
+    "texte": "Le manchot empereur est le plus grand de tous les manchots : debout, il mesure plus d'un mètre. Il vit en Antarctique, où la température descend parfois sous les moins quarante degrés. Pour résister à ce froid extrême, il possède une épaisse couche de graisse et un plumage très serré. En plein hiver, la femelle pond un œuf unique, puis repart en mer pour se nourrir. C'est alors le mâle qui garde l'œuf au chaud sur ses pattes, sous un repli de peau, pendant environ deux mois. Durant toute cette période, il ne mange rien et peut perdre près de la moitié de son poids. Pour lutter contre le vent glacial, les mâles se serrent les uns contre les autres et changent régulièrement de place."
+  }
+]

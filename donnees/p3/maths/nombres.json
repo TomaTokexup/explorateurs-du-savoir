@@ -1,0 +1,117 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Comment s'écrit en chiffres « six cent quarante-huit » ?",
+    "choix": [
+      "684",
+      "648",
+      "608",
+      "6 048"
+    ],
+    "bonneReponse": 1,
+    "explication": "Six cent = 600, quarante-huit = 48 : 600 + 48 = 648."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le chiffre des centaines dans 3 572 ?",
+    "choix": [
+      "2",
+      "5",
+      "7",
+      "3"
+    ],
+    "bonneReponse": 1,
+    "explication": "Dans 3 572 : 3 milliers, 5 centaines, 7 dizaines et 2 unités.",
+    "astuce": "Écris le nombre dans un tableau : milliers, centaines, dizaines, unités."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Arrondis 467 à la dizaine la plus proche.",
+    "reponses": [
+      "470"
+    ],
+    "accents": "toleres",
+    "explication": "467 est entre 460 et 470. Le chiffre des unités est 7 (5 ou plus) : on arrondit à la dizaine supérieure, 470."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel nombre est écrit en chiffres romains : VII ?",
+    "choix": [
+      "7",
+      "12",
+      "6",
+      "8"
+    ],
+    "bonneReponse": 0,
+    "explication": "V vaut 5 et chaque I vaut 1 : V + I + I = 5 + 1 + 1 = 7."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle comparaison est juste ?",
+    "choix": [
+      "790 < 709",
+      "709 < 790",
+      "709 = 790",
+      "709 > 790"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les deux nombres ont 7 centaines ; on compare les dizaines : 0 dizaine dans 709, 9 dizaines dans 790. Donc 709 < 790."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Entre quelles dizaines se trouve le nombre 384 ?",
+    "choix": [
+      "entre 300 et 400",
+      "entre 384 et 394",
+      "entre 380 et 390",
+      "entre 370 et 380"
+    ],
+    "bonneReponse": 2,
+    "explication": "384 a 38 dizaines : il se trouve entre 380 et 390."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la fraction 3/8, comment s'appelle le nombre 8 ?",
+    "choix": [
+      "le numérateur",
+      "le dénominateur",
+      "le reste",
+      "le quotient"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le dénominateur (en bas) dit en combien de parts égales on partage ; le numérateur (en haut) dit combien de parts on prend."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle fraction est la plus grande ?",
+    "choix": [
+      "1/4",
+      "1/10",
+      "1/2",
+      "1/8"
+    ],
+    "bonneReponse": 2,
+    "explication": "Plus on partage en un grand nombre de parts, plus chaque part est petite : la moitié (1/2) est la plus grande."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète la suite : 250 ; 300 ; 350 ; 400 ; …",
+    "reponses": [
+      "450"
+    ],
+    "accents": "toleres",
+    "explication": "On ajoute 50 à chaque fois : 400 + 50 = 450."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces nombres est un multiple de 5 ?",
+    "choix": [
+      "232",
+      "251",
+      "235",
+      "248"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un multiple de 5 se termine par 0 ou par 5 : seul 235 convient."
+  }
+]

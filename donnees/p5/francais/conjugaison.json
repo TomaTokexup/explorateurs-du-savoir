@@ -1,0 +1,114 @@
+[
+  {
+    "type": "saisie",
+    "enonce": "Conjugue le verbe « finir » au passé simple, avec « il ».",
+    "reponses": [
+      "il finit"
+    ],
+    "accents": "stricts",
+    "explication": "Au passé simple, les verbes du 2e groupe se terminent par -it à la 3e personne du singulier : il finit, elle grandit."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Conjugue le verbe « prendre » au passé simple, avec « elles ».",
+    "reponses": [
+      "elles prirent"
+    ],
+    "accents": "stricts",
+    "explication": "Au passé simple, prendre fait : il prit, ils prirent. La terminaison de la 3e personne du pluriel est -rent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle forme est au conditionnel présent ?",
+    "choix": [
+      "je chante",
+      "je chanterais",
+      "je chanterai",
+      "je chantais"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le conditionnel présent se forme avec l'infinitif et les terminaisons de l'imparfait : je chanterais. « Je chanterai » est au futur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète au subjonctif présent : « Il faut que tu ___ tes devoirs. » (faire)",
+    "choix": [
+      "fasses",
+      "fais",
+      "feras",
+      "ferais"
+    ],
+    "bonneReponse": 0,
+    "explication": "Après « il faut que », on emploie le subjonctif : que tu fasses, que nous fassions."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans « En sortant de l'école, Lina a croisé son voisin. », quel mot est un participe présent ?",
+    "choix": [
+      "croisé",
+      "école",
+      "voisin",
+      "sortant"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le participe présent se termine par -ant : sortant, chantant, finissant. « Croisé » est un participe passé."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quelle phrase le verbe est-il au plus-que-parfait ?",
+    "choix": [
+      "Nous finissions nos devoirs avant le dîner.",
+      "Nous avions fini nos devoirs avant le dîner.",
+      "Nous avons fini nos devoirs avant le dîner.",
+      "Nous finirons nos devoirs avant le dîner."
+    ],
+    "bonneReponse": 1,
+    "explication": "Le plus-que-parfait se forme avec l'auxiliaire à l'imparfait (avions) et le participe passé (fini)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète : « Quand Paul est arrivé à la gare, le train ___ depuis dix minutes. » (partir)",
+    "choix": [
+      "partait",
+      "était parti",
+      "est parti",
+      "partira"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le départ du train s'est produit avant l'arrivée de Paul : on utilise le plus-que-parfait pour une action antérieure à une autre action passée."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Conjugue le verbe « pouvoir » au conditionnel présent, avec « nous ».",
+    "reponses": [
+      "nous pourrions"
+    ],
+    "accents": "stricts",
+    "explication": "Au conditionnel, pouvoir garde le radical du futur (pourr-) et prend les terminaisons de l'imparfait : nous pourrions."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel verbe est conjugué à l'imparfait ?",
+    "choix": [
+      "ils jouent",
+      "ils jouaient",
+      "ils joueront",
+      "ils ont joué"
+    ],
+    "bonneReponse": 1,
+    "explication": "À l'imparfait, les terminaisons sont -ais, -ais, -ait, -ions, -iez, -aient : ils jouaient."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la bonne forme du verbe « aller » au passé simple, avec « nous » ?",
+    "choix": [
+      "nous irions",
+      "nous allions",
+      "nous irons",
+      "nous allâmes"
+    ],
+    "bonneReponse": 3,
+    "explication": "Au passé simple, les verbes en -er font -âmes avec « nous » : nous allâmes, nous chantâmes.",
+    "defi": true
+  }
+]

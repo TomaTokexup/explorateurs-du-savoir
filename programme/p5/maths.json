@@ -1,0 +1,119 @@
+{
+  "niveau": "p5",
+  "matiere": "maths",
+  "source": "Schola Europaea – Mathematics Syllabus, Primary cycle (P1-P5), réf. 2022-01-D-48-en-3, en vigueur depuis le 01/09/2022 – tableau P5 (section 4.2)",
+  "note": "Objectifs recopiés mot pour mot du syllabus (en anglais). Ont été écartés les objectifs impossibles à évaluer par un quiz (mesurer avec des instruments, tracer, construire, utiliser une calculatrice, un logiciel ou un tableur, pavages, transformations à dessiner). Deux objectifs ont été raccourcis pour ne garder que la partie évaluable : « Identify the properties of a circle (radius, diameter) » et « Visualise and identify nets of common 3 D shapes ».",
+  "domaines": {
+    "nombres": {
+      "titre": "Nombres",
+      "objectifs": [
+        "Read and write whole numbers to and beyond 1 000 000",
+        "Use and apply numbers to and beyond 1 000 000 in real life contexts",
+        "Discover the concept of negative numbers through real life examples",
+        "Recall numbers to 2000 using Roman Numerals",
+        "Use and apply various estimation strategies",
+        "Order numbers (increasing and decreasing) irrespective of size",
+        "Compare, locate and place numbers on a number line and in a hundred square",
+        "Identify the whole numbers that lie either side of a decimal number to two decimal places",
+        "Identify the significant multiples of 10, 100, 1000, 10 000 and 100 000 that lie either side of a decimal number to two decimal places",
+        "Understand the place value of each digit in a six digit number and beyond, and in decimal numbers to two decimal places",
+        "Partition numbers into multiples of 10 000, 1 000, 10 and 1, 1/10 and 1/100",
+        "Identify place value in decimal numbers to two decimal places",
+        "Round whole numbers and decimals to the nearest whole number 10, 100, 1 000, 10 000, 100 000 and 1 000 000",
+        "Use the vocabulary of fractions",
+        "Read and write proper fractions, improper fractions, mixed numbers and decimal numbers (to two decimal places)",
+        "Convert improper fractions to mixed numbers and vice-versa",
+        "Find equivalent fractions",
+        "Simplify fractions to the lowest term",
+        "Recognise and use decimal numbers in real life contexts",
+        "Understand the equivalence between the decimal and fraction forms of half, third, quarter, three quarters, tenths and hundredths",
+        "Identify percentages in real life (limited to 100%, 75%, 50%, 25%, 10% and 1%)",
+        "Understand the relationships between fractions, decimals and percentages (limited to 100%, 75%, 50%, 25%, 10% and 1%)",
+        "Explore, recognise and record patterns and sequences using numbers with a variety of intervals, including with fractions and decimal numbers",
+        "Explore and understand triangular and square numbers"
+      ]
+    },
+    "operations": {
+      "titre": "Opérations",
+      "objectifs": [
+        "Consolidate and use the vocabulary and symbols of addition and subtraction",
+        "Add and subtract whole numbers and numbers to two decimal places",
+        "Write addition and subtraction calculations using standard and informal written methods",
+        "Use and develop simple algebraic equations using addition and subtraction",
+        "Perform addition and subtraction with brackets",
+        "Apply the rules of the order of addition and subtraction and brackets",
+        "Use mental strategies for addition and subtraction",
+        "Estimate before calculating and check the exact result found by sums and differences",
+        "Add and subtract fractions and mixed numbers",
+        "Consolidate and use the vocabulary and symbols of multiplication and division",
+        "Determine factors of larger numbers",
+        "Identify prime numbers to 100",
+        "Write multiplication and division calculations using informal and standard written method",
+        "Understand and use simple ratios, proportions and scales",
+        "Use and develop simple algebraic equations using multiplication and division",
+        "Perform multiplications and divisions with brackets",
+        "Apply the rules of the order of multiplication and division and brackets",
+        "Use mental strategies including multiplying and dividing by 10 and 100 and 1000",
+        "Estimate before calculating and check the exact result found by products and quotients",
+        "Calculate a fraction of a given quantity",
+        "Calculate simple percentages of a given quantity (100%, 75%, 50%, 25%,10%,1%)",
+        "Multiply a fraction by a one digit number",
+        "Divide a simple fraction by a one digit number using diagrams"
+      ]
+    },
+    "mesures-et-unites": {
+      "titre": "Mesures et unités",
+      "objectifs": [
+        "Consolidate the vocabulary of length",
+        "Convert mm, cm, m, dam, hm and km",
+        "Estimate and measure the perimeter of regular and irregular polygons",
+        "Consolidate the vocabulary of scale (scale, scale length, actual length)",
+        "Read and interpret maps using scale",
+        "Convert units of area km2, ha, a, m2, dm2, cm2, mm2",
+        "Calculate the area of compound shapes consisting of rectangles and right-angled triangles using m2 and cm2",
+        "Consolidate the vocabulary of capacity",
+        "Convert hl, l, dl, cl, ml",
+        "Introduce the vocabulary of volume (cubic centimetre, cubic decimetre, cubic metre)",
+        "Understand the relationship between volume and capacity (dm³-l)",
+        "Calculate the volume of cubes and cuboids using m³, dm³, cm³",
+        "Consolidate the vocabulary of weight",
+        "Convert t, kg, dag, g, mg",
+        "Convert and calculate with units of time",
+        "Practise reading and recording the time to the exact minute on analogue, digital and 24-hour clocks",
+        "Explore international time zones",
+        "Practise the calculation of duration, start time and finish time including using data from timetables",
+        "Knowing two quantities out of three (time, distance or speed), calculate the third quantity",
+        "Calculate change",
+        "Convert the euro and other currencies"
+      ]
+    },
+    "espace-et-formes": {
+      "titre": "Espace et formes",
+      "objectifs": [
+        "Read, follow and give instructions and directions using coordinates",
+        "Visualise, locate and plot a position using integer coordinates in the first quadrant as well as other grid reference systems (longitude and latitude)",
+        "Name and classify all kinds of angles and relate them to shape and the environment",
+        "Sort, name, describe and classify regular and irregular 2 D shapes, including equilateral, scalene, isosceles triangles, and identify their properties",
+        "Explore the relationships between 2 D shapes (lines of symmetry and angles)",
+        "Identify the properties of a circle (radius, diameter)",
+        "Consolidate and extend the vocabulary of 3 D shapes (cube, cuboid, cylinder, sphere, cone, pyramid and prism, hollow, solid)",
+        "Sort, name, describe and classify regular and irregular 3 D shapes and identify their properties",
+        "Visualise and identify nets of common 3 D shapes",
+        "Investigate symmetry in art, architecture and nature"
+      ]
+    },
+    "traitement-des-donnees": {
+      "titre": "Traitement des données",
+      "objectifs": [
+        "Apply the concept of proportionality to interpret data presented in pie charts in terms of percentages or fractions",
+        "Interpret line graphs (distance/time, a graph of pairs of numbers adding to a given number)",
+        "Use data and representations to make informed decisions and predictions",
+        "Discuss examples of inappropriate representations of data, whether certain representations are misleading",
+        "Study the meaning of average in real-life situations",
+        "Recognise the three related quantities in a set of data: average, total value, number of data",
+        "Understand and apply the formula to determine the mean",
+        "Knowing two quantities out of three (average, total value, number of data), calculate the third quantity"
+      ]
+    }
+  }
+}

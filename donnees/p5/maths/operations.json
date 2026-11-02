@@ -1,0 +1,116 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Calcule 12,5 + 7,75.",
+    "choix": [
+      "19,25",
+      "19,75",
+      "20,5",
+      "20,25"
+    ],
+    "bonneReponse": 3,
+    "explication": "On aligne les virgules : 12,50 + 7,75 = 20,25."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 8 + 4 × 3.",
+    "choix": [
+      "24",
+      "15",
+      "36",
+      "20"
+    ],
+    "bonneReponse": 3,
+    "explication": "On fait d'abord la multiplication : 4 × 3 = 12, puis 8 + 12 = 20."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule (8 + 4) × 3.",
+    "choix": [
+      "15",
+      "36",
+      "24",
+      "20"
+    ],
+    "bonneReponse": 1,
+    "explication": "On calcule d'abord ce qui est entre parenthèses : 8 + 4 = 12, puis 12 × 3 = 36."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Trouve le nombre manquant : … + 27 = 63",
+    "reponses": [
+      "36"
+    ],
+    "accents": "toleres",
+    "explication": "On cherche ce qu'il faut ajouter à 27 pour faire 63 : 63 − 27 = 36."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces nombres est un nombre premier ?",
+    "choix": [
+      "27",
+      "21",
+      "29",
+      "33"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un nombre premier n'a que deux diviseurs : 1 et lui-même. 27 = 3 × 9, 21 = 3 × 7, 33 = 3 × 11, mais 29 n'est divisible que par 1 et 29."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 3,6 × 100.",
+    "choix": [
+      "36",
+      "360",
+      "3 600",
+      "0,036"
+    ],
+    "bonneReponse": 1,
+    "explication": "Multiplier par 100 rend le nombre 100 fois plus grand : la virgule se déplace de deux rangs vers la droite."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien font 25 % de 80 € ?",
+    "choix": [
+      "40 €",
+      "25 €",
+      "20 €",
+      "8 €"
+    ],
+    "bonneReponse": 2,
+    "explication": "25 %, c'est le quart : 80 ÷ 4 = 20 €."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 2/5 + 1/5.",
+    "choix": [
+      "1/5",
+      "3/5",
+      "2/25",
+      "3/10"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les deux fractions ont le même dénominateur : on additionne les numérateurs, 2 + 1 = 3 cinquièmes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "3 cahiers coûtent 6 €. Combien coûtent 5 cahiers ?",
+    "choix": [
+      "11 €",
+      "10 €",
+      "8 €",
+      "15 €"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un cahier coûte 6 ÷ 3 = 2 € ; 5 cahiers coûtent 5 × 2 = 10 €."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien font les 3/4 de 20 ?",
+    "reponses": [
+      "15"
+    ],
+    "accents": "toleres",
+    "explication": "Un quart de 20, c'est 20 ÷ 4 = 5 ; trois quarts, c'est 3 × 5 = 15."
+  }
+]

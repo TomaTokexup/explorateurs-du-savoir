@@ -1,0 +1,116 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Dans « Mon frère semble fatigué. », quelle est la fonction de « fatigué » ?",
+    "choix": [
+      "complément d'objet direct",
+      "attribut du sujet",
+      "complément circonstanciel de manière",
+      "complément du nom"
+    ],
+    "bonneReponse": 1,
+    "explication": "Après un verbe d'état comme être, sembler ou paraître, l'adjectif donne une qualité du sujet : c'est un attribut du sujet.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans « Au fond du jardin poussait un vieux cerisier. », quel est le sujet du verbe ?",
+    "choix": [
+      "un vieux cerisier",
+      "Au fond du jardin",
+      "le jardin",
+      "poussait"
+    ],
+    "bonneReponse": 0,
+    "explication": "Pose la question « Qui est-ce qui poussait ? » : un vieux cerisier. Le sujet est placé après le verbe : c'est un sujet inversé.",
+    "astuce": "Pose la question « Qui est-ce qui… ? » devant le verbe."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans « Lucas parle à sa grand-mère. », quelle est la fonction de « à sa grand-mère » ?",
+    "choix": [
+      "complément circonstanciel de lieu",
+      "complément d'objet indirect (COI)",
+      "sujet",
+      "complément d'objet direct (COD)"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le complément est relié au verbe par une préposition (« à ») et ne peut pas être déplacé : c'est un COI. On parle à quelqu'un."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans « Ces fleurs, Emma les a cueillies ce matin. », que remplace le pronom « les » ?",
+    "choix": [
+      "ce matin",
+      "ces fleurs",
+      "cueillies",
+      "Emma"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Les » est un pronom COD placé avant le verbe : il reprend « ces fleurs », ce qu'Emma a cueilli."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Choisis le pronom relatif qui convient : « Voici le livre ___ je t'ai parlé. »",
+    "choix": [
+      "que",
+      "qui",
+      "où",
+      "dont"
+    ],
+    "bonneReponse": 3,
+    "explication": "On dit « parler de quelque chose » : quand le verbe se construit avec « de », on utilise le pronom relatif « dont »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans « Je pense que tu as raison. », quelle est la proposition subordonnée ?",
+    "choix": [
+      "tu as raison",
+      "que tu as raison",
+      "Je pense",
+      "Je pense que"
+    ],
+    "bonneReponse": 1,
+    "explication": "La proposition subordonnée commence par la conjonction « que » et dépend de la proposition principale « Je pense »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle phrase est à la voix passive ?",
+    "choix": [
+      "Le chat attrape la souris.",
+      "La souris s'est cachée.",
+      "La souris est attrapée par le chat.",
+      "Le chat est fatigué."
+    ],
+    "bonneReponse": 2,
+    "explication": "À la voix passive, le sujet subit l'action, et celui qui la fait est le complément d'agent (« par le chat »). « Le chat est fatigué » n'a pas de complément d'agent."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans « Le gâteau a été préparé par mon oncle. », recopie le complément d'agent.",
+    "reponses": [
+      "par mon oncle",
+      "mon oncle"
+    ],
+    "accents": "stricts",
+    "explication": "Le complément d'agent indique qui fait l'action dans une phrase passive ; il est introduit par « par » (ou parfois « de »)."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans « Pierre, le boulanger du village, se lève à quatre heures. », recopie l'apposition.",
+    "reponses": [
+      "le boulanger du village"
+    ],
+    "accents": "stricts",
+    "explication": "L'apposition est placée entre virgules à côté du nom : elle donne une précision sur Pierre et peut être supprimée."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans « Pour gagner la course, Inès s'entraîne chaque matin. », recopie le complément circonstanciel de but.",
+    "reponses": [
+      "pour gagner la course"
+    ],
+    "accents": "stricts",
+    "explication": "Le complément de but répond à la question « dans quel but ? » ; « chaque matin » est un complément de temps."
+  }
+]
