@@ -1,0 +1,136 @@
+[
+  {
+    "type": "saisie",
+    "enonce": "Where are Tom and his family?",
+    "texte": "Dear Lucy,\nWe are in Brighton! The weather is sunny, but the sea is cold. Yesterday we visited an old castle. It was great! I miss you.\nSee you soon,\nTom",
+    "reponses": [
+      "Tom and his family are in Brighton.",
+      "They are in Brighton.",
+      "They're in Brighton."
+    ],
+    "phrase": true,
+    "accents": "stricts",
+    "majuscules": "strictes",
+    "explication": "Tom starts his postcard with 'We are in Brighton!'. Answer with a full sentence: Tom and his family are in Brighton."
+  },
+  {
+    "type": "saisie",
+    "enonce": "What did Tom and his family do yesterday?",
+    "texte": "Dear Lucy,\nWe are in Brighton! The weather is sunny, but the sea is cold. Yesterday we visited an old castle. It was great! I miss you.\nSee you soon,\nTom",
+    "reponses": [
+      "They visited an old castle.",
+      "Tom and his family visited an old castle.",
+      "Yesterday they visited an old castle.",
+      "Yesterday, they visited an old castle.",
+      "They visited an old castle yesterday."
+    ],
+    "phrase": true,
+    "accents": "stricts",
+    "majuscules": "strictes",
+    "explication": "Read the sentence with 'Yesterday' in the postcard: 'Yesterday we visited an old castle.' In your answer, 'we' becomes 'they'."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Why does Chloe feel happy again at the end?",
+    "texte": "Hi Amy,\nToday was a bad day. I forgot my homework at home, so Mrs Brown was angry. Then I lost my pencil case. At lunch I felt sad, but my friend Ali shared his sandwich with me. Now I feel happy again.\nLove,\nChloe",
+    "reponses": [
+      "She feels happy again because Ali shared his sandwich with her.",
+      "Chloe feels happy again because Ali shared his sandwich with her.",
+      "She feels happy because Ali shared his sandwich with her.",
+      "Chloe feels happy because Ali shared his sandwich with her.",
+      "She is happy again because Ali shared his sandwich with her."
+    ],
+    "phrase": true,
+    "accents": "stricts",
+    "majuscules": "strictes",
+    "explication": "Chloe felt sad at lunch, then her friend Ali shared his sandwich with her. Use 'because' to give the reason.",
+    "defi": true
+  },
+  {
+    "type": "saisie",
+    "enonce": "What did Chloe forget to bring to school?",
+    "texte": "Hi Amy,\nToday was a bad day. I forgot my homework at home, so Mrs Brown was angry. Then I lost my pencil case. At lunch I felt sad, but my friend Ali shared his sandwich with me. Now I feel happy again.\nLove,\nChloe",
+    "reponses": [
+      "She forgot her homework.",
+      "Chloe forgot her homework.",
+      "She forgot her homework at home.",
+      "Chloe forgot her homework at home."
+    ],
+    "phrase": true,
+    "accents": "stricts",
+    "majuscules": "strictes",
+    "explication": "Chloe writes: 'I forgot my homework at home.' In your answer, 'I' becomes 'she' and 'my' becomes 'her'.",
+    "astuce": "Read the first two lines of the text again, slowly."
+  },
+  {
+    "type": "saisie",
+    "enonce": "What number comes after ten?",
+    "reponses": [
+      "eleven",
+      "11"
+    ],
+    "accents": "stricts",
+    "explication": "After ten comes eleven. You can write it as a word or a number.",
+    "astuce": "Count on your fingers from ten."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Your mum's brother is your ___.",
+    "choix": [
+      "cousin",
+      "uncle",
+      "nephew",
+      "grandad"
+    ],
+    "bonneReponse": 1,
+    "explication": "Your mum's brother (or your dad's brother) is your uncle. A cousin is the child of your uncle or aunt."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Your friend says 'Thank you!' What do you say?",
+    "choix": [
+      "Hello.",
+      "You're welcome.",
+      "Sorry.",
+      "Good night."
+    ],
+    "bonneReponse": 1,
+    "explication": "When someone thanks you, you can answer 'You're welcome.'"
+  },
+  {
+    "type": "qcm",
+    "enonce": "I stayed at home ___ I was ill.",
+    "choix": [
+      "but",
+      "because",
+      "and",
+      "when"
+    ],
+    "bonneReponse": 1,
+    "explication": "'Because' gives the reason. Why did I stay at home? Because I was ill."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Which food is healthy?",
+    "choix": [
+      "crisps",
+      "sweets",
+      "chocolate",
+      "apple"
+    ],
+    "bonneReponse": 3,
+    "explication": "An apple is a fruit. Fruit is good for your body."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complete the rhyme: Hickory, dickory, dock. The mouse ran up the ___.",
+    "choix": [
+      "tree",
+      "door",
+      "clock",
+      "sky"
+    ],
+    "bonneReponse": 2,
+    "explication": "'Clock' rhymes with 'dock'. Rhyming words often end with the same sound."
+  }
+]

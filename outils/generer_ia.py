@@ -48,7 +48,7 @@ def construire_consignes(niveau, titre_domaine, objectifs, nombre, nb_saisies, e
     nb_qcm = nombre - nb_saisies
 
     # En français, l'orthographe fait partie de l'exercice : accents stricts
-    accents = "stricts" if matiere == "francais" else "toleres"
+    accents = "stricts" if matiere in ("francais", "anglais") else "toleres"
     liste_revisions = "\n".join(f"- {r}" for r in revisions) or "- (aucune)"
     liste_defis = "\n".join(f"- {d}" for d in defis) or "- (aucun)"
 
@@ -82,6 +82,21 @@ Texte support (questions de lecture) :
 - Au plus 2 questions où la réponse est un mot recopié tel quel du texte. Les autres demandent de relier deux informations, de deviner une information non écrite (indices), de reformuler, de retrouver ce que remplace un pronom, ou de remettre en ordre des événements qui ne sont pas racontés dans l'ordre.
 - Toutes les questions portent sur la lecture : pas de question de conjugaison, de grammaire ou d'orthographe.
 """
+    elif matiere == "anglais":
+        bloc_lecture = """
+Questions d'anglais (Langue 2) :
+- Les élèves sont francophones et apprennent l'anglais comme deuxième langue (niveau A1 à A2 du Cadre européen).
+- Écris TOUT en anglais : énoncés, choix, explications, astuces et textes. Utilise un anglais simple, des phrases courtes et du vocabulaire courant pour des enfants de 8 à 11 ans.
+- Ne pose pas de question de traduction mot à mot : fais comprendre, compléter ou choisir en anglais (sens d'une phrase, bon mot dans un contexte, réponse à une question, suite logique d'un dialogue).
+- Utilise l'anglais britannique (colour, favourite, Mum), comme à l'école.
+- Pour une question de lecture, mets un court texte ORIGINAL dans le champ "texte" (3 à 6 phrases : un e-mail, une carte postale, une affiche, une petite histoire, un dialogue). Écris 2 textes au plus, avec 2 ou 3 questions chacun.
+- Les questions de lecture et les questions où l'élève parle de lui sont des SAISIES : l'élève répond par une PHRASE COMPLÈTE en anglais, comme on l'attend aux Écoles européennes (exception à la règle « réponse courte » ci-dessus).
+  Exemple : énoncé "Where are Tom and his family?" → "reponses": ["Tom and his family are in Brighton.", "They are in Brighton."]
+  Pour ces saisies, ajoute "phrase": true, "accents": "stricts" et "majuscules": "strictes". Chaque réponse commence par une majuscule, finit par un point et compte 20 mots au plus.
+  La phrase attendue reprend les mots de la question ; liste TOUTES les phrases correctes qu'un élève pourrait écrire (2 à 5 : avec le nom ou le pronom, avec ou sans complément, formes contractées comme "She's" et "She is").
+- Les autres saisies (un mot de vocabulaire) restent courtes, sans "majuscules" (une majuscule en début de mot n'y est pas une faute).
+- Varie les domaines de la vie de l'élève (famille, école, loisirs, santé, contes, monde qui l'entoure).
+"""
     else:
         bloc_lecture = ""
     return f"""Tu rédiges des exercices de révision pour des élèves de {niveau.upper()} des Écoles européennes (section française, enfants de 8 à 11 ans).
@@ -95,7 +110,7 @@ Consignes générales :
 - Ne dépasse jamais le niveau fixé par ces objectifs.
 - N'écris « ce », « cette » ou « cet » pour désigner un objet (« ce triangle », « cette figure ») que si la question a une figure.
 - Utilise le vocabulaire employé en classe en France (« pavé droit » et non « cuboïde », « sommet » et non « vertex »), même si les objectifs officiels sont en anglais.
-- Écris en français, avec des mots simples. Précise toujours les unités.
+- Écris en français (sauf en anglais : voir plus bas), avec des mots simples. Précise toujours les unités.
 - L'explication est courte (une ou deux phrases) et naturelle, comme le dirait un enseignant. Pour une question de connaissance (sens d'un mot, définition, mot à apprendre), donne simplement le sens ou la règle, avec un exemple si besoin. Pour une question qui demande un raisonnement, montre la méthode. N'invente jamais de méthode artificielle, et ne te contente pas de répéter la réponse.
 - Pars d'un exemple concret (de préférence illustré par une figure) plutôt que de demander une définition abstraite.
 - Si l'énoncé contient une liste (par exemple des événements A, B et C), écris chaque élément sur sa propre ligne en les séparant par \\n dans le texte JSON.

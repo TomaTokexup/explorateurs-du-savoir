@@ -94,14 +94,22 @@ def verifier_saisie(question, numero):
         erreurs.append(f"Question {numero} : 'reponses' doit être une liste non vide")
         return erreurs
 
-    # Contrôle 2 : chaque réponse est courte
+    # Contrôle 2 : chaque réponse est courte (4 mots / 30 caractères)
+    # ou, si "phrase": true, une phrase complète (20 mots / 120 caractères, majuscule au début, point à la fin)
+    phrase = question.get("phrase", False)
+    if not isinstance(phrase, bool):
+        erreurs.append(f"Question {numero} : 'phrase' doit être un booléen")
+        phrase = False
+    max_mots, max_caracteres = (20, 120) if phrase else (4, 30)
     for i, rep in enumerate(reponses, start=1):
         if not isinstance(rep, str):
             erreurs.append(f"Question {numero} : réponse {i} n'est pas une chaîne de caractères")
-        elif len(rep.split()) > 4:
-            erreurs.append(f"Question {numero} : réponse {i} est trop longue (plus de 4 mots)")
-        elif len(rep) > 30:
+        elif len(rep.split()) > max_mots:
+            erreurs.append(f"Question {numero} : réponse {i} est trop longue (plus de {max_mots} mots)")
+        elif len(rep) > max_caracteres:
             erreurs.append(f"Question {numero} : réponse {i} est trop longue ({len(rep)} caractères)")
+        elif phrase and not (rep and rep[0].isupper() and rep[-1] in ".!?"):
+            erreurs.append(f"Question {numero} : réponse {i} doit commencer par une majuscule et finir par . ! ou ?")
 
     # Contrôle 3 : pas de doublon
     if len(set(reponses)) != len(reponses):
@@ -111,6 +119,11 @@ def verifier_saisie(question, numero):
     accents = question.get("accents", "toleres")  # tolérés par défaut
     if accents not in ["toleres", "stricts"]:
         erreurs.append(f"Question {numero} : 'accents' doit être 'toleres' ou 'stricts', pas {accents!r}")
+
+    # Contrôle 5 : réglage des majuscules (ignorées par défaut)
+    majuscules = question.get("majuscules", "tolerees")
+    if majuscules not in ["tolerees", "strictes"]:
+        erreurs.append(f"Question {numero} : 'majuscules' doit être 'tolerees' ou 'strictes', pas {majuscules!r}")
 
     return erreurs
 

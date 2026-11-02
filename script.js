@@ -18,6 +18,8 @@
 // Format d'une question (voir la partie 5 pour les différents types) :
 //   QCM    : { "type": "qcm", "enonce": "...", "choix": [...], "bonneReponse": 0, "explication": "..." }
 //   Saisie : { "type": "saisie", "enonce": "...", "reponses": ["il va"], "accents": "stricts", "explication": "..." }
+//            + "majuscules": "strictes" (sinon les majuscules sont ignorées)
+//            + "phrase": true pour une réponse en phrase complète (anglais)
 //   Champs facultatifs, pour tous les types :
 //     "image": "images/p4/maths/angle-120.svg", "alt": "description"   → une figure
 //     "texte": "Un court texte à lire…"                               → texte support (lecture)
@@ -40,7 +42,10 @@ const MATIERES = [
   // la P3 et la P4 partagent la même banque de questions.
   { id: "francais",      nom: "Français",            icone: "📖", precision: "Langue 1",
     tranches: { p3: "p3-p4", p4: "p3-p4", p5: "p5" } },
-  { id: "anglais",       nom: "Anglais",             icone: "💬", precision: "Langue 2" },
+  // Le programme d'anglais (Langue 2) est organisé par niveaux européens (A1, A2), pas par année :
+  // une seule banque de questions pour la P3, la P4 et la P5.
+  { id: "anglais",       nom: "Anglais",             icone: "💬", precision: "Langue 2",
+    tranches: { p3: "p3-p5", p4: "p3-p5", p5: "p3-p5" } },
   { id: "decouverte",    nom: "Découverte du monde", icone: "🌍" },
   { id: "programmation", nom: "Programmation",       icone: "🤖", precision: "Bonus" }
 ];
@@ -203,6 +208,12 @@ async function pageCahier() {
   try {
     const themes = await lireJSON(dossier + "index.json");
 
+    // Un seul thème (l'anglais, par exemple) : pas besoin de sommaire, on lance directement le quiz
+    if (idTheme === null && themes.length === 1) {
+      window.location.replace(lienCahier + "&theme=" + themes[0].id);
+      return;
+    }
+
     // Pas de thème choisi : on affiche le sommaire
     if (idTheme === null) {
       document.title = matiere.nom + " " + niveau.nom + " – Explorateurs du Savoir";
@@ -311,9 +322,8 @@ function preparerQuestion(question) {
 // minuscules, espaces en trop supprimés, ponctuation finale ignorée,
 // apostrophe typographique ’ remplacée par '.
 // Si les accents sont tolérés, ils sont aussi retirés (é → e).
-function normaliser(texte, accentsToleres) {
-  let resultat = texte
-    .toLowerCase()
+function normaliser(texte, accentsToleres, majusculesStrictes) {
+  let resultat = (majusculesStrictes ? texte : texte.toLowerCase())
     .replace(/[’`]/g, "'")
     .replace(/\s+/g, " ")
     .trim()
@@ -436,10 +446,17 @@ function afficherSaisie(question) {
   reponses.appendChild(formulaire);
 
   const champ = formulaire.querySelector(".saisie-champ");
+  if (question.phrase === true) {
+    // Réponse attendue : une phrase complète (en anglais). Le clavier du téléphone met la majuscule.
+    champ.placeholder = "Write a full sentence.";
+    champ.setAttribute("autocapitalize", "sentences");
+    reponses.classList.add("saisie-phrase");
+  }
 
   // Boutons d'accents, seulement si la réponse attendue contient des lettres
+  // (pas pour une phrase en anglais : les accents français n'y servent pas)
   const contientDesLettres = question.reponses.some(function (r) { return /\p{L}/u.test(r); });
-  if (contientDesLettres) {
+  if (contientDesLettres && question.phrase !== true) {
     const accents = document.createElement("div");
     accents.className = "saisie-accents";
     accents.setAttribute("aria-label", "Lettres accentuées");
@@ -475,9 +492,10 @@ function afficherSaisie(question) {
 
 function corrigerSaisie(question, texteTape) {
   const accentsToleres = question.accents === "toleres";
-  const tape = normaliser(texteTape, accentsToleres);
+  const majusculesStrictes = question.majuscules === "strictes";
+  const tape = normaliser(texteTape, accentsToleres, majusculesStrictes);
   const estJuste = question.reponses.some(function (reponse) {
-    return normaliser(reponse, accentsToleres) === tape;
+    return normaliser(reponse, accentsToleres, majusculesStrictes) === tape;
   });
 
   // On bloque la saisie et on colore le champ
@@ -487,8 +505,20 @@ function corrigerSaisie(question, texteTape) {
   });
   reponses.querySelector(".saisie-champ").classList.add(estJuste ? "juste" : "faux");
 
+  // Faux seulement à cause des majuscules ou des accents ? On le dit, c'est plus utile qu'un simple « faux »
+  let presque = "";
+  if (!estJuste) {
+    const tapeSouple = normaliser(texteTape, true, false);
+    const justeSansDetails = question.reponses.some(function (reponse) {
+      return normaliser(reponse, true, false) === tapeSouple;
+    });
+    if (justeSansDetails) {
+      presque = "Presque ! Attention aux " + (majusculesStrictes ? "majuscules et aux accents" : "accents") + ". ";
+    }
+  }
+
   // Si c'est faux, on montre la réponse attendue avant l'explication
-  const rappel = estJuste ? "" : "La bonne réponse : « " + question.reponses[0] + " ». ";
+  const rappel = estJuste ? "" : presque + "La bonne réponse : « " + question.reponses[0] + " ». ";
   afficherCorrection(question, estJuste, rappel);
 }
 

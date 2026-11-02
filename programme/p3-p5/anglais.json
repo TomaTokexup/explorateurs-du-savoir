@@ -1,0 +1,32 @@
+{
+  "niveau": "p3-p5",
+  "matiere": "anglais",
+  "source": "Schola Europaea – Curriculum Language 2, Primary Cycle, réf. 2022-11-D-27-en-3 (en vigueur depuis le 01/09/2023), section 3.1 « Competences in language activities » (niveaux A1, A2, B1) et section 4 « Content areas ».",
+  "note": "Le programme L2 n'est pas organisé par année mais par niveaux du Cadre européen ; l'élève doit atteindre au moins A2 en fin de P5. Une seule banque pour P3, P4 et P5 : « objectifs » = A1-A2 ; « revisions » = tout début de A1 ; « defis » = B1. Seules les compétences écrites (lire, écrire, vocabulaire, structures simples) s'évaluent par un quiz ; l'oral, essentiel en L2, reste en classe.",
+  "domaines": {
+    "anglais": {
+      "titre": "English",
+      "objectifs": [
+        "Reading (A1): understand familiar names, words and very simple sentences; understand familiar written phrases (e.g. labels and instructions)",
+        "Reading (A2): independently understand and read short, simple texts (e.g. postcards, e-mails); find information in longer texts; begin to use context to work out the meaning of unfamiliar words",
+        "Writing (A1): write simple words, phrases and, with support, short sentences; fill in forms requiring personal details and preferences",
+        "Writing (A2): write short, simple compound sentences linked with simple connectors like 'and', 'but' and 'because'",
+        "Spoken interaction, in writing (A1-A2): ask and answer simple questions; express preferences and give reasons; handle very short social exchanges (greetings, thanks, apologies)",
+        "Vocabulary (A1-A2): use a basic range of words and simple phrases about personal details and everyday needs",
+        "Content area 1: the pupils, their families and their friends",
+        "Content area 2: the pupils and their school",
+        "Content area 3: the pupils and their free time (spare-time activities)",
+        "Content area 4: the pupils and their well-being (body, health, food, feelings)",
+        "Content area 5: the pupils and the world of fantasy (tales, stories, rhymes)",
+        "Content area 6: the pupils and the world around them (home, town, nature, animals, weather)"
+      ],
+      "revisions": [
+        "Very first words (pre-A1): numbers, colours, greetings, days of the week, classroom objects"
+      ],
+      "defis": [
+        "Reading (B1): understand the gist of a longer text and draw simple inferences (feelings, reasons)",
+        "Writing (B1): link a series of short sentences into a connected sequence (first, then, finally)"
+      ]
+    }
+  }
+}
