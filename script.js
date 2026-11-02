@@ -50,13 +50,48 @@ const MATIERES = [
 const NOMBRE_QUESTIONS_THEME = 10;
 const NOMBRE_QUESTIONS_MELANGE = 15;
 
+// Niveau réel des questions « Défi », selon le dossier de données (niveau ou tranche).
+// Exemple : en français P3-P4, les défis sont des notions de P5.
+const NIVEAU_DES_DEFIS = { "p3": "P4", "p4": "P5", "p3-p4": "P5", "p5": "S1" };
+
 // ---------- 2. Outils ----------
 
 // Dossier des données d'une matière pour un niveau.
 // Par défaut : donnees/<niveau>/<matiere>/ ; si la matière a des tranches : donnees/<tranche>/<matiere>/
+function groupeDonnees(idNiveau, matiere) {
+  return (matiere.tranches && matiere.tranches[idNiveau]) || idNiveau;
+}
+
 function dossierDonnees(idNiveau, matiere) {
-  const groupe = (matiere.tranches && matiere.tranches[idNiveau]) || idNiveau;
-  return "donnees/" + groupe + "/" + matiere.id + "/";
+  return "donnees/" + groupeDonnees(idNiveau, matiere) + "/" + matiere.id + "/";
+}
+
+// Typographie française : espace insécable (\u00A0) entre les guillemets et leur contenu,
+// et avant ? ! : ;  → le navigateur ne peut plus couper la ligne à ces endroits.
+function typographie(texte) {
+  return String(texte)
+    .replace(/«\s*/g, "«\u00A0")
+    .replace(/\s*»/g, "\u00A0»")
+    .replace(/ ([?!:;])/g, "\u00A0$1");
+}
+
+// Écrit un texte dans un élément, avec la bonne typographie.
+// Les courts passages entre « » (un mot, un petit groupe de mots) sont mis
+// dans un <span class="cite"> qui ne se coupe jamais en fin de ligne.
+// On construit les nœuds un par un (pas d'innerHTML) : aucun risque d'injection de code.
+function ecrireTexte(element, texte) {
+  element.textContent = "";
+  const morceaux = typographie(texte || "").split(/(«[^«»]*»)/);
+  morceaux.forEach(function (morceau) {
+    if (morceau.startsWith("«") && morceau.length <= 25) {
+      const cite = document.createElement("span");
+      cite.className = "cite";
+      cite.textContent = morceau;
+      element.appendChild(cite);
+    } else if (morceau !== "") {
+      element.appendChild(document.createTextNode(morceau));
+    }
+  });
 }
 const parametres = new URLSearchParams(window.location.search);
 
@@ -163,6 +198,7 @@ async function pageCahier() {
   document.getElementById("lien-sommaire").href = lienCahier;
 
   const dossier = dossierDonnees(idNiveau, matiere);
+  niveauDesDefis = NIVEAU_DES_DEFIS[groupeDonnees(idNiveau, matiere)] || "";
 
   try {
     const themes = await lireJSON(dossier + "index.json");
@@ -248,6 +284,8 @@ let nombreParPartie = 10;      // combien on en tire au hasard à chaque partie
 let questions = [];            // les questions de la partie en cours, préparées
 let numeroQuestion = 0;        // index de la question affichée
 let score = 0;                 // nombre de bonnes réponses
+let defisReussis = 0;          // nombre de questions « Défi » réussies
+let niveauDesDefis = "";       // niveau réel des défis (ex. "P5"), fixé par pageCahier
 
 const ACCENTS = ["é", "è", "ê", "à", "â", "ç", "ù", "û", "ô", "î", "ï", "ë"];
 
@@ -306,6 +344,7 @@ function demarrer() {
   questions = melanger(banqueDuQuiz).slice(0, nombreParPartie).map(preparerQuestion);
   numeroQuestion = 0;
   score = 0;
+  defisReussis = 0;
   afficherQuestion();
 }
 
@@ -314,16 +353,16 @@ function afficherQuestion() {
 
   document.getElementById("progression").textContent =
     "Question " + (numeroQuestion + 1) + " sur " + questions.length;
-  document.getElementById("enonce").textContent = question.enonce;
+  ecrireTexte(document.getElementById("enonce"), question.enonce);
 
   // Texte support facultatif (champ "texte"), pour les questions de lecture
   const texte = document.getElementById("texte-support");
-  texte.textContent = question.texte || "";
+  texte.textContent = typographie(question.texte || "");
   texte.hidden = !question.texte;
 
   // Astuce facultative (champ "astuce") : une méthode ou un outil, jamais la réponse
   const astuce = document.getElementById("astuce");
-  astuce.querySelector("span").textContent = question.astuce || "";
+  ecrireTexte(astuce.querySelector("span"), question.astuce);
   astuce.hidden = !question.astuce;
 
   // Badge « Défi » (champ "defi": true) : une question un peu au-dessus du niveau
@@ -359,7 +398,7 @@ function afficherQcm(question) {
   question.choix.forEach(function (texteChoix, position) {
     const bouton = document.createElement("button");
     bouton.className = "reponse";
-    bouton.textContent = texteChoix;
+    ecrireTexte(bouton, texteChoix);
     bouton.addEventListener("click", function () {
       corrigerQcm(question, position);
     });
@@ -461,13 +500,16 @@ function afficherCorrection(question, estJuste, rappel) {
 
   if (estJuste) {
     score = score + 1;
+    if (question.defi === true) {
+      defisReussis = defisReussis + 1;
+    }
     verdict.textContent = "Bravo, c'est juste !";
     correction.className = "correction juste";
   } else {
     verdict.textContent = "Pas tout à fait…";
     correction.className = "correction faux";
   }
-  document.getElementById("explication").textContent = rappel + question.explication;
+  ecrireTexte(document.getElementById("explication"), rappel + question.explication);
   correction.hidden = false;
 
   const derniereQuestion = numeroQuestion === questions.length - 1;
@@ -500,6 +542,17 @@ function afficherBilan() {
     message = "Continue de t'entraîner, tu vas y arriver !";
   }
   document.getElementById("message-bilan").textContent = message;
+
+  // Défis réussis : on ne les signale que s'il y en a (un défi raté n'est pas mentionné)
+  const messageDefi = document.getElementById("message-defi");
+  if (defisReussis > 0) {
+    const mot = defisReussis === 1 ? "défi" : "défis";
+    messageDefi.textContent = "⭐ Bravo, tu as réussi " + defisReussis + " " + mot +
+      (niveauDesDefis ? " de niveau " + niveauDesDefis : "") + " !";
+    messageDefi.hidden = false;
+  } else {
+    messageDefi.hidden = true;
+  }
 }
 
 // ---------- 6. Démarrage selon la page ----------

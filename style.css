@@ -399,10 +399,20 @@ a.cahier:hover {
 }
 
 .enonce {
-  font-size: clamp(1.6rem, 4vw, 2.2rem);
-  font-weight: 700;
+  font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.45;
   margin: 0 0 24px;
   white-space: pre-line;   /* les retours à la ligne (\n) écrits dans le JSON sont affichés */
+  text-wrap: pretty;       /* évite un mot tout seul sur la dernière ligne */
+}
+
+/* Court passage entre « » : jamais coupé en fin de ligne
+   (pas dans les boutons de réponse, trop étroits sur téléphone) */
+.enonce .cite,
+.explication .cite,
+.astuce .cite {
+  white-space: nowrap;
 }
 
 .reponses {
@@ -765,4 +775,17 @@ a.cahier:hover {
 
 .badge-defi[hidden] {
   display: none;
+}
+
+/* Écran de score : défis réussis */
+.message-defi {
+  display: inline-block;
+  margin: 4px 0 16px;
+  padding: 8px 16px;
+  border-radius: var(--rayon);
+  background: #fff6d6;
+  color: #8a6400;
+  font-family: var(--police-titre);
+  font-weight: 600;
+  font-size: 1.2rem;
 }
