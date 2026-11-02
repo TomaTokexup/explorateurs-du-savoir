@@ -117,7 +117,8 @@
     "enonce": "Comment s'appelle l'étape où l'on sépare les déchets par matière (papier, verre, plastique...) avant de les recycler ?",
     "reponses": [
       "tri",
-      "le tri"
+      "le tri",
+      "le tri sélectif"
     ],
     "accents": "toleres",
     "explication": "Le tri consiste à mettre chaque déchet dans le bon conteneur : le papier dans le conteneur papier, le verre dans le conteneur à verre. C'est la première étape du recyclage."
