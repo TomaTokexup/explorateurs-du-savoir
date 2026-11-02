@@ -1,0 +1,120 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Hier, nous sommes allés au parc. », à quel temps est le verbe « sommes allés » ?",
+    "choix": [
+      "le présent",
+      "le passé composé",
+      "le futur",
+      "l'imparfait"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Sommes allés » est formé de l'auxiliaire « être » au présent et du participe passé « allés » : c'est le passé composé. Cherche le participe passé pour le reconnaître."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase : « Les enfants ___ dans la cour. » (verbe jouer)",
+    "choix": [
+      "joue",
+      "jouent",
+      "jouons",
+      "jouez"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le sujet « les enfants » est au pluriel, donc le verbe prend la terminaison -ent (ils jouent). Repère d'abord le sujet, puis applique la terminaison du pronom correspondant.",
+    "astuce": "Remplace « les enfants » par « ils » pour trouver la bonne terminaison."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris au futur la forme du verbe « aller » avec le pronom « nous ». Tape le pronom et le verbe.",
+    "reponses": [
+      "nous irons",
+      "Nous irons"
+    ],
+    "accents": "stricts",
+    "explication": "Le verbe « aller » a un radical irrégulier au futur : « ir- ». Avec « nous », la terminaison est -ons, ce qui donne « nous irons »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Transforme la phrase au passé composé : « Je mange une pomme. »",
+    "choix": [
+      "J'ai mangé une pomme.",
+      "Je mangeais une pomme.",
+      "Je mangerai une pomme.",
+      "J'ai manger une pomme."
+    ],
+    "bonneReponse": 0,
+    "explication": "Au passé composé, on met l'auxiliaire « avoir » au présent (j'ai) puis le participe passé « mangé ». Le participe passé des verbes en -er se termine par -é.",
+    "astuce": "Ajoute « hier » au début de la phrase : qu’est-ce que tu dirais ?"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Parmi ces phrases, laquelle est à l'impératif présent ?",
+    "choix": [
+      "Tu manges ta soupe.",
+      "Mange ta soupe !",
+      "Tu as mangé ta soupe.",
+      "Tu mangeras ta soupe."
+    ],
+    "bonneReponse": 1,
+    "explication": "L'impératif donne un ordre, sans pronom sujet. « Mange ta soupe ! » est un ordre donné à une personne : c'est l'impératif. Les autres phrases sont au présent, au passé composé et au futur."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris à l'imparfait la forme du verbe « être » avec le pronom « ils ». Tape le pronom et le verbe.",
+    "reponses": [
+      "ils étaient",
+      "Ils étaient"
+    ],
+    "accents": "stricts",
+    "explication": "L'imparfait de « être » a le radical « ét- » ; avec « ils », la terminaison est -aient. On écrit donc « ils étaient ».",
+    "astuce": "Récite le verbe dans ta tête : j’étais, tu étais, il était…"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Demain, il fera beau. », à quel temps est le verbe « fera » ?",
+    "choix": [
+      "le présent",
+      "le passé composé",
+      "le futur",
+      "l'imparfait"
+    ],
+    "bonneReponse": 2,
+    "explication": "« Demain » indique que l'action aura lieu plus tard : le verbe est donc au futur simple. Le mot « demain » est un indice de temps à repérer."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase au passé simple : « Le chat ___ sur le toit. » (verbe monter)",
+    "choix": [
+      "monte",
+      "montait",
+      "monta",
+      "montera"
+    ],
+    "bonneReponse": 2,
+    "explication": "Au passé simple, un verbe du 1er groupe à la 3e personne du singulier se termine par -a. « Monta » est donc la bonne forme ; « montait » est à l'imparfait.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Je veux finir mon dessin. », quel mot est un verbe à l'infinitif ?",
+    "choix": [
+      "veux",
+      "finir",
+      "dessin",
+      "Je"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'infinitif est la forme du verbe qui n'a pas de sujet ; il se termine souvent par -er, -ir, -re ou -oir. « Finir » est à l'infinitif, alors que « veux » est conjugué avec « je »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Conjugue au présent le verbe « finir » avec le pronom « vous ». Tape le pronom et le verbe.",
+    "reponses": [
+      "vous finissez",
+      "Vous finissez"
+    ],
+    "accents": "stricts",
+    "explication": "Les verbes du 2e groupe ont le radical « finiss- » au pluriel ; avec « vous », la terminaison est -ez. On écrit donc « vous finissez »."
+  }
+]

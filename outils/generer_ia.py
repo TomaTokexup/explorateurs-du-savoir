@@ -27,8 +27,12 @@ def charger_objectifs(niveau, matiere, theme):
         for t in programme["domaines"]:
             print(f"  - {t}")
         sys.exit(1)
-    # 4. renvoyer deux valeurs : return titre, objectifs
-    return programme["domaines"][theme]["titre"], programme["domaines"][theme]["objectifs"]
+    # 4. renvoyer quatre valeurs : le titre, les objectifs, les révisions et les défis du domaine
+    domaine = programme["domaines"][theme]
+    return (domaine["titre"],
+            domaine["objectifs"],
+            domaine.get("revisions", []),
+            domaine.get("defis", []))
 
 def charger_enonces_existants(niveau, matiere, theme):
     """Renvoie la liste des énoncés déjà publiés pour ce thème (vide si le thème n'existe pas)."""
@@ -38,10 +42,16 @@ def charger_enonces_existants(niveau, matiere, theme):
     with open(chemin, "r", encoding="utf-8") as fichier:
         return [q.get("enonce") for q in json.load(fichier)]
 
-def construire_consignes(niveau, titre_domaine, objectifs, nombre, nb_saisies, enonces_existants):
+def construire_consignes(niveau, titre_domaine, objectifs, nombre, nb_saisies, enonces_existants, matiere, revisions, defis):
     """Construit le 'system prompt' à partir des objectifs officiels."""
     liste_objectifs = "\n".join(f"- {objectif}" for objectif in objectifs)
     nb_qcm = nombre - nb_saisies
+
+    # En français, l'orthographe fait partie de l'exercice : accents stricts
+    accents = "stricts" if matiere == "francais" else "toleres"
+    liste_revisions = "\n".join(f"- {r}" for r in revisions) or "- (aucune)"
+    liste_defis = "\n".join(f"- {d}" for d in defis) or "- (aucun)"
+
     # Les questions déjà publiées, pour que l'IA ne les reproduise pas
     if enonces_existants:
         liste_existants = "\n".join(f"- {enonce}" for enonce in enonces_existants)
@@ -67,6 +77,7 @@ Consignes générales :
 - L'explication enseigne la méthode en une ou deux phrases ; elle ne se contente pas de répéter la réponse.
 - Pars d'un exemple concret (de préférence illustré par une figure) plutôt que de demander une définition abstraite.
 - Si l'énoncé contient une liste (par exemple des événements A, B et C), écris chaque élément sur sa propre ligne en les séparant par \\n dans le texte JSON.
+- Dans "reponses", inutile de répéter une réponse avec une majuscule : le site ignore les majuscules.
 
 Rédige exactement {nb_qcm} questions de type "qcm" et {nb_saisies} questions de type "saisie".
 
@@ -79,7 +90,24 @@ Type "saisie" (l'élève tape sa réponse au clavier) :
 - réponse courte et fermée : un nombre, un mot ou au plus 4 mots, jamais une phrase ;
 - l'énoncé est assez précis pour qu'une seule réponse soit possible ;
 - "reponses" liste toutes les écritures acceptables de cette réponse (par exemple ["0,5", "0.5"] ou ["1 200", "1200"]) ;
-- "accents" vaut "toleres".
+- "accents" vaut "{accents}".
+
+Révisions et défis :
+- Environ une question sur dix est une RÉVISION d'une notion des années précédentes :
+{liste_revisions}
+- Environ une question sur dix est un DÉFI, un peu au-dessus du niveau, sur une notion de l'année suivante ; ajoute alors "defi": true à cette question :
+{liste_defis}
+- N'oublie JAMAIS "defi": true sur une question qui porte sur une notion de l'année suivante.
+
+Astuces (rares) :
+- Ajoute un champ "astuce" à 3 questions AU PLUS sur l'ensemble, seulement quand un geste ou un outil concret aide vraiment l'élève à trouver seul.
+- Une astuce est un conseil pratique : un outil (cahier de brouillon, dictionnaire, règle), un geste (poser l'opération, dessiner, compter sur ses doigts), ou une stratégie de vérification (remplacer le sujet par « il » ou « ils », réciter la conjugaison, relire le texte).
+- Une astuce n'est PAS un rappel de leçon (une règle, une liste de terminaisons) : les règles vont dans l'explication.
+- L'astuce ne doit jamais permettre de trouver la réponse sans réfléchir : elle ne désigne pas un choix par sa terminaison, sa ponctuation ou sa position, et ne reprend pas l'indice déjà présent dans l'énoncé.
+
+Texte support (questions de lecture) :
+- Pour une question de compréhension, ajoute un champ "texte" : un court texte ORIGINAL de 3 à 6 phrases, que tu inventes (jamais d'extrait d'un livre existant). L'énoncé porte sur ce texte.
+- En conjugaison, une saisie attend le pronom et le verbe (par exemple « nous irons »).
 
 Figures (facultatif, surtout en géométrie) :
 - Tu peux ajouter à une question un champ "figure" quand un dessin aide l'élève. Formes disponibles :
@@ -102,7 +130,7 @@ Figures (facultatif, surtout en géométrie) :
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
 [
   {{"type": "qcm", "enonce": "...", "choix": ["...", "...", "...", "..."], "bonneReponse": 0, "explication": "..."}},
-  {{"type": "saisie", "enonce": "...", "reponses": ["..."], "accents": "toleres", "explication": "..."}}
+  {{"type": "saisie", "enonce": "...", "reponses": ["..."], "accents": "{accents}", "explication": "..."}}
 ]"""
 
 def demander_questions(consignes, demande):
@@ -280,21 +308,16 @@ def main():
     args = parser.parse_args()
     load_dotenv()
 
-    # 1. titre, objectifs = charger_objectifs(...)
-    titre, objectifs = charger_objectifs(args.niveau, args.matiere, args.theme)
+    titre, objectifs, revisions, defis = charger_objectifs(args.niveau, args.matiere, args.theme)
 
-    # 1b. enonces_existants = charger_enonces_existants(...)
     enonces_existants = charger_enonces_existants(args.niveau, args.matiere, args.theme)
     enonces_existants = charger_enonces_existants(args.niveau, args.matiere, args.theme)
     print(f"{len(enonces_existants)} question(s) déjà publiée(s) transmise(s) à l'IA")
 
-    # 2. consignes = construire_consignes(...)
-    consignes = construire_consignes(args.niveau, titre, objectifs, args.nombre, args.saisies, enonces_existants)
+    consignes = construire_consignes(args.niveau, titre, objectifs, args.nombre, args.saisies, enonces_existants, args.matiere, revisions, defis)
 
-    # 3. demande = f"Rédige les {args.nombre} questions sur le domaine « {titre} »."
     demande = f"Rédige les {args.nombre} questions sur le domaine « {titre} »."
 
-    # 4. texte = demander_questions(consignes, demande)
     texte = demander_questions(consignes, demande)
 
     # Transformer le texte en liste Python (peut échouer si l'IA n'a pas respecté le format)
@@ -331,6 +354,10 @@ def main():
                 print("  -", erreur)
             rejetees.append(question)
 
+    nb_astuces = sum(1 for question in valides if "astuce" in question)
+    if nb_astuces > 3:
+        print(f"Attention : {nb_astuces} astuces, plus que les 3 demandées. À trier pendant la relecture.")
+        
     # 6. fichier de sortie : f"donnees/brouillon_{args.niveau}_{args.matiere}_{args.theme}.json"
     fichier_sortie = f"donnees/brouillon_{args.niveau}_{args.matiere}_{args.theme}.json"
     with open(fichier_sortie, "w", encoding="utf-8") as fichier:

@@ -22,6 +22,22 @@ def verifier_question(question, numero):
         if not Path(question["image"]).exists():
             erreurs.append(f"Question {numero} : l'image '{question['image']}' n'existe pas")
 
+    if "astuce" in question:
+        if not isinstance(question["astuce"], str):
+            erreurs.append(f"Question {numero} : champ 'astuce' doit être une chaîne de caractères")
+        elif not 1 <= len(question["astuce"]) <= 150:
+            erreurs.append(f"Question {numero} : champ 'astuce' trop long ({len(question['astuce'])} caractères)")
+
+    if "defi" in question:
+        if not isinstance(question["defi"], bool):
+            erreurs.append(f"Question {numero} : champ 'defi' doit être un booléen")
+
+    if "texte" in question:
+        if not isinstance(question["texte"], str):
+            erreurs.append(f"Question {numero} : champ 'texte' doit être une chaîne de caractères")
+        elif not 20 <= len(question["texte"]) <= 800:
+            erreurs.append(f"Question {numero} : champ 'texte' trop court ou trop long ({len(question['texte'])} caractères)")
+
     type_question = question.get("type", "qcm")   # "qcm" si le champ est absent
     if type_question not in TYPES_CONNUS:
         erreurs.append(f"Question {numero} : type '{type_question}' inconnu")
