@@ -7,7 +7,7 @@ import anthropic
 
 from pathlib import Path
 from figures import (COMPOSANTS, DIRECTIONS, dessiner_angle, dessiner_barres, dessiner_billes, dessiner_camembert,
-                     dessiner_circuit, dessiner_courbe, dessiner_frise, ecrire_annee, PAS_FRISE, dessiner_horloge, dessiner_polygone, dessiner_rectangle,
+                     dessiner_circuit, dessiner_courbe, dessiner_frise, dessiner_schema, ecrire_annee, PAS_FRISE, SCHEMAS, dessiner_horloge, dessiner_polygone, dessiner_rectangle,
                      dessiner_repere, dessiner_rose, dessiner_venn, enregistrer)
 from dotenv import load_dotenv
 from valider_questions import verifier_question   # ta fonction !
@@ -51,6 +51,12 @@ def construire_consignes(niveau, titre_domaine, objectifs, nombre, nb_saisies, e
     accents = "stricts" if matiere == "francais" else "toleres"
     liste_revisions = "\n".join(f"- {r}" for r in revisions) or "- (aucune)"
     liste_defis = "\n".join(f"- {d}" for d in defis) or "- (aucun)"
+
+    # Les schémas du corps disponibles et leurs parties (lus dans figures.py)
+    liste_schemas = "\n".join(
+        f'    - "{nom}" ({schema["titre"]}) : '
+        + ", ".join(f'"{code}" ({infos[0]})' for code, infos in schema["parties"].items())
+        for nom, schema in SCHEMAS.items())
 
     # Les questions déjà publiées, pour que l'IA ne les reproduise pas
     if enonces_existants:
@@ -150,6 +156,10 @@ Figures (facultatif, surtout en géométrie) :
     1 à 4 événements, chacun avec un texte de 14 caractères au plus ; un seul événement peut avoir le texte "?" (la date ou l'événement à trouver).
     "periodes": true colore les grandes périodes (Antiquité jusqu'en 476, Moyen Âge de 476 à 1492, Temps modernes de 1492 à 1789, Époque contemporaine depuis 1789).
     Utilise les dates retenues à l'école en France, et ne donne pas dans l'énoncé l'information que la frise montre.
+  {{"forme": "schema", "nom": "...", "parties": ["...", ...]}}  (schéma du corps déjà dessiné ; les parties choisies sont numérotées 1, 2, 3... dans l'ordre de la liste)
+    Schémas et parties disponibles :
+{liste_schemas}
+    La question porte sur les numéros : « Comment s'appelle la partie n° 2 ? » ou « Quel numéro montre la pupille ? ». L'énoncé ne nomme jamais les autres parties numérotées.
 - N'utilise aucune autre forme, et n'écris jamais de champ "image" toi-même.
 
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
@@ -377,6 +387,21 @@ def creer_figure(description, niveau, matiere):
             alt += ", avec : " + ", ".join(noms)
         if any(texte == "?" for _, texte in liste):
             alt += ", et un point rouge marqué « ? »"
+
+    elif forme == "schema":
+        nom_schema = description.get("nom")
+        if nom_schema not in SCHEMAS:
+            raise ValueError(f"schéma inconnu : {nom_schema!r} (disponibles : {', '.join(SCHEMAS)})")
+        parties = description.get("parties")
+        connues = SCHEMAS[nom_schema]["parties"]
+        if (not isinstance(parties, list) or not 1 <= len(parties) <= 6
+                or len(set(parties)) != len(parties) or any(p not in connues for p in parties)):
+            raise ValueError(f"parties invalides pour {nom_schema} : {parties!r} (possibles : {', '.join(connues)})")
+        svg = dessiner_schema(nom_schema, parties)
+        nom = f"{nom_schema}-" + "-".join(str(list(connues).index(p) + 1) for p in parties)
+        # Le texte alternatif ne donne pas les noms des parties : ce serait donner la réponse
+        pluriel = "s" if len(parties) > 1 else ""
+        alt = f"Schéma : {SCHEMAS[nom_schema]['titre']}, avec {len(parties)} partie{pluriel} numérotée{pluriel}"
 
     else:
         raise ValueError(f"forme inconnue : {forme!r}")

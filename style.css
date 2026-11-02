@@ -680,7 +680,7 @@ a.cahier:hover {
 .figure img {
   display: block;
   max-width: 100%;
-  max-height: 260px;
+  max-height: 420px;       /* assez haut pour les grands schémas (appareil digestif) */
   padding: 12px;
   border: 2px solid color-mix(in srgb, var(--encre) 15%, transparent);
   border-radius: var(--rayon);

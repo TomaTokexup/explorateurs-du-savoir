@@ -4,6 +4,7 @@
 import html
 import math
 import random
+import re
 from pathlib import Path
 
 ENCRE = "#23305a"      # couleur des traits (encre bleue du site)
@@ -542,6 +543,135 @@ def dessiner_frise(debut, fin, pas, evenements, periodes=False):
 '''
 
 
+# --- Schémas fixes à légender (Découverte du monde : le corps) ---
+# Chaque schéma est dessiné une fois pour toutes. L'IA choisit seulement QUELLES parties
+# sont numérotées (1, 2, 3...) ; la question demande ensuite le nom d'une partie numérotée.
+# Pour chaque partie : (nom affiché, x et y du point visé sur le dessin, côté de l'étiquette).
+
+def _bezier(p0, p1, p2, t):
+    """Un point d'une courbe de Bézier quadratique (celle des chemins SVG « Q »)."""
+    return tuple((1 - t) ** 2 * a + 2 * t * (1 - t) * b + t ** 2 * c for a, b, c in zip(p0, p1, p2))
+
+
+def _oeil_face():
+    amande = "M 60 150 Q 200 40 340 150 Q 200 245 60 150 Z"     # le contour de l'œil, entre les paupières
+    cils = ""
+    for t in (0.14, 0.26, 0.38, 0.5, 0.62, 0.74, 0.86):
+        x, y = _bezier((60, 150), (200, 40), (340, 150), t)
+        dx = (t - 0.5) * 30
+        cils += (f'<path d="M {x:.1f} {y - 22:.1f} q {dx / 2:.1f} -12 {dx:.1f} -22" fill="none" stroke="{ENCRE}" '
+                 f'stroke-width="3" stroke-linecap="round"/>')
+    return f'''<defs><clipPath id="amande"><path d="{amande}"/></clipPath></defs>
+  <path d="M 80 52 Q 200 6 320 46" fill="none" stroke="#6b4a2b" stroke-width="13" stroke-linecap="round"/>
+  <path d="{amande}" fill="#fdf8f4"/>
+  <g clip-path="url(#amande)">
+    <circle cx="200" cy="150" r="56" fill="#5b8fcf" stroke="#2d5a91" stroke-width="3"/>
+    <circle cx="200" cy="150" r="22" fill="#111"/>
+    <circle cx="188" cy="137" r="7" fill="white" opacity="0.85"/>
+  </g>
+  <path d="{amande}" fill="none" stroke="{ENCRE}" stroke-width="4"/>
+  <path d="M 60 150 Q 200 40 340 150 L 336 128 Q 200 16 64 128 Z" fill="#f2d3bf" stroke="{ENCRE}" stroke-width="3"/>
+  {cils}'''
+
+
+def _oeil_coupe():
+    # Blanc de l'œil (sclérotique) : un cercle ouvert à l'avant, où se trouve la cornée
+    return f'''<path d="M 170 97 A 110 110 0 1 1 170 223" fill="#eef6fc" stroke="{ENCRE}" stroke-width="4"/>
+  <path d="M 170 97 Q 80 160 170 223" fill="#dff0fb" stroke="{ENCRE}" stroke-width="4"/>
+  <path d="M 225.1 64.2 A 102 102 0 1 1 225.1 255.8" fill="none" stroke="#e2574c" stroke-width="7"/>
+  <line x1="174" y1="104" x2="174" y2="142" stroke="#6b4a2b" stroke-width="9" stroke-linecap="round"/>
+  <line x1="174" y1="178" x2="174" y2="216" stroke="#6b4a2b" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="197" cy="160" rx="14" ry="38" fill="#fff6d6" stroke="{ENCRE}" stroke-width="3"/>
+  <path d="M 366 138 L 446 126 L 446 194 L 366 182 Z" fill="#f4c27a" stroke="{ENCRE}" stroke-width="3"/>'''
+
+
+DOSSIER_DESSINS = Path(__file__).parent / "dessins"    # dessins venus d'ailleurs (domaine public)
+
+
+def _dessin_externe(fichier):
+    """Le contenu d'un fichier SVG du dossier dessins/ (tout ce qui est entre <svg ...> et </svg>)."""
+    texte = (DOSSIER_DESSINS / fichier).read_text(encoding="utf-8")
+    debut = texte.index(">", texte.index("<svg")) + 1
+    fin = texte.rindex("</svg>")
+    # On retire les blocs <metadata> (ajoutés par certains logiciels) : ils utilisent des
+    # préfixes (c2pa:, rdf:...) qui ne sont plus déclarés une fois le dessin inséré dans notre <svg>
+    return re.sub(r"<metadata>.*?</metadata>", "", texte[debut:fin], flags=re.DOTALL)
+
+
+SCHEMAS = {
+    "oeil-face": {
+        "titre": "un œil vu de face", "largeur": 400, "hauteur": 240, "dessin": _oeil_face,
+        "parties": {
+            "sourcil": ("le sourcil", 200, 30, "droite"),
+            "paupiere": ("la paupière", 296, 114, "droite"),
+            "blanc-de-l-oeil": ("le blanc de l'œil", 300, 152, "droite"),
+            "cils": ("les cils", 94, 88, "gauche"),
+            "pupille": ("la pupille", 200, 145, "gauche"),
+            "iris": ("l'iris", 166, 182, "gauche"),
+        },
+    },
+    "oeil-coupe": {
+        "titre": "un œil vu en coupe", "largeur": 460, "hauteur": 320, "dessin": _oeil_coupe,
+        "parties": {
+            "iris": ("l'iris", 174, 118, "gauche", 76),
+            "cornee": ("la cornée", 136, 128, "gauche", 120),
+            "pupille": ("la pupille", 174, 160, "gauche"),
+            "cristallin": ("le cristallin", 200, 190, "gauche", 205),
+            "retine": ("la rétine", 326, 82, "droite"),
+            "nerf-optique": ("le nerf optique", 430, 160, "droite"),
+        },
+    },
+    "appareil-digestif": {
+        # Dessin de Mariana Ruiz (LadyofHats), Wikimedia Commons, domaine public : dessins/appareil-digestif.svg
+        # Les coordonnées des parties sont celles du dessin d'origine (351 × 821), réduit à 68 %.
+        "titre": "l'appareil digestif", "fichier": "appareil-digestif.svg", "taille": (351, 821), "echelle": 0.68,
+        "parties": {
+            "bouche": ("la bouche", 100, 142, "gauche"),
+            "oesophage": ("l'œsophage", 175, 330, "droite"),
+            "foie": ("le foie", 75, 455, "gauche"),
+            "estomac": ("l'estomac", 250, 470, "droite"),
+            "intestin-grele": ("l'intestin grêle", 185, 640, "droite"),
+            "gros-intestin": ("le gros intestin", 72, 640, "gauche"),
+            "anus": ("l'anus", 176, 782, "gauche"),
+        },
+    },
+}
+
+
+def dessiner_schema(nom, parties):
+    """Renvoie le code SVG du schéma `nom` (voir SCHEMAS), avec les `parties` numérotées 1, 2, 3...
+    dans l'ordre de la liste. Les autres parties ne portent aucun numéro."""
+    schema = SCHEMAS[nom]
+    marge = 70                       # place pour les numéros, à gauche et à droite du dessin
+    if "fichier" in schema:
+        # Dessin externe : on l'insère réduit (un <svg> dans le <svg>), et on réduit aussi les coordonnées
+        echelle = schema["echelle"]
+        largeur, hauteur = round(schema["taille"][0] * echelle), round(schema["taille"][1] * echelle)
+        elements = [f'<svg x="{marge}" y="0" width="{largeur}" height="{hauteur}" '
+                    f'viewBox="0 0 {schema["taille"][0]} {schema["taille"][1]}">{_dessin_externe(schema["fichier"])}</svg>']
+    else:
+        echelle = 1
+        largeur, hauteur = schema["largeur"], schema["hauteur"]
+        elements = [f'<g transform="translate({marge} 0)">{schema["dessin"]()}</g>']
+    for numero, partie in enumerate(parties, start=1):
+        # (nom, x, y, côté) ou (nom, x, y, côté, hauteur du numéro) quand le trait doit être en biais
+        _, x, y, cote, *autre = schema["parties"][partie]
+        x, y = x * echelle, y * echelle
+        y_num = autre[0] if autre else y
+        x += marge
+        x_num = 26 if cote == "gauche" else largeur + 2 * marge - 26
+        elements.append(f'<line x1="{x_num}" y1="{y_num}" x2="{x}" y2="{y}" stroke="{ENCRE}" stroke-width="2"/>')
+        elements.append(f'<circle cx="{x}" cy="{y}" r="4" fill="{ENCRE}" stroke="white" stroke-width="1.5"/>')
+        elements.append(f'<circle cx="{x_num}" cy="{y_num}" r="16" fill="white" stroke="{ENCRE}" stroke-width="3"/>')
+        elements.append(_texte(x_num, y_num + 1, numero, taille=17, gras=True, extra='dominant-baseline="central"'))
+    contenu = "\n  ".join(elements)
+    w = largeur + 2 * marge
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 {w} {hauteur}" width="{w}" height="{hauteur}">
+  {contenu}
+</svg>
+'''
+
+
 def enregistrer(svg, chemin):
     """Écrit le code SVG dans un fichier, en créant les dossiers si besoin."""
     chemin = Path(chemin)
@@ -581,3 +711,5 @@ if __name__ == "__main__":
                 "images/exemples/frise-periodes.svg")
     enregistrer(dessiner_frise(1000, 1500, 100, [(1096, "1re croisade"), (1163, "Notre-Dame"), (1431, "?")]),
                 "images/exemples/frise-moyen-age.svg")
+    for nom, schema in SCHEMAS.items():
+        enregistrer(dessiner_schema(nom, list(schema["parties"])), f"images/exemples/schema-{nom}.svg")

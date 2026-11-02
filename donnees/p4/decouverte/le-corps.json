@@ -1,0 +1,109 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Regarde le schéma de l'œil vu en coupe. Quel numéro montre la rétine ?",
+    "choix": [
+      "2",
+      "4",
+      "5",
+      "6"
+    ],
+    "bonneReponse": 2,
+    "explication": "La rétine tapisse le fond de l'œil. Elle reçoit la lumière et envoie des signaux au cerveau par le nerf optique.",
+    "image": "images/p4/decouverte/oeil-coupe-1-2-3-4-5-6.svg",
+    "alt": "Schéma : un œil vu en coupe, avec 6 parties numérotées"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Un objet nous est visible parce qu'il renvoie vers nos yeux la ... (un seul mot).",
+    "reponses": [
+      "lumière",
+      "lumiere"
+    ],
+    "accents": "toleres",
+    "explication": "Sauf le Soleil ou une lampe, les objets ne produisent pas de lumière : ils renvoient celle qui les éclaire. Dans le noir complet, on ne voit donc rien."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qu'est-ce que le daltonisme ?",
+    "choix": [
+      "Une maladie qui se soigne avec des lunettes",
+      "Une difficulté à distinguer certaines couleurs, souvent le rouge et le vert",
+      "Le fait de ne voir que la nuit",
+      "Une maladie qui fait pleurer les yeux"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une personne daltonienne voit le monde avec moins de couleurs, car certaines cellules de l'œil ne fonctionnent pas bien. C'est un problème de vision qui dure toute la vie."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment une personne aveugle peut-elle lire un livre ?",
+    "choix": [
+      "Elle ne peut pas lire, elle doit toujours être accompagnée",
+      "Elle lit avec les yeux fermés en écoutant un bruit",
+      "Elle lit avec le bout des doigts, en touchant des points en relief : c'est le braille",
+      "Elle utilise des lunettes qui agrandissent les lettres"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le braille est une écriture faite de points en relief. Les personnes aveugles lisent en touchant ces points avec les doigts, comme on lit avec les yeux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi le corps a-t-il besoin de nourriture ?",
+    "choix": [
+      "Pour remplacer le sommeil",
+      "Pour rendre la peau plus claire",
+      "Pour éviter d'avoir soif",
+      "Pour grandir, se réparer et avoir de l'énergie"
+    ],
+    "bonneReponse": 3,
+    "explication": "Les aliments apportent les matières nécessaires à la croissance, à la réparation du corps et à l'énergie pour bouger, réfléchir et se tenir chaud."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un enfant mange un sandwich. Dans quel ordre les aliments passent-ils dans le corps ?",
+    "choix": [
+      "Bouche → estomac → œsophage → intestin grêle",
+      "Bouche → œsophage → estomac → intestin grêle",
+      "Bouche → estomac → intestin grêle → œsophage",
+      "Œsophage → bouche → estomac → gros intestin"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les aliments sont d'abord mâchés dans la bouche, puis descendent par l'œsophage jusqu'à l'estomac. Ils passent ensuite dans l'intestin grêle, où l'on absorbe les nutriments."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom de l'os de la cuisse, le plus long os du corps ?",
+    "reponses": [
+      "fémur",
+      "femur"
+    ],
+    "accents": "toleres",
+    "explication": "Le fémur est l'os de la cuisse. C'est le plus long et le plus solide des os du corps."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi le sang a-t-il besoin de l'oxygène qui vient des poumons ?",
+    "choix": [
+      "Pour fabriquer des os",
+      "Pour digérer les aliments",
+      "Pour que les cellules puissent produire de l'énergie",
+      "Pour voir la lumière"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les poumons prennent l'oxygène de l'air et le donnent au sang. Le cœur fait circuler ce sang dans tout le corps, et les cellules utilisent l'oxygène pour produire de l'énergie.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu sors d'une pièce sombre en plein soleil. Pourquoi ta pupille devient-elle plus petite ?",
+    "choix": [
+      "Pour laisser entrer moins de lumière, car il y en a trop",
+      "Pour voir plus de couleurs",
+      "Pour mieux entendre",
+      "Pour fermer l'œil"
+    ],
+    "bonneReponse": 0,
+    "explication": "La pupille est le trou noir au centre de l'œil. Elle se rétrécit quand il y a beaucoup de lumière, pour protéger la rétine, et s'agrandit dans le noir pour voir mieux."
+  }
+]
