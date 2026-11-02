@@ -90,7 +90,7 @@ Consignes générales :
 - N'écris « ce », « cette » ou « cet » pour désigner un objet (« ce triangle », « cette figure ») que si la question a une figure.
 - Utilise le vocabulaire employé en classe en France (« pavé droit » et non « cuboïde », « sommet » et non « vertex »), même si les objectifs officiels sont en anglais.
 - Écris en français, avec des mots simples. Précise toujours les unités.
-- L'explication enseigne la méthode en une ou deux phrases ; elle ne se contente pas de répéter la réponse.
+- L'explication est courte (une ou deux phrases) et naturelle, comme le dirait un enseignant. Pour une question de connaissance (sens d'un mot, définition, mot à apprendre), donne simplement le sens ou la règle, avec un exemple si besoin. Pour une question qui demande un raisonnement, montre la méthode. N'invente jamais de méthode artificielle, et ne te contente pas de répéter la réponse.
 - Pars d'un exemple concret (de préférence illustré par une figure) plutôt que de demander une définition abstraite.
 - Si l'énoncé contient une liste (par exemple des événements A, B et C), écris chaque élément sur sa propre ligne en les séparant par \\n dans le texte JSON.
 - Dans "reponses", inutile de répéter une réponse avec une majuscule : le site ignore les majuscules.
@@ -117,7 +117,7 @@ Révisions et défis :
 
 Astuces (rares) :
 - Ajoute un champ "astuce" à 3 questions AU PLUS sur l'ensemble, seulement quand un geste ou un outil concret aide vraiment l'élève à trouver seul.
-- Une astuce est un conseil pratique : un outil (cahier de brouillon, dictionnaire, règle), un geste (poser l'opération, dessiner, compter sur ses doigts), ou une stratégie de vérification (remplacer le sujet par « il » ou « ils », réciter la conjugaison, relire le texte).
+- Une astuce est un conseil pratique : un outil (cahier de brouillon, dictionnaire, règle ; par exemple, pour un mot difficile : « Cherche ce mot dans ton dictionnaire. »), un geste (poser l'opération, dessiner, compter sur ses doigts), ou une stratégie de vérification (remplacer le sujet par « il » ou « ils », réciter la conjugaison, relire le texte).
 - Une astuce n'est PAS un rappel de leçon (une règle, une liste de terminaisons) : les règles vont dans l'explication.
 - L'astuce ne doit jamais permettre de trouver la réponse sans réfléchir : elle ne désigne pas un choix par sa terminaison, sa ponctuation ou sa position, et ne reprend pas l'indice déjà présent dans l'énoncé.
 

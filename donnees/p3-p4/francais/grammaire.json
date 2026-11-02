@@ -1,0 +1,118 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Les enfants jouent dans le jardin. », quel est le sujet du verbe ?",
+    "choix": [
+      "Les enfants",
+      "jouent",
+      "dans le jardin",
+      "le jardin"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le sujet est celui qui fait l'action : pose la question « qui est-ce qui + verbe ? ». Ici, « qui est-ce qui jouent ? » donne « les enfants »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Léa mange une pomme. », quel mot est un nom propre ?",
+    "choix": [
+      "Léa",
+      "mange",
+      "pomme",
+      "une"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un nom propre désigne une personne ou un lieu précis et prend une majuscule même au milieu d'une phrase. « Pomme » est un nom commun, car il désigne n'importe quelle pomme."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans la phrase « Les enfants lisent un livre intéressant. », combien y a-t-il de déterminants ? Écris le nombre en chiffres.",
+    "reponses": [
+      "2",
+      "deux"
+    ],
+    "accents": "stricts",
+    "explication": "Les déterminants sont les petits mots devant le nom (le, la, les, un, une, mon, ce…). Ici ce sont « les » et « un », alors que « intéressant » est un adjectif qualificatif."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Notre maison est près de la mer. », quel mot est un déterminant possessif ?",
+    "choix": [
+      "Notre",
+      "maison",
+      "près",
+      "la"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un déterminant possessif (mon, ma, ta, sa, notre, votre, leur…) se place devant le nom et indique à qui appartient ce nom. « La » est aussi un déterminant, mais il n'est pas possessif."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Le chien noir court vite. », quel mot est un adjectif qualificatif ?",
+    "choix": [
+      "noir",
+      "chien",
+      "court",
+      "vite"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'adjectif qualificatif décrit le nom : il dit comment est le chien. Dans cette phrase, « noir » est l'adjectif ; « vite » décrit l'action, c'est donc un adverbe."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Papa lave la voiture. », quel est le complément d'objet direct (COD) du verbe ?",
+    "choix": [
+      "Papa",
+      "lave",
+      "la voiture",
+      "la"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le COD répond à la question « qui ? » ou « quoi ? » posée après le verbe : on lave quoi ? « la voiture ». Le COD se trouve sans préposition après le verbe."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Paul a joué au foot dans le parc. », quel groupe peut être déplacé en début de phrase sans changer le sens ?",
+    "choix": [
+      "Paul",
+      "au foot",
+      "dans le parc",
+      "a joué"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le complément circonstanciel de lieu répond à la question « où ? » et peut souvent être déplacé. Essaie : « Dans le parc, Paul a joué au foot. » Le sens ne change pas."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « La maison où j'habite est jaune. », quel mot introduit la proposition relative ?",
+    "choix": [
+      "où",
+      "j'habite",
+      "jaune",
+      "maison"
+    ],
+    "bonneReponse": 0,
+    "explication": "Une proposition relative complète le nom « la maison » et commence par un pronom relatif (qui, que, où…). Ici « où » indique le lieu, et « où j'habite » donne des précisions sur la maison.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase : « Je veux jouer, ___ il est tard. »",
+    "choix": [
+      "et",
+      "mais",
+      "ou",
+      "donc"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le connecteur « mais » relie deux idées qui s'opposent : on veut jouer, mais c'est trop tard. « Et » ajoute une idée, « ou » propose un choix."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans la phrase « Ce matin, Lucas et Emma promènent le chien. », écris le sujet du verbe « promènent ».",
+    "reponses": [
+      "Lucas et Emma"
+    ],
+    "accents": "stricts",
+    "explication": "Pose la question « Qui est-ce qui promène le chien ? » : Lucas et Emma. Le sujet est formé de deux noms, c'est pourquoi le verbe est au pluriel. « Ce matin » est un complément de temps, pas le sujet."
+  }
+]

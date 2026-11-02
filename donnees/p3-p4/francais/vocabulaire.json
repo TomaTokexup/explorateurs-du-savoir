@@ -1,0 +1,118 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Le chaton s'est blotti contre sa mère pour se réchauffer », que veut dire le verbe « se blottir » ?",
+    "choix": [
+      "se cacher sous une couverture",
+      "se serrer tout contre quelqu'un",
+      "s'éloigner en courant",
+      "faire un bruit très fort"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Se blottir », c'est se serrer tout contre quelqu'un, souvent pour avoir chaud ou se sentir protégé.",
+    "astuce": "Si tu ne connais pas ce mot, cherche « blottir » dans ton dictionnaire."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel mot est un synonyme de « énorme » ?",
+    "choix": [
+      "petit",
+      "lent",
+      "immense",
+      "joli"
+    ],
+    "bonneReponse": 2,
+    "explication": "« Énorme » et « immense » veulent tous les deux dire « très grand » : ce sont des synonymes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel mot n'appartient PAS à la famille du mot « terre » ?",
+    "choix": [
+      "terrain",
+      "enterrer",
+      "terrible",
+      "atterrir"
+    ],
+    "bonneReponse": 2,
+    "explication": "« Terrible » vient du mot « terreur » (une très grande peur), pas de « terre ». Un terrain, enterrer et atterrir parlent tous de la terre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est l'ordre alphabétique, c'est-à-dire l'ordre du dictionnaire, de ces mots : « chien, cerf, chat, cheval » ?",
+    "choix": [
+      "cerf, chat, cheval, chien",
+      "chat, cerf, cheval, chien",
+      "cerf, cheval, chat, chien",
+      "chien, cheval, chat, cerf"
+    ],
+    "bonneReponse": 0,
+    "explication": "Les quatre mots commencent par « c » : on regarde la 2ᵉ lettre, et « cerf » (e) passe avant les mots en « ch » (h). Pour chat, cheval et chien, on regarde la 3ᵉ lettre : a, puis e, puis i."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase : « Le coureur avance ___ » pour dire qu'il avance vite.",
+    "choix": [
+      "rapide",
+      "rapidité",
+      "rapidement",
+      "très rapide"
+    ],
+    "bonneReponse": 2,
+    "explication": "« Rapidement » dit comment le coureur avance : c'est un adverbe. Beaucoup d'adverbes se terminent par -ment."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Léa a un cœur d'or », que veut dire l'expression « avoir un cœur d'or » ?",
+    "choix": [
+      "avoir un cœur qui bat très fort",
+      "être très riche",
+      "être très généreux et gentil",
+      "porter un bijou en or"
+    ],
+    "bonneReponse": 2,
+    "explication": "« Avoir un cœur d'or », c'est être très bon et généreux. C'est une expression : elle ne se comprend pas mot à mot.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase : « Il pleut beaucoup. ___, Léa part jouer dehors. »",
+    "choix": [
+      "donc",
+      "pourtant",
+      "de plus",
+      "c'est-à-dire"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Pourtant » marque une opposition : avec la pluie, on s'attendrait plutôt à ce que Léa reste à l'intérieur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle phrase fait une comparaison ?",
+    "choix": [
+      "Il fait très chaud aujourd'hui.",
+      "Le bébé dort comme un loir.",
+      "Le bébé dort beaucoup.",
+      "Le bébé dort dans son lit."
+    ],
+    "bonneReponse": 1,
+    "explication": "Le mot « comme » relie deux choses pour les comparer : le bébé dort aussi profondément qu'un loir, un animal qui dort tout l'hiver."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Donne le contraire du mot « lourd ». Écris un seul mot.",
+    "reponses": [
+      "léger"
+    ],
+    "accents": "stricts",
+    "explication": "Le contraire de « lourd » est « léger » : un sac léger pèse peu."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète avec un seul mot : « Je n'ai ___ mangé de chocolat de ma vie. »",
+    "reponses": [
+      "jamais"
+    ],
+    "accents": "stricts",
+    "explication": "« Ne … jamais » veut dire « pas une seule fois »."
+  }
+]
