@@ -1,0 +1,115 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Le pluriel de « un tuyau » est :",
+    "choix": [
+      "des tuyaus",
+      "des tuyaux",
+      "des tuyau",
+      "des tuyeaux"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les noms en -au prennent un x au pluriel, comme un bateau / des bateaux. Pour « un tuyau », on écrit donc des tuyaux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le pluriel de « un cheval » est :",
+    "choix": [
+      "des chevals",
+      "des chevaux",
+      "des chevauxs",
+      "des chevaus"
+    ],
+    "bonneReponse": 1,
+    "explication": "Beaucoup de noms en -al changent en -aux au pluriel, comme un animal / des animaux. Donc un cheval devient des chevaux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase : « Ils ___ partis avant la pluie. »",
+    "choix": [
+      "son",
+      "sont",
+      "ont",
+      "on"
+    ],
+    "bonneReponse": 1,
+    "explication": "Remplace le mot manquant par « étaient » : « Ils étaient partis » a du sens, c'est donc le verbe être, et on écrit « sont ». « Ont » vient du verbe avoir (on peut le remplacer par « avaient »)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase avec le participe passé du verbe arriver : « Les filles sont ___ à l'école. »",
+    "choix": [
+      "arrivé",
+      "arrivées",
+      "arrivés",
+      "arrivée"
+    ],
+    "bonneReponse": 1,
+    "explication": "Avec le verbe être, le participe passé s'accorde avec le sujet : « les filles » est féminin pluriel, donc on écrit arrivées. Comparer : « Le garçon est arrivé »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le féminin de « le chanteur » est :",
+    "choix": [
+      "la chanteure",
+      "la chanteuse",
+      "la chanteresse",
+      "la chanteurse"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les noms en -eur ont souvent un féminin en -euse, comme un menteur / une menteuse. On écrit donc la chanteuse."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel mot est bien écrit ?",
+    "choix": [
+      "aporter",
+      "apporter",
+      "appoter",
+      "apourter"
+    ],
+    "bonneReponse": 1,
+    "explication": "Dans les mots qui commencent par ap, on double souvent la consonne : appeler, apparaître, apporter. Pour vérifier, on peut chercher un mot de la même famille."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le pluriel de « un chou-fleur » est :",
+    "choix": [
+      "des choux-fleurs",
+      "des chous-fleurs",
+      "des choux-fleur",
+      "des chou-fleurs"
+    ],
+    "bonneReponse": 0,
+    "defi": true,
+    "explication": "Dans un nom composé, les deux parties prennent la marque du pluriel : chou devient choux et fleur devient fleurs. Donc des choux-fleurs."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète la phrase avec le pluriel de l'adjectif « beau » (un seul mot) : des garçons très ___",
+    "reponses": [
+      "beaux"
+    ],
+    "accents": "stricts",
+    "explication": "Les adjectifs en -eau prennent un x au pluriel, comme les noms : un garçon très beau, des garçons très beaux."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le pluriel du nom « un travail » ? (un seul mot)",
+    "reponses": [
+      "travaux"
+    ],
+    "accents": "stricts",
+    "explication": "La plupart des noms en -ail prennent simplement un s au pluriel (des rails, des détails). Quelques-uns, à apprendre par cœur, font -aux : un travail, des travaux ; un vitrail, des vitraux ; un corail, des coraux."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète la phrase : « Léa et Tom ___ dans le jardin. » Écris le verbe jouer au présent (un seul mot).",
+    "reponses": [
+      "jouent"
+    ],
+    "accents": "stricts",
+    "explication": "Deux sujets réunis (Léa et Tom) forment un sujet pluriel, donc le verbe prend la terminaison -ent à la 3e personne du pluriel. Le verbe s'accorde avec le sujet ils : ils jouent.",
+    "astuce": "Dis la phrase en remplaçant « Léa et Tom » par « ils », puis écris le verbe avec ce pronom."
+  }
+]

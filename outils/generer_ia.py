@@ -62,6 +62,22 @@ couvre plutôt d'autres objectifs, ou d'autres situations de la vie courante :
 """
     else:
         bloc_existants = ""
+
+    # Consignes propres à la lecture : envoyées seulement pour ce domaine
+    if titre_domaine == "Lecture":
+        bloc_lecture = """
+Texte support (questions de lecture) :
+- Pour une question de compréhension, mets le texte dans un champ "texte", JAMAIS dans l'énoncé : l'énoncé contient seulement la question.
+- Le texte est ORIGINAL (jamais un extrait de livre, ni une histoire connue racontée autrement), de 6 à 10 phrases, avec plusieurs personnages, lieux ou moments, pour que l'élève doive chercher et trier les informations.
+- Le registre est soigné, comme dans un bon livre jeunesse pour 8-10 ans : vocabulaire riche et précis (« s'emmitoufler », « grommeler », « une ruelle »), adjectifs et comparaisons, phrases de longueurs variées dont certaines avec « qui », « quand », « parce que », « pourtant », et des dialogues entre guillemets. Évite les phrases plates du type « Paul a un chien. Le chien est noir. »
+- Écris 2 ou 3 textes seulement, et pose 3 à 5 questions sur chacun, de la plus simple (repérer) à la plus difficile (déduire, interpréter). Recopie le même texte, mot pour mot, dans le champ "texte" de chacune de ses questions.
+- Deux questions sur un même texte ne vérifient jamais la même information, et une réponse ne donne jamais la clé d'une autre question.
+- Les mauvaises réponses sont plausibles : elles reprennent des éléments vrais du texte (un autre personnage, un autre moment, un autre objet) mais ne répondent pas à la question posée. Aucune réponse absurde.
+- Au plus 2 questions où la réponse est un mot recopié tel quel du texte. Les autres demandent de relier deux informations, de deviner une information non écrite (indices), de reformuler, de retrouver ce que remplace un pronom, ou de remettre en ordre des événements qui ne sont pas racontés dans l'ordre.
+- Toutes les questions portent sur la lecture : pas de question de conjugaison, de grammaire ou d'orthographe.
+"""
+    else:
+        bloc_lecture = ""
     return f"""Tu rédiges des exercices de révision pour des élèves de {niveau.upper()} des Écoles européennes (section française, enfants de 8 à 11 ans).
 
 Domaine : {titre_domaine}
@@ -105,8 +121,8 @@ Astuces (rares) :
 - Une astuce n'est PAS un rappel de leçon (une règle, une liste de terminaisons) : les règles vont dans l'explication.
 - L'astuce ne doit jamais permettre de trouver la réponse sans réfléchir : elle ne désigne pas un choix par sa terminaison, sa ponctuation ou sa position, et ne reprend pas l'indice déjà présent dans l'énoncé.
 
-Texte support (questions de lecture) :
-- Pour une question de compréhension, ajoute un champ "texte" : un court texte ORIGINAL de 3 à 6 phrases, que tu inventes (jamais d'extrait d'un livre existant). L'énoncé porte sur ce texte.
+{bloc_lecture}
+Autres consignes :
 - En conjugaison, une saisie attend le pronom et le verbe (par exemple « nous irons »).
 
 Figures (facultatif, surtout en géométrie) :
@@ -136,14 +152,17 @@ Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
 def demander_questions(consignes, demande):
     """Envoie la demande à l'IA et renvoie sa réponse en texte."""
     client = anthropic.Anthropic()
-    message = client.messages.create(
+    # Streaming : obligatoire pour les longues réponses (max_tokens élevé).
+    # get_final_message() attend la fin et renvoie le même objet "message" qu'avant.
+    with client.messages.stream(
         model="claude-haiku-5-5",
-        max_tokens=16000,
+        max_tokens=32000,
         system=consignes,
         messages=[
             {"role": "user", "content": demande}
         ],
-    )
+    ) as flux:
+        message = flux.get_final_message()
     print(f"Tokens : {message.usage.input_tokens} en entrée, {message.usage.output_tokens} en sortie")
 
     # La réponse est une liste de blocs (réflexion, texte...) : on ne garde que le texte
@@ -357,7 +376,7 @@ def main():
     nb_astuces = sum(1 for question in valides if "astuce" in question)
     if nb_astuces > 3:
         print(f"Attention : {nb_astuces} astuces, plus que les 3 demandées. À trier pendant la relecture.")
-        
+
     # 6. fichier de sortie : f"donnees/brouillon_{args.niveau}_{args.matiere}_{args.theme}.json"
     fichier_sortie = f"donnees/brouillon_{args.niveau}_{args.matiere}_{args.theme}.json"
     with open(fichier_sortie, "w", encoding="utf-8") as fichier:
