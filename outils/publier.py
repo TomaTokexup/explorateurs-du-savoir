@@ -79,6 +79,9 @@ def main():
             print("  -", erreur)
         sys.exit(1)
 
+    # Crée le dossier de la matière s'il n'existe pas encore (nouvelle matière ou nouveau niveau)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    
     # Étape 3 : écrire le fichier fusionné
     with open(args.destination, "w", encoding="utf-8") as fichier:
         json.dump(fusion, fichier, ensure_ascii=False, indent=2)
@@ -87,7 +90,7 @@ def main():
           f"({len(fusion)} au total)")
 
     mettre_a_jour_sommaire(destination.parent)
-    
+
     # Le brouillon est publié : on le supprime pour éviter de le republier par erreur
     Path(args.brouillon).unlink()
     print(f"Brouillon supprimé : {args.brouillon}")
