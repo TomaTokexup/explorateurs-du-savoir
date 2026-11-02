@@ -1,0 +1,123 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Un événement a eu lieu en 52 av. J.-C. Que signifie « av. J.-C. » ?",
+    "choix": [
+      "avant Jésus-Christ",
+      "après Jésus-Christ",
+      "avant le Moyen Âge",
+      "au milieu du Moyen Âge"
+    ],
+    "bonneReponse": 0,
+    "explication": "« av. J.-C. » veut dire « avant Jésus-Christ ». Les années avant J.-C. se comptent à l'envers : 52 av. J.-C. est plus ancien que 10 av. J.-C."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur cette frise, Charlemagne est couronné empereur. Dans quelle période de l'histoire se trouve cet événement ?",
+    "choix": [
+      "Antiquité",
+      "Moyen Âge",
+      "Temps modernes",
+      "Époque contemporaine"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le Moyen Âge va de 476 à 1492. Charlemagne vit en 800, il est donc au Moyen Âge, et non dans l'Antiquité qui s'arrête en 476.",
+    "image": "images/p4/decouverte/frise-963e0350.svg",
+    "alt": "Une frise chronologique de 400 à 1600, avec : Charlemagne"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Au Moyen Âge, dans quel type de maison vivaient la plupart des paysans ?",
+    "choix": [
+      "un grand château en pierre",
+      "une maison en bois et torchis avec un toit de paille",
+      "un immeuble de plusieurs étages",
+      "une maison en briques avec l'électricité"
+    ],
+    "bonneReponse": 1,
+    "explication": "La plupart des paysans vivaient dans de petites maisons en bois et torchis, avec un toit de paille. Les châteaux en pierre étaient réservés aux seigneurs."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Pendant quelle période de la préhistoire les hommes fabriquaient-ils leurs outils en pierre taillée, avant de savoir travailler les métaux ? Réponds avec le nom de la période.",
+    "reponses": [
+      "âge de la pierre",
+      "âge de pierre",
+      "paléolithique"
+    ],
+    "accents": "toleres",
+    "explication": "C'est l'âge de la pierre (on dit aussi le Paléolithique, pour la pierre taillée). Viennent ensuite l'âge du bronze, puis l'âge du fer, quand les hommes apprennent à travailler les métaux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans le système féodal, que reçoit un vassal de son seigneur ?",
+    "choix": [
+      "un impôt à payer chaque année",
+      "le droit de vote",
+      "un fief, c'est-à-dire une terre",
+      "un château en pierre"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le seigneur donne un fief (une terre) au vassal. En échange, le vassal promet sa fidélité et ses services, comme combattre pour son seigneur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qui était Jeanne d'Arc ?",
+    "choix": [
+      "une reine qui a fait construire le château de Versailles",
+      "une jeune paysanne qui a aidé le roi Charles VII pendant la guerre de Cent Ans",
+      "une savante qui a découvert l'Amérique",
+      "une femme qui a inventé l'imprimerie"
+    ],
+    "bonneReponse": 1,
+    "explication": "Jeanne d'Arc est une jeune paysanne du XVe siècle. Elle a soutenu le roi Charles VII pendant la guerre de Cent Ans. Elle est devenue une héroïne de la France."
+  },
+  {
+    "type": "qcm",
+    "enonce": "En quel siècle se trouve l'année 1350 ?",
+    "choix": [
+      "le XIIIe siècle",
+      "le XIVe siècle",
+      "le XVe siècle",
+      "le IIIe siècle"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour trouver le siècle, on prend les deux premiers chiffres de l'année (13) et on ajoute 1 : l'année 1350 est au XIVe siècle (14e siècle)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi Christophe Colomb part-il vers l'ouest en 1492 ?",
+    "choix": [
+      "pour rejoindre les Indes en allant vers l'ouest",
+      "pour contourner l'Afrique par le sud",
+      "pour trouver le château de son seigneur",
+      "pour rejoindre Rome en bateau"
+    ],
+    "bonneReponse": 0,
+    "explication": "Les Européens cherchaient une route maritime vers l'Asie, riche en épices et en soie. Colomb pensait y arriver en allant vers l'ouest. Il découvre les Caraïbes, qu'il croit être les Indes.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Au Moyen Âge, quel était l'aliment de base des paysans ?",
+    "choix": [
+      "les pommes de terre",
+      "le chocolat",
+      "le pain, souvent fait de seigle ou d'orge",
+      "les tomates"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le pain était l'aliment de base des paysans. Les pommes de terre, le chocolat et les tomates viennent d'Amérique : ils arrivent en Europe après 1492."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien d'années a duré le Moyen Âge, de 476 à 1492 ? Réponds avec un nombre, en années.",
+    "reponses": [
+      "1016",
+      "1 016"
+    ],
+    "accents": "toleres",
+    "astuce": "Pose la soustraction 1492 − 476 sur ton brouillon.",
+    "explication": "On calcule la durée en soustrayant l'année de début à l'année de fin : 1492 − 476 = 1016. Le Moyen Âge a duré 1016 ans."
+  }
+]

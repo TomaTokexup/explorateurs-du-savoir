@@ -450,6 +450,98 @@ def dessiner_circuit(composants, court_circuit=False, objet=""):
 '''
 
 
+# --- Frises chronologiques (Découverte du monde, histoire) ---
+
+# Les grandes périodes de l'histoire, telles qu'on les apprend à l'école en France
+# (début, fin, nom, couleur). Avant -3300 (invention de l'écriture) : la Préhistoire.
+PERIODES = [
+    (-100000, -3300, "Préhistoire", "#e8dcc4"),
+    (-3300, 476, "Antiquité", "#f6d9a8"),
+    (476, 1492, "Moyen Âge", "#cfe3c4"),
+    (1492, 1789, "Temps modernes", "#c9dcf2"),
+    (1789, 100000, "Époque contemporaine", "#e3d2ef"),
+]
+
+PAS_FRISE = (1, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 5000)
+
+
+def ecrire_annee(annee):
+    """Une année écrite comme à l'école : « 3000 av. J.-C. », « 476 », « 0 » pour la naissance de J.-C."""
+    if annee < 0:
+        return f"{-annee} av. J.-C."
+    return str(annee)
+
+
+def dessiner_frise(debut, fin, pas, evenements, periodes=False):
+    """Renvoie le code SVG d'une frise chronologique de `debut` à `fin` (années, négatives avant J.-C.),
+    graduée tous les `pas` ans. `evenements` : liste de (date, texte) ; le texte « ? » marque
+    la date à trouver. periodes=True colore les grandes périodes de l'histoire au-dessus de la frise."""
+    gauche, droite, axe = 70, 590, 150
+    largeur = droite - gauche
+
+    def x_de(annee):
+        return gauche + (annee - debut) / (fin - debut) * largeur
+
+    elements = []
+    legende = []        # périodes trop courtes pour y écrire leur nom : expliquées sous la frise
+    if periodes:
+        for p_debut, p_fin, nom, couleur in PERIODES:
+            a, b = max(p_debut, debut), min(p_fin, fin)
+            if a >= b:
+                continue
+            x1, x2 = x_de(a), x_de(b)
+            elements.append(f'<rect x="{x1:.1f}" y="{axe - 34}" width="{x2 - x1:.1f}" height="28" fill="{couleur}" '
+                            f'stroke="white" stroke-width="2"/>')
+            # Le nom n'est écrit que s'il tient dans la bande (environ 8 pixels par lettre)
+            if x2 - x1 >= len(nom) * 8 + 8:
+                elements.append(_texte((x1 + x2) / 2, axe - 20, nom, taille=13, gras=True,
+                                       extra='dominant-baseline="central"'))
+            else:
+                legende.append((nom, couleur))
+
+    # L'axe du temps, avec une flèche vers la droite (le temps avance)
+    elements.append(f'<line x1="{gauche - 10}" y1="{axe}" x2="{droite + 18}" y2="{axe}" stroke="{ENCRE}" stroke-width="4"/>')
+    elements.append(f'<path d="M {droite + 26} {axe} L {droite + 14} {axe - 8} L {droite + 14} {axe + 8} Z" fill="{ENCRE}"/>')
+
+    # Graduations
+    annee = debut
+    while annee <= fin:
+        x = x_de(annee)
+        elements.append(f'<line x1="{x:.1f}" y1="{axe - 6}" x2="{x:.1f}" y2="{axe + 6}" stroke="{ENCRE}" stroke-width="3"/>')
+        elements.append(_texte(x, axe + 22, ecrire_annee(annee), taille=12, extra='dominant-baseline="central"'))
+        annee += pas
+
+    # Événements : un point sur l'axe, un trait, et le texte en dessous (sur 2 hauteurs pour ne pas se chevaucher)
+    for rang, (date, texte) in enumerate(sorted(evenements)):
+        x = x_de(date)
+        y_texte = axe + 62 + (rang % 2) * 34
+        couleur = "#e2574c" if texte == "?" else COULEUR
+        # Le trait pointillé commence sous la ligne des années, pour ne pas les cacher
+        elements.append(f'<line x1="{x:.1f}" y1="{axe + 36}" x2="{x:.1f}" y2="{y_texte - 14}" stroke="{couleur}" '
+                        f'stroke-width="2" stroke-dasharray="4 3"/>')
+        elements.append(f'<circle cx="{x:.1f}" cy="{axe}" r="7" fill="{couleur}" stroke="white" stroke-width="2"/>')
+        x_bulle = min(max(x, gauche + 40), droite - 40)
+        elements.append(_texte(x_bulle, y_texte, texte, taille=14 if texte != "?" else 20, gras=True,
+                               couleur=couleur, extra='dominant-baseline="central"'))
+
+    # Légende des périodes dont le nom ne tenait pas dans la bande
+    bas = axe + 120
+    if legende:
+        x = gauche
+        for nom, couleur in legende:
+            elements.append(f'<rect x="{x}" y="{bas - 8}" width="16" height="16" rx="3" fill="{couleur}"/>')
+            elements.append(_texte(x + 22, bas, nom, taille=13, ancre="start", extra='dominant-baseline="central"'))
+            x += 22 + len(nom) * 8 + 24
+        bas += 20
+
+    contenu = "\n  ".join(elements)
+    hauteur = bas - (axe - 50)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 {axe - 50} 660 {hauteur}" width="660" height="{hauteur}">
+  {contenu}
+</svg>
+'''
+
+
 def enregistrer(svg, chemin):
     """Écrit le code SVG dans un fichier, en créant les dossiers si besoin."""
     chemin = Path(chemin)
@@ -485,3 +577,7 @@ if __name__ == "__main__":
     enregistrer(dessiner_circuit(["lampe", "coupure", "pile"]), "images/exemples/circuit-coupure.svg")
     enregistrer(dessiner_circuit(["lampe", "objet", "pile"], objet="cuillère en métal"), "images/exemples/circuit-objet.svg")
     enregistrer(dessiner_circuit(["lampe", "pile"], court_circuit=True), "images/exemples/circuit-court.svg")
+    enregistrer(dessiner_frise(-3000, 2000, 1000, [(-52, "Alésia"), (476, "?"), (1492, "Colomb")], periodes=True),
+                "images/exemples/frise-periodes.svg")
+    enregistrer(dessiner_frise(1000, 1500, 100, [(1096, "1re croisade"), (1163, "Notre-Dame"), (1431, "?")]),
+                "images/exemples/frise-moyen-age.svg")
