@@ -598,6 +598,173 @@ def _dessin_externe(fichier):
     return re.sub(r"<metadata>.*?</metadata>", "", texte[debut:fin], flags=re.DOTALL)
 
 
+# --- Météo (Découverte du monde) ---
+
+# Les mots écrits sur le cadran d'un baromètre classique, avec leur pression (en hectopascals)
+ZONES_BAROMETRE = [(965, "Tempête"), (985, "Pluie"), (1005, "Variable"), (1025, "Beau temps"), (1045, "Très sec")]
+
+
+def dessiner_barometre(pression, mots=True):
+    """Renvoie le code SVG d'un baromètre à aiguille, gradué de 950 à 1050 hPa, l'aiguille sur `pression`.
+    mots=True écrit aussi les mots du cadran (Tempête, Pluie, Variable, Beau temps, Très sec)."""
+    cx, cy, r = 170, 170, 140
+    debut, fin = 950, 1050
+    ouverture = 260                                    # le cadran couvre 260° (de -130° à +130°)
+
+    def angle_de(valeur):                              # 0° = en haut, sens des aiguilles d'une montre
+        return math.radians(-ouverture / 2 + (valeur - debut) / (fin - debut) * ouverture)
+
+    def point(valeur, rayon):
+        a = angle_de(valeur)
+        return cx + rayon * math.sin(a), cy - rayon * math.cos(a)
+
+    elements = [f'<circle cx="{cx}" cy="{cy}" r="{r + 12}" fill="#c89b5e" stroke="{ENCRE}" stroke-width="3"/>',
+                f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#fffdf6" stroke="{ENCRE}" stroke-width="2"/>']
+    for valeur in range(debut, fin + 1, 5):
+        grand = valeur % 10 == 0
+        x1, y1 = point(valeur, r - (18 if grand else 10))
+        x2, y2 = point(valeur, r - 2)
+        elements.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{ENCRE}" '
+                        f'stroke-width="{3 if grand else 1.5}"/>')
+        if valeur % 20 == 10 or valeur in (debut, fin):
+            tx, ty = point(valeur, r - 34)
+            elements.append(_texte(tx, ty, valeur, taille=13, gras=True, extra='dominant-baseline="central"'))
+    elements.append(_texte(cx, cy + 62, "hPa", taille=13, extra='dominant-baseline="central"'))
+    # L'aiguille
+    xa, ya = point(pression, r - 14)
+    a = angle_de(pression)
+    xq, yq = cx - 26 * math.sin(a), cy + 26 * math.cos(a)
+    elements.append(f'<line x1="{xq:.1f}" y1="{yq:.1f}" x2="{xa:.1f}" y2="{ya:.1f}" stroke="#1b1b1b" stroke-width="4" '
+                    f'stroke-linecap="round"/>')
+    elements.append(f'<circle cx="{cx}" cy="{cy}" r="9" fill="#1b1b1b"/>')
+    if mots:
+        # Écrits APRÈS l'aiguille, avec un contour blanc, pour rester lisibles même quand l'aiguille passe dessus
+        for valeur, mot in ZONES_BAROMETRE:
+            tx, ty = point(valeur, r - 84)
+            elements.append(_texte(tx, ty, mot, taille=13, couleur="#7a5a2e", gras=True,
+                                   extra='dominant-baseline="central" stroke="#fffdf6" stroke-width="4" paint-order="stroke"'))
+    contenu = "\n  ".join(elements)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 330" width="340" height="330">
+  {contenu}
+</svg>
+'''
+
+
+def _instrument(nom):
+    """Dessin simple d'un instrument météo, dans un carré de 200 × 220 pixels."""
+    trait = f'stroke="{ENCRE}" stroke-width="3"'
+    if nom == "thermometre":
+        graduations = "".join(f'<line x1="112" y1="{y}" x2="{126 if (y - 40) % 30 == 0 else 120}" y2="{y}" {trait}/>'
+                              for y in range(40, 161, 15))
+        return (f'<rect x="88" y="20" width="24" height="160" rx="12" fill="white" {trait}/>'
+                f'<rect x="95" y="80" width="10" height="110" fill="#e2574c"/>'
+                f'<circle cx="100" cy="190" r="22" fill="#e2574c" {trait}/>' + graduations)
+    if nom == "barometre":
+        return (f'<circle cx="100" cy="110" r="80" fill="#c89b5e" {trait}/>'
+                f'<circle cx="100" cy="110" r="68" fill="#fffdf6" {trait}/>'
+                + "".join(f'<line x1="{100 + 58 * math.sin(math.radians(a)):.1f}" y1="{110 - 58 * math.cos(math.radians(a)):.1f}" '
+                          f'x2="{100 + 66 * math.sin(math.radians(a)):.1f}" y2="{110 - 66 * math.cos(math.radians(a)):.1f}" {trait}/>'
+                          for a in range(-120, 121, 20))
+                + f'<line x1="100" y1="110" x2="140" y2="70" stroke="#1b1b1b" stroke-width="4" stroke-linecap="round"/>'
+                f'<circle cx="100" cy="110" r="7" fill="#1b1b1b"/>')
+    if nom == "anemometre":
+        # Trois coupelles au bout de bras horizontaux : le vent les fait tourner
+        return (f'<line x1="100" y1="70" x2="100" y2="205" stroke="{ENCRE}" stroke-width="6"/>'
+                f'<rect x="70" y="200" width="60" height="10" fill="{ENCRE}"/>'
+                f'<line x1="36" y1="64" x2="164" y2="64" {trait}/><line x1="100" y1="64" x2="100" y2="40" {trait}/>'
+                f'<circle cx="100" cy="34" r="11" fill="#9cc0ea" {trait}/>'
+                f'<circle cx="30" cy="64" r="17" fill="#2d5a91" {trait}/><circle cx="30" cy="64" r="10" fill="#1b3a63"/>'
+                f'<circle cx="170" cy="64" r="17" fill="#9cc0ea" {trait}/>'
+                f'<circle cx="100" cy="64" r="7" fill="{ENCRE}"/>'
+                f'<path d="M 60 100 a 46 14 0 0 0 80 0" fill="none" stroke="#9aa9b8" stroke-width="2"/>'
+                f'<polygon points="140,100 130,94 132,106" fill="#9aa9b8"/>')
+    if nom == "girouette":
+        return (f'<line x1="100" y1="40" x2="100" y2="205" stroke="{ENCRE}" stroke-width="6"/>'
+                f'<rect x="70" y="200" width="60" height="10" fill="{ENCRE}"/>'
+                f'<line x1="40" y1="70" x2="160" y2="70" stroke="{ENCRE}" stroke-width="4"/>'
+                f'<polygon points="168,70 148,58 148,82" fill="{ENCRE}"/>'
+                f'<polygon points="40,70 22,50 30,70 22,90" fill="#d9a514" {trait}/>'
+                f'<line x1="70" y1="130" x2="130" y2="130" {trait}/><line x1="100" y1="110" x2="100" y2="150" {trait}/>'
+                + _texte(140, 130, "E", taille=15, gras=True, extra='dominant-baseline="central"')
+                + _texte(60, 130, "O", taille=15, gras=True, extra='dominant-baseline="central"')
+                + f'<circle cx="100" cy="100" r="10" fill="white"/><circle cx="100" cy="162" r="10" fill="white"/>'
+                + _texte(100, 101, "N", taille=15, gras=True, extra='dominant-baseline="central"')
+                + _texte(100, 163, "S", taille=15, gras=True, extra='dominant-baseline="central"'))
+    if nom == "pluviometre":
+        graduations = "".join(f'<line x1="72" y1="{y}" x2="{86 if (y - 80) % 40 == 0 else 80}" y2="{y}" {trait}/>'
+                              for y in range(80, 201, 20))
+        return (f'<path d="M 50 30 L 150 30 L 120 70 L 80 70 Z" fill="#dff0fb" {trait}/>'
+                f'<rect x="70" y="70" width="60" height="140" fill="white" {trait}/>'
+                f'<rect x="72" y="150" width="56" height="58" fill="#7fb6e6"/>' + graduations
+                + "".join(f'<line x1="{x}" y1="{y}" x2="{x - 4}" y2="{y + 12}" stroke="#2f6fdb" stroke-width="3" '
+                          f'stroke-linecap="round"/>' for x, y in ((70, 0), (100, 6), (130, 0))))
+    raise ValueError(f"instrument inconnu : {nom!r}")
+
+
+INSTRUMENTS = {"thermometre": "un thermomètre", "barometre": "un baromètre", "anemometre": "un anémomètre",
+               "girouette": "une girouette", "pluviometre": "un pluviomètre"}
+
+
+def dessiner_instrument(nom):
+    """Renvoie le code SVG d'un instrument météo (voir INSTRUMENTS), sans son nom."""
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 200 230" width="200" height="230">
+  {_instrument(nom)}
+</svg>
+'''
+
+
+def _cycle_eau():
+    vagues = "".join(f'<path d="M {x} 300 q 10 -6 20 0 q 10 6 20 0" fill="none" stroke="white" stroke-width="2"/>'
+                     for x in range(20, 150, 45))
+    evaporation = "".join(f'<path d="M {x} 270 q -8 -15 0 -30 q 8 -15 0 -30 q -8 -15 0 -30" fill="none" stroke="#e2574c" '
+                          f'stroke-width="3" stroke-dasharray="6 4"/><polygon points="{x - 6},{182} {x + 6},{182} {x},{170}" fill="#e2574c"/>'
+                          for x in (60, 110))
+    pluie = "".join(f'<line x1="{x}" y1="{y}" x2="{x - 6}" y2="{y + 16}" stroke="#2f6fdb" stroke-width="3" stroke-linecap="round"/>'
+                    for x in range(270, 361, 18) for y in (110, 140, 170))
+    return f'''<rect x="0" y="0" width="460" height="330" fill="#eaf4fb"/>
+  <circle cx="45" cy="45" r="28" fill="#f6c343"/>
+  <path d="M 0 262 L 170 262 Q 200 262 210 250 L 300 150 L 340 190 L 380 140 L 460 230 L 460 330 L 0 330 Z" fill="#9cc47c"/>
+  <path d="M 300 150 L 320 172 L 340 190 L 360 164 L 380 140 L 368 154 L 340 160 L 316 156 Z" fill="white" opacity="0.8"/>
+  <rect x="0" y="262" width="170" height="68" fill="#3d86c6"/>
+  {vagues}
+  <path d="M 380 230 Q 330 236 300 262 Q 250 300 172 296" fill="none" stroke="#3d86c6" stroke-width="10" stroke-linecap="round"/>
+  {"".join(f'<line x1="{x}" y1="{y}" x2="{x}" y2="{y + 16}" stroke="#6b4a2b" stroke-width="3" stroke-dasharray="4 3"/>'
+            f'<polygon points="{x - 5},{y + 16} {x + 5},{y + 16} {x},{y + 24}" fill="#6b4a2b"/>' for x, y in ((230, 300), (262, 296), (294, 290)))}
+  {evaporation}
+  <g fill="white" stroke="#9aa9b8" stroke-width="2">
+    <ellipse cx="150" cy="80" rx="46" ry="24"/><ellipse cx="185" cy="66" rx="36" ry="24"/>
+    <ellipse cx="310" cy="80" rx="62" ry="28"/><ellipse cx="350" cy="64" rx="40" ry="24"/>
+  </g>
+  <path d="M 200 72 L 240 74" stroke="{ENCRE}" stroke-width="3" stroke-dasharray="6 4"/>
+  <polygon points="248,74 236,68 236,80" fill="{ENCRE}"/>
+  {pluie}'''
+
+
+def _zones_climatiques():
+    """Le globe et ses grandes zones climatiques, en bandes selon la latitude."""
+    cx, cy, r = 230, 180, 140
+
+    def y_de(latitude):
+        # Comme dans les manuels, les bandes sont réparties régulièrement (et non en perspective),
+        # pour que les zones polaires restent bien visibles
+        return cy - r * latitude / 90
+
+    bandes = [(90, 66.5, "#e9f4fb"), (66.5, 23.5, "#a8d48f"), (23.5, -23.5, "#f6b24f"),
+              (-23.5, -66.5, "#a8d48f"), (-66.5, -90, "#e9f4fb")]
+    elements = ['<defs><clipPath id="globe"><circle cx="230" cy="180" r="140"/></clipPath></defs>', '<g clip-path="url(#globe)">']
+    for haut, bas, couleur in bandes:
+        elements.append(f'<rect x="{cx - r}" y="{y_de(haut):.1f}" width="{2 * r}" height="{y_de(bas) - y_de(haut):.1f}" fill="{couleur}"/>')
+    for latitude in (66.5, 23.5, -23.5, -66.5):          # cercles polaires et tropiques
+        elements.append(f'<line x1="{cx - r}" y1="{y_de(latitude):.1f}" x2="{cx + r}" y2="{y_de(latitude):.1f}" '
+                        f'stroke="{ENCRE}" stroke-width="1.5" stroke-dasharray="5 4"/>')
+    elements.append('</g>')
+    elements.append(f'<line x1="{cx - r - 12}" y1="{cy}" x2="{cx + r + 12}" y2="{cy}" stroke="#e2574c" stroke-width="3"/>')
+    elements.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{ENCRE}" stroke-width="4"/>')
+    elements.append(_texte(cx, cy - r - 16, "Pôle Nord", taille=14, gras=True, extra='dominant-baseline="central"'))
+    elements.append(_texte(cx, cy + r + 16, "Pôle Sud", taille=14, gras=True, extra='dominant-baseline="central"'))
+    return "\n  ".join(elements)
+
+
 SCHEMAS = {
     "oeil-face": {
         "titre": "un œil vu de face", "largeur": 400, "hauteur": 240, "dessin": _oeil_face,
@@ -635,6 +802,29 @@ SCHEMAS = {
             "anus": ("l'anus", 176, 782, "gauche"),
         },
     },
+    "cycle-de-l-eau": {
+        "titre": "le cycle de l'eau", "largeur": 460, "hauteur": 330, "dessin": _cycle_eau,
+        "parties": {
+            "soleil": ("le Soleil", 45, 45, "gauche"),
+            "evaporation": ("l'évaporation", 60, 210, "gauche"),
+            "mer": ("la mer", 90, 300, "gauche"),
+            "nuage": ("le nuage (condensation)", 310, 80, "droite"),
+            "precipitations": ("les précipitations (pluie, neige)", 330, 150, "droite"),
+            "ruissellement": ("le ruissellement (rivière)", 250, 288, "droite", 270),
+            "infiltration": ("l'infiltration", 294, 304, "droite", 310),
+        },
+    },
+    "zones-climatiques": {
+        "titre": "le globe et ses grandes zones climatiques", "largeur": 460, "hauteur": 360, "dessin": _zones_climatiques,
+        "parties": {
+            "zone-polaire-nord": ("la zone polaire", 230, 56, "droite"),
+            "zone-temperee-nord": ("la zone tempérée", 300, 110, "droite"),
+            "equateur": ("l'équateur", 350, 180, "droite"),
+            "zone-chaude": ("la zone chaude (tropicale)", 160, 161, "gauche"),
+            "zone-temperee-sud": ("la zone tempérée", 160, 250, "gauche"),
+            "zone-polaire-sud": ("la zone polaire", 230, 304, "gauche"),
+        },
+    },
 }
 
 
@@ -667,6 +857,73 @@ def dessiner_schema(nom, parties):
     contenu = "\n  ".join(elements)
     w = largeur + 2 * marge
     return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 {w} {hauteur}" width="{w}" height="{hauteur}">
+  {contenu}
+</svg>
+'''
+
+
+# --- Chaînes alimentaires (Découverte du monde) ---
+
+def _couper_en_lignes(texte, largeur_max=12):
+    """Coupe un texte en 2 lignes au plus, à un espace, si il est trop long pour une case."""
+    if len(texte) <= largeur_max or " " not in texte:
+        return [texte]
+    mots = texte.split(" ")
+    meilleure = min(range(1, len(mots)), key=lambda i: abs(len(" ".join(mots[:i])) - len(" ".join(mots[i:]))))
+    return [" ".join(mots[:meilleure]), " ".join(mots[meilleure:])]
+
+
+def _fleche(x1, y1, x2, y2):
+    """Une flèche épaisse de (x1, y1) vers (x2, y2)."""
+    angle = math.atan2(y2 - y1, x2 - x1)
+    pointe = [(x2, y2),
+              (x2 - 14 * math.cos(angle - 0.45), y2 - 14 * math.sin(angle - 0.45)),
+              (x2 - 14 * math.cos(angle + 0.45), y2 - 14 * math.sin(angle + 0.45))]
+    points = " ".join(f"{x:.1f},{y:.1f}" for x, y in pointe)
+    fin_x, fin_y = x2 - 10 * math.cos(angle), y2 - 10 * math.sin(angle)
+    return (f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{fin_x:.1f}" y2="{fin_y:.1f}" stroke="{COULEUR}" stroke-width="4"/>'
+            f'<polygon points="{points}" fill="{COULEUR}"/>')
+
+
+def dessiner_chaine(maillons, legende=""):
+    """Renvoie le code SVG d'une chaîne (alimentaire ou d'énergie) : des cases reliées par des flèches.
+    À l'école, la flèche se lit « est mangé par » : herbe → lapin → renard.
+    Un maillon « ? » est la case à trouver. `legende` explique la flèche (ex. « est mangé par »).
+    2 ou 3 maillons : sur une ligne ; 4 ou 5 : en colonne, pour rester lisible sur un téléphone."""
+    elements = []
+    if len(maillons) <= 3:
+        l_case, h_case, ecart = 150, 70, 60
+        positions = [(20 + i * (l_case + ecart), 20) for i in range(len(maillons))]
+        largeur = 40 + len(maillons) * l_case + (len(maillons) - 1) * ecart
+        hauteur = 110
+    else:
+        l_case, h_case, ecart = 200, 60, 44
+        positions = [(40, 20 + i * (h_case + ecart)) for i in range(len(maillons))]
+        largeur = 280
+        hauteur = 40 + len(maillons) * h_case + (len(maillons) - 1) * ecart
+    for i, (texte, (x, y)) in enumerate(zip(maillons, positions)):
+        inconnu = texte == "?"
+        elements.append(f'<rect x="{x}" y="{y}" width="{l_case}" height="{h_case}" rx="14" '
+                        f'fill="{"#fff6d6" if inconnu else "#eaf6ea"}" stroke="{"#e2574c" if inconnu else "#2e9e6a"}" '
+                        f'stroke-width="3"{" stroke-dasharray=\"8 5\"" if inconnu else ""}/>')
+        lignes = _couper_en_lignes(texte)
+        for k, ligne in enumerate(lignes):
+            dy = (k - (len(lignes) - 1) / 2) * 20
+            elements.append(_texte(x + l_case / 2, y + h_case / 2 + dy, ligne, taille=24 if inconnu else 17, gras=True,
+                                   couleur="#e2574c" if inconnu else ENCRE, extra='dominant-baseline="central"'))
+        if i > 0:
+            px, py = positions[i - 1]
+            if len(maillons) <= 3:
+                elements.append(_fleche(px + l_case + 6, py + h_case / 2, x - 6, y + h_case / 2))
+            else:
+                elements.append(_fleche(px + l_case / 2, py + h_case + 6, x + l_case / 2, y - 6))
+    if legende:
+        elements.append(_fleche(20, hauteur + 4, 70, hauteur + 4))
+        elements.append(_texte(80, hauteur + 4, f": « {legende} »", taille=15, ancre="start",
+                               extra='dominant-baseline="central"'))
+        hauteur += 30
+    contenu = "\n  ".join(elements)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {largeur} {hauteur}" width="{largeur}" height="{hauteur}">
   {contenu}
 </svg>
 '''
@@ -711,5 +968,11 @@ if __name__ == "__main__":
                 "images/exemples/frise-periodes.svg")
     enregistrer(dessiner_frise(1000, 1500, 100, [(1096, "1re croisade"), (1163, "Notre-Dame"), (1431, "?")]),
                 "images/exemples/frise-moyen-age.svg")
+    enregistrer(dessiner_chaine(["herbe", "lapin", "renard"], "est mangé par"), "images/exemples/chaine-3.svg")
+    enregistrer(dessiner_chaine(["feuilles de chêne", "chenille", "?", "épervier"], "est mangé par"),
+                "images/exemples/chaine-4.svg")
+    enregistrer(dessiner_barometre(1022), "images/exemples/barometre-1022.svg")
+    for nom in INSTRUMENTS:
+        enregistrer(dessiner_instrument(nom), f"images/exemples/instrument-{nom}.svg")
     for nom, schema in SCHEMAS.items():
         enregistrer(dessiner_schema(nom, list(schema["parties"])), f"images/exemples/schema-{nom}.svg")

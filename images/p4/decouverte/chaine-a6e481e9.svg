@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 442" width="280" height="442">
+  <rect x="40" y="20" width="200" height="60" rx="14" fill="#eaf6ea" stroke="#2e9e6a" stroke-width="3"/>
+  <text x="140.0" y="50.0" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#23305a" text-anchor="middle" dominant-baseline="central">Herbe</text>
+  <rect x="40" y="124" width="200" height="60" rx="14" fill="#eaf6ea" stroke="#2e9e6a" stroke-width="3"/>
+  <text x="140.0" y="154.0" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#23305a" text-anchor="middle" dominant-baseline="central">Sauterelle</text>
+  <line x1="140.0" y1="86.0" x2="140.0" y2="108.0" stroke="#2f6fdb" stroke-width="4"/><polygon points="140.0,118.0 133.9,105.4 146.1,105.4" fill="#2f6fdb"/>
+  <rect x="40" y="228" width="200" height="60" rx="14" fill="#eaf6ea" stroke="#2e9e6a" stroke-width="3"/>
+  <text x="140.0" y="258.0" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#23305a" text-anchor="middle" dominant-baseline="central">Grenouille</text>
+  <line x1="140.0" y1="190.0" x2="140.0" y2="212.0" stroke="#2f6fdb" stroke-width="4"/><polygon points="140.0,222.0 133.9,209.4 146.1,209.4" fill="#2f6fdb"/>
+  <rect x="40" y="332" width="200" height="60" rx="14" fill="#fff6d6" stroke="#e2574c" stroke-width="3" stroke-dasharray="8 5"/>
+  <text x="140.0" y="362.0" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#e2574c" text-anchor="middle" dominant-baseline="central">?</text>
+  <line x1="140.0" y1="294.0" x2="140.0" y2="316.0" stroke="#2f6fdb" stroke-width="4"/><polygon points="140.0,326.0 133.9,313.4 146.1,313.4" fill="#2f6fdb"/>
+  <line x1="20.0" y1="416.0" x2="60.0" y2="416.0" stroke="#2f6fdb" stroke-width="4"/><polygon points="70.0,416.0 57.4,422.1 57.4,409.9" fill="#2f6fdb"/>
+  <text x="80.0" y="416.0" font-family="Arial, sans-serif" font-size="15" fill="#23305a" text-anchor="start" dominant-baseline="central">: « est mangé par »</text>
+</svg>

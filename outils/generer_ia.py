@@ -7,7 +7,7 @@ import anthropic
 
 from pathlib import Path
 from figures import (COMPOSANTS, DIRECTIONS, dessiner_angle, dessiner_barres, dessiner_billes, dessiner_camembert,
-                     dessiner_circuit, dessiner_courbe, dessiner_frise, dessiner_schema, ecrire_annee, PAS_FRISE, SCHEMAS, dessiner_horloge, dessiner_polygone, dessiner_rectangle,
+                     dessiner_barometre, dessiner_chaine, dessiner_circuit, dessiner_instrument, INSTRUMENTS, dessiner_courbe, dessiner_frise, dessiner_schema, ecrire_annee, PAS_FRISE, SCHEMAS, dessiner_horloge, dessiner_polygone, dessiner_rectangle,
                      dessiner_repere, dessiner_rose, dessiner_venn, enregistrer)
 from dotenv import load_dotenv
 from valider_questions import verifier_question   # ta fonction !
@@ -156,7 +156,13 @@ Figures (facultatif, surtout en géométrie) :
     1 à 4 événements, chacun avec un texte de 14 caractères au plus ; un seul événement peut avoir le texte "?" (la date ou l'événement à trouver).
     "periodes": true colore les grandes périodes (Antiquité jusqu'en 476, Moyen Âge de 476 à 1492, Temps modernes de 1492 à 1789, Époque contemporaine depuis 1789).
     Utilise les dates retenues à l'école en France, et ne donne pas dans l'énoncé l'information que la frise montre.
-  {{"forme": "schema", "nom": "...", "parties": ["...", ...]}}  (schéma du corps déjà dessiné ; les parties choisies sont numérotées 1, 2, 3... dans l'ordre de la liste)
+  {{"forme": "chaine", "maillons": ["...", ...], "legende": "est mangé par"}}  (chaîne alimentaire ou chaîne d'énergie : des cases reliées par des flèches)
+    2 à 5 maillons de 20 caractères au plus, dans l'ordre des flèches ; un seul maillon peut être "?" (le maillon à trouver).
+    Pour une chaîne alimentaire, la flèche se lit « est mangé par » (herbe → lapin → renard), comme à l'école : mets alors "legende": "est mangé par".
+  {{"forme": "barometre", "pression": <entier de 950 à 1050>, "mots": true}}  (baromètre à aiguille gradué en hPa ; "mots": true écrit Tempête, Pluie, Variable, Beau temps, Très sec sur le cadran)
+    Avec "mots": false, l'élève lit seulement la pression ; avec "mots": true, il peut dire quel temps le baromètre annonce.
+  {{"forme": "instrument", "nom": "thermometre" | "barometre" | "anemometre" | "girouette" | "pluviometre"}}  (dessin d'un instrument météo, sans son nom)
+  {{"forme": "schema", "nom": "...", "parties": ["...", ...]}}  (schéma déjà dessiné ; les parties choisies sont numérotées 1, 2, 3... dans l'ordre de la liste)
     Schémas et parties disponibles :
 {liste_schemas}
     La question porte sur les numéros : « Comment s'appelle la partie n° 2 ? » ou « Quel numéro montre la pupille ? ». L'énoncé ne nomme jamais les autres parties numérotées.
@@ -387,6 +393,42 @@ def creer_figure(description, niveau, matiere):
             alt += ", avec : " + ", ".join(noms)
         if any(texte == "?" for _, texte in liste):
             alt += ", et un point rouge marqué « ? »"
+
+    elif forme == "chaine":
+        maillons = description.get("maillons")
+        if not isinstance(maillons, list) or not 2 <= len(maillons) <= 5:
+            raise ValueError(f"maillons invalides (liste de 2 à 5 éléments) : {maillons!r}")
+        for maillon in maillons:
+            if not isinstance(maillon, str) or not 1 <= len(maillon) <= 20:
+                raise ValueError(f"maillon invalide (texte de 1 à 20 caractères) : {maillon!r}")
+        if maillons.count("?") > 1:
+            raise ValueError("une chaîne contient au plus un « ? »")
+        legende = description.get("legende", "")
+        if not isinstance(legende, str) or len(legende) > 25:
+            raise ValueError(f"légende invalide (25 caractères au plus) : {legende!r}")
+        svg = dessiner_chaine(maillons, legende)
+        empreinte = hashlib.md5(json.dumps(description, sort_keys=True).encode("utf-8")).hexdigest()[:8]
+        nom = f"chaine-{empreinte}"
+        alt = "Une chaîne : " + " → ".join("une case avec un point d'interrogation" if m == "?" else m for m in maillons)
+
+    elif forme == "barometre":
+        pression = description.get("pression")
+        mots = description.get("mots", True)
+        if not isinstance(pression, int) or isinstance(pression, bool) or not 950 <= pression <= 1050:
+            raise ValueError(f"pression invalide (entier de 950 à 1050 hPa) : {pression!r}")
+        if not isinstance(mots, bool):
+            raise ValueError("mots doit valoir true ou false")
+        svg = dessiner_barometre(pression, mots)
+        nom = f"barometre-{pression}" + ("" if mots else "-sans-mots")
+        alt = "Un baromètre à aiguille, gradué de 950 à 1050 hectopascals"
+
+    elif forme == "instrument":
+        nom_instrument = description.get("nom")
+        if nom_instrument not in INSTRUMENTS:
+            raise ValueError(f"instrument inconnu : {nom_instrument!r} (possibles : {', '.join(INSTRUMENTS)})")
+        svg = dessiner_instrument(nom_instrument)
+        nom = f"instrument-{nom_instrument}"
+        alt = "Un instrument utilisé en météo"     # sans son nom : ce serait donner la réponse
 
     elif forme == "schema":
         nom_schema = description.get("nom")

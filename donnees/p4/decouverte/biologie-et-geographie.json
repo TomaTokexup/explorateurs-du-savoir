@@ -1,0 +1,129 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Dans cette chaîne alimentaire de la mare, quel animal est à la place du point d'interrogation ?",
+    "choix": [
+      "Herbe",
+      "Serpent",
+      "Sauterelle",
+      "Soleil"
+    ],
+    "bonneReponse": 1,
+    "explication": "Dans une chaîne alimentaire, la flèche se lit « est mangé par » : la grenouille est mangée par le serpent. L'herbe est au début de la chaîne, elle n'est mangée par personne ici.",
+    "image": "images/p4/decouverte/chaine-a6e481e9.svg",
+    "alt": "Une chaîne : Herbe → Sauterelle → Grenouille → une case avec un point d'interrogation"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle pression indique l'aiguille de ce baromètre ?",
+    "choix": [
+      "1 002 hPa",
+      "1 200 hPa",
+      "1 020 hPa",
+      "1 030 hPa"
+    ],
+    "bonneReponse": 2,
+    "explication": "La pression se lit en hectopascals (hPa) sur le cadran. Repère les deux graduations les plus proches de l'aiguille et compte les intervalles entre elles.",
+    "astuce": "Repère les deux graduations encadrant l'aiguille, puis compte les petits traits entre elles.",
+    "image": "images/p4/decouverte/barometre-1020-sans-mots.svg",
+    "alt": "Un baromètre à aiguille, gradué de 950 à 1050 hectopascals"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la meilleure définition du climat d'une région ?",
+    "choix": [
+      "Le temps qu'il fait aujourd'hui",
+      "Le vent qui souffle souvent dans la région",
+      "La température la plus haute de l'année",
+      "Le temps moyen observé pendant plusieurs années"
+    ],
+    "bonneReponse": 3,
+    "explication": "La météo, c'est le temps qu'il fait aujourd'hui ou dans les prochains jours (« il pleut ce matin »). Le climat, c'est le temps moyen sur plusieurs années (« à Brest, il pleut beaucoup toute l'année »)."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Sur ce schéma du globe, quel numéro montre l'équateur ?",
+    "reponses": [
+      "3",
+      "n°3",
+      "n 3"
+    ],
+    "accents": "toleres",
+    "explication": "L'équateur est la ligne imaginaire qui coupe la Terre en deux, entre l'hémisphère nord et l'hémisphère sud. Autour de lui se trouve la zone chaude, et les zones polaires sont aux pôles.",
+    "image": "images/p4/decouverte/zones-climatiques-1-2-3-4.svg",
+    "alt": "Schéma : le globe et ses grandes zones climatiques, avec 4 parties numérotées"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi trouve-t-on très peu de plantes dans un désert ?",
+    "choix": [
+      "Il pleut très peu",
+      "Le sol est trop riche",
+      "Il fait trop froid toute l'année",
+      "Il y a trop d'animaux"
+    ],
+    "bonneReponse": 0,
+    "explication": "Les plantes ont besoin d'eau pour pousser. Dans un désert, il pleut très peu, donc seules quelques plantes adaptées, comme les cactus, arrivent à survivre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "À quoi sert un parc national ?",
+    "choix": [
+      "À construire des usines",
+      "À protéger la nature et les animaux qui y vivent",
+      "À cultiver du blé en grande quantité",
+      "À vendre le bois des forêts"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un parc national protège des milieux naturels, comme des forêts ou des montagnes, et les espèces qui y vivent. Les activités humaines y sont limitées."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi est-il bon de prendre le vélo plutôt que la voiture pour un petit trajet ?",
+    "choix": [
+      "Parce que le vélo consomme beaucoup d'essence",
+      "Parce que la voiture pollue moins que le vélo",
+      "Pour faire plus de bruit sur la route",
+      "Pour réduire les gaz qui réchauffent la planète"
+    ],
+    "bonneReponse": 3,
+    "explication": "La voiture rejette du CO2, un gaz à effet de serre qui réchauffe la planète. Le vélo n'en rejette pas : on réduit ainsi son empreinte carbone."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une forêt, lequel de ces éléments n'est pas vivant ?",
+    "choix": [
+      "Un champignon",
+      "Un chêne",
+      "L'eau de pluie",
+      "Un écureuil"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un être vivant naît, grandit, se reproduit et meurt. L'eau n'est pas vivante, mais les êtres vivants en ont besoin pour survivre."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle le passage de l'eau liquide en vapeur d'eau sous l'effet de la chaleur du Soleil ?",
+    "reponses": [
+      "évaporation",
+      "evaporation"
+    ],
+    "accents": "toleres",
+    "explication": "La chaleur du Soleil chauffe l'eau des mers, des lacs et des rivières : elle devient vapeur d'eau et monte dans l'air. Cette vapeur se refroidit ensuite pour former des nuages.",
+    "image": "images/p4/decouverte/cycle-de-l-eau-2.svg",
+    "alt": "Schéma : le cycle de l'eau, avec 1 partie numérotée"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quel pays d'Europe trouve-t-on de nombreux fjords, de longues vallées creusées par les glaciers puis envahies par la mer ?",
+    "choix": [
+      "Norvège",
+      "Espagne",
+      "Pays-Bas",
+      "Pologne"
+    ],
+    "bonneReponse": 0,
+    "explication": "Les fjords sont des vallées creusées par les glaciers, puis remplies par la mer. On les trouve surtout sur la côte ouest de la Norvège.",
+    "defi": true
+  }
+]
