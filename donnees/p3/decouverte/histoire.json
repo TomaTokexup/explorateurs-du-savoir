@@ -1,0 +1,122 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Les historiens ont trouvé une hache en pierre taillée, sans aucun métal. À quelle période appartient-elle ?",
+    "choix": [
+      "Le Néolithique",
+      "L'âge du bronze",
+      "Le Paléolithique",
+      "L'âge du fer"
+    ],
+    "bonneReponse": 2,
+    "explication": "La pierre taillée (le silex) caractérise le Paléolithique, la plus ancienne période de la Préhistoire. Au Néolithique, les hommes polissent aussi la pierre ; aux âges du bronze et du fer, ils travaillent les métaux."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Pour fabriquer du bronze, les hommes mélangent du cuivre avec un autre métal. Quel est ce métal ?",
+    "reponses": [
+      "étain",
+      "etain"
+    ],
+    "accents": "toleres",
+    "explication": "Le bronze est un mélange de cuivre et d'étain. C'est ce mélange qui a donné son nom à l'âge du bronze."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Au début de la préhistoire, comment les hommes trouvaient-ils leur nourriture ?",
+    "choix": [
+      "Ils cultivaient des champs de blé.",
+      "Ils chassaient et cueillaient ce qu'ils trouvaient.",
+      "Ils achetaient de la nourriture au marché.",
+      "Ils élevaient des vaches dans des fermes."
+    ],
+    "bonneReponse": 1,
+    "explication": "Il n'y avait pas encore de fermes : les hommes chassaient les animaux et ramassaient fruits, racines et plantes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la grotte de Lascaux, les hommes préhistoriques ont peint sur les murs. Que voit-on le plus souvent sur ces peintures ?",
+    "choix": [
+      "Des maisons et des routes.",
+      "Des avions et des bateaux.",
+      "Des châteaux forts.",
+      "Des bisons et des chevaux."
+    ],
+    "bonneReponse": 3,
+    "explication": "Les animaux qu'ils chassaient, comme les bisons et les chevaux, sont très présents dans l'art préhistorique."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Regarde la frise. Quel âge faut-il écrire à la place du point d'interrogation ?",
+    "choix": [
+      "L'âge de la pierre",
+      "L'âge du bronze",
+      "L'âge du fer",
+      "Le Moyen Âge"
+    ],
+    "bonneReponse": 2,
+    "explication": "Sur une frise, on range les périodes dans l'ordre du temps : l'âge du fer vient après l'âge du bronze.",
+    "astuce": "Dessine une petite frise sur ton cahier et range les âges dans l'ordre, du plus ancien au plus récent.",
+    "image": "images/p3/decouverte/frise-2608790b.svg",
+    "alt": "Une frise chronologique de 4000 av. J.-C. à 0, avec : Âge du bronze, et un point rouge marqué « ? »"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment les hommes de la Préhistoire allumaient-ils un feu ?",
+    "choix": [
+      "En frottant deux morceaux de bois, ou en frappant des pierres l'une contre l'autre",
+      "Avec des allumettes en bois",
+      "En attendant qu'un orage tombe sur leur grotte",
+      "Ils ne savaient pas faire de feu"
+    ],
+    "bonneReponse": 0,
+    "explication": "En frottant très vite deux morceaux de bois, ou en frappant un silex contre une pierre qui fait des étincelles, ils enflammaient de l'herbe sèche. Le feu servait à se chauffer, s'éclairer, cuire la viande et éloigner les animaux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi faut-il préserver les monuments anciens, comme le Mont-Saint-Michel ?",
+    "choix": [
+      "Pour garder la mémoire du passé et la transmettre aux générations futures",
+      "Parce qu'ils sont plus solides que les bâtiments modernes",
+      "Pour que les rois puissent encore y habiter",
+      "Parce qu'il est interdit de construire de nouveaux bâtiments"
+    ],
+    "bonneReponse": 0,
+    "explication": "Ces monuments racontent l'histoire de notre pays : on les garde pour que les générations suivantes puissent les connaître."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Au Moyen Âge, où vivaient la plupart des paysans ?",
+    "choix": [
+      "Dans des châteaux en pierre entourés de douves.",
+      "Dans des immeubles en béton.",
+      "Dans de petites maisons en bois ou en torchis, près de leurs champs.",
+      "Dans des maisons en brique au centre des villes."
+    ],
+    "bonneReponse": 2,
+    "explication": "La plupart des paysans vivaient dans des villages, dans des maisons simples, et travaillaient les champs autour.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Vers la fin de la préhistoire, qu'est-ce qui change dans la vie des hommes ?",
+    "choix": [
+      "Ils commencent à écrire.",
+      "Ils quittent l'Europe.",
+      "Ils commencent à cultiver la terre et à élever des animaux.",
+      "Ils utilisent le fer pour fabriquer leurs outils."
+    ],
+    "bonneReponse": 2,
+    "explication": "Les hommes deviennent agriculteurs et éleveurs : ils restent davantage au même endroit et vivent en villages."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment appelle-t-on les peintures et dessins faits par les hommes de la préhistoire sur les parois des grottes ?",
+    "reponses": [
+      "art rupestre",
+      "art pariétal"
+    ],
+    "accents": "toleres",
+    "explication": "On parle d'art rupestre ou d'art pariétal : ce sont des œuvres réalisées sur les roches des grottes."
+  }
+]

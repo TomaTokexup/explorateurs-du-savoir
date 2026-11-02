@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 100 660 170" width="660" height="170">
+  <line x1="60" y1="150" x2="608" y2="150" stroke="#23305a" stroke-width="4"/>
+  <path d="M 616 150 L 604 142 L 604 158 Z" fill="#23305a"/>
+  <line x1="70.0" y1="144" x2="70.0" y2="156" stroke="#23305a" stroke-width="3"/>
+  <text x="70.0" y="172.0" font-family="Arial, sans-serif" font-size="12" fill="#23305a" text-anchor="middle" dominant-baseline="central">4000 av. J.-C.</text>
+  <line x1="200.0" y1="144" x2="200.0" y2="156" stroke="#23305a" stroke-width="3"/>
+  <text x="200.0" y="172.0" font-family="Arial, sans-serif" font-size="12" fill="#23305a" text-anchor="middle" dominant-baseline="central">3000 av. J.-C.</text>
+  <line x1="330.0" y1="144" x2="330.0" y2="156" stroke="#23305a" stroke-width="3"/>
+  <text x="330.0" y="172.0" font-family="Arial, sans-serif" font-size="12" fill="#23305a" text-anchor="middle" dominant-baseline="central">2000 av. J.-C.</text>
+  <line x1="460.0" y1="144" x2="460.0" y2="156" stroke="#23305a" stroke-width="3"/>
+  <text x="460.0" y="172.0" font-family="Arial, sans-serif" font-size="12" fill="#23305a" text-anchor="middle" dominant-baseline="central">1000 av. J.-C.</text>
+  <line x1="590.0" y1="144" x2="590.0" y2="156" stroke="#23305a" stroke-width="3"/>
+  <text x="590.0" y="172.0" font-family="Arial, sans-serif" font-size="12" fill="#23305a" text-anchor="middle" dominant-baseline="central">0</text>
+  <line x1="330.0" y1="186" x2="330.0" y2="198" stroke="#2f6fdb" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="330.0" cy="150" r="7" fill="#2f6fdb" stroke="white" stroke-width="2"/>
+  <text x="330.0" y="212.0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2f6fdb" text-anchor="middle" dominant-baseline="central">Âge du bronze</text>
+  <line x1="486.0" y1="186" x2="486.0" y2="232" stroke="#e2574c" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="486.0" cy="150" r="7" fill="#e2574c" stroke="white" stroke-width="2"/>
+  <text x="486.0" y="246.0" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e2574c" text-anchor="middle" dominant-baseline="central">?</text>
+</svg>

@@ -1,0 +1,92 @@
+{
+  "niveau": "p3",
+  "matiere": "decouverte",
+  "source": "Schola Europaea – Discovery of the World Syllabus, Primary cycle (P1-P5), réf. 2015-09-D-30-en-3, approuvé en février 2016, en vigueur depuis le 01/09/2016 – objectifs de Year 3 (P3).",
+  "note": "Objectifs repris du syllabus (en anglais), regroupés en 4 thèmes comme en P4 ; chaque objectif est précédé du nom de son chapitre. « defis » = objectifs de P4 liés au thème. Pas de « revisions » : les objectifs de P1-P2 n'ont pas été extraits. Ont été écartés les objectifs impossibles à évaluer par un quiz (observer, enquêter, jouer avec des aimants). L'objectif « Describe and discuss why a society has to follow rules (Safe Cross Code…) » n'est pas repris dans le thème Histoire (choix de relecture).",
+  "domaines": {
+    "biologie-et-geographie": {
+      "titre": "Biologie et géographie",
+      "chapitres": [
+        "La reproduction des plantes",
+        "Ma ville",
+        "Le cycle de l'eau"
+      ],
+      "objectifs": [
+        "La reproduction des plantes – Describe and record the different stages of the reproduction of plants (e.g. from flower to fruit, from cones to trees)",
+        "La reproduction des plantes – Be aware of the importance of insects in the reproduction process of plants",
+        "Ma ville – Describe the main characteristics of a town including the services it provides (e.g. hospitals, banks, schools)",
+        "Ma ville – List the various means of public transport",
+        "Ma ville – Discuss simple journeys to and from different places using different forms of transport",
+        "Ma ville – Describe and compare the landscape of a town with that of the countryside",
+        "Le cycle de l'eau – Describe the water cycle in detail (evaporation, condensation, precipitation, run-off)",
+        "Le cycle de l'eau – Revise the different states of water (solid, liquid, gas) and their role in the cycle"
+      ],
+      "revisions": [],
+      "defis": [
+        "Les écosystèmes – Become familiar with and describe a food chain as a feeding relationship in an ecosystem",
+        "Climat et météo – Describe the relationship between weather and climate"
+      ]
+    },
+    "le-corps": {
+      "titre": "Le corps",
+      "chapitres": [
+        "L'oreille et le son",
+        "Le squelette et les muscles"
+      ],
+      "objectifs": [
+        "L'oreille et le son – Describe the function of the ear and know the names of the main parts",
+        "L'oreille et le son – Become familiar with how sound is produced",
+        "L'oreille et le son – Develop an awareness of the health aspects concerning sound (e.g. noise pollution, loud music)",
+        "L'oreille et le son – Explore how sound travels through materials",
+        "L'oreille et le son – Discover how people deprived of hearing communicate with others (e.g. sign language)",
+        "Le squelette et les muscles – Describe the skeleton and know names of the major bones",
+        "Le squelette et les muscles – Recognise, name and describe the main types of joints",
+        "Le squelette et les muscles – Become familiar with the main muscle groups",
+        "Le squelette et les muscles – Describe how the skeleton and muscles function in relation to one another",
+        "Le squelette et les muscles – Explore and investigate how people move (roles of bones, muscles and joints)"
+      ],
+      "revisions": [],
+      "defis": [
+        "L'œil et la vue – Describe the function of the eye and know the names of the main parts"
+      ]
+    },
+    "technologie": {
+      "titre": "Technologie",
+      "chapitres": [
+        "Le magnétisme",
+        "Le recyclage"
+      ],
+      "objectifs": [
+        "Le magnétisme – Describe the properties of magnets",
+        "Le magnétisme – Recognise some areas where magnets are used (e.g. compasses, fridge magnets)",
+        "Le magnétisme – Learn that magnets can attract or repel magnetic materials",
+        "Le magnétisme – Explore the use of magnets to lift and hold objects",
+        "Le recyclage – Become aware that recycled materials (e.g. paper, glass, plastic) are used to produce new products",
+        "Le recyclage – Sort various materials for recycling",
+        "Le recyclage – Describe the process of recycling and explain the benefits of recycling to the community"
+      ],
+      "revisions": [],
+      "defis": [
+        "L'électricité – Carry out simple experiments with electricity (e.g. conductors and insulators)"
+      ]
+    },
+    "histoire": {
+      "titre": "Histoire",
+      "chapitres": [
+        "La Préhistoire",
+        "Patrimoine et société"
+      ],
+      "objectifs": [
+        "La Préhistoire – Become familiar with and describe some aspects of the lives of people in prehistoric times",
+        "La Préhistoire – Discuss a range of simple evidence (e.g. pictures of tools, cave art)",
+        "La Préhistoire – Record the different ages on appropriate timelines",
+        "La Préhistoire – List the main characteristics of each period (e.g. Stone Age, Bronze Age, Iron Age)",
+        "Patrimoine et société – Describe and discuss the need to preserve heritage (e.g. local and national traditions, monuments)"
+      ],
+      "revisions": [],
+      "defis": [
+        "Le Moyen Âge – Become familiar with and describe aspects of people's lives in the Middle Ages (e.g. homes, clothes, farming, food)"
+      ]
+    }
+  }
+}

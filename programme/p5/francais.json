@@ -1,0 +1,115 @@
+{
+  "niveau": "p5",
+  "matiere": "francais",
+  "source": "Schola Europaea – Programme Français Langue 1, cycle primaire, réf. 2024-01-D-43-fr-3 (en vigueur depuis le 01/09/2024), objectifs d'apprentissage de P5, et son Guide pratique Français L1 (version 1.0, juillet 2024), chapitre « Ressources linguistiques : les notions » (colonne Cycle 3 – P5) et repères de progressivité. Licence CC BY-NC-SA 4.0.",
+  "note": "« objectifs » = notions de P5 ; « revisions » = notions de la tranche P3-P4 ; « defis » = approfondissements au-delà des attendus de P5 (choix du projet, pas une liste officielle : rester simple). Objectifs repris du guide et du programme, en ne gardant que ce qui s'évalue par un quiz.",
+  "domaines": {
+    "lecture": {
+      "titre": "Lecture",
+      "objectifs": [
+        "Identifier les informations importantes pour comprendre un texte écrit : personnages, actions, relations, cadre spatio-temporel (récit-théâtre) ; indices explicites et implicites",
+        "Repérer et identifier les caractéristiques des textes lus : genre, discours et références d'un document",
+        "Mettre en relation les éléments explicites observés dans un texte ; faire des liens entre les indices explicites et/ou implicites et ses propres connaissances",
+        "Construire les liens chronologiques, logiques, spatiaux, thématiques : dégager la cohérence d'un texte",
+        "Faire des prédictions en s'appuyant sur les indices",
+        "Dégager les informations essentielles et les reformuler",
+        "Formuler des interprétations à partir de la mise en relation des indices observés",
+        "Mobiliser des connaissances littéraires, culturelles, lexicales et discursives pour donner sens (conte, roman, poésie, fable, nouvelle, théâtre, texte documentaire)",
+        "Distinguer l'essentiel de l'accessoire, le réel de l'imaginaire, le vraisemblable de l'invraisemblable"
+      ],
+      "revisions": [
+        "Repérer des mots et des phrases-clés",
+        "Reconstruire le déroulement d'un récit"
+      ],
+      "defis": [
+        "Identifier le point de vue du narrateur (qui raconte ?)",
+        "Repérer et interpréter des figures de style simples : comparaison, métaphore, personnification"
+      ]
+    },
+    "vocabulaire": {
+      "titre": "Vocabulaire",
+      "objectifs": [
+        "Comprendre la construction des mots formés par composition et par dérivation (préfixe, racine, suffixe)",
+        "Repérer les relations de sens entre les mots : synonymes, antonymes, homonymes et homophones, parties d'un tout, mots génériques et spécifiques",
+        "Classer des mots selon leur intensité (tiède, chaud, brûlant) ; utiliser des mots qui modulent l'intensité, la certitude ou la probabilité",
+        "Identifier un champ lexical ; remplacer un mot par un substitut lexical, un synonyme ou un mot de sens contraire",
+        "Émettre des hypothèses sur le sens d'un mot inconnu à partir de sa forme et du contexte ; distinguer les différents sens d'un mot selon le contexte",
+        "Distinguer sens propre et sens figuré ; comprendre des expressions courantes",
+        "Connecteurs logiques : d'une part / d'autre part, en outre, de même, ainsi que ; en d'autres termes, notamment, certes ; en revanche, en réalité, toutefois, néanmoins ; par conséquent, ainsi, c'est pourquoi"
+      ],
+      "revisions": [
+        "Synonymes, contraires, familles de mots",
+        "Adverbes en -ment, comparaison, négations (ne plus, ne jamais, ni)",
+        "Connecteurs : de plus, également, c'est-à-dire, en effet, cependant, pourtant, au contraire, donc"
+      ],
+      "defis": [
+        "Racines grecques et latines courantes (bio-, géo-, -phone, -logie, -cide, aqua-)"
+      ]
+    },
+    "grammaire": {
+      "titre": "Grammaire",
+      "objectifs": [
+        "Identifier les phrases déclaratives, interrogatives et exclamatives",
+        "Identifier le verbe et le sujet : le sujet est inversé ; le sujet est un pronom relatif",
+        "Identifier les groupes du nom complexes : complément du nom, proposition relative",
+        "Le complément du verbe : complément d'objet direct (COD), complément d'objet indirect (COI), COD placé avant le verbe",
+        "L'apposition",
+        "Identifier le groupe déplaçable : complément circonstanciel de lieu, de temps, de manière, de but, de cause, de conséquence",
+        "Identifier les propositions relatives avec qui, que, dont, où, lequel ; distinguer proposition principale et proposition subordonnée relative",
+        "Identifier les propositions principales et les propositions subordonnées conjonctives",
+        "Identifier la phrase passive et le complément d'agent",
+        "Classes de mots : pronoms démonstratifs (celui, celle-ci, ceux-là), possessifs (le mien, la tienne), relatifs (qui, que, dont, où, lequel), indéfinis (chacun, tout) ; verbes d'état et d'action ; auxiliaires"
+      ],
+      "revisions": [
+        "Le sujet est multiple ou c'est un pronom ; le COD, le complément du nom, l'attribut",
+        "Identification des propositions relatives avec qui",
+        "Déterminants possessifs et démonstratifs"
+      ],
+      "defis": [
+        "Attribut du sujet et attribut du COD",
+        "Propositions subordonnées circonstancielles de temps et de cause (quand, lorsque, parce que, puisque)"
+      ]
+    },
+    "conjugaison": {
+      "titre": "Conjugaison",
+      "objectifs": [
+        "Présent à toutes les personnes : 1er et 2e groupes + quelques familles génériques de verbes du 3e groupe + être, avoir, faire, dire, prendre, mettre, aller + verbes modaux vouloir, pouvoir, devoir, savoir",
+        "Passé simple à la 3e personne : 1er et 2e groupes + quelques familles génériques de verbes du 3e groupe + être, avoir, faire, dire, prendre, mettre, aller + vouloir, pouvoir, devoir, savoir",
+        "Conditionnel présent, subjonctif présent, participe présent : 1er et 2e groupes + quelques familles génériques du 3e groupe + être, avoir, faire, dire, prendre, mettre, aller + vouloir, pouvoir, devoir, savoir",
+        "Repérer les verbes au passé simple et au plus-que-parfait",
+        "Poursuivre un texte en utilisant le plus-que-parfait et le passé simple",
+        "Repérer les verbes au conditionnel, au subjonctif et au participe présent",
+        "Choisir le temps qui convient : imparfait / passé simple, présent / futur, imparfait / plus-que-parfait (antériorité)"
+      ],
+      "revisions": [
+        "Futur, imparfait, passé composé, impératif présent des verbes courants",
+        "Repérer les verbes au présent, passé composé, futur, imparfait, infinitif"
+      ],
+      "defis": [
+        "Passé simple à toutes les personnes des verbes courants",
+        "Conjuguer au plus-que-parfait et au futur antérieur"
+      ]
+    },
+    "orthographe": {
+      "titre": "Orthographe",
+      "objectifs": [
+        "Pluriel des noms composés (règle générale)",
+        "Féminin des adjectifs : cas génériques (et/ette, et/ète, er/ère, f/ve, x/se, x/ce, x/sse, doublement de la consonne finale) et terminaisons différentes (nouveau/nouvelle, frais/fraîche, public/publique) ; participes passés (mis/mise)",
+        "Maîtrise de la chaîne d'accords dans le groupe nominal",
+        "Accord sujet-verbe : terminaisons je -e/-s/-x, tu -s/-x, il/elle -e/-t/-d/-c, nous -ons/-mes, vous -ez/-tes, ils/elles -nt ; sujets multiples ; accord avec qui, toi…",
+        "Accord du participe passé avec avoir quand le COD est placé avant le verbe",
+        "Homophones grammaticaux : mon/m'ont, ni/n'y (et ceux de P3-P4 : ça/sa, ou/où, la/l'a, c'est/s'est, on/on n', qu'elle/quelle/quel, sans/s'en, leur/leurs)",
+        "Ponctuation : point d'exclamation, virgule, guillemets, deux-points, tiret, parenthèses"
+      ],
+      "revisions": [
+        "Homophones et/est, a/à, on/ont, son/sont, ce/se, ces/ses, la/là",
+        "Pluriel des noms en -eau/-au/-eu/-al/-ail et féminin des noms",
+        "Accord du participe passé avec être"
+      ],
+      "defis": [
+        "Accord des adjectifs de couleur (une robe bleue, des robes bleu clair, des yeux marron)",
+        "Homophones quand/quant/qu'en"
+      ]
+    }
+  }
+}

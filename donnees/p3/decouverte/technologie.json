@@ -1,0 +1,125 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Parmi ces objets, lequel est attiré par un aimant ?",
+    "choix": [
+      "Une règle en plastique",
+      "Un clou en fer",
+      "Une gomme",
+      "Une cuillère en bois"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un aimant attire les objets qui contiennent du fer ou de l'acier. Le plastique, la gomme et le bois ne sont pas attirés. Essaie avec un trombone et une gomme pour le vérifier."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu approches le pôle nord d'un aimant du pôle nord d'un autre aimant. Que se passe-t-il ?",
+    "choix": [
+      "Ils s'attirent",
+      "Ils se repoussent",
+      "Ils ne bougent pas",
+      "Ils se collent pour toujours"
+    ],
+    "bonneReponse": 1,
+    "explication": "Deux pôles identiques (nord et nord, ou sud et sud) se repoussent ; deux pôles différents (nord et sud) s'attirent. Prends deux aimants et fais l'essai avec les deux côtés."
+  },
+  {
+    "type": "qcm",
+    "enonce": "À quoi sert une boussole ?",
+    "choix": [
+      "À mesurer la longueur d'une table",
+      "À trouver la direction du nord",
+      "À produire de l'électricité",
+      "À peser un objet"
+    ],
+    "bonneReponse": 1,
+    "explication": "La boussole contient une petite aiguille aimantée qui s'oriente toujours vers le nord. Elle sert à s'orienter, par exemple en randonnée."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un aimant peut-il attirer un trombone à travers une feuille de papier ?",
+    "choix": [
+      "Oui, le papier ne bloque pas l'attraction",
+      "Non, le papier bloque l'aimant",
+      "Non, seul le bois laisse passer l'aimant",
+      "Oui, mais seulement si le papier est mouillé"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'attraction d'un aimant traverse les matériaux qui ne sont pas magnétiques, comme le papier, le bois ou le verre. Pose une feuille sur un trombone et approche l'aimant pour le voir."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une bouteille en verre usagée est envoyée à l'usine de recyclage. Que devient ce verre ?",
+    "choix": [
+      "Il est jeté à la décharge",
+      "Il sert à fabriquer de nouvelles bouteilles",
+      "Il se transforme en papier",
+      "Il disparaît dans l'air"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le verre peut être refondu pour fabriquer de nouvelles bouteilles ou de nouveaux pots, sans perdre sa qualité. Le déchet devient ainsi un nouveau produit."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans ce circuit, on place une règle en plastique à la place de l'objet à tester. La lampe brille-t-elle ?",
+    "choix": [
+      "Oui, car la règle relie les deux fils",
+      "Non, car le plastique ne laisse pas passer le courant",
+      "Oui, car la pile donne toujours de la lumière",
+      "Non, car la lampe est cassée"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le courant ne passe que dans les matériaux conducteurs, comme les métaux. Le plastique est un isolant : le circuit ne fonctionne pas et la lampe reste éteinte.",
+    "defi": true,
+    "image": "images/p3/decouverte/circuit-00ddf715.svg",
+    "alt": "Un circuit électrique avec une pile, une lampe, un objet à tester (règle en plastique)"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est l'un des avantages du recyclage pour la commune ?",
+    "choix": [
+      "Il augmente la quantité de déchets à jeter",
+      "Il économise des matières premières",
+      "Il oblige à acheter plus de matières neuves",
+      "Il rend les objets plus chers à fabriquer"
+    ],
+    "bonneReponse": 1,
+    "explication": "En recyclant, on utilise moins de matières premières (bois, pétrole, sable...) et on envoie moins de déchets à la décharge."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une grue utilise un très gros aimant pour soulever des tonnes de ferraille (vieux métal). Quelle propriété de l'aimant est utilisée ?",
+    "choix": [
+      "Il attire le fer",
+      "Il chauffe le métal",
+      "Il fond le métal",
+      "Il colle le plastique"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le gros aimant attire la ferraille, qu'il peut soulever et tenir. Dans certaines usines de recyclage, des aimants servent aussi à trier les métaux."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appellent les deux extrémités d'un aimant, où l'attraction est la plus forte ?",
+    "reponses": [
+      "pôles",
+      "pôle",
+      "poles",
+      "pole",
+      "les pôles",
+      "les poles"
+    ],
+    "accents": "toleres",
+    "explication": "Un aimant a toujours deux extrémités appelées pôles. Plonge un aimant dans un tas de trombones : ils se collent surtout aux deux bouts."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle l'étape où l'on sépare les déchets par matière (papier, verre, plastique...) avant de les recycler ?",
+    "reponses": [
+      "tri",
+      "le tri"
+    ],
+    "accents": "toleres",
+    "explication": "Le tri consiste à mettre chaque déchet dans le bon conteneur : le papier dans le conteneur papier, le verre dans le conteneur à verre. C'est la première étape du recyclage."
+  }
+]

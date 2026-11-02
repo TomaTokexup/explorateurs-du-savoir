@@ -1,6 +1,7 @@
 # Dessine des figures géométriques au format SVG (images vectorielles, nettes à toutes les tailles)
 # Les figures sont calculées par Python : elles sont donc toujours exactes,
 # contrairement à une image générée par une IA.
+import base64
 import html
 import math
 import random
@@ -765,6 +766,49 @@ def _zones_climatiques():
     return "\n  ".join(elements)
 
 
+def _systeme_solaire():
+    """Le Soleil et les 8 planètes dans l'ordre (tailles approximatives, distances non respectées)."""
+    elements = ['<defs><clipPath id="espace"><rect x="0" y="0" width="640" height="190"/></clipPath></defs>',
+                '<rect x="0" y="0" width="640" height="190" fill="#14213d"/>',
+                '<circle cx="-60" cy="80" r="120" fill="#f6c343" clip-path="url(#espace)"/>']
+    for nom, (x, rayon, couleur) in PLANETES.items():
+        if nom == "saturne":
+            elements.append(f'<ellipse cx="{x}" cy="80" rx="{rayon + 14}" ry="6" fill="none" stroke="#d8c08a" stroke-width="4"/>')
+        elements.append(f'<circle cx="{x}" cy="80" r="{rayon}" fill="{couleur}"/>')
+    return "\n  ".join(elements)
+
+
+# Position x, rayon et couleur de chaque planète sur le dessin
+PLANETES = {"mercure": (88, 5, "#b5b5b5"), "venus": (132, 9, "#e8c27a"), "terre": (176, 9, "#3d86c6"),
+            "mars": (220, 7, "#d2603b"), "jupiter": (292, 28, "#d9a46b"), "saturne": (384, 23, "#e3c98b"),
+            "uranus": (474, 14, "#8fd3de"), "neptune": (556, 14, "#4a6fd1")}
+
+
+def _phase_lune(cx, cy, r, fraction):
+    """Une Lune vue de la Terre (hémisphère nord). fraction : 0 = nouvelle lune, 0,5 = pleine lune."""
+    sombre = f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#3a3f4b" stroke="#9aa3b5" stroke-width="2"/>'
+    if fraction in (0, 1):
+        return sombre
+    if fraction == 0.5:
+        return f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#f2efe1" stroke="#9aa3b5" stroke-width="2"/>'
+    rx = abs(r * math.cos(2 * math.pi * fraction))      # demi-largeur de la limite ombre/lumière
+    croissante = fraction < 0.5                          # partie éclairée à droite quand la Lune grandit
+    bord = 1 if croissante else 0                        # sens de l'arc qui suit le bord éclairé
+    gibbeuse = 0.25 < fraction < 0.75
+    limite = (1 if gibbeuse else 0) if croissante else (0 if gibbeuse else 1)
+    eclairee = (f'<path d="M {cx} {cy - r} A {r} {r} 0 0 {bord} {cx} {cy + r} '
+                f'A {rx:.1f} {r} 0 0 {limite} {cx} {cy - r} Z" fill="#f2efe1"/>')
+    return sombre + eclairee
+
+
+def _phases_lune():
+    elements = ['<rect x="0" y="0" width="460" height="300" fill="#14213d"/>']
+    for i, fraction in enumerate([0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875]):
+        x, y = 70 + (i % 4) * 107, 70 + (i // 4) * 140
+        elements.append(_phase_lune(x, y, 36, fraction))
+    return "\n  ".join(elements)
+
+
 SCHEMAS = {
     "oeil-face": {
         "titre": "un œil vu de face", "largeur": 400, "hauteur": 240, "dessin": _oeil_face,
@@ -802,6 +846,38 @@ SCHEMAS = {
             "anus": ("l'anus", 176, 782, "gauche"),
         },
     },
+    "squelette": {
+        # Dessin de Mariana Ruiz (LadyofHats), Wikimedia Commons, domaine public : dessins/squelette.png
+        # Coordonnées dans le dessin d'origine (435,7 × 841,9), réduit à 55 %.
+        "titre": "le squelette humain, vu de face", "fichier": "squelette.png", "taille": (435.687, 841.89), "echelle": 0.55,
+        "parties": {
+            "crane": ("le crâne", 225, 50, "droite"),
+            "clavicule": ("la clavicule", 150, 162, "gauche"),
+            "humerus": ("l'humérus", 110, 250, "gauche"),
+            "cotes": ("les côtes", 268, 250, "droite"),
+            "colonne-vertebrale": ("la colonne vertébrale", 200, 335, "gauche"),
+            "bassin": ("le bassin", 262, 372, "droite"),
+            "radius-cubitus": ("les os de l'avant-bras (radius et cubitus)", 85, 395, "gauche"),
+            "femur": ("le fémur", 172, 505, "gauche"),
+            "rotule": ("la rotule", 247, 578, "droite"),
+            "tibia": ("le tibia", 236, 690, "droite"),
+        },
+    },
+    "oreille": {
+        # Dessin de Lars Chittka et Axel Brockmann, Wikimedia Commons, licence CC BY 2.5 : dessins/oreille.svg
+        # Coordonnées dans le dessin d'origine (recadré à 650 × 500), réduit à 62 % ; hauteur des numéros déjà réduite.
+        "titre": "l'oreille, vue en coupe", "fichier": "oreille.svg", "taille": (650, 500), "echelle": 0.62,
+        "parties": {
+            "pavillon": ("le pavillon", 70, 350, "gauche"),
+            "conduit-auditif": ("le conduit auditif", 252, 287, "gauche", 140),
+            "tympan": ("le tympan", 378, 301, "gauche", 180),
+            "osselets": ("les osselets (marteau, enclume, étrier)", 367, 245, "droite", 80),
+            "canaux-semi-circulaires": ("les canaux semi-circulaires", 466, 196, "droite", 118),
+            "nerf-auditif": ("le nerf auditif", 567, 248, "droite", 156),
+            "cochlee": ("la cochlée (le limaçon)", 490, 290, "droite", 194),
+            "trompe-d-eustache": ("la trompe d'Eustache", 511, 399, "droite", 248),
+        },
+    },
     "cycle-de-l-eau": {
         "titre": "le cycle de l'eau", "largeur": 460, "hauteur": 330, "dessin": _cycle_eau,
         "parties": {
@@ -825,6 +901,35 @@ SCHEMAS = {
             "zone-polaire-sud": ("la zone polaire", 230, 304, "gauche"),
         },
     },
+    "systeme-solaire": {
+        "titre": "le système solaire (tailles approximatives, distances non respectées)", "largeur": 640, "hauteur": 190,
+        "dessin": _systeme_solaire,
+        "parties": {
+            "soleil": ("le Soleil", 30, 80, "dessous"),
+            "mercure": ("Mercure", 88, 80, "dessous"),
+            "venus": ("Vénus", 132, 80, "dessous"),
+            "terre": ("la Terre", 176, 80, "dessous"),
+            "mars": ("Mars", 220, 80, "dessous"),
+            "jupiter": ("Jupiter", 292, 80, "dessous"),
+            "saturne": ("Saturne", 384, 80, "dessous"),
+            "uranus": ("Uranus", 474, 80, "dessous"),
+            "neptune": ("Neptune", 556, 80, "dessous"),
+        },
+    },
+    "phases-lune": {
+        "titre": "les phases de la Lune vues de la Terre, dans l'ordre (de gauche à droite, puis la ligne du bas)",
+        "largeur": 460, "hauteur": 300, "dessin": _phases_lune,
+        "parties": {
+            "nouvelle-lune": ("la nouvelle lune", 70, 70, "dessous"),
+            "premier-croissant": ("le premier croissant", 177, 70, "dessous"),
+            "premier-quartier": ("le premier quartier", 284, 70, "dessous"),
+            "gibbeuse-croissante": ("la lune gibbeuse croissante", 391, 70, "dessous"),
+            "pleine-lune": ("la pleine lune", 70, 210, "dessous"),
+            "gibbeuse-decroissante": ("la lune gibbeuse décroissante", 177, 210, "dessous"),
+            "dernier-quartier": ("le dernier quartier", 284, 210, "dessous"),
+            "dernier-croissant": ("le dernier croissant", 391, 210, "dessous"),
+        },
+    },
 }
 
 
@@ -832,13 +937,20 @@ def dessiner_schema(nom, parties):
     """Renvoie le code SVG du schéma `nom` (voir SCHEMAS), avec les `parties` numérotées 1, 2, 3...
     dans l'ordre de la liste. Les autres parties ne portent aucun numéro."""
     schema = SCHEMAS[nom]
-    marge = 70                       # place pour les numéros, à gauche et à droite du dessin
+    # Place pour les numéros à gauche et à droite du dessin (inutile si tous les numéros sont dessous)
+    marge = 0 if all(infos[3] == "dessous" for infos in schema["parties"].values()) else 70
     if "fichier" in schema:
         # Dessin externe : on l'insère réduit (un <svg> dans le <svg>), et on réduit aussi les coordonnées
         echelle = schema["echelle"]
         largeur, hauteur = round(schema["taille"][0] * echelle), round(schema["taille"][1] * echelle)
-        elements = [f'<svg x="{marge}" y="0" width="{largeur}" height="{hauteur}" '
-                    f'viewBox="0 0 {schema["taille"][0]} {schema["taille"][1]}">{_dessin_externe(schema["fichier"])}</svg>']
+        if schema["fichier"].endswith(".png"):
+            # Image PNG : insérée telle quelle, encodée dans le fichier SVG (une image ne peut pas en charger une autre)
+            donnees = base64.b64encode((DOSSIER_DESSINS / schema["fichier"]).read_bytes()).decode("ascii")
+            elements = [f'<image x="{marge}" y="0" width="{largeur}" height="{hauteur}" '
+                        f'href="data:image/png;base64,{donnees}"/>']
+        else:
+            elements = [f'<svg x="{marge}" y="0" width="{largeur}" height="{hauteur}" '
+                        f'viewBox="0 0 {schema["taille"][0]} {schema["taille"][1]}">{_dessin_externe(schema["fichier"])}</svg>']
     else:
         echelle = 1
         largeur, hauteur = schema["largeur"], schema["hauteur"]
@@ -849,9 +961,13 @@ def dessiner_schema(nom, parties):
         x, y = x * echelle, y * echelle
         y_num = autre[0] if autre else y
         x += marge
-        x_num = 26 if cote == "gauche" else largeur + 2 * marge - 26
-        elements.append(f'<line x1="{x_num}" y1="{y_num}" x2="{x}" y2="{y}" stroke="{ENCRE}" stroke-width="2"/>')
-        elements.append(f'<circle cx="{x}" cy="{y}" r="4" fill="{ENCRE}" stroke="white" stroke-width="1.5"/>')
+        if cote == "dessous":
+            # Numéro posé juste sous l'élément (pour une rangée de planètes ou de lunes)
+            x_num, y_num = x, y + 58
+        else:
+            x_num = 26 if cote == "gauche" else largeur + 2 * marge - 26
+            elements.append(f'<line x1="{x_num}" y1="{y_num}" x2="{x}" y2="{y}" stroke="{ENCRE}" stroke-width="2"/>')
+            elements.append(f'<circle cx="{x}" cy="{y}" r="4" fill="{ENCRE}" stroke="white" stroke-width="1.5"/>')
         elements.append(f'<circle cx="{x_num}" cy="{y_num}" r="16" fill="white" stroke="{ENCRE}" stroke-width="3"/>')
         elements.append(_texte(x_num, y_num + 1, numero, taille=17, gras=True, extra='dominant-baseline="central"'))
     contenu = "\n  ".join(elements)

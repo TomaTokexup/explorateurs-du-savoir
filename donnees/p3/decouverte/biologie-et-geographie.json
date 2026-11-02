@@ -1,0 +1,99 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la bonne suite des étapes de la reproduction d'un pommier, de la fleur au fruit ?",
+    "choix": [
+      "fleur → fruit → pollinisation → graine",
+      "graine → fleur → fécondation → fruit",
+      "fleur → pollinisation → fécondation → fruit",
+      "fleur → pollinisation → graine → fruit"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le pollen arrive sur la fleur (pollinisation), puis il permet la fécondation. La fleur se transforme alors en fruit, qui contient les graines. Pour vérifier, lis les étapes dans l'ordre, de la fleur jusqu'au fruit."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi les abeilles sont-elles utiles à la reproduction de nombreuses plantes à fleurs ?",
+    "choix": [
+      "Elles mangent les feuilles qui gênent la plante",
+      "En passant de fleur en fleur, elles transportent le pollen",
+      "Elles font pousser les racines plus profondément",
+      "Elles arrosent la plante avec leur miel"
+    ],
+    "bonneReponse": 1,
+    "explication": "Quand une abeille butine une fleur pour boire le nectar, du pollen se colle à ses poils. Lorsqu'elle va sur une autre fleur, elle dépose ce pollen, ce qui permet la fécondation."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans le cycle de l'eau, comment s'appelle le passage de la vapeur d'eau à l'état liquide, qui forme les gouttes des nuages ?",
+    "reponses": [
+      "condensation",
+      "la condensation"
+    ],
+    "accents": "toleres",
+    "explication": "La vapeur d'eau invisible se refroidit en montant dans le ciel et redevient de minuscules gouttes. C'est la condensation. Tu l'observes aussi sur un miroir froid recouvert de buée."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans le cycle de l'eau, dans quel état se trouve la vapeur d'eau présente dans l'air ?",
+    "choix": [
+      "solide, comme un glaçon",
+      "liquide, comme l'eau d'un verre",
+      "gazeux, invisible dans l'air",
+      "gazeux, comme le brouillard"
+    ],
+    "bonneReponse": 2,
+    "explication": "L'eau existe sous trois états : solide (glace, neige), liquide (eau) et gaz (vapeur d'eau). La vapeur d'eau est un gaz invisible. Le brouillard, lui, est fait de minuscules gouttes liquides."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quel bâtiment de la ville peut-on déposer son argent sur un compte ?",
+    "choix": [
+      "l'école",
+      "l'hôpital",
+      "la bibliothèque",
+      "la banque"
+    ],
+    "bonneReponse": 3,
+    "explication": "Chaque bâtiment a un rôle : l'école sert à apprendre, l'hôpital à soigner, la bibliothèque à lire et emprunter des livres, la banque à gérer son argent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces moyens de transport est un transport en commun ?",
+    "choix": [
+      "le vélo",
+      "la trottinette",
+      "le bus",
+      "la voiture personnelle"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un transport en commun peut être utilisé par beaucoup de personnes en même temps, sur un trajet fixe avec des arrêts et des horaires. Le bus en fait partie. Le vélo, la trottinette et la voiture personnelle sont utilisés par une seule personne."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Que trouve-t-on surtout à la campagne et beaucoup moins au centre-ville ?",
+    "choix": [
+      "des immeubles de plusieurs étages",
+      "des champs et des forêts",
+      "de nombreux magasins",
+      "des feux rouges et des passages piétons"
+    ],
+    "bonneReponse": 1,
+    "explication": "La ville est pleine de bâtiments serrés les uns contre les autres, de rues et de commerces. La campagne a plus d'espaces ouverts, comme les champs, les prairies et les forêts."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans cette chaîne alimentaire, par quel animal la mésange est-elle mangée ?",
+    "choix": [
+      "la chenille",
+      "l'épervier",
+      "la feuille",
+      "le pissenlit"
+    ],
+    "bonneReponse": 1,
+    "explication": "Dans une chaîne alimentaire, chaque flèche se lit « est mangé par ». La flèche qui part de la mésange va vers l'épervier, un oiseau prédateur : la mésange est mangée par l'épervier. La chenille, elle, est mangée par la mésange.",
+    "defi": true,
+    "image": "images/p3/decouverte/chaine-19b63766.svg",
+    "alt": "Une chaîne : Feuille → Chenille → Mésange → une case avec un point d'interrogation"
+  }
+]

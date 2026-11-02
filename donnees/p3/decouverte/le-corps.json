@@ -1,0 +1,125 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Un élastique tendu fait du bruit quand on le pince. Qu'est-ce qui produit un son ?",
+    "choix": [
+      "Un objet très lourd",
+      "Un objet immobile",
+      "Un objet qui vibre",
+      "Un objet très chaud"
+    ],
+    "bonneReponse": 2,
+    "explication": "Quand un objet vibre, il fait vibrer l'air autour de lui, et ces vibrations arrivent jusqu'à ton oreille. Pour le sentir, pose tes doigts sur ta gorge pendant que tu chantes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel numéro montre le fémur ?",
+    "choix": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le fémur est l'os de la cuisse. C'est le plus long et le plus solide os du corps.",
+    "image": "images/p3/decouverte/squelette-1-8-10-2.svg",
+    "alt": "Schéma : le squelette humain, vu de face, avec 4 parties numérotées"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel numéro montre le tympan ?",
+    "choix": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le tympan est une membrane fine, tendue au fond du conduit auditif. Quand le son arrive, il se met à vibrer.",
+    "image": "images/p3/decouverte/oreille-1-3-4-7.svg",
+    "alt": "Schéma : l'oreille, vue en coupe, avec 4 parties numérotées"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quand tu plies le bras pour porter ton cartable, quel muscle se contracte ?",
+    "choix": [
+      "Le triceps, à l'arrière du bras",
+      "Le biceps, à l'avant du bras",
+      "Le cerveau",
+      "Le fémur"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour plier le bras, le biceps se raccourcit et tire sur l'os de l'avant-bras. Le triceps fait le contraire : il redresse le bras."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom de l'os du bras, entre l'épaule et le coude ?",
+    "reponses": [
+      "humérus",
+      "humerus"
+    ],
+    "accents": "toleres",
+    "explication": "C'est le plus long os du bras. Il part de l'épaule et rejoint le coude."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi faut-il éviter d'écouter de la musique très forte au casque pendant longtemps ?",
+    "choix": [
+      "Parce que le son devient plus lent",
+      "Parce que cela peut abîmer l'oreille",
+      "Parce que le casque chauffe la tête",
+      "Parce que les oreilles deviennent plus grandes"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un son trop fort, écouté longtemps, peut abîmer les petites cellules de l'oreille et diminuer l'audition. Il faut donc baisser le volume."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le coude se plie dans un seul sens, comme une porte qui tourne autour de sa charnière. Quel type d'articulation est le coude ?",
+    "choix": [
+      "Une articulation fixe",
+      "Une articulation en rotule",
+      "Une articulation en charnière",
+      "Une articulation en pivot"
+    ],
+    "bonneReponse": 2,
+    "explication": "Une articulation en charnière ne bouge que dans un seul plan, comme une porte. Le genou fonctionne aussi comme une charnière."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu colles ton oreille contre une table. Ton camarade gratte le bois à l'autre bout de la table, et tu l'entends beaucoup mieux que dans l'air. Pourquoi ?",
+    "choix": [
+      "Le son ne traverse pas le bois",
+      "Le son voyage mieux dans un solide que dans l'air",
+      "Le son devient plus fort quand on ferme les yeux",
+      "Le son s'arrête dès qu'il touche une surface"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le son se propage dans les solides, comme le bois ou le métal, plus vite et plus loin que dans l'air. C'est pour cela que la table transmet le grattement jusqu'à ton oreille."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien y a-t-il d'osselets dans l'oreille ?",
+    "reponses": [
+      "3",
+      "trois"
+    ],
+    "accents": "toleres",
+    "explication": "Les trois osselets sont le marteau, l'enclume et l'étrier. Ils transmettent et amplifient les vibrations du tympan."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel numéro montre la rétine ?",
+    "choix": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "bonneReponse": 3,
+    "explication": "La rétine tapisse le fond de l'œil. Elle reçoit l'image et envoie des signaux au cerveau par le nerf optique.",
+    "defi": true,
+    "image": "images/p3/decouverte/oeil-coupe-2-3-4-5.svg",
+    "alt": "Schéma : un œil vu en coupe, avec 4 parties numérotées"
+  }
+]

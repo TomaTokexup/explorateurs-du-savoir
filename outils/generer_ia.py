@@ -107,6 +107,7 @@ Objectifs officiels du programme pour ce niveau (syllabus des Écoles européenn
 {bloc_existants}
 Consignes générales :
 - Chaque question évalue UN de ces objectifs. Varie les objectifs couverts d'une question à l'autre.
+- Jamais plus de 2 questions sur la même notion (par exemple la pollinisation) ; deux questions ne doivent pas vérifier la même chose, et une question ne doit pas donner la réponse d'une autre.
 - Ne dépasse jamais le niveau fixé par ces objectifs.
 - N'écris « ce », « cette » ou « cet » pour désigner un objet (« ce triangle », « cette figure ») que si la question a une figure.
 - Utilise le vocabulaire employé en classe en France (« pavé droit » et non « cuboïde », « sommet » et non « vertex »), même si les objectifs officiels sont en anglais.

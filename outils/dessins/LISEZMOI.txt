@@ -1,0 +1,11 @@
+Dessins venus d'ailleurs, utilisés par figures.py (schémas à numéroter)
+
+- appareil-digestif.svg : Mariana Ruiz (LadyofHats), Wikimedia Commons, domaine public.
+  https://commons.wikimedia.org/wiki/File:Digestive_system_without_labels.svg
+- squelette.png : Mariana Ruiz (LadyofHats), Wikimedia Commons, domaine public (version sans légendes,
+  convertie en image PNG pour alléger le fichier).
+  https://commons.wikimedia.org/wiki/File:Human_skeleton_front_en.svg
+- oreille.svg : Lars Chittka et Axel Brockmann, Wikimedia Commons, licence CC BY 2.5
+  (https://creativecommons.org/licenses/by/2.5/). Version sans légendes, simplifiée.
+  https://commons.wikimedia.org/wiki/File:Anatomy_of_the_Human_Ear.svg
+  -> licence CC BY : les auteurs sont cités dans le pied de page de l'accueil (index.html).

@@ -1,0 +1,92 @@
+{
+  "niveau": "p5",
+  "matiere": "decouverte",
+  "source": "Schola Europaea – Discovery of the World Syllabus, Primary cycle (P1-P5), réf. 2015-09-D-30-en-3, approuvé en février 2016, en vigueur depuis le 01/09/2016 – objectifs de Year 5 (P5).",
+  "note": "Objectifs repris du syllabus (en anglais), regroupés en 4 thèmes ; chaque objectif est précédé du nom de son chapitre. « revisions » = objectifs de P4 liés au thème. Pas de « defis » (le niveau suivant est le secondaire). Le chapitre « Puberté » n'est pas repris dans un quiz pour enfants ; il reste en classe. Ont été écartés les objectifs impossibles à évaluer par un quiz (fabriquer un dynamomètre, mener une recherche, présenter).",
+  "domaines": {
+    "le-corps": {
+      "titre": "Le corps",
+      "chapitres": [
+        "Respiration et circulation"
+      ],
+      "objectifs": [
+        "Respiration et circulation – Describe the respiration process, name and function of the main organs",
+        "Respiration et circulation – Describe the circulation process, name and function of the main organs",
+        "Respiration et circulation – Recognise and describe the connection between respiration and circulation",
+        "Respiration et circulation – Develop an awareness of health aspects concerning respiration and circulation (e.g. smoking, allergies)"
+      ],
+      "revisions": [
+        "Nutrition et digestion – Describe the digestive system and know the names of the main organs"
+      ],
+      "defis": []
+    },
+    "technologie": {
+      "titre": "Technologie",
+      "chapitres": [
+        "Forces et mouvement"
+      ],
+      "objectifs": [
+        "Forces et mouvement – Identify how objects and materials may be moved (e.g. pushing, pulling, rollers, gears)",
+        "Forces et mouvement – Explore the effect of friction on movement and how it may be used to slow or stop moving objects",
+        "Forces et mouvement – Describe how force could be strengthened by the use of levers and gears",
+        "Forces et mouvement – Become aware of reverse forces (e.g. balance, weightlessness)",
+        "Forces et mouvement – Come to appreciate that gravity is a force",
+        "Forces et mouvement – Become aware that objects have weight because of the pull of gravity",
+        "Forces et mouvement – Explore how levers may be used to help lift different objects"
+      ],
+      "revisions": [
+        "L'énergie – Recognise concrete examples of how energy changes from one form to another",
+        "L'électricité – Construct a simple electrical circuit"
+      ],
+      "defis": []
+    },
+    "geographie": {
+      "titre": "Géographie",
+      "chapitres": [
+        "L'espace",
+        "Globe, cartes et paysages",
+        "Phénomènes naturels"
+      ],
+      "objectifs": [
+        "L'espace – Know the names and order of the planets in our solar system",
+        "L'espace – Describe the main characteristics of the planets and how they orbit the sun",
+        "L'espace – Know the order of the different phases of the moon and what causes these phases",
+        "Globe, cartes et paysages – Recognise lines of longitude and latitude",
+        "Globe, cartes et paysages – Read coordinates (e.g. when using an atlas)",
+        "Globe, cartes et paysages – Compare time zones around the world",
+        "Globe, cartes et paysages – Describe reliefs of European countries using a map",
+        "Globe, cartes et paysages – Describe landscapes from different regions of Europe",
+        "Phénomènes naturels – Know the causes and effects of natural phenomena (e.g. volcanoes, earthquakes, storms, floods)"
+      ],
+      "revisions": [
+        "Climat et météo – Give characteristics of and compare different climatic regions"
+      ],
+      "defis": []
+    },
+    "histoire": {
+      "titre": "Histoire et citoyenneté",
+      "chapitres": [
+        "Époques de changement",
+        "La construction de l'Union européenne",
+        "Les droits de l'homme",
+        "La dimension européenne"
+      ],
+      "objectifs": [
+        "Époques de changement – Become familiar with aspects of an era of change and conflict (e.g. Voyages of Discovery, Reformation, French Revolution, World Wars)",
+        "Époques de changement – Recognise ways in which the everyday lives of people changed",
+        "Époques de changement – Identify people, organisations and events involved in bringing about change",
+        "La construction de l'Union européenne – Understand and describe the reasons for the creation of a European community",
+        "La construction de l'Union européenne – Describe the growth of the EU using maps from the various stages of development",
+        "La construction de l'Union européenne – Become familiar with and describe some of the EU's achievements (e.g. the euro)",
+        "La construction de l'Union européenne – Describe an event and its effect on the development of the EU (e.g. fall of the Berlin Wall)",
+        "Les droits de l'homme – Become familiar with the UN Declaration of Human Rights and the UN Global Goals for Sustainable Development (democracy, equality, tolerance)",
+        "La dimension européenne – Compare similarities and differences between EU member states with regards to culture (e.g. art, music, national dishes)"
+      ],
+      "revisions": [
+        "Se repérer dans le temps – Record people and events in the past using simple timelines",
+        "Le Moyen Âge – Understand and explain the feudal system"
+      ],
+      "defis": []
+    }
+  }
+}
