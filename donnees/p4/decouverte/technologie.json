@@ -1,0 +1,124 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Parmi ces objets, lequel produit de l'électricité ?",
+    "choix": [
+      "Une lampe",
+      "Un panneau solaire",
+      "Un fil de cuivre",
+      "Un interrupteur"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une source d'électricité fabrique du courant, comme une pile ou un panneau solaire. Une lampe, elle, reçoit l'électricité et la transforme en lumière : c'est un récepteur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur ce circuit, la lampe va-t-elle briller ?",
+    "choix": [
+      "Non, car l'interrupteur est ouvert : le circuit n'est pas fermé",
+      "Oui, car la pile envoie toujours de l'électricité",
+      "Oui, car l'interrupteur laisse passer le courant",
+      "Non, car la lampe est forcément cassée"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le courant ne circule que si le circuit forme une boucle complète. Un interrupteur ouvert coupe la boucle, donc la lampe ne brille pas.",
+    "image": "images/p4/decouverte/circuit-64f02c6b.svg",
+    "alt": "Un circuit électrique avec une pile, un interrupteur ouvert, une lampe"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Une éolienne transforme l'énergie du vent en énergie ... Écris le mot manquant (un seul mot).",
+    "reponses": [
+      "électrique",
+      "electrique"
+    ],
+    "accents": "toleres",
+    "explication": "Le vent fait tourner les pales de l'éolienne (énergie du mouvement). Un générateur transforme ce mouvement en électricité."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans ce circuit, l'objet à tester est une clé en fer. La lampe va-t-elle briller ?",
+    "choix": [
+      "Oui, car le fer laisse passer l'électricité : c'est un conducteur",
+      "Non, car le fer est un isolant",
+      "Non, car une clé est trop lourde pour laisser passer le courant",
+      "Oui, car la clé fabrique elle-même de l'électricité"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un conducteur laisse passer le courant électrique (métaux comme le fer, le cuivre). Un isolant ne le laisse pas passer (plastique, bois). Ici le circuit reste fermé grâce à la clé.",
+    "image": "images/p4/decouverte/circuit-6c5a6339.svg",
+    "alt": "Un circuit électrique avec une pile, un objet à tester (clé en fer), une lampe"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom de l'objet qui permet d'ouvrir ou de fermer un circuit électrique ?",
+    "reponses": [
+      "interrupteur",
+      "un interrupteur"
+    ],
+    "accents": "toleres",
+    "explication": "L'interrupteur est un bouton ou un levier qui ferme ou ouvre le circuit. Fermé, le courant passe ; ouvert, il ne passe plus."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu vois un fil électrique abîmé et dénudé qui traîne sur le sol. Que dois-tu faire ?",
+    "choix": [
+      "Le toucher doucement pour voir s'il est allumé",
+      "Le ramasser pour le ranger",
+      "Ne pas y toucher et prévenir un adulte",
+      "Le couper avec des ciseaux"
+    ],
+    "bonneReponse": 2,
+    "explication": "L'électricité peut être très dangereuse et provoquer des brûlures ou une électrocution. Il ne faut jamais toucher un fil abîmé : on prévient un adulte."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quand tu frottes fort tes mains l'une contre l'autre, elles deviennent chaudes. Quelle transformation d'énergie se produit ?",
+    "choix": [
+      "L'énergie thermique devient de l'énergie mécanique",
+      "L'énergie mécanique (mouvement) devient de l'énergie thermique (chaleur)",
+      "L'énergie électrique devient de l'énergie lumineuse",
+      "L'énergie chimique devient de l'énergie sonore"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le mouvement de tes mains (énergie mécanique) se transforme en chaleur (énergie thermique) à cause du frottement. C'est un exemple simple de changement de forme d'énergie."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Parmi ces objets, lequel un aimant va-t-il attirer ?",
+    "choix": [
+      "Une règle en bois",
+      "Une gomme",
+      "Un clou en fer",
+      "Un crayon en plastique"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un aimant attire les objets en fer, en acier ou en nickel. Le bois, la gomme et le plastique ne sont pas attirés par un aimant."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Deux roues dentées dont les dents s'emboîtent forment un système qui transmet le mouvement. Comment s'appelle ce système ?",
+    "choix": [
+      "Une poulie",
+      "Un engrenage",
+      "Un ressort",
+      "Un levier"
+    ],
+    "bonneReponse": 1,
+    "explication": "Quand les dents de deux roues s'emboîtent, la première fait tourner la seconde : c'est un engrenage. Il peut aussi changer la vitesse ou le sens de rotation.",
+    "astuce": "Si tu ne connais pas tous les mots, utilise ton dictionnaire.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi trie-t-on les bouteilles en verre et les journaux ?",
+    "choix": [
+      "Pour les jeter plus facilement à la poubelle",
+      "Pour fabriquer de nouveaux produits avec ces matériaux",
+      "Pour les cacher dans un endroit sûr",
+      "Pour les rendre plus solides"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le verre et le papier peuvent être recyclés : on les transforme pour fabriquer de nouvelles bouteilles ou de nouveaux papiers. Cela évite de gaspiller les matières premières."
+  }
+]
