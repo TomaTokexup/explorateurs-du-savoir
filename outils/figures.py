@@ -351,6 +351,105 @@ def dessiner_venn(titre_a, titre_b, seulement_a, commun, seulement_b):
 '''
 
 
+# --- Circuits électriques (Découverte du monde) ---
+# Symboles normalisés utilisés à l'école : pile (un grand trait fin « + » et un petit trait épais « − »),
+# lampe (cercle barré d'une croix), moteur (cercle avec un M), interrupteur ouvert ou fermé.
+# Le dessin ne montre JAMAIS si la lampe brille : c'est à l'élève de le prévoir.
+
+COMPOSANTS = {
+    "pile": "pile",
+    "lampe": "lampe",
+    "moteur": "moteur",
+    "interrupteur-ouvert": "interrupteur",
+    "interrupteur-ferme": "interrupteur",
+    "coupure": "",          # fil débranché : deux bouts de fil qui ne se touchent pas
+    "objet": "",            # objet à tester (conducteur ou isolant) : son nom est donné à part
+}
+
+# Les 4 emplacements du circuit, dans le sens des aiguilles d'une montre :
+# (centre x, centre y, rotation en degrés). Les composants sont dessinés à l'horizontale, puis tournés.
+EMPLACEMENTS = [(200, 50, 0), (330, 140, 90), (200, 230, 180), (70, 140, 270)]
+
+
+def _tourner(x, y, angle):
+    """Coordonnées d'un point (x, y) après une rotation de `angle` degrés autour de (0, 0)."""
+    a = math.radians(angle)
+    return x * math.cos(a) - y * math.sin(a), x * math.sin(a) + y * math.cos(a)
+
+
+def _symbole(nom):
+    """Le symbole d'un composant, dessiné à l'horizontale autour du point (0, 0)."""
+    trait = f'stroke="{ENCRE}" stroke-width="4" stroke-linecap="round"'
+    # Un rectangle blanc efface le fil à l'endroit du composant
+    cache = '<rect x="-30" y="-6" width="60" height="12" fill="white"/>'
+    if nom == "pile":
+        return (cache + f'<line x1="-30" y1="0" x2="-6" y2="0" {trait}/><line x1="6" y1="0" x2="30" y2="0" {trait}/>'
+                f'<line x1="-6" y1="-22" x2="-6" y2="22" stroke="{ENCRE}" stroke-width="3"/>'
+                f'<line x1="6" y1="-11" x2="6" y2="11" stroke="{ENCRE}" stroke-width="9"/>')
+    if nom == "lampe":
+        d = 13 / math.sqrt(2) * 1.4
+        return (f'<circle cx="0" cy="0" r="18" fill="white" {trait}/>'
+                f'<line x1="{-d:.1f}" y1="{-d:.1f}" x2="{d:.1f}" y2="{d:.1f}" {trait}/>'
+                f'<line x1="{-d:.1f}" y1="{d:.1f}" x2="{d:.1f}" y2="{-d:.1f}" {trait}/>')
+    if nom == "moteur":
+        return f'<circle cx="0" cy="0" r="18" fill="white" {trait}/>'   # le « M » est écrit à part, sans rotation
+    if nom == "interrupteur-ouvert":
+        return (cache + f'<line x1="-30" y1="0" x2="-20" y2="0" {trait}/><line x1="20" y1="0" x2="30" y2="0" {trait}/>'
+                f'<line x1="-20" y1="0" x2="16" y2="-20" {trait}/>'
+                f'<circle cx="-20" cy="0" r="4" fill="{ENCRE}"/><circle cx="20" cy="0" r="4" fill="{ENCRE}"/>')
+    if nom == "interrupteur-ferme":
+        return (f'<circle cx="-20" cy="0" r="4" fill="{ENCRE}"/><circle cx="20" cy="0" r="4" fill="{ENCRE}"/>')
+    if nom == "coupure":
+        return (cache + f'<line x1="-30" y1="0" x2="-16" y2="0" {trait}/><line x1="16" y1="0" x2="30" y2="0" {trait}/>'
+                f'<circle cx="-16" cy="0" r="4" fill="{ENCRE}"/><circle cx="16" cy="0" r="4" fill="{ENCRE}"/>')
+    if nom == "objet":
+        return (cache + f'<line x1="-30" y1="0" x2="-24" y2="0" {trait}/><line x1="24" y1="0" x2="30" y2="0" {trait}/>'
+                f'<rect x="-24" y="-11" width="48" height="22" rx="6" fill="#fff6d6" stroke="{ENCRE}" stroke-width="3"/>')
+    raise ValueError(f"composant inconnu : {nom!r}")
+
+
+def dessiner_circuit(composants, court_circuit=False, objet=""):
+    """Renvoie le code SVG d'un circuit en boucle avec 1 à 4 composants (voir COMPOSANTS),
+    placés dans l'ordre : en haut, à droite, en bas, à gauche (un emplacement vide = simple fil).
+    court_circuit=True : un fil relie directement les deux bornes de la première lampe.
+    objet : le nom de l'objet à tester, écrit sous son symbole (« clé en fer », « gomme »...)."""
+    elements = [f'<rect x="70" y="50" width="260" height="180" rx="8" fill="none" stroke="{ENCRE}" stroke-width="4"/>']
+    premiere_lampe = True
+    for nom, (cx, cy, angle) in zip(composants, EMPLACEMENTS):
+        groupe = _symbole(nom)
+        if nom == "lampe" and court_circuit and premiere_lampe:
+            # Fil de court-circuit : il fait le tour de la lampe, côté extérieur du circuit
+            groupe += (f'<path d="M -45 0 L -45 -38 L 45 -38 L 45 0" fill="none" stroke="{ENCRE}" '
+                       f'stroke-width="4" stroke-linejoin="round"/>'
+                       f'<circle cx="-45" cy="0" r="4" fill="{ENCRE}"/><circle cx="45" cy="0" r="4" fill="{ENCRE}"/>')
+            premiere_lampe = False
+        elements.append(f'<g transform="translate({cx} {cy}) rotate({angle})">{groupe}</g>')
+        # Lettres dans les symboles : écrites après la rotation, pour rester lisibles
+        lettre = {"moteur": "M", "objet": "?"}.get(nom)
+        if lettre:
+            elements.append(_texte(cx, cy + 1, lettre, taille=18, gras=True, extra='dominant-baseline="central"'))
+        # Nom du composant, écrit à l'intérieur du circuit et toujours à l'horizontale
+        etiquette = objet if nom == "objet" else COMPOSANTS[nom]
+        if etiquette:
+            dx, dy = _tourner(0, 44, angle)
+            ancre = "middle" if angle in (0, 180) else ("end" if angle == 90 else "start")
+            if angle in (90, 270):
+                dx, dy = _tourner(0, 30, angle)
+            elements.append(_texte(cx + dx, cy + dy, etiquette, taille=15, ancre=ancre, gras=True,
+                                   extra='dominant-baseline="central"'))
+        if nom == "pile":
+            # Signes + et − à côté des deux traits de la pile
+            for signe, x in (("+", -16), ("−", 16)):
+                sx, sy = _tourner(x, -26, angle)
+                elements.append(_texte(cx + sx, cy + sy, signe, taille=16, gras=True,
+                                       extra='dominant-baseline="central"'))
+    contenu = "\n  ".join(elements)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" width="400" height="290">
+  {contenu}
+</svg>
+'''
+
+
 def enregistrer(svg, chemin):
     """Écrit le code SVG dans un fichier, en créant les dossiers si besoin."""
     chemin = Path(chemin)
@@ -381,3 +480,8 @@ if __name__ == "__main__":
     enregistrer(dessiner_billes(rouges=5, bleues=2, vertes=1), "images/exemples/billes.svg")
     enregistrer(dessiner_venn("Sport", "Musique", ["Léo", "Inès"], ["Sami"], ["Emma", "Noé", "Lina"]),
                 "images/exemples/venn.svg")
+    enregistrer(dessiner_circuit(["pile", "lampe", "interrupteur-ferme"]), "images/exemples/circuit-ferme.svg")
+    enregistrer(dessiner_circuit(["lampe", "interrupteur-ouvert", "moteur", "pile"]), "images/exemples/circuit-ouvert.svg")
+    enregistrer(dessiner_circuit(["lampe", "coupure", "pile"]), "images/exemples/circuit-coupure.svg")
+    enregistrer(dessiner_circuit(["lampe", "objet", "pile"], objet="cuillère en métal"), "images/exemples/circuit-objet.svg")
+    enregistrer(dessiner_circuit(["lampe", "pile"], court_circuit=True), "images/exemples/circuit-court.svg")

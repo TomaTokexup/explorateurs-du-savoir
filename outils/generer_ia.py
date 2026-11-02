@@ -6,8 +6,8 @@ import argparse
 import anthropic
 
 from pathlib import Path
-from figures import (DIRECTIONS, dessiner_angle, dessiner_barres, dessiner_billes, dessiner_camembert,
-                     dessiner_courbe, dessiner_horloge, dessiner_polygone, dessiner_rectangle,
+from figures import (COMPOSANTS, DIRECTIONS, dessiner_angle, dessiner_barres, dessiner_billes, dessiner_camembert,
+                     dessiner_circuit, dessiner_courbe, dessiner_horloge, dessiner_polygone, dessiner_rectangle,
                      dessiner_repere, dessiner_rose, dessiner_venn, enregistrer)
 from dotenv import load_dotenv
 from valider_questions import verifier_question   # ta fonction !
@@ -141,6 +141,10 @@ Figures (facultatif, surtout en géométrie) :
   {{"forme": "venn", "titre_a": "...", "titre_b": "...", "seulement_a": [...], "commun": [...], "seulement_b": [...]}}  (diagramme de Venn à deux cercles ; les éléments sont des mots courts, par exemple des prénoms ; 4 par zone au plus)
   Pour les diagrammes : titre de 30 caractères au plus, étiquettes de 12 caractères au plus (abrège : « Lun », « Jan »), valeurs entières et faciles à lire.
 - Pour le rectangle, la figure donne les dimensions : la question porte sur un calcul (périmètre, aire), jamais sur la lecture des dimensions.
+  {{"forme": "circuit", "composants": [...], "court_circuit": false, "objet": "..."}}  (circuit électrique en boucle, dessiné avec les symboles de l'école)
+    composants : 1 à 4 éléments parmi "pile", "lampe", "moteur", "interrupteur-ouvert", "interrupteur-ferme", "coupure" (fil débranché), "objet" (objet à tester, conducteur ou isolant).
+    "court_circuit": true ajoute un fil qui relie directement les deux bornes de la première lampe. "objet" (20 caractères au plus) n'est utile qu'avec le composant "objet", par exemple "clé en fer" ou "règle en plastique".
+    Le dessin ne montre jamais si la lampe brille : demande à l'élève de le prévoir et de l'expliquer (circuit fermé ou ouvert, court-circuit, conducteur ou isolant).
 - N'utilise aucune autre forme, et n'écris jamais de champ "image" toi-même.
 
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
@@ -308,6 +312,30 @@ def creer_figure(description, niveau, matiere):
         empreinte = hashlib.md5(json.dumps(description, sort_keys=True).encode("utf-8")).hexdigest()[:8]
         nom = f"venn-{empreinte}"
         alt = "Un diagramme de Venn à deux cercles"
+
+    elif forme == "circuit":
+        composants = description.get("composants")
+        if not isinstance(composants, list) or not 1 <= len(composants) <= 4:
+            raise ValueError(f"composants invalides (liste de 1 à 4 éléments) : {composants!r}")
+        for composant in composants:
+            if composant not in COMPOSANTS:
+                raise ValueError(f"composant inconnu : {composant!r}")
+        court_circuit = description.get("court_circuit", False)
+        if not isinstance(court_circuit, bool) or (court_circuit and "lampe" not in composants):
+            raise ValueError("court_circuit doit valoir true ou false, et il faut une lampe pour un court-circuit")
+        objet = description.get("objet", "")
+        if "objet" in composants and (not isinstance(objet, str) or not 1 <= len(objet) <= 20):
+            raise ValueError(f"nom de l'objet à tester invalide (texte de 1 à 20 caractères) : {objet!r}")
+        svg = dessiner_circuit(composants, court_circuit, objet)
+        empreinte = hashlib.md5(json.dumps(description, sort_keys=True).encode("utf-8")).hexdigest()[:8]
+        nom = f"circuit-{empreinte}"
+        # Texte alternatif : décrit le circuit pour un élève qui ne voit pas l'image
+        noms_alt = {"pile": "une pile", "lampe": "une lampe", "moteur": "un moteur",
+                    "interrupteur-ouvert": "un interrupteur ouvert", "interrupteur-ferme": "un interrupteur fermé",
+                    "coupure": "un fil débranché", "objet": f"un objet à tester ({objet})"}
+        alt = "Un circuit électrique avec " + ", ".join(noms_alt[c] for c in composants)
+        if court_circuit:
+            alt += ", et un fil qui relie directement les deux bornes de la lampe"
 
     else:
         raise ValueError(f"forme inconnue : {forme!r}")

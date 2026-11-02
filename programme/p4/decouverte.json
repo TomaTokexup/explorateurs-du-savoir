@@ -1,0 +1,125 @@
+{
+  "niveau": "p4",
+  "matiere": "decouverte",
+  "source": "Schola Europaea – Discovery of the World Syllabus, Primary cycle (P1-P5), réf. 2015-09-D-30-en-3, approuvé en février 2016, en vigueur depuis le 01/09/2016 – objectifs de Year 4 (P4).",
+  "note": "Objectifs repris du syllabus (en anglais). « revisions » = objectifs de P3 liés au thème ; « defis » = objectifs de P5 liés au thème. Ont été écartés les objectifs impossibles à évaluer par un quiz (étudier un écosystème sur le terrain, construire une station météo, mener des expériences). Le volet « Puberté » de P5 n'est jamais utilisé en défi. Les chapitres du programme sont regroupés en 4 thèmes ; chaque objectif est précédé du nom de son chapitre.",
+  "domaines": {
+    "biologie-et-geographie": {
+      "titre": "Biologie et géographie",
+      "chapitres": [
+        "Les écosystèmes",
+        "Climat et météo",
+        "Les paysages",
+        "Protéger l'environnement"
+      ],
+      "objectifs": [
+        "Les écosystèmes – Describe the interaction between living things and the environment (e.g. a park, a pond, a forest)",
+        "Les écosystèmes – Become familiar with and describe a food chain as a feeding relationship in an ecosystem",
+        "Climat et météo – Describe the relationship between weather and climate",
+        "Climat et météo – Give characteristics of and compare different climatic regions",
+        "Climat et météo – Read air pressure on a barometer",
+        "Climat et météo – Know the various elements included when forecasting weather (e.g. clouds, air pressure, wind)",
+        "Climat et météo – Name and describe the instruments required to forecast the weather",
+        "Les paysages – Describe landscapes from different regions of the world (vegetation, human construction, relief)",
+        "Les paysages – Describe the impact of climate on landscapes",
+        "Protéger l'environnement – Describe and discuss the need to preserve nature (e.g. national parks, habitats)",
+        "Protéger l'environnement – Recognise the necessity to reduce the impact of human activity on the environment",
+        "Protéger l'environnement – Explain why it is important to be environmentally friendly (e.g. recycling, reducing carbon footprint)"
+      ],
+      "revisions": [
+        "Les écosystèmes – Describe the different stages of the reproduction of plants (e.g. from flower to fruit, from cones to trees)",
+        "Les écosystèmes – Be aware of the importance of insects in the reproduction process of plants",
+        "Climat et météo – Describe the water cycle",
+        "Climat et météo – Revise the different states of water and their role in the cycle",
+        "Les paysages – Describe and compare the landscape of a town with that of the countryside",
+        "Protéger l'environnement – Sort various materials for recycling",
+        "Protéger l'environnement – Describe the process of recycling and explain the benefits of recycling to the community"
+      ],
+      "defis": [
+        "Climat et météo – Research a natural phenomenon (e.g. storm, hurricane, flood, drought)",
+        "Les paysages – Describe reliefs of European countries using a map",
+        "Les paysages – Describe landscapes from different regions of Europe",
+        "Protéger l'environnement – Become familiar with the UN Global Goals for Sustainable Development"
+      ]
+    },
+    "le-corps": {
+      "titre": "Le corps",
+      "chapitres": [
+        "L'œil et la vue",
+        "Nutrition et digestion"
+      ],
+      "objectifs": [
+        "L'œil et la vue – Describe the function of the eye and know the names of the main parts",
+        "L'œil et la vue – Describe the connection between light and sight",
+        "L'œil et la vue – Develop an awareness of the health aspects concerning sight (e.g. reduced sight, colour blindness)",
+        "L'œil et la vue – Discover how people deprived of sight participate in society",
+        "Nutrition et digestion – Outline reasons for the importance of nutrition for the body",
+        "Nutrition et digestion – Describe the digestive system and know the names of the main organs",
+        "Nutrition et digestion – Describe the connection between nutrition and digestion",
+        "Nutrition et digestion – Develop an awareness of health aspects concerning nutrition and digestion"
+      ],
+      "revisions": [
+        "L'œil et la vue – Describe the function of the ear and know the names of the main parts",
+        "L'œil et la vue – Become familiar with how sound is produced",
+        "Nutrition et digestion – Describe the skeleton and know names of the major bones",
+        "Nutrition et digestion – Describe how the skeleton and muscles function in relation to one another"
+      ],
+      "defis": [
+        "Nutrition et digestion – Recognise and describe the connection between respiration and circulation (the blood carries nutrients and oxygen to the whole body)"
+      ]
+    },
+    "technologie": {
+      "titre": "Technologie",
+      "chapitres": [
+        "L'électricité",
+        "L'énergie"
+      ],
+      "objectifs": [
+        "L'électricité – Recognise some different sources of electricity",
+        "L'électricité – Recognise where electricity is used (e.g. at school, at home, in society)",
+        "L'électricité – Construct a simple electrical circuit (read and complete circuit diagrams: battery, bulb, wires, switch)",
+        "L'électricité – Carry out simple experiments with electricity (e.g. conductors and insulators)",
+        "L'électricité – Become aware of how some common electrical appliances work",
+        "L'électricité – Predict what will happen when doing an experiment on electricity - formulate hypotheses",
+        "L'électricité – Become aware of the dangers of electricity",
+        "L'énergie – Recognise concrete examples of how energy changes from one form to another",
+        "L'énergie – Establish that energy may be transferred in different ways",
+        "L'énergie – Identify and discuss simple energy chains (e.g. sun-plants-animals)",
+        "L'énergie – Identify and discuss where energy is used in daily life and from where energy comes",
+        "L'énergie – Name different types of sustainable energy and describe their main use"
+      ],
+      "revisions": [
+        "L'électricité – Describe the properties of magnets",
+        "L'électricité – Learn that magnets can attract or repel magnetic materials",
+        "L'énergie – Become aware that recycled materials (e.g. paper, glass, plastic) are used to produce new products"
+      ],
+      "defis": [
+        "L'énergie – Identify and explore how objects and materials may be moved (e.g. pushing, pulling, rollers, gears)"
+      ]
+    },
+    "histoire": {
+      "titre": "Histoire",
+      "chapitres": [
+        "Se repérer dans le temps",
+        "Le Moyen Âge"
+      ],
+      "objectifs": [
+        "Se repérer dans le temps – Develop an understanding of time and chronology so as to place people, objects and events within a broad historical sequence",
+        "Se repérer dans le temps – Record people and events in the past using a variety of simple timelines",
+        "Se repérer dans le temps – Use words, phrases and conventions associated with the recording of dates and time (e.g. BC, AD, age, period, century)",
+        "Le Moyen Âge – Become familiar with and describe aspects of people's lives in the Middle Ages (e.g. homes, clothes, farming, food, leisure)",
+        "Le Moyen Âge – Know stories of famous individuals from the period",
+        "Le Moyen Âge – Understand and explain the feudal system"
+      ],
+      "revisions": [
+        "Se repérer dans le temps – Record the different ages of Pre-History on appropriate timelines",
+        "Se repérer dans le temps – List the main characteristics of each period (e.g. Stone Age, Bronze Age)",
+        "Le Moyen Âge – Become familiar with and describe some aspects of the lives of people in prehistoric times"
+      ],
+      "defis": [
+        "Se repérer dans le temps – Become familiar with aspects of an era of change (e.g. Voyages of Discovery, French Revolution)",
+        "Le Moyen Âge – Voyages of Discovery: recognise ways in which the everyday lives of people changed"
+      ]
+    }
+  }
+}
