@@ -1,5 +1,9 @@
 [
   {
+    "id": "lecture",
+    "titre": "Lecture"
+  },
+  {
     "id": "conjugaison",
     "titre": "Conjugaison"
   }

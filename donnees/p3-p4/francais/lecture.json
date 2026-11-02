@@ -1,0 +1,131 @@
+[
+  {
+    "type": "qcm",
+    "enonce": "Quand se passe la scène ?",
+    "texte": "Le dimanche matin, Théo se réveille avant le soleil. Il enfile son vieux pull bleu, qui sent encore la lessive, et descend l'escalier sur la pointe des pieds. Dans la cuisine, sa grand-mère Odile pétrit déjà la pâte à pain. « Tu es bien matinal, mon poussin ! » lui glisse-t-elle en clignant de l'œil. Théo sourit, car il sait qu'elle l'attend pour la promenade au marché. Pourtant, il n'a pas encore trouvé son bonnet, et il grommelle en fouillant le placard. Quand il le retrouve enfin sous le canapé, Odile rit doucement : « Le chat a dû le cacher, comme chaque semaine ! » Ils quittent la maison ensemble, et le village sent déjà le pain chaud.",
+    "choix": [
+      "En fin d'après-midi",
+      "À midi",
+      "Tôt le matin",
+      "Au milieu de la nuit"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les indices « avant le soleil », « le dimanche matin » et « le village sent déjà le pain chaud » montrent le moment de la journée. Pour la question « quand ? », cherche les mots qui donnent le moment du jour ou de la semaine."
+  },
+  {
+    "type": "qcm",
+    "enonce": "D'après la phrase « Le chat a dû le cacher, comme chaque semaine ! », que peut-on comprendre ?",
+    "texte": "Le dimanche matin, Théo se réveille avant le soleil. Il enfile son vieux pull bleu, qui sent encore la lessive, et descend l'escalier sur la pointe des pieds. Dans la cuisine, sa grand-mère Odile pétrit déjà la pâte à pain. « Tu es bien matinal, mon poussin ! » lui glisse-t-elle en clignant de l'œil. Théo sourit, car il sait qu'elle l'attend pour la promenade au marché. Pourtant, il n'a pas encore trouvé son bonnet, et il grommelle en fouillant le placard. Quand il le retrouve enfin sous le canapé, Odile rit doucement : « Le chat a dû le cacher, comme chaque semaine ! » Ils quittent la maison ensemble, et le village sent déjà le pain chaud.",
+    "choix": [
+      "Odile est fâchée contre le chat, qui joue trop",
+      "Théo n'aime pas aller au marché avec sa grand-mère",
+      "Théo oublie souvent son bonnet, et Odile s'en amuse",
+      "Le chat aime dormir dans le placard de la cuisine"
+    ],
+    "bonneReponse": 2,
+    "explication": "Odile plaisante : l'expression « comme chaque semaine » montre que ce n'est pas la première fois. Le texte ne dit pas directement que Théo oublie souvent son bonnet, il faut le déduire de cette remarque.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle caractéristique montre que ce texte est une pièce de théâtre ?",
+    "texte": "LA BOÎTE AUX LETTRES\nPersonnages : Maxime, Jade, la voisine.\nScène : un hall d'immeuble, un matin de pluie.\nMAXIME, serrant une enveloppe : Jade, regarde ! Une lettre pour nous !\nJADE, se penchant : Elle est adressée à Papa... Et l'écriture ressemble à celle de Mamie.\nLA VOISINE, sortant de l'ascenseur : Ah, les enfants ! Votre père est déjà parti ce matin.\nMAXIME : Alors on la lui garde pour ce soir ?\nJADE, hésitante : Non, je crois qu'il vaut mieux l'ouvrir ensemble, quand il rentrera.",
+    "choix": [
+      "Il est découpé en strophes avec des rimes",
+      "Le nom de chaque personnage est écrit avant ses paroles",
+      "Il commence par « Il était une fois »",
+      "Il raconte une histoire au passé, sans aucun dialogue"
+    ],
+    "bonneReponse": 1,
+    "explication": "Au théâtre, on écrit le nom du personnage avant chacune de ses répliques, ce qui montre qui parle. Repère ce qui est différent dans la mise en page : c'est un indice de genre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel événement s'est passé en premier ?",
+    "texte": "Le cerf-volant rouge s'était envolé au-dessus de la colline, et Lucas n'arrivait pas à l'oublier. Pourtant, tout avait commencé par une belle matinée de printemps. Son père lui avait cousu une queue en tissu la veille, et ils étaient partis au champ de foire. Le vent était si fort qu'il avait arraché la ficelle des mains de Lucas. Avant cela, pendant le trajet en voiture, Lucas avait regardé le ciel avec impatience. Le soir, en rentrant, il a retrouvé son cerf-volant accroché à un vieux pommier, grâce à une fermière qui le lui avait rapporté.",
+    "choix": [
+      "Lucas a retrouvé son cerf-volant accroché à un pommier",
+      "Le vent a arraché la ficelle des mains de Lucas",
+      "Le père a cousu une queue en tissu pour le cerf-volant",
+      "Lucas a regardé le ciel par la fenêtre de la voiture"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le texte ne raconte pas dans l'ordre : il commence par la fin. Les expressions « la veille » et « avant cela » indiquent les moments passés, et il faut les replacer dans la bonne suite.",
+    "astuce": "Sur votre brouillon, écrivez chaque événement sur une ligne séparée, puis numérotez-les en vous aidant des mots de temps."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de personnages parlent dans la scène ? Réponds avec un chiffre.",
+    "texte": "LA BOÎTE AUX LETTRES\nPersonnages : Maxime, Jade, la voisine.\nScène : un hall d'immeuble, un matin de pluie.\nMAXIME, serrant une enveloppe : Jade, regarde ! Une lettre pour nous !\nJADE, se penchant : Elle est adressée à Papa... Et l'écriture ressemble à celle de Mamie.\nLA VOISINE, sortant de l'ascenseur : Ah, les enfants ! Votre père est déjà parti ce matin.\nMAXIME : Alors on la lui garde pour ce soir ?\nJADE, hésitante : Non, je crois qu'il vaut mieux l'ouvrir ensemble, quand il rentrera.",
+    "reponses": [
+      "3",
+      "trois"
+    ],
+    "accents": "stricts",
+    "explication": "Compte les personnes qui ont une réplique : Maxime, Jade et la voisine. Papa et Mamie sont seulement nommés, ils ne parlent pas dans la scène."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel mot du texte indique que Lucas revient à un moment plus ancien de l'histoire ?",
+    "texte": "Le cerf-volant rouge s'était envolé au-dessus de la colline, et Lucas n'arrivait pas à l'oublier. Pourtant, tout avait commencé par une belle matinée de printemps. Son père lui avait cousu une queue en tissu la veille, et ils étaient partis au champ de foire. Le vent était si fort qu'il avait arraché la ficelle des mains de Lucas. Avant cela, pendant le trajet en voiture, Lucas avait regardé le ciel avec impatience. Le soir, en rentrant, il a retrouvé son cerf-volant accroché à un vieux pommier, grâce à une fermière qui le lui avait rapporté.",
+    "choix": [
+      "Pourtant",
+      "Avant cela",
+      "Le soir",
+      "Ensuite"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les mots qui marquent le temps (avant, après, le soir, la veille) aident à suivre l'ordre des événements. « Pourtant » marque plutôt une opposition, pas un moment du passé."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le genre de ce texte ?",
+    "texte": "Un renard affamé aperçut un corbeau perché sur une branche, un fromage dans le bec. « Quelle belle voix tu dois avoir ! » lui dit-il d'un ton doucereux. Flatté, le corbeau ouvrit grand le bec pour chanter. Le fromage tomba aussitôt, et le renard le ramassa en un clin d'œil. Le corbeau, penaud, regarda son fromage disparaître tandis que le renard s'éloignait en sifflotant. « Retiens bien cette leçon, cher ami : ceux qui te flattent ont souvent un but caché. »",
+    "choix": [
+      "Un conte",
+      "Un poème",
+      "Une fable",
+      "Une pièce de théâtre"
+    ],
+    "bonneReponse": 2,
+    "explication": "Une fable est un court récit où les animaux agissent comme des personnes et qui se termine par une leçon. Ici, la phrase finale donne la leçon à retenir."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel mot ou groupe de mots montre que Théo fait attention à ne pas faire de bruit ?",
+    "texte": "Le dimanche matin, Théo se réveille avant le soleil. Il enfile son vieux pull bleu, qui sent encore la lessive, et descend l'escalier sur la pointe des pieds. Dans la cuisine, sa grand-mère Odile pétrit déjà la pâte à pain. « Tu es bien matinal, mon poussin ! » lui glisse-t-elle en clignant de l'œil. Théo sourit, car il sait qu'elle l'attend pour la promenade au marché. Pourtant, il n'a pas encore trouvé son bonnet, et il grommelle en fouillant le placard. Quand il le retrouve enfin sous le canapé, Odile rit doucement : « Le chat a dû le cacher, comme chaque semaine ! » Ils quittent la maison ensemble, et le village sent déjà le pain chaud.",
+    "choix": [
+      "sur la pointe des pieds",
+      "matinal",
+      "grommelle",
+      "un vieux pull"
+    ],
+    "bonneReponse": 0,
+    "explication": "Relis les expressions qui décrivent la façon de se déplacer : « sur la pointe des pieds » montre qu'on fait le moins de bruit possible."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Laquelle de ces phrases reformule le mieux « Théo grommelle en fouillant le placard » ?",
+    "texte": "Le dimanche matin, Théo se réveille avant le soleil. Il enfile son vieux pull bleu, qui sent encore la lessive, et descend l'escalier sur la pointe des pieds. Dans la cuisine, sa grand-mère Odile pétrit déjà la pâte à pain. « Tu es bien matinal, mon poussin ! » lui glisse-t-elle en clignant de l'œil. Théo sourit, car il sait qu'elle l'attend pour la promenade au marché. Pourtant, il n'a pas encore trouvé son bonnet, et il grommelle en fouillant le placard. Quand il le retrouve enfin sous le canapé, Odile rit doucement : « Le chat a dû le cacher, comme chaque semaine ! » Ils quittent la maison ensemble, et le village sent déjà le pain chaud.",
+    "choix": [
+      "Théo chante joyeusement en rangeant le placard",
+      "Théo ferme le placard sans faire de bruit",
+      "Théo se fâche et claque la porte du placard",
+      "Théo se plaint à voix basse en cherchant dans le placard"
+    ],
+    "bonneReponse": 3,
+    "explication": "Reformuler, c'est dire la même chose avec d'autres mots. « Grommeler » signifie se plaindre à voix basse, et « fouiller » veut dire chercher en remuant les affaires."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Qui est Théo pour Odile ?",
+    "texte": "Le dimanche matin, Théo se réveille avant le soleil. Il enfile son vieux pull bleu, qui sent encore la lessive, et descend l'escalier sur la pointe des pieds. Dans la cuisine, sa grand-mère Odile pétrit déjà la pâte à pain. « Tu es bien matinal, mon poussin ! » lui glisse-t-elle en clignant de l'œil. Théo sourit, car il sait qu'elle l'attend pour la promenade au marché. Pourtant, il n'a pas encore trouvé son bonnet, et il grommelle en fouillant le placard. Quand il le retrouve enfin sous le canapé, Odile rit doucement : « Le chat a dû le cacher, comme chaque semaine ! » Ils quittent la maison ensemble, et le village sent déjà le pain chaud.",
+    "reponses": [
+      "son petit-fils",
+      "le petit-fils",
+      "petit-fils"
+    ],
+    "accents": "stricts",
+    "explication": "Le texte dit qu'Odile est la « grand-mère » de Théo. Il faut retourner le lien : le garçon d'une grand-mère est son petit-fils (un seul mot, avec un trait d'union)."
+  }
+]
