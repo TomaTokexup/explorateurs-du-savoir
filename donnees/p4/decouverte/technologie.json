@@ -184,5 +184,35 @@
       "Conclure : l'objet est conducteur si la lampe brille"
     ],
     "explication": "On construit d'abord le circuit complet, sans l'objet. Ensuite on place l'objet à tester pour fermer le circuit, puis on observe la lampe. La conclusion vient en dernier, à partir de ce qu'on a observé."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un panneau solaire transforme la lumière du Soleil en électricité.",
+    "vrai": true,
+    "explication": "Vrai. Le panneau solaire capte la lumière du Soleil et la transforme en électricité, il est donc une source d'électricité."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la chaîne alimentaire herbe → lapin → renard, le lapin reçoit son énergie du renard.",
+    "vrai": false,
+    "explication": "Faux. L'énergie circule dans le sens des flèches : l'herbe transmet son énergie au lapin, qui la transmet ensuite au renard."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une pile produit de l'électricité.",
+    "vrai": true,
+    "explication": "Vrai. La pile contient de l'énergie chimique et la transforme en énergie électrique qui fait fonctionner la lampe ou le jouet."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour réparer un fil électrique abîmé, on peut simplement l'entourer de papier collant.",
+    "vrai": false,
+    "explication": "Faux. Un fil abîmé est dangereux : il faut le faire réparer par un adulte ou le remplacer, car le papier collant ne protège pas bien contre le choc électrique."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "L'énergie du vent est une énergie renouvelable.",
+    "vrai": true,
+    "explication": "Vrai. Le vent est sans cesse renouvelé grâce à la chaleur du Soleil, il ne s'épuise pas comme le pétrole ou le charbon."
   }
 ]

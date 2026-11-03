@@ -230,5 +230,35 @@
       "Jeanne est brûlée à Rouen"
     ],
     "explication": "En 1429, Jeanne quitte Domrémy pour rejoindre Charles VII. Elle libère Orléans, assiégé par les Anglais, puis conduit Charles VII à Reims où il est sacré roi. En 1430, elle est capturée à Compiègne, puis jugée et brûlée à Rouen en 1431."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les hommes de la Préhistoire fabriquaient des vêtements avec les peaux des animaux qu'ils chassaient.",
+    "vrai": true,
+    "explication": "Vrai. Pour se protéger du froid, les hommes préhistoriques utilisaient les peaux des animaux chassés comme vêtements."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "100 av. J.-C. est une année plus récente que 50 av. J.-C.",
+    "vrai": false,
+    "explication": "Faux. Avant J.-C., plus le nombre est grand, plus l'année est ancienne : 100 av. J.-C. est donc plus ancien que 50 av. J.-C. Sur une frise, on se rapproche de J.-C. quand le nombre diminue."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Au Moyen Âge, les seigneurs organisaient des tournois pour se divertir.",
+    "vrai": true,
+    "explication": "Vrai. Les tournois étaient des combats de chevaliers à cheval, très appréciés comme spectacle et comme loisir."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Clovis, roi des Francs, est baptisé chrétien à la fin du Ve siècle.",
+    "vrai": true,
+    "explication": "Vrai. Clovis est le premier roi des Francs à se convertir au christianisme, à la fin du Ve siècle."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans le système féodal, les paysans serfs pouvaient quitter leurs terres quand ils le voulaient.",
+    "vrai": false,
+    "explication": "Faux. Les serfs étaient attachés à la terre du seigneur : ils devaient demander la permission pour la quitter."
   }
 ]

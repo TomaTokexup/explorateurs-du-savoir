@@ -152,5 +152,35 @@
     "enonce": "Manger beaucoup de sucreries est bon pour la santé.",
     "vrai": false,
     "explication": "Faux. Les sucreries donnent beaucoup d'énergie mais peu de nutriments utiles. En manger trop peut abîmer les dents et favoriser la prise de poids. Il faut les consommer de temps en temps, avec des fruits, des légumes et des féculents."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une personne myope voit mal les objets éloignés.",
+    "vrai": true,
+    "explication": "Vrai. Le myope voit net de près, mais les objets éloignés paraissent flous. Des lunettes corrigent ce problème."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "La pupille est la partie colorée de l'œil.",
+    "vrai": false,
+    "explication": "Faux. La pupille est le trou noir au centre de l'œil, qui laisse entrer la lumière. La partie colorée s'appelle l'iris."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Manger des fruits et des légumes chaque jour est bon pour la santé.",
+    "vrai": true,
+    "explication": "Vrai. Les fruits et légumes apportent des vitamines et des fibres, qui aident le corps à grandir et à bien fonctionner."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "La digestion des aliments se fait surtout dans le gros intestin.",
+    "vrai": false,
+    "explication": "Faux. La digestion se fait surtout dans l'intestin grêle, où les nutriments passent dans le sang. Le gros intestin récupère surtout l'eau."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Certains feux pour piétons émettent un son pour aider les personnes aveugles à traverser.",
+    "vrai": true,
+    "explication": "Vrai. Ces feux sonores font un bip ou un tic-tac quand le bonhomme est vert, ce qui permet de traverser en sécurité."
   }
 ]

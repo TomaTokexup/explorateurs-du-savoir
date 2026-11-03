@@ -188,5 +188,36 @@
       "La forêt tropicale"
     ],
     "explication": "La toundra se trouve au nord, dans les régions les plus froides. La taïga, forêt de conifères, est plus au sud, où il fait moins froid. La forêt tropicale est proche de l'équateur, où il fait chaud toute l'année."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les champignons et les vers de terre sont des décomposeurs : ils transforment les feuilles mortes en terre.",
+    "vrai": true,
+    "explication": "Vrai. Les décomposeurs mangent la matière morte (feuilles, branches, animaux morts) et la transforment peu à peu en terre, qui nourrira ensuite les plantes."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Des nuages gris, bas et épais annoncent souvent de la pluie.",
+    "vrai": true,
+    "explication": "Vrai. Pour prévoir le temps, on regarde les nuages : des nuages gris et bas, chargés d'eau, annoncent souvent de la pluie."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les régions proches de l'équateur sont plus froides que les régions proches des pôles.",
+    "vrai": false,
+    "explication": "Faux. Près de l'équateur, il fait chaud toute l'année, alors que près des pôles, il fait très froid."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Jeter ses piles usagées à la poubelle de la maison ne pose aucun problème pour la nature.",
+    "vrai": false,
+    "explication": "Faux. Les piles contiennent des métaux qui polluent le sol et l'eau : il faut les déposer dans un point de collecte spécial."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "L'ONU a fixé 17 objectifs de développement durable à atteindre d'ici 2030.",
+    "vrai": true,
+    "explication": "Vrai. Ces 17 objectifs mondiaux, appelés Objectifs de développement durable, visent à protéger la planète et à améliorer la vie des humains d'ici 2030.",
+    "defi": true
   }
 ]
