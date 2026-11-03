@@ -118,5 +118,79 @@
     ],
     "bonneReponse": 2,
     "explication": "Le vassal promet sa fidélité et son aide à son suzerain ; en échange, il reçoit une terre, le fief."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque traité ou accord à sa date.",
+    "paires": [
+      [
+        "1951",
+        "Traité de Paris : création de la CECA"
+      ],
+      [
+        "1957",
+        "Traité de Rome : création de la CEE"
+      ],
+      [
+        "1985",
+        "Accord de Schengen : libre circulation"
+      ],
+      [
+        "1992",
+        "Traité de Maastricht : création de l'UE"
+      ]
+    ],
+    "explication": "Un traité est un accord signé entre pays pour construire l'Europe. Chaque traité marque une étape : la CECA (charbon et acier) est la première organisation européenne, puis la CEE (marché commun) et enfin l'Union européenne."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque monument célèbre au pays d'Europe où il se trouve.",
+    "paires": [
+      [
+        "La tour Eiffel",
+        "France"
+      ],
+      [
+        "Le Colisée",
+        "Italie"
+      ],
+      [
+        "La porte de Brandebourg",
+        "Allemagne"
+      ],
+      [
+        "L'Atomium",
+        "Belgique"
+      ],
+      [
+        "La Sagrada Família",
+        "Espagne"
+      ]
+    ],
+    "explication": "Chaque pays d'Europe a ses monuments, qui font partie de sa culture : la tour Eiffel à Paris, le Colisée à Rome, la porte de Brandebourg à Berlin, l'Atomium à Bruxelles et la Sagrada Família à Barcelone."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes d'un vote, de la première à la dernière.",
+    "elements": [
+      "S'inscrire sur la liste électorale",
+      "Choisir son bulletin dans l'isoloir",
+      "Glisser l'enveloppe dans l'urne",
+      "Compter les voix après la fermeture du bureau de vote"
+    ],
+    "explication": "Pour voter, il faut d'abord être inscrit sur la liste électorale. Ensuite, on choisit son bulletin à l'isoloir, puis on met l'enveloppe dans l'urne. À la fin, on compte les voix : c'est le dépouillement."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces grands changements de l'histoire, du plus ancien au plus récent.",
+    "elements": [
+      "Christophe Colomb arrive en Amérique",
+      "La Révolution française commence",
+      "La Première Guerre mondiale éclate",
+      "La Seconde Guerre mondiale se termine",
+      "Le mur de Berlin tombe",
+      "L'euro arrive dans les porte-monnaie"
+    ],
+    "explication": "Christophe Colomb arrive en Amérique en 1492 et la Révolution française commence en 1789. La Première Guerre mondiale éclate en 1914, la Seconde se termine en 1945. Le mur de Berlin tombe en 1989, et les pièces et billets en euros arrivent en 2002."
   }
 ]

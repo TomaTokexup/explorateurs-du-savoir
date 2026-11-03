@@ -120,5 +120,69 @@
     ],
     "bonneReponse": 1,
     "explication": "Le verre et le papier peuvent être recyclés : on les transforme pour fabriquer de nouvelles bouteilles ou de nouveaux papiers. Cela évite de gaspiller les matières premières."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque situation à le risque qu'elle présente.",
+    "paires": [
+      [
+        "Mettre les mains mouillées sur une prise",
+        "Choc électrique"
+      ],
+      [
+        "Un appareil qui sent le brûlé",
+        "Risque d'incendie"
+      ],
+      [
+        "Une rallonge cachée sous un tapis",
+        "Surchauffe du câble"
+      ]
+    ],
+    "explication": "L'eau est conductrice : elle peut faire passer le courant jusqu'à toi. Un appareil qui sent le brûlé peut prendre feu. Un câble caché sous un tapis ne peut pas refroidir et chauffe trop. Dans tous les cas, il faut prévenir un adulte."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque appareil électrique à la forme d'énergie qu'il produit principalement.",
+    "paires": [
+      [
+        "Grille-pain",
+        "Chaleur"
+      ],
+      [
+        "Lampe",
+        "Lumière"
+      ],
+      [
+        "Ventilateur",
+        "Mouvement"
+      ],
+      [
+        "Haut-parleur",
+        "Son"
+      ]
+    ],
+    "explication": "Un appareil électrique transforme l'énergie électrique en une autre forme d'énergie utile. Le grille-pain chauffe, la lampe éclaire, le ventilateur fait tourner ses pales et le haut-parleur fait du bruit."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes de la chaîne d'énergie qui amène l'électricité d'un barrage jusqu'aux maisons, dans l'ordre des étapes.",
+    "elements": [
+      "L'eau d'un barrage tombe et fait tourner une turbine",
+      "La turbine fait tourner un générateur",
+      "Le générateur produit de l'électricité",
+      "L'électricité arrive jusqu'aux maisons par les fils"
+    ],
+    "explication": "L'énergie de l'eau qui tombe met la turbine en mouvement. La turbine entraîne le générateur, qui transforme ce mouvement en électricité. Celle-ci circule ensuite dans les fils jusqu'aux maisons. Chaque étape dépend de la précédente."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes d'une expérience pour savoir si un objet est conducteur, dans l'ordre où on les réalise.",
+    "elements": [
+      "Monter un circuit avec une pile, des fils et une lampe",
+      "Placer l'objet à tester entre les deux fils",
+      "Observer si la lampe brille",
+      "Conclure : l'objet est conducteur si la lampe brille"
+    ],
+    "explication": "On construit d'abord le circuit complet, sans l'objet. Ensuite on place l'objet à tester pour fermer le circuit, puis on observe la lampe. La conclusion vient en dernier, à partir de ce qu'on a observé."
   }
 ]

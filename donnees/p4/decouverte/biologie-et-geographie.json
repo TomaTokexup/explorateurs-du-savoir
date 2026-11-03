@@ -126,5 +126,67 @@
     "bonneReponse": 0,
     "explication": "Les fjords sont des vallées creusées par les glaciers, puis remplies par la mer. On les trouve surtout sur la côte ouest de la Norvège.",
     "defi": true
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque déchet au bac ou au conteneur où on le jette pour le recycler.",
+    "paires": [
+      [
+        "Bouteille en plastique",
+        "Bac jaune"
+      ],
+      [
+        "Pot en verre",
+        "Conteneur à verre"
+      ],
+      [
+        "Épluchures de légumes",
+        "Composteur"
+      ]
+    ],
+    "explication": "On trie les déchets pour pouvoir les recycler : les emballages en plastique, en métal, en carton ou en papier vont dans le bac jaune, le verre dans un conteneur à verre, et les restes de légumes dans un composteur, où ils deviennent un engrais pour les plantes."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque instrument météo à ce qu'il mesure.",
+    "paires": [
+      [
+        "Thermomètre",
+        "La température de l'air"
+      ],
+      [
+        "Pluviomètre",
+        "La quantité de pluie tombée"
+      ],
+      [
+        "Anémomètre",
+        "La vitesse du vent"
+      ],
+      [
+        "Girouette",
+        "La direction du vent"
+      ]
+    ],
+    "explication": "Chaque instrument a un rôle précis : le thermomètre mesure la température en degrés Celsius, le pluviomètre recueille l'eau de pluie en millimètres, l'anémomètre mesure la vitesse du vent et la girouette indique d'où il vient."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces êtres vivants dans l'ordre de la chaîne alimentaire, en commençant par celui qui fabrique sa nourriture.",
+    "elements": [
+      "Le blé",
+      "Le campagnol",
+      "La chouette"
+    ],
+    "explication": "Le blé fabrique sa nourriture grâce à la lumière du Soleil, donc il est au début de la chaîne. Le campagnol mange le blé, puis la chouette mange le campagnol : chaque flèche se lit « est mangé par »."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces trois paysages du plus froid au plus chaud.",
+    "elements": [
+      "La toundra",
+      "La taïga",
+      "La forêt tropicale"
+    ],
+    "explication": "La toundra se trouve au nord, dans les régions les plus froides. La taïga, forêt de conifères, est plus au sud, où il fait moins froid. La forêt tropicale est proche de l'équateur, où il fait chaud toute l'année."
   }
 ]

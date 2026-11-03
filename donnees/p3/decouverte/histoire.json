@@ -118,5 +118,62 @@
     ],
     "accents": "toleres",
     "explication": "On parle d'art rupestre ou d'art pariétal : ce sont des œuvres réalisées sur les roches des grottes."
+  },
+  {
+    "type": "association",
+    "enonce": "Les archéologues ont retrouvé ces outils préhistoriques. Relie chaque outil à ce qu'il servait à faire.",
+    "paires": [
+      [
+        "Silex taillé",
+        "Couper la viande"
+      ],
+      [
+        "Aiguille en os",
+        "Coudre des vêtements en peau"
+      ],
+      [
+        "Harpon",
+        "Attraper des poissons"
+      ],
+      [
+        "Hache polie",
+        "Abattre des arbres"
+      ]
+    ],
+    "explication": "Les hommes préhistoriques fabriquaient leurs outils avec les matières qu'ils trouvaient autour d'eux, selon leurs besoins : manger, s'habiller, pêcher ou construire."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque élément du patrimoine à ce qu'il nous apprend sur le passé.",
+    "paires": [
+      [
+        "Un vieux château",
+        "Comment on construisait autrefois"
+      ],
+      [
+        "Une fête traditionnelle",
+        "Les coutumes de notre région"
+      ],
+      [
+        "Une grotte ornée",
+        "La vie des hommes préhistoriques"
+      ],
+      [
+        "Un vieux livre ancien",
+        "Ce qu'on écrivait et pensait autrefois"
+      ]
+    ],
+    "explication": "Le patrimoine garde des traces du passé. C'est pour cela qu'il faut le protéger : une fois détruit, on ne peut pas le retrouver."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces âges de la Préhistoire, du plus ancien au plus récent.",
+    "elements": [
+      "L'âge de la pierre taillée",
+      "L'âge de la pierre polie",
+      "L'âge du bronze",
+      "L'âge du fer"
+    ],
+    "explication": "Les premiers hommes taillaient la pierre en la frappant. Plus tard, ils ont appris à la polir pour obtenir des outils plus solides. Ensuite, ils ont découvert les métaux : d'abord le bronze, un mélange de cuivre et d'étain, puis le fer, plus dur mais plus difficile à travailler."
   }
 ]

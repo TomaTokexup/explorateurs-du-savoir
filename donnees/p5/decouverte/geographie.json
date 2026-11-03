@@ -123,5 +123,65 @@
     "explication": "Les Pays-Bas sont dans l'hémisphère nord, entre le tropique et le cercle polaire : c'est la zone tempérée, avec quatre saisons bien marquées.",
     "image": "images/p5/decouverte/zones-climatiques-4-2-1-5.svg",
     "alt": "Schéma : le globe et ses grandes zones climatiques, avec 4 parties numérotées"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque planète à sa particularité.",
+    "paires": [
+      [
+        "Mars",
+        "la planète rouge"
+      ],
+      [
+        "Saturne",
+        "entourée d'anneaux"
+      ],
+      [
+        "Vénus",
+        "la planète la plus chaude"
+      ]
+    ],
+    "explication": "Mars paraît rouge à cause de la poussière de fer rouillée qui couvre sa surface. Saturne est célèbre pour ses anneaux, formés de glace et de roches. Vénus est la planète la plus chaude, à environ 460 °C, à cause de son épaisse atmosphère qui retient la chaleur."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque phénomène naturel à sa cause.",
+    "paires": [
+      [
+        "Séisme",
+        "mouvement des plaques de la croûte"
+      ],
+      [
+        "Tempête",
+        "vents très violents"
+      ],
+      [
+        "Inondation",
+        "pluies très fortes, rivière qui déborde"
+      ]
+    ],
+    "explication": "Un séisme est une secousse du sol provoquée par le mouvement des plaques de la croûte terrestre. Une tempête est un temps très agité avec des vents forts, et une inondation arrive quand l'eau envahit des terres qui sont normalement sèches."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes d'une inondation dans l'ordre, de la première à la dernière.",
+    "elements": [
+      "De fortes pluies tombent pendant plusieurs jours",
+      "Le sol ne peut plus absorber l'eau",
+      "La rivière déborde de son lit",
+      "L'eau envahit les rues et les champs"
+    ],
+    "explication": "Les pluies d'abord apportent beaucoup d'eau. Quand le sol est saturé, l'eau ne s'infiltre plus et s'accumule. La rivière déborde alors et l'eau envahit les terres autour."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes de la formation d'un séisme dans l'ordre, de la première à la dernière.",
+    "elements": [
+      "Les plaques de la croûte terrestre bougent lentement",
+      "Les roches se coincent et se déforment peu à peu",
+      "Les roches cassent brusquement",
+      "Le sol tremble : c'est le séisme"
+    ],
+    "explication": "Les plaques poussent les roches, qui se déforment sans bouger au début. Quand la tension devient trop forte, les roches cassent d'un coup et libèrent l'énergie sous forme de secousses."
   }
 ]

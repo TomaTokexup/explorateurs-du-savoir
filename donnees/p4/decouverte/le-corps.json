@@ -105,5 +105,16 @@
     ],
     "bonneReponse": 0,
     "explication": "La pupille est le trou noir au centre de l'œil. Elle se rétrécit quand il y a beaucoup de lumière, pour protéger la rétine, et s'agrandit dans le noir pour voir mieux."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces étapes dans l'ordre du trajet de la lumière, de l'entrée dans l'œil jusqu'au cerveau.",
+    "elements": [
+      "La lumière entre dans l'œil par la cornée",
+      "Le cristallin fait une image nette",
+      "L'image se forme sur la rétine",
+      "La rétine envoie un message au cerveau par le nerf optique"
+    ],
+    "explication": "La lumière traverse d'abord la cornée, puis le cristallin règle la netteté. L'image se forme ensuite sur la rétine. Enfin, la rétine transmet l'information au cerveau par le nerf optique, ce qui nous permet de voir."
   }
 ]

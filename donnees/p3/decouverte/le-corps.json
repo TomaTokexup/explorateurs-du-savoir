@@ -121,5 +121,52 @@
     "defi": true,
     "image": "images/p3/decouverte/oeil-coupe-2-3-4-5.svg",
     "alt": "Schéma : un œil vu en coupe, avec 4 parties numérotées"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque os à sa fonction.",
+    "paires": [
+      [
+        "Le crâne",
+        "Protège le cerveau"
+      ],
+      [
+        "Les côtes",
+        "Protègent le cœur et les poumons"
+      ],
+      [
+        "La colonne vertébrale",
+        "Soutient le corps, protège la moelle"
+      ],
+      [
+        "Le bassin",
+        "Soutient les organes du ventre"
+      ]
+    ],
+    "explication": "Les os ne servent pas seulement à tenir le corps debout : ils protègent aussi certains organes fragiles. Le crâne est une boîte qui entoure le cerveau, et les côtes forment une cage autour du cœur et des poumons."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces étapes dans l'ordre pour décrire le chemin du son, depuis l'air jusqu'au cerveau.",
+    "elements": [
+      "Le pavillon capte le son",
+      "Le conduit auditif guide le son",
+      "Le tympan vibre",
+      "Les osselets transmettent la vibration",
+      "La cochlée transforme la vibration en signal",
+      "Le nerf auditif envoie le signal au cerveau"
+    ],
+    "explication": "Le son entre d'abord par le pavillon, qui fonctionne comme un entonnoir, puis suit le conduit auditif jusqu'au tympan. La vibration passe ensuite par les osselets et la cochlée avant d'être envoyée au cerveau par le nerf auditif."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces étapes dans l'ordre pour expliquer comment tu lèves la main.",
+    "elements": [
+      "Le cerveau envoie un ordre au muscle",
+      "Le muscle se contracte et raccourcit",
+      "Le tendon tire sur l'os",
+      "L'os tourne autour de l'articulation"
+    ],
+    "explication": "Tout commence dans le cerveau, qui décide de bouger. Le muscle se raccourcit alors et tire sur l'os grâce au tendon, ce qui fait tourner l'os autour de l'articulation."
   }
 ]

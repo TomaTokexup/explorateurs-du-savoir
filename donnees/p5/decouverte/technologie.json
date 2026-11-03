@@ -121,5 +121,70 @@
     ],
     "accents": "toleres",
     "explication": "Un levier tourne autour d'un point d'appui (ou pivot) : c'est la petite pierre sous la barre, ou l'axe au milieu de la bascule."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque objet au mécanisme qui rend l'effort plus facile.",
+    "paires": [
+      [
+        "Une brouette",
+        "Un levier"
+      ],
+      [
+        "Le pédalier et la chaîne d'un vélo",
+        "Des engrenages"
+      ],
+      [
+        "Une rampe pour charger un camion",
+        "Un plan incliné"
+      ]
+    ],
+    "explication": "La brouette est un levier : la roue sert de point d'appui, et on soulève une lourde charge en tirant sur les poignées. Sur un vélo, les roues dentées et la chaîne forment des engrenages qui transmettent le mouvement des pédales. Une rampe est un plan incliné : on monte la charge petit à petit au lieu de la soulever d'un coup."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque situation à la force qui l'explique.",
+    "paires": [
+      [
+        "Une pomme tombe de l'arbre",
+        "La pesanteur"
+      ],
+      [
+        "Un vélo ralentit quand on freine",
+        "Le frottement"
+      ],
+      [
+        "Un clou se colle à un aimant",
+        "La force magnétique"
+      ],
+      [
+        "Un bateau flotte sur l'eau",
+        "La poussée de l'eau"
+      ]
+    ],
+    "explication": "La pesanteur attire tous les objets vers le sol. Le frottement des patins sur la roue ralentit le vélo. L'aimant attire le clou en fer par une force magnétique. L'eau pousse le bateau vers le haut, ce qui l'empêche de couler."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Pour déplacer une caisse lourde avec des rouleaux, range les étapes dans l'ordre, de la première à la dernière.",
+    "elements": [
+      "Poser des rouleaux sous la caisse",
+      "Pousser la caisse",
+      "Reprendre le rouleau de l'arrière et le mettre devant",
+      "Pousser à nouveau la caisse"
+    ],
+    "explication": "On commence par poser les rouleaux, sinon la caisse ne roule pas. Puis on pousse. Quand un rouleau sort par l'arrière, on le remet devant pour que la caisse continue à rouler."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Une balle est lancée vers le haut, puis elle retombe. Range les étapes dans l'ordre, de la première à la dernière.",
+    "elements": [
+      "La main lance la balle vers le haut",
+      "La balle monte de plus en plus lentement",
+      "La balle s'arrête un instant tout en haut",
+      "La balle redescend de plus en plus vite",
+      "La balle touche le sol"
+    ],
+    "explication": "Pendant tout le mouvement, la pesanteur tire la balle vers le bas. À la montée, elle la freine jusqu'à l'arrêter tout en haut. Ensuite, elle la fait redescendre de plus en plus vite jusqu'au sol."
   }
 ]

@@ -120,5 +120,73 @@
     ],
     "accents": "toleres",
     "explication": "Nous inspirons de l'air riche en oxygène et nous expirons du gaz carbonique (le dioxyde de carbone), produit par nos cellules."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque organe de la respiration à son rôle.",
+    "paires": [
+      [
+        "Les fosses nasales",
+        "Réchauffent et filtrent l'air"
+      ],
+      [
+        "La trachée",
+        "Conduit l'air vers les bronches"
+      ],
+      [
+        "Le diaphragme",
+        "Muscle qui aide à faire entrer l'air"
+      ],
+      [
+        "Les alvéoles",
+        "Petits sacs où se fait l'échange de gaz"
+      ]
+    ],
+    "explication": "L'air entre par le nez, qui le réchauffe et le filtre. Il descend ensuite dans la trachée, puis dans les bronches. Le diaphragme, un muscle sous les poumons, se contracte pour aider l'air à entrer. Les alvéoles, au bout des bronches, sont les endroits où l'oxygène passe dans le sang."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque élément du sang à son rôle.",
+    "paires": [
+      [
+        "Les globules rouges",
+        "Transportent l'oxygène"
+      ],
+      [
+        "Les globules blancs",
+        "Défendent le corps contre les microbes"
+      ],
+      [
+        "Les plaquettes",
+        "Aident à arrêter les saignements"
+      ],
+      [
+        "Le plasma",
+        "Transporte les nutriments et les déchets"
+      ]
+    ],
+    "explication": "Le sang est composé de plusieurs éléments qui ont chacun un travail. Les globules rouges prennent l'oxygène dans les poumons, les globules blancs luttent contre les microbes, et les plaquettes bouchent les petites coupures."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces vaisseaux sanguins du plus large au plus fin, dans l'ordre.",
+    "elements": [
+      "L'aorte",
+      "Une artère",
+      "Une artériole",
+      "Un capillaire"
+    ],
+    "explication": "Le sang part du cœur dans un gros vaisseau, l'aorte. Il se divise ensuite en vaisseaux de plus en plus petits, jusqu'aux capillaires, si fins que les globules rouges passent un par un."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces étapes de l'inspiration dans l'ordre, du début à la fin.",
+    "elements": [
+      "Le diaphragme se contracte et descend.",
+      "La cage thoracique s'agrandit.",
+      "La pression diminue dans les poumons.",
+      "L'air entre dans les poumons."
+    ],
+    "explication": "Pendant une inspiration, le muscle du diaphragme se contracte et descend, ce qui agrandit la cage thoracique. Il y a alors moins de pression dans les poumons, et l'air de l'extérieur y entre pour rétablir l'équilibre."
   }
 ]

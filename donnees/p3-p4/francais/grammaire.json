@@ -114,5 +114,97 @@
     ],
     "accents": "stricts",
     "explication": "Pose la question « Qui est-ce qui promène le chien ? » : Lucas et Emma. Le sujet est formé de deux noms, c'est pourquoi le verbe est au pluriel. « Ce matin » est un complément de temps, pas le sujet."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot interrogatif à ce qu'il permet de demander.",
+    "paires": [
+      [
+        "où",
+        "le lieu"
+      ],
+      [
+        "quand",
+        "le moment"
+      ],
+      [
+        "comment",
+        "la manière"
+      ],
+      [
+        "pourquoi",
+        "la raison"
+      ]
+    ],
+    "explication": "« Où » demande un endroit, « quand » demande un moment, « comment » demande la manière de faire quelque chose et « pourquoi » demande la raison. Exemple : « Où vas-tu ? » – « Au parc. »"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque connecteur à ce qu'il permet de faire.",
+    "paires": [
+      [
+        "et",
+        "ajouter une idée"
+      ],
+      [
+        "car",
+        "donner la raison"
+      ],
+      [
+        "alors",
+        "donner la conséquence"
+      ],
+      [
+        "ou",
+        "proposer un choix"
+      ]
+    ],
+    "explication": "« Et » ajoute une idée : « Il pleut et il fait froid. » « Car » explique pourquoi : « Je reste, car il pleut. » « Alors » annonce la conséquence : « Il pleut, alors je prends mon parapluie. » « Ou » propose un choix : « Tu veux du thé ou du lait ? »"
+  },
+  {
+    "type": "association",
+    "enonce": "Le nom « chien » est complété de trois façons. Relie chaque groupe du nom à ce qui complète le nom.",
+    "paires": [
+      [
+        "le chien noir",
+        "un adjectif"
+      ],
+      [
+        "le chien de mon voisin",
+        "un complément du nom"
+      ],
+      [
+        "le chien qui dort",
+        "une proposition relative"
+      ]
+    ],
+    "explication": "« Noir » est un adjectif : il dit comment est le chien. « De mon voisin » est un complément du nom : il commence par « de ». « Qui dort » est une proposition relative : elle commence par « qui » et contient un verbe."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à sa classe grammaticale.",
+    "paires": [
+      [
+        "maison",
+        "un nom commun"
+      ],
+      [
+        "Lucas",
+        "un nom propre"
+      ],
+      [
+        "rapide",
+        "un adjectif"
+      ],
+      [
+        "chanter",
+        "un verbe"
+      ],
+      [
+        "ces",
+        "un déterminant"
+      ]
+    ],
+    "explication": "« Maison » désigne une chose : c'est un nom commun. « Lucas » est le prénom d'une personne précise : c'est un nom propre, avec une majuscule. « Rapide » dit comment est quelque chose : c'est un adjectif. « Chanter » est une action à l'infinitif : c'est un verbe. « Ces » se place devant un nom : c'est un déterminant."
   }
 ]

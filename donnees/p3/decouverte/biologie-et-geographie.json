@@ -95,5 +95,69 @@
     "defi": true,
     "image": "images/p3/decouverte/chaine-19b63766.svg",
     "alt": "Une chaîne : Feuille → Chenille → Mésange → une case avec un point d'interrogation"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque exemple d'eau à son état.",
+    "paires": [
+      [
+        "Un glaçon",
+        "État solide"
+      ],
+      [
+        "L'eau d'une rivière",
+        "État liquide"
+      ],
+      [
+        "La vapeur d'eau dans l'air",
+        "État gazeux"
+      ]
+    ],
+    "explication": "L'eau peut être solide (glace, glaçon), liquide (rivière, mer, pluie) ou gazeuse (vapeur d'eau invisible dans l'air). Ces trois états sont à connaître pour comprendre le cycle de l'eau."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque service de la ville à ce qu'on y fait.",
+    "paires": [
+      [
+        "Bibliothèque",
+        "On y emprunte des livres"
+      ],
+      [
+        "Pharmacie",
+        "On y achète des médicaments"
+      ],
+      [
+        "Poste",
+        "On y envoie des lettres et des colis"
+      ],
+      [
+        "Hôpital",
+        "On y soigne les malades"
+      ]
+    ],
+    "explication": "Une ville offre des services utiles aux habitants : la bibliothèque prête des livres, la pharmacie vend des médicaments, la poste fait partir le courrier et l'hôpital soigne les personnes malades."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Remets dans l'ordre la vie d'une plante, à partir de la graine. Range les étiquettes de haut en bas.",
+    "elements": [
+      "La graine est semée dans la terre.",
+      "La graine germe et sort une petite tige.",
+      "La jeune plante grandit et ses feuilles se développent.",
+      "La plante adulte porte des fleurs."
+    ],
+    "explication": "Une plante commence toujours par une graine semée dans la terre. Elle germe, puis devient une jeune plante qui grandit, et enfin une plante adulte qui peut fleurir. On ne peut pas inverser ces étapes : une graine ne peut pas germer avant d'être semée."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Remets dans l'ordre les étapes du cycle de l'eau, en partant de l'évaporation de l'eau de la mer. Range les étiquettes de haut en bas.",
+    "elements": [
+      "L'eau de la mer s'évapore.",
+      "La vapeur d'eau se condense en nuages.",
+      "Il pleut ou il neige (précipitations).",
+      "L'eau ruisselle jusqu'à la mer."
+    ],
+    "explication": "Le Soleil chauffe l'eau de la mer, qui s'évapore et monte dans l'air. En refroidissant, la vapeur se condense en petites gouttes qui forment les nuages. Ces gouttes tombent sous forme de précipitations, puis l'eau ruisselle vers les rivières et revient à la mer, ce qui recommence le cycle."
   }
 ]

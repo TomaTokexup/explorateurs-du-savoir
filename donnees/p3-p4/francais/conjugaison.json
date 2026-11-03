@@ -185,5 +185,51 @@
       "ils vont"
     ],
     "explication": "On récite toujours la conjugaison dans le même ordre : je, tu, il (elle, on), nous, vous, ils (elles). Aller est irrégulier : je vais, tu vas, il va, nous allons, vous allez, ils vont."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque pronom à la bonne forme du verbe « avoir » au présent.",
+    "paires": [
+      [
+        "je",
+        "ai"
+      ],
+      [
+        "tu",
+        "as"
+      ],
+      [
+        "il",
+        "a"
+      ],
+      [
+        "nous",
+        "avons"
+      ]
+    ],
+    "explication": "Au présent, « avoir » change beaucoup : j'ai, tu as, il a, nous avons. Repère le pronom sujet, puis retrouve la forme qui lui correspond."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque verbe à l'infinitif à son participe passé, celui qu'on utilise avec « avoir » au passé composé.",
+    "paires": [
+      [
+        "manger",
+        "mangé"
+      ],
+      [
+        "finir",
+        "fini"
+      ],
+      [
+        "prendre",
+        "pris"
+      ],
+      [
+        "faire",
+        "fait"
+      ]
+    ],
+    "explication": "Les verbes du 1er groupe (en -er) ont un participe passé en -é : manger → mangé. Les verbes du 2e groupe (en -ir) ont un participe en -i : finir → fini. Les verbes du 3e groupe sont irréguliers : prendre → pris, faire → fait. Il faut les apprendre par cœur."
   }
 ]

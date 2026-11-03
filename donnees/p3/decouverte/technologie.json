@@ -122,5 +122,66 @@
     ],
     "accents": "toleres",
     "explication": "Le tri consiste à mettre chaque déchet dans le bon conteneur : le papier dans le conteneur papier, le verre dans le conteneur à verre. C'est la première étape du recyclage."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes dans l'ordre pour fabriquer du papier neuf à partir de vieux journaux.",
+    "elements": [
+      "Les vieux journaux sont jetés dans le bac de tri.",
+      "Le camion emmène le papier au centre de tri.",
+      "Le papier est mélangé à de l'eau pour faire une pâte.",
+      "La pâte est étalée et séchée pour faire du papier neuf."
+    ],
+    "explication": "On commence par jeter les journaux dans le bac, puis on les transporte, on les transforme en pâte à papier et enfin on fabrique de nouvelles feuilles. Chaque étape a besoin de la précédente : on ne peut pas faire de la pâte avant d'avoir ramassé le papier."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque déchet recyclé au produit neuf qu'on peut en fabriquer.",
+    "paires": [
+      [
+        "Vieux journaux",
+        "Boîtes en carton"
+      ],
+      [
+        "Bouteilles en plastique",
+        "Pulls en laine polaire"
+      ],
+      [
+        "Canettes en aluminium",
+        "Nouvelles canettes"
+      ]
+    ],
+    "explication": "Les matières recyclées servent à fabriquer de nouveaux produits : les vieux papiers deviennent du carton, les bouteilles en plastique peuvent devenir des pulls en laine polaire, et les canettes en aluminium servent à faire de nouvelles canettes. On recycle donc sans jeter la matière."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes dans l'ordre pour recycler une bouteille en plastique.",
+    "elements": [
+      "La bouteille vide est jetée dans le bac jaune.",
+      "Le camion emmène les bouteilles au centre de tri.",
+      "Les bouteilles sont broyées en petits morceaux.",
+      "Les morceaux sont fondus puis transformés en granulés.",
+      "Les granulés servent à fabriquer de nouveaux objets."
+    ],
+    "explication": "La bouteille doit d'abord être collectée et transportée au centre de tri. Ensuite, on la broie, puis on la fait fondre pour obtenir des granulés, qui serviront à fabriquer de nouveaux objets. On ne peut pas fondre une bouteille entière sans la broyer avant."
+  },
+  {
+    "type": "association",
+    "enonce": "On approche le pôle nord d'un aimant de chaque objet. Relie chaque objet à ce qui se passe.",
+    "paires": [
+      [
+        "Un trombone en fer",
+        "Il est attiré"
+      ],
+      [
+        "Une gomme",
+        "Il ne se passe rien"
+      ],
+      [
+        "Le pôle nord d'un autre aimant",
+        "Il est repoussé"
+      ]
+    ],
+    "explication": "Un aimant attire les objets en fer, comme un trombone, mais pas une gomme, qui n'est pas en métal. Entre deux aimants, deux pôles pareils (nord et nord) se repoussent, alors que deux pôles différents s'attirent."
   }
 ]

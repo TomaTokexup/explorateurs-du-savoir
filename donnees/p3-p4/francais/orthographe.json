@@ -111,5 +111,58 @@
     "accents": "stricts",
     "explication": "Deux sujets réunis (Léa et Tom) forment un sujet pluriel, donc le verbe prend la terminaison -ent à la 3e personne du pluriel. Le verbe s'accorde avec le sujet ils : ils jouent.",
     "astuce": "Dis la phrase en remplaçant « Léa et Tom » par « ils », puis écris le verbe avec ce pronom."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque phrase au mot qui complète le trou.",
+    "paires": [
+      [
+        "Tu veux du thé … du lait ?",
+        "ou"
+      ],
+      [
+        "Je ne sais pas … il habite.",
+        "où"
+      ],
+      [
+        "Elle range … chambre.",
+        "sa"
+      ],
+      [
+        "Je n'aime pas … !",
+        "ça"
+      ]
+    ],
+    "explication": "« Ou » sans accent indique un choix : on peut dire « ou bien ». « Où » avec un accent indique un lieu. « Sa » est un déterminant : on peut le remplacer par « ma » (ma chambre). « Ça » est un pronom : on peut le remplacer par « cela » (je n'aime pas cela)."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris les deux adjectifs entre parenthèses au féminin : « Cette chatte est … et … (doux, gentil). »",
+    "reponses": [
+      "douce et gentille"
+    ],
+    "accents": "stricts",
+    "explication": "Ces deux adjectifs ne suivent pas la règle simple du -e : « doux » devient « douce » (le -x est remplacé par -ce) et « gentil » double son -l : « gentille »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris ce nom au pluriel : un prix → des …",
+    "reponses": [
+      "prix"
+    ],
+    "accents": "stricts",
+    "explication": "Les noms qui se terminent déjà par -s, -x ou -z ne changent pas au pluriel : un prix, des prix ; une souris, des souris ; un nez, des nez."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces mots ne change jamais, même dans une phrase au pluriel ?",
+    "choix": [
+      "content",
+      "rouge",
+      "toujours",
+      "petit"
+    ],
+    "bonneReponse": 2,
+    "explication": "« Toujours » est un mot invariable : il s'écrit toujours de la même façon (ils sont toujours là). Les adjectifs, eux, s'accordent : contents, rouges, petits. D'autres mots invariables sont à connaître par cœur : souvent, jamais, beaucoup, très, avec…"
   }
 ]

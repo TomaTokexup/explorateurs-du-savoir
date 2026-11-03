@@ -114,5 +114,74 @@
     ],
     "accents": "stricts",
     "explication": "« Ne … jamais » veut dire « pas une seule fois »."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque verbe à ce qu'il veut dire.",
+    "paires": [
+      [
+        "chuchoter",
+        "parler très doucement"
+      ],
+      [
+        "hurler",
+        "crier très fort"
+      ],
+      [
+        "flâner",
+        "se promener sans se presser"
+      ],
+      [
+        "bondir",
+        "sauter d'un coup, en avant"
+      ]
+    ],
+    "explication": "Ces verbes ont chacun une nuance précise : chuchoter, c'est parler à voix très basse ; hurler, c'est crier très fort ; flâner, c'est se promener tranquillement, sans se presser ; bondir, c'est sauter brusquement. Pour choisir le bon verbe, pense à la façon dont l'action se fait."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot précis au mot plus général qui le désigne.",
+    "paires": [
+      [
+        "un chêne",
+        "un arbre"
+      ],
+      [
+        "une tulipe",
+        "une fleur"
+      ],
+      [
+        "un chien",
+        "un animal"
+      ],
+      [
+        "une carotte",
+        "un légume"
+      ]
+    ],
+    "explication": "Un chêne est une sorte d'arbre, une tulipe une sorte de fleur, et ainsi de suite. Le mot général englobe les mots plus précis : tous les chênes sont des arbres, mais tous les arbres ne sont pas des chênes."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces phrases dans l'ordre pour raconter l'histoire.",
+    "elements": [
+      "Il a plu toute la nuit.",
+      "Par conséquent, le sol est devenu boueux.",
+      "Néanmoins, les élèves ont joué dehors."
+    ],
+    "explication": "D'abord, la pluie est la cause. « Par conséquent » introduit la conséquence de la pluie : le sol devient boueux. « Néanmoins » montre une opposition : malgré la boue, les élèves jouent quand même dehors.",
+    "defi": true
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces mots dans l'ordre alphabétique, comme dans le dictionnaire.",
+    "elements": [
+      "chaise",
+      "chameau",
+      "champ",
+      "chant",
+      "chapeau"
+    ],
+    "explication": "Les cinq mots commencent par « cha » : il faut regarder la 4e lettre. Le i de « chaise » vient avant le m, puis le n, puis le p. « Chameau » et « champ » commencent tous les deux par « cham » : on compare alors la 5e lettre, e avant p."
   }
 ]

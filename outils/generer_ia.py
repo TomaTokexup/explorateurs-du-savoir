@@ -204,6 +204,7 @@ Type "association" (l'élève relie chaque élément de gauche à un élément d
 - à utiliser pour des liens à mémoriser : mot ↔ définition ou synonyme, organe ↔ rôle, instrument ↔ ce qu'il mesure, calcul ↔ résultat, date ↔ événement, verbe ↔ temps, pays ↔ capitale… ;
 - l'énoncé dit quoi relier (« Relie chaque organe à son rôle. ») ; l'explication rappelle brièvement les bonnes paires ou la règle ;
 - vérifie qu’un élément de gauche ne peut être relié qu’à un seul élément de droite, par exemple deux calculs qui donnent le même résultat.
+- tous les éléments de droite sont de même nature (même unité, même forme d'écriture) : on ne doit pas pouvoir relier une paire sans réfléchir, juste grâce à un mot ou une unité.
 
 Type "ordre" (l'élève range des étiquettes avec des flèches) :
 - "elements" : 3 à 6 étiquettes de 60 caractères au plus, écrites dans le BON ordre (le site les mélange) ;
@@ -212,7 +213,8 @@ Type "ordre" (l'élève range des étiquettes avec des flèches) :
 - un seul ordre possible, clairement défini par l'énoncé (« du plus ancien au plus récent », « du plus petit au plus grand », « dans l'ordre des étapes ») ;
 - vérifie que deux étiquettes voisines ne pourraient jamais être échangées sans que l'ordre devienne faux ; 
 - évite les étapes de recette ou d'activité dont l'ordre est libre ;
-- n’écris jamais la valeur ou la réponse dans une étiquette.
+- n'écris jamais la valeur ou la réponse dans une étiquette : pas de date, de nombre ou de mesure entre parenthèses ; ces informations vont dans l'explication ;
+- en maths, préfère ranger des nombres, des mesures ou des résultats à calculer plutôt que les étapes d'une méthode.
 
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
 [

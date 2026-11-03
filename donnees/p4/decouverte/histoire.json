@@ -164,5 +164,71 @@
       "Un paysan"
     ],
     "explication": "Le roi est au sommet de la société. Il confie des terres aux grands seigneurs, qui les redonnent à des chevaliers. Les paysans, en bas de l'échelle, travaillent la terre."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque personne du Moyen Âge à ce qu'elle fait dans sa vie de tous les jours.",
+    "paires": [
+      [
+        "Le paysan",
+        "Il cultive la terre pour sa famille"
+      ],
+      [
+        "Le chevalier",
+        "Il combat à cheval pour son seigneur"
+      ],
+      [
+        "Le moine",
+        "Il prie et recopie des livres"
+      ],
+      [
+        "Le seigneur",
+        "Il protège les paysans de ses terres"
+      ]
+    ],
+    "explication": "Au Moyen Âge, chaque personne avait un rôle précis dans la société. Le paysan travaille la terre, le chevalier combat à cheval, le moine prie et copie les livres à la main, et le seigneur protège les habitants de son domaine."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces grandes périodes de l'histoire, de la plus ancienne à la plus récente.",
+    "elements": [
+      "Antiquité",
+      "Moyen Âge",
+      "Temps modernes",
+      "Époque contemporaine"
+    ],
+    "explication": "On range les périodes avec les dates qui les séparent : l'Antiquité finit en 476, le Moyen Âge va de 476 à 1492, les Temps modernes de 1492 à 1789, puis l'Époque contemporaine commence en 1789. Une frise du temps aide à visualiser cette suite."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque date à l'événement de la Révolution française ou de l'Empire qui s'est passé cette année-là.",
+    "paires": [
+      [
+        "Prise de la Bastille",
+        "14 juillet 1789"
+      ],
+      [
+        "Fin de la royauté",
+        "1792"
+      ],
+      [
+        "Napoléon Bonaparte devient empereur",
+        "1804"
+      ]
+    ],
+    "explication": "Le 14 juillet 1789, le peuple de Paris prend la Bastille, une prison royale. En 1792, la monarchie est abolie et la République est proclamée. En 1804, Napoléon Bonaparte se fait sacrer empereur des Français.",
+    "defi": true
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces événements de la vie de Jeanne d'Arc, du plus ancien au plus récent.",
+    "elements": [
+      "Jeanne quitte son village de Domrémy",
+      "Jeanne libère la ville d'Orléans",
+      "Charles VII est sacré roi à Reims",
+      "Jeanne est capturée à Compiègne",
+      "Jeanne est brûlée à Rouen"
+    ],
+    "explication": "En 1429, Jeanne quitte Domrémy pour rejoindre Charles VII. Elle libère Orléans, assiégé par les Anglais, puis conduit Charles VII à Reims où il est sacré roi. En 1430, elle est capturée à Compiègne, puis jugée et brûlée à Rouen en 1431."
   }
 ]

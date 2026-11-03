@@ -127,5 +127,62 @@
     ],
     "accents": "stricts",
     "explication": "Le texte dit qu'Odile est la « grand-mère » de Théo. Il faut retourner le lien : le garçon d'une grand-mère est son petit-fils (un seul mot, avec un trait d'union)."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque élément de mise en page à son rôle dans le texte.",
+    "paires": [
+      [
+        "Le titre",
+        "Annonce de quoi parle le texte"
+      ],
+      [
+        "Un paragraphe",
+        "Regroupe les idées d'un même moment"
+      ],
+      [
+        "Les guillemets (« »)",
+        "Signalent les paroles d'un personnage"
+      ],
+      [
+        "L'illustration",
+        "Montre une scène ou un personnage"
+      ]
+    ],
+    "explication": "Le titre donne le sujet avant la lecture. Un paragraphe change souvent quand l'action change de moment ou de lieu. Les guillemets entourent ce que dit un personnage. L'illustration aide à imaginer la scène."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque genre littéraire à sa caractéristique principale.",
+    "paires": [
+      [
+        "Une fable",
+        "Animaux qui parlent, morale à la fin"
+      ],
+      [
+        "Un conte",
+        "Débute par « Il était une fois »"
+      ],
+      [
+        "Un poème",
+        "Des vers, souvent avec des rimes"
+      ],
+      [
+        "Un roman",
+        "Un long récit, divisé en chapitres"
+      ]
+    ],
+    "explication": "La fable met en scène des animaux qui parlent et se termine par une morale, une leçon. Le conte commence souvent par « Il était une fois ». Le poème est écrit en vers, souvent rimés. Le roman est un long récit découpé en chapitres."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes d'un conte, dans l'ordre du récit.",
+    "elements": [
+      "Situation initiale : le héros et son cadre",
+      "Élément perturbateur : un problème arrive",
+      "Péripéties : le héros essaie de résoudre le problème",
+      "Situation finale : le problème est résolu"
+    ],
+    "explication": "Un conte commence par présenter le héros et le lieu où il vit. Ensuite, un problème arrive et change la situation. Le héros tente alors de le résoudre, et l'histoire se termine quand le problème est réglé."
   }
 ]
