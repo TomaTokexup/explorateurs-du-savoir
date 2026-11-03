@@ -186,5 +186,35 @@
       "La balle touche le sol"
     ],
     "explication": "Pendant tout le mouvement, la pesanteur tire la balle vers le bas. À la montée, elle la freine jusqu'à l'arrêter tout en haut. Ensuite, elle la fait redescendre de plus en plus vite jusqu'au sol."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un livre posé sur une table est poussé vers le haut par la table.",
+    "vrai": true,
+    "explication": "Vrai. La table pousse le livre vers le haut : c'est elle qui l'empêche de tomber. C'est une force qui s'oppose au poids du livre."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les semelles lisses accrochent mieux sur un sol mouillé que les semelles crantées.",
+    "vrai": false,
+    "explication": "Faux. Les semelles crantées, avec leurs rainures, accrochent mieux au sol : le frottement est plus fort, ce qui évite de glisser."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le poids d'un objet vient de l'attraction que la Terre exerce sur lui.",
+    "vrai": true,
+    "explication": "Vrai. La Terre attire tous les objets vers elle grâce à la gravité. C'est cette attraction qui donne du poids à un objet."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "La gravité existe seulement sur la Terre.",
+    "vrai": false,
+    "explication": "Faux. La gravité est une force présente partout dans l'univers : la Lune, le Soleil et tous les astres attirent les objets qui sont autour d'eux."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Des ciseaux sont formés de deux leviers qui tournent autour d'une même vis.",
+    "vrai": true,
+    "explication": "Vrai. Chaque moitié des ciseaux est un levier. La vis du milieu permet à la lame de tourner, et les ciseaux coupent avec moins d'effort que les doigts."
   }
 ]

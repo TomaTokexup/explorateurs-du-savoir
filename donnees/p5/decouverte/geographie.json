@@ -183,5 +183,35 @@
       "Le sol tremble : c'est le séisme"
     ],
     "explication": "Les plaques poussent les roches, qui se déforment sans bouger au début. Quand la tension devient trop forte, les roches cassent d'un coup et libèrent l'énergie sous forme de secousses."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le méridien de Greenwich est la ligne de longitude 0°.",
+    "vrai": true,
+    "explication": "Vrai. Le méridien de Greenwich, qui passe par Londres, sert de point de départ pour compter la longitude : c'est la ligne 0°."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les lignes de longitude sont parallèles à l'équateur.",
+    "vrai": false,
+    "explication": "Faux. Les lignes parallèles à l'équateur servent à mesurer la latitude. Les lignes de longitude (méridiens) relient le pôle Nord au pôle Sud."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les Pyrénées forment une frontière naturelle entre la France et l'Espagne.",
+    "vrai": true,
+    "explication": "Vrai. Les Pyrénées sont une grande chaîne de montagnes qui sépare la France de l'Espagne."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le relief de la Norvège est surtout constitué de plaines.",
+    "vrai": false,
+    "explication": "Faux. La Norvège est un pays très montagneux, avec de hauts reliefs et de longs fjords. Ce sont les plaines qui dominent dans le nord de l'Europe centrale, comme en Pologne."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les planètes tournent autour du Soleil sur des trajectoires appelées orbites.",
+    "vrai": true,
+    "explication": "Vrai. Chaque planète suit une orbite, c'est-à-dire un trajet presque circulaire autour du Soleil."
   }
 ]

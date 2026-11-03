@@ -185,5 +185,29 @@
       "Vérifier que le résultat exact est proche de l'estimation"
     ],
     "explication": "On estime d'abord pour savoir à peu près où l'on doit arriver. On calcule ensuite le résultat exact, puis on compare avec l'estimation pour repérer une erreur éventuelle."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour calculer 19 + 26, on peut calculer 20 + 26, puis enlever 1.",
+    "vrai": true,
+    "explication": "Vrai. 19, c'est 20 − 1. On calcule d'abord 20 + 26 = 46, puis on enlève le 1 ajouté en trop : 46 − 1 = 45. Donc 19 + 26 = 45."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans une division avec reste, le reste peut être plus grand que le diviseur.",
+    "vrai": false,
+    "explication": "Faux. Le reste est toujours plus petit que le diviseur. Par exemple, 23 ÷ 5 = 4 reste 3 : le reste 3 est plus petit que 5. Si le reste était plus grand, on pourrait encore faire une part."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour estimer 49 × 6, on peut calculer 50 × 6, ce qui donne environ 300.",
+    "vrai": true,
+    "explication": "Vrai. On remplace 49 par le nombre rond 50, plus facile à multiplier : 50 × 6 = 300. Le résultat exact, 294, est proche de 300, donc l'estimation est bonne."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans l'égalité x − 9 = 14, la valeur de x est 5.",
+    "vrai": false,
+    "explication": "Faux. Pour trouver x, on fait l'opération inverse : x = 14 + 9 = 23. Vérification : 23 − 9 = 14. Si on calcule 14 − 9, on ne trouve pas la bonne valeur de x."
   }
 ]

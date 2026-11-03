@@ -188,5 +188,35 @@
       "L'air entre dans les poumons."
     ],
     "explication": "Pendant une inspiration, le muscle du diaphragme se contracte et descend, ce qui agrandit la cage thoracique. Il y a alors moins de pression dans les poumons, et l'air de l'extérieur y entre pour rétablir l'équilibre."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Quand on expire, l'air qui sort contient moins de dioxygène que l'air qu'on a inspiré.",
+    "vrai": true,
+    "explication": "Vrai. Le corps utilise une partie du dioxygène de l'air inspiré, et l'air expiré en contient donc moins. En revanche, il contient plus de dioxyde de carbone."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les veines ramènent le sang vers le cœur.",
+    "vrai": true,
+    "explication": "Vrai. Les veines ramènent le sang des organes vers le cœur, dans le sens inverse des vaisseaux qui partent du cœur."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le cœur d'un enfant bat plus vite que celui d'un adulte.",
+    "vrai": true,
+    "explication": "Vrai. Au repos, le cœur d'un enfant bat plus vite que celui d'un adulte. Un cœur d'adulte bat donc moins souvent, mais il pousse le sang avec plus de force."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un adulte a plus d'os qu'un bébé.",
+    "vrai": false,
+    "explication": "Faux. Un bébé a environ 300 os, mais certains se soudent en grandissant. Un adulte en a environ 206."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Bouger régulièrement, par exemple en marchant, en faisant du vélo ou en jouant, aide le cœur et les poumons à rester en bonne santé.",
+    "vrai": true,
+    "explication": "Vrai. L'activité physique régulière renforce le cœur et les poumons et améliore la circulation du sang. C'est bon pour la santé à tout âge."
   }
 ]

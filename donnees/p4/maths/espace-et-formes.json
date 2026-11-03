@@ -440,5 +440,35 @@
       "Angle plat"
     ],
     "explication": "Un angle aigu est plus petit qu'un angle droit (90°). Un angle droit mesure 90°. Un angle obtus est compris entre 90° et 180°. Un angle plat mesure 180°, soit un demi-tour."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un rectangle qui est différent d'un carré a deux axes de symétrie.",
+    "vrai": true,
+    "explication": "Vrai. Un rectangle a un axe de symétrie vertical et un axe horizontal, qui coupent chacun ses côtés en deux parties identiques. Un carré en a quatre."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un angle aigu mesure plus de 90°.",
+    "vrai": false,
+    "explication": "Faux. Un angle aigu est plus petit qu'un angle droit, il mesure donc moins de 90°. Le coin d'une feuille, lui, mesure exactement 90°."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Sur la rose des vents, le sud est situé à l'opposé du nord.",
+    "vrai": true,
+    "explication": "Vrai. Le nord et le sud sont opposés, à 180° l'un de l'autre. Si tu fais un demi-tour en partant vers le nord, tu regardes vers le sud."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour placer un point sur un repère, on lit d'abord la coordonnée y, puis la coordonnée x.",
+    "vrai": false,
+    "explication": "Faux. On lit toujours d'abord x, qui indique le déplacement horizontal (axe des abscisses), puis y, qui indique le déplacement vertical (axe des ordonnées). Dans (3 ; 2), on avance de 3 vers la droite, puis de 2 vers le haut."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un rectangle a deux axes de symétrie.",
+    "vrai": true,
+    "explication": "Vrai. Un rectangle a un axe de symétrie vertical et un axe horizontal, qui coupent chacun ses côtés en deux parties identiques. Un carré en a quatre."
   }
 ]

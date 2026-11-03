@@ -167,5 +167,29 @@
       "5 €"
     ],
     "explication": "Pour comparer des euros, on compare les centimes : 45 centimes, puis 90 centimes, 1 euro 20 centimes, 2 euros 5 centimes et enfin 5 euros, soit 500 centimes."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "1 cm est égal à 10 mm.",
+    "vrai": true,
+    "explication": "Vrai. Un centimètre est découpé en 10 millimètres, comme un décimètre est découpé en 10 centimètres."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "5 € et 4 centimes s'écrit 5,4 € en notation décimale.",
+    "vrai": false,
+    "explication": "Faux. Les centimes occupent deux chiffres après la virgule : 4 centimes s'écrivent 0,04 €. Donc 5 € et 4 centimes s'écrit 5,04 €. Attention : 5,4 €, c'est 5 € et 40 centimes."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le périmètre d'un carré de 5 cm de côté est de 10 cm.",
+    "vrai": false,
+    "explication": "Faux. Le périmètre est la longueur du tour de la figure : il faut ajouter les 4 côtés, soit 4 × 5 = 20 cm."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une heure dure 60 minutes.",
+    "vrai": true,
+    "explication": "Vrai. Une heure contient 60 minutes, et chaque minute contient 60 secondes."
   }
 ]

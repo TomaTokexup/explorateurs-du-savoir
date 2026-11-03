@@ -192,5 +192,41 @@
       "L'euro arrive dans les porte-monnaie"
     ],
     "explication": "Christophe Colomb arrive en Amérique en 1492 et la Révolution française commence en 1789. La Première Guerre mondiale éclate en 1914, la Seconde se termine en 1945. Le mur de Berlin tombe en 1989, et les pièces et billets en euros arrivent en 2002."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "En 1450 environ, l'invention de l'imprimerie par Gutenberg permet de fabriquer des livres plus vite et en plus grand nombre.",
+    "vrai": true,
+    "explication": "Vrai. Avant Gutenberg, chaque livre était copié à la main par des moines, ce qui prenait des mois. Avec l'imprimerie, on peut reproduire un livre très vite, et les livres deviennent moins chers et plus nombreux."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le fado est une musique traditionnelle de l'Espagne.",
+    "vrai": false,
+    "explication": "Faux. Le fado est la musique traditionnelle du Portugal. Le flamenco, lui, vient d'Espagne : il ne faut pas confondre ces deux pays voisins."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le Royaume-Uni fait partie de l'Union européenne depuis 2020.",
+    "vrai": false,
+    "explication": "Faux. Le Royaume-Uni a fait partie de l'Union européenne jusqu'en 2020, date à laquelle il a quitté l'Union. C'est ce départ qu'on appelle le Brexit."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "En août 1789, pendant la Révolution française, les privilèges de la noblesse et du clergé sont abolis.",
+    "vrai": true,
+    "explication": "Vrai. La nuit du 4 août 1789, les députés votent la fin des privilèges, c'est-à-dire des avantages réservés à certaines personnes, comme les impôts plus faibles pour les nobles et le clergé."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Christophe Colomb cherchait une nouvelle route vers l'Asie quand il est arrivé en Amérique.",
+    "vrai": true,
+    "explication": "Vrai. En 1492, Colomb voulait atteindre les Indes, en Asie, en naviguant vers l'ouest. Il a touché un continent que les Européens ne connaissaient pas : l'Amérique."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "La Révolution française commence sous le règne de Napoléon.",
+    "vrai": false,
+    "explication": "Faux. En 1789, le roi de France est Louis XVI. Napoléon Bonaparte ne devient empereur qu'en 1804, après la Révolution."
   }
 ]

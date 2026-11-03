@@ -166,5 +166,29 @@
       "hectolitre (hl)"
     ],
     "explication": "1 l = 10 dl = 100 cl = 1 000 ml, et 1 hl = 100 l. Plus le nombre d'unités contenu dans le litre est grand, plus l'unité est petite : on range donc du millilitre à l'hectolitre."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "1 are (1 a) est égal à 100 m².",
+    "vrai": true,
+    "explication": "Vrai. Un are est une aire de 10 m sur 10 m, soit 10 × 10 = 100 m². C'est une unité pratique pour mesurer un petit terrain."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "1 m³ est égal à 100 dm³.",
+    "vrai": false,
+    "explication": "Faux. Il y a 10 dm dans 1 m, donc 1 m³ = 10 × 10 × 10 = 1 000 dm³. Ne pas confondre avec les aires, où 1 m² = 100 dm²."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un quart d'heure dure 25 minutes.",
+    "vrai": false,
+    "explication": "Faux. Une heure dure 60 minutes, donc un quart d'heure dure 60 : 4 = 15 minutes. Une demi-heure dure 30 minutes."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une heure et demie dure 90 minutes.",
+    "vrai": true,
+    "explication": "Vrai. Une heure fait 60 minutes et une demi-heure fait 30 minutes, donc 60 + 30 = 90 minutes."
   }
 ]

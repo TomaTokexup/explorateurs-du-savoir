@@ -168,5 +168,41 @@
       "L'os tourne autour de l'articulation"
     ],
     "explication": "Tout commence dans le cerveau, qui décide de bouger. Le muscle se raccourcit alors et tire sur l'os grâce au tendon, ce qui fait tourner l'os autour de l'articulation."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le son voyage plus vite dans l'eau que dans l'air.",
+    "vrai": true,
+    "explication": "Vrai. Dans l'air, le son voyage à environ 340 m/s, alors que dans l'eau il va à environ 1 500 m/s. Plus le matériau est serré, plus la vibration passe vite."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un mur bloque complètement le son.",
+    "vrai": false,
+    "explication": "Faux. Un mur bloque une partie du son, mais le son passe quand même à travers. C'est pour cela qu'on entend parfois les voisins, surtout quand le mur est fin."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour plier le bras puis le redresser, il faut deux muscles qui travaillent en équipe.",
+    "vrai": true,
+    "explication": "Vrai. Un muscle ne peut que se contracter, il ne peut pas pousser. Pour bouger un os dans les deux sens, deux muscles travaillent en équipe : quand l'un se contracte, l'autre se détend."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "La langue des signes utilise surtout les mains et le visage pour communiquer.",
+    "vrai": true,
+    "explication": "Vrai. La langue des signes est une langue à part entière : on communique avec les mains, les expressions du visage et parfois le regard, sans parler."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "L'étrier, le plus petit os du corps, se trouve dans le pied.",
+    "vrai": false,
+    "explication": "Faux. L'étrier se trouve dans l'oreille : c'est l'un des trois osselets, avec le marteau et l'enclume. Il transmet les vibrations du son vers l'intérieur de l'oreille."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le son peut voyager dans le vide, par exemple dans l'espace.",
+    "vrai": false,
+    "explication": "Faux. Le son a besoin d'une matière pour voyager : l'air, l'eau ou un solide comme le bois. Dans l'espace, il n'y a pas d'air, donc aucun son ne peut s'y propager."
   }
 ]

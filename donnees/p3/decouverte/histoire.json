@@ -175,5 +175,35 @@
       "L'âge du fer"
     ],
     "explication": "Les premiers hommes taillaient la pierre en la frappant. Plus tard, ils ont appris à la polir pour obtenir des outils plus solides. Ensuite, ils ont découvert les métaux : d'abord le bronze, un mélange de cuivre et d'étain, puis le fer, plus dur mais plus difficile à travailler."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un silex taillé retrouvé dans la terre prouve que des hommes préhistoriques vivaient à cet endroit.",
+    "vrai": true,
+    "explication": "Vrai. Les objets fabriqués par les hommes, comme les outils en pierre taillée, sont des traces qui permettent aux archéologues de savoir où ils vivaient."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Sur une frise chronologique, les dates les plus anciennes se trouvent à droite.",
+    "vrai": false,
+    "explication": "Faux. On lit une frise de gauche à droite : les dates les plus anciennes sont à gauche, et les plus récentes à droite."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une recette de cuisine transmise de génération en génération fait partie de notre patrimoine.",
+    "vrai": true,
+    "explication": "Vrai. Le patrimoine comprend aussi les traditions et savoir-faire qui se transmettent dans une famille ou une région, comme les recettes de nos grands-parents."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les premiers hommes ont vécu en même temps que les grands dinosaures.",
+    "vrai": false,
+    "explication": "Faux. Les dinosaures ont disparu il y a environ 66 millions d'années, alors que les premiers hommes sont apparus il y a seulement quelques millions d'années."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pendant la préhistoire, les hommes vivaient en petits groupes, souvent dans des abris naturels ou des grottes.",
+    "vrai": true,
+    "explication": "Vrai. Les hommes préhistoriques vivaient en petits groupes et utilisaient les abris naturels, comme les grottes ou les creux de rochers, pour se protéger."
   }
 ]

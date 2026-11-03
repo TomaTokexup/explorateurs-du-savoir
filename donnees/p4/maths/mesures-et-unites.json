@@ -260,5 +260,29 @@
       "hm"
     ],
     "explication": "Chaque unité est dix fois plus grande que la précédente : 1 cm = 10 mm, 1 dm = 10 cm, 1 m = 10 dm, 1 dam = 10 m et 1 hm = 10 dam. Le hectomètre (hm) vaut donc 100 m."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "1 décilitre (dl) est égal à 100 millilitres (ml).",
+    "vrai": true,
+    "explication": "Vrai. 1 dl = 10 cl et 1 cl = 10 ml, donc 1 dl = 100 ml."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour calculer le périmètre d'un rectangle, on multiplie sa longueur par sa largeur.",
+    "vrai": false,
+    "explication": "Faux. Le périmètre est la longueur du tour de la figure : on additionne les quatre côtés. Multiplier la longueur par la largeur donne l'aire."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une demi-heure dure 50 minutes.",
+    "vrai": false,
+    "explication": "Faux. Une demi-heure est la moitié d'une heure, soit la moitié de 60 minutes, c'est-à-dire 30 minutes."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un millilitre (ml) est plus petit qu'un centilitre (cl).",
+    "vrai": true,
+    "explication": "Vrai. 1 cl = 10 ml, donc le millilitre est dix fois plus petit que le centilitre."
   }
 ]

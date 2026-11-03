@@ -183,5 +183,35 @@
       ]
     ],
     "explication": "Un aimant attire les objets en fer, comme un trombone, mais pas une gomme, qui n'est pas en métal. Entre deux aimants, deux pôles pareils (nord et nord) se repoussent, alors que deux pôles différents s'attirent."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un aimant attire le fer, mais aussi le cuivre.",
+    "vrai": false,
+    "explication": "Faux. Un aimant attire seulement certains métaux, comme le fer, le nickel et le cobalt. Le cuivre, l'aluminium et le bois ne sont pas attirés."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Si on coupe un aimant en deux, chaque morceau garde un pôle nord et un pôle sud.",
+    "vrai": true,
+    "explication": "Vrai. Même coupé en tout petits morceaux, chaque aimant a toujours deux pôles. On ne peut pas séparer le pôle nord du pôle sud."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les mouchoirs en papier usagés se jettent dans le bac jaune avec les journaux.",
+    "vrai": false,
+    "explication": "Faux. Les mouchoirs sont trop sales et trop abîmés pour être recyclés. Ils se jettent dans la poubelle ordinaire, pas dans le bac de tri."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le verre peut être fondu et refait en nouveau verre plusieurs fois.",
+    "vrai": true,
+    "explication": "Vrai. Le verre usagé est fondu pour fabriquer du nouveau verre, sans perdre sa qualité. Cela permet d'économiser du sable et de l'énergie."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Plus on éloigne un aimant d'un trombone, plus l'attraction diminue.",
+    "vrai": true,
+    "explication": "Vrai. La force de l'aimant est la plus grande tout près de lui. Un trombone collé à l'aimant reste attiré, mais un trombone posé plus loin ne l'est plus."
   }
 ]

@@ -196,5 +196,29 @@
       "Obtenir un nombre de 1 à 6"
     ],
     "explication": "Compte les faces qui conviennent : aucune pour le 7 (impossible), une seule pour le 6, trois pour un nombre pair (2, 4 et 6), cinq si tout sauf le 6 convient (1, 2, 3, 4 et 5) et les six faces pour un nombre de 1 à 6 (certain). Plus il y a de faces qui conviennent, plus l'événement est probable."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans un diagramme circulaire, la plus grande part correspond à la catégorie la plus choisie.",
+    "vrai": true,
+    "explication": "Vrai. Plus une part du disque est grande, plus elle représente un grand nombre d'élèves. On compare donc les parts entre elles pour savoir quelle réponse a été la plus choisie."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Après cinq Pile de suite, Face a plus de chances d'arriver au lancer suivant.",
+    "vrai": false,
+    "explication": "Faux. Chaque lancer de pièce est indépendant des précédents : à chaque lancer, il y a une chance sur deux d'obtenir Pile et une chance sur deux d'obtenir Face."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Sur un graphique en ligne, si la ligne monte entre deux dates, la valeur a augmenté entre ces deux dates.",
+    "vrai": true,
+    "explication": "Vrai. La ligne montre l'évolution : quand elle monte, la valeur augmente, et quand elle descend, la valeur diminue."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour suivre l'évolution de la taille d'une plante chaque semaine, un diagramme circulaire est le plus adapté.",
+    "vrai": false,
+    "explication": "Faux. Un diagramme circulaire montre des parts d'un tout à un moment donné. Pour suivre une évolution dans le temps, un graphique en ligne est mieux adapté."
   }
 ]

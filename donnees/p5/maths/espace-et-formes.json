@@ -166,5 +166,29 @@
       "Hexagone"
     ],
     "explication": "Le nom de chaque polygone vient du nombre de ses côtés : « tri » veut dire trois, « quadri » quatre, « penta » cinq et « hexa » six. Plus le nombre de côtés augmente, plus la figure a de côtés."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un carré est un rectangle particulier.",
+    "vrai": true,
+    "explication": "Vrai. Un rectangle a 4 angles droits et ses côtés opposés sont égaux. Le carré a aussi 4 angles droits, mais ses 4 côtés ont la même longueur : c'est donc un rectangle particulier."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le rayon d'un cercle est deux fois plus long que son diamètre.",
+    "vrai": false,
+    "explication": "Faux. Le diamètre traverse le cercle en passant par le centre, et le rayon va du centre au bord. Le diamètre mesure donc deux fois le rayon : c'est le rayon qui est deux fois plus court."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un triangle équilatéral a trois angles de même mesure.",
+    "vrai": true,
+    "explication": "Vrai. Dans un triangle équilatéral, les trois côtés ont la même longueur, et les trois angles ont aussi la même mesure, soit 60°."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un cylindre possède des sommets.",
+    "vrai": false,
+    "explication": "Faux. Un cylindre a deux faces rondes (les bases) et une face courbe, mais il n'a pas de sommet : il n'a pas de coin ni de pointe."
   }
 ]

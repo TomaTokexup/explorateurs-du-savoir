@@ -180,5 +180,29 @@
       "Écrire la réponse avec son unité"
     ],
     "explication": "Avant de calculer, il faut comprendre la situation et choisir la bonne opération. On écrit la réponse à la fin, avec son unité, comme 12 €, pour qu'elle ait un sens."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour calculer 30 − 12 de tête, on peut calculer 30 − 10, puis enlever encore 2.",
+    "vrai": true,
+    "explication": "Vrai. 30 − 10 = 20, puis 20 − 2 = 18 : on retire 12 en deux étapes, ce qui donne bien 30 − 12 = 18."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "20 − 5 + 3 = 12.",
+    "vrai": false,
+    "explication": "Faux. Quand il n'y a que des additions et des soustractions, on calcule de gauche à droite : 20 − 5 = 15, puis 15 + 3 = 18. On trouve 12 seulement si on fait 5 + 3 en premier, ce qui est une erreur."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour calculer 4,5 × 1 000, on écrit 4,5 suivi de trois zéros.",
+    "vrai": false,
+    "explication": "Faux. Multiplier par 1 000 fait avancer chaque chiffre de trois rangs vers la gauche : 4,5 × 1 000 = 4 500. Écrire 4,5000 ne change pas le nombre."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour calculer 4 × 25, on peut calculer 4 × 20, puis ajouter 4 × 5.",
+    "vrai": true,
+    "explication": "Vrai. On découpe 25 en 20 + 5 : 4 × 20 = 80 et 4 × 5 = 20, donc 80 + 20 = 100."
   }
 ]

@@ -183,5 +183,29 @@
       "Cube"
     ],
     "explication": "Une pyramide a une base et des faces triangulaires qui se rejoignent au sommet : autant de triangles que la base a de côtés. La pyramide à base triangulaire a donc 1 + 3 = 4 faces, celle à base carrée 1 + 4 = 5 faces. Le cube, lui, a 6 faces carrées."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un angle de 100° est un angle obtus.",
+    "vrai": true,
+    "explication": "Vrai. Un angle obtus est plus grand qu'un angle droit (90°) et plus petit qu'un angle plat (180°). Comme 100° est compris entre ces deux valeurs, c'est bien un angle obtus."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Deux droites parallèles se coupent en un point.",
+    "vrai": false,
+    "explication": "Faux. Deux droites parallèles restent toujours à la même distance l'une de l'autre et ne se croisent jamais. Pense aux deux bords opposés d'une règle : ils sont parallèles et ne se rejoignent pas."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un cercle a une infinité d'axes de symétrie.",
+    "vrai": true,
+    "explication": "Vrai. Toute droite qui passe par le centre du cercle est un axe de symétrie : on peut tracer une infinité de droites de ce type. Un cercle est donc symétrique dans toutes les directions."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un rectangle a ses 4 côtés de même longueur.",
+    "vrai": false,
+    "explication": "Faux. Dans un rectangle, les côtés opposés ont la même longueur, mais les deux longueurs sont différentes : deux côtés sont longs et deux sont courts. Seul le carré a ses 4 côtés de même longueur."
   }
 ]

@@ -182,5 +182,35 @@
       "400"
     ],
     "explication": "Compter à rebours, c'est reculer. Pour passer d'un nombre au suivant, on enlève 50 : 600 − 50 = 550, puis 550 − 50 = 500, et ainsi de suite. Les nombres diminuent donc à chaque étape."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans le nombre 4 286, le chiffre 8 représente 8 dizaines.",
+    "vrai": true,
+    "explication": "Vrai. Dans 4 286, le chiffre 8 est à la place des dizaines : il vaut 8 dizaines, soit 80."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la table de 4, chaque résultat est le double du résultat correspondant dans la table de 2.",
+    "vrai": true,
+    "explication": "Vrai. Par exemple, 2 × 3 = 6 et 4 × 3 = 12 : 12 est bien le double de 6. Cela marche pour toute la table de 4."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une ville de 45 000 habitants compte 4 500 milliers d'habitants.",
+    "vrai": false,
+    "explication": "Faux. 45 000 = 45 × 1 000, donc la ville compte 45 milliers d'habitants. Pour trouver le nombre de milliers, on supprime les 3 derniers zéros."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "En comptant à rebours de 100 en 100 à partir de 1 000, le nombre qui suit 1 000 est 1 100.",
+    "vrai": false,
+    "explication": "Faux. Quand on compte à rebours, on enlève 100 à chaque fois : après 1 000, on dit 900, puis 800, et ainsi de suite."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la table de multiplication de 4, chaque résultat est le double du résultat correspondant dans la table de 2.",
+    "vrai": true,
+    "explication": "Vrai. Par exemple, 2 × 3 = 6 et 4 × 3 = 12 : 12 est bien le double de 6. Cela marche pour toute la table de 4."
   }
 ]

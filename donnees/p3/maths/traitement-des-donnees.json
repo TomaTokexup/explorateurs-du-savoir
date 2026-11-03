@@ -177,5 +177,29 @@
       "Dessiner une barre par choix"
     ],
     "explication": "On ne peut pas compter les réponses avant de les avoir notées, et on ne peut pas dessiner la hauteur d'une barre avant de savoir combien de réponses elle représente."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans un diagramme de Venn, la zone commune aux deux cercles contient les éléments qui vérifient les deux critères à la fois.",
+    "vrai": true,
+    "explication": "Vrai. Si un cercle est « fait du sport » et l'autre « aime la musique », un élève qui aime les deux se place dans la partie où les cercles se coupent."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans un pictogramme où un dessin représente 10 livres, un demi-dessin représente 5 livres.",
+    "vrai": true,
+    "explication": "Vrai. Quand un dessin est coupé en deux, chaque moitié compte pour la moitié de sa valeur : 10 ÷ 2 = 5 livres."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Sur un diagramme en barres, l'axe vertical est gradué de 5 en 5. Une barre qui s'arrête à 4 graduations au-dessus de 0 représente 4 élèves.",
+    "vrai": false,
+    "explication": "Faux. Il faut lire la valeur de la graduation, pas compter les traits : 4 graduations de 5 en 5 donnent 20, donc la barre représente 20 élèves."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Deux diagrammes en barres ayant des échelles différentes peuvent être comparés directement en regardant seulement la hauteur des barres.",
+    "vrai": false,
+    "explication": "Faux. Il faut d'abord lire la valeur indiquée sur l'axe de chaque graphique : une même hauteur peut représenter des nombres très différents si les graduations ne sont pas les mêmes."
   }
 ]

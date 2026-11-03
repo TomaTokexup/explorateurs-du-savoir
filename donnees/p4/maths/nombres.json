@@ -177,5 +177,29 @@
       "5,2 m"
     ],
     "explication": "On compare d'abord la partie entière (3, puis 4, puis 5), puis les dixièmes quand la partie entière est la même : 4,1 m < 4,5 m < 4,9 m."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Arrondi au millier le plus proche, le nombre 87 360 donne 87 000.",
+    "vrai": true,
+    "explication": "Vrai. 87 360 est compris entre 87 000 et 88 000. Le chiffre des centaines est 3, qui est plus petit que 5, donc on arrondit vers le bas : 87 000."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "En chiffres romains, XL vaut 60.",
+    "vrai": false,
+    "explication": "Faux. XL vaut 40 : le X placé devant le L se retranche, donc 50 − 10 = 40. C'est LX qui vaut 60 (50 + 10)."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la table de 5, les résultats se terminent par 0 ou par 5.",
+    "vrai": true,
+    "explication": "Vrai. Les multiples de 5 se terminent par 0 ou par 5 : 5 × 7 = 35, 5 × 8 = 40, 5 × 9 = 45."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le nombre 1 entier et 3/4 est plus petit que 1,5.",
+    "vrai": false,
+    "explication": "Faux. 3/4 = 0,75, donc 1 entier et 3/4 = 1,75. Ce nombre est plus grand que 1,5 : il se place sur la droite graduée entre 1 et 2, après le milieu."
   }
 ]

@@ -236,5 +236,130 @@
       "Sam arrives at school just in time."
     ],
     "explication": "Sam must wake up before he can run out of the house. He can only catch the bus after he reaches the bus stop, and he arrives at school at the end."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "The word 'seven' has five letters.",
+    "vrai": true,
+    "explication": "Vrai. S-E-V-E-N has five letters: s, e, v, e, n."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "The word 'eight' has four letters.",
+    "vrai": false,
+    "explication": "Faux. E-I-G-H-T has five letters: e, i, g, h, t.",
+    "astuce": "Write the word on paper and count the letters one by one."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "You can make green by mixing red and blue.",
+    "vrai": false,
+    "explication": "Faux. Red and blue make purple. Green is made by mixing blue and yellow."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "A kitten is a young cat.",
+    "vrai": true,
+    "explication": "Vrai. A kitten is a baby cat, and a puppy is a baby dog."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "A frog keeps its tail when it becomes an adult.",
+    "vrai": false,
+    "explication": "Faux. A tadpole has a tail, but an adult frog does not."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "A head teacher is the person in charge of a school.",
+    "vrai": true,
+    "explication": "Vrai. The head teacher leads the whole school and its staff."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "A hobby is a job you do to earn money.",
+    "vrai": false,
+    "explication": "Faux. A hobby is something you do for fun in your free time, such as painting or swimming."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "In the story of Cinderella, a fairy godmother helps her.",
+    "vrai": true,
+    "explication": "Vrai. The fairy godmother magically helps Cinderella go to the ball."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Your lungs help you to hear.",
+    "vrai": false,
+    "explication": "Faux. Your ears help you to hear. Your lungs help you to breathe."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Milk comes from cows.",
+    "vrai": true,
+    "explication": "Vrai. Farmers milk cows, and we can drink the milk or make cheese and yoghurt with it."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Honey is made by spiders.",
+    "vrai": false,
+    "explication": "Faux. Honey is made by bees from the nectar of flowers."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "'Nervous' means 'calm'.",
+    "vrai": false,
+    "explication": "Faux. 'Nervous' means worried or a bit scared. 'Calm' means relaxed and quiet."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Mia is sniffling and her nose is red, so she probably has a cold.",
+    "vrai": true,
+    "explication": "Vrai. Sniffling and a red nose are signs that someone has a cold.",
+    "defi": true
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Plants need water and sunlight to grow.",
+    "vrai": true,
+    "explication": "Vrai. Plants need water, sunlight and air to grow and stay healthy."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "The word 'actually' means 'now' in English.",
+    "vrai": false,
+    "explication": "Faux. 'Actually' means 'in fact' or 'really'. 'Now' is a different word.",
+    "astuce": "Look up 'actually' in your dictionary."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "'Quarter past six' means 6:15.",
+    "vrai": true,
+    "explication": "Vrai. A quarter of an hour is 15 minutes, so a quarter past six is 6:15."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "'Quarter to six' means 6:15.",
+    "vrai": false,
+    "explication": "Faux. 'Quarter to six' means 5:45, because it is a quarter of an hour before six.",
+    "astuce": "Draw a clock face and count the minutes from the top."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "After 'he', 'she' and 'it', the verb usually ends in -s.",
+    "vrai": true,
+    "explication": "Vrai. For example: 'She likes football' and 'It runs fast'."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "The plural of 'child' is 'childs'.",
+    "vrai": false,
+    "explication": "Faux. The plural of 'child' is 'children'. It is an irregular plural."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "We use 'first', 'then' and 'finally' to show the order of events.",
+    "vrai": true,
+    "explication": "Vrai. These words link short sentences into a clear sequence: First, I woke up. Then, I had breakfast. Finally, I went to school.",
+    "defi": true
   }
 ]

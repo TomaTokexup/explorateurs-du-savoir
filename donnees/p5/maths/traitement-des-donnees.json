@@ -192,5 +192,29 @@
       ]
     ],
     "explication": "Le football occupe la moitié du disque : la moitié de 30, c'est 15. La natation occupe un tiers : 30 ÷ 3 = 10. Le tennis occupe un sixième : 30 ÷ 6 = 5. On vérifie : 15 + 10 + 5 = 30."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans un diagramme circulaire, un secteur qui occupe la moitié du disque représente 50 % des élèves de la classe.",
+    "vrai": true,
+    "explication": "Vrai. Le disque entier représente 100 % des élèves, donc la moitié du disque correspond à la moitié des élèves, soit 50 %."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Si la moyenne des notes d'une classe est 10, cela veut dire que chaque élève a obtenu 10.",
+    "vrai": false,
+    "explication": "Faux. La moyenne résume toutes les notes en un seul nombre, mais elle ne dit pas la note de chaque élève : avec 8 et 12, la moyenne est aussi 10, alors que personne n'a eu 10."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour calculer une moyenne, on additionne toutes les données, puis on divise la somme par le nombre de données.",
+    "vrai": true,
+    "explication": "Vrai. Moyenne = somme des données ÷ nombre de données. Par exemple, pour 4, 6 et 8, on calcule 4 + 6 + 8 = 18, puis 18 ÷ 3 = 6."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Si 20 élèves sur 40 ont choisi le football, cela représente 20 % des élèves.",
+    "vrai": false,
+    "explication": "Faux. 20 élèves sur 40, c'est la moitié de la classe, soit 50 %. Pour trouver le pourcentage, on calcule 20 ÷ 40 = 0,5, puis 0,5 × 100 = 50 %."
   }
 ]

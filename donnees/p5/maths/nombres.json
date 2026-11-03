@@ -183,5 +183,29 @@
       "2,5 €"
     ],
     "explication": "On compare d'abord les unités, puis les dixièmes, puis les centièmes. 2,5 € est égal à 2,50 € : c'est le plus cher, car 50 centimes sont plus que 35 centimes. Ensuite 2,09 € est moins cher que 2,35 €, et 2,05 € est le moins cher."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le nombre 10 est un nombre triangulaire.",
+    "vrai": true,
+    "explication": "Vrai. Un nombre triangulaire est un nombre d'objets qu'on peut ranger en triangle : 1 objet sur la première ligne, 2 sur la deuxième, 3 sur la troisième… Avec 4 lignes, on a 1 + 2 + 3 + 4 = 10 objets, comme les 10 quilles d'un jeu de bowling."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "1 % d'une somme de 200 € vaut 20 €.",
+    "vrai": false,
+    "explication": "Faux. 1 % correspond à un centième : 200 € : 100 = 2 €. Le montant de 20 € correspond à 10 % de 200 €."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "−8 °C est plus chaud que −3 °C.",
+    "vrai": false,
+    "explication": "Faux. Sur un thermomètre, −8 °C est plus bas que −3 °C : il fait donc plus froid à −8 °C. Plus un nombre négatif est loin de zéro, plus la température est froide."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour estimer 4 987 + 2 012, on peut calculer 5 000 + 2 000 et trouver environ 7 000.",
+    "vrai": true,
+    "explication": "Vrai. Pour estimer, on remplace chaque nombre par un nombre rond proche : 4 987 est proche de 5 000 et 2 012 est proche de 2 000. La somme est donc environ 7 000."
   }
 ]

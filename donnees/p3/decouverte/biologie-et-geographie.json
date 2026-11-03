@@ -159,5 +159,35 @@
       "L'eau ruisselle jusqu'à la mer."
     ],
     "explication": "Le Soleil chauffe l'eau de la mer, qui s'évapore et monte dans l'air. En refroidissant, la vapeur se condense en petites gouttes qui forment les nuages. Ces gouttes tombent sous forme de précipitations, puis l'eau ruisselle vers les rivières et revient à la mer, ce qui recommence le cycle."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les graines du pissenlit peuvent être emportées par le vent.",
+    "vrai": true,
+    "explication": "Vrai. Les graines du pissenlit sont munies d'une aigrette, une sorte de petite houppe qui leur permet de voler sur de longues distances. D'autres graines sont transportées par les animaux."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "La mairie est le bâtiment où travaille le maire de la commune.",
+    "vrai": true,
+    "explication": "Vrai. La mairie est le lieu où travaillent le maire et les employés qui gèrent la commune, par exemple pour les démarches administratives."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une partie de l'eau de pluie s'infiltre dans le sol.",
+    "vrai": true,
+    "explication": "Vrai. Quand il pleut, une partie de l'eau traverse la terre et rejoint les nappes d'eau souterraines. C'est l'infiltration, une étape du cycle de l'eau."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le nuage blanc au-dessus d'une casserole d'eau bouillante est de la vapeur d'eau.",
+    "vrai": false,
+    "explication": "Faux. La vapeur d'eau est invisible. Le nuage blanc que l'on voit est formé de minuscules gouttes d'eau liquide : la vapeur s'est refroidie dans l'air et s'est condensée."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une fleur se transforme en graine, puis la graine devient un fruit.",
+    "vrai": false,
+    "explication": "Faux. C'est le fruit qui se forme à partir de la fleur, et les graines se trouvent à l'intérieur du fruit. Par exemple, la pomme contient les pépins."
   }
 ]

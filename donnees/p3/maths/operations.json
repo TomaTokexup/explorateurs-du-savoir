@@ -181,5 +181,29 @@
       "3 × 100"
     ],
     "explication": "La moitié de 90 vaut 90 ÷ 2 = 45. Le produit 6 × 8 vaut 48, et 240 ÷ 4 vaut 60. Enfin 3 × 100 vaut 300. On range donc : 45, 48, 60, 300."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le produit de 5 × 3 est le même que le produit de 3 × 5.",
+    "vrai": true,
+    "explication": "Vrai. On peut changer l'ordre des facteurs dans une multiplication : 5 × 3 = 15 et 3 × 5 = 15, car 5 groupes de 3 et 3 groupes de 5 donnent le même nombre d'objets."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans 4 × 6 = 24, le nombre 24 est un facteur.",
+    "vrai": false,
+    "explication": "Faux. Les facteurs sont 4 et 6, qu'on multiplie entre eux. 24 est le produit, c'est-à-dire le résultat de la multiplication."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Puisque 40 ÷ 10 = 4, alors 400 ÷ 10 = 40.",
+    "vrai": true,
+    "explication": "Vrai. Diviser un multiple de 10 par 10 revient à enlever un zéro : 400 ÷ 10 = 40, comme 40 ÷ 10 = 4."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le calcul 7 × 5 donne le même résultat que 7 + 5.",
+    "vrai": false,
+    "explication": "Faux. 7 × 5 signifie 5 + 5 + 5 + 5 + 5 + 5 + 5 (ou 7 + 7 + 7 + 7 + 7), c'est-à-dire une addition répétée qui vaut 35. 7 + 5 ne vaut que 12."
   }
 ]
