@@ -25,6 +25,9 @@
 //     "texte": "Un court texte à lire…"                               → texte support (lecture)
 //     "astuce": "Prends ton cahier pour poser l'opération !"            → coup de pouce de méthode
 //     "defi": true                                                     → badge « ⭐ Défi »
+//   Association : { "type": "association", "enonce": "Relie…", "paires": [["le cœur", "pompe le sang"], …], "explication": "..." }
+//   Ordre       : { "type": "ordre", "enonce": "Range…", "elements": ["1er", "2e", "3e"], "explication": "..." }
+//                 ("elements" est écrit dans le BON ordre ; le site le mélange)
 //
 // Un cahier s'active tout seul dès que son index.json existe :
 // pas besoin de modifier ce code pour ajouter une matière ou un thème.
@@ -221,6 +224,20 @@ async function pageCahier() {
       return;
     }
 
+    // Série « Vrai ou faux » : un jeu à part, qui puise dans les QCM de tous les thèmes
+    if (idTheme === "vraifaux") {
+      const sousTitre = document.getElementById("sous-titre");
+      sousTitre.textContent = "Série Vrai ou faux";
+      sousTitre.hidden = false;
+      document.title = "Vrai ou faux – " + matiere.nom + " " + niveau.nom;
+      const listes = await Promise.all(themes.map(function (t) {
+        return lireJSON(dossier + t.id + ".json");
+      }));
+      const qcm = listes.flat().filter(function (q) { return typeDe(q) === "qcm"; });
+      lancerSerie(qcm, "record-vraifaux-" + idNiveau + "-" + idMatiere);
+      return;
+    }
+
     let banque;          // toutes les questions disponibles pour ce quiz
     let nombreParPartie; // combien on en tire à chaque partie
     let nomDuQuiz;
@@ -257,6 +274,7 @@ async function pageCahier() {
 function afficherSommaire(themes, lienCahier, dossier) {
   document.getElementById("progression").textContent = "Choisis un thème, ou révise tout d'un coup.";
   document.getElementById("lien-melange").href = lienCahier + "&theme=melange";
+  document.getElementById("lien-vraifaux").href = lienCahier + "&theme=vraifaux";
 
   // Comme dans une table des matières : titre ........ nombre de questions
   const liste = document.getElementById("liste-themes");
@@ -307,7 +325,22 @@ function typeDe(question) {
 // Prépare une question avant affichage. Pour un QCM : mélange les choix
 // et recalcule la position de la bonne réponse. Les autres types sont gardés tels quels.
 function preparerQuestion(question) {
-  if (typeDe(question) !== "qcm") {
+  const type = typeDe(question);
+  if (type === "association") {
+    // On garde les paires telles quelles, mais on mélange l'ordre d'affichage des deux colonnes
+    const indices = question.paires.map(function (paire, i) { return i; });
+    return Object.assign({}, question, { ordreGauche: melanger(indices), ordreDroite: melanger(indices) });
+  }
+  if (type === "ordre") {
+    // Ordre de départ mélangé, jamais déjà dans le bon ordre
+    const indices = question.elements.map(function (element, i) { return i; });
+    let depart = melanger(indices);
+    while (depart.every(function (valeur, position) { return valeur === position; })) {
+      depart = melanger(indices);
+    }
+    return Object.assign({}, question, { ordreDepart: depart });
+  }
+  if (type !== "qcm") {
     return question;
   }
   const bonneReponseTexte = question.choix[question.bonneReponse];
@@ -360,9 +393,25 @@ function demarrer() {
 
 function afficherQuestion() {
   const question = questions[numeroQuestion];
-
   document.getElementById("progression").textContent =
     "Question " + (numeroQuestion + 1) + " sur " + questions.length;
+  afficherEnTete(question);
+
+  const type = typeDe(question);
+  if (type === "saisie") {
+    afficherSaisie(question);
+  } else if (type === "association") {
+    afficherAssociation(question);
+  } else if (type === "ordre") {
+    afficherOrdre(question);
+  } else {
+    afficherQcm(question);
+  }
+}
+
+// Partie commune à tous les exercices (quiz et série Vrai ou faux) :
+// énoncé, texte support, astuce, badge défi, figure, et remise à zéro de la zone de réponse.
+function afficherEnTete(question) {
   ecrireTexte(document.getElementById("enonce"), question.enonce);
 
   // Texte support facultatif (champ "texte"), pour les questions de lecture
@@ -393,12 +442,6 @@ function afficherQuestion() {
   document.getElementById("reponses").innerHTML = "";
   document.getElementById("correction").hidden = true;
   document.getElementById("bouton-suivant").hidden = true;
-
-  if (typeDe(question) === "saisie") {
-    afficherSaisie(question);
-  } else {
-    afficherQcm(question);
-  }
 }
 
 // --- Type "qcm" ---
@@ -522,6 +565,203 @@ function corrigerSaisie(question, texteTape) {
   afficherCorrection(question, estJuste, rappel);
 }
 
+// --- Type "association" : relier chaque élément de gauche à un élément de droite ---
+// Chaque élément de gauche a sa couleur ; quand on le relie, l'élément de droite prend la même couleur.
+const COULEURS_PAIRES = ["#2f6fdb", "#e2574c", "#2e9e6a", "#d9a514", "#7a4cc2"];
+
+function boutonValider(texte) {
+  const bouton = document.createElement("button");
+  bouton.type = "button";
+  bouton.className = "saisie-valider bouton-valider";
+  bouton.textContent = texte;
+  return bouton;
+}
+
+function afficherAssociation(question) {
+  const reponses = document.getElementById("reponses");
+  reponses.className = "association";
+  const colonneGauche = document.createElement("div");
+  const colonneDroite = document.createElement("div");
+  colonneGauche.className = "assoc-colonne";
+  colonneDroite.className = "assoc-colonne";
+
+  let selection = null;   // paire choisie à gauche, en attente d'un élément de droite
+  const liens = {};       // numéro de paire à gauche → numéro de paire à droite
+  const boutonsGauche = {};
+  const boutonsDroite = {};
+
+  function creerBouton(texte) {
+    const bouton = document.createElement("button");
+    bouton.type = "button";
+    bouton.className = "assoc-element";
+    const pastille = document.createElement("span");
+    pastille.className = "pastille";
+    pastille.setAttribute("aria-hidden", "true");
+    const libelle = document.createElement("span");
+    ecrireTexte(libelle, texte);
+    bouton.appendChild(pastille);
+    bouton.appendChild(libelle);
+    return bouton;
+  }
+
+  question.ordreGauche.forEach(function (i, rang) {
+    const bouton = creerBouton(question.paires[i][0]);
+    bouton.style.setProperty("--pastille", COULEURS_PAIRES[rang % COULEURS_PAIRES.length]);
+    bouton.addEventListener("click", function () {
+      if (liens[i] !== undefined) {
+        delete liens[i];          // toucher un élément déjà relié le détache
+      }
+      selection = selection === i ? null : i;
+      rafraichir();
+    });
+    boutonsGauche[i] = bouton;
+    colonneGauche.appendChild(bouton);
+  });
+
+  question.ordreDroite.forEach(function (j) {
+    const bouton = creerBouton(question.paires[j][1]);
+    bouton.addEventListener("click", function () {
+      // On détache l'élément de gauche qui était déjà relié à celui-ci
+      Object.keys(liens).forEach(function (cle) {
+        if (liens[cle] === j) { delete liens[cle]; }
+      });
+      if (selection !== null) {
+        liens[selection] = j;
+        selection = null;
+      }
+      rafraichir();
+    });
+    boutonsDroite[j] = bouton;
+    colonneDroite.appendChild(bouton);
+  });
+
+  const valider = boutonValider("Valider");
+  valider.addEventListener("click", function () { corrigerAssociation(question, liens, boutonsGauche, boutonsDroite); });
+
+  function rafraichir() {
+    question.ordreDroite.forEach(function (j) {
+      boutonsDroite[j].classList.remove("relie");
+      boutonsDroite[j].style.removeProperty("--pastille");
+    });
+    question.ordreGauche.forEach(function (i) {
+      const bouton = boutonsGauche[i];
+      bouton.classList.toggle("choisi", selection === i);
+      bouton.setAttribute("aria-pressed", selection === i ? "true" : "false");
+      bouton.classList.toggle("relie", liens[i] !== undefined);
+      if (liens[i] !== undefined) {
+        const droite = boutonsDroite[liens[i]];
+        droite.classList.add("relie");
+        droite.style.setProperty("--pastille", bouton.style.getPropertyValue("--pastille"));
+      }
+    });
+    reponses.classList.toggle("en-attente", selection !== null);
+    valider.disabled = Object.keys(liens).length < question.paires.length;
+  }
+
+  const aide = document.createElement("p");
+  aide.className = "consigne-type";
+  aide.textContent = "Touche un élément à gauche, puis celui qui va avec à droite.";
+  reponses.appendChild(aide);
+  const grille = document.createElement("div");
+  grille.className = "assoc-grille";
+  grille.appendChild(colonneGauche);
+  grille.appendChild(colonneDroite);
+  reponses.appendChild(grille);
+  reponses.appendChild(valider);
+  rafraichir();
+}
+
+function corrigerAssociation(question, liens, boutonsGauche, boutonsDroite) {
+  const reponses = document.getElementById("reponses");
+  reponses.querySelectorAll("button").forEach(function (bouton) { bouton.disabled = true; });
+  reponses.querySelector(".bouton-valider").hidden = true;
+  let nbJustes = 0;
+  question.paires.forEach(function (paire, i) {
+    const juste = liens[i] === i;
+    if (juste) { nbJustes = nbJustes + 1; }
+    boutonsGauche[i].classList.add(juste ? "juste" : "faux");
+    boutonsDroite[liens[i]].classList.add(juste ? "juste" : "faux");
+  });
+  const estJuste = nbJustes === question.paires.length;
+  let rappel = "";
+  if (!estJuste) {
+    rappel = nbJustes + " paire" + (nbJustes > 1 ? "s" : "") + " juste" + (nbJustes > 1 ? "s" : "") +
+      " sur " + question.paires.length + ". Les bonnes paires : " +
+      question.paires.map(function (paire) { return paire[0] + " → " + paire[1]; }).join(" ; ") + ". ";
+  }
+  afficherCorrection(question, estJuste, rappel);
+}
+
+// --- Type "ordre" : remettre des étiquettes dans le bon ordre avec les flèches ---
+function afficherOrdre(question) {
+  const reponses = document.getElementById("reponses");
+  reponses.className = "ordre";
+  let ordre = question.ordreDepart.slice();
+  const liste = document.createElement("ol");
+  liste.className = "ordre-liste";
+
+  function deplacer(position, sens, classeBouton) {
+    const cible = position + sens;
+    const element = ordre[position];
+    ordre[position] = ordre[cible];
+    ordre[cible] = element;
+    dessiner();
+    // On garde le focus sur la même flèche de l'étiquette déplacée (pratique au clavier)
+    const bouton = liste.children[cible].querySelector(classeBouton);
+    if (bouton && !bouton.disabled) { bouton.focus(); }
+  }
+
+  function dessiner() {
+    liste.innerHTML = "";
+    ordre.forEach(function (indice, position) {
+      const ligne = document.createElement("li");
+      ligne.className = "ordre-element";
+      const texte = document.createElement("span");
+      texte.className = "ordre-texte";
+      ecrireTexte(texte, question.elements[indice]);
+      const monter = document.createElement("button");
+      monter.type = "button";
+      monter.className = "ordre-fleche monter";
+      monter.textContent = "▲";
+      monter.setAttribute("aria-label", "Monter");
+      monter.disabled = position === 0;
+      monter.addEventListener("click", function () { deplacer(position, -1, ".monter"); });
+      const descendre = document.createElement("button");
+      descendre.type = "button";
+      descendre.className = "ordre-fleche descendre";
+      descendre.textContent = "▼";
+      descendre.setAttribute("aria-label", "Descendre");
+      descendre.disabled = position === ordre.length - 1;
+      descendre.addEventListener("click", function () { deplacer(position, 1, ".descendre"); });
+      ligne.appendChild(texte);
+      ligne.appendChild(monter);
+      ligne.appendChild(descendre);
+      liste.appendChild(ligne);
+    });
+  }
+
+  const aide = document.createElement("p");
+  aide.className = "consigne-type";
+  aide.textContent = "Utilise les flèches ▲ ▼ pour ranger les étiquettes.";
+  const valider = boutonValider("Valider");
+  valider.addEventListener("click", function () {
+    liste.querySelectorAll("button").forEach(function (bouton) { bouton.disabled = true; });
+    valider.hidden = true;
+    let estJuste = true;
+    ordre.forEach(function (indice, position) {
+      const bienPlace = indice === position;
+      if (!bienPlace) { estJuste = false; }
+      liste.children[position].classList.add(bienPlace ? "juste" : "faux");
+    });
+    const rappel = estJuste ? "" : "Le bon ordre : " + question.elements.join(" → ") + ". ";
+    afficherCorrection(question, estJuste, rappel);
+  });
+  dessiner();
+  reponses.appendChild(aide);
+  reponses.appendChild(liste);
+  reponses.appendChild(valider);
+}
+
 // --- Commun à tous les types ---
 function afficherCorrection(question, estJuste, rappel) {
   const correction = document.getElementById("correction");
@@ -583,6 +823,169 @@ function afficherBilan() {
   } else {
     messageDefi.hidden = true;
   }
+}
+
+// ---------- 5 bis. La série « Vrai ou faux » ----------
+// Le site prend un QCM au hasard et propose une réponse : la bonne une fois sur deux, sinon une mauvaise.
+// L'élève dit si elle est vraie ou fausse. La série s'arrête à la première erreur, ou quand il le décide.
+let serie = 0;              // nombre de bonnes réponses d'affilée
+let pioche = [];            // QCM pas encore tirés (on remélange quand elle est vide)
+let banqueSerie = [];
+let cleRecord = "";         // nom sous lequel le record est rangé dans le navigateur
+
+// Le record est gardé dans le navigateur (localStorage). Celui-ci peut être indisponible
+// (navigation privée, réglages) : dans ce cas, le jeu fonctionne simplement sans record.
+function lireRecord() {
+  try {
+    return Number(localStorage.getItem(cleRecord)) || 0;
+  } catch (erreur) {
+    return 0;
+  }
+}
+
+function ecrireRecord(valeur) {
+  try {
+    localStorage.setItem(cleRecord, String(valeur));
+  } catch (erreur) {
+    // pas de record enregistré, ce n'est pas grave
+  }
+}
+
+function lancerSerie(banque, cle) {
+  banqueSerie = banque;
+  cleRecord = cle;
+  document.getElementById("zone-question").hidden = false;
+  document.getElementById("bouton-suivant").addEventListener("click", function () {
+    // Le même bouton sert à « Continuer » (après une bonne réponse) et à « Voir mon résultat »
+    if (this.dataset.fin === "oui") {
+      finirSerie();
+    } else {
+      questionSerie();
+    }
+  });
+  document.getElementById("bouton-recommencer").addEventListener("click", function () {
+    document.getElementById("bilan").hidden = true;
+    document.getElementById("zone-question").hidden = false;
+    demarrerSerie();
+  });
+  demarrerSerie();
+}
+
+function demarrerSerie() {
+  serie = 0;
+  pioche = melanger(banqueSerie);
+  questionSerie();
+}
+
+function questionSerie() {
+  if (pioche.length === 0) {
+    pioche = melanger(banqueSerie);     // toutes les questions ont été vues : on recommence un tour
+  }
+  const question = pioche.pop();
+  const bonne = question.choix[question.bonneReponse];
+  const mauvaises = question.choix.filter(function (c, i) { return i !== question.bonneReponse; });
+  const estVraie = Math.random() < 0.5;
+  const proposition = estVraie ? bonne : mauvaises[Math.floor(Math.random() * mauvaises.length)];
+
+  const record = lireRecord();
+  document.getElementById("progression").textContent =
+    "Série : " + serie + " bonne" + (serie > 1 ? "s" : "") + " réponse" + (serie > 1 ? "s" : "") +
+    " d'affilée" + (record > 0 ? " · Record : " + record : "");
+  afficherEnTete(question);
+
+  const reponses = document.getElementById("reponses");
+  reponses.className = "vraifaux";
+  const carte = document.createElement("p");
+  carte.className = "proposition";
+  const intitule = document.createElement("span");
+  intitule.className = "proposition-intitule";
+  intitule.textContent = "Réponse proposée :";
+  const valeur = document.createElement("strong");
+  ecrireTexte(valeur, proposition);
+  carte.appendChild(intitule);
+  carte.appendChild(valeur);
+  reponses.appendChild(carte);
+
+  const boutons = document.createElement("div");
+  boutons.className = "vraifaux-boutons";
+  [["Vrai", true], ["Faux", false]].forEach(function (choix) {
+    const bouton = document.createElement("button");
+    bouton.className = "reponse vraifaux-" + (choix[1] ? "vrai" : "faux");
+    bouton.textContent = choix[0];
+    bouton.addEventListener("click", function () {
+      corrigerSerie(question, bonne, choix[1] === estVraie, bouton);
+    });
+    boutons.appendChild(bouton);
+  });
+  reponses.appendChild(boutons);
+
+  const arreter = document.createElement("button");
+  arreter.type = "button";
+  arreter.className = "lien-arreter";
+  arreter.textContent = "J'arrête là";
+  arreter.addEventListener("click", finirSerie);
+  reponses.appendChild(arreter);
+}
+
+function corrigerSerie(question, bonne, estJuste, boutonChoisi) {
+  const reponses = document.getElementById("reponses");
+  reponses.querySelectorAll("button").forEach(function (bouton) { bouton.disabled = true; });
+  boutonChoisi.classList.add(estJuste ? "juste" : "faux");
+  if (!estJuste) {
+    // On montre en vert le bouton qu'il fallait choisir
+    reponses.querySelectorAll(".vraifaux-boutons .reponse").forEach(function (bouton) {
+      if (bouton !== boutonChoisi) { bouton.classList.add("juste"); }
+    });
+  }
+  reponses.querySelector(".lien-arreter").hidden = true;
+
+  const correction = document.getElementById("correction");
+  const verdict = document.getElementById("verdict");
+  const boutonSuivant = document.getElementById("bouton-suivant");
+  if (estJuste) {
+    serie = serie + 1;
+    verdict.textContent = "Bravo ! Série : " + serie;
+    correction.className = "correction juste";
+    ecrireTexte(document.getElementById("explication"), question.explication);
+    boutonSuivant.textContent = "Continuer";
+    boutonSuivant.dataset.fin = "non";
+  } else {
+    verdict.textContent = "Raté ! La série s'arrête.";
+    correction.className = "correction faux";
+    ecrireTexte(document.getElementById("explication"), "La bonne réponse : « " + bonne + " ». " + question.explication);
+    boutonSuivant.textContent = "Voir mon résultat";
+    boutonSuivant.dataset.fin = "oui";
+  }
+  correction.hidden = false;
+  boutonSuivant.hidden = false;
+  boutonSuivant.focus();
+}
+
+function finirSerie() {
+  const ancienRecord = lireRecord();
+  const nouveauRecord = serie > ancienRecord;
+  if (nouveauRecord) {
+    ecrireRecord(serie);
+  }
+  document.getElementById("zone-question").hidden = true;
+  document.getElementById("progression").textContent = "Terminé !";
+  document.getElementById("bilan").hidden = false;
+  document.getElementById("score").textContent = serie;
+  let message = serie === 0
+    ? "Pas de chance ! Retente ta chance."
+    : "Tu as enchaîné " + serie + " bonne" + (serie > 1 ? "s" : "") + " réponse" + (serie > 1 ? "s" : "") + " !";
+  document.getElementById("message-bilan").textContent = message;
+  const messageRecord = document.getElementById("message-defi");
+  if (nouveauRecord) {
+    messageRecord.textContent = "🏆 Nouveau record !";
+    messageRecord.hidden = false;
+  } else if (ancienRecord > 0) {
+    messageRecord.textContent = "Ton record : " + ancienRecord;
+    messageRecord.hidden = false;
+  } else {
+    messageRecord.hidden = true;
+  }
+  document.getElementById("bouton-recommencer").textContent = "Rejouer";
 }
 
 // ---------- 6. Démarrage selon la page ----------

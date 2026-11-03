@@ -789,3 +789,197 @@ a.cahier:hover {
   font-weight: 600;
   font-size: 1.2rem;
 }
+
+/* ---------- 12. Exercices « association » et « ordre » ---------- */
+.consigne-type {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--encre) 70%, white);
+}
+
+.assoc-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.assoc-colonne {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.assoc-element {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 10px 12px;
+  border: 3px solid color-mix(in srgb, var(--encre) 25%, white);
+  border-radius: var(--rayon);
+  background: white;
+  color: var(--encre);
+  font-family: inherit;
+  font-size: 1.05rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* La pastille : la couleur de l'élément de gauche, recopiée sur l'élément de droite relié */
+.pastille {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--pastille, color-mix(in srgb, var(--encre) 30%, white));
+  background: transparent;
+}
+
+.assoc-colonne:first-child .pastille,
+.assoc-element.relie .pastille {
+  background: var(--pastille);
+  border-color: var(--pastille);
+}
+
+.assoc-element.relie {
+  border-color: var(--pastille);
+  background: color-mix(in srgb, var(--pastille) 10%, white);
+}
+
+.assoc-element.choisi {
+  border-color: var(--couleur);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--couleur) 35%, white);
+}
+
+/* Un élément de gauche est choisi : on invite à toucher la colonne de droite */
+.association.en-attente .assoc-colonne:last-child .assoc-element:not(.relie) {
+  border-style: dashed;
+}
+
+.assoc-element.juste,
+.ordre-element.juste {
+  border-color: var(--juste);
+  background: var(--juste-fond);
+}
+
+.assoc-element.faux,
+.ordre-element.faux {
+  border-color: var(--faux);
+  background: var(--faux-fond);
+}
+
+.assoc-element:disabled,
+.ordre-fleche:disabled {
+  cursor: default;
+}
+
+.bouton-valider {
+  min-height: 52px;
+  margin-bottom: 8px;
+}
+
+.ordre-liste {
+  list-style: none;
+  counter-reset: etape;
+  margin: 0 0 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ordre-element {
+  counter-increment: etape;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 8px 12px;
+  border: 3px solid color-mix(in srgb, var(--encre) 25%, white);
+  border-radius: var(--rayon);
+  background: white;
+}
+
+.ordre-element::before {
+  content: counter(etape);
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--couleur);
+  color: white;
+  font-family: var(--police-titre);
+  font-weight: 600;
+}
+
+.ordre-texte {
+  flex: 1;
+  font-size: 1.05rem;
+}
+
+.ordre-fleche {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--couleur);
+  border-radius: 10px;
+  background: white;
+  color: var(--couleur);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.ordre-fleche:disabled {
+  opacity: 0.25;
+}
+
+@media (max-width: 420px) {
+  .assoc-grille { gap: 10px; }
+  .assoc-element { font-size: 0.95rem; padding: 8px 10px; }
+}
+
+/* ---------- 13. Série « Vrai ou faux » ---------- */
+.vraifaux-lien {
+  border-style: dotted;
+}
+
+.proposition {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 0 20px;
+  padding: 14px 18px;
+  border-radius: var(--rayon);
+  background: color-mix(in srgb, var(--couleur) 10%, white);
+  font-size: 1.3rem;
+}
+
+.proposition-intitule {
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--encre) 70%, white);
+}
+
+.vraifaux-boutons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.lien-arreter {
+  display: block;
+  margin: 18px auto 0;
+  padding: 8px 14px;
+  border: none;
+  background: none;
+  color: color-mix(in srgb, var(--encre) 70%, white);
+  font-family: inherit;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.lien-arreter[hidden] {
+  display: none;    /* sinon « display: block » ci-dessus l'emporterait sur l'attribut hidden */
+}

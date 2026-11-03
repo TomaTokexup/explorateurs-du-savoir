@@ -4,7 +4,7 @@ import json
 import sys
 
 from pathlib import Path
-from valider_questions import verifier_question
+from valider_questions import resume_question, verifier_question
 
 
 def charger(chemin):
@@ -53,12 +53,13 @@ def main():
     a_ajouter = []
 
     # Étape 1 : écarter les doublons
-    #  - fabriquer un set avec les énoncés des questions existantes
-    enonces_existant = {q.get("enonce") for q in existantes}
+    #  - fabriquer un set avec le résumé des questions existantes
+    #    (énoncé, + contenu pour « relier » et « ordre », dont l'énoncé se répète souvent)
+    enonces_existant = {resume_question(q) for q in existantes}
 
     #  - parcourir les nouvelles questions :
     for question in nouvelles:
-        enonce = question.get("enonce")
+        enonce = resume_question(question)
         if enonce in enonces_existant:
             print(f"Doublon écarté : {enonce}")
         else:

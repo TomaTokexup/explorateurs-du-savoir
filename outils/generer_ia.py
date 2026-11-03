@@ -10,7 +10,7 @@ from figures import (COMPOSANTS, DIRECTIONS, dessiner_angle, dessiner_barres, de
                      dessiner_barometre, dessiner_chaine, dessiner_circuit, dessiner_instrument, INSTRUMENTS, dessiner_courbe, dessiner_frise, dessiner_schema, ecrire_annee, PAS_FRISE, SCHEMAS, dessiner_horloge, dessiner_polygone, dessiner_rectangle,
                      dessiner_repere, dessiner_rose, dessiner_venn, enregistrer)
 from dotenv import load_dotenv
-from valider_questions import verifier_question   # ta fonction !
+from valider_questions import resume_question, verifier_question   # ta fonction !
 
 def charger_objectifs(niveau, matiere, theme):
     """Renvoie le titre du domaine et la liste de ses objectifs officiels."""
@@ -40,12 +40,13 @@ def charger_enonces_existants(niveau, matiere, theme):
     if not chemin.exists():
         return []
     with open(chemin, "r", encoding="utf-8") as fichier:
-        return [q.get("enonce") for q in json.load(fichier)]
+        return [resume_question(q) for q in json.load(fichier)]
 
-def construire_consignes(niveau, titre_domaine, objectifs, nombre, nb_saisies, enonces_existants, matiere, revisions, defis):
+def construire_consignes(niveau, titre_domaine, objectifs, nombre, nb_saisies, enonces_existants, matiere, revisions, defis,
+                         nb_associations=0, nb_ordres=0):
     """Construit le 'system prompt' à partir des objectifs officiels."""
     liste_objectifs = "\n".join(f"- {objectif}" for objectif in objectifs)
-    nb_qcm = nombre - nb_saisies
+    nb_qcm = nombre - nb_saisies - nb_associations - nb_ordres
 
     # En français, l'orthographe fait partie de l'exercice : accents stricts
     accents = "stricts" if matiere in ("francais", "anglais") else "toleres"
@@ -117,7 +118,7 @@ Consignes générales :
 - Si l'énoncé contient une liste (par exemple des événements A, B et C), écris chaque élément sur sa propre ligne en les séparant par \\n dans le texte JSON.
 - Dans "reponses", inutile de répéter une réponse avec une majuscule : le site ignore les majuscules.
 
-Rédige exactement {nb_qcm} questions de type "qcm" et {nb_saisies} questions de type "saisie".
+Rédige exactement {nb_qcm} questions de type "qcm", {nb_saisies} de type "saisie", {nb_associations} de type "association" et {nb_ordres} de type "ordre".
 
 Type "qcm" :
 - exactement 4 choix, dont une seule bonne réponse ;
@@ -184,10 +185,24 @@ Figures (facultatif, surtout en géométrie) :
     La question demande le NOM d'une partie numérotée (« Comment s'appelle la partie n° 2 ? »), et les choix sont de vrais noms (la rétine, le tympan, la zone tempérée…), jamais des numéros. L'énoncé ne nomme pas les parties numérotées.
 - N'utilise aucune autre forme, et n'écris jamais de champ "image" toi-même.
 
+Type "association" (l'élève relie chaque élément de gauche à un élément de droite) :
+- "paires" : 3 à 5 paires ["élément de gauche", "élément de droite"], chaque texte de 40 caractères au plus ;
+- une seule association possible pour chaque élément : aucun élément de droite ne doit pouvoir convenir à deux éléments de gauche ;
+- à utiliser pour des liens à mémoriser : mot ↔ définition ou synonyme, organe ↔ rôle, instrument ↔ ce qu'il mesure, calcul ↔ résultat, date ↔ événement, verbe ↔ temps, pays ↔ capitale…
+- l'énoncé dit quoi relier (« Relie chaque organe à son rôle. ») ; l'explication rappelle brièvement les bonnes paires ou la règle.
+
+Type "ordre" (l'élève range des étiquettes avec des flèches) :
+- "elements" : 3 à 6 étiquettes de 60 caractères au plus, écrites dans le BON ordre (le site les mélange) ;
+- un seul ordre possible, clairement défini par l'énoncé (« du plus ancien au plus récent », « du plus petit au plus grand », « dans l'ordre des étapes ») ;
+- à utiliser pour une chronologie, les étapes d'un cycle ou d'une méthode, des nombres ou des mesures à classer, les mots d'une phrase à reconstituer…
+- l'explication justifie l'ordre (dates, valeurs ou logique des étapes).
+
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
 [
   {{"type": "qcm", "enonce": "...", "choix": ["...", "...", "...", "..."], "bonneReponse": 0, "explication": "..."}},
-  {{"type": "saisie", "enonce": "...", "reponses": ["..."], "accents": "{accents}", "explication": "..."}}
+  {{"type": "saisie", "enonce": "...", "reponses": ["..."], "accents": "{accents}", "explication": "..."}},
+  {{"type": "association", "enonce": "...", "paires": [["...", "..."], ["...", "..."], ["...", "..."]], "explication": "..."}},
+  {{"type": "ordre", "enonce": "...", "elements": ["...", "...", "..."], "explication": "..."}}
 ]"""
 
 def demander_questions(consignes, demande):
@@ -476,7 +491,12 @@ def main():
     parser.add_argument("--theme", required=True, help="ex. operations")
     parser.add_argument("--nombre", type=int, default=8, help="nombre total de questions (défaut : 8)")
     parser.add_argument("--saisies", type=int, default=2, help="dont questions à saisir (défaut : 2)")
+    parser.add_argument("--associations", type=int, default=1, help="dont exercices « relier » (défaut : 1)")
+    parser.add_argument("--ordres", type=int, default=1, help="dont exercices « remettre dans l'ordre » (défaut : 1)")
     args = parser.parse_args()
+    if args.saisies + args.associations + args.ordres > args.nombre:
+        print("Erreur : saisies + associations + ordres dépasse le nombre total de questions.")
+        sys.exit(1)
     load_dotenv()
 
     titre, objectifs, revisions, defis = charger_objectifs(args.niveau, args.matiere, args.theme)
@@ -485,7 +505,8 @@ def main():
     enonces_existants = charger_enonces_existants(args.niveau, args.matiere, args.theme)
     print(f"{len(enonces_existants)} question(s) déjà publiée(s) transmise(s) à l'IA")
 
-    consignes = construire_consignes(args.niveau, titre, objectifs, args.nombre, args.saisies, enonces_existants, args.matiere, revisions, defis)
+    consignes = construire_consignes(args.niveau, titre, objectifs, args.nombre, args.saisies, enonces_existants, args.matiere, revisions, defis,
+                                     args.associations, args.ordres)
 
     demande = f"Rédige les {args.nombre} questions sur le domaine « {titre} »."
 
