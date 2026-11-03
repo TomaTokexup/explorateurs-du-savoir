@@ -113,5 +113,73 @@
     ],
     "accents": "toleres",
     "explication": "La division est l'opération inverse de la multiplication : si 6 × 7 = 42, alors 42 ÷ 7 = 6."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à ce qu'il désigne.",
+    "paires": [
+      [
+        "La somme",
+        "Le résultat d'une addition"
+      ],
+      [
+        "La différence",
+        "Le résultat d'une soustraction"
+      ],
+      [
+        "Le produit",
+        "Le résultat d'une multiplication"
+      ],
+      [
+        "Le quotient",
+        "Le résultat d'une division"
+      ]
+    ],
+    "explication": "Ces mots servent à nommer les résultats des quatre opérations. On dit « la somme de 5 et 3 » pour 5 + 3 = 8, « la différence de 10 et 4 » pour 10 − 4 = 6, « le produit de 4 par 3 » pour 4 × 3 = 12, et « le quotient de 20 par 5 » pour 20 ÷ 5 = 4."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque calcul à celui qui a le même résultat.",
+    "paires": [
+      [
+        "6 × 30",
+        "18 × 10"
+      ],
+      [
+        "4 × 50",
+        "2 × 100"
+      ],
+      [
+        "7 × 40",
+        "28 × 10"
+      ],
+      [
+        "9 × 30",
+        "3 × 90"
+      ]
+    ],
+    "explication": "Pour calculer 6 × 30, on calcule 6 × 3 = 18, puis on multiplie par 10 : 180, comme 18 × 10. De la même façon, 4 × 50 = 200 = 2 × 100, 7 × 40 = 280 = 28 × 10 et 9 × 30 = 270 = 3 × 90."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes pour calculer 47 + 38 en colonnes.",
+    "elements": [
+      "Écrire 38 sous 47, unités sous unités",
+      "Additionner les unités : 7 + 8 = 15",
+      "Écrire 5 et poser la retenue 1 sur les dizaines",
+      "Additionner les dizaines : 1 + 4 + 3 = 8"
+    ],
+    "explication": "On commence toujours par les unités, à droite. 7 + 8 = 15 : on écrit 5 et on garde 1 dizaine en retenue. Ensuite on additionne les dizaines sans oublier la retenue : 1 + 4 + 3 = 8. Donc 47 + 38 = 85."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces résultats du plus petit au plus grand.",
+    "elements": [
+      "La moitié de 90",
+      "6 × 8",
+      "240 ÷ 4",
+      "3 × 100"
+    ],
+    "explication": "La moitié de 90 vaut 90 ÷ 2 = 45. Le produit 6 × 8 vaut 48, et 240 ÷ 4 vaut 60. Enfin 3 × 100 vaut 300. On range donc : 45, 48, 60, 300."
   }
 ]

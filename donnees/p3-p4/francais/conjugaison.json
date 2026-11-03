@@ -116,5 +116,74 @@
     ],
     "accents": "stricts",
     "explication": "Les verbes du 2e groupe ont le radical « finiss- » au pluriel ; avec « vous », la terminaison est -ez. On écrit donc « vous finissez »."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque pronom à la terminaison qu'il prend au présent avec un verbe du 1er groupe.",
+    "paires": [
+      [
+        "je",
+        "-e"
+      ],
+      [
+        "nous",
+        "-ons"
+      ],
+      [
+        "vous",
+        "-ez"
+      ],
+      [
+        "ils",
+        "-ent"
+      ]
+    ],
+    "explication": "La terminaison change selon le sujet : avec « chanter », on dit je chant-e, nous chant-ons, vous chant-ez, ils chant-ent. Le verbe s'accorde toujours avec son sujet."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces phrases de la plus ancienne à la plus récente.",
+    "elements": [
+      "Hier, Léa a dessiné un chat.",
+      "Aujourd'hui, Léa dessine un chat.",
+      "Demain, Léa dessinera un chat."
+    ],
+    "explication": "Hier se passe avant aujourd'hui, et demain arrive après. Les verbes donnent le même indice : « a dessiné » est au passé composé, « dessine » au présent et « dessinera » au futur."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque verbe à l'infinitif à sa forme avec « nous » au présent.",
+    "paires": [
+      [
+        "aller",
+        "nous allons"
+      ],
+      [
+        "avoir",
+        "nous avons"
+      ],
+      [
+        "faire",
+        "nous faisons"
+      ],
+      [
+        "dire",
+        "nous disons"
+      ]
+    ],
+    "explication": "Ces verbes sont irréguliers : leur forme ne suit pas la règle habituelle. Il faut les apprendre par cœur, par exemple en les répétant à voix haute avec chaque pronom."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces formes du verbe « aller » au présent, dans l'ordre de la conjugaison (de « je » à « ils »).",
+    "elements": [
+      "je vais",
+      "tu vas",
+      "il va",
+      "nous allons",
+      "vous allez",
+      "ils vont"
+    ],
+    "explication": "On récite toujours la conjugaison dans le même ordre : je, tu, il (elle, on), nous, vous, ils (elles). Aller est irrégulier : je vais, tu vas, il va, nous allons, vous allez, ils vont."
   }
 ]

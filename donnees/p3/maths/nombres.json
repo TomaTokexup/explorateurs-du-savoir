@@ -113,5 +113,74 @@
     ],
     "bonneReponse": 2,
     "explication": "Un multiple de 5 se termine par 0 ou par 5 : seul 235 convient."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque fraction à la fraction qui lui est égale.",
+    "paires": [
+      [
+        "1/2",
+        "4/8"
+      ],
+      [
+        "1/5",
+        "2/10"
+      ],
+      [
+        "3/4",
+        "6/8"
+      ],
+      [
+        "1/3",
+        "3/9"
+      ]
+    ],
+    "explication": "Deux fractions sont égales quand elles représentent la même part. Pour en trouver une égale, on multiplie le numérateur et le dénominateur par le même nombre : 1/2 devient 4/8 en multipliant le haut et le bas par 4. Sur le mur des fractions, 1/2 et 4/8 ont la même longueur."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque nombre à sa décomposition.",
+    "paires": [
+      [
+        "4 658",
+        "4 000 + 600 + 50 + 8"
+      ],
+      [
+        "2 075",
+        "2 000 + 70 + 5"
+      ],
+      [
+        "1 306",
+        "1 000 + 300 + 6"
+      ],
+      [
+        "5 020",
+        "5 000 + 20"
+      ]
+    ],
+    "explication": "Décomposer un nombre, c'est écrire la valeur de chaque chiffre. Dans 4 658, le 4 vaut 4 000, le 6 vaut 600, le 5 vaut 50 et le 8 vaut 8. Attention aux zéros : dans 1 306, il n'y a pas de dizaines, donc on n'écrit rien pour les dizaines dans la somme."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces nombres de visiteurs du plus petit au plus grand.",
+    "elements": [
+      "Parc des Tilleuls : 2 350 visiteurs",
+      "Parc du Lac : 2 980 visiteurs",
+      "Parc Vert : 3 100 visiteurs",
+      "Parc Central : 3 415 visiteurs"
+    ],
+    "explication": "Compare d'abord les milliers : 2 350 et 2 980 sont plus petits que 3 100 et 3 415. Ensuite, quand les milliers sont égaux, compare les centaines : 2 350 est plus petit que 2 980, car 3 centaines sont moins que 9 centaines. Plus un nombre est à gauche sur la droite numérique, plus il est petit."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces nombres dans l'ordre où tu les dis en comptant à rebours de 50 en 50, en partant de 600.",
+    "elements": [
+      "600",
+      "550",
+      "500",
+      "450",
+      "400"
+    ],
+    "explication": "Compter à rebours, c'est reculer. Pour passer d'un nombre au suivant, on enlève 50 : 600 − 50 = 550, puis 550 − 50 = 500, et ainsi de suite. Les nombres diminuent donc à chaque étape."
   }
 ]

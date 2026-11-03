@@ -119,5 +119,50 @@
     "accents": "toleres",
     "astuce": "Pose la soustraction 1492 − 476 sur ton brouillon.",
     "explication": "On calcule la durée en soustrayant l'année de début à l'année de fin : 1492 − 476 = 1016. Le Moyen Âge a duré 1016 ans."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot de vocabulaire à sa durée.",
+    "paires": [
+      [
+        "Une décennie",
+        "10 ans"
+      ],
+      [
+        "Un siècle",
+        "100 ans"
+      ],
+      [
+        "Un millénaire",
+        "1 000 ans"
+      ],
+      [
+        "Une période",
+        "Une partie de l'histoire"
+      ]
+    ],
+    "explication": "Une décennie dure 10 ans, un siècle dure 100 ans et un millénaire dure 1 000 ans. Une période est un long moment de l'histoire, comme le Moyen Âge ou la Préhistoire."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les âges de la Préhistoire du plus ancien au plus récent.",
+    "elements": [
+      "Paléolithique (pierre taillée)",
+      "Néolithique (pierre polie, agriculture)",
+      "Âge du bronze",
+      "Âge du fer"
+    ],
+    "explication": "Les hommes ont d'abord utilisé la pierre, puis ils ont appris à fabriquer des outils en bronze, un mélange de cuivre et d'étain, et enfin en fer."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces personnes de la société féodale, de la plus haute à la plus basse.",
+    "elements": [
+      "Le roi",
+      "Un grand seigneur",
+      "Un chevalier",
+      "Un paysan"
+    ],
+    "explication": "Le roi est au sommet de la société. Il confie des terres aux grands seigneurs, qui les redonnent à des chevaliers. Les paysans, en bas de l'échelle, travaillent la terre."
   }
 ]

@@ -119,5 +119,63 @@
     ],
     "bonneReponse": 0,
     "explication": "Le chiffre des dixièmes est 3. Comme 3 est plus petit que 5, on arrondit à l’entier inférieur : 45."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque nombre à son écriture en lettres.",
+    "paires": [
+      [
+        "15 080",
+        "quinze-mille-quatre-vingts"
+      ],
+      [
+        "15 800",
+        "quinze-mille-huit-cents"
+      ],
+      [
+        "50 180",
+        "cinquante-mille-cent-quatre-vingts"
+      ],
+      [
+        "51 008",
+        "cinquante-et-un-mille-huit"
+      ]
+    ],
+    "explication": "Lis le nombre par tranches de trois chiffres en partant de la droite : d'abord les mille, puis le reste. 15 080, c'est « quinze-mille » puis « quatre-vingts » ; 15 800, c'est « quinze-mille » puis « huit-cents ». Attention aux zéros : ils ne se prononcent pas."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque nombre mixte à son écriture sous forme de fraction supérieure à 1.",
+    "paires": [
+      [
+        "1 entier et 3/4",
+        "7/4"
+      ],
+      [
+        "2 entiers et 1/3",
+        "7/3"
+      ],
+      [
+        "1 entier et 1/5",
+        "6/5"
+      ],
+      [
+        "4 entiers et 1/2",
+        "9/2"
+      ]
+    ],
+    "explication": "Pour passer d'un nombre mixte à une fraction, on compte les parts : chaque entier vaut 4 quarts (ou 3 tiers, 5 cinquièmes, 2 demis). Par exemple, 1 entier et 3/4 = 4/4 + 3/4 = 7/4."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces sauts en longueur du plus court au plus long.",
+    "elements": [
+      "3,8 m",
+      "4,1 m",
+      "4,5 m",
+      "4,9 m",
+      "5,2 m"
+    ],
+    "explication": "On compare d'abord la partie entière (3, puis 4, puis 5), puis les dixièmes quand la partie entière est la même : 4,1 m < 4,5 m < 4,9 m."
   }
 ]

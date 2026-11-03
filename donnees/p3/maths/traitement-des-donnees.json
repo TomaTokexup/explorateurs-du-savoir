@@ -125,5 +125,57 @@
     ],
     "bonneReponse": 0,
     "explication": "On lit la hauteur de chaque barre sur l'axe gradué ; les graduations peuvent aller de 1 en 1, de 5 en 5, de 10 en 10…"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot d'un graphique à sa définition.",
+    "paires": [
+      [
+        "Titre",
+        "Dit ce que représente le graphique"
+      ],
+      [
+        "Légende",
+        "Explique les couleurs ou les symboles"
+      ],
+      [
+        "Étiquette d'un axe",
+        "Nomme ce qui est compté (ex. fruits)"
+      ],
+      [
+        "Échelle d'un axe",
+        "Valeur d'un carreau ou d'une graduation"
+      ]
+    ],
+    "explication": "Le titre dit de quoi parle le graphique et la légende explique les codes utilisés. L'étiquette d'un axe nomme ce qui est compté, et l'échelle indique combien vaut un carreau ou une graduation."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque diagramme à sa description.",
+    "paires": [
+      [
+        "Diagramme de Venn",
+        "Deux cercles qui se coupent"
+      ],
+      [
+        "Tableau de Carroll",
+        "Cases croisant deux critères oui / non"
+      ],
+      [
+        "Diagramme en barres",
+        "Barres dont la hauteur montre un nombre"
+      ]
+    ],
+    "explication": "Le diagramme de Venn range les objets dans des cercles qui se coupent. Le tableau de Carroll croise deux critères oui/non dans des cases, et le diagramme en barres compare des quantités avec des barres."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes pour faire un diagramme en barres à partir d'un relevé de réponses, dans l'ordre.",
+    "elements": [
+      "Noter chaque réponse au fur et à mesure",
+      "Compter les réponses pour chaque choix",
+      "Dessiner une barre par choix"
+    ],
+    "explication": "On ne peut pas compter les réponses avant de les avoir notées, et on ne peut pas dessiner la hauteur d'une barre avant de savoir combien de réponses elle représente."
   }
 ]

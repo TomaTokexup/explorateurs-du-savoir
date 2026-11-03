@@ -119,5 +119,52 @@
     ],
     "accents": "toleres",
     "explication": "De 9 h 45 à 10 h : 15 min ; de 10 h à 11 h 20 : 80 min. Total : 15 + 80 = 95 minutes (1 h 35)."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque conversion à son résultat.",
+    "paires": [
+      [
+        "2 dag",
+        "20 g"
+      ],
+      [
+        "5 g",
+        "5 000 mg"
+      ],
+      [
+        "1 t",
+        "1 000 kg"
+      ],
+      [
+        "3 hm",
+        "300 m"
+      ]
+    ],
+    "explication": "1 dag = 10 g, 1 g = 1 000 mg, 1 t = 1 000 kg et 1 hm = 100 m. Pour convertir, on se déplace dans le tableau de conversion : une case vers la droite, on multiplie par 10 ; une case vers la gauche, on divise par 10."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces unités de masse de la plus petite à la plus grande.",
+    "elements": [
+      "milligramme (mg)",
+      "gramme (g)",
+      "décagramme (dag)",
+      "kilogramme (kg)",
+      "tonne (t)"
+    ],
+    "explication": "Chaque unité vaut 10 fois ou 1 000 fois la précédente : 1 g = 1 000 mg, 1 dag = 10 g, 1 kg = 100 dag, 1 t = 1 000 kg. Il faut donc placer les unités de la plus petite masse à la plus grande."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces unités de capacité de la plus petite à la plus grande.",
+    "elements": [
+      "millilitre (ml)",
+      "centilitre (cl)",
+      "décilitre (dl)",
+      "litre (l)",
+      "hectolitre (hl)"
+    ],
+    "explication": "1 l = 10 dl = 100 cl = 1 000 ml, et 1 hl = 100 l. Plus le nombre d'unités contenu dans le litre est grand, plus l'unité est petite : on range donc du millilitre à l'hectolitre."
   }
 ]

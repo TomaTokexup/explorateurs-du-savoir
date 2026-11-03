@@ -120,5 +120,77 @@
     ],
     "bonneReponse": 2,
     "explication": "Les données des semaines passées sont régulières : on peut prévoir une vente semblable, environ 120 croissants."
+  },
+  {
+    "type": "association",
+    "enonce": "À un jeu, Inès a marqué 12, 15, 14 et 19 points. Relie chaque mot à sa valeur.",
+    "paires": [
+      [
+        "Le nombre de données",
+        "4"
+      ],
+      [
+        "La valeur totale",
+        "60"
+      ],
+      [
+        "La moyenne",
+        "15"
+      ]
+    ],
+    "explication": "Inès a joué 4 parties : il y a 4 données. La valeur totale est la somme : 12 + 15 + 14 + 19 = 60. La moyenne est la valeur totale divisée par le nombre de données : 60 ÷ 4 = 15."
+  },
+  {
+    "type": "association",
+    "enonce": "Le graphique montre à quelle distance de sa maison (en km) se trouve Max pendant sa sortie à vélo. Relie chaque moment à ce que fait Max.",
+    "image": "images/p5/maths/courbe-d8e4c94d.svg",
+    "alt": "Un graphique en ligne de la distance de Max à sa maison, de 9 h à 14 h",
+    "paires": [
+      [
+        "De 9 h à 11 h",
+        "Il s'éloigne de la maison"
+      ],
+      [
+        "De 11 h à 12 h",
+        "Il fait une pause"
+      ],
+      [
+        "De 12 h à 14 h",
+        "Il rentre vers la maison"
+      ]
+    ],
+    "explication": "Quand la ligne monte, la distance augmente : Max s'éloigne. Quand elle reste à plat, la distance ne change pas : il est arrêté. Quand elle descend, la distance diminue : il revient chez lui."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces joueurs du plus petit score moyen au plus grand.",
+    "elements": [
+      "Sara : 10, 13 et 13 points",
+      "Léo : 12 et 16 points",
+      "Nina : 11, 15 et 19 points",
+      "Tom : 18 et 16 points"
+    ],
+    "explication": "Pour chaque joueur, on additionne les points puis on divise par le nombre de parties. Sara : 36 ÷ 3 = 12. Léo : 28 ÷ 2 = 14. Nina : 45 ÷ 3 = 15. Tom : 34 ÷ 2 = 17. Attention : Nina a la meilleure note (19), mais pas la meilleure moyenne."
+  },
+  {
+    "type": "association",
+    "enonce": "Les 30 élèves d'une classe ont choisi leur sport préféré. Relie chaque sport au nombre d'élèves qui l'ont choisi.",
+    "image": "images/p5/maths/camembert-e4d1c3f1.svg",
+    "alt": "Un diagramme circulaire des sports préférés de 30 élèves",
+    "paires": [
+      [
+        "Football",
+        "15 élèves"
+      ],
+      [
+        "Natation",
+        "10 élèves"
+      ],
+      [
+        "Tennis",
+        "5 élèves"
+      ]
+    ],
+    "explication": "Le football occupe la moitié du disque : la moitié de 30, c'est 15. La natation occupe un tiers : 30 ÷ 3 = 10. Le tennis occupe un sixième : 30 ÷ 6 = 5. On vérifie : 15 + 10 + 5 = 30."
   }
 ]

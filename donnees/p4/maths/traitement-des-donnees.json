@@ -127,5 +127,74 @@
     "explication": "On repère le point situé au-dessus de « Jeu », puis on lit la valeur indiquée par le graphique avec son unité.",
     "image": "images/p4/maths/courbe-d5c0eaed.svg",
     "alt": "Un graphique en ligne"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque situation au mot qui la décrit.",
+    "paires": [
+      [
+        "Obtenir un 7 avec un dé à 6 faces",
+        "impossible"
+      ],
+      [
+        "Tomber sur Face avec une pièce",
+        "une chance sur deux"
+      ],
+      [
+        "Un élève de la classe a plus de 5 ans",
+        "certain"
+      ],
+      [
+        "Gagner au loto avec un seul ticket",
+        "peu probable"
+      ]
+    ],
+    "explication": "Un dé à 6 faces ne porte que les numéros 1 à 6, donc un 7 est impossible. Une pièce a deux côtés, Pile et Face : Face a une chance sur deux de sortir. Tous les élèves d'une classe ont plus de 5 ans : c'est certain. Gagner au loto avec un seul ticket est peu probable, car il y a énormément de combinaisons possibles."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque type de graphique à sa description.",
+    "paires": [
+      [
+        "Pictogramme",
+        "Des dessins représentant des quantités"
+      ],
+      [
+        "Diagramme en blocs",
+        "Des carrés empilés, un carré = une unité"
+      ],
+      [
+        "Diagramme circulaire",
+        "Un disque coupé en parts"
+      ],
+      [
+        "Graphique en ligne",
+        "Des points reliés par une ligne"
+      ]
+    ],
+    "explication": "Dans un pictogramme, chaque dessin représente une quantité, par exemple 2 pommes. Dans un diagramme en blocs, on empile des carrés : chaque carré compte pour une unité. Le diagramme circulaire est un disque partagé en parts, et le graphique en ligne relie des points par une ligne pour montrer une évolution."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes d'une expérience de hasard, dans l'ordre.",
+    "elements": [
+      "Dire quels résultats sont possibles",
+      "Lancer la pièce 10 fois de suite",
+      "Noter chaque résultat dans un tableau",
+      "Compter les Pile et les Face"
+    ],
+    "explication": "Avant de faire l'expérience, il faut savoir quels résultats sont possibles : Pile ou Face. Ensuite, on lance la pièce, on note chaque résultat au fur et à mesure, et enfin on compte combien de fois chaque résultat est sorti."
+  },
+  {
+    "type": "ordre",
+    "enonce": "On lance un dé à 6 faces. Range ces événements du moins probable au plus probable.",
+    "elements": [
+      "Obtenir un 7",
+      "Obtenir un 6",
+      "Obtenir un nombre pair",
+      "Obtenir n'importe quel nombre sauf le 6",
+      "Obtenir un nombre de 1 à 6"
+    ],
+    "explication": "Compte les faces qui conviennent : aucune pour le 7 (impossible), une seule pour le 6, trois pour un nombre pair (2, 4 et 6), cinq si tout sauf le 6 convient (1, 2, 3, 4 et 5) et les six faces pour un nombre de 1 à 6 (certain). Plus il y a de faces qui conviennent, plus l'événement est probable."
   }
 ]

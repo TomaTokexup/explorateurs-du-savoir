@@ -129,5 +129,61 @@
     ],
     "accents": "toleres",
     "explication": "Pour trouver le nombre manquant, on fait l'opération inverse : 42 − 15 = 27, puis on vérifie : 27 + 15 = 42."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque signe à ce qu'il veut dire.",
+    "paires": [
+      [
+        "Le signe +",
+        "Ajouter"
+      ],
+      [
+        "Le signe −",
+        "Enlever"
+      ],
+      [
+        "Le signe ×",
+        "Multiplier"
+      ],
+      [
+        "Le signe ÷",
+        "Partager en parts égales"
+      ]
+    ],
+    "explication": "Le signe + veut dire ajouter, le signe − veut dire enlever, le signe × veut dire multiplier (fois) et le signe ÷ veut dire partager en parts égales. Par exemple, 12 ÷ 3 signifie partager 12 objets en 3 parts égales."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot de vocabulaire à sa définition.",
+    "paires": [
+      [
+        "Un terme",
+        "Un nombre qu'on additionne"
+      ],
+      [
+        "Un facteur",
+        "Un nombre qu'on multiplie"
+      ],
+      [
+        "Le diviseur",
+        "Le nombre par lequel on divise"
+      ],
+      [
+        "Le reste",
+        "Ce qui reste après une division"
+      ]
+    ],
+    "explication": "Dans 5 + 3, les nombres 5 et 3 sont des termes. Dans 4 × 6, 4 et 6 sont des facteurs. Dans 17 ÷ 5 = 3 reste 2, le diviseur est 5 et le reste est 2."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes pour calculer une somme en étant sûr du résultat, dans l'ordre.",
+    "elements": [
+      "Estimer le résultat avant de calculer",
+      "Calculer le résultat exact",
+      "Vérifier que le résultat exact est proche de l'estimation"
+    ],
+    "explication": "On estime d'abord pour savoir à peu près où l'on doit arriver. On calcule ensuite le résultat exact, puis on compare avec l'estimation pour repérer une erreur éventuelle."
   }
 ]

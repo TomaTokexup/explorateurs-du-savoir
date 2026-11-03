@@ -215,5 +215,50 @@
     ],
     "bonneReponse": 1,
     "explication": "Pour trouver la longueur réelle, on multiplie la longueur sur le plan par l'échelle : 6 × 5 m = 30 m."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces unités d'aire de la plus petite à la plus grande.",
+    "elements": [
+      "cm²",
+      "dm²",
+      "m²",
+      "a",
+      "ha",
+      "km²"
+    ],
+    "explication": "Un dm² vaut 100 cm², un m² vaut 100 dm², l'are (a) vaut 100 m², l'hectare (ha) vaut 100 a et le km² vaut 100 ha. Chaque unité est donc plus grande que la précédente."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot de vocabulaire du temps à sa durée.",
+    "paires": [
+      [
+        "Un siècle",
+        "100 ans"
+      ],
+      [
+        "Un millénaire",
+        "1 000 ans"
+      ],
+      [
+        "Une année",
+        "12 mois"
+      ]
+    ],
+    "explication": "Un siècle dure 100 ans, un millénaire dure 1 000 ans, et une année compte 12 mois. Pour retenir, « siècle » vient de « cent » et « millénaire » de « mille »."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces unités de longueur de la plus petite à la plus grande.",
+    "elements": [
+      "mm",
+      "cm",
+      "dm",
+      "m",
+      "dam",
+      "hm"
+    ],
+    "explication": "Chaque unité est dix fois plus grande que la précédente : 1 cm = 10 mm, 1 dm = 10 cm, 1 m = 10 dm, 1 dam = 10 m et 1 hm = 10 dam. Le hectomètre (hm) vaut donc 100 m."
   }
 ]

@@ -42,6 +42,19 @@ def charger_enonces_existants(niveau, matiere, theme):
     with open(chemin, "r", encoding="utf-8") as fichier:
         return [resume_question(q) for q in json.load(fichier)]
 
+def charger_enonces_autres_niveaux(niveau, matiere, theme):
+    """Renvoie les résumés des questions de ce thème publiées aux AUTRES niveaux."""
+    resumes = []
+    # 1. parcourir les fichiers qui correspondent au motif donnees/*/<matiere>/<theme>.json
+    for chemin in Path("donnees").glob(f"*/{matiere}/{theme}.json"):
+        # 2. pour chaque chemin, sauter celui du niveau en cours
+        if chemin.parts[1] != niveau:
+            # 3. ouvrir le fichier (json.load) et ajouter resume_question(q) de chaque question à resumes
+            with open(chemin, "r", encoding="utf-8") as fichier:
+                resumes.extend([resume_question(q) for q in json.load(fichier)])
+    return resumes
+ 
+
 def construire_consignes(niveau, titre_domaine, objectifs, nombre, nb_saisies, enonces_existants, matiere, revisions, defis,
                          nb_associations=0, nb_ordres=0):
     """Construit le 'system prompt' à partir des objectifs officiels."""
@@ -188,14 +201,18 @@ Figures (facultatif, surtout en géométrie) :
 Type "association" (l'élève relie chaque élément de gauche à un élément de droite) :
 - "paires" : 3 à 5 paires ["élément de gauche", "élément de droite"], chaque texte de 40 caractères au plus ;
 - une seule association possible pour chaque élément : aucun élément de droite ne doit pouvoir convenir à deux éléments de gauche ;
-- à utiliser pour des liens à mémoriser : mot ↔ définition ou synonyme, organe ↔ rôle, instrument ↔ ce qu'il mesure, calcul ↔ résultat, date ↔ événement, verbe ↔ temps, pays ↔ capitale…
-- l'énoncé dit quoi relier (« Relie chaque organe à son rôle. ») ; l'explication rappelle brièvement les bonnes paires ou la règle.
+- à utiliser pour des liens à mémoriser : mot ↔ définition ou synonyme, organe ↔ rôle, instrument ↔ ce qu'il mesure, calcul ↔ résultat, date ↔ événement, verbe ↔ temps, pays ↔ capitale… ;
+- l'énoncé dit quoi relier (« Relie chaque organe à son rôle. ») ; l'explication rappelle brièvement les bonnes paires ou la règle ;
+- vérifie qu’un élément de gauche ne peut être relié qu’à un seul élément de droite, par exemple deux calculs qui donnent le même résultat.
 
 Type "ordre" (l'élève range des étiquettes avec des flèches) :
 - "elements" : 3 à 6 étiquettes de 60 caractères au plus, écrites dans le BON ordre (le site les mélange) ;
+- à utiliser pour une chronologie, les étapes d'un cycle ou d'une méthode, des nombres ou des mesures à classer, les mots d'une phrase à reconstituer… ;
+- l'explication justifie l'ordre (dates, valeurs ou logique des étapes) ;
 - un seul ordre possible, clairement défini par l'énoncé (« du plus ancien au plus récent », « du plus petit au plus grand », « dans l'ordre des étapes ») ;
-- à utiliser pour une chronologie, les étapes d'un cycle ou d'une méthode, des nombres ou des mesures à classer, les mots d'une phrase à reconstituer…
-- l'explication justifie l'ordre (dates, valeurs ou logique des étapes).
+- vérifie que deux étiquettes voisines ne pourraient jamais être échangées sans que l'ordre devienne faux ; 
+- évite les étapes de recette ou d'activité dont l'ordre est libre ;
+- n’écris jamais la valeur ou la réponse dans une étiquette.
 
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
 [
@@ -501,8 +518,8 @@ def main():
 
     titre, objectifs, revisions, defis = charger_objectifs(args.niveau, args.matiere, args.theme)
 
-    enonces_existants = charger_enonces_existants(args.niveau, args.matiere, args.theme)
-    enonces_existants = charger_enonces_existants(args.niveau, args.matiere, args.theme)
+    enonces_existants = (charger_enonces_existants(args.niveau, args.matiere, args.theme) + charger_enonces_autres_niveaux(args.niveau, args.matiere, args.theme))
+
     print(f"{len(enonces_existants)} question(s) déjà publiée(s) transmise(s) à l'IA")
 
     consignes = construire_consignes(args.niveau, titre, objectifs, args.nombre, args.saisies, enonces_existants, args.matiere, revisions, defis,

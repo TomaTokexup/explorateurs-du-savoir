@@ -121,5 +121,50 @@
     "explication": "Ce polygone a 6 côtés : c'est un hexagone, comme une alvéole d'abeille.",
     "image": "images/p5/maths/polygone-6.svg",
     "alt": "Un polygone"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque objet de la vie courante à la forme qu'on voit sur sa face.",
+    "paires": [
+      [
+        "Un panneau stop",
+        "Octogone"
+      ],
+      [
+        "Une roue de vélo",
+        "Cercle"
+      ],
+      [
+        "Un panneau de danger",
+        "Triangle"
+      ],
+      [
+        "Une porte de classe",
+        "Rectangle"
+      ]
+    ],
+    "explication": "Un panneau stop a 8 côtés égaux : c'est un octogone. Une roue est ronde, c'est un cercle. Un panneau de danger a 3 côtés : c'est un triangle. Une porte a 4 angles droits et des côtés opposés égaux : c'est un rectangle."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces étapes pour fabriquer un cube à partir d'un patron, dans l'ordre où on les fait.",
+    "elements": [
+      "Dessiner le patron sur une feuille",
+      "Découper le patron",
+      "Plier le long des traits",
+      "Coller les rabats pour fermer le cube"
+    ],
+    "explication": "On ne peut pas plier un patron avant de l'avoir découpé, ni coller les rabats avant de l'avoir plié. Le cube se forme donc en dessinant, puis en découpant, en pliant et enfin en collant."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces figures de celle qui a le moins de côtés à celle qui en a le plus.",
+    "elements": [
+      "Triangle",
+      "Quadrilatère",
+      "Pentagone",
+      "Hexagone"
+    ],
+    "explication": "Le nom de chaque polygone vient du nombre de ses côtés : « tri » veut dire trois, « quadri » quatre, « penta » cinq et « hexa » six. Plus le nombre de côtés augmente, plus la figure a de côtés."
   }
 ]

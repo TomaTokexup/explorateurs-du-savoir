@@ -120,5 +120,52 @@
     ],
     "bonneReponse": 3,
     "explication": "De 7,60 € à 8 €, il manque 0,40 € ; de 8 € à 10 €, il manque 2 €. On te rend donc 2,40 €."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces durées de la plus courte à la plus longue.",
+    "elements": [
+      "une seconde",
+      "une minute",
+      "une heure",
+      "un jour",
+      "une semaine"
+    ],
+    "explication": "Une minute contient 60 secondes, une heure contient 60 minutes, un jour contient 24 heures et une semaine contient 7 jours. Chaque unité est donc plus grande que la précédente."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque situation à l'unité la plus adaptée pour la mesurer.",
+    "paires": [
+      [
+        "La distance entre deux villes",
+        "le kilomètre (km)"
+      ],
+      [
+        "La taille d'un crayon",
+        "le centimètre (cm)"
+      ],
+      [
+        "Le contenu d'une bouteille de jus",
+        "le litre (l)"
+      ],
+      [
+        "La masse d'un cartable",
+        "le kilogramme (kg)"
+      ]
+    ],
+    "explication": "On choisit une unité proche de la grandeur mesurée : les grandes distances se mesurent en kilomètres, les petits objets en centimètres, les liquides en litres et les objets lourds en kilogrammes."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces montants du plus petit au plus grand.",
+    "elements": [
+      "0,45 €",
+      "0,90 €",
+      "1,20 €",
+      "2,05 €",
+      "5 €"
+    ],
+    "explication": "Pour comparer des euros, on compare les centimes : 45 centimes, puis 90 centimes, 1 euro 20 centimes, 2 euros 5 centimes et enfin 5 euros, soit 500 centimes."
   }
 ]

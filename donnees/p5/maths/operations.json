@@ -112,5 +112,73 @@
     ],
     "accents": "toleres",
     "explication": "Un quart de 20, c'est 20 ÷ 4 = 5 ; trois quarts, c'est 3 × 5 = 15."
+  },
+  {
+    "type": "association",
+    "enonce": "Un jeu vidéo coûte 80 €. Relie chaque pourcentage du prix à la somme qu'il représente.",
+    "paires": [
+      [
+        "10 % de 80 €",
+        "8 €"
+      ],
+      [
+        "25 % de 80 €",
+        "20 €"
+      ],
+      [
+        "50 % de 80 €",
+        "40 €"
+      ],
+      [
+        "75 % de 80 €",
+        "60 €"
+      ]
+    ],
+    "explication": "10 %, c'est un dixième : 80 ÷ 10 = 8. 50 %, c'est la moitié : 80 ÷ 2 = 40. 25 %, c'est la moitié de la moitié : 40 ÷ 2 = 20. 75 %, c'est trois fois 25 % : 20 × 3 = 60."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque addition à son résultat, en calculant de tête.",
+    "paires": [
+      [
+        "6,4 + 1,6",
+        "8"
+      ],
+      [
+        "2,3 + 4,7",
+        "7"
+      ],
+      [
+        "5,25 + 0,75",
+        "6"
+      ],
+      [
+        "9,9 + 0,1",
+        "10"
+      ]
+    ],
+    "explication": "Pour aller plus vite, on cherche des paires de nombres dont la somme est un nombre rond : 0,4 + 0,6 = 1 dans la première addition, par exemple."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes pour calculer 26 × 3 en posant l'opération, dans l'ordre.",
+    "elements": [
+      "Poser 26 au-dessus de 3, les unités sous les unités",
+      "Multiplier les unités : 6 × 3 = 18",
+      "Écrire 8 sous les unités et retenir 1 sur les dizaines",
+      "Multiplier les dizaines : 2 × 3 = 6, puis 6 + 1 = 7"
+    ],
+    "explication": "On pose d'abord l'opération en alignant les unités, puis on multiplie en commençant par les unités, car une retenue passe toujours vers la colonne suivante, les dizaines. On multiplie les dizaines en ajoutant la retenue à la fin."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes pour résoudre un problème, dans l'ordre.",
+    "elements": [
+      "Lire l'énoncé et repérer les nombres utiles",
+      "Choisir l'opération à faire (+, −, × ou ÷)",
+      "Poser et effectuer le calcul",
+      "Écrire la réponse avec son unité"
+    ],
+    "explication": "Avant de calculer, il faut comprendre la situation et choisir la bonne opération. On écrit la réponse à la fin, avec son unité, comme 12 €, pour qu'elle ait un sens."
   }
 ]

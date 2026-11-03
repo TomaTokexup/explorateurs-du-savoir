@@ -395,5 +395,50 @@
     ],
     "accents": "toleres",
     "explication": "Un pavé droit a 6 faces qui vont deux par deux, face à face, sans jamais se rencontrer : 6 faces ÷ 2 = 3 paires de faces parallèles."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque solide à l'objet de la vie courante qui a la même forme.",
+    "paires": [
+      [
+        "Pavé droit",
+        "Une boîte de céréales"
+      ],
+      [
+        "Cylindre",
+        "Une canette de soda"
+      ],
+      [
+        "Sphère",
+        "Un ballon de football"
+      ],
+      [
+        "Cône",
+        "Un cornet de glace"
+      ]
+    ],
+    "explication": "Un pavé droit a des faces rectangulaires, comme une boîte. Un cylindre a deux bases rondes et une face courbe, comme une canette. Une sphère est ronde de tous les côtés, comme un ballon. Un cône a une base ronde et une pointe, comme un cornet de glace."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces étapes pour placer un point sur un repère, dans l'ordre où on les fait.",
+    "elements": [
+      "Partir de l'origine O (0 ; 0)",
+      "Avancer horizontalement de x cases (axe des abscisses)",
+      "Monter verticalement de y cases (axe des ordonnées)",
+      "Placer le point et lui donner un nom"
+    ],
+    "explication": "On part toujours de l'origine O. Le premier nombre des coordonnées indique le déplacement horizontal (axe x), le second le déplacement vertical (axe y). Le point est placé à la fin du déplacement, puis on le nomme."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces types d'angles du plus petit au plus grand.",
+    "elements": [
+      "Angle aigu",
+      "Angle droit",
+      "Angle obtus",
+      "Angle plat"
+    ],
+    "explication": "Un angle aigu est plus petit qu'un angle droit (90°). Un angle droit mesure 90°. Un angle obtus est compris entre 90° et 180°. Un angle plat mesure 180°, soit un demi-tour."
   }
 ]

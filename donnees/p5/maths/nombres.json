@@ -114,5 +114,74 @@
     ],
     "accents": "toleres",
     "explication": "Ce sont les nombres carrés : 1×1, 2×2, 3×3, 4×4, 5×5… le suivant est 6 × 6 = 36."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque pourcentage à la fraction qui lui est égale.",
+    "paires": [
+      [
+        "25 %",
+        "1/4"
+      ],
+      [
+        "50 %",
+        "1/2"
+      ],
+      [
+        "75 %",
+        "3/4"
+      ],
+      [
+        "10 %",
+        "1/10"
+      ]
+    ],
+    "explication": "Un pourcentage est une fraction de 100 : 25 % = 25/100, et 25 est le quart de 100, donc 25 % = 1/4. De même, 50 % = 50/100 = 1/2, 75 % = 3/4 et 10 % = 10/100 = 1/10."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque nombre à l'encadrement par deux multiples de 100.",
+    "paires": [
+      [
+        "1 268,45",
+        "entre 1 200 et 1 300"
+      ],
+      [
+        "4 572,8",
+        "entre 4 500 et 4 600"
+      ],
+      [
+        "9 960,1",
+        "entre 9 900 et 10 000"
+      ],
+      [
+        "350,6",
+        "entre 300 et 400"
+      ]
+    ],
+    "explication": "Pour encadrer un nombre décimal, on cherche le multiple de 100 juste en dessous et celui juste au-dessus. Par exemple, 1 268,45 est plus grand que 1 200 et plus petit que 1 300, donc il est entre 1 200 et 1 300."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces températures de la plus froide à la plus chaude.",
+    "elements": [
+      "−12 °C",
+      "−4 °C",
+      "0 °C",
+      "3 °C",
+      "7 °C"
+    ],
+    "explication": "Sur une droite graduée, plus un nombre négatif est proche de 0, plus il est grand : −4 °C est plus chaud que −12 °C. Les nombres positifs sont tous plus chauds que 0 °C, et plus ils sont grands, plus il fait chaud."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces prix du moins cher au plus cher.",
+    "elements": [
+      "2,05 €",
+      "2,09 €",
+      "2,35 €",
+      "2,5 €"
+    ],
+    "explication": "On compare d'abord les unités, puis les dixièmes, puis les centièmes. 2,5 € est égal à 2,50 € : c'est le plus cher, car 50 centimes sont plus que 35 centimes. Ensuite 2,09 € est moins cher que 2,35 €, et 2,05 € est le moins cher."
   }
 ]
