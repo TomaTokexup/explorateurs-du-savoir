@@ -128,5 +128,75 @@
     "bonneReponse": 2,
     "explication": "Le mâle ne mange rien pendant qu'il couve : il vit sur ses réserves de graisse et devient presque deux fois plus léger.",
     "texte": "Le manchot empereur est le plus grand de tous les manchots : debout, il mesure plus d'un mètre. Il vit en Antarctique, où la température descend parfois sous les moins quarante degrés. Pour résister à ce froid extrême, il possède une épaisse couche de graisse et un plumage très serré. En plein hiver, la femelle pond un œuf unique, puis repart en mer pour se nourrir. C'est alors le mâle qui garde l'œuf au chaud sur ses pattes, sous un repli de peau, pendant environ deux mois. Durant toute cette période, il ne mange rien et peut perdre près de la moitié de son poids. Pour lutter contre le vent glacial, les mâles se serrent les uns contre les autres et changent régulièrement de place."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à son sens.",
+    "paires": [
+      [
+        "s'emmitoufler",
+        "se couvrir bien chaudement"
+      ],
+      [
+        "grommeler",
+        "se plaindre à voix basse"
+      ],
+      [
+        "une ruelle",
+        "une petite rue étroite"
+      ],
+      [
+        "scruter",
+        "regarder avec beaucoup d'attention"
+      ]
+    ],
+    "explication": "Pour comprendre un mot inconnu, regarde le contexte de la phrase. « S'emmitoufler », c'est se couvrir très bien pour avoir chaud, et « grommeler » signifie se plaindre en parlant tout bas et en maugréant."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot de liaison à ce qu'il indique dans le texte.",
+    "paires": [
+      [
+        "pourtant",
+        "oppose deux idées"
+      ],
+      [
+        "donc",
+        "introduit une conséquence"
+      ],
+      [
+        "parce que",
+        "introduit une cause"
+      ],
+      [
+        "ensuite",
+        "indique la suite dans le temps"
+      ]
+    ],
+    "explication": "Les mots de liaison montrent comment les idées se suivent. « Pourtant » annonce une surprise, « donc » annonce le résultat, « parce que » explique la raison et « ensuite » place un événement après un autre."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Lis le texte, puis range les événements dans l'ordre où ils se sont réellement produits, du plus ancien au plus récent.",
+    "texte": "Lorsque Margot poussa la porte du grenier, la poussière dansait dans un rayon de lumière. Elle chercha longtemps la vieille malle dont sa grand-mère lui avait parlé la veille au soir. Enfin, sous une couverture mitée, elle la découvrit. À l'intérieur reposait un carnet jauni : son arrière-grand-père l'avait rempli de dessins pendant un voyage en Afrique, bien des années auparavant. Margot l'emporta dans sa chambre et ne le referma qu'à la nuit tombée.",
+    "elements": [
+      "L'arrière-grand-père dessine dans le carnet.",
+      "La grand-mère parle de la malle à Margot.",
+      "Margot fouille le grenier.",
+      "Margot trouve le carnet dans la malle.",
+      "Margot lit le carnet dans sa chambre."
+    ],
+    "explication": "Le texte ne raconte pas tout dans l'ordre. Les dessins datent d'un voyage fait « bien des années auparavant » : c'est l'événement le plus ancien. La grand-mère a parlé de la malle « la veille au soir », donc avant la recherche au grenier. Le plus-que-parfait (« avait parlé », « avait rempli ») signale ces retours en arrière."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces verbes du son le plus faible au son le plus fort.",
+    "elements": [
+      "chuchoter",
+      "parler",
+      "crier",
+      "hurler"
+    ],
+    "explication": "« Chuchoter » c'est parler très bas, « parler » se fait à voix normale, « crier » demande une voix très haute, et « hurler » est encore plus fort que crier. Pour trouver l'ordre, imagine le volume de la voix dans chaque cas."
   }
 ]

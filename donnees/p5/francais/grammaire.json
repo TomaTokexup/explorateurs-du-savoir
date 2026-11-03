@@ -112,5 +112,70 @@
     ],
     "accents": "stricts",
     "explication": "Le complément de but répond à la question « dans quel but ? » ; « chaque matin » est un complément de temps."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque phrase à son type.",
+    "paires": [
+      [
+        "Le chat dort sur le canapé.",
+        "phrase déclarative"
+      ],
+      [
+        "Quelle heure est-il ?",
+        "phrase interrogative"
+      ],
+      [
+        "Quelle belle surprise !",
+        "phrase exclamative"
+      ]
+    ],
+    "explication": "Une phrase déclarative donne une information et se termine par un point. Une phrase interrogative pose une question et se termine par un point d'interrogation. Une phrase exclamative exprime une émotion et se termine par un point d'exclamation."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque complément circonstanciel à ce qu'il indique.",
+    "paires": [
+      [
+        "Ma sœur range sa chambre le soir.",
+        "le temps"
+      ],
+      [
+        "Nous mangeons sur la terrasse.",
+        "le lieu"
+      ],
+      [
+        "Il marche lentement.",
+        "la manière"
+      ],
+      [
+        "Il est en retard à cause de la neige.",
+        "la cause"
+      ]
+    ],
+    "explication": "Le complément circonstanciel indique le temps (quand ?), le lieu (où ?), la manière (comment ?) ou la cause (pourquoi ?). On peut souvent le déplacer dans la phrase : « Le soir, ma sœur range sa chambre. »"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque pronom à sa classe.",
+    "paires": [
+      [
+        "celui-ci",
+        "pronom démonstratif"
+      ],
+      [
+        "le mien",
+        "pronom possessif"
+      ],
+      [
+        "dont",
+        "pronom relatif"
+      ],
+      [
+        "chacun",
+        "pronom indéfini"
+      ]
+    ],
+    "explication": "« Celui-ci » montre quelque chose : il est démonstratif. « Le mien » indique à qui appartient la chose : il est possessif. « Dont » relie une proposition à un nom (le livre dont je parle) : il est relatif. « Chacun » désigne des personnes sans dire lesquelles : il est indéfini."
   }
 ]

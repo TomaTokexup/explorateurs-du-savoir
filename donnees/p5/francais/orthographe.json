@@ -111,5 +111,56 @@
     "bonneReponse": 1,
     "explication": "Quand un adjectif de couleur est composé de deux mots (bleu clair, vert foncé), il reste invariable.",
     "defi": true
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète avec « mon » ou « m'ont » : « Les enfants ___ dit bonjour quand je suis arrivé. »",
+    "reponses": [
+      "m'ont",
+      "m’ont"
+    ],
+    "accents": "stricts",
+    "explication": "« m'ont » vient du pronom « me » (m') suivi du verbe « ont » (avoir) : on peut remplacer par « leur » ou « lui ». « mon » est un déterminant qui se place devant un nom, comme « mon chien ». Ici, il n'y a pas de nom après le trou : c'est donc « m'ont »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète avec le participe passé du verbe rentrer : « Les filles sont ___ très tard. »",
+    "reponses": [
+      "rentrées"
+    ],
+    "accents": "stricts",
+    "explication": "Avec le verbe être, le participe passé s'accorde avec le sujet. Le sujet « les filles » est féminin et pluriel : on écrit « rentrées ». Pour vérifier, mets le sujet au masculin : « Les garçons sont rentrés », tu vois bien que l'accord change."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque signe de ponctuation à son rôle.",
+    "paires": [
+      [
+        "le point d'exclamation (!)",
+        "exprime la surprise ou un ordre"
+      ],
+      [
+        "les guillemets (« »)",
+        "encadrent les paroles d'une personne"
+      ],
+      [
+        "les deux-points (:)",
+        "annoncent une explication ou une liste"
+      ],
+      [
+        "les parenthèses ( )",
+        "ajoutent une information en plus"
+      ]
+    ],
+    "explication": "Le point d'exclamation montre une émotion : « Quelle belle journée ! ». Les guillemets encadrent ce qui est dit : « Viens ici », dit-il. Les deux-points annoncent une suite : « Il a acheté trois fruits : des pommes, des poires et des prunes. » Les parenthèses donnent une précision en plus : « Paris (la capitale) est très grand. »"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète avec le participe passé du verbe « prendre » : « Les photos que j'ai ___ sont floues. »",
+    "reponses": [
+      "prises"
+    ],
+    "accents": "stricts",
+    "explication": "Avec l'auxiliaire avoir, le participe passé s'accorde avec le COD quand il est placé avant le verbe. Ici, « que » remplace « les photos », féminin pluriel, et il est placé avant « ai pris » : on écrit donc « prises »."
   }
 ]

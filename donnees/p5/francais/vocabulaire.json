@@ -116,5 +116,72 @@
     "accents": "stricts",
     "explication": "Géographie vient de « géo » (la terre) et « graphie » (écrire, décrire) : c'est la description de la Terre.",
     "defi": true
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à son homophone, c'est-à-dire le mot qui se prononce pareil mais qui s'écrit autrement.",
+    "paires": [
+      [
+        "mer",
+        "mère"
+      ],
+      [
+        "pain",
+        "pin"
+      ],
+      [
+        "cou",
+        "coût"
+      ],
+      [
+        "ver",
+        "vert"
+      ]
+    ],
+    "explication": "Les homophones se prononcent de la même façon mais ont une orthographe et un sens différents : « mer » (l'eau salée) et « mère » (la maman) sont des homophones. Il faut donc penser au sens de la phrase pour bien écrire le mot."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque préfixe à son sens.",
+    "paires": [
+      [
+        "re-",
+        "de nouveau"
+      ],
+      [
+        "mini-",
+        "petit"
+      ],
+      [
+        "pré-",
+        "avant"
+      ],
+      [
+        "sous-",
+        "en dessous"
+      ]
+    ],
+    "explication": "Un préfixe est placé au début d'un mot et change son sens : « refaire » veut dire faire de nouveau, et « sous-marin » est un bateau qui navigue en dessous de la surface de l'eau."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces phrases de la moins sûre à la plus sûre.",
+    "elements": [
+      "Il pleuvra peut-être demain.",
+      "Il pleuvra probablement demain.",
+      "Il pleuvra certainement demain."
+    ],
+    "explication": "« Peut-être » montre un simple doute, « probablement » indique une forte chance, et « certainement » exprime une certitude presque totale. Ces mots modulent la probabilité de ce qui va se passer."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces mots du plus grand au plus petit.",
+    "elements": [
+      "un pays",
+      "une région",
+      "une ville",
+      "un quartier"
+    ],
+    "explication": "Un pays est découpé en régions, une région contient des villes, et une ville est formée de quartiers. Chaque mot désigne une partie du mot qui le précède dans la liste."
   }
 ]

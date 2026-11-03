@@ -110,5 +110,89 @@
     "bonneReponse": 3,
     "explication": "Au passé simple, les verbes en -er font -âmes avec « nous » : nous allâmes, nous chantâmes.",
     "defi": true
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque verbe conjugué au passé simple à son infinitif.",
+    "paires": [
+      [
+        "il fut",
+        "être"
+      ],
+      [
+        "ils eurent",
+        "avoir"
+      ],
+      [
+        "il fit",
+        "faire"
+      ],
+      [
+        "elles voulurent",
+        "vouloir"
+      ]
+    ],
+    "explication": "Au passé simple, on raconte des actions passées dans un texte écrit, par exemple « Le roi fut content. » Ces formes sont différentes de celles du présent et de l'imparfait : « il fut » vient de être, « ils eurent » de avoir, « il fit » de faire et « elles voulurent » de vouloir. Pour reconnaître le verbe, pense au verbe à l'infinitif et compare la forme du texte avec sa conjugaison."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque forme du verbe « prendre » à son temps ou à son mode.",
+    "paires": [
+      [
+        "il prit",
+        "passé simple"
+      ],
+      [
+        "il avait pris",
+        "plus-que-parfait"
+      ],
+      [
+        "il prendrait",
+        "conditionnel présent"
+      ],
+      [
+        "qu'il prenne",
+        "subjonctif présent"
+      ],
+      [
+        "prenant",
+        "participe présent"
+      ]
+    ],
+    "explication": "« Il prit » est au passé simple, le temps du récit. « Il avait pris » est au plus-que-parfait : l'auxiliaire est à l'imparfait. « Il prendrait » est au conditionnel : terminaison -rait. « Qu'il prenne » est au subjonctif, souvent après « que ». « Prenant » est le participe présent, en -ant."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces phrases du plus ancien au plus récent, dans l'ordre des événements de l'histoire.",
+    "elements": [
+      "Théo avait oublié son cahier en classe.",
+      "Il revint en courant à l'école.",
+      "Le gardien lui ouvrit la grille.",
+      "Il reprit enfin son cahier."
+    ],
+    "explication": "Le plus-que-parfait (« avait oublié ») montre une action déjà terminée avant le début du récit : Théo avait oublié son cahier avant tout le reste. Ensuite, les verbes au passé simple racontent les événements dans l'ordre : Théo revient, le gardien ouvre la grille, puis Théo reprend son cahier."
+  },
+  {
+    "type": "association",
+    "enonce": "Complète chaque phrase avec la bonne forme du verbe « lire ».",
+    "paires": [
+      [
+        "Petit, il … une histoire chaque soir.",
+        "lisait"
+      ],
+      [
+        "Ce soir-là, il … le livre d'un trait.",
+        "lut"
+      ],
+      [
+        "Il connaissait la fin : il l'… avant.",
+        "avait lu"
+      ],
+      [
+        "Demain, il … le chapitre suivant.",
+        "lira"
+      ]
+    ],
+    "explication": "L'imparfait (lisait) raconte une habitude du passé : « chaque soir ». Le passé simple (lut) raconte une action précise du récit. Le plus-que-parfait (avait lu) montre une action faite encore avant. Le futur (lira) parle de ce qui va arriver."
   }
 ]
