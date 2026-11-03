@@ -116,5 +116,41 @@
       "La rétine envoie un message au cerveau par le nerf optique"
     ],
     "explication": "La lumière traverse d'abord la cornée, puis le cristallin règle la netteté. L'image se forme ensuite sur la rétine. Enfin, la rétine transmet l'information au cerveau par le nerf optique, ce qui nous permet de voir."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les personnes aveugles peuvent se déplacer seules grâce à une canne blanche ou à un chien guide.",
+    "vrai": true,
+    "explication": "Vrai. Une canne blanche aide à repérer les obstacles au sol, et un chien guide conduit la personne en évitant les dangers. Ces aides permettent de sortir, d'aller à l'école ou de travailler comme les autres."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un daltonien voit le monde en noir et blanc.",
+    "vrai": false,
+    "explication": "Faux. Le daltonisme rend difficile la distinction de certaines couleurs, souvent le rouge et le vert. La personne voit quand même des couleurs, mais elle peut les confondre."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un muscle peut pousser un os.",
+    "vrai": false,
+    "explication": "Faux. Un muscle ne peut que se contracter et tirer sur l'os, grâce à un tendon. Pour faire un mouvement dans l'autre sens, un deuxième muscle doit tirer en sens contraire, c'est pour cela que les muscles travaillent par paires."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "La digestion commence déjà dans la bouche.",
+    "vrai": true,
+    "explication": "Vrai. Les dents coupent et broient les aliments, et la salive commence à transformer certains aliments, comme le pain, avant qu'ils arrivent dans l'estomac."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Lire dans la pénombre fatigue les yeux.",
+    "vrai": true,
+    "explication": "Vrai. Quand la lumière est trop faible, les yeux doivent fournir plus d'efforts pour bien voir les lettres. Il vaut mieux lire dans une pièce bien éclairée."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Manger beaucoup de sucreries est bon pour la santé.",
+    "vrai": false,
+    "explication": "Faux. Les sucreries donnent beaucoup d'énergie mais peu de nutriments utiles. En manger trop peut abîmer les dents et favoriser la prise de poids. Il faut les consommer de temps en temps, avec des fruits, des légumes et des féculents."
   }
 ]

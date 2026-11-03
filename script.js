@@ -57,6 +57,9 @@ const MATIERES = [
 // S'il y en a moins dans la banque, on les prend toutes.
 const NOMBRE_QUESTIONS_THEME = 10;
 const NOMBRE_QUESTIONS_MELANGE = 15;
+// Série Vrai ou faux : à partir de ce nombre d'affirmations (type "vraifaux") dans la matière,
+// on n'utilise plus les QCM transformés
+const SEUIL_VRAIFAUX = 20;
 
 // Niveau réel des questions « Défi », selon le dossier de données (niveau ou tranche).
 // Exemple : en français P3-P4, les défis sont des notions de P5.
@@ -224,7 +227,7 @@ async function pageCahier() {
       return;
     }
 
-    // Série « Vrai ou faux » : un jeu à part, qui puise dans les QCM de tous les thèmes
+    // Série « Vrai ou faux » : un jeu à part, qui puise dans tous les thèmes
     if (idTheme === "vraifaux") {
       const sousTitre = document.getElementById("sous-titre");
       sousTitre.textContent = "Série Vrai ou faux";
@@ -233,8 +236,13 @@ async function pageCahier() {
       const listes = await Promise.all(themes.map(function (t) {
         return lireJSON(dossier + t.id + ".json");
       }));
-      const qcm = listes.flat().filter(function (q) { return typeDe(q) === "qcm"; });
-      lancerSerie(qcm, "record-vraifaux-" + idNiveau + "-" + idMatiere);
+      const toutes = listes.flat();
+      // Les affirmations écrites exprès (type "vraifaux") sont plus naturelles que les QCM transformés.
+      // Tant qu'il y en a peu, on complète avec les QCM ; quand il y en a assez, on n'utilise qu'elles.
+      const affirmations = toutes.filter(function (q) { return typeDe(q) === "vraifaux"; });
+      const qcm = toutes.filter(function (q) { return typeDe(q) === "qcm"; });
+      const banque = affirmations.length >= SEUIL_VRAIFAUX ? affirmations : affirmations.concat(qcm);
+      lancerSerie(banque, "record-vraifaux-" + idNiveau + "-" + idMatiere);
       return;
     }
 
@@ -404,6 +412,8 @@ function afficherQuestion() {
     afficherAssociation(question);
   } else if (type === "ordre") {
     afficherOrdre(question);
+  } else if (type === "vraifaux") {
+    afficherVraiFaux(question);
   } else {
     afficherQcm(question);
   }
@@ -763,6 +773,46 @@ function afficherOrdre(question) {
 }
 
 // --- Commun à tous les types ---
+// --- Type "vraifaux" ---
+// L'énoncé est une affirmation ; l'élève répond Vrai ou Faux (champ "vrai" : true ou false).
+// Ces deux boutons servent aussi dans la série « Vrai ou faux ».
+function creerBoutonsVraiFaux(quandOnClique) {
+  const boutons = document.createElement("div");
+  boutons.className = "vraifaux-boutons";
+  [["Vrai", true], ["Faux", false]].forEach(function (choix) {
+    const bouton = document.createElement("button");
+    bouton.className = "reponse vraifaux-" + (choix[1] ? "vrai" : "faux");
+    bouton.textContent = choix[0];
+    bouton.addEventListener("click", function () {
+      quandOnClique(choix[1], bouton);
+    });
+    boutons.appendChild(bouton);
+  });
+  return boutons;
+}
+
+// Colore les deux boutons après la réponse : celui choisi (juste ou faux) et, en cas d'erreur, le bon
+function colorerBoutonsVraiFaux(estJuste, boutonChoisi) {
+  document.querySelectorAll("#reponses .vraifaux-boutons .reponse").forEach(function (bouton) {
+    bouton.disabled = true;
+    if (bouton === boutonChoisi) {
+      bouton.classList.add(estJuste ? "juste" : "faux");
+    } else if (!estJuste) {
+      bouton.classList.add("juste");
+    }
+  });
+}
+
+function afficherVraiFaux(question) {
+  const reponses = document.getElementById("reponses");
+  reponses.className = "vraifaux";
+  reponses.appendChild(creerBoutonsVraiFaux(function (reponse, bouton) {
+    const estJuste = reponse === question.vrai;
+    colorerBoutonsVraiFaux(estJuste, bouton);
+    afficherCorrection(question, estJuste, "");
+  }));
+}
+
 function afficherCorrection(question, estJuste, rappel) {
   const correction = document.getElementById("correction");
   const verdict = document.getElementById("verdict");
@@ -826,10 +876,13 @@ function afficherBilan() {
 }
 
 // ---------- 5 bis. La série « Vrai ou faux » ----------
-// Le site prend un QCM au hasard et propose une réponse : la bonne une fois sur deux, sinon une mauvaise.
-// L'élève dit si elle est vraie ou fausse. La série s'arrête à la première erreur, ou quand il le décide.
+// Le site tire une question au hasard :
+// - une affirmation (type "vraifaux") : l'élève dit si elle est vraie ou fausse ;
+// - un QCM : le site propose une réponse (la bonne une fois sur deux, sinon une mauvaise),
+//   et l'élève dit si cette réponse est vraie ou fausse.
+// La série s'arrête à la première erreur, ou quand l'élève le décide.
 let serie = 0;              // nombre de bonnes réponses d'affilée
-let pioche = [];            // QCM pas encore tirés (on remélange quand elle est vide)
+let pioche = [];            // questions pas encore tirées (on remélange quand elle est vide)
 let banqueSerie = [];
 let cleRecord = "";         // nom sous lequel le record est rangé dans le navigateur
 
@@ -882,10 +935,18 @@ function questionSerie() {
     pioche = melanger(banqueSerie);     // toutes les questions ont été vues : on recommence un tour
   }
   const question = pioche.pop();
-  const bonne = question.choix[question.bonneReponse];
-  const mauvaises = question.choix.filter(function (c, i) { return i !== question.bonneReponse; });
-  const estVraie = Math.random() < 0.5;
-  const proposition = estVraie ? bonne : mauvaises[Math.floor(Math.random() * mauvaises.length)];
+  const estAffirmation = typeDe(question) === "vraifaux";
+  let estVraie;
+  let bonne = "";        // pour un QCM : la bonne réponse, rappelée en cas d'erreur
+  let proposition = "";
+  if (estAffirmation) {
+    estVraie = question.vrai;
+  } else {
+    bonne = question.choix[question.bonneReponse];
+    const mauvaises = question.choix.filter(function (c, i) { return i !== question.bonneReponse; });
+    estVraie = Math.random() < 0.5;
+    proposition = estVraie ? bonne : mauvaises[Math.floor(Math.random() * mauvaises.length)];
+  }
 
   const record = lireRecord();
   document.getElementById("progression").textContent =
@@ -895,29 +956,23 @@ function questionSerie() {
 
   const reponses = document.getElementById("reponses");
   reponses.className = "vraifaux";
-  const carte = document.createElement("p");
-  carte.className = "proposition";
-  const intitule = document.createElement("span");
-  intitule.className = "proposition-intitule";
-  intitule.textContent = "Réponse proposée :";
-  const valeur = document.createElement("strong");
-  ecrireTexte(valeur, proposition);
-  carte.appendChild(intitule);
-  carte.appendChild(valeur);
-  reponses.appendChild(carte);
+  if (!estAffirmation) {
+    // Pour un QCM, on montre la réponse proposée sous l'énoncé
+    const carte = document.createElement("p");
+    carte.className = "proposition";
+    const intitule = document.createElement("span");
+    intitule.className = "proposition-intitule";
+    intitule.textContent = "Réponse proposée :";
+    const valeur = document.createElement("strong");
+    ecrireTexte(valeur, proposition);
+    carte.appendChild(intitule);
+    carte.appendChild(valeur);
+    reponses.appendChild(carte);
+  }
 
-  const boutons = document.createElement("div");
-  boutons.className = "vraifaux-boutons";
-  [["Vrai", true], ["Faux", false]].forEach(function (choix) {
-    const bouton = document.createElement("button");
-    bouton.className = "reponse vraifaux-" + (choix[1] ? "vrai" : "faux");
-    bouton.textContent = choix[0];
-    bouton.addEventListener("click", function () {
-      corrigerSerie(question, bonne, choix[1] === estVraie, bouton);
-    });
-    boutons.appendChild(bouton);
-  });
-  reponses.appendChild(boutons);
+  reponses.appendChild(creerBoutonsVraiFaux(function (reponse, bouton) {
+    corrigerSerie(question, bonne, reponse === estVraie, bouton);
+  }));
 
   const arreter = document.createElement("button");
   arreter.type = "button";
@@ -929,14 +984,7 @@ function questionSerie() {
 
 function corrigerSerie(question, bonne, estJuste, boutonChoisi) {
   const reponses = document.getElementById("reponses");
-  reponses.querySelectorAll("button").forEach(function (bouton) { bouton.disabled = true; });
-  boutonChoisi.classList.add(estJuste ? "juste" : "faux");
-  if (!estJuste) {
-    // On montre en vert le bouton qu'il fallait choisir
-    reponses.querySelectorAll(".vraifaux-boutons .reponse").forEach(function (bouton) {
-      if (bouton !== boutonChoisi) { bouton.classList.add("juste"); }
-    });
-  }
+  colorerBoutonsVraiFaux(estJuste, boutonChoisi);   // le bouton à choisir apparaît en vert en cas d'erreur
   reponses.querySelector(".lien-arreter").hidden = true;
 
   const correction = document.getElementById("correction");
@@ -952,7 +1000,9 @@ function corrigerSerie(question, bonne, estJuste, boutonChoisi) {
   } else {
     verdict.textContent = "Raté ! La série s'arrête.";
     correction.className = "correction faux";
-    ecrireTexte(document.getElementById("explication"), "La bonne réponse : « " + bonne + " ». " + question.explication);
+    // Pour un QCM, on rappelle la bonne réponse ; une affirmation a déjà son « Vrai. » ou « Faux. » dans l'explication
+    const rappel = bonne ? "La bonne réponse : « " + bonne + " ». " : "";
+    ecrireTexte(document.getElementById("explication"), rappel + question.explication);
     boutonSuivant.textContent = "Voir mon résultat";
     boutonSuivant.dataset.fin = "oui";
   }

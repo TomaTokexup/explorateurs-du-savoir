@@ -56,10 +56,10 @@ def charger_enonces_autres_niveaux(niveau, matiere, theme):
  
 
 def construire_consignes(niveau, titre_domaine, objectifs, nombre, nb_saisies, enonces_existants, matiere, revisions, defis,
-                         nb_associations=0, nb_ordres=0):
+                         nb_associations=0, nb_ordres=0, nb_vraifaux=0):
     """Construit le 'system prompt' à partir des objectifs officiels."""
     liste_objectifs = "\n".join(f"- {objectif}" for objectif in objectifs)
-    nb_qcm = nombre - nb_saisies - nb_associations - nb_ordres
+    nb_qcm = nombre - nb_saisies - nb_associations - nb_ordres - nb_vraifaux
 
     # En français, l'orthographe fait partie de l'exercice : accents stricts
     accents = "stricts" if matiere in ("francais", "anglais") else "toleres"
@@ -131,7 +131,7 @@ Consignes générales :
 - Si l'énoncé contient une liste (par exemple des événements A, B et C), écris chaque élément sur sa propre ligne en les séparant par \\n dans le texte JSON.
 - Dans "reponses", inutile de répéter une réponse avec une majuscule : le site ignore les majuscules.
 
-Rédige exactement {nb_qcm} questions de type "qcm", {nb_saisies} de type "saisie", {nb_associations} de type "association" et {nb_ordres} de type "ordre".
+Rédige exactement {nb_qcm} questions de type "qcm", {nb_saisies} de type "saisie", {nb_associations} de type "association" et {nb_ordres} de type "ordre", {nb_vraifaux} de type "vraifaux".
 
 Type "qcm" :
 - exactement 4 choix, dont une seule bonne réponse ;
@@ -216,6 +216,14 @@ Type "ordre" (l'élève range des étiquettes avec des flèches) :
 - n'écris jamais la valeur ou la réponse dans une étiquette : pas de date, de nombre ou de mesure entre parenthèses ; ces informations vont dans l'explication ;
 - en maths, préfère ranger des nombres, des mesures ou des résultats à calculer plutôt que les étapes d'une méthode.
 - l'ordre ne doit pas se deviner avec les mots des étiquettes (« début / fin », « premier / second », « le matin / le soir », « avant / après ») ;
+
+Type "vraifaux" (l'élève répond Vrai ou Faux à une affirmation) :
+- "enonce" : UNE affirmation courte et naturelle (200 caractères au plus), jamais une question ; "vrai" : true ou false ;
+- écris environ autant d'affirmations vraies que fausses ;
+- une affirmation fausse décrit une erreur que font vraiment les élèves (une confusion classique, une idée reçue), jamais une absurdité évidente ;
+- n'utilise pas de négation (« ne… pas ») ni de mot piège (« toujours », « jamais », « tous ») qui rendrait la réponse discutable ;
+- la réponse ne doit dépendre d'aucun détail ambigu : un adulte qui connaît le sujet répond sans hésiter ;
+- l'explication commence par « Vrai. » ou « Faux. », puis donne la bonne information.
 
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
 [
@@ -513,9 +521,10 @@ def main():
     parser.add_argument("--saisies", type=int, default=2, help="dont questions à saisir (défaut : 2)")
     parser.add_argument("--associations", type=int, default=1, help="dont exercices « relier » (défaut : 1)")
     parser.add_argument("--ordres", type=int, default=1, help="dont exercices « remettre dans l'ordre » (défaut : 1)")
+    parser.add_argument("--vraifaux", type=int, default=0, help="dont exercices « vrai ou faux » (défaut : 0)")
     args = parser.parse_args()
-    if args.saisies + args.associations + args.ordres > args.nombre:
-        print("Erreur : saisies + associations + ordres dépasse le nombre total de questions.")
+    if args.saisies + args.associations + args.ordres + args.vraifaux > args.nombre:
+        print("Erreur : saisies + associations + ordres + vraifaux dépasse le nombre total de questions.")
         sys.exit(1)
     load_dotenv()
 
@@ -526,7 +535,7 @@ def main():
     print(f"{len(enonces_existants)} question(s) déjà publiée(s) transmise(s) à l'IA")
 
     consignes = construire_consignes(args.niveau, titre, objectifs, args.nombre, args.saisies, enonces_existants, args.matiere, revisions, defis,
-                                     args.associations, args.ordres)
+                                     args.associations, args.ordres, args.vraifaux)
 
     demande = f"Rédige les {args.nombre} questions sur le domaine « {titre} »."
 

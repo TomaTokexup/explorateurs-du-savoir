@@ -4,7 +4,7 @@ import json
 import sys
 from pathlib import Path
 
-TYPES_CONNUS = ["qcm", "saisie", "association", "ordre"]
+TYPES_CONNUS = ["qcm", "saisie", "association", "ordre", "vraifaux"]
 CHAMPS_COMMUNS = ["enonce", "explication"]
 
 
@@ -51,6 +51,8 @@ def verifier_question(question, numero):
         erreurs.extend(verifier_association(question, numero))
     elif type_question == "ordre":
         erreurs.extend(verifier_ordre(question, numero))
+    elif type_question == "vraifaux":
+        erreurs.extend(verifier_vraifaux(question, numero))
 
     return erreurs
 
@@ -163,6 +165,25 @@ def verifier_ordre(question, numero):
         erreurs.append(f"Question {numero} : il y a des étiquettes en double")
     return erreurs
 
+def verifier_vraifaux(question, numero):
+    """Contrôles propres aux exercices « vrai ou faux » : une affirmation (dans "enonce")
+    et la réponse dans "vrai" (true ou false)."""
+    erreurs = []
+
+    affirmation = question.get("enonce")
+    if not isinstance(affirmation, str) or not 1 <= len(affirmation) <= 200:
+        erreurs.append(f"Question {numero} : 'enonce' doit être un texte de 1 à 200 caractères")
+    elif affirmation.strip().endswith("?"):
+        erreurs.append(f"Question {numero} : 'enonce' doit être une affirmation, pas une question")
+
+    if not isinstance(question.get("vrai"), bool):
+        erreurs.append(f"Question {numero} : 'vrai' doit valoir true ou false")
+
+    for champ in ("choix", "bonneReponse", "reponses", "paires", "elements"):
+        if champ in question:
+            erreurs.append(f"Question {numero} : champ '{champ}' inutile pour un vrai ou faux")
+
+    return erreurs
 
 def resume_question(question):
     """Un résumé qui identifie une question : son énoncé, et pour les exercices « relier » et

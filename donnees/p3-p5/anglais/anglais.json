@@ -132,5 +132,109 @@
     ],
     "bonneReponse": 2,
     "explication": "'Clock' rhymes with 'dock'. Rhyming words often end with the same sound."
+  },
+  {
+    "type": "association",
+    "enonce": "Match each sign to what it means.",
+    "paires": [
+      [
+        "Wet floor",
+        "Be careful, you may slip"
+      ],
+      [
+        "Keep off the grass",
+        "Stay on the path"
+      ],
+      [
+        "Quiet, please",
+        "Do not talk loudly"
+      ],
+      [
+        "Exit",
+        "The way out of the building"
+      ]
+    ],
+    "explication": "Signs tell us quickly what to do or what to avoid. Read the words on each sign and find the sentence that explains it. For example, 'Exit' means the door you use to leave."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Put the school days in order, from Monday to Friday.",
+    "elements": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "explication": "The school week starts on Monday and finishes on Friday. The days always come in this same order, so the week goes Monday, Tuesday, Wednesday, Thursday, Friday."
+  },
+  {
+    "type": "association",
+    "enonce": "Match each word to its meaning.",
+    "paires": [
+      [
+        "a dentist",
+        "a person who looks after your teeth"
+      ],
+      [
+        "a chemist",
+        "a shop where you buy medicine"
+      ],
+      [
+        "a nurse",
+        "a person who helps sick people"
+      ],
+      [
+        "a baker",
+        "a person who makes bread and cakes"
+      ]
+    ],
+    "explication": "Some words name people or places. A dentist checks your teeth, and a chemist sells medicine. Learn each word with its meaning, not just its spelling."
+  },
+  {
+    "type": "association",
+    "enonce": "Match each question or request to the best answer.",
+    "paires": [
+      [
+        "How are you?",
+        "I'm fine, thanks."
+      ],
+      [
+        "What's your favourite colour?",
+        "It's green."
+      ],
+      [
+        "Can I have a biscuit, please?",
+        "Here you are."
+      ],
+      [
+        "Sorry I'm late.",
+        "That's OK."
+      ]
+    ],
+    "explication": "In a short conversation, each question or request has a natural reply. 'Here you are' is what we say when we give something to someone. 'That's OK' is a kind answer to an apology."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Put these numbers in order, from the smallest to the biggest.",
+    "elements": [
+      "twelve",
+      "thirteen",
+      "twenty",
+      "thirty",
+      "forty-four"
+    ],
+    "explication": "Numbers ending in -teen are between 13 and 19: thirteen is 13. Numbers ending in -ty are tens: twenty is 20, thirty is 30. So the order is 12, 13, 20, 30, 44. Be careful not to mix up thirteen (13) and thirty (30)!"
+  },
+  {
+    "type": "ordre",
+    "enonce": "Put the sentences in the order they happen in the story.",
+    "elements": [
+      "Sam wakes up late.",
+      "Sam runs to the bus stop.",
+      "Sam catches the bus to school.",
+      "Sam arrives at school just in time."
+    ],
+    "explication": "Sam must wake up before he can run out of the house. He can only catch the bus after he reaches the bus stop, and he arrives at school at the end."
   }
 ]
