@@ -183,5 +183,29 @@
       "chapeau"
     ],
     "explication": "Les cinq mots commencent par « cha » : il faut regarder la 4e lettre. Le i de « chaise » vient avant le m, puis le n, puis le p. « Chameau » et « champ » commencent tous les deux par « cham » : on compare alors la 5e lettre, e avant p."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le contraire de « grand » est « gros ».",
+    "vrai": false,
+    "explication": "Faux. Le contraire de « grand » est « petit ». « Gros » est plutôt un synonyme de « grand » : il veut dire qu'un objet a beaucoup de volume."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "L'expression « avoir la tête dans les nuages » veut dire être distrait, comme si on rêvait.",
+    "vrai": true,
+    "explication": "Vrai. Quand on a la tête dans les nuages, on pense à autre chose et on ne fait plus attention à ce qui se passe autour de soi."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le mot « minuscule » est le contraire du mot « énorme ».",
+    "vrai": true,
+    "explication": "Vrai. « Minuscule » veut dire très petit, et « énorme » veut dire très grand : ce sont deux mots de sens opposé."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le connecteur « en revanche » sert à ajouter une idée qui va dans le même sens que la précédente.",
+    "vrai": false,
+    "explication": "Faux. « En revanche » sert à opposer deux idées : il montre que la seconde phrase est différente de la première. Pour ajouter une idée dans le même sens, on dit plutôt « de plus »."
   }
 ]

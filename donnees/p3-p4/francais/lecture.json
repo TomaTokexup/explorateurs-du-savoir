@@ -184,5 +184,29 @@
       "Situation finale : le problème est résolu"
     ],
     "explication": "Un conte commence par présenter le héros et le lieu où il vit. Ensuite, un problème arrive et change la situation. Le héros tente alors de le résoudre, et l'histoire se termine quand le problème est réglé."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans un livre, le sommaire indique à quelle page se trouve chaque chapitre.",
+    "vrai": true,
+    "explication": "Vrai. Le sommaire, généralement au début du livre, donne la liste des chapitres avec le numéro de la page où chacun commence. Il permet de trouver rapidement une partie du livre."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans un livre, le sommaire se trouve à la fin, après le dernier chapitre.",
+    "vrai": false,
+    "explication": "Faux. Le sommaire se trouve en général au début du livre, avant le premier chapitre, pour que le lecteur sache ce qui l'attend. Il ne faut pas le confondre avec la table des matières, qui peut être placée ailleurs selon les livres."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans une bande dessinée, les paroles des personnages sont écrites dans des bulles.",
+    "vrai": true,
+    "explication": "Vrai. Les bulles, reliées au personnage qui parle, montrent ce que chaque personnage dit ou pense. Elles aident à suivre les dialogues case après case."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un article de journal raconte des événements imaginés par l'auteur.",
+    "vrai": false,
+    "explication": "Faux. Un article de journal informe sur des événements réels, qui se sont vraiment passés. Une histoire inventée par un auteur, avec des personnages imaginaires, est un récit de fiction."
   }
 ]

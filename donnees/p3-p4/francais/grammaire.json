@@ -206,5 +206,30 @@
       ]
     ],
     "explication": "« Maison » désigne une chose : c'est un nom commun. « Lucas » est le prénom d'une personne précise : c'est un nom propre, avec une majuscule. « Rapide » dit comment est quelque chose : c'est un adjectif. « Chanter » est une action à l'infinitif : c'est un verbe. « Ces » se place devant un nom : c'est un déterminant."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « Il a planté des fleurs rouges. », l'adjectif « rouges » est au pluriel parce qu'il s'accorde avec « fleurs ».",
+    "vrai": true,
+    "explication": "Vrai. Un adjectif s'accorde en genre et en nombre avec le nom auquel il se rapporte : « fleurs » est au pluriel, donc « rouges » prend un -s."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le pronom « ils » peut remplacer un nom féminin pluriel, comme « les tables ».",
+    "vrai": false,
+    "explication": "Faux. « Ils » remplace un nom masculin pluriel (ou un groupe mixte). Pour un nom féminin pluriel comme « les tables », on utilise « elles »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « Le livre dont je te parle est passionnant », le mot « dont » remplace « du livre ».",
+    "vrai": true,
+    "explication": "Vrai. On dit « je te parle du livre » : « dont » remplace « de + le livre ». Il relie la proposition relative au nom « livre ».",
+    "defi": true
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « Les chiens dorment dans le jardin », le verbe « dorment » s'accorde avec « dans le jardin ».",
+    "vrai": false,
+    "explication": "Faux. Le verbe s'accorde avec le sujet « Les chiens » (pluriel). Le groupe « dans le jardin » est un complément de lieu, il ne commande pas l'accord."
   }
 ]

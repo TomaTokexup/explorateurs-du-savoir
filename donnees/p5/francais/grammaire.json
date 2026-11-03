@@ -177,5 +177,30 @@
       ]
     ],
     "explication": "« Celui-ci » montre quelque chose : il est démonstratif. « Le mien » indique à qui appartient la chose : il est possessif. « Dont » relie une proposition à un nom (le livre dont je parle) : il est relatif. « Chacun » désigne des personnes sans dire lesquelles : il est indéfini."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « Mon cousin et moi partons en vacances. », le verbe « partons » a pour sujet « Mon cousin et moi ».",
+    "vrai": true,
+    "explication": "Vrai. Le sujet est multiple : il est formé de plusieurs mots (« Mon cousin et moi »). On peut le vérifier en demandant « qui part en vacances ? ». Le verbe s'accorde alors avec « nous » : « partons »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « Le chien a mangé ses croquettes. », « mangé » est l'auxiliaire du verbe.",
+    "vrai": false,
+    "explication": "Faux. L'auxiliaire est « a », qui est le verbe avoir conjugué. « Mangé » est le participe passé du verbe manger, qui accompagne l'auxiliaire pour former le passé composé."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « Léa est très gentille. », le verbe « est » est un verbe d'état.",
+    "vrai": true,
+    "explication": "Vrai. Un verbe d'état ne montre pas une action : il relie le sujet à un mot qui le décrit. Ici, « est » relie « Léa » à « gentille »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « Quand il pleut, je reste à la maison. », « je reste à la maison » est une proposition subordonnée.",
+    "vrai": false,
+    "explication": "Faux. « Je reste à la maison » est la proposition principale, c'est la phrase qui tient seule. « Quand il pleut » est la proposition subordonnée : elle commence par « quand » et indique le moment.",
+    "defi": true
   }
 ]

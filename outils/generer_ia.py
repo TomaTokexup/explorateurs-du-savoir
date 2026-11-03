@@ -131,7 +131,7 @@ Consignes générales :
 - Si l'énoncé contient une liste (par exemple des événements A, B et C), écris chaque élément sur sa propre ligne en les séparant par \\n dans le texte JSON.
 - Dans "reponses", inutile de répéter une réponse avec une majuscule : le site ignore les majuscules.
 
-Rédige exactement {nb_qcm} questions de type "qcm", {nb_saisies} de type "saisie", {nb_associations} de type "association" et {nb_ordres} de type "ordre", {nb_vraifaux} de type "vraifaux".
+Rédige exactement {nb_qcm} questions de type "qcm", {nb_saisies} de type "saisie", {nb_associations} de type "association", {nb_ordres} de type "ordre" et {nb_vraifaux} de type "vraifaux".
 
 Type "qcm" :
 - exactement 4 choix, dont une seule bonne réponse ;
@@ -203,7 +203,7 @@ Type "association" (l'élève relie chaque élément de gauche à un élément d
 - une seule association possible pour chaque élément : aucun élément de droite ne doit pouvoir convenir à deux éléments de gauche ;
 - à utiliser pour des liens à mémoriser : mot ↔ définition ou synonyme, organe ↔ rôle, instrument ↔ ce qu'il mesure, calcul ↔ résultat, date ↔ événement, verbe ↔ temps, pays ↔ capitale… ;
 - l'énoncé dit quoi relier (« Relie chaque organe à son rôle. ») ; l'explication rappelle brièvement les bonnes paires ou la règle ;
-- vérifie qu’un élément de gauche ne peut être relié qu’à un seul élément de droite, par exemple deux calculs qui donnent le même résultat.
+- vérifie qu’un élément de gauche ne peut être relié qu’à un seul élément de droite, par exemple deux calculs qui donnent le même résultat;
 - tous les éléments de droite sont de même nature (même unité, même forme d'écriture) : on ne doit pas pouvoir relier une paire sans réfléchir, juste grâce à un mot ou une unité.
 
 Type "ordre" (l'élève range des étiquettes avec des flèches) :
@@ -214,7 +214,7 @@ Type "ordre" (l'élève range des étiquettes avec des flèches) :
 - vérifie que deux étiquettes voisines ne pourraient jamais être échangées sans que l'ordre devienne faux ; 
 - évite les étapes de recette ou d'activité dont l'ordre est libre ;
 - n'écris jamais la valeur ou la réponse dans une étiquette : pas de date, de nombre ou de mesure entre parenthèses ; ces informations vont dans l'explication ;
-- en maths, préfère ranger des nombres, des mesures ou des résultats à calculer plutôt que les étapes d'une méthode.
+- en maths, préfère ranger des nombres, des mesures ou des résultats à calculer plutôt que les étapes d'une méthode;
 - l'ordre ne doit pas se deviner avec les mots des étiquettes (« début / fin », « premier / second », « le matin / le soir », « avant / après ») ;
 
 Type "vraifaux" (l'élève répond Vrai ou Faux à une affirmation) :
@@ -223,7 +223,8 @@ Type "vraifaux" (l'élève répond Vrai ou Faux à une affirmation) :
 - une affirmation fausse décrit une erreur que font vraiment les élèves (une confusion classique, une idée reçue), jamais une absurdité évidente ;
 - n'utilise pas de négation (« ne… pas ») ni de mot piège (« toujours », « jamais », « tous ») qui rendrait la réponse discutable ;
 - la réponse ne doit dépendre d'aucun détail ambigu : un adulte qui connaît le sujet répond sans hésiter ;
-- l'explication commence par « Vrai. » ou « Faux. », puis donne la bonne information.
+- l'explication commence par « Vrai. » ou « Faux. », puis donne la bonne information;
+- en orthographe, n'écris jamais dans l'affirmation le mot dont on teste l'orthographe (l'élève le voit écrit), et n'écris jamais un mot mal orthographié ; teste plutôt une règle ou une astuce (« on peut remplacer… par… ») ;
 
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
 [

@@ -164,5 +164,29 @@
     ],
     "bonneReponse": 2,
     "explication": "« Toujours » est un mot invariable : il s'écrit toujours de la même façon (ils sont toujours là). Les adjectifs, eux, s'accordent : contents, rouges, petits. D'autres mots invariables sont à connaître par cœur : souvent, jamais, beaucoup, très, avec…"
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans « Il a mangé », on peut remplacer « a » par « avait ».",
+    "vrai": true,
+    "explication": "Vrai. « Il avait mangé » a du sens : « a » est ici le verbe avoir, il s'écrit sans accent. Si on ne peut pas dire « avait », c'est « à » avec un accent, comme dans « Je vais à la piscine »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans « Je vais à la piscine », on peut remplacer « à » par « avait ».",
+    "vrai": false,
+    "explication": "Faux. « Je vais avait la piscine » ne veut rien dire : « à » n'est pas le verbe avoir, c'est un petit mot qui indique le lieu, et il prend un accent."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "On écrit « sont » quand on peut le remplacer par « étaient ».",
+    "vrai": true,
+    "explication": "Vrai. « Sont » est le verbe être : « Ils sont partis » devient « Ils étaient partis ». Si on peut dire « le sien » ou « mon », c'est « son », comme dans « son vélo »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "On met un accent sur « ou » quand il veut dire « ou bien ».",
+    "vrai": false,
+    "explication": "Faux. C'est l'inverse : « ou » sans accent veut dire « ou bien » (du thé ou du lait). « Où » avec un accent indique un lieu (Où vas-tu ?)."
   }
 ]

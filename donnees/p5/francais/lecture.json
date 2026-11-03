@@ -198,5 +198,30 @@
       "hurler"
     ],
     "explication": "« Chuchoter » c'est parler très bas, « parler » se fait à voix normale, « crier » demande une voix très haute, et « hurler » est encore plus fort que crier. Pour trouver l'ordre, imagine le volume de la voix dans chaque cas."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans un récit, les informations essentielles permettent de comprendre l'histoire, alors que les détails accessoires peuvent être retirés sans que l'histoire devienne incompréhensible.",
+    "vrai": true,
+    "explication": "Vrai. Les informations essentielles (qui sont les personnages, ce qu'ils font, ce qui arrive) sont indispensables pour suivre l'histoire. Les détails accessoires, comme la description d'un décor, peuvent être enlevés sans perdre le fil du récit."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une information implicite est écrite mot pour mot dans le texte, il suffit de la recopier.",
+    "vrai": false,
+    "explication": "Faux. Une information implicite n'est pas écrite directement dans le texte : on la devine à partir d'indices et de ses propres connaissances."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « la lune souriait au-dessus des toits », la lune est présentée comme une personne.",
+    "vrai": true,
+    "explication": "Vrai. C'est une personnification : on donne à un objet ou à un élément de la nature une qualité humaine, ici le sourire.",
+    "defi": true
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un texte documentaire raconte une histoire imaginée par l'auteur pour faire rêver le lecteur.",
+    "vrai": false,
+    "explication": "Faux. Un texte documentaire donne des informations réelles et vérifiables sur le monde, comme un article sur les volcans. Une histoire imaginée par l'auteur, c'est un récit : un conte ou un roman, par exemple."
   }
 ]

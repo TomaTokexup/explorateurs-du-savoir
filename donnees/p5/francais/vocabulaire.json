@@ -183,5 +183,30 @@
       "un quartier"
     ],
     "explication": "Un pays est découpé en régions, une région contient des villes, et une ville est formée de quartiers. Chaque mot désigne une partie du mot qui le précède dans la liste."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les mots « voler » (s'envoler dans les airs) et « voler » (prendre ce qui appartient à quelqu'un) sont des synonymes.",
+    "vrai": false,
+    "explication": "Faux. Ce sont des homonymes : ils s'écrivent et se prononcent de la même façon, mais leurs sens sont différents. Des synonymes ont au contraire le même sens, comme « content » et « joyeux »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le connecteur « c'est-à-dire » sert à expliquer autrement ce qu'on vient de dire.",
+    "vrai": true,
+    "explication": "Vrai. Par exemple : « Le chat est un félin, c'est-à-dire un animal de la famille des chats. » On reformule l'idée avec d'autres mots pour la rendre plus claire."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "« Bio » est une racine grecque qui veut dire « vie ».",
+    "vrai": true,
+    "defi": true,
+    "explication": "Vrai. La racine grecque « bio » signifie « vie ». Elle se retrouve dans « biologie », l'étude du vivant, ou dans « biosphère ». Si tu connais le sens de la racine, tu peux deviner le sens de ces mots."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « Il pleut des cordes », le mot « cordes » a son sens propre.",
+    "vrai": false,
+    "explication": "Faux. Il n'y a pas de cordes qui tombent du ciel : c'est un sens figuré. L'expression veut dire qu'il pleut très fort."
   }
 ]

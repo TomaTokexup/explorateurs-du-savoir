@@ -162,5 +162,29 @@
     ],
     "accents": "stricts",
     "explication": "Avec l'auxiliaire avoir, le participe passé s'accorde avec le COD quand il est placé avant le verbe. Ici, « que » remplace « les photos », féminin pluriel, et il est placé avant « ai pris » : on écrit donc « prises »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans un nom composé formé de deux noms, les deux noms prennent la marque du pluriel.",
+    "vrai": true,
+    "explication": "Vrai. Quand les deux mots sont des noms, on met les deux au pluriel : un chou-fleur devient des choux-fleurs, un wagon-lit devient des wagons-lits."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les adjectifs qui se terminent par -f au masculin ont un féminin qui se termine par -fe.",
+    "vrai": false,
+    "explication": "Faux. Les adjectifs en -f ont un féminin en -ve : neuf devient neuve, vif devient vive."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les adjectifs qui se terminent par -eux au masculin ont un féminin qui se termine par -euse.",
+    "vrai": true,
+    "explication": "Vrai. Au masculin en -eux, le féminin se termine par -euse : heureux devient heureuse, joyeux devient joyeuse."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "On écrit « la » sans accent quand on peut le remplacer par « ici ».",
+    "vrai": false,
+    "explication": "Faux. Quand on peut dire « ici », on écrit « là » avec un accent : « Pose ton cartable là » devient « Pose ton cartable ici ». Sans accent, « la » se place devant un nom (la table) ou remplace un nom (je la regarde)."
   }
 ]

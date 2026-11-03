@@ -194,5 +194,29 @@
       ]
     ],
     "explication": "L'imparfait (lisait) raconte une habitude du passé : « chaque soir ». Le passé simple (lut) raconte une action précise du récit. Le plus-que-parfait (avait lu) montre une action faite encore avant. Le futur (lira) parle de ce qui va arriver."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le participe présent du verbe « lire » est « lisant ».",
+    "vrai": true,
+    "explication": "Vrai. Le participe présent de « lire » est « lisant » : on ajoute -ant au radical lis-. Le verbe « finir » suit la même idée et donne « finissant »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Au passé simple, « ils étaient » est la bonne forme du verbe « être » à la 3e personne du pluriel.",
+    "vrai": false,
+    "explication": "Faux. « Ils étaient » est à l'imparfait. Au passé simple, « être » se conjugue « ils furent » à la 3e personne du pluriel."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « S'il pleuvait, nous ferions nos devoirs à l'intérieur », le verbe « faire » est au futur.",
+    "vrai": false,
+    "explication": "Faux. « Nous ferions » est au conditionnel présent : il exprime ce qui arriverait si une condition était remplie (« s'il pleuvait »). Au futur, on dirait « nous ferons », sans i."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Au conditionnel présent, le verbe « devoir » se conjugue « je devrais ».",
+    "vrai": true,
+    "explication": "Vrai. On prend le radical du futur (devr-) et on ajoute les terminaisons de l'imparfait (-ais) : « je devrais »."
   }
 ]

@@ -231,5 +231,29 @@
       ]
     ],
     "explication": "Les verbes du 1er groupe (en -er) ont un participe passé en -é : manger → mangé. Les verbes du 2e groupe (en -ir) ont un participe en -i : finir → fini. Les verbes du 3e groupe sont irréguliers : prendre → pris, faire → fait. Il faut les apprendre par cœur."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Au présent, avec « vous », le verbe « jouer » s'écrit « vous jouez ».",
+    "vrai": true,
+    "explication": "Vrai. Avec « vous », les verbes du 1er groupe prennent la terminaison -ez : « vous jouez », « vous chantez », « vous dansez »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "À l'impératif présent, avec « tu », le verbe « manger » s'écrit « tu manges ».",
+    "vrai": false,
+    "explication": "Faux. À l'impératif, on dit « mange » sans le pronom « tu » : le « s » disparaît pour les verbes du 1er groupe, comme dans « mange ta soupe »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Au futur, avec « elles », le verbe « finir » s'écrit « elles finiront ».",
+    "vrai": true,
+    "explication": "Vrai. Au futur, « finir » devient « finir- » suivi des terminaisons -ai, -as, -a, -ons, -ez, -ont : « elles finiront »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Au passé composé, le verbe « aller » se conjugue avec l'auxiliaire « avoir » : « nous avons allé ».",
+    "vrai": false,
+    "explication": "Faux. Le verbe « aller » se conjugue avec l'auxiliaire « être » : on écrit « nous sommes allés ». Il faut retenir la liste des verbes qui prennent « être » (aller, venir, partir, arriver…)."
   }
 ]
