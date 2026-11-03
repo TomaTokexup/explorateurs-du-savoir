@@ -208,13 +208,14 @@ Type "association" (l'élève relie chaque élément de gauche à un élément d
 
 Type "ordre" (l'élève range des étiquettes avec des flèches) :
 - "elements" : 3 à 6 étiquettes de 60 caractères au plus, écrites dans le BON ordre (le site les mélange) ;
-- à utiliser pour une chronologie, les étapes d'un cycle ou d'une méthode, des nombres ou des mesures à classer, les mots d'une phrase à reconstituer… ;
+- à utiliser pour une chronologie, les étapes d'un cycle, des nombres ou des mesures à classer, des mots à ranger dans l'ordre alphabétique, les événements d'un texte lu… ;
 - l'explication justifie l'ordre (dates, valeurs ou logique des étapes) ;
 - un seul ordre possible, clairement défini par l'énoncé (« du plus ancien au plus récent », « du plus petit au plus grand », « dans l'ordre des étapes ») ;
 - vérifie que deux étiquettes voisines ne pourraient jamais être échangées sans que l'ordre devienne faux ; 
 - évite les étapes de recette ou d'activité dont l'ordre est libre ;
 - n'écris jamais la valeur ou la réponse dans une étiquette : pas de date, de nombre ou de mesure entre parenthèses ; ces informations vont dans l'explication ;
 - en maths, préfère ranger des nombres, des mesures ou des résultats à calculer plutôt que les étapes d'une méthode.
+- l'ordre ne doit pas se deviner avec les mots des étiquettes (« début / fin », « premier / second », « le matin / le soir », « avant / après ») ;
 
 Réponds UNIQUEMENT avec un tableau JSON, sans aucun texte avant ou après :
 [
