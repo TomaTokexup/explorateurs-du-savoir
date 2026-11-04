@@ -208,5 +208,134 @@
     "enonce": "Un article de journal raconte des événements imaginés par l'auteur.",
     "vrai": false,
     "explication": "Faux. Un article de journal informe sur des événements réels, qui se sont vraiment passés. Une histoire inventée par un auteur, avec des personnages imaginaires, est un récit de fiction."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Où Léa retrouve-t-elle la clé de la remise ?",
+    "texte": "Un matin de novembre, Léa s'emmitoufla dans son écharpe rouge et sortit dans le jardin. La vieille clé de la remise avait disparu, et elle était bien décidée à la retrouver. « Je l'avais posée sur le rebord de la fenêtre, je te le jure ! » grommela-t-elle en scrutant les pavés. Son petit frère Noé, qui jouait au ballon près du poulailler, releva brusquement la tête. Pourtant, il ne dit rien et se mit à donner de grands coups de pied dans l'herbe. Léa se souvint alors d'un bruit de pas dans la ruelle, la veille au soir, quand elle était allée fermer les volets. Un peu plus tard, elle trouva la clé dans la poche du vieux manteau accroché près de la porte. Noé finit par avouer qu'il voulait ouvrir la remise, parce qu'il y cachait une surprise pour l'anniversaire de leur mère.",
+    "choix": [
+      "Sur le rebord de la fenêtre",
+      "Dans la poche d'un vieux manteau près de la porte",
+      "Dans la remise, sur une étagère",
+      "Près du poulailler, dans l'herbe"
+    ],
+    "bonneReponse": 1,
+    "explication": "Léa croyait l'avoir laissée sur la fenêtre, mais c'est une erreur : la clé se trouve plus tard dans un manteau. Repère la phrase qui commence par « Un peu plus tard »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Qui a probablement pris la clé de la remise ? Écris le prénom.",
+    "texte": "Un matin de novembre, Léa s'emmitoufla dans son écharpe rouge et sortit dans le jardin. La vieille clé de la remise avait disparu, et elle était bien décidée à la retrouver. « Je l'avais posée sur le rebord de la fenêtre, je te le jure ! » grommela-t-elle en scrutant les pavés. Son petit frère Noé, qui jouait au ballon près du poulailler, releva brusquement la tête. Pourtant, il ne dit rien et se mit à donner de grands coups de pied dans l'herbe. Léa se souvint alors d'un bruit de pas dans la ruelle, la veille au soir, quand elle était allée fermer les volets. Un peu plus tard, elle trouva la clé dans la poche du vieux manteau accroché près de la porte. Noé finit par avouer qu'il voulait ouvrir la remise, parce qu'il y cachait une surprise pour l'anniversaire de leur mère.",
+    "reponses": [
+      "Noé",
+      "Noe"
+    ],
+    "accents": "stricts",
+    "explication": "Il faut relier plusieurs indices : Noé réagit bizarrement, ne dit rien, et finit par avouer qu'il voulait ouvrir la remise. Une personne qui veut ouvrir la remise a pu prendre la clé."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi Noé voulait-il ouvrir la remise ?",
+    "texte": "Un matin de novembre, Léa s'emmitoufla dans son écharpe rouge et sortit dans le jardin. La vieille clé de la remise avait disparu, et elle était bien décidée à la retrouver. « Je l'avais posée sur le rebord de la fenêtre, je te le jure ! » grommela-t-elle en scrutant les pavés. Son petit frère Noé, qui jouait au ballon près du poulailler, releva brusquement la tête. Pourtant, il ne dit rien et se mit à donner de grands coups de pied dans l'herbe. Léa se souvint alors d'un bruit de pas dans la ruelle, la veille au soir, quand elle était allée fermer les volets. Un peu plus tard, elle trouva la clé dans la poche du vieux manteau accroché près de la porte. Noé finit par avouer qu'il voulait ouvrir la remise, parce qu'il y cachait une surprise pour l'anniversaire de leur mère.",
+    "choix": [
+      "Pour chercher son ballon perdu",
+      "Pour cacher une surprise pour l'anniversaire de leur mère",
+      "Pour ranger des outils du jardin",
+      "Pour se cacher de sa sœur"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Parce que » introduit la cause : cherche, à la fin du texte, la phrase où Noé explique la raison de son aveu."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les événements dans l'ordre où ils se sont réellement produits, du plus ancien au plus récent.",
+    "texte": "Un matin de novembre, Léa s'emmitoufla dans son écharpe rouge et sortit dans le jardin. La vieille clé de la remise avait disparu, et elle était bien décidée à la retrouver. « Je l'avais posée sur le rebord de la fenêtre, je te le jure ! » grommela-t-elle en scrutant les pavés. Son petit frère Noé, qui jouait au ballon près du poulailler, releva brusquement la tête. Pourtant, il ne dit rien et se mit à donner de grands coups de pied dans l'herbe. Léa se souvint alors d'un bruit de pas dans la ruelle, la veille au soir, quand elle était allée fermer les volets. Un peu plus tard, elle trouva la clé dans la poche du vieux manteau accroché près de la porte. Noé finit par avouer qu'il voulait ouvrir la remise, parce qu'il y cachait une surprise pour l'anniversaire de leur mère.",
+    "elements": [
+      "Léa entend des pas dans la ruelle.",
+      "Léa cherche la clé sur les pavés du jardin.",
+      "Léa trouve la clé dans le vieux manteau.",
+      "Noé avoue qu'il voulait ouvrir la remise."
+    ],
+    "explication": "Les pas ont eu lieu la veille au soir, avant la recherche du matin. Léa trouve la clé un peu plus tard, et Noé avoue à la fin. Le texte raconte ces faits dans un autre ordre : le souvenir des pas arrive après la recherche."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Où était accroché le cerf-volant au début du texte ?",
+    "texte": "Mathis avait accroché son cerf-volant jaune à la balustrade de l'église, et le vent du nord le faisait danser au-dessus de la place. Sa sœur Inès, assise sur un banc, lisait sans lever les yeux. « Tu vas le casser si tu tires comme ça ! » lança-t-elle. Mathis ne répondit pas, car il venait d'apercevoir, tout en haut d'un platane, une tache jaune qui ressemblait à s'y méprendre à son cerf-volant. Il avait pourtant vérifié la ficelle une dizaine de minutes plus tôt. Mathis courut vers l'arbre, les mains moites, en espérant que la branche tiendrait. Au pied du platane, une vieille dame au chapeau de paille lui tendit une longue perche en bois : « Essaie avec ça, mon garçon, c'est plus long ! »",
+    "choix": [
+      "Au sommet d'un platane",
+      "À la balustrade de l'église",
+      "Sur le banc où est assise Inès",
+      "Au bout d'une longue perche"
+    ],
+    "bonneReponse": 1,
+    "explication": "Au début, le cerf-volant est accroché à la balustrade de l'église. Il se retrouve ensuite dans le platane : ne confonds pas les deux endroits."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi Mathis ne répond-il pas à sa sœur Inès ?",
+    "texte": "Mathis avait accroché son cerf-volant jaune à la balustrade de l'église, et le vent du nord le faisait danser au-dessus de la place. Sa sœur Inès, assise sur un banc, lisait sans lever les yeux. « Tu vas le casser si tu tires comme ça ! » lança-t-elle. Mathis ne répondit pas, car il venait d'apercevoir, tout en haut d'un platane, une tache jaune qui ressemblait à s'y méprendre à son cerf-volant. Il avait pourtant vérifié la ficelle une dizaine de minutes plus tôt. Mathis courut vers l'arbre, les mains moites, en espérant que la branche tiendrait. Au pied du platane, une vieille dame au chapeau de paille lui tendit une longue perche en bois : « Essaie avec ça, mon garçon, c'est plus long ! »",
+    "choix": [
+      "Il est fâché contre sa sœur",
+      "Il n'a pas entendu la vieille dame",
+      "Il a aperçu son cerf-volant dans un arbre",
+      "Il cherche le jardinier pour lui demander de l'aide"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le mot « car » introduit la raison : Mathis a vu son cerf-volant dans le platane, alors il n'écoute plus sa sœur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Que suggère l'expression « les mains moites » à propos de Mathis ?",
+    "texte": "Mathis avait accroché son cerf-volant jaune à la balustrade de l'église, et le vent du nord le faisait danser au-dessus de la place. Sa sœur Inès, assise sur un banc, lisait sans lever les yeux. « Tu vas le casser si tu tires comme ça ! » lança-t-elle. Mathis ne répondit pas, car il venait d'apercevoir, tout en haut d'un platane, une tache jaune qui ressemblait à s'y méprendre à son cerf-volant. Il avait pourtant vérifié la ficelle une dizaine de minutes plus tôt. Mathis courut vers l'arbre, les mains moites, en espérant que la branche tiendrait. Au pied du platane, une vieille dame au chapeau de paille lui tendit une longue perche en bois : « Essaie avec ça, mon garçon, c'est plus long ! »",
+    "choix": [
+      "Il a très chaud et transpire beaucoup",
+      "Il est inquiet pour son cerf-volant",
+      "Il vient de se laver les mains",
+      "Il a froid aux doigts"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le texte ne dit pas directement que Mathis a peur. Les mains moites, la course vers l'arbre et l'espoir que la branche tienne montrent son inquiétude."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans « Essaie avec ça », à quel objet le mot « ça » fait-il référence ? Écris le nom de l'objet.",
+    "texte": "Mathis avait accroché son cerf-volant jaune à la balustrade de l'église, et le vent du nord le faisait danser au-dessus de la place. Sa sœur Inès, assise sur un banc, lisait sans lever les yeux. « Tu vas le casser si tu tires comme ça ! » lança-t-elle. Mathis ne répondit pas, car il venait d'apercevoir, tout en haut d'un platane, une tache jaune qui ressemblait à s'y méprendre à son cerf-volant. Il avait pourtant vérifié la ficelle une dizaine de minutes plus tôt. Mathis courut vers l'arbre, les mains moites, en espérant que la branche tiendrait. Au pied du platane, une vieille dame au chapeau de paille lui tendit une longue perche en bois : « Essaie avec ça, mon garçon, c'est plus long ! »",
+    "reponses": [
+      "perche",
+      "une perche",
+      "la perche"
+    ],
+    "accents": "stricts",
+    "explication": "Le mot « ça » remplace un objet déjà nommé. Relis la phrase d'avant pour voir ce que la vieille dame tend à Mathis."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque type de texte à son rôle.",
+    "paires": [
+      [
+        "Une affiche",
+        "Annoncer un événement au public"
+      ],
+      [
+        "Une lettre",
+        "Écrire à une personne éloignée"
+      ],
+      [
+        "Un journal intime",
+        "Noter sa vie jour après jour"
+      ],
+      [
+        "Un dictionnaire",
+        "Donner le sens des mots"
+      ]
+    ],
+    "explication": "Une affiche informe beaucoup de monde, une lettre s'adresse à une personne précise, un journal intime garde les souvenirs de chaque jour, et un dictionnaire explique les mots."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un sous-titre annonce une partie du texte, comme un titre plus petit.",
+    "vrai": true,
+    "explication": "Vrai. Le sous-titre, souvent écrit en caractères plus petits que le titre, indique de quoi parle une partie du texte."
   }
 ]

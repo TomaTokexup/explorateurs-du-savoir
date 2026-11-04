@@ -186,5 +186,118 @@
     "enonce": "On écrit « la » sans accent quand on peut le remplacer par « ici ».",
     "vrai": false,
     "explication": "Faux. Quand on peut dire « ici », on écrit « là » avec un accent : « Pose ton cartable là » devient « Pose ton cartable ici ». Sans accent, « la » se place devant un nom (la table) ou remplace un nom (je la regarde)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète : « Voici la robe que Léa a ___ hier. »",
+    "choix": [
+      "acheté",
+      "achetée",
+      "achetés",
+      "achetées"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le COD « que » est placé avant le verbe avoir et remplace « la robe ». Le participe passé s'accorde donc avec ce mot : féminin singulier, « achetée »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un dialogue, quel signe de ponctuation indique le début de la réplique d'une personne ?",
+    "choix": [
+      "les guillemets",
+      "le tiret",
+      "les parenthèses",
+      "le point d'exclamation"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le tiret (–) marque chaque réplique, souvent au début d'une nouvelle ligne : – Tu viens ? – Oui, j'arrive."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète : « Mes cousins et moi ___ allés au cinéma. »",
+    "choix": [
+      "sont",
+      "sommes",
+      "êtes",
+      "suis"
+    ],
+    "bonneReponse": 1,
+    "explication": "Quand le sujet contient « moi » avec d'autres personnes, on utilise la forme « nous ». On écrit donc « nous sommes »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris l'adjectif « vif » au féminin : une fille très ___.",
+    "reponses": [
+      "vive"
+    ],
+    "accents": "stricts",
+    "explication": "Les adjectifs en -f au masculin ont souvent un féminin en -ve : vif → vive, actif → active."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Il est sorti ___ son manteau, même s'il pleuvait.",
+    "reponses": [
+      "sans"
+    ],
+    "accents": "stricts",
+    "explication": "« Sans » signifie « qui n'a pas » : sans manteau. Si on peut remplacer par « avec », on écrit « sans »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris l'adjectif « petit » au féminin pluriel : de ___ maisons.",
+    "reponses": [
+      "petites"
+    ],
+    "accents": "stricts",
+    "explication": "L'adjectif s'accorde avec le nom qu'il accompagne : il est au féminin et au pluriel car il se rapporte à « maisons »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel signe de ponctuation sépare les éléments d'une liste de courses ?",
+    "reponses": [
+      "virgule"
+    ],
+    "accents": "stricts",
+    "explication": "Dans une liste, on sépare les mots ou les groupes de mots par une virgule (,)."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque phrase au mot qui complète le trou.",
+    "paires": [
+      [
+        "Je ___ vais jamais seul.",
+        "n'y"
+      ],
+      [
+        "Elle ne veut ___ lire ni écrire.",
+        "ni"
+      ],
+      [
+        "Mes amis ___ invité à leur fête.",
+        "m'ont"
+      ],
+      [
+        "J'ai perdu ___ stylo bleu.",
+        "mon"
+      ]
+    ],
+    "explication": "« N'y » contient « y », qui veut dire « là-bas » (je ne vais pas là-bas). « Ni » sert à nier deux choses (ni lire ni écrire). « M'ont » peut se remplacer par « t'ont » (ils t'ont invité), alors que « mon » se place devant un nom (mon stylo)."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces mots dans l'ordre alphabétique, comme dans le dictionnaire.",
+    "elements": [
+      "parapluie",
+      "parc",
+      "pareil",
+      "parler",
+      "partir"
+    ],
+    "explication": "Les cinq mots commencent par « par » : il faut comparer la 4e lettre. a vient avant c, puis e, puis l, puis t."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Avec le sujet « elle », un verbe du 1er groupe se termine par -s au présent.",
+    "vrai": false,
+    "explication": "Faux. Avec « elle », le verbe se termine par -e au présent : elle chante, elle joue."
   }
 ]

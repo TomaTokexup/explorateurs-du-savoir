@@ -231,5 +231,113 @@
     "enonce": "Dans la phrase « Les chiens dorment dans le jardin », le verbe « dorment » s'accorde avec « dans le jardin ».",
     "vrai": false,
     "explication": "Faux. Le verbe s'accorde avec le sujet « Les chiens » (pluriel). Le groupe « dans le jardin » est un complément de lieu, il ne commande pas l'accord."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Demain, Marie prendra le train. », quel est le verbe conjugué ?",
+    "choix": [
+      "Demain",
+      "Marie",
+      "prendra",
+      "train"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le verbe conjugué est celui qui change selon le temps et la personne : « prendra » est au futur. Le sujet est celui qui fait l'action : « Marie », qui se trouve devant le verbe. « Demain » indique le moment, « train » est un nom."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Il a acheté une trottinette. », quel mot est un article indéfini ?",
+    "choix": [
+      "Il",
+      "a",
+      "une",
+      "trottinette"
+    ],
+    "bonneReponse": 2,
+    "explication": "L'article indéfini présente un nom qu'on ne connaît pas encore, comme « un » ou « une ». On dit « une trottinette » car le nom est féminin. « Il » est un pronom et « a » est le verbe avoir."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel verbe est du 2e groupe ?",
+    "choix": [
+      "parler",
+      "choisir",
+      "prendre",
+      "jouer"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les verbes du 2e groupe finissent à l'infinitif par -ir. Pour vérifier, dis « nous » avec le verbe : « nous choisissons » (avec -issons), donc « choisir » est du 2e groupe. « Parler » et « jouer » sont du 1er groupe, « prendre » du 3e."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans la phrase « Le garçon qui court est mon frère. », écris le pronom relatif.",
+    "reponses": [
+      "qui"
+    ],
+    "accents": "stricts",
+    "explication": "« Qui » est un pronom relatif : il remplace « le garçon » et commence la proposition relative « qui court ». Elle donne une précision sur le nom."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans la phrase « Le vieux pêcheur rentre au port avec ses filets. », combien y a-t-il de noms communs ? Écris le nombre en chiffres.",
+    "reponses": [
+      "3"
+    ],
+    "accents": "stricts",
+    "explication": "Un nom commun désigne une personne ou une chose quelconque, et il se trouve souvent après un déterminant. Ici, ce sont « pêcheur », « port » et « filets ». « Vieux » est un adjectif et « rentre » un verbe.",
+    "astuce": "Souligne les noms avec un crayon de couleur, puis compte-les."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque nom ou groupe de noms au pronom personnel qui peut le remplacer.",
+    "paires": [
+      [
+        "Le chat",
+        "il"
+      ],
+      [
+        "Les roses",
+        "elles"
+      ],
+      [
+        "Ma sœur",
+        "elle"
+      ],
+      [
+        "Mes cousins",
+        "ils"
+      ]
+    ],
+    "explication": "« Le chat » est masculin singulier, donc « il ». « Les roses » est féminin pluriel, donc « elles ». « Ma sœur » est féminin singulier, donc « elle ». « Mes cousins » est masculin pluriel, donc « ils »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "La plupart des adjectifs prennent un e à la fin au féminin.",
+    "vrai": true,
+    "explication": "Vrai. Par exemple « petit » devient « petite » et « joli » devient « jolie ». Le e est la marque la plus courante du féminin."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Il pleut, alors nous restons à la maison. », combien y a-t-il de propositions indépendantes ?",
+    "choix": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "bonneReponse": 1,
+    "explication": "Chaque proposition a son propre verbe conjugué : « Il pleut » et « nous restons ». Il y a donc 2 propositions indépendantes, reliées par le connecteur « alors »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase : « ___ ami est très gentil. »",
+    "choix": [
+      "Ce",
+      "Cet",
+      "Cette",
+      "Ces"
+    ],
+    "bonneReponse": 1,
+    "explication": "Devant un nom masculin qui commence par une voyelle ou un h muet, on écrit « cet ». On dit « un ami », donc « cet ami ». « Ce » se met devant un nom masculin qui commence par une consonne."
   }
 ]

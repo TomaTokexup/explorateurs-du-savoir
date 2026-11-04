@@ -255,5 +255,122 @@
     "enonce": "Au passé composé, le verbe « aller » se conjugue avec l'auxiliaire « avoir » : « nous avons allé ».",
     "vrai": false,
     "explication": "Faux. Le verbe « aller » se conjugue avec l'auxiliaire « être » : on écrit « nous sommes allés ». Il faut retenir la liste des verbes qui prennent « être » (aller, venir, partir, arriver…)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Chaque soir, nous ___ nos devoirs avant le dîner. (verbe finir, à l'imparfait)",
+    "choix": [
+      "nous finissons",
+      "nous finissions",
+      "nous finirons",
+      "nous finirions"
+    ],
+    "bonneReponse": 1,
+    "explication": "À l'imparfait, on garde le radical de « nous finissons » (finiss-) et on ajoute -ions : nous finissions. Le « -ons » du présent et le « -irons » du futur ne conviennent pas."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Conjugue au présent le verbe « savoir » avec le pronom « je ». Tape le pronom et le verbe.",
+    "reponses": [
+      "je sais"
+    ],
+    "accents": "stricts",
+    "explication": "« Savoir » est un verbe irrégulier qu'il faut apprendre par cœur : je sais, tu sais, il sait, nous savons, vous savez, ils savent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle phrase est au passé composé ?",
+    "choix": [
+      "Demain, Léo jouera au foot.",
+      "Maintenant, Léo joue au foot.",
+      "Hier, Léo a joué au foot.",
+      "Hier, Léo jouait au foot."
+    ],
+    "bonneReponse": 2,
+    "explication": "Le passé composé est formé d'un auxiliaire (avoir ou être) au présent et d'un participe passé. Ici, « a joué » : « a » vient d'avoir, « joué » est le participe passé. « Jouait » est à l'imparfait."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète avec la bonne forme du verbe « dire » au présent : « Chers élèves, vous ___ bonjour à la maîtresse. »",
+    "choix": [
+      "vous disez",
+      "vous dites",
+      "vous dis",
+      "vous dîtes"
+    ],
+    "bonneReponse": 1,
+    "explication": "Avec « vous », le verbe « dire » se termine par -tes : vous dites. « Dîtes » est un passé simple, « dis » est la forme de « je » ou « tu »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Demain, tu ___ une bonne note à ton contrôle. (verbe avoir, au futur)",
+    "choix": [
+      "as",
+      "auras",
+      "avais",
+      "avras"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le verbe « avoir » a un radical irrégulier au futur : aur-. On ajoute les terminaisons : tu auras. « Avras » a oublié le « u »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Conjugue au futur le verbe « aller » avec le pronom « nous ». Tape le pronom et le verbe.",
+    "reponses": [
+      "nous irons"
+    ],
+    "accents": "stricts",
+    "explication": "Au futur, « aller » change complètement de radical : ir-. On ajoute la terminaison -ons : nous irons. De même : j'irai, tu iras, il ira."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque forme du verbe « finir » à son temps.",
+    "paires": [
+      [
+        "il finit",
+        "présent"
+      ],
+      [
+        "il finissait",
+        "imparfait"
+      ],
+      [
+        "il finira",
+        "futur"
+      ],
+      [
+        "il a fini",
+        "passé composé"
+      ]
+    ],
+    "explication": "« Il finit » est au présent ; « il finissait » (-ait) est à l'imparfait ; « il finira » (-ira) est au futur ; « il a fini » est au passé composé (a + participe passé)."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces phrases de la plus ancienne à la plus récente.",
+    "elements": [
+      "Léa a visité le musée.",
+      "Léa lit un livre.",
+      "Léa ira à la piscine."
+    ],
+    "explication": "Ici, seul le temps du verbe indique le moment : « a visité » est au passé composé (c'est déjà fait), « lit » est au présent (cela se passe maintenant) et « ira » est au futur (cela se passera plus tard)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la forme à l'impératif présent du verbe « ranger » avec « vous » ?",
+    "choix": [
+      "vous rangez",
+      "rangez",
+      "ranger",
+      "rangerez"
+    ],
+    "bonneReponse": 1,
+    "explication": "À l'impératif, on ne met pas le pronom : on dit « Rangez vos affaires ! ». La forme est celle du présent avec « vous » (-ez), sans « vous »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Au futur, les verbes du 1er groupe gardent l'infinitif entier avant d'ajouter les terminaisons : « je chanterai ».",
+    "vrai": true,
+    "explication": "Vrai. Pour les verbes du 1er groupe, on part de l'infinitif entier : chanter + -ai donne chanterai."
   }
 ]

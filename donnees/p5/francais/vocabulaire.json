@@ -208,5 +208,122 @@
     "enonce": "Dans la phrase « Il pleut des cordes », le mot « cordes » a son sens propre.",
     "vrai": false,
     "explication": "Faux. Il n'y a pas de cordes qui tombent du ciel : c'est un sens figuré. L'expression veut dire qu'il pleut très fort."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pour éviter de répéter « la maîtresse » dans la phrase « Léa aime la maîtresse, car la maîtresse est très gentille », quel mot peut-on mettre à la place du second « la maîtresse » ?",
+    "choix": [
+      "l'enseignante",
+      "la cuisinière",
+      "la maison",
+      "la voisine"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un substitut lexical est un autre mot qui désigne la même personne ou la même chose. « L'enseignante » et « la maîtresse » désignent la même personne, ce qui permet d'éviter la répétition."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quelle phrase le mot « lumière » est-il employé au sens figuré ?",
+    "choix": [
+      "La lampe donne beaucoup de lumière dans la chambre.",
+      "Le soleil envoie sa lumière sur les champs.",
+      "Son explication m'a fait la lumière sur ce problème.",
+      "Il faut éteindre la lumière avant de dormir."
+    ],
+    "bonneReponse": 2,
+    "explication": "Au sens propre, la lumière est ce qui éclaire. Au sens figuré, « faire la lumière sur » veut dire expliquer clairement une chose qui était mal comprise."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Le lapin a détalé dans le champ dès qu'il a vu le chien », que veut dire le verbe « détaler » ?",
+    "choix": [
+      "sauter très haut",
+      "s'enfuir très vite",
+      "creuser un trou",
+      "s'arrêter brusquement"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le lapin voit le chien, donc il part en courant. On peut deviner le sens grâce à la phrase : le lapin réagit à un danger, il s'enfuit très vite."
+  },
+  {
+    "type": "qcm",
+    "enonce": "La racine latine « aqua » veut dire « eau ». Quel mot est formé avec cette racine ?",
+    "choix": [
+      "aérien",
+      "aquatique",
+      "lunaire",
+      "terrestre"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une racine est la partie du mot qui porte le sens principal. « Aquatique » contient la racine « aqua » et veut dire « qui vit ou se trouve dans l'eau »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète avec le connecteur qui convient : « Il faisait très froid ; ___, nous sommes sortis jouer dehors. »",
+    "choix": [
+      "donc",
+      "pourtant",
+      "c'est-à-dire",
+      "de plus"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Pourtant » introduit une idée qui va contre ce qu'on attendait : on pense qu'il faut rester au chaud, mais on sort quand même."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Donne le contraire de « bon » dans l'expression « un bon élève ». Écris un seul mot.",
+    "reponses": [
+      "mauvais"
+    ],
+    "accents": "stricts",
+    "explication": "Un antonyme (ou mot de sens contraire) a un sens opposé au mot de départ. Le contraire de « bon » est « mauvais »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Ajoute le suffixe « -ier » au mot « jardin ». Quel mot obtiens-tu ? Écris un seul mot.",
+    "reponses": [
+      "jardinier"
+    ],
+    "accents": "stricts",
+    "explication": "Un suffixe se place à la fin du mot et change souvent son sens. « Jardin » + « -ier » donne « jardinier », la personne qui s'occupe d'un jardin."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à son synonyme, c'est-à-dire à un mot de sens presque identique.",
+    "paires": [
+      [
+        "fatigué",
+        "épuisé"
+      ],
+      [
+        "malin",
+        "astucieux"
+      ],
+      [
+        "amusant",
+        "drôle"
+      ],
+      [
+        "sale",
+        "malpropre"
+      ]
+    ],
+    "explication": "Des synonymes ont presque le même sens : on peut souvent les remplacer l'un par l'autre dans une phrase."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces mots du plus général au plus précis.",
+    "elements": [
+      "un animal",
+      "un mammifère",
+      "un chien"
+    ],
+    "explication": "« Animal » est le mot le plus général. Les mammifères sont une partie des animaux, et le chien est un mammifère : c'est le mot le plus précis."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le mot « pétale » désigne la partie de la plante qui se trouve sous la terre.",
+    "vrai": false,
+    "explication": "Faux. Le pétale est une partie colorée de la fleur. La partie de la plante qui se trouve sous la terre est la racine."
   }
 ]

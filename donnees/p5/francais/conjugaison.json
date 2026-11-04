@@ -218,5 +218,122 @@
     "enonce": "Au conditionnel présent, le verbe « devoir » se conjugue « je devrais ».",
     "vrai": true,
     "explication": "Vrai. On prend le radical du futur (devr-) et on ajoute les terminaisons de l'imparfait (-ais) : « je devrais »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Conjugue « chanter » au passé simple, avec « ils ».",
+    "choix": [
+      "ils chantaient",
+      "ils chantèrent",
+      "ils ont chanté",
+      "ils chanteront"
+    ],
+    "bonneReponse": 1,
+    "explication": "Au passé simple, les verbes du 1er groupe prennent -èrent avec « ils » : chantèrent. « Chantaient » est à l'imparfait, qui décrit une action qui dure."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Il faut que vous ___ votre cahier de liaison signé demain. (avoir)",
+    "choix": [
+      "avez",
+      "aviez",
+      "ayez",
+      "auriez"
+    ],
+    "bonneReponse": 2,
+    "explication": "Après « il faut que », on utilise le subjonctif présent : que vous ayez. « Avez » est le présent de l'indicatif, « auriez » le conditionnel."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Je ___ bien une glace, mais je n'ai plus d'argent. (vouloir)",
+    "choix": [
+      "voudrais",
+      "veux",
+      "voulais",
+      "voudrai"
+    ],
+    "bonneReponse": 0,
+    "explication": "Pour dire un souhait poli, on emploie le conditionnel présent : je voudrais. « Veux » est au présent, « voulais » à l'imparfait et « voudrai » au futur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un matin, Juliette ___ la porte et ___ dans le jardin. (fermer, entrer)",
+    "choix": [
+      "fermait / entrait",
+      "ferma / entra",
+      "ferme / entre",
+      "fermera / entrera"
+    ],
+    "bonneReponse": 1,
+    "explication": "Ce sont des actions qui se suivent, au passé simple : elle ferma la porte, puis elle entra. L'imparfait (fermait, entrait) décrit plutôt une situation qui dure."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quelle phrase le verbe est-il au passé simple ?",
+    "choix": [
+      "L'oiseau chantait au lever du jour.",
+      "L'oiseau a chanté au lever du jour.",
+      "L'oiseau chantera au lever du jour.",
+      "L'oiseau chanta au lever du jour."
+    ],
+    "bonneReponse": 3,
+    "explication": "« Chanta » est au passé simple, le temps du récit écrit : avec « il » ou « elle », les verbes du 1er groupe se terminent par -a. « Chantait » est à l'imparfait, « a chanté » au passé composé et « chantera » au futur."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Conjugue au futur le verbe « rentrer » avec le pronom « je ». Tape le pronom et le verbe.",
+    "reponses": [
+      "je rentrerai"
+    ],
+    "accents": "stricts",
+    "explication": "Au futur, on ajoute les terminaisons au verbe à l'infinitif : rentrer + -ai donne rentrerai."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Conjugue au passé simple le verbe « prendre » avec le pronom « il ». Tape le pronom et le verbe.",
+    "reponses": [
+      "il prit"
+    ],
+    "accents": "stricts",
+    "explication": "« Prendre » est un verbe du 3e groupe : au passé simple, il devient « il prit ». On le rencontre souvent dans les contes : « Il prit son épée et partit. »"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque forme à son temps ou à son mode.",
+    "paires": [
+      [
+        "il arriva",
+        "passé simple"
+      ],
+      [
+        "nous serions",
+        "conditionnel présent"
+      ],
+      [
+        "qu'ils aient",
+        "subjonctif présent"
+      ],
+      [
+        "en riant",
+        "participe présent"
+      ]
+    ],
+    "explication": "« Il arriva » est au passé simple (arriver), « nous serions » au conditionnel présent (être), « qu'ils aient » au subjonctif présent (avoir) et « en riant » au participe présent (rire)."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces phrases dans l'ordre des événements de l'histoire, du plus ancien au plus récent.",
+    "elements": [
+      "Le marchand avait vendu tous ses fruits.",
+      "Il rentra chez lui à la nuit tombée.",
+      "Il se reposa longtemps dans son lit."
+    ],
+    "explication": "Le plus-que-parfait (« avait vendu ») montre une action passée avant les autres. Ensuite, les actions se suivent au passé simple : il rentra, puis il se reposa."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le participe présent de « jouer » s'écrit « jouent ».",
+    "vrai": false,
+    "explication": "Faux. Le participe présent se termine par -ant : « jouant ». « Jouent » est la forme de la 3e personne du pluriel (ils jouent)."
   }
 ]

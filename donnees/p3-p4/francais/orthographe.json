@@ -188,5 +188,119 @@
     "enonce": "On met un accent sur « ou » quand il veut dire « ou bien ».",
     "vrai": false,
     "explication": "Faux. C'est l'inverse : « ou » sans accent veut dire « ou bien » (du thé ou du lait). « Où » avec un accent indique un lieu (Où vas-tu ?)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le pluriel de « un bijou » est :",
+    "choix": [
+      "des bijous",
+      "des bijoux",
+      "des bijouxs",
+      "des bijoues"
+    ],
+    "bonneReponse": 1,
+    "explication": "La plupart des noms en -ou prennent un s au pluriel (des trous, des clous). Mais sept noms prennent un x : bijou, caillou, chou, genou, hibou, joujou et pou. Donc : des bijoux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase : « Les élèves ___ contents. »",
+    "choix": [
+      "son",
+      "sont",
+      "sonts",
+      "sons"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Sont » est le verbe être à la 3e personne du pluriel. « Son » accompagne un nom au singulier : son cartable."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le féminin de « menteur » est :",
+    "choix": [
+      "menteure",
+      "menteusse",
+      "menteuse",
+      "menteurse"
+    ],
+    "bonneReponse": 2,
+    "explication": "Beaucoup d'adjectifs et de noms en -eur ont un féminin en -euse : un danseur, une danseuse. Ici, « menteur » devient « menteuse »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris au pluriel : un journal → des ___.",
+    "reponses": [
+      "journaux"
+    ],
+    "accents": "stricts",
+    "explication": "Les noms en -al font leur pluriel en -aux : un animal, des animaux. Pour « journal », on écrit donc « journaux »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris le verbe qui veut dire faire venir quelqu'un en criant son nom. Il commence par « ap ».",
+    "reponses": [
+      "appeler"
+    ],
+    "accents": "stricts",
+    "explication": "« Appeler » commence par deux p, comme beaucoup de mots qui commencent par « ap- » : apporter, apprendre. Attention, il y a des exceptions, comme « apercevoir »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète avec le pluriel de l'adjectif « nouveau » : de ___ jouets.",
+    "reponses": [
+      "nouveaux"
+    ],
+    "accents": "stricts",
+    "explication": "Les adjectifs en -eau prennent un x au pluriel : un chapeau rouge, des chapeaux rouges. Donc « nouveau » devient « nouveaux »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris l'adjectif « frais » au féminin : une salade ___.",
+    "reponses": [
+      "fraîche"
+    ],
+    "accents": "stricts",
+    "explication": "Au féminin, « frais » devient « fraîche » : il prend un accent circonflexe sur le i et un e à la fin.",
+    "defi": true
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque phrase au mot qui complète le trou.",
+    "paires": [
+      [
+        "Il ___ blessé en tombant.",
+        "s'est"
+      ],
+      [
+        "Je crois que ___ l'heure.",
+        "c'est"
+      ],
+      [
+        "Je ___ ai donné un livre.",
+        "leur"
+      ],
+      [
+        "Ils rangent ___ affaires.",
+        "leurs"
+      ]
+    ],
+    "explication": "« S'est » vient du verbe se blesser (il s'est blessé) ; « c'est » veut dire « cela est ». « Leur » devant un verbe ne prend jamais de s (je leur ai donné) ; « leurs » devant un nom pluriel s'accorde (leurs affaires)."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces mots dans l'ordre alphabétique, du premier au dernier.",
+    "elements": [
+      "balle",
+      "bateau",
+      "bille",
+      "bonne"
+    ],
+    "explication": "On compare les lettres une à une. « Balle » et « bateau » commencent par ba ; on regarde la 3e lettre : l vient avant t, donc « balle » passe avant « bateau ». « Bille » vient ensuite (bi), puis « bonne » (bo).",
+    "astuce": "Écris les quatre mots en colonne sur ton brouillon, puis compare les lettres une par une."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Au pluriel, les noms terminés par -s, -x ou -z prennent un « s ».",
+    "vrai": false,
+    "explication": "Faux. Ces noms ne changent pas au pluriel : un nez, des nez ; un prix, des prix."
   }
 ]

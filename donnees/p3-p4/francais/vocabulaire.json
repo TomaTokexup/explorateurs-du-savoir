@@ -207,5 +207,125 @@
     "enonce": "Le connecteur « en revanche » sert à ajouter une idée qui va dans le même sens que la précédente.",
     "vrai": false,
     "explication": "Faux. « En revanche » sert à opposer deux idées : il montre que la seconde phrase est différente de la première. Pour ajouter une idée dans le même sens, on dit plutôt « de plus »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le contraire du mot « ouvrir » ?",
+    "choix": [
+      "couvrir",
+      "refermer",
+      "fermer",
+      "tirer"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le contraire d'« ouvrir » est « fermer ». « Refermer » veut dire fermer de nouveau, c'est un autre sens."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel adverbe se forme à partir de l'adjectif « lent » ?",
+    "choix": [
+      "lentemment",
+      "lentement",
+      "lenteur",
+      "lentment"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour former un adverbe en -ment, on part du féminin de l'adjectif : « lente » devient « lente » + -ment, soit « lentement ». « Lenteur » est un nom, et les autres mots sont mal écrits."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle phrase veut dire que Paul a arrêté de jouer au foot ?",
+    "choix": [
+      "Paul ne joue jamais au foot.",
+      "Paul joue rarement au foot.",
+      "Paul ne joue pas encore au foot.",
+      "Paul ne joue plus au foot."
+    ],
+    "bonneReponse": 3,
+    "explication": "« Ne... plus » montre qu'on faisait une action avant et qu'on ne la fait plus. « Ne... jamais » veut dire que cela n'est jamais arrivé, et « pas encore » veut dire que cela n'est pas encore arrivé."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Lou a un chat dans la gorge », que veut dire l'expression « avoir un chat dans la gorge » ?",
+    "choix": [
+      "Lou a très faim.",
+      "Lou a la voix enrouée.",
+      "Lou a mal au ventre.",
+      "Lou a peur des chats."
+    ],
+    "bonneReponse": 1,
+    "explication": "C'est un sens figuré : il n'y a pas de vrai chat. Quand on a un chat dans la gorge, la voix est rauque, par exemple à cause d'un rhume.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase : « Le chien ___ dans le jardin pour rattraper son ballon. »",
+    "choix": [
+      "se promène",
+      "marche",
+      "court",
+      "traîne"
+    ],
+    "bonneReponse": 2,
+    "explication": "Pour rattraper un ballon, le chien doit aller vite : le verbe « courir » est le plus précis. « Marcher », « se promener » et « traîner » montrent un mouvement lent."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom de la personne qui fabrique et vend du pain ? (un seul mot)",
+    "reponses": [
+      "boulanger",
+      "boulangère"
+    ],
+    "accents": "stricts",
+    "explication": "Le mot précis est « boulanger » (ou « boulangère » pour une femme). Il remplace l'expression « la personne qui fait du pain »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom de l'instrument qui mesure la température de l'air ? (un seul mot)",
+    "reponses": [
+      "thermomètre"
+    ],
+    "accents": "stricts",
+    "explication": "Un thermomètre mesure la température. Pour être précis, on utilise le nom exact de l'instrument plutôt que « un appareil »."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à sa définition.",
+    "paires": [
+      [
+        "gourmand",
+        "qui aime beaucoup manger"
+      ],
+      [
+        "timide",
+        "qui n'ose pas parler aux autres"
+      ],
+      [
+        "paresseux",
+        "qui n'aime pas travailler"
+      ],
+      [
+        "courageux",
+        "qui n'a pas peur des difficultés"
+      ]
+    ],
+    "explication": "Un gourmand aime manger, un timide n'ose pas s'exprimer, un paresseux n'aime pas faire d'efforts et un courageux affronte les difficultés sans peur."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces verbes du moins rapide au plus rapide.",
+    "elements": [
+      "marcher",
+      "trotter",
+      "courir",
+      "sprinter"
+    ],
+    "explication": "Marcher est le mouvement le plus lent. Trotter est un petit pas rapide, courir va encore plus vite, et sprinter veut dire courir le plus vite possible sur une courte distance."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le contraire de « rapide » est « vite ».",
+    "vrai": false,
+    "explication": "Faux. « Vite » est un adverbe qui a le même sens que « rapidement ». Le contraire de « rapide » est « lent »."
   }
 ]

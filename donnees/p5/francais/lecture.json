@@ -223,5 +223,72 @@
     "enonce": "Un texte documentaire raconte une histoire imaginée par l'auteur pour faire rêver le lecteur.",
     "vrai": false,
     "explication": "Faux. Un texte documentaire donne des informations réelles et vérifiables sur le monde, comme un article sur les volcans. Une histoire imaginée par l'auteur, c'est un récit : un conte ou un roman, par exemple."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qu'est-ce qui laisse penser que quelqu'un a fouillé le sac de Nina ?",
+    "choix": [
+      "Le gardien a oublié de fermer le sac.",
+      "Son goûter a été mangé par quelqu'un.",
+      "Son carnet a disparu et un papier plié a pris sa place.",
+      "Ali a pris la gourde de Nina."
+    ],
+    "bonneReponse": 2,
+    "explication": "Nina ne retrouve pas son carnet, mais un papier qui n'était pas là avant. Ce changement fait penser qu'une autre personne a touché au sac : c'est un indice implicite.",
+    "texte": "Le mercredi, le musée d'Histoire naturelle était presque désert. Nina traînait derrière les autres, les yeux rivés sur une vitrine où dormait un grand squelette de dinosaure. « Il mesure plus de dix mètres ! » s'exclama Ali en sortant son carnet. Mme Garnier rassembla le groupe près de l'escalier. « Avant de partir, nous irons voir la salle des insectes. » Nina hésita, car elle avait laissé son sac au vestiaire, avec son goûter et sa gourde. Quand elle revint enfin à l'entrée, le gardien lui tendit le sac en souriant. « Tu l'as oublié près de la boutique, dit-il. Heureusement que je l'ai vu ! » Pourtant, Nina ne se souvenait pas d'être passée par la boutique. Elle ouvrit le sac : son carnet avait disparu, remplacé par un petit papier plié en quatre."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces trois événements du plus ancien au plus récent.",
+    "elements": [
+      "Nina laisse son sac au vestiaire.",
+      "Le gardien tend le sac à Nina à l'entrée.",
+      "Nina découvre un petit papier dans son sac."
+    ],
+    "explication": "Nina pose d'abord son sac au vestiaire, puis le gardien le lui rend à l'entrée, et c'est seulement en l'ouvrant qu'elle trouve le papier. Le texte ne raconte pas ces étapes dans l'ordre : certaines sont racontées après coup.",
+    "texte": "Le mercredi, le musée d'Histoire naturelle était presque désert. Nina traînait derrière les autres, les yeux rivés sur une vitrine où dormait un grand squelette de dinosaure. « Il mesure plus de dix mètres ! » s'exclama Ali en sortant son carnet. Mme Garnier rassembla le groupe près de l'escalier. « Avant de partir, nous irons voir la salle des insectes. » Nina hésita, car elle avait laissé son sac au vestiaire, avec son goûter et sa gourde. Quand elle revint enfin à l'entrée, le gardien lui tendit le sac en souriant. « Tu l'as oublié près de la boutique, dit-il. Heureusement que je l'ai vu ! » Pourtant, Nina ne se souvenait pas d'être passée par la boutique. Elle ouvrit le sac : son carnet avait disparu, remplacé par un petit papier plié en quatre."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans la phrase « Il mesure plus de dix mètres ! », le mot « Il » remplace un nom écrit avant. Écris ce nom, en un seul mot.",
+    "reponses": [
+      "squelette",
+      "dinosaure"
+    ],
+    "accents": "stricts",
+    "explication": "Le pronom « il » remplace un nom déjà écrit : c'est le grand squelette de dinosaure que Nina regarde dans la vitrine, et qu'Ali mesure.",
+    "texte": "Le mercredi, le musée d'Histoire naturelle était presque désert. Nina traînait derrière les autres, les yeux rivés sur une vitrine où dormait un grand squelette de dinosaure. « Il mesure plus de dix mètres ! » s'exclama Ali en sortant son carnet. Mme Garnier rassembla le groupe près de l'escalier. « Avant de partir, nous irons voir la salle des insectes. » Nina hésita, car elle avait laissé son sac au vestiaire, avec son goûter et sa gourde. Quand elle revint enfin à l'entrée, le gardien lui tendit le sac en souriant. « Tu l'as oublié près de la boutique, dit-il. Heureusement que je l'ai vu ! » Pourtant, Nina ne se souvenait pas d'être passée par la boutique. Elle ouvrit le sac : son carnet avait disparu, remplacé par un petit papier plié en quatre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi Nina hésite-t-elle quand Mme Garnier propose de partir ?",
+    "choix": [
+      "Elle a peur de la salle des insectes.",
+      "Elle doit encore récupérer son sac, resté au vestiaire.",
+      "Elle veut acheter un souvenir à la boutique.",
+      "Elle ne veut pas quitter le squelette de dinosaure."
+    ],
+    "bonneReponse": 1,
+    "explication": "Le texte dit que Nina a laissé son sac au vestiaire, avec son goûter et sa gourde. Elle hésite donc, car elle doit d'abord aller chercher ses affaires.",
+    "texte": "Le mercredi, le musée d'Histoire naturelle était presque désert. Nina traînait derrière les autres, les yeux rivés sur une vitrine où dormait un grand squelette de dinosaure. « Il mesure plus de dix mètres ! » s'exclama Ali en sortant son carnet. Mme Garnier rassembla le groupe près de l'escalier. « Avant de partir, nous irons voir la salle des insectes. » Nina hésita, car elle avait laissé son sac au vestiaire, avec son goûter et sa gourde. Quand elle revint enfin à l'entrée, le gardien lui tendit le sac en souriant. « Tu l'as oublié près de la boutique, dit-il. Heureusement que je l'ai vu ! » Pourtant, Nina ne se souvenait pas d'être passée par la boutique. Elle ouvrit le sac : son carnet avait disparu, remplacé par un petit papier plié en quatre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « les yeux rivés sur une vitrine », que veut dire « rivés » ?",
+    "choix": [
+      "Fermés à moitié",
+      "Tournés vers le haut",
+      "Ouverts très grand",
+      "Fixés sans bouger"
+    ],
+    "bonneReponse": 3,
+    "explication": "« Rivé » veut dire fixé, attaché à un endroit. Avoir les yeux rivés sur quelque chose, c'est le regarder sans le quitter des yeux.",
+    "texte": "Le mercredi, le musée d'Histoire naturelle était presque désert. Nina traînait derrière les autres, les yeux rivés sur une vitrine où dormait un grand squelette de dinosaure. « Il mesure plus de dix mètres ! » s'exclama Ali en sortant son carnet. Mme Garnier rassembla le groupe près de l'escalier. « Avant de partir, nous irons voir la salle des insectes. » Nina hésita, car elle avait laissé son sac au vestiaire, avec son goûter et sa gourde. Quand elle revint enfin à l'entrée, le gardien lui tendit le sac en souriant. « Tu l'as oublié près de la boutique, dit-il. Heureusement que je l'ai vu ! » Pourtant, Nina ne se souvenait pas d'être passée par la boutique. Elle ouvrit le sac : son carnet avait disparu, remplacé par un petit papier plié en quatre."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour faire une prédiction sur la suite d'une histoire, il faut attendre la fin du texte.",
+    "vrai": false,
+    "explication": "Faux. On peut faire une prédiction dès le début, en s'appuyant sur les indices donnés : une promesse non tenue, un objet caché, une personne qui semble inquiète, etc."
   }
 ]

@@ -202,5 +202,115 @@
     "vrai": false,
     "explication": "Faux. « Je reste à la maison » est la proposition principale, c'est la phrase qui tient seule. « Quand il pleut » est la proposition subordonnée : elle commence par « quand » et indique le moment.",
     "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Le chat boit son lait. », quelle est la nature du verbe « boit » ?",
+    "choix": [
+      "verbe d'état",
+      "verbe d'action",
+      "adjectif",
+      "verbe auxiliaire"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un verbe d'action indique ce que fait quelqu'un ou quelque chose, comme boire, courir ou manger. Un verbe d'état relie le sujet à ce qu'il est ou devient, comme être, sembler ou rester."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Mon vélo est rouge, celui de Léa est bleu. », quel mot ou groupe le pronom démonstratif « celui » remplace-t-il ?",
+    "choix": [
+      "le vélo",
+      "Léa",
+      "rouge",
+      "est bleu"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le pronom démonstratif « celui » remplace un nom déjà cité pour ne pas le répéter. Ici, « celui » est masculin singulier comme « vélo » : « celui de Léa » veut dire « le vélo de Léa »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Viendras-tu demain ? », quel est le sujet du verbe « viendras » ?",
+    "choix": [
+      "demain",
+      "viendras",
+      "Viendras-tu",
+      "tu"
+    ],
+    "bonneReponse": 3,
+    "explication": "Dans une question, le sujet peut être placé après le verbe, relié par un trait d'union : « viendras-tu » veut dire « tu viendras ». Pour le trouver, remets le sujet avant le verbe : « Tu viendras demain. »"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Demain, elle partira en vacances. », quel est le sujet du verbe « partira » ?",
+    "choix": [
+      "Demain",
+      "elle",
+      "partira",
+      "en vacances"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le sujet répond à la question « qui est-ce qui ? » posée avant le verbe. Ici, le sujet est un pronom, « elle » : on peut demander « Qui partira en vacances ? Elle. »"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Plusieurs sont venus à la fête. », quel mot est un pronom indéfini ?",
+    "choix": [
+      "venus",
+      "fête",
+      "Plusieurs",
+      "à"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un pronom indéfini remplace un nom sans dire précisément qui ou combien, comme chacun, quelqu'un, personne ou plusieurs. Ici, « plusieurs » remplace des personnes qu'on ne nomme pas."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans la phrase « Quelqu'un a laissé la porte ouverte. », quelle est la classe du mot « Quelqu'un » ?",
+    "reponses": [
+      "pronom indéfini",
+      "pronom indefini"
+    ],
+    "accents": "stricts",
+    "explication": "« Quelqu'un » est un pronom indéfini : il remplace une personne sans la nommer. On ne sait pas qui c'est, donc le mot reste vague."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans la phrase « Il est resté à la maison parce qu'il était malade. », quelle expression introduit la proposition qui donne la cause ?",
+    "reponses": [
+      "parce que",
+      "parce qu'"
+    ],
+    "accents": "stricts",
+    "explication": "« Parce que » introduit une proposition subordonnée de cause : elle donne la raison de ce qui est dit dans la proposition principale. On peut poser la question « Pourquoi ? » : « Pourquoi est-il resté à la maison ? Parce qu'il était malade. »",
+    "defi": true
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque phrase au pronom relatif qui convient.",
+    "paires": [
+      [
+        "Voici le village ___ nous passons l'été.",
+        "où"
+      ],
+      [
+        "Voici le gâteau ___ j'ai préparé hier.",
+        "que"
+      ],
+      [
+        "Voici l'élève ___ je t'ai parlé.",
+        "dont"
+      ],
+      [
+        "Voici le chien ___ aboie sans cesse.",
+        "qui"
+      ]
+    ],
+    "explication": "« Où » indique le lieu, « que » remplace le complément d'objet direct, « dont » remplace un groupe introduit par « de » (parler de), et « qui » est le sujet du verbe qui suit."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « Ma tarte, Léa l'a préparée hier. », « Ma tarte » est le sujet du verbe.",
+    "vrai": false,
+    "explication": "Faux. « Ma tarte » est le complément d'objet direct (COD), placé avant le verbe : il est repris par le pronom « l' ». Le sujet est « Léa », celle qui fait l'action."
   }
 ]
