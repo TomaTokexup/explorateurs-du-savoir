@@ -309,5 +309,120 @@
       ]
     ],
     "explication": "Une enquête consiste à poser des questions. Les données sont les réponses recueillies. L'effectif compte les personnes d'une même catégorie, et une catégorie regroupe ce qui se ressemble."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un tableau de Carroll, les lignes classent les animaux en « a 4 pattes » et « n'a pas 4 pattes », et les colonnes en « a des poils » et « n'a pas de poils ». Dans quelle case place-t-on un serpent ?",
+    "choix": [
+      "a 4 pattes et a des poils",
+      "n'a pas 4 pattes et n'a pas de poils",
+      "a 4 pattes et n'a pas de poils",
+      "n'a pas 4 pattes et a des poils"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le serpent n'a pas de pattes, donc il n'a pas 4 pattes. Il n'a pas de poils non plus, mais des écailles. Il va donc dans la case qui croise « n'a pas 4 pattes » et « n'a pas de poils »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur l'axe vertical de ce diagramme en barres, les graduations sont 0, 2, 4, 6, 8. La barre de Lina s'arrête exactement au milieu entre 4 et 6. Quelle valeur indique-t-elle ?",
+    "choix": [
+      "4",
+      "5",
+      "6",
+      "10"
+    ],
+    "bonneReponse": 1,
+    "explication": "Entre 4 et 6, il y a un écart de 2. Le milieu est donc à 1 de chaque côté : 4 + 1 = 5."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pendant la récréation, Léa note avec des traits le nombre de ballons vus. Pour aller plus vite, elle fait 4 traits verticaux et barre le groupe avec un cinquième trait en travers. Un paquet ainsi barré représente combien de ballons ?",
+    "choix": [
+      "4",
+      "5",
+      "6",
+      "10"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un paquet contient 5 traits : 4 verticaux et 1 barré en travers. Ce système permet de compter plus vite."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une boîte de 36 crayons, un quart des crayons sont bleus. Combien de crayons bleus y a-t-il ?",
+    "choix": [
+      "6",
+      "9",
+      "12",
+      "18"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un quart, c'est une part sur quatre parts égales. On partage 36 en 4 paquets égaux : 36 ÷ 4 = 9.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans ce diagramme de Venn, combien d'enfants aiment dessiner, qu'ils aiment lire ou non ?",
+    "choix": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les enfants qui aiment dessiner sont dans le cercle « Aime dessiner » : la zone commune (Ali et Zoé) et la zone de droite (Nina). Cela fait 3 enfants.",
+    "image": "images/p3/maths/venn-cef9ddc2.svg",
+    "alt": "Un diagramme de Venn à deux cercles"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Les élèves ont voté pour leur jeu préféré. Ce diagramme montre les votes. Quelle est la différence entre le jeu le plus choisi et le jeu le moins choisi ? Donne ta réponse en nombre de voix.",
+    "reponses": [
+      "5",
+      "5 voix"
+    ],
+    "accents": "toleres",
+    "explication": "On repère la barre la plus haute (Corde, 7 voix) et la plus basse (Cerceau, 2 voix), puis on fait la soustraction : 7 − 2 = 5.",
+    "image": "images/p3/maths/barres-0ee25367.svg",
+    "alt": "Un diagramme en barres"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Une cantine sert 36 repas le lundi et 27 repas le mardi. Combien de repas sont servis en tout sur ces deux jours ? Donne ta réponse en nombre de repas.",
+    "reponses": [
+      "63",
+      "63 repas"
+    ],
+    "accents": "toleres",
+    "explication": "Pour trouver le total, on additionne les deux nombres : 36 + 27 = 63 repas.",
+    "astuce": "Pose l'addition en colonnes sur ton cahier de brouillon."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque pictogramme au nombre total d'objets qu'il représente.",
+    "paires": [
+      [
+        "3 dessins de chat, 1 dessin = 4 chats",
+        "12"
+      ],
+      [
+        "5 dessins de bus, 1 dessin = 2 élèves",
+        "10"
+      ],
+      [
+        "4 dessins de sac, 1 dessin = 5 billes",
+        "20"
+      ],
+      [
+        "6 dessins de fleur, 1 dessin = 3 fleurs",
+        "18"
+      ]
+    ],
+    "explication": "Pour chaque pictogramme, on compte de la valeur d'un dessin en valeur d'un dessin : par exemple 3 dessins de 4 chats font 4, 8, 12 chats. Les bonnes paires sont 12, 10, 20 et 18."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans un diagramme de Venn, un élève placé en dehors des deux cercles fait les deux activités.",
+    "vrai": false,
+    "explication": "Faux. En dehors des deux cercles, l'élève ne fait ni l'une ni l'autre activité. Ceux qui font les deux activités se trouvent dans la zone commune."
   }
 ]

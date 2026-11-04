@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 255" width="370" height="255">
+  <text x="200.0" y="22.0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#23305a" text-anchor="middle" >Jeu préféré des élèves</text>
+  <line x1="50" y1="230.0" x2="350" y2="230.0" stroke="#d4e3f3" stroke-width="2"/>
+  <text x="42.0" y="230.0" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="end" dominant-baseline="central">0</text>
+  <line x1="50" y1="204.3" x2="350" y2="204.3" stroke="#d4e3f3" stroke-width="2"/>
+  <text x="42.0" y="204.3" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="end" dominant-baseline="central">1</text>
+  <line x1="50" y1="178.6" x2="350" y2="178.6" stroke="#d4e3f3" stroke-width="2"/>
+  <text x="42.0" y="178.6" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="end" dominant-baseline="central">2</text>
+  <line x1="50" y1="152.9" x2="350" y2="152.9" stroke="#d4e3f3" stroke-width="2"/>
+  <text x="42.0" y="152.9" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="end" dominant-baseline="central">3</text>
+  <line x1="50" y1="127.1" x2="350" y2="127.1" stroke="#d4e3f3" stroke-width="2"/>
+  <text x="42.0" y="127.1" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="end" dominant-baseline="central">4</text>
+  <line x1="50" y1="101.4" x2="350" y2="101.4" stroke="#d4e3f3" stroke-width="2"/>
+  <text x="42.0" y="101.4" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="end" dominant-baseline="central">5</text>
+  <line x1="50" y1="75.7" x2="350" y2="75.7" stroke="#d4e3f3" stroke-width="2"/>
+  <text x="42.0" y="75.7" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="end" dominant-baseline="central">6</text>
+  <line x1="50" y1="50.0" x2="350" y2="50.0" stroke="#d4e3f3" stroke-width="2"/>
+  <text x="42.0" y="50.0" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="end" dominant-baseline="central">7</text>
+  <line x1="50" y1="230" x2="350" y2="230" stroke="#23305a" stroke-width="3"/>
+  <line x1="50" y1="230" x2="50" y2="42" stroke="#23305a" stroke-width="3"/>
+  <rect x="65.0" y="127.1" width="45.0" height="102.9" fill="#2f6fdb"/>
+  <text x="87.5" y="250.0" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="middle" >Ballon</text>
+  <rect x="140.0" y="50.0" width="45.0" height="180.0" fill="#e2574c"/>
+  <text x="162.5" y="250.0" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="middle" >Corde</text>
+  <rect x="215.0" y="178.6" width="45.0" height="51.4" fill="#2e9e6a"/>
+  <text x="237.5" y="250.0" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="middle" >Cerceau</text>
+  <rect x="290.0" y="75.7" width="45.0" height="154.3" fill="#d9a514"/>
+  <text x="312.5" y="250.0" font-family="Arial, sans-serif" font-size="13" fill="#23305a" text-anchor="middle" >Élastique</text>
+</svg>

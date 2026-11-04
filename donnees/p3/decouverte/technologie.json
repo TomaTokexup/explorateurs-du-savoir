@@ -318,5 +318,116 @@
     "enonce": "Un aimant attire une règle en plastique.",
     "vrai": false,
     "explication": "Faux. Le plastique n'est pas attiré par un aimant : seuls certains métaux, comme le fer, l'acier et le nickel, le sont."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une photo est fixée sur la porte du frigo avec un petit aimant. Quelle propriété de l'aimant permet de la tenir ?",
+    "choix": [
+      "Il attire le fer de la porte",
+      "Il attire le papier de la photo",
+      "Il chauffe la porte du frigo",
+      "Il attire le plastique de l'aimant"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un aimant attire les objets en fer ou en acier, comme la porte du frigo, même à travers une feuille de papier. Le papier et le plastique ne sont pas attirés par un aimant."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu viens de finir une boîte de céréales en carton. Dans quel bac la jettes-tu pour qu'elle soit recyclée ?",
+    "choix": [
+      "Le bac jaune",
+      "Le bac à verre",
+      "La poubelle des ordures ménagères",
+      "Le composteur"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le carton se recycle : on le met dans le bac jaune avec les autres emballages. Le verre, lui, va dans une bulle à verre à part."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un jeu de pêche aux canards, le bâton porte un aimant au bout. Le canard a une petite pièce en métal sur le bec. Pourquoi le canard reste-t-il accroché au bâton quand on le soulève ?",
+    "choix": [
+      "Le métal du bec est attiré par l'aimant",
+      "Le bâton est collé avec de la colle",
+      "Le canard est plus léger que le bâton",
+      "L'aimant est chaud et fait fondre le bec"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'aimant attire le métal du bec, ce qui permet de soulever le canard sans le toucher avec la main."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un bac, on trouve une canette en aluminium et une boîte de conserve en acier. On approche un aimant de chacune. Que se passe-t-il ?",
+    "choix": [
+      "La boîte en acier est attirée, la canette en aluminium non",
+      "Les deux sont attirées",
+      "Aucune des deux n'est attirée",
+      "La canette en aluminium est attirée, la boîte en acier non"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'acier contient du fer, qui est attiré par l'aimant. L'aluminium n'est pas attiré par un aimant."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un centre de tri, pourquoi utilise-t-on un très gros aimant ?",
+    "choix": [
+      "Pour séparer les objets en fer et en acier des autres déchets",
+      "Pour chauffer les déchets",
+      "Pour écraser les bouteilles en plastique",
+      "Pour attirer le papier et le carton"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'aimant attire les boîtes de conserve en acier, qui contient du fer, et les sépare du reste. Le papier, le plastique et l'aluminium ne sont pas attirés : ils restent sur le tapis roulant."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi trie-t-on les déchets avant de les recycler ?",
+    "choix": [
+      "Parce que chaque matière se recycle d'une façon différente",
+      "Pour que les poubelles soient plus jolies",
+      "Parce que tous les déchets se recyclent ensemble",
+      "Pour que les camions roulent plus vite"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le verre, le papier, le plastique et le métal ne se transforment pas de la même façon : le verre est fondu, le papier est mélangé à de l'eau… Il faut donc les séparer avant de les recycler."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Une matière que l'on peut transformer en nouveaux objets après usage est dite ... (un mot)",
+    "reponses": [
+      "recyclable",
+      "recyclables"
+    ],
+    "accents": "toleres",
+    "explication": "Le verre, le papier, le plastique et l'aluminium sont recyclables : on peut les refaire en nouveaux objets au lieu de les jeter."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à sa définition.",
+    "paires": [
+      [
+        "Recyclage",
+        "Transformer un déchet en nouvel objet"
+      ],
+      [
+        "Déchet",
+        "Objet dont on ne veut plus"
+      ],
+      [
+        "Centre de tri",
+        "Lieu où l'on trie les déchets"
+      ],
+      [
+        "Matière première",
+        "Ce qu'on utilise pour fabriquer un objet"
+      ]
+    ],
+    "explication": "Le recyclage consiste à refaire un objet avec un déchet. Un déchet est ce qu'on jette. Au centre de tri, on sépare les déchets par matière. La matière première est ce qui sert à fabriquer un objet."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Recycler les déchets permet d'utiliser moins de matières premières.",
+    "vrai": true,
+    "explication": "Vrai. En refaisant des objets avec des déchets, on prend moins de matières naturelles, comme le bois ou le pétrole."
   }
 ]

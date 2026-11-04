@@ -337,5 +337,69 @@
     ],
     "bonneReponse": 1,
     "explication": "Quand la grande roue fait un tour, la petite en fait plus. La grande roue tourne donc moins vite, mais elle peut pousser ou soulever avec plus de force."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Sur un vélo, quel mécanisme transmet le mouvement des pédales à la roue arrière ? (un mot)",
+    "reponses": [
+      "chaîne",
+      "la chaîne",
+      "une chaîne"
+    ],
+    "accents": "toleres",
+    "explication": "Les pédales font tourner un plateau denté. La chaîne relie ce plateau à un pignon denté sur la roue arrière, qui se met à tourner à son tour."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque objet au mécanisme qui lui permet de bouger.",
+    "paires": [
+      [
+        "Un chariot de supermarché",
+        "Des roulettes"
+      ],
+      [
+        "Un tiroir",
+        "Des glissières"
+      ],
+      [
+        "Une porte",
+        "Des charnières"
+      ]
+    ],
+    "explication": "Les roulettes roulent sur le sol, les glissières guident le tiroir qui glisse, et les charnières permettent à la porte de pivoter."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans une station spatiale, les astronautes semblent flotter : on dit qu'ils sont en ... (un seul mot)",
+    "reponses": [
+      "apesanteur",
+      "l'apesanteur"
+    ],
+    "accents": "toleres",
+    "explication": "Le mot est « apesanteur ». Les astronautes tombent sans arrêt vers la Terre avec la station, donc rien ne les retient : ils flottent, mais la gravité agit toujours."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une bascule reste à l'horizontale quand les deux enfants pèsent le même poids et sont à la même distance du centre.",
+    "vrai": true,
+    "explication": "Vrai. Si les deux enfants ont le même poids et sont placés à la même distance du centre, la bascule est en équilibre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pour monter un tonneau lourd dans un camion, on le fait rouler sur une planche inclinée. Pourquoi ?",
+    "choix": [
+      "Parce qu'il faut moins de force que pour le soulever directement",
+      "Parce que le tonneau devient plus léger",
+      "Parce que la planche supprime la gravité",
+      "Parce que c'est plus court"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le chemin est plus long, mais l'effort est plus petit à chaque instant. La planche inclinée, ou rampe, est une machine simple, comme le levier ou la poulie."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Plus une rampe est longue et douce, moins il faut de force pour y pousser une charge.",
+    "vrai": true,
+    "explication": "Vrai. Une pente douce demande moins de force qu'une pente raide, mais il faut aller plus loin pour arriver à la même hauteur."
   }
 ]

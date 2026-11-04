@@ -325,5 +325,125 @@
     "enonce": "Les hommes préhistoriques utilisaient des outils en fer dès le Paléolithique.",
     "vrai": false,
     "explication": "Faux. Au Paléolithique, les outils sont en pierre taillée. Le fer n'est travaillé que bien plus tard, à l'âge du fer."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une grotte, les archéologues trouvent un squelette placé avec des outils et des colliers. Que peut-on en conclure ?",
+    "choix": [
+      "Le squelette est arrivé dans la grotte par hasard",
+      "Les hommes préhistoriques vivaient dans des maisons en pierre",
+      "Les hommes préhistoriques enterraient leurs morts avec soin",
+      "Les hommes préhistoriques ne savaient pas fabriquer d'outils"
+    ],
+    "bonneReponse": 2,
+    "explication": "Enterrer un mort avec des objets montre que les hommes prenaient soin de leurs morts, et peut-être qu'ils croyaient à une autre vie. Les archéologues interprètent ainsi les traces qu'ils trouvent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la différence entre la préhistoire et l'histoire ?",
+    "choix": [
+      "La préhistoire est la période des rois et des châteaux",
+      "La préhistoire est la période avant l'invention de l'écriture",
+      "La préhistoire est plus récente que l'histoire",
+      "La préhistoire commence après la Révolution française"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'histoire commence avec l'écriture, car on peut lire les textes écrits. Avant, on connaît le passé seulement par les traces laissées, comme les outils ou les grottes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel animal les hommes préhistoriques ont-ils apprivoisé en premier, pour les aider à chasser ?",
+    "choix": [
+      "Le chien",
+      "Le cheval",
+      "La vache",
+      "Le mouton"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le chien a été apprivoisé très tôt : il aidait les hommes à chasser et à surveiller le campement. Le cheval, la vache et le mouton ont été élevés beaucoup plus tard."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Le mot ... désigne ce qui reste d'un objet ou d'un bâtiment du passé. Quel mot manque ?",
+    "reponses": [
+      "vestiges",
+      "vestige"
+    ],
+    "accents": "toleres",
+    "explication": "Un vestige est une trace du passé : une poterie, un outil ou les pierres d'un vieux mur. Les archéologues étudient les vestiges pour comprendre la vie d'autrefois."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque objet préhistorique à la matière dont il est fait.",
+    "paires": [
+      [
+        "Hache polie",
+        "Pierre"
+      ],
+      [
+        "Bracelet",
+        "Coquillage"
+      ],
+      [
+        "Peigne",
+        "Os"
+      ],
+      [
+        "Poterie",
+        "Argile"
+      ]
+    ],
+    "explication": "Les hommes préhistoriques utilisaient ce qu'ils trouvaient dans la nature : la pierre pour les haches, les os pour les peignes, les coquillages pour les bijoux et l'argile pour les poteries."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi les objets préhistoriques trouvés dans la terre sont-ils souvent exposés dans un musée ?",
+    "choix": [
+      "Pour les vendre aux touristes",
+      "Pour les utiliser encore aujourd'hui",
+      "Pour les jeter après quelques années",
+      "Pour les garder et les faire connaître"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un musée conserve les objets anciens pour les protéger du temps et pour que tout le monde puisse les voir et apprendre le passé."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Que fait un archéologue ?",
+    "choix": [
+      "Il étudie les dinosaures",
+      "Il construit des musées",
+      "Il fouille la terre pour trouver les traces du passé",
+      "Il écrit des livres pour les enfants"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un archéologue fouille le sol avec précaution pour retrouver outils, poteries ou ossements. Les dinosaures sont étudiés par d'autres spécialistes."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de siècles séparent le IIe siècle du VIe siècle ? Réponds avec un nombre.",
+    "reponses": [
+      "4",
+      "quatre"
+    ],
+    "accents": "toleres",
+    "explication": "Sur une frise, on compte les siècles entre deux repères : du IIe au VIe siècle, on passe par les IIIe, IVe et Ve siècles. Il y a donc 4 siècles d'écart, car 6 − 2 = 4."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Un vieux monument est abîmé par le temps. Range ces étapes de sa restauration, dans l'ordre où on les fait.",
+    "elements": [
+      "Examiner l'état du monument et noter les dégâts",
+      "Faire un plan des travaux à réaliser",
+      "Réparer les parties abîmées",
+      "Surveiller et entretenir le monument chaque année"
+    ],
+    "explication": "On commence toujours par observer les dégâts, puis on prépare les travaux, on répare, et enfin on entretient le monument pour éviter de nouveaux dégâts."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "À l'âge du bronze, les hommes savaient déjà fabriquer des objets en métal.",
+    "vrai": true,
+    "explication": "Vrai. Le bronze est un métal, obtenu en mélangeant du cuivre et de l'étain. Il servait à fabriquer des outils, des armes et des bijoux, avant l'âge du fer."
   }
 ]

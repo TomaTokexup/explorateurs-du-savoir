@@ -321,5 +321,123 @@
     "enonce": "Une fraction impropre est plus petite que 1.",
     "vrai": false,
     "explication": "Faux. Une fraction impropre a un numérateur plus grand que son dénominateur, donc elle est plus grande que 1. Par exemple, 5/3 = 1 entier et 2/3."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un musée a reçu 24 500 visiteurs en juin et 18 300 visiteurs en juillet. Combien de visiteurs a-t-il reçus au total pendant ces deux mois ?",
+    "choix": [
+      "32 800 visiteurs",
+      "43 800 visiteurs",
+      "42 800 visiteurs",
+      "42 700 visiteurs"
+    ],
+    "bonneReponse": 2,
+    "explication": "On additionne les deux nombres : 24 500 + 18 300. On ajoute d'abord les milliers (24 + 18 = 42), puis les centaines (500 + 300 = 800). Le total est donc 42 800 visiteurs."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Calcule 1 000 − 350.",
+    "reponses": [
+      "650"
+    ],
+    "accents": "toleres",
+    "explication": "On peut compter à partir de 350 jusqu'à 1 000 : 350 + 50 = 400, puis 400 + 600 = 1 000. On a ajouté 50 + 600 = 650."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Léa a 2 bandes de papier entières et une demi-bande en plus. Quel nombre mixte représente cette quantité de bandes ?",
+    "choix": [
+      "1 et 1/2",
+      "2 et 1/4",
+      "2 et 1/2",
+      "3 et 1/2"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les bandes entières se comptent avec le nombre entier : 2. La demi-bande s'écrit 1/2. Un nombre mixte associe les deux : 2 et 1/2."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces nombres se trouve à la fois dans la table de 4 et dans la table de 8 ?",
+    "choix": [
+      "20",
+      "24",
+      "27",
+      "30"
+    ],
+    "bonneReponse": 1,
+    "explication": "Dans la table de 8 (8, 16, 24, 32…), on cherche les résultats qui apparaissent aussi dans la table de 4. 24 = 4 × 6 = 8 × 3. Tous les multiples de 8 sont aussi dans la table de 4, car 8 = 2 × 4."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque fraction à son écriture décimale.",
+    "paires": [
+      [
+        "1/2",
+        "0,5"
+      ],
+      [
+        "1/4",
+        "0,25"
+      ],
+      [
+        "3/4",
+        "0,75"
+      ],
+      [
+        "7/10",
+        "0,7"
+      ]
+    ],
+    "explication": "Un demi, c'est 5 dixièmes : 0,5. Un quart, c'est 25 centièmes : 0,25, et trois quarts, 75 centièmes : 0,75. Sept dixièmes s'écrit 0,7. Attention à ne pas confondre 0,7 et 0,75 !"
+  },
+  {
+    "type": "saisie",
+    "enonce": "En comptant de 20 en 20 à partir de 0, quel nombre vient après 340 ?",
+    "reponses": [
+      "360"
+    ],
+    "accents": "toleres",
+    "explication": "Pour passer au nombre suivant, on ajoute 20 : 340 + 20 = 360."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces nombres du plus petit au plus grand.",
+    "elements": [
+      "4 562",
+      "45 602",
+      "45 620",
+      "54 620"
+    ],
+    "explication": "Un nombre à 4 chiffres est plus petit qu'un nombre à 5 chiffres. Parmi les nombres à 5 chiffres, 45 602 et 45 620 ont les mêmes dizaines de mille et milliers et les mêmes centaines : on compare les dizaines, 0 est plus petit que 2, donc 45 602 < 45 620. Enfin, 54 620 a 5 dizaines de mille, il est le plus grand."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel nombre se trouve exactement au milieu de 2 et de 3 ?",
+    "choix": [
+      "2,5",
+      "5",
+      "2,1",
+      "1"
+    ],
+    "bonneReponse": 0,
+    "explication": "Entre 2 et 3, il y a 1 unité, soit 10 dixièmes. Le milieu est à 5 dixièmes de 2 : 2 + 0,5 = 2,5. Attention : 5 est la somme 2 + 3, pas le milieu."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel nombre se compose de 3 dizaines de mille, 5 milliers, 2 centaines et 7 unités ?",
+    "choix": [
+      "3 527",
+      "35 207",
+      "30 527",
+      "35 027"
+    ],
+    "bonneReponse": 1,
+    "explication": "On place chaque chiffre dans le tableau de numération : 3 dizaines de mille = 30 000, 5 milliers = 5 000, 2 centaines = 200, 7 unités = 7. Donc 30 000 + 5 000 + 200 + 7 = 35 207. Il ne faut pas oublier le 0 des dizaines."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans 27 500, le chiffre des milliers est 7.",
+    "vrai": true,
+    "explication": "Vrai. Dans 27 500, il y a 2 dizaines de mille, 7 milliers, 5 centaines, 0 dizaine et 0 unité. Le chiffre 7 est donc à la place des milliers."
   }
 ]

@@ -334,5 +334,111 @@
     "enonce": "Un pavé droit est un cube particulier.",
     "vrai": false,
     "explication": "Faux. C'est l'inverse : un cube est un pavé droit particulier, dont les arêtes ont la même longueur. Un pavé droit peut avoir des faces rectangulaires, alors qu'un cube n'a que des faces carrées."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur le plan de la cour, les colonnes sont repérées par une lettre (A, B, C…) et les lignes par un chiffre (1, 2, 3…). Un élève est sur la case D2. Il avance d'une case vers la droite. Sur quelle case se trouve-t-il maintenant ?",
+    "choix": [
+      "C2",
+      "D3",
+      "E2",
+      "D1"
+    ],
+    "bonneReponse": 2,
+    "explication": "Vers la droite, on change de lettre et on passe à la lettre suivante (D devient E) ; le chiffre ne change pas. Il se trouve donc en E2."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Un carré dessiné sur une feuille quadrillée a 4 côtés. Combien de ces côtés sont horizontaux ?",
+    "reponses": [
+      "2",
+      "deux"
+    ],
+    "accents": "toleres",
+    "explication": "Un côté horizontal va de gauche à droite, comme le bord du haut ou du bas de la feuille. Le carré a 2 côtés horizontaux (en haut et en bas) et 2 côtés verticaux (à gauche et à droite)."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque figure au nombre de ses sommets.",
+    "paires": [
+      [
+        "Triangle",
+        "3 sommets"
+      ],
+      [
+        "Carré",
+        "4 sommets"
+      ],
+      [
+        "Pentagone",
+        "5 sommets"
+      ]
+    ],
+    "explication": "Un sommet est un coin, là où deux côtés se rejoignent. On compte les coins : le triangle en a 3, le carré 4 et le pentagone 5."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces figures de celle qui a le moins d'axes de symétrie à celle qui en a le plus.",
+    "elements": [
+      "Un triangle dont les 3 côtés sont différents",
+      "Un rectangle qui n'est pas un carré",
+      "Un carré",
+      "Un cercle"
+    ],
+    "explication": "Le triangle dont les 3 côtés sont différents n'a aucun axe de symétrie, le rectangle qui n'est pas un carré en a 2, le carré en a 4, et le cercle en a une infinité."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un cône a une pointe appelée sommet.",
+    "vrai": true,
+    "explication": "Vrai. Le cône a une base ronde et une seule pointe, qu'on appelle le sommet."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien d'angles droits a un rectangle ?",
+    "choix": [
+      "2",
+      "3",
+      "4",
+      "0"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les 4 coins d'un rectangle sont des angles droits, comme le coin d'une feuille. On peut le vérifier avec une équerre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur une feuille quadrillée, quelle ligne est verticale ?",
+    "choix": [
+      "Une ligne qui va de gauche à droite",
+      "Une ligne qui monte tout droit vers le haut de la feuille",
+      "Une ligne en biais, qui penche",
+      "Une ligne qui fait un tour complet"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une ligne verticale va de haut en bas, comme le bord d'une porte bien droite. La ligne horizontale, elle, va de gauche à droite."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de paires de côtés opposés de même longueur un rectangle possède-t-il ?",
+    "choix": [
+      "1 paire",
+      "2 paires",
+      "4 paires",
+      "0 paire"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un rectangle a 4 côtés. Ses côtés opposés (le haut et le bas, la gauche et la droite) sont de même longueur : cela fait 2 paires."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Laquelle de ces phrases décrit bien un cube ?",
+    "choix": [
+      "Il a 6 faces carrées de même taille.",
+      "Il a 6 faces rectangulaires.",
+      "Il a 8 faces carrées.",
+      "Il a une face courbe."
+    ],
+    "bonneReponse": 0,
+    "explication": "Un cube a 6 faces, qui sont toutes des carrés identiques. Un pavé droit a aussi 6 faces, mais elles sont rectangulaires (sauf dans le cas particulier du cube)."
   }
 ]

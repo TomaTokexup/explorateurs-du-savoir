@@ -591,5 +591,84 @@
     ],
     "bonneReponse": 1,
     "explication": "Un pavé droit a 6 faces rectangulaires : dessus, dessous, devant, derrière, gauche et droite. Attention à ne pas confondre avec ses 8 sommets et ses 12 arêtes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de faces a une pyramide à base triangulaire ?",
+    "choix": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "bonneReponse": 1,
+    "explication": "Elle a une base triangulaire et 3 faces triangulaires qui se rejoignent au sommet : 1 + 3 = 4 faces."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien d'arêtes a une sphère, comme un ballon de football ?",
+    "choix": [
+      "0 arête",
+      "1 arête",
+      "12 arêtes",
+      "Une infinité d'arêtes"
+    ],
+    "bonneReponse": 0,
+    "explication": "Une arête est un bord plat où se rencontrent deux faces. La sphère n'a aucune face plate, donc aucune arête ni aucun sommet."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu es face à l'ouest. Tu fais un quart de tour vers la droite, dans le sens des aiguilles d'une montre. Dans quelle direction es-tu maintenant ?",
+    "choix": [
+      "Le nord",
+      "Le sud",
+      "L'est",
+      "Le sud-ouest"
+    ],
+    "bonneReponse": 0,
+    "explication": "Sur la rose des vents, on tourne dans le sens des aiguilles d'une montre : ouest, puis nord, puis est, puis sud. Un quart de tour à droite depuis l'ouest pointe donc vers le nord.",
+    "astuce": "Mets tes bras en croix pour bien repérer ta droite et ta gauche."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment s'appelle un polygone qui a 8 côtés ?",
+    "choix": [
+      "Heptagone",
+      "Octogone",
+      "Pentagone",
+      "Décagone"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le nom d'un polygone vient de son nombre de côtés : « octo » veut dire huit, donc un polygone à 8 côtés est un octogone. Le panneau stop en est un exemple."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Environ combien mesure cet angle ?",
+    "image": "images/p4/maths/angle-70.svg",
+    "alt": "Un angle",
+    "choix": [
+      "20°",
+      "70°",
+      "110°",
+      "160°"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'angle est aigu : il est plus petit qu'un angle droit (90°), donc ce n'est ni 110° ni 160°. Il est aussi bien plus ouvert que 20° : il mesure environ 70°. Avec un rapporteur, on placerait le centre sur le sommet et on lirait la graduation."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien d'axes de symétrie a la lettre H écrite en majuscule ?",
+    "reponses": [
+      "2",
+      "deux"
+    ],
+    "accents": "toleres",
+    "explication": "Un axe vertical coupe le H en deux moitiés identiques, et un axe horizontal aussi. Il a donc 2 axes de symétrie."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un parallélogramme a quatre angles droits.",
+    "vrai": false,
+    "explication": "Faux. Seul un rectangle (et donc un carré) a quatre angles droits. Un parallélogramme a seulement ses côtés opposés parallèles et de même longueur."
   }
 ]

@@ -348,5 +348,121 @@
     ],
     "accents": "toleres",
     "explication": "La Commission européenne, qui propose les lois de l'Union européenne, siège à Bruxelles, en Belgique. Le Parlement européen se réunit, lui, à Strasbourg et à Bruxelles."
+  },
+  {
+    "type": "qcm",
+    "enonce": "La Révolution française commence en 1789. Dans quel siècle se trouve cette année ?",
+    "choix": [
+      "XVIIe siècle",
+      "XVIIIe siècle",
+      "XIXe siècle",
+      "XXe siècle"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un siècle regroupe 100 ans : le XVIIIe siècle va de 1701 à 1800, donc 1789 est dans le XVIIIe siècle. Pour trouver le siècle, on ajoute 1 au nombre des centaines de l'année (17 + 1 = 18)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Que permet l'espace Schengen, auquel appartiennent la France et les Pays-Bas ?",
+    "choix": [
+      "De voyager entre les pays membres sans contrôle à la frontière",
+      "D'utiliser partout la même langue",
+      "De voter pour le président de chaque pays",
+      "De ne plus payer de transports"
+    ],
+    "bonneReponse": 0,
+    "explication": "Dans l'espace Schengen, on passe d'un pays à l'autre sans contrôle des passeports à la frontière, par exemple entre les Pays-Bas et la Belgique."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel instrument de musique est le symbole national de l'Irlande, un pays de l'Union européenne ?",
+    "choix": [
+      "La flûte à bec",
+      "La harpe",
+      "Le tambourin",
+      "La trompette"
+    ],
+    "bonneReponse": 1,
+    "explication": "La harpe est le symbole de l'Irlande : on la voit sur les pièces de monnaie et les documents officiels du pays. Chaque pays a parfois un instrument ou une musique traditionnelle qui le représente."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qui a écrit la Déclaration des droits de la femme et de la citoyenne en 1791 ?",
+    "choix": [
+      "Olympe de Gouges",
+      "Marie-Antoinette",
+      "Madame de Staël",
+      "Marie Curie"
+    ],
+    "bonneReponse": 0,
+    "explication": "Olympe de Gouges demande que les femmes aient les mêmes droits que les hommes, comme la liberté et l'égalité. Elle s'inspire de la Déclaration des droits de l'homme et du citoyen de 1789."
+  },
+  {
+    "type": "qcm",
+    "enonce": "L'un des objectifs de l'ONU est la lutte contre le changement climatique. Quel geste aide à atteindre cet objectif ?",
+    "choix": [
+      "Aller à l'école à pied ou à vélo",
+      "Laisser la lumière allumée en quittant la pièce",
+      "Prendre la voiture pour faire 300 mètres",
+      "Jeter les déchets dans la nature"
+    ],
+    "bonneReponse": 0,
+    "explication": "Les voitures rejettent des gaz qui réchauffent la planète. Marcher ou pédaler n'en rejette pas. Éteindre la lumière économise aussi de l'énergie."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel mot désigne le fait d'accepter que les autres pensent et croient autrement que soi ?",
+    "reponses": [
+      "tolérance",
+      "la tolérance"
+    ],
+    "accents": "toleres",
+    "explication": "La tolérance, c'est respecter les opinions et les croyances des autres, même si on ne les partage pas. Par exemple, accepter qu'un camarade n'ait pas la même religion que soi."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel roi de France a été condamné à mort puis guillotiné en janvier 1793, pendant la Révolution ?",
+    "reponses": [
+      "Louis XVI",
+      "louis 16",
+      "XVI"
+    ],
+    "accents": "toleres",
+    "explication": "Louis XVI était le roi de France quand la Révolution a commencé. Il a été jugé par la Convention et guillotiné le 21 janvier 1793."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot de la devise de la France à son sens.",
+    "paires": [
+      [
+        "Liberté",
+        "Pouvoir agir sans être empêché"
+      ],
+      [
+        "Égalité",
+        "Avoir les mêmes droits que tous"
+      ],
+      [
+        "Fraternité",
+        "Aider et respecter les autres"
+      ]
+    ],
+    "explication": "La devise de la République française rappelle les valeurs de la démocratie : la liberté de chacun, l'égalité entre les citoyens et la solidarité entre eux."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces événements de la Révolution française, du plus ancien au plus récent.",
+    "elements": [
+      "La prise de la Bastille",
+      "La République est proclamée",
+      "Napoléon devient empereur"
+    ],
+    "explication": "La Bastille est prise le 14 juillet 1789, la République est proclamée en 1792, et Napoléon devient empereur en 1804, après la Révolution."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le premier tour du monde en bateau a été réalisé par Christophe Colomb.",
+    "vrai": false,
+    "explication": "Faux. Christophe Colomb n'a jamais fait le tour du monde : c'est l'expédition de Magellan, partie d'Espagne en 1519, qui a bouclé le tour du monde en 1522 après sa mort."
   }
 ]

@@ -332,5 +332,125 @@
     "enonce": "Dans le nombre 2 407, le chiffre des dizaines est 7.",
     "vrai": false,
     "explication": "Faux. Dans 2 407, il y a 2 milliers, 4 centaines, 0 dizaine et 7 unités. Le 7 est le chiffre des unités."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur une grille de 100 (les nombres de 1 à 100 rangés en 10 lignes de 10), quel nombre se trouve juste en dessous de 47 ?",
+    "choix": [
+      "48",
+      "57",
+      "37",
+      "46"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une ligne compte 10 nombres, donc le nombre juste en dessous est 10 de plus : 47 + 10 = 57. Le nombre 48 est celui qui est juste à côté, à droite."
+  },
+  {
+    "type": "saisie",
+    "enonce": "En comptant de 50 en 50, quel nombre vient après 2 975 ? (écris le nombre en chiffres)",
+    "reponses": [
+      "3 025",
+      "3025"
+    ],
+    "accents": "toleres",
+    "explication": "On part de 2 975 et on ajoute 50 : il manque 25 pour arriver à 3 000, puis 25 de plus. Pour compter de 50 en 50, on peut aussi s'aider de la droite graduée."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans le nombre 5 407, combien vaut le chiffre 4 ?",
+    "choix": [
+      "4",
+      "40",
+      "400",
+      "4 000"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le chiffre 4 est à la place des centaines : il vaut 4 centaines, soit 400. Le 4 ne vaut pas 4 tout seul, ni 40, car il n'est pas à la place des dizaines."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la table de 6, quel résultat est juste ?",
+    "choix": [
+      "32",
+      "36",
+      "44",
+      "50"
+    ],
+    "bonneReponse": 1,
+    "explication": "6 × 6 = 36, donc 36 est dans la table de 6. Les autres nombres ne sont pas dans cette table : 6 × 5 = 30 et 6 × 7 = 42, il n'y a donc pas de 32, 44 ni 50."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque fraction à son nom.",
+    "paires": [
+      [
+        "1/2",
+        "un demi"
+      ],
+      [
+        "1/3",
+        "un tiers"
+      ],
+      [
+        "1/4",
+        "un quart"
+      ],
+      [
+        "1/10",
+        "un dixième"
+      ]
+    ],
+    "explication": "On partage une unité en parts égales : en 2 parts, chacune est un demi ; en 3 parts, un tiers ; en 4 parts, un quart ; en 10 parts, un dixième. Le dénominateur indique le nombre de parts."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces fractions de la plus grande à la plus petite.",
+    "elements": [
+      "1/2",
+      "1/3",
+      "1/5",
+      "1/10"
+    ],
+    "explication": "Plus le dénominateur est grand, plus les parts sont petites. Une demi-tarte est plus grande qu'un tiers de tarte, qui est plus grand qu'un cinquième, qui est plus grand qu'un dixième."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Sur une droite graduée de 0 à 1 000, le nombre 250 se place à mi-chemin entre 0 et 1 000.",
+    "vrai": false,
+    "explication": "Faux. Le milieu entre 0 et 1 000 est 500. Le nombre 250 est au milieu entre 0 et 500."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le double de 45 ?",
+    "choix": [
+      "80",
+      "90",
+      "85",
+      "100"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le double, c'est 2 fois le nombre : 2 × 45 = 40 + 40 + 5 + 5 = 90. Le 85 vient souvent d'une addition faite à moitié (45 + 40)."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel nombre obtient-on si on ajoute 3 centaines à 1 260 ? (écris le nombre en chiffres)",
+    "reponses": [
+      "1 560",
+      "1560"
+    ],
+    "accents": "toleres",
+    "explication": "3 centaines valent 300. Dans 1 260, il y a 2 centaines ; en ajoutant 3 centaines, on en a 5, donc le nombre devient 1 560."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Arrondis 467 à la centaine la plus proche.",
+    "choix": [
+      "400",
+      "460",
+      "470",
+      "500"
+    ],
+    "bonneReponse": 3,
+    "explication": "467 est entre 400 et 500. On regarde le chiffre des dizaines : 6, c'est 5 ou plus, donc on arrondit à la centaine du dessus : 500. Attention, 470 est l'arrondi à la dizaine."
   }
 ]

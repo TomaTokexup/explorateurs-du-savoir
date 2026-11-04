@@ -338,5 +338,112 @@
     ],
     "bonneReponse": 1,
     "explication": "On additionne les trois températures : 2 + 5 + 11 = 18, puis on divise par le nombre de données : 18 ÷ 3 = 6. La moyenne est donc 6 °C. Attention : 18 est le total, pas la moyenne."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un diagramme circulaire, un secteur occupe 3 parts sur les 10 parts égales du disque. Quel pourcentage des élèves représente ce secteur ?",
+    "choix": [
+      "3 %",
+      "13 %",
+      "30 %",
+      "33 %"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un disque entier vaut 100 %. Si on le partage en 10 parts égales, chaque part vaut 10 %. Trois parts valent donc 3 × 10 = 30 %."
+  },
+  {
+    "type": "saisie",
+    "enonce": "La moyenne de plusieurs notes est 12 et leur total est 60. Combien y a-t-il de notes ?",
+    "reponses": [
+      "5",
+      "cinq"
+    ],
+    "accents": "toleres",
+    "explication": "La moyenne est le total partagé entre le nombre de données. Pour trouver le nombre de notes, on divise le total par la moyenne : 60 ÷ 12 = 5."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque fraction du disque à son pourcentage.",
+    "paires": [
+      [
+        "1/2 du disque",
+        "50 %"
+      ],
+      [
+        "1/4 du disque",
+        "25 %"
+      ],
+      [
+        "3/4 du disque",
+        "75 %"
+      ],
+      [
+        "1/10 du disque",
+        "10 %"
+      ]
+    ],
+    "explication": "Un disque entier vaut 100 %. La moitié vaut 50 %, un quart vaut 25 %, trois quarts valent 75 % et un dixième vaut 10 %."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces moyennes de la plus petite à la plus grande.",
+    "elements": [
+      "(1 + 2 + 3) ÷ 3",
+      "(5 + 7) ÷ 2",
+      "(10 + 14 + 18) ÷ 3",
+      "(20 + 30) ÷ 2"
+    ],
+    "explication": "Pour chaque calcul, on additionne les nombres puis on divise par leur quantité. Les résultats sont 2, 6, 14 et 25, donc on range les calculs dans cet ordre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un graphique, on dessine un sac deux fois plus haut pour montrer deux fois plus de billes. Pourquoi ce dessin peut-il tromper ?",
+    "choix": [
+      "Les dessins ne sont pas de la même couleur.",
+      "Le sac est aussi deux fois plus large, donc il paraît environ quatre fois plus grand.",
+      "On ne peut pas dessiner deux sacs sur le même graphique.",
+      "Le graphique n'a pas de titre."
+    ],
+    "bonneReponse": 1,
+    "explication": "Quand on double seulement la hauteur, il faut garder la largeur. Si on double les deux dimensions, la surface est multipliée par quatre, et l'œil croit que la quantité est beaucoup plus grande."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une classe de P5, la taille moyenne des élèves est 130 cm. Que signifie cette phrase ?",
+    "choix": [
+      "Tous les élèves mesurent 130 cm.",
+      "Si on additionne les tailles des élèves, on obtient 130 cm.",
+      "En moyenne, les élèves mesurent 130 cm : certains sont plus grands, d'autres plus petits.",
+      "Le plus grand élève de la classe mesure 130 cm."
+    ],
+    "bonneReponse": 2,
+    "explication": "La moyenne est une valeur qui résume l'ensemble. Les élèves n'ont pas tous la même taille : certains sont plus grands que 130 cm, d'autres plus petits."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Sur un graphique, chaque point montre deux nombres dont la somme est 12. Le point de Mia a 5 comme premier nombre. Quel est son deuxième nombre ?",
+    "reponses": [
+      "7"
+    ],
+    "accents": "toleres",
+    "explication": "Les deux nombres du point ajoutés donnent toujours 12. On cherche le nombre qui, ajouté à 5, donne 12 : 5 + 7 = 12, donc le deuxième nombre est 7."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "La moyenne de 2, 4 et 9 est 5.",
+    "vrai": true,
+    "explication": "Vrai. On additionne les nombres : 2 + 4 + 9 = 15. Puis on divise la somme par le nombre de données : 15 ÷ 3 = 5."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Max a eu 10,5 et 13,5 à deux contrôles. Quelle est sa moyenne ?",
+    "choix": [
+      "11,5",
+      "12",
+      "12,5",
+      "24"
+    ],
+    "bonneReponse": 1,
+    "explication": "On additionne d'abord les deux notes : 10,5 + 13,5 = 24. Puis on divise par le nombre de notes : 24 ÷ 2 = 12. La moyenne de Max est 12."
   }
 ]

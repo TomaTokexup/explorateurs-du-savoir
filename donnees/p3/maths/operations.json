@@ -326,5 +326,111 @@
     ],
     "bonneReponse": 2,
     "explication": "On ajoute les dizaines : 28 dizaines + 9 dizaines = 37 dizaines, donc 280 + 90 = 370."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un maître a 24 biscuits à partager en parts égales entre 6 élèves. Quelle division permet de trouver le nombre de biscuits pour chaque élève ?",
+    "choix": [
+      "6 ÷ 24",
+      "24 − 6",
+      "24 ÷ 6",
+      "24 × 6"
+    ],
+    "bonneReponse": 2,
+    "explication": "Partager en parts égales se note avec le signe ÷ : 24 biscuits répartis entre 6 élèves, cela fait 24 ÷ 6."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien font 34 × 10 ?",
+    "choix": [
+      "304",
+      "340",
+      "3 400",
+      "44"
+    ],
+    "bonneReponse": 1,
+    "explication": "Multiplier par 10 décale chaque chiffre d'un rang vers la gauche : les dizaines deviennent des centaines, et on ajoute un zéro à la fin, donc 34 devient 340."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque calcul à son résultat.",
+    "paires": [
+      [
+        "58 + 36",
+        "94"
+      ],
+      [
+        "125 + 75",
+        "200"
+      ],
+      [
+        "260 + 340",
+        "600"
+      ],
+      [
+        "490 + 210",
+        "700"
+      ]
+    ],
+    "explication": "Pour calculer de tête, on peut arrondir ou compléter jusqu'à la dizaine ou la centaine la plus proche : 125 + 75 fait 200 car 125 + 75 = 125 + 5 + 70."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces calculs du plus petit résultat au plus grand résultat.",
+    "elements": [
+      "250 + 90",
+      "500 − 120",
+      "3 × 130",
+      "800 ÷ 2"
+    ],
+    "explication": "Les résultats sont 340, 380, 390 et 400 : 250 + 90 = 340, 500 − 120 = 380, 3 × 130 = 390 et 800 ÷ 2 = 400."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans une soustraction, on peut changer l'ordre des nombres sans changer le résultat.",
+    "vrai": false,
+    "explication": "Faux. Dans une soustraction, l'ordre compte : 8 − 3 = 5, mais 3 − 8 ne donne pas 5 (on ne peut même pas le calculer avec des nombres entiers positifs)."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Calcule 245 + 38.",
+    "reponses": [
+      "283"
+    ],
+    "accents": "toleres",
+    "explication": "On ajoute d'abord les dizaines : 245 + 30 = 275, puis les unités : 275 + 8 = 283."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la moitié de 480 ?",
+    "choix": [
+      "120",
+      "240",
+      "960",
+      "140"
+    ],
+    "bonneReponse": 1,
+    "explication": "Prendre la moitié, c'est partager en 2 : la moitié de 400 est 200 et la moitié de 80 est 40, donc la moitié de 480 est 240."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Calcule mentalement 100 − 37.",
+    "reponses": [
+      "63"
+    ],
+    "accents": "toleres",
+    "explication": "On peut compléter : de 37 à 40, il faut 3, puis de 40 à 100, il faut 60 ; 3 + 60 = 63."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien font 5 × 60 ?",
+    "choix": [
+      "65",
+      "30",
+      "300",
+      "3 000"
+    ],
+    "bonneReponse": 2,
+    "explication": "On sait que 5 × 6 = 30. Comme 60 est 6 dizaines, le résultat est 30 dizaines, donc 5 × 60 = 300."
   }
 ]

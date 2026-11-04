@@ -309,5 +309,113 @@
     "enonce": "Un cône a deux bases circulaires.",
     "vrai": false,
     "explication": "Faux. Un cône a une seule base circulaire, et il se termine par une pointe appelée sommet."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien d'arêtes a un prisme à base triangulaire ?",
+    "choix": [
+      "6",
+      "8",
+      "9",
+      "12"
+    ],
+    "bonneReponse": 2,
+    "explication": "Chacune des deux bases triangulaires a 3 arêtes (3 + 3 = 6), et 3 arêtes relient les deux bases. En tout : 6 + 3 = 9 arêtes."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Un angle mesure 40°. Quelle doit être la mesure de l'angle qui le complète pour former un angle droit ?",
+    "reponses": [
+      "50",
+      "50°",
+      "50 °"
+    ],
+    "accents": "toleres",
+    "explication": "Un angle droit mesure 90°. On part de 90° et on enlève la mesure de l'angle connu : 90° − 40° = 50°. Les deux angles réunis forment bien un angle droit."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un angle mesure 60°. Quel est son nom ?",
+    "choix": [
+      "Angle droit",
+      "Angle aigu",
+      "Angle obtus",
+      "Angle plat"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un angle aigu est plus petit qu'un angle droit (90°). Un angle obtus est compris entre 90° et 180°, et un angle plat mesure 180°."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un visage vu de face est presque symétrique. Par où passe son axe de symétrie ?",
+    "choix": [
+      "Du haut vers le bas, au milieu du nez",
+      "De gauche à droite, au milieu du visage",
+      "Par une diagonale du visage",
+      "Le visage n'a aucune symétrie"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le nez est au milieu du visage, donc l'axe de symétrie passe de haut en bas. Si on plie le visage le long de cet axe, les deux moitiés se superposent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur un globe, quelle ligne a une latitude de 0° ?",
+    "choix": [
+      "Le tropique du Cancer",
+      "Le méridien de Greenwich",
+      "Le cercle polaire Nord",
+      "L'équateur"
+    ],
+    "bonneReponse": 3,
+    "explication": "La latitude 0° correspond à l'équateur, la ligne qui sépare l'hémisphère Nord et l'hémisphère Sud. Le méridien de Greenwich, lui, est la ligne de longitude 0°."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un point est placé sur l'axe horizontal (l'axe des abscisses), à 6 unités de l'origine O. Quelles sont ses coordonnées ?",
+    "choix": [
+      "(6 ; 0)",
+      "(0 ; 6)",
+      "(6 ; 6)",
+      "(0 ; 0)"
+    ],
+    "bonneReponse": 0,
+    "explication": "La première coordonnée se lit sur l'axe horizontal : elle vaut 6. Un point situé sur l'axe horizontal ne monte pas, donc la seconde coordonnée vaut 0 : (6 ; 0). Le point (0 ; 6) serait sur l'axe vertical."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à sa définition.",
+    "paires": [
+      [
+        "Patron",
+        "Figure plane qui se plie en solide"
+      ],
+      [
+        "Diamètre",
+        "Segment passant par le centre du cercle"
+      ],
+      [
+        "Centre",
+        "Point à égale distance du bord du cercle"
+      ]
+    ],
+    "explication": "Un patron est une figure à plat que l'on plie pour fabriquer un solide. Le diamètre traverse le cercle en passant par son centre. Le centre est le point au milieu du cercle, à égale distance de tous ses points du bord."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les six faces d'un pavé droit sont forcément des carrés.",
+    "vrai": false,
+    "explication": "Faux. Les faces d'un pavé droit sont des rectangles. Seul le cube a ses six faces carrées."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment s'appelle un triangle dont les trois côtés ont la même longueur ?",
+    "choix": [
+      "Isocèle",
+      "Scalène",
+      "Équilatéral",
+      "Rectangle"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un triangle équilatéral a ses trois côtés égaux. Un triangle isocèle n'en a que deux égaux, et un triangle scalène n'a aucun côté égal."
   }
 ]

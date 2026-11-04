@@ -313,5 +313,121 @@
     ],
     "bonneReponse": 0,
     "explication": "1 t = 1 000 kg. On peut décomposer : 3 t = 3 000 kg, puis 0,5 t = 500 kg. Le total est donc 3 500 kg."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur une carte à l'échelle 1/10 000, que signifie l'échelle ?",
+    "choix": [
+      "1 cm sur la carte représente 10 000 cm dans la réalité",
+      "10 000 cm sur la carte représentent 1 cm dans la réalité",
+      "1 cm sur la carte représente 10 000 m dans la réalité",
+      "1 cm sur la carte représente 1 000 cm dans la réalité"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'échelle 1/10 000 signifie que 1 unité sur la carte correspond à 10 000 fois cette unité dans la réalité. La carte est donc 10 000 fois plus petite que le lieu réel. Ici, 1 cm sur la carte représente 10 000 cm, soit 100 m, dans la réalité."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une voiture parcourt 180 km en 2 heures. Quelle est sa vitesse moyenne ?",
+    "choix": [
+      "360 km/h",
+      "90 km/h",
+      "180 km/h",
+      "2 km/h"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour trouver la vitesse, on divise la distance par le temps : 180 km ÷ 2 h = 90 km/h. Si on multiplie au lieu de diviser, on trouve une vitesse beaucoup trop grande."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle unité utilise-t-on pour mesurer le volume d'une boîte à chaussures ?",
+    "choix": [
+      "cm²",
+      "kg",
+      "cm³",
+      "cm"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le volume se mesure en unités cubes : le centimètre cube (cm³) ou le décimètre cube (dm³). Le cm² sert à mesurer une aire (une surface plate), et le cm mesure une longueur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu achètes un cahier à 2,50 € et un crayon à 0,80 €. Tu paies avec un billet de 5 €. Combien te rend-on ?",
+    "choix": [
+      "3,30 €",
+      "2,70 €",
+      "1,30 €",
+      "1,70 €"
+    ],
+    "bonneReponse": 3,
+    "explication": "On calcule d'abord le total des achats : 2,50 € + 0,80 € = 3,30 €. Puis on retire ce total de la somme payée : 5 € − 3,30 € = 1,70 €. Pense à aligner les virgules."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une séance de natation commence à 10 h 15 et se termine à 11 h 00. Combien de temps dure-t-elle ?",
+    "choix": [
+      "55 minutes",
+      "1 heure 15 minutes",
+      "45 minutes",
+      "1 heure"
+    ],
+    "bonneReponse": 2,
+    "explication": "On compte par étapes : de 10 h 15 à 10 h 30, il y a 15 minutes, puis de 10 h 30 à 11 h, encore 30 minutes. En tout : 15 + 30 = 45 minutes."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Sur une carte à l'échelle 1/20 000, 1 km dans la réalité est représenté par combien de centimètres sur la carte ? Écris seulement le nombre.",
+    "reponses": [
+      "5",
+      "5 cm"
+    ],
+    "accents": "toleres",
+    "explication": "1 km = 100 000 cm. Sur la carte, on divise la distance réelle par l'échelle : 100 000 ÷ 20 000 = 5. Sur la carte, 1 km est donc représenté par 5 cm."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de centimètres cubes (cm³) y a-t-il dans 1 décimètre cube (dm³) ? Écris seulement le nombre.",
+    "reponses": [
+      "1000",
+      "1 000"
+    ],
+    "accents": "toleres",
+    "explication": "Un décimètre cube est un cube de 1 dm de côté, soit 10 cm de côté. Il contient 10 × 10 × 10 = 1 000 petits cubes de 1 cm³."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque volume à la contenance qui lui correspond.",
+    "paires": [
+      [
+        "1 dm³",
+        "1 l"
+      ],
+      [
+        "1 cm³",
+        "1 ml"
+      ],
+      [
+        "1 m³",
+        "1 000 l"
+      ]
+    ],
+    "explication": "Un cube de 1 dm de côté contient exactement 1 litre : 1 dm³ = 1 l. Un petit cube de 1 cm de côté contient 1 millilitre. Et un grand cube de 1 m de côté contient 1 000 litres."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces figures, de celle qui a le plus petit périmètre à celle qui a le plus grand périmètre.",
+    "elements": [
+      "Un carré de 2 cm de côté",
+      "Un triangle de côtés 4 cm, 4 cm et 5 cm",
+      "Un rectangle de 2 cm sur 6 cm",
+      "Un pentagone régulier de 4 cm de côté"
+    ],
+    "explication": "Le périmètre est la longueur du contour, on additionne tous les côtés. Carré : 4 × 2 = 8 cm. Triangle : 4 + 4 + 5 = 13 cm. Rectangle : 2 + 6 + 2 + 6 = 16 cm. Pentagone : 5 × 4 = 20 cm."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "À 60 km/h, une voiture parcourt 30 km en une demi-heure.",
+    "vrai": true,
+    "explication": "Vrai. 60 km/h veut dire 60 km en une heure. En une demi-heure, elle parcourt la moitié : 60 ÷ 2 = 30 km."
   }
 ]

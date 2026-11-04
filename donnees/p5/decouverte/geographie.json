@@ -330,5 +330,113 @@
     "enonce": "L'équateur se trouve à 90° de latitude nord.",
     "vrai": false,
     "explication": "Faux. L'équateur est à 0° de latitude. C'est le pôle Nord qui est à 90° de latitude nord."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment appelle-t-on les lignes imaginaires qui vont du pôle Nord au pôle Sud ?",
+    "choix": [
+      "les parallèles",
+      "les méridiens",
+      "les tropiques",
+      "les cercles polaires"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les méridiens relient le pôle Nord au pôle Sud, comme les traits qui vont du haut en bas d'un ballon. Ils servent à mesurer la longitude. Les parallèles, eux, font le tour de la Terre d'est en ouest."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi une grande partie des Pays-Bas est-elle protégée par des digues ?",
+    "choix": [
+      "Parce qu'une partie du pays se trouve sous le niveau de la mer",
+      "Parce que le pays est couvert de montagnes",
+      "Parce qu'il y a beaucoup de volcans",
+      "Pour arrêter le vent"
+    ],
+    "bonneReponse": 0,
+    "explication": "Une partie des Pays-Bas est plus basse que la mer. Les digues empêchent la mer et les rivières d'inonder ces terres. Les pompes, autrefois les moulins, rejettent l'eau en trop."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la plus petite planète du système solaire ?",
+    "choix": [
+      "Mars",
+      "Mercure",
+      "Pluton",
+      "Vénus"
+    ],
+    "bonneReponse": 1,
+    "explication": "Mercure est plus petite que Mars et que la Terre, c'est donc la plus petite planète. Pluton était autrefois considérée comme une planète, mais elle est aujourd'hui classée comme planète naine."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel climat a de fortes pluies presque toute l'année et une chaleur constante, comme dans la forêt amazonienne ?",
+    "choix": [
+      "le climat polaire",
+      "le climat désertique",
+      "le climat équatorial",
+      "le climat méditerranéen"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le climat équatorial est chaud et humide toute l'année, près de l'équateur. Le climat désertique, lui, est très sec : il pleut très peu."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de temps faut-il environ à la Lune pour faire le tour de la Terre ?",
+    "choix": [
+      "Un jour",
+      "Une semaine",
+      "Environ un mois",
+      "Un an"
+    ],
+    "bonneReponse": 2,
+    "explication": "La Lune fait le tour de la Terre en un peu moins d'un mois. C'est pour cela qu'on revoit les mêmes phases (pleine lune, nouvelle lune…) à peu près chaque mois. Un an, c'est le temps que met la Terre pour faire le tour du Soleil."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Il est 14 h à Paris. Quelle heure est-il à Athènes, le même jour ? (Athènes se trouve dans le fuseau horaire juste à l'est de celui de Paris.) Écris l'heure avec « h ».",
+    "reponses": [
+      "15 h",
+      "15h",
+      "15 heures",
+      "15:00",
+      "15 h 00"
+    ],
+    "accents": "toleres",
+    "explication": "Quand on passe dans le fuseau horaire suivant vers l'est, on ajoute une heure. Athènes est un fuseau à l'est de Paris : 14 h + 1 h = 15 h."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Après de fortes pluies, une grande masse de terre et de boue glisse brutalement le long d'une pente. Comment appelle-t-on ce phénomène naturel ? (deux mots)",
+    "reponses": [
+      "glissement de terrain",
+      "glissement de terre"
+    ],
+    "accents": "toleres",
+    "explication": "Quand le sol est gorgé d'eau, il devient trop lourd et ne tient plus sur la pente : il glisse alors vers le bas."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque paysage au pays où on le trouve.",
+    "paires": [
+      [
+        "Fjords (vallées envahies par la mer)",
+        "Norvège"
+      ],
+      [
+        "Milliers de lacs et de forêts",
+        "Finlande"
+      ],
+      [
+        "Volcans, geysers et champs de lave",
+        "Islande"
+      ]
+    ],
+    "explication": "Les fjords sont des vallées creusées par les glaciers puis envahies par la mer, typiques de la côte norvégienne. La Finlande compte des milliers de lacs, et l'Islande possède de nombreux volcans et geysers."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les planètes produisent leur propre lumière, comme le Soleil.",
+    "vrai": false,
+    "explication": "Faux. Les planètes ne produisent pas leur propre lumière : elles renvoient la lumière du Soleil. Seules les étoiles, comme le Soleil, brillent par elles-mêmes."
   }
 ]

@@ -313,5 +313,121 @@
     ],
     "bonneReponse": 2,
     "explication": "Un camion pèse plusieurs milliers de kilogrammes. La tonne (t) est l'unité la plus adaptée pour les très grandes masses : 1 t = 1 000 kg."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de pièces de 20 centimes faut-il pour obtenir 1 € ?",
+    "choix": [
+      "4",
+      "5",
+      "10",
+      "20"
+    ],
+    "bonneReponse": 1,
+    "explication": "1 € = 100 centimes. Comme 20 + 20 + 20 + 20 + 20 = 100, il faut 5 pièces de 20 centimes. Pour vérifier, compte de 20 en 20 jusqu'à 100 : 20, 40, 60, 80, 100."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de millilitres (ml) y a-t-il dans 2 litres (l) ?",
+    "choix": [
+      "20 ml",
+      "200 ml",
+      "2 000 ml",
+      "20 000 ml"
+    ],
+    "bonneReponse": 2,
+    "explication": "1 l = 1 000 ml, donc 2 l = 2 × 1 000 ml = 2 000 ml."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de jours y a-t-il au mois d'avril ?",
+    "choix": [
+      "28",
+      "29",
+      "30",
+      "31"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le mois d'avril compte 30 jours. Pour le retrouver, on peut utiliser les jointures des doigts : les mois de 31 jours sont sur les bosses, et avril tombe dans le creux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une porte mesure 2 m de haut et 90 cm de large. Quelle mesure donne la largeur de la porte ?",
+    "choix": [
+      "2 m",
+      "90 cm",
+      "2 m 90 cm",
+      "180 cm"
+    ],
+    "bonneReponse": 1,
+    "explication": "La largeur est la mesure de gauche à droite, quand on regarde la porte de face. La hauteur est la mesure de bas en haut. Ici, la largeur est donc 90 cm."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un match se termine à 17 h 10 et dure 1 heure. À quelle heure a-t-il commencé ?",
+    "choix": [
+      "15 h 10",
+      "16 h 10",
+      "17 h 10",
+      "18 h 10"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour trouver l'heure de début, on retire la durée à l'heure de fin. 17 h 10 moins 1 heure donne 16 h 10. Vérifie : de 16 h 10 à 17 h 10, il s'écoule bien 1 heure."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Un paquet de farine pèse 2 kg 75 g. Combien de grammes (g) pèse-t-il ?",
+    "reponses": [
+      "2075",
+      "2 075"
+    ],
+    "accents": "toleres",
+    "explication": "1 kg = 1 000 g, donc 2 kg = 2 000 g. Avec les 75 g en plus, le paquet pèse 2 000 + 75 = 2 075 g."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de centimètres (cm) y a-t-il dans 3 mètres (m) ?",
+    "reponses": [
+      "300",
+      "300 cm"
+    ],
+    "accents": "toleres",
+    "explication": "1 m = 100 cm, donc 3 m = 3 × 100 cm = 300 cm."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à sa définition.",
+    "paires": [
+      [
+        "largeur",
+        "mesure de gauche à droite"
+      ],
+      [
+        "hauteur",
+        "mesure de bas en haut"
+      ],
+      [
+        "échelle",
+        "rapport entre dessin et réalité"
+      ]
+    ],
+    "explication": "La largeur se mesure de gauche à droite, la hauteur de bas en haut. L'échelle indique combien de fois le dessin est plus petit que la réalité, par exemple 1/100."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces longueurs du plus petit au plus grand.",
+    "elements": [
+      "75 cm",
+      "1 m",
+      "1 m 2 cm",
+      "120 cm"
+    ],
+    "explication": "On convertit tout en centimètres : 1 m = 100 cm et 1 m 2 cm = 102 cm. On range donc 75 cm, 100 cm, 102 cm et 120 cm."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une bouteille de 2 litres (l) contient 20 centilitres (cl).",
+    "vrai": false,
+    "explication": "Faux. 1 l = 100 cl, donc 2 l = 200 cl. Les 20 cl ne correspondent qu'à 0,2 l."
   }
 ]

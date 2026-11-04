@@ -290,5 +290,136 @@
     "enonce": "Pour faire une prédiction sur la suite d'une histoire, il faut attendre la fin du texte.",
     "vrai": false,
     "explication": "Faux. On peut faire une prédiction dès le début, en s'appuyant sur les indices donnés : une promesse non tenue, un objet caché, une personne qui semble inquiète, etc."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Le vent faisait claquer les bâches des étals comme des voiles », quelle figure de style trouve-t-on ?",
+    "texte": "Le dimanche matin, Adèle traversait la place du marché, les mains enfoncées dans sa veste. Le vent faisait claquer les bâches des étals comme des voiles. Au bout de la place, un vieil homme installé derrière une table pliante vendait des bouquins jaunis. Adèle s'approcha tout de même. Son père l'avait pourtant prévenue : « Ne touche à rien, nous ne restons qu'un quart d'heure ! » Elle ne toucha à rien, mais ses yeux, eux, se posèrent sur une boîte en bois couverte de coquillages. Le vieil homme sourit : « Elle attend quelqu'un depuis très longtemps. » Adèle ouvrit le couvercle. À l'intérieur, une lampe de poche rouillée et une carte postale sans timbre. Quand elle releva la tête, son père n'était plus là. Il se tenait déjà au bout de la ruelle, la main levée, comme pour l'appeler.",
+    "choix": [
+      "Une comparaison",
+      "Une métaphore",
+      "Une personnification",
+      "Une exagération"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le mot « comme » relie deux choses que l'on rapproche (les bâches et les voiles) : c'est une comparaison. Une métaphore, elle, dit que l'une est l'autre, sans « comme ».",
+    "defi": true
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de temps le père d'Adèle a-t-il prévu de rester au marché ?",
+    "texte": "Le dimanche matin, Adèle traversait la place du marché, les mains enfoncées dans sa veste. Le vent faisait claquer les bâches des étals comme des voiles. Au bout de la place, un vieil homme installé derrière une table pliante vendait des bouquins jaunis. Adèle s'approcha tout de même. Son père l'avait pourtant prévenue : « Ne touche à rien, nous ne restons qu'un quart d'heure ! » Elle ne toucha à rien, mais ses yeux, eux, se posèrent sur une boîte en bois couverte de coquillages. Le vieil homme sourit : « Elle attend quelqu'un depuis très longtemps. » Adèle ouvrit le couvercle. À l'intérieur, une lampe de poche rouillée et une carte postale sans timbre. Quand elle releva la tête, son père n'était plus là. Il se tenait déjà au bout de la ruelle, la main levée, comme pour l'appeler.",
+    "reponses": [
+      "un quart d'heure",
+      "un quart d’heure",
+      "quart d'heure",
+      "15 minutes",
+      "quinze minutes"
+    ],
+    "accents": "stricts",
+    "explication": "Le père dit « nous ne restons qu'un quart d'heure » : il a prévu de rester un quart d'heure, soit 15 minutes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qu'est-ce qui montre que le père d'Adèle s'est éloigné sans qu'elle s'en aperçoive ?",
+    "texte": "Le dimanche matin, Adèle traversait la place du marché, les mains enfoncées dans sa veste. Le vent faisait claquer les bâches des étals comme des voiles. Au bout de la place, un vieil homme installé derrière une table pliante vendait des bouquins jaunis. Adèle s'approcha tout de même. Son père l'avait pourtant prévenue : « Ne touche à rien, nous ne restons qu'un quart d'heure ! » Elle ne toucha à rien, mais ses yeux, eux, se posèrent sur une boîte en bois couverte de coquillages. Le vieil homme sourit : « Elle attend quelqu'un depuis très longtemps. » Adèle ouvrit le couvercle. À l'intérieur, une lampe de poche rouillée et une carte postale sans timbre. Quand elle releva la tête, son père n'était plus là. Il se tenait déjà au bout de la ruelle, la main levée, comme pour l'appeler.",
+    "choix": [
+      "Il lui a dit au revoir avant de partir",
+      "Il est assis à côté d'elle sur le banc",
+      "Quand elle relève la tête, il n'est plus là",
+      "Il tient déjà la carte postale dans sa main"
+    ],
+    "bonneReponse": 2,
+    "explication": "Adèle ne voit pas son père partir : c'est seulement en relevant la tête qu'elle découvre son absence. Cherche le moment où elle relève la tête."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quel lieu se passe la scène du début du texte ?",
+    "texte": "Le dimanche matin, Adèle traversait la place du marché, les mains enfoncées dans sa veste. Le vent faisait claquer les bâches des étals comme des voiles. Au bout de la place, un vieil homme installé derrière une table pliante vendait des bouquins jaunis. Adèle s'approcha tout de même. Son père l'avait pourtant prévenue : « Ne touche à rien, nous ne restons qu'un quart d'heure ! » Elle ne toucha à rien, mais ses yeux, eux, se posèrent sur une boîte en bois couverte de coquillages. Le vieil homme sourit : « Elle attend quelqu'un depuis très longtemps. » Adèle ouvrit le couvercle. À l'intérieur, une lampe de poche rouillée et une carte postale sans timbre. Quand elle releva la tête, son père n'était plus là. Il se tenait déjà au bout de la ruelle, la main levée, comme pour l'appeler.",
+    "choix": [
+      "Dans une bibliothèque",
+      "Sur une place de marché",
+      "Dans une gare",
+      "Au bord de la mer"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le texte parle de la place du marché, des étals et d'un vendeur installé à une table : le lieu est donc une place de marché. Repère les mots qui décrivent l'endroit."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pour quelle raison le martinet se pose-t-il ?",
+    "texte": "Le martinet noir est un oiseau qui passe presque toute sa vie dans le ciel. Il mange, boit et même dort en plein vol, à des centaines de mètres d'altitude. Ses ailes longues et pointues lui permettent de glisser sans effort au-dessus des villes. Pourtant, il ne se pose que pour une seule raison : pondre et élever ses petits. Son nid, fabriqué avec de la salive et des brins d'herbe, est souvent collé sous les toits des églises ou des vieux immeubles. Au printemps, les martinets arrivent d'Afrique, attirés par la chaleur de nos régions. En août, ils repartent vers le sud.",
+    "choix": [
+      "Pour boire de l'eau",
+      "Pour pondre et élever ses petits",
+      "Pour dormir sur une branche",
+      "Pour se réchauffer au soleil"
+    ],
+    "bonneReponse": 1,
+    "explication": "Cherche la phrase qui commence par « il ne se pose que pour une seule raison » : elle donne la seule raison pour laquelle l'oiseau se pose."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces étapes de l'année du martinet, dans l'ordre où elles se déroulent.",
+    "texte": "Le martinet noir est un oiseau qui passe presque toute sa vie dans le ciel. Il mange, boit et même dort en plein vol, à des centaines de mètres d'altitude. Ses ailes longues et pointues lui permettent de glisser sans effort au-dessus des villes. Pourtant, il ne se pose que pour une seule raison : pondre et élever ses petits. Son nid, fabriqué avec de la salive et des brins d'herbe, est souvent collé sous les toits des églises ou des vieux immeubles. Au printemps, les martinets arrivent d'Afrique, attirés par la chaleur de nos régions. En août, ils repartent vers le sud.",
+    "elements": [
+      "Le martinet arrive d'Afrique.",
+      "Il construit son nid sous un toit.",
+      "Il repart vers le sud."
+    ],
+    "explication": "Au printemps, le martinet arrive d'Afrique. Ensuite, il fabrique son nid pour pondre. Enfin, en août, il repart vers le sud. Relis le texte et note au crayon le moment de chaque étape."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le martinet noir s'arrête souvent sur le sol pour manger.",
+    "texte": "Le martinet noir est un oiseau qui passe presque toute sa vie dans le ciel. Il mange, boit et même dort en plein vol, à des centaines de mètres d'altitude. Ses ailes longues et pointues lui permettent de glisser sans effort au-dessus des villes. Pourtant, il ne se pose que pour une seule raison : pondre et élever ses petits. Son nid, fabriqué avec de la salive et des brins d'herbe, est souvent collé sous les toits des églises ou des vieux immeubles. Au printemps, les martinets arrivent d'Afrique, attirés par la chaleur de nos régions. En août, ils repartent vers le sud.",
+    "vrai": false,
+    "explication": "Faux. Le martinet mange, boit et dort en plein vol : il ne se pose pas pour manger."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque personnage à ce qu'il fait ou dit dans le texte.",
+    "texte": "Quand Sami ouvrit la porte de la cuisine, une odeur de pain chaud l'enveloppa. Sa grand-mère, Fatou, pétrissait la pâte sur la table couverte de farine, les manches relevées jusqu'aux coudes. « Tu arrives juste à temps, dit-elle sans se retourner. Le four doit encore chauffer. » Sami posa son cartable près du radiateur et s'approcha sur la pointe des pieds. Sur l'étagère, le petit pot de miel était vide, et une cuillère traînait sur le carrelage. Il fronça les sourcils. Sa sœur Lina arriva en courant, les joues rouges. « Ce n'est pas moi ! » cria-t-elle avant même qu'on l'accuse. Fatou sourit doucement : « Personne n'accuse personne. Le miel va sûrement revenir. » Sami regarda la cuillère, puis le pot, puis son propre menton, collant de sucre.",
+    "paires": [
+      [
+        "Fatou",
+        "pétrit la pâte sur la table"
+      ],
+      [
+        "Lina",
+        "crie « Ce n'est pas moi ! »"
+      ],
+      [
+        "Sami",
+        "regarde la cuillère et le pot vide"
+      ]
+    ],
+    "explication": "Chaque personnage a une action ou une parole bien précise : Fatou prépare le pain, Lina se défend tout de suite, et Sami observe les objets autour de lui."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le lien de parenté entre Sami et Fatou ? Écris un seul mot.",
+    "texte": "Quand Sami ouvrit la porte de la cuisine, une odeur de pain chaud l'enveloppa. Sa grand-mère, Fatou, pétrissait la pâte sur la table couverte de farine, les manches relevées jusqu'aux coudes. « Tu arrives juste à temps, dit-elle sans se retourner. Le four doit encore chauffer. » Sami posa son cartable près du radiateur et s'approcha sur la pointe des pieds. Sur l'étagère, le petit pot de miel était vide, et une cuillère traînait sur le carrelage. Il fronça les sourcils. Sa sœur Lina arriva en courant, les joues rouges. « Ce n'est pas moi ! » cria-t-elle avant même qu'on l'accuse. Fatou sourit doucement : « Personne n'accuse personne. Le miel va sûrement revenir. » Sami regarda la cuillère, puis le pot, puis son propre menton, collant de sucre.",
+    "reponses": [
+      "grand-mère",
+      "grand-mere",
+      "grand mère",
+      "grand mere"
+    ],
+    "accents": "stricts",
+    "explication": "Le texte dit « Sa grand-mère, Fatou » : Fatou est la grand-mère de Sami. Le mot « sa » désigne Sami."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qu'est-ce qui laisse penser que Sami a mangé le miel ?",
+    "texte": "Quand Sami ouvrit la porte de la cuisine, une odeur de pain chaud l'enveloppa. Sa grand-mère, Fatou, pétrissait la pâte sur la table couverte de farine, les manches relevées jusqu'aux coudes. « Tu arrives juste à temps, dit-elle sans se retourner. Le four doit encore chauffer. » Sami posa son cartable près du radiateur et s'approcha sur la pointe des pieds. Sur l'étagère, le petit pot de miel était vide, et une cuillère traînait sur le carrelage. Il fronça les sourcils. Sa sœur Lina arriva en courant, les joues rouges. « Ce n'est pas moi ! » cria-t-elle avant même qu'on l'accuse. Fatou sourit doucement : « Personne n'accuse personne. Le miel va sûrement revenir. » Sami regarda la cuillère, puis le pot, puis son propre menton, collant de sucre.",
+    "choix": [
+      "Il tient la cuillère dans sa main",
+      "Il est arrivé en retard à la maison",
+      "Il a du sucre collé sur le menton",
+      "Il a les joues rouges d'avoir couru"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le texte décrit le menton de Sami, collant de sucre. Relie cet indice à la phrase où il regarde le pot de miel vide : ce sont deux indices qui vont dans le même sens."
   }
 ]

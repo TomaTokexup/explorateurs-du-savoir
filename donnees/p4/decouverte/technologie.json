@@ -334,5 +334,101 @@
     "enonce": "Quand une lampe s'allume, l'énergie électrique disparaît.",
     "vrai": false,
     "explication": "Faux. L'énergie ne disparaît pas : elle se transforme en lumière et en chaleur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le rôle d'une pile dans un circuit électrique ?",
+    "choix": [
+      "Fournir le courant électrique au circuit",
+      "Arrêter le courant électrique",
+      "Mesurer la force du courant",
+      "Éclairer la lampe"
+    ],
+    "bonneReponse": 0,
+    "explication": "La pile est la source d'électricité : elle pousse le courant dans le circuit, un peu comme une pompe pousse l'eau dans un tuyau."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi une bouilloire électrique chauffe-t-elle l'eau ?",
+    "choix": [
+      "Parce que l'eau tourne sur elle-même",
+      "Parce que l'électricité se transforme en lumière",
+      "Parce que l'électricité se transforme en chaleur",
+      "Parce que la bouilloire frotte contre l'eau"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le courant traverse une résistance, un élément qui chauffe fortement. L'énergie électrique se transforme donc en chaleur, qui passe ensuite dans l'eau."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi ne faut-il jamais enfoncer un objet pointu dans une prise ?",
+    "choix": [
+      "Pour éteindre la lumière",
+      "Pour ne pas abîmer la prise",
+      "Parce qu'on risque un choc électrique",
+      "Parce que la prise ferait du bruit"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les parties métalliques d'une prise sont sous tension. Y introduire un objet peut provoquer un choc électrique grave : on ne touche jamais une prise avec un objet."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu veux savoir si un crayon conduit l'électricité. Quelle phrase est une hypothèse ?",
+    "choix": [
+      "Le crayon a fait briller la lampe.",
+      "Je place le crayon entre les deux fils.",
+      "Si le crayon conduit l'électricité, la lampe va briller.",
+      "Le crayon est fabriqué avec du bois."
+    ],
+    "bonneReponse": 2,
+    "explication": "Une hypothèse est une idée proposée avant l'expérience, souvent sous la forme « si... alors... ». Elle sera vérifiée pendant l'expérience."
+  },
+  {
+    "type": "qcm",
+    "enonce": "D'où vient l'électricité qui arrive dans la prise de la maison ?",
+    "choix": [
+      "La prise la fabrique elle-même",
+      "Elle sort des murs de la cuisine",
+      "Elle vient d'une centrale électrique par les fils",
+      "Elle est stockée dans la lampe"
+    ],
+    "bonneReponse": 2,
+    "explication": "L'électricité est produite dans une centrale électrique, puis elle arrive jusqu'aux maisons par les fils. La prise ne fabrique rien : elle permet seulement de brancher un appareil."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quelle source d'énergie renouvelable utilise la chaleur présente sous la surface de la Terre ? (un seul mot)",
+    "reponses": [
+      "géothermie",
+      "geothermie"
+    ],
+    "accents": "toleres",
+    "explication": "La géothermie utilise la chaleur de la Terre, qui vient de l'intérieur de la planète. Cette énergie est renouvelable, car la chaleur de la Terre ne s'épuise pas à notre échelle."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans quel métal sont fabriquées la plupart des canettes de boisson ? (un seul mot)",
+    "reponses": [
+      "aluminium"
+    ],
+    "accents": "toleres",
+    "explication": "Les canettes sont en aluminium. On peut les recycler : le métal est fondu puis utilisé pour fabriquer de nouvelles canettes."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes dans l'ordre, du courant qui arrive jusqu'au pain grillé.",
+    "elements": [
+      "Le courant sort de la prise de courant",
+      "Le courant circule dans les fils jusqu'à l'appareil",
+      "Le courant traverse une résistance qui chauffe",
+      "Le pain devient grillé et chaud"
+    ],
+    "explication": "On suit le chemin de l'électricité : elle part de la prise, passe par les fils jusqu'à l'appareil, puis chauffe la résistance, qui transmet sa chaleur au pain."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un objet en bois laisse bien passer le courant électrique.",
+    "vrai": false,
+    "explication": "Faux. Le bois ne laisse pas passer le courant : c'est un isolant. Une règle en bois ne fera donc pas briller la lampe d'un circuit."
   }
 ]

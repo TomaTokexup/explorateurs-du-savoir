@@ -284,5 +284,112 @@
     "enonce": "Le sucre est le seul aliment qui donne de l'énergie au corps.",
     "vrai": false,
     "explication": "Faux. Le pain, les pâtes, le riz et les pommes de terre donnent aussi de l'énergie au corps : ce sont des aliments riches en glucides."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi faut-il boire de l'eau tous les jours ?",
+    "choix": [
+      "Parce que le corps perd de l'eau chaque jour (sueur, urine, respiration)",
+      "Pour faire grandir les cheveux",
+      "Parce que l'eau donne beaucoup d'énergie, comme le sucre",
+      "Pour remplacer les repas"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le corps perd de l'eau en transpirant, en respirant et en allant aux toilettes. Il faut la remplacer en buvant, surtout quand il fait chaud ou qu'on fait du sport. L'eau, elle, n'apporte pas d'énergie."
+  },
+  {
+    "type": "qcm",
+    "enonce": "À quoi servent les paupières et les cils ?",
+    "choix": [
+      "À protéger l'œil et à l'humidifier",
+      "À faire entrer la lumière dans l'œil",
+      "À transformer la lumière en image",
+      "À envoyer des messages au cerveau"
+    ],
+    "bonneReponse": 0,
+    "explication": "Les paupières se ferment pour protéger l'œil, et les cils arrêtent les poussières. Quand on cligne des yeux, le liquide des larmes s'étale sur l'œil pour le garder humide."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi faut-il faire contrôler sa vue régulièrement, même si l'on ne se plaint de rien ?",
+    "choix": [
+      "Parce qu'il faut porter des lunettes dès le plus jeune âge",
+      "Parce qu'un défaut de vue peut apparaître petit à petit, sans qu'on le remarque",
+      "Parce que les yeux s'abîment seulement après 60 ans",
+      "Pour vérifier que les yeux sont assez grands"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un défaut de vue arrive souvent doucement : l'enfant s'adapte sans s'en rendre compte. Un contrôle régulier permet de le repérer tôt et de le corriger."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Après un repas, comment les nutriments arrivent-ils dans les muscles des jambes ?",
+    "choix": [
+      "Les nerfs les transportent jusqu'aux muscles",
+      "Le sang les transporte, après être passé par le cœur",
+      "Ils restent dans l'estomac jusqu'à la course",
+      "L'air de la respiration les emporte"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le sang transporte les nutriments et l'oxygène dans tout le corps. Le cœur le pompe dans les artères, qui l'amènent jusqu'aux muscles des jambes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel organe du système digestif est le plus long ?",
+    "choix": [
+      "L'estomac",
+      "L'œsophage",
+      "L'intestin grêle",
+      "Le gros intestin"
+    ],
+    "bonneReponse": 2,
+    "explication": "L'intestin grêle mesure environ 6 mètres, ce qui en fait l'organe le plus long du système digestif. Le gros intestin est plus large, mais beaucoup plus court : son nom ne dit pas sa longueur."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle le liquide qui sort des yeux et les garde humides ?",
+    "reponses": [
+      "larmes",
+      "les larmes",
+      "larme"
+    ],
+    "accents": "toleres",
+    "explication": "Les larmes sont fabriquées en permanence. À chaque clignement des paupières, elles s'étalent sur l'œil pour le garder humide et le nettoyer des poussières."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appellent les dents pointues qui servent à déchirer les aliments ?",
+    "reponses": [
+      "canines",
+      "les canines",
+      "canine"
+    ],
+    "accents": "toleres",
+    "explication": "Les incisives, devant, coupent ; les canines, pointues, déchirent ; les molaires, au fond, broient les aliments. La digestion commence donc dans la bouche."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque aliment à ce qu'il apporte au corps.",
+    "paires": [
+      [
+        "Pain, pâtes, riz",
+        "De l'énergie pour bouger"
+      ],
+      [
+        "Viande, poisson, œufs",
+        "Des matériaux pour grandir"
+      ],
+      [
+        "Lait, fromage, yaourt",
+        "Du calcium pour les os"
+      ]
+    ],
+    "explication": "Les féculents (pain, pâtes, riz) donnent de l'énergie. La viande, le poisson et les œufs fournissent les matériaux pour grandir et réparer le corps. Les produits laitiers apportent du calcium, qui rend les os solides."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Nos yeux envoient de la lumière vers les objets pour pouvoir les voir.",
+    "vrai": false,
+    "explication": "Faux. Nos yeux ne produisent pas de lumière : un objet est visible parce qu'il renvoie la lumière vers nos yeux."
   }
 ]

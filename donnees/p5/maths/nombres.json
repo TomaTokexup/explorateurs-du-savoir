@@ -326,5 +326,124 @@
     "enonce": "Le nombre 16 est à la fois un nombre carré et un nombre triangulaire.",
     "vrai": false,
     "explication": "Faux. 16 est un nombre carré, car 4 × 4 = 16. Mais ce n'est pas un nombre triangulaire : les nombres triangulaires sont 1, 3, 6, 10, 15, 21… (on fait des ronds de points en formant un triangle)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un plongeur est à 12 m sous le niveau de la mer. Comment écrit-on son altitude avec un nombre négatif ?",
+    "choix": [
+      "12 m",
+      "−12 m",
+      "+12 m",
+      "−21 m"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le niveau de la mer sert de repère (0 m). Ce qui est au-dessus s'écrit avec un nombre positif, ce qui est en dessous s'écrit avec le signe moins : −12 m."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la décomposition du nombre 2,35 ?",
+    "choix": [
+      "2 + 0,3 + 0,5",
+      "2 + 0,3 + 0,05",
+      "2 + 0,35 + 0,05",
+      "2 + 3 + 5"
+    ],
+    "bonneReponse": 1,
+    "explication": "Dans 2,35, il y a 2 unités, 3 dixièmes et 5 centièmes. Le 5 est à la deuxième place après la virgule, donc il vaut 0,05 et non 0,5."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment s'écrit en nombre décimal la fraction 7/100 ?",
+    "choix": [
+      "0,7",
+      "0,07",
+      "7,100",
+      "0,007"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un centième s'écrit avec deux chiffres après la virgule : 7 centièmes s'écrivent 0,07. Le 7 doit donc être en deuxième position après la virgule."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces nombres est un nombre carré ?",
+    "choix": [
+      "24",
+      "36",
+      "48",
+      "50"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un nombre carré est le résultat d'un nombre multiplié par lui-même : 36 = 6 × 6. On peut ranger 36 jetons en un carré de 6 sur 6. Ce n'est pas possible avec 24, 48 ou 50."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment s'écrit le nombre 49 en chiffres romains ?",
+    "choix": [
+      "XLIX",
+      "IL",
+      "XIL",
+      "LIX"
+    ],
+    "bonneReponse": 0,
+    "explication": "XL vaut 40 et IX vaut 9. On écrit donc XL puis IX, ce qui donne XLIX. Un chiffre placé avant un plus grand se soustrait (IX = 9)."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans le nombre 3 058 146, quel est le chiffre des dizaines de milliers ?",
+    "reponses": [
+      "5"
+    ],
+    "accents": "toleres",
+    "explication": "Compte les rangs depuis la droite : 6 unités, 4 dizaines, 1 centaine, 8 milliers, puis 5 dizaines de milliers. Le chiffre des dizaines de milliers est donc 5."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Arrondis 4,58 au dixième le plus proche. (écris le nombre)",
+    "reponses": [
+      "4,6",
+      "4.6"
+    ],
+    "accents": "toleres",
+    "explication": "Au dixième, on regarde le chiffre des centièmes : ici c'est 8, qui est 5 ou plus. On arrondit donc vers le haut : 4,5 devient 4,6."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque suite à son nombre suivant.",
+    "paires": [
+      [
+        "0,2 ; 0,4 ; 0,6 ; …",
+        "0,8"
+      ],
+      [
+        "1 ; 1,5 ; 2 ; …",
+        "2,5"
+      ],
+      [
+        "3,1 ; 3,2 ; 3,3 ; …",
+        "3,4"
+      ],
+      [
+        "0,45 ; 0,5 ; 0,55 ; …",
+        "0,6"
+      ]
+    ],
+    "explication": "Dans chaque suite, on ajoute toujours le même nombre. Par exemple, 0,2 ; 0,4 ; 0,6 avance de 0,2 à chaque fois, donc le suivant est 0,8."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces masses de bébés de la plus légère à la plus lourde.",
+    "elements": [
+      "3,09 kg",
+      "3,4 kg",
+      "3,45 kg",
+      "3,5 kg"
+    ],
+    "explication": "Tous commencent par 3 unités. On compare ensuite les dixièmes : 0 dixième pour 3,09, puis 4 dixièmes pour 3,4 et 3,45, puis 5 dixièmes pour 3,5. Enfin, à 4 dixièmes égaux, 3,4 (soit 3,40) est plus léger que 3,45 car 0 centième est moins que 5 centièmes."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le nombre 0,5 est égal à la fraction 50/100.",
+    "vrai": true,
+    "explication": "Vrai. 0,5 correspond à 5 dixièmes, et 5 dixièmes valent 50 centièmes. Donc 0,5 = 50/100."
   }
 ]

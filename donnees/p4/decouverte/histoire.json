@@ -378,5 +378,116 @@
     "enonce": "Au Moyen Âge, la plupart des paysans savaient lire et écrire.",
     "vrai": false,
     "explication": "Faux. La plupart des paysans ne savaient ni lire ni écrire. L'instruction était réservée à une minorité, comme les moines et les clercs."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quel siècle se trouve l'année 250 av. J.-C. ?",
+    "choix": [
+      "IIe siècle av. J.-C.",
+      "IIIe siècle av. J.-C.",
+      "IIIe siècle",
+      "IIe siècle"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les siècles « avant J.-C. » se comptent à l'envers, en se rapprochant de l'année 1 : le IIIe siècle av. J.-C. va de 300 à 201 av. J.-C. Ne pas oublier « av. J.-C. » après le numéro du siècle."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien d'années séparent 3000 av. J.-C. de 1000 av. J.-C. ? Écris le nombre d'années.",
+    "reponses": [
+      "2000",
+      "2 000",
+      "2000 ans",
+      "2 000 ans"
+    ],
+    "accents": "toleres",
+    "explication": "Sur une ligne du temps, on va de 3000 av. J.-C. vers 1000 av. J.-C. en se rapprochant de l'année 1, donc on fait une soustraction : 3000 - 1000 = 2000 ans.",
+    "astuce": "Trace une ligne du temps, place les deux dates dessus et compte les années entre elles."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Au Moyen Âge, quel vêtement portait le plus souvent un paysan qui travaillait dans les champs ?",
+    "choix": [
+      "Une armure en acier",
+      "Une robe en soie brodée",
+      "Une tunique en grosse laine",
+      "Un costume de velours orné de bijoux"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les paysans portaient des vêtements simples et solides, faits de grosse laine ou de toile de lin, qui résistaient au travail. L'armure était portée par les chevaliers, et les tissus précieux par les seigneurs."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qui était Aliénor d'Aquitaine ?",
+    "choix": [
+      "Une jeune fille qui a libéré la ville d'Orléans",
+      "Une femme qui a été reine de France puis reine d'Angleterre",
+      "Une femme qui a dirigé une armée contre les Anglais",
+      "La première femme pape"
+    ],
+    "bonneReponse": 1,
+    "explication": "Aliénor d'Aquitaine est une grande figure du Moyen Âge : elle a d'abord été reine de France en épousant Louis VII, puis reine d'Angleterre en épousant Henri II. Ne pas la confondre avec Jeanne d'Arc."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment s'appelle le grand bâtiment religieux construit au Moyen Âge dans les villes, comme Notre-Dame de Paris ?",
+    "choix": [
+      "Un château fort",
+      "Une cathédrale",
+      "Un donjon",
+      "Un moulin"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les cathédrales sont de grandes églises construites au Moyen Âge, pendant des dizaines d'années. Le château fort, avec son donjon, servait à protéger le seigneur et ses terres."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Au Moyen Âge, comment s'appelle l'outil tiré par des bœufs ou des chevaux qui sert à labourer la terre ?",
+    "reponses": [
+      "charrue",
+      "la charrue",
+      "une charrue"
+    ],
+    "accents": "toleres",
+    "explication": "Labourer, c'est retourner la terre pour pouvoir y semer. La charrue ouvre des sillons dans le sol, ce qui était beaucoup plus rapide que de remuer la terre à la main avec une simple bêche."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque métier du Moyen Âge à son outil ou à son lieu de travail.",
+    "paires": [
+      [
+        "Le forgeron",
+        "L'enclume"
+      ],
+      [
+        "Le meunier",
+        "Le moulin"
+      ],
+      [
+        "Le copiste",
+        "La plume d'oie"
+      ],
+      [
+        "Le tisserand",
+        "Le métier à tisser"
+      ]
+    ],
+    "explication": "Le forgeron frappe le fer chaud sur l'enclume, le meunier moud le blé au moulin, le moine copiste recopie les livres à la plume d'oie, et le tisserand fabrique le tissu sur un métier à tisser."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces étapes de la vie d'un jeune noble qui veut devenir chevalier, de la première à la dernière.",
+    "elements": [
+      "Il devient page au château du seigneur",
+      "Il devient écuyer et s'occupe des chevaux et des armes",
+      "Il est adoubé et devient chevalier"
+    ],
+    "explication": "Au Moyen Âge, un jeune noble commence par servir au château comme page, puis il devient écuyer auprès d'un chevalier. Après plusieurs années, il reçoit la cérémonie de l'adoubement et devient chevalier."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Au Moyen Âge, les seigneurs travaillaient eux-mêmes dans les champs à côté des paysans.",
+    "vrai": false,
+    "explication": "Faux. Les seigneurs ne cultivaient pas la terre : ils vivaient des revenus de leurs domaines et du travail des paysans, en échange de leur protection."
   }
 ]

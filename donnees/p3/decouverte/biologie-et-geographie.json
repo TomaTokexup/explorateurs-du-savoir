@@ -310,5 +310,126 @@
     ],
     "accents": "toleres",
     "explication": "On achète du pain à la boulangerie, un commerce que l'on trouve dans presque tous les quartiers d'une ville."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un oiseau mange les fruits d'un cerisier, puis il rejette les graines loin de l'arbre. Quel est l'avantage pour le cerisier ?",
+    "choix": [
+      "Les graines se transforment en fleurs tout de suite",
+      "L'oiseau apporte du pollen à l'arbre",
+      "Les graines peuvent pousser loin de l'arbre mère, sans lui faire d'ombre",
+      "Les graines ne peuvent plus jamais germer"
+    ],
+    "bonneReponse": 2,
+    "explication": "Certains animaux mangent des fruits et rejettent les graines ailleurs. Les nouvelles plantes ont ainsi plus de place pour pousser loin de l'arbre mère."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle le lieu de la ville où l'on prend le train pour partir vers une autre ville ?",
+    "reponses": [
+      "gare",
+      "la gare"
+    ],
+    "accents": "toleres",
+    "explication": "La gare est le bâtiment où les trains s'arrêtent pour faire monter et descendre les voyageurs."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quel lieu de la ville peut-on aller nager ?",
+    "choix": [
+      "La boulangerie",
+      "Le commissariat",
+      "La piscine",
+      "La bibliothèque"
+    ],
+    "bonneReponse": 2,
+    "explication": "La piscine est un lieu de sport et de loisirs où l'on nage. La boulangerie vend du pain, le commissariat est un service de police et la bibliothèque prête des livres."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque moyen de transport au lieu où il circule.",
+    "paires": [
+      [
+        "Le bus",
+        "Sur la route"
+      ],
+      [
+        "Le bateau",
+        "Sur l'eau"
+      ],
+      [
+        "L'avion",
+        "Dans les airs"
+      ],
+      [
+        "Le métro",
+        "Sous terre, dans des tunnels"
+      ]
+    ],
+    "explication": "Le bus roule sur la route, le bateau navigue sur l'eau, l'avion vole dans les airs et le métro circule sous terre, dans des tunnels."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces états de l'eau du plus froid au plus chaud.",
+    "elements": [
+      "L'eau à l'état solide (glace)",
+      "L'eau à l'état liquide",
+      "L'eau à l'état gazeux (vapeur)"
+    ],
+    "explication": "L'eau est solide (glace) en dessous de 0 °C, liquide entre 0 °C et 100 °C, puis elle devient vapeur (gaz) au-dessus de 100 °C a pression normale."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un glaçon fond dans un verre. Quel changement d'état se produit ?",
+    "choix": [
+      "Du gaz devient liquide",
+      "Du solide devient liquide",
+      "Du liquide devient solide",
+      "Du liquide devient gaz"
+    ],
+    "bonneReponse": 1,
+    "explication": "Fondre, c'est passer de l'état solide à l'état liquide : la glace devient de l'eau liquide."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un taxi est un transport en commun.",
+    "vrai": false,
+    "explication": "Faux. Un transport en commun, comme le bus, le tramway ou le métro, transporte beaucoup de personnes à la fois. Un taxi ne prend en général que quelques personnes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Par rapport à un village, qu'est-ce qu'une grande ville a en général de plus ?",
+    "choix": [
+      "Plus de champs et de forêts",
+      "Moins de maisons et de bâtiments",
+      "Beaucoup plus d'habitants et de services",
+      "Moins de magasins et de commerces"
+    ],
+    "bonneReponse": 2,
+    "explication": "Une ville a plus d'habitants, de maisons et de services (hôpitaux, banques, écoles) qu'un village. Les champs et les forêts sont plus présents à la campagne."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom donné à l'eau qui tombe du ciel sous forme de pluie, de neige ou de grêle ?",
+    "reponses": [
+      "précipitations",
+      "precipitations",
+      "les précipitations",
+      "les precipitations"
+    ],
+    "accents": "toleres",
+    "explication": "Les précipitations sont toute l'eau qui retombe du ciel vers le sol. Dans le cycle de l'eau, elles arrivent après la condensation de la vapeur dans les nuages."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pour aller à l'école sans polluer l'air de la ville, quel moyen de transport vaut-il mieux choisir ?",
+    "choix": [
+      "La voiture",
+      "Le vélo",
+      "Le taxi",
+      "La moto"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le vélo n'utilise pas de carburant et ne rejette pas de fumée. Marcher, prendre le bus ou le tramway pollue aussi beaucoup moins que la voiture, car un seul véhicule transporte beaucoup de personnes."
   }
 ]

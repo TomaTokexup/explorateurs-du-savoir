@@ -333,5 +333,126 @@
     "enonce": "Se laver les mains régulièrement aide à éviter de transmettre des microbes qui donnent des rhumes.",
     "vrai": true,
     "explication": "Vrai. Les microbes du rhume passent facilement des mains au nez et à la bouche, et se laver les mains limite leur propagation."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Environ combien de fois le cœur d'un adulte bat-il en une minute, au repos ?",
+    "choix": [
+      "7 fois",
+      "70 fois",
+      "700 fois",
+      "7 000 fois"
+    ],
+    "bonneReponse": 1,
+    "explication": "Au repos, le cœur d'un adulte bat environ 70 fois par minute. Celui d'un enfant bat un peu plus vite, et pendant un effort, il peut dépasser 150 battements par minute."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle le conduit situé derrière le nez et la bouche, où passent à la fois l'air et les aliments ?",
+    "reponses": [
+      "pharynx",
+      "le pharynx"
+    ],
+    "accents": "toleres",
+    "explication": "Le pharynx est un carrefour : l'air part ensuite vers la trachée, et les aliments vers l'œsophage."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un élève retient sa respiration pendant 30 secondes. Qu'est-ce qui le pousse à reprendre de l'air ?",
+    "choix": [
+      "Le cœur se met à battre moins vite",
+      "Le manque d'oxygène dans les poumons seulement",
+      "Le gaz carbonique qui s'accumule dans le sang",
+      "Le diaphragme se fatigue et s'arrête"
+    ],
+    "bonneReponse": 2,
+    "explication": "Ce qui déclenche l'envie de respirer, c'est surtout l'augmentation du gaz carbonique dans le sang. Le manque d'oxygène ne se fait sentir qu'après un long moment."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu as envie de tousser. Quel geste limite le plus la transmission des microbes aux autres ?",
+    "choix": [
+      "Tousser dans tes mains sans les laver",
+      "Tousser dans ton coude",
+      "Tousser sans te couvrir la bouche",
+      "Tousser près de tes camarades"
+    ],
+    "bonneReponse": 1,
+    "explication": "En toussant dans ton coude, tu évites de projeter des microbes sur tes mains et sur les autres. Tes mains, elles, transportent les microbes d'un objet à l'autre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans les alvéoles des poumons, que fait le sang ?",
+    "choix": [
+      "Il prend du dioxygène et rejette du dioxyde de carbone",
+      "Il prend du dioxyde de carbone et rejette du dioxygène",
+      "Il dépose les aliments digérés",
+      "Il fabrique de l'air"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'air arrive dans les alvéoles, tout près des vaisseaux sanguins. Le dioxygène passe dans le sang, et le dioxyde de carbone que le sang a ramené des organes passe dans l'air, qu'on expire ensuite."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pendant un pic de pollution de l'air, quel est le meilleur conseil pour protéger ses poumons ?",
+    "choix": [
+      "Faire du sport dehors à fond",
+      "Éviter les efforts intenses à l'extérieur",
+      "Courir longtemps au parc",
+      "Aller jouer dehors sans jamais s'arrêter"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pendant un effort, on respire plus vite et plus fort, donc on inhale davantage de polluants. Mieux vaut une activité calme ou rester à l'intérieur."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à sa définition.",
+    "paires": [
+      [
+        "Inspiration",
+        "L'air entre dans les poumons"
+      ],
+      [
+        "Expiration",
+        "L'air sort des poumons"
+      ],
+      [
+        "Apnée",
+        "On retient sa respiration"
+      ],
+      [
+        "Toux",
+        "Le corps chasse l'air d'un coup"
+      ]
+    ],
+    "explication": "Inspirer fait entrer l'air, expirer le fait sortir. En apnée, comme sous l'eau, on retient sa respiration. La toux chasse brusquement l'air pour nettoyer les voies respiratoires."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces étapes dans l'ordre du trajet du sang dans la petite circulation, depuis le cœur jusqu'au retour au cœur.",
+    "elements": [
+      "Le sang pauvre en oxygène quitte le ventricule droit",
+      "Il part dans le vaisseau qui va vers les poumons",
+      "Il se charge en oxygène dans les alvéoles",
+      "Il revient au cœur par l'oreillette gauche"
+    ],
+    "explication": "Le sang sort du cœur côté droit, va aux poumons où il prend du dioxygène, puis revient au cœur côté gauche. Ce trajet s'appelle la petite circulation."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom du vaisseau qui emmène le sang pauvre en oxygène du cœur vers les poumons ?",
+    "reponses": [
+      "artère pulmonaire",
+      "l'artère pulmonaire",
+      "artere pulmonaire"
+    ],
+    "accents": "toleres",
+    "explication": "C'est une artère, même si elle transporte du sang pauvre en oxygène. Une artère s'éloigne du cœur, alors qu'une veine y revient."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Respirer la fumée de cigarette des autres est sans danger pour la santé.",
+    "vrai": false,
+    "explication": "Faux. Respirer la fumée des autres, c'est le tabagisme passif : cette fumée irrite les bronches et les poumons, surtout chez les enfants."
   }
 ]

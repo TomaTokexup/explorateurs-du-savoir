@@ -328,5 +328,125 @@
     "enonce": "Pour vérifier que 352 + 128 = 480, on peut calculer 480 − 128 et retrouver 352.",
     "vrai": true,
     "explication": "Vrai. Si l'addition est juste, soustraire l'un des nombres au résultat donne l'autre : 480 − 128 = 352."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quels sont tous les diviseurs de 12 ?",
+    "choix": [
+      "1, 2, 3, 4, 6 et 12",
+      "1, 2, 3, 4 et 6",
+      "2, 3, 4 et 6",
+      "1, 2, 3, 4, 5, 6 et 12"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un diviseur de 12 divise 12 sans reste. On cherche les paires qui donnent 12 : 1 × 12, 2 × 6 et 3 × 4. Les diviseurs sont donc 1, 2, 3, 4, 6 et 12. Il ne faut oublier ni 1 ni 12, et ne pas ajouter 5, qui ne divise pas 12."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 70 − 25 + 12.",
+    "choix": [
+      "33",
+      "57",
+      "83",
+      "45"
+    ],
+    "bonneReponse": 1,
+    "explication": "On calcule de gauche à droite : 70 − 25 = 45, puis 45 + 12 = 57. Attention, on ne fait pas 25 − 12 ni 25 + 12 d'abord."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Calcule 156 ÷ 3. Écris seulement le nombre.",
+    "reponses": [
+      "52"
+    ],
+    "accents": "toleres",
+    "explication": "On partage 156 en 3 parts égales : on pose la division et on trouve 52. Pour vérifier, 52 × 3 = 156, donc il n'y a pas de reste.",
+    "astuce": "Pose la division sur ton cahier de brouillon, en commençant par les centaines."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Calcule 2 000 − 750.",
+    "reponses": [
+      "1250",
+      "1 250"
+    ],
+    "accents": "toleres",
+    "explication": "Pour trouver la différence, on peut compter : de 750 à 1 000 il faut 250, puis de 1 000 à 2 000 il faut 1 000 de plus. Au total 250 + 1 000 = 1 250. On peut vérifier avec 1 250 + 750 = 2 000."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque division à son quotient.",
+    "paires": [
+      [
+        "96 ÷ 8",
+        "12"
+      ],
+      [
+        "75 ÷ 3",
+        "25"
+      ],
+      [
+        "63 ÷ 7",
+        "9"
+      ],
+      [
+        "88 ÷ 4",
+        "22"
+      ]
+    ],
+    "explication": "Le quotient est le résultat d'une division. Pour vérifier une paire, on multiplie : 12 × 8 = 96, 25 × 3 = 75, 9 × 7 = 63 et 22 × 4 = 88."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces quantités de bonbons du plus petit nombre au plus grand nombre.",
+    "elements": [
+      "6 sachets de 4 bonbons",
+      "5 paquets de 5 bonbons",
+      "3 boîtes de 9 bonbons",
+      "30 bonbons"
+    ],
+    "explication": "On calcule chaque quantité : 6 × 4 = 24 bonbons, 5 × 5 = 25 bonbons, 3 × 9 = 27 bonbons et 30 bonbons. On range donc 24, 25, 27, puis 30."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans 20 ÷ 3, le quotient est 7 et le reste est 1.",
+    "vrai": false,
+    "explication": "Faux. 3 × 7 = 21 est plus grand que 20, donc 7 est trop grand. Le quotient est 6 : 3 × 6 = 18, et 20 − 18 = 2. Le reste est donc 2."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 1/5 de 35.",
+    "choix": [
+      "5",
+      "7",
+      "30",
+      "175"
+    ],
+    "bonneReponse": 1,
+    "explication": "Prendre un cinquième de 35, c'est partager 35 en 5 parts égales : 35 ÷ 5 = 7. Chaque part vaut 7."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 2 × 47 de tête.",
+    "choix": [
+      "94",
+      "97",
+      "88",
+      "100"
+    ],
+    "bonneReponse": 0,
+    "explication": "47 est proche de 50. On calcule 2 × 50 = 100, puis on enlève 2 × 3 = 6. Le résultat est 100 − 6 = 94."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 3,7 + 1,8.",
+    "choix": [
+      "4,15",
+      "5,5",
+      "4,5",
+      "5,15"
+    ],
+    "bonneReponse": 1,
+    "explication": "On additionne les unités et les dixièmes : 3 + 1 = 4, et 7 dixièmes + 8 dixièmes = 15 dixièmes, soit 1 unité et 5 dixièmes. Donc 4 + 1,5 = 5,5. Attention à ne pas écrire 4,15."
   }
 ]

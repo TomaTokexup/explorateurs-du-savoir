@@ -400,5 +400,123 @@
     "enonce": "Le périmètre d'une figure s'exprime en centimètres carrés (cm²).",
     "vrai": false,
     "explication": "Faux. Le périmètre est une longueur : il s'exprime en cm, mm ou m. Les centimètres carrés servent à mesurer une aire (la surface)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un losange a des côtés de 4 cm. Quel est son périmètre ?",
+    "choix": [
+      "8 cm",
+      "12 cm",
+      "16 cm",
+      "4 cm"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le périmètre est la longueur du contour : on additionne les quatre côtés égaux, 4 + 4 + 4 + 4 = 16 cm. Attention à ne pas oublier un côté."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de secondes (s) y a-t-il dans 3 minutes (min) ?",
+    "reponses": [
+      "180"
+    ],
+    "accents": "toleres",
+    "explication": "Une minute compte 60 secondes. Pour 3 minutes, on fait 3 × 60 = 180 secondes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de millilitres (ml) y a-t-il dans 5 décilitres (dl) ?",
+    "choix": [
+      "50 ml",
+      "500 ml",
+      "5 000 ml",
+      "5 ml"
+    ],
+    "bonneReponse": 1,
+    "explication": "1 dl = 100 ml, donc 5 dl = 5 × 100 = 500 ml. Un décilitre contient 100 millilitres, et non 10."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque unité d'aire à sa valeur dans l'unité juste en dessous.",
+    "paires": [
+      [
+        "1 m²",
+        "100 dm²"
+      ],
+      [
+        "1 dm²",
+        "100 cm²"
+      ],
+      [
+        "1 cm²",
+        "100 mm²"
+      ],
+      [
+        "1 ha",
+        "100 a"
+      ]
+    ],
+    "explication": "Pour les aires, on passe d'une unité à l'unité juste en dessous en multipliant par 100, et non par 10 : 1 m² = 100 dm², 1 dm² = 100 cm², 1 cm² = 100 mm². De même, 1 hectare vaut 100 ares."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de décagrammes (dag) y a-t-il dans 1 kilogramme (kg) ?",
+    "choix": [
+      "10 dag",
+      "100 dag",
+      "1 000 dag",
+      "0,1 dag"
+    ],
+    "bonneReponse": 1,
+    "explication": "1 kg = 1 000 g et 1 dag = 10 g. Donc 1 000 : 10 = 100 dag dans 1 kg."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces longueurs de la plus petite à la plus grande.",
+    "elements": [
+      "15 cm",
+      "180 mm",
+      "2 dm"
+    ],
+    "explication": "Pour comparer, on convertit tout en cm : 15 cm ; 180 mm = 18 cm ; 2 dm = 20 cm. Donc 15 cm < 180 mm < 2 dm."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de millimètres (mm) y a-t-il dans 1 mètre (m) ?",
+    "choix": [
+      "10 mm",
+      "100 mm",
+      "1 000 mm",
+      "10 000 mm"
+    ],
+    "bonneReponse": 2,
+    "explication": "1 m = 100 cm et 1 cm = 10 mm, donc 1 m = 100 × 10 = 1 000 mm. Le mètre contient mille millimètres."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Un carré a un périmètre de 20 cm. Quelle est la longueur de l'un de ses côtés, en centimètres (cm) ?",
+    "reponses": [
+      "5",
+      "5 cm"
+    ],
+    "accents": "toleres",
+    "explication": "Les quatre côtés d'un carré ont la même longueur. Le périmètre de 20 cm se partage en 4 côtés égaux : 20 : 4 = 5 cm."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de jours y a-t-il dans 3 semaines ?",
+    "choix": [
+      "10 jours",
+      "21 jours",
+      "3 jours",
+      "30 jours"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une semaine compte 7 jours, donc 3 semaines = 3 × 7 = 21 jours. Il ne faut pas confondre le nombre de semaines avec le nombre de jours."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un centimètre carré (cm²) est plus grand qu'un millimètre carré (mm²).",
+    "vrai": true,
+    "explication": "Vrai. Comme 1 cm = 10 mm, un carré de 1 cm de côté contient 10 × 10 = 100 petits carrés de 1 mm de côté : 1 cm² = 100 mm²."
   }
 ]

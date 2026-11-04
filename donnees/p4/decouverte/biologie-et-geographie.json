@@ -345,5 +345,116 @@
     "enonce": "Un sac en plastique jeté dans la nature disparaît en quelques mois.",
     "vrai": false,
     "explication": "Faux. Un sac en plastique met plusieurs dizaines, voire plusieurs centaines d'années à se dégrader : il pollue donc la nature pendant très longtemps."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un hérisson vit dans une haie au bord d'un champ. Pourquoi faut-il garder les haies à la campagne ?",
+    "choix": [
+      "Elles font baisser la température de l'air",
+      "Elles offrent un abri et de la nourriture aux animaux",
+      "Elles empêchent la pluie de tomber sur les champs",
+      "Elles remplacent les champs pour les cultures"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une haie est un habitat : les animaux y trouvent un abri, de la nourriture et un endroit pour se reproduire. Protéger les haies, c'est protéger la vie des animaux qui y vivent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une région chaude et très pluvieuse, quel paysage trouve-t-on le plus souvent ?",
+    "choix": [
+      "Une forêt tropicale très dense",
+      "Un désert de sable",
+      "Une toundra couverte de mousses",
+      "Une haute montagne enneigée"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le climat explique la végétation : la chaleur et la pluie abondante permettent à beaucoup de plantes de pousser, ce qui forme une forêt dense. Un désert, au contraire, est chaud mais très sec."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi est-il utile d'acheter des produits avec peu d'emballages ?",
+    "choix": [
+      "Parce que les emballages coûtent moins cher que le produit",
+      "Parce qu'il y a moins de déchets à traiter, donc moins de pollution",
+      "Parce que les emballages rendent le produit plus sain",
+      "Parce que les emballages se recyclent sans aucun effort"
+    ],
+    "bonneReponse": 1,
+    "explication": "Moins d'emballages, c'est moins de déchets à trier, transporter et traiter. C'est un geste simple pour réduire notre impact sur l'environnement."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur une carte de l'Europe, quelle chaîne de montagnes traverse l'Italie du nord au sud ?",
+    "choix": [
+      "Les Alpes",
+      "Les Apennins",
+      "Les Carpates",
+      "Les Pyrénées"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les Apennins forment l'épine dorsale de l'Italie, du nord au sud. Les Alpes, elles, se trouvent au nord de l'Italie, à la frontière avec la France et la Suisse."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une région de montagne, pourquoi fait-il souvent plus froid qu'en plaine ?",
+    "choix": [
+      "Parce que la montagne est plus proche du Soleil",
+      "Parce que l'air se refroidit quand on s'élève",
+      "Parce qu'il y a plus de forêts en montagne",
+      "Parce que les montagnes sont recouvertes de glaciers"
+    ],
+    "bonneReponse": 1,
+    "explication": "Plus on monte en altitude, plus l'air est froid. Le relief et l'altitude influencent donc le climat et les paysages."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom de la vaste plaine couverte d'herbes, avec quelques arbres isolés, que l'on trouve dans les régions chaudes d'Afrique ?",
+    "reponses": [
+      "savane",
+      "la savane"
+    ],
+    "accents": "toleres",
+    "explication": "La savane est un paysage d'herbes avec quelques arbres isolés. On la trouve dans les régions chaudes où il y a une longue saison sèche."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle l'ensemble formé par les êtres vivants d'un lieu et leur milieu (air, eau, sol) ?",
+    "reponses": [
+      "écosystème",
+      "ecosysteme",
+      "un écosystème",
+      "un ecosysteme"
+    ],
+    "accents": "toleres",
+    "explication": "Un écosystème est formé des êtres vivants et du milieu dans lequel ils vivent. Une mare ou une forêt sont des écosystèmes : les êtres vivants y dépendent de l'air, de l'eau et du sol."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque animal à l'habitat où il vit.",
+    "paires": [
+      [
+        "Chameau",
+        "Désert chaud et sec"
+      ],
+      [
+        "Ours blanc",
+        "Banquise au pôle Nord"
+      ],
+      [
+        "Poisson-clown",
+        "Récif de corail tropical"
+      ],
+      [
+        "Cerf",
+        "Forêt de feuillus"
+      ]
+    ],
+    "explication": "Chaque animal est adapté à son habitat : le chameau supporte la chaleur et le manque d'eau, l'ours blanc a une épaisse fourrure pour le grand froid, le poisson-clown vit dans l'eau chaude des récifs, et le cerf trouve abri et nourriture dans la forêt."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les sapins perdent leurs aiguilles en automne.",
+    "vrai": false,
+    "explication": "Faux. Les sapins sont des conifères à feuilles persistantes : ils gardent leurs aiguilles toute l'année. Les mélèzes, eux, perdent leurs aiguilles en automne."
   }
 ]

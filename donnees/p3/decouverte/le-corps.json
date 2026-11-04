@@ -319,5 +319,126 @@
     "enonce": "Les canaux semi-circulaires de l'oreille aident à garder l'équilibre.",
     "vrai": true,
     "explication": "Vrai. Ces canaux détectent les mouvements de la tête, ce qui renseigne le cerveau sur la position de ton corps. L'audition, elle, est assurée par la cochlée."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quel matériau le son se propage-t-il le mieux ?",
+    "choix": [
+      "Dans le vide",
+      "Dans l'air",
+      "Dans un solide, comme le métal",
+      "Dans un coussin épais"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le son se propage grâce à la vibration de la matière : dans un solide comme le métal, les particules sont bien serrées, donc la vibration passe très bien. Le son ne voyage pas dans le vide, et il passe moins bien dans l'air et surtout dans un matériau mou comme un coussin."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom du petit conduit qui relie l'oreille du milieu à l'arrière du nez et de la gorge ?",
+    "reponses": [
+      "trompe d'Eustache",
+      "la trompe d'Eustache",
+      "trompe d'eustache",
+      "la trompe d'eustache",
+      "trompe d’Eustache",
+      "la trompe d’Eustache",
+      "trompe d eustache"
+    ],
+    "accents": "toleres",
+    "explication": "La trompe d'Eustache est un petit tuyau qui permet d'équilibrer la pression de l'air de chaque côté du tympan. C'est pour cela que les oreilles « se bouchent » parfois dans un avion."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quels muscles te permettent de sourire ?",
+    "choix": [
+      "Les muscles du bras",
+      "Les muscles du visage",
+      "Les muscles du ventre",
+      "Les muscles du mollet"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les muscles du visage se fixent sur la peau et non sur des os. En se contractant, ils déplacent la bouche, les yeux ou les sourcils, ce qui permet de sourire, de froncer les sourcils ou de cligner des yeux."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque partie du corps à son type d'articulation.",
+    "paires": [
+      [
+        "La hanche",
+        "Articulation à rotule"
+      ],
+      [
+        "Le cou (pour tourner la tête)",
+        "Articulation pivot"
+      ],
+      [
+        "Le genou",
+        "Articulation à charnière"
+      ]
+    ],
+    "explication": "La hanche est une rotule : elle permet de bouger la jambe dans toutes les directions. Le cou est un pivot : il permet de tourner la tête de gauche à droite. Le genou est une charnière : il ne se plie que dans un sens, comme une porte."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces os du bras, de l'épaule jusqu'au bout des doigts.",
+    "elements": [
+      "L'humérus",
+      "Les os de l'avant-bras",
+      "Les os du poignet",
+      "Les phalanges des doigts"
+    ],
+    "explication": "On part de l'épaule : l'humérus est le gros os du haut du bras. Il est suivi des deux os de l'avant-bras, puis des os du poignet, et enfin des petits os des doigts (les phalanges)."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les os bougent tout seuls, sans l'aide des muscles.",
+    "vrai": false,
+    "explication": "Faux. Les os ne bougent pas seuls : ce sont les muscles qui tirent sur les os quand ils se contractent, et les articulations permettent ces mouvements."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qu'est-ce qu'une articulation ?",
+    "choix": [
+      "Un nerf qui envoie des signaux au cerveau",
+      "Un endroit où deux os se rejoignent",
+      "Un petit os de l'oreille",
+      "Un gros muscle du bras"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une articulation est l'endroit où deux os se rejoignent. Le coude, le genou ou la hanche sont des articulations : c'est grâce à elles que le corps peut se plier."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom du muscle situé à l'arrière du bras, qui se contracte pour tendre le bras ?",
+    "reponses": [
+      "triceps",
+      "le triceps"
+    ],
+    "accents": "toleres",
+    "explication": "Le triceps est situé à l'arrière du bras. Quand il se contracte, il tend le bras, alors que l'autre muscle du bras, situé devant, le plie. Les muscles travaillent donc toujours par paires."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qu'est-ce que la pollution sonore ?",
+    "choix": [
+      "Un bruit qui se propage dans l'eau",
+      "Une ville où l'air est sale",
+      "Un son qui ne s'entend qu'à distance",
+      "Des bruits trop forts et répétés qui gênent ou abîment les oreilles"
+    ],
+    "bonneReponse": 3,
+    "explication": "La pollution sonore désigne des bruits trop forts et trop fréquents, comme ceux de la circulation, des chantiers ou de la musique à fort volume. Ils peuvent fatiguer les oreilles et abîmer l'audition."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien d'os un adulte a-t-il environ dans son corps ?",
+    "choix": [
+      "206 os",
+      "20 os",
+      "60 os",
+      "1 000 os"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un adulte a environ 206 os. Un bébé en a davantage, car certains os se soudent entre eux en grandissant."
   }
 ]

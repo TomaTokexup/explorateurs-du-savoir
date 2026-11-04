@@ -348,5 +348,114 @@
     "enonce": "Si on lance un dé 60 fois, chaque face sort exactement 10 fois.",
     "vrai": false,
     "explication": "Faux. Le hasard ne donne pas des résultats parfaitement équilibrés : on peut obtenir plus de 10 fois un 6 et moins de 10 fois un 2. En moyenne, chaque face sort environ 10 fois, mais rarement exactement 10 fois."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Ce sac contient autant de billes rouges que de billes bleues. On tire une bille sans regarder. Tirer une bille rouge est :",
+    "choix": [
+      "impossible",
+      "peu probable",
+      "une chance sur deux",
+      "certain"
+    ],
+    "bonneReponse": 2,
+    "explication": "Il y a autant de billes rouges que de bleues : on a une chance sur deux de tirer une rouge. Si la bille rouge était absente du sac, ce serait impossible ; si elle était la seule rouge parmi beaucoup d'autres, ce serait peu probable.",
+    "image": "images/p4/maths/billes-4-4-0-0.svg",
+    "alt": "Un sac de billes de couleur"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Ce diagramme en barres montre les boissons vendues à la cantine. Quelles boissons ont été vendues le même nombre de fois ?",
+    "choix": [
+      "Eau et Lait",
+      "Jus et Thé",
+      "Eau et Jus",
+      "Lait et Thé"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour comparer deux barres, on regarde leur hauteur : le jus et le thé ont la même hauteur, donc le même nombre de ventes (6). Les barres de l'eau (9) et du lait (3) sont différentes.",
+    "image": "images/p4/maths/barres-70bf2cbf.svg",
+    "alt": "Un diagramme en barres"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Ce diagramme en barres montre le moyen de transport utilisé par les élèves pour venir à l'école. Combien d'élèves ne viennent ni à vélo ni en bus ? Donne ta réponse en nombre d'élèves.",
+    "reponses": [
+      "13",
+      "13 élèves"
+    ],
+    "accents": "toleres",
+    "explication": "Il faut lire les barres « Marche » et « Train » puis additionner : 9 + 4 = 13. On ajoute seulement les deux catégories demandées.",
+    "image": "images/p4/maths/barres-066d068b.svg",
+    "alt": "Un diagramme en barres"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Ce diagramme de Venn classe des enfants selon deux activités. Combien d'enfants font du judo mais pas de piano ?",
+    "choix": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "bonneReponse": 2,
+    "explication": "Il faut regarder uniquement le cercle du judo en dehors de la zone commune. Seule Inès est dans ce cas : une seule réponse. Tom fait aussi du piano, donc il ne compte pas.",
+    "image": "images/p4/maths/venn-1618f328.svg",
+    "alt": "Un diagramme de Venn à deux cercles"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Ce diagramme circulaire montre les animaux préférés des élèves d'une classe. Quel animal est choisi par le moins d'élèves ?",
+    "choix": [
+      "Chat",
+      "Lapin",
+      "Chien",
+      "Poisson"
+    ],
+    "bonneReponse": 3,
+    "explication": "Dans un diagramme circulaire, plus une part est grande, plus la catégorie a été choisie. La plus petite part correspond donc à l'animal choisi par le moins d'élèves : le poisson.",
+    "image": "images/p4/maths/camembert-94c12df0.svg",
+    "alt": "Un diagramme circulaire"
+  },
+  {
+    "type": "qcm",
+    "enonce": "On lance deux dés à 6 faces et on additionne les deux nombres obtenus. Quelle somme a le plus de chances d'être obtenue ?",
+    "choix": [
+      "12",
+      "7",
+      "10",
+      "2"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour trouver la somme la plus probable, on liste les façons de l'obtenir. 7 peut venir de 6 façons (1 + 6, 2 + 5, 3 + 4, 4 + 3, 5 + 2, 6 + 1), alors que 12 ou 2 ne viennent que d'une seule façon chacun."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Dans un sac, il y a 6 billes rouges, 3 billes vertes, 1 bille blanche et aucune bille jaune. On tire une bille sans regarder. Range ces événements du moins probable au plus probable :",
+    "elements": [
+      "Tirer une bille jaune",
+      "Tirer une bille blanche",
+      "Tirer une bille verte",
+      "Tirer une bille rouge"
+    ],
+    "explication": "Il n'y a aucune bille jaune, donc tirer une bille jaune est impossible. Il y a 1 bille blanche, puis 3 vertes, puis 6 rouges : plus une couleur a de billes dans le sac, plus elle a de chances d'être tirée."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Ce graphique en ligne montre le nombre de bouteilles d'eau vendues chaque mois. Combien de bouteilles d'eau ont été vendues en avril ? Donne ta réponse en nombre de bouteilles.",
+    "reponses": [
+      "50",
+      "50 bouteilles"
+    ],
+    "accents": "toleres",
+    "explication": "Pour lire une valeur sur un graphique en ligne, on repère le mois sur l'axe horizontal, on monte jusqu'au point, puis on lit la valeur sur l'axe vertical. Le point d'avril est à 50.",
+    "image": "images/p4/maths/courbe-916bf664.svg",
+    "alt": "Un graphique en ligne"
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans un diagramme en barres, chaque barre correspond à une catégorie.",
+    "vrai": true,
+    "explication": "Vrai. Chaque barre représente une catégorie, par exemple un fruit ou un sport, et sa hauteur indique le nombre d'élèves de cette catégorie."
   }
 ]
