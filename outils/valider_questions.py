@@ -35,7 +35,7 @@ def verifier_question(question, numero):
     if "texte" in question:
         if not isinstance(question["texte"], str):
             erreurs.append(f"Question {numero} : champ 'texte' doit être une chaîne de caractères")
-        elif not 20 <= len(question["texte"]) <= 800:
+        elif not 20 <= len(question["texte"]) <= 1200:
             erreurs.append(f"Question {numero} : champ 'texte' trop court ou trop long ({len(question['texte'])} caractères)")
 
     type_question = question.get("type", "qcm")   # "qcm" si le champ est absent
