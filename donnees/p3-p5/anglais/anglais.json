@@ -361,5 +361,139 @@
     "vrai": true,
     "explication": "Vrai. These words link short sentences into a clear sequence: First, I woke up. Then, I had breakfast. Finally, I went to school.",
     "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Which object do you use to draw a straight line?",
+    "choix": [
+      "a rubber",
+      "a ruler",
+      "a pencil case",
+      "a sharpener"
+    ],
+    "bonneReponse": 1,
+    "explication": "A ruler helps you draw a straight line. A rubber removes pencil marks, a pencil case holds your pens and pencils, and a sharpener makes your pencil pointed."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Which part of your body do you use to smell?",
+    "choix": [
+      "your mouth",
+      "your ear",
+      "your nose",
+      "your knee"
+    ],
+    "bonneReponse": 2,
+    "explication": "You smell with your nose. You hear with your ears, you eat with your mouth and you bend your knee to walk or sit down."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Your dad's sister is your ___.",
+    "choix": [
+      "a cousin",
+      "an aunt",
+      "a niece",
+      "a grandmother"
+    ],
+    "bonneReponse": 1,
+    "explication": "Your dad's sister (or your mum's sister) is your aunt. Your cousin is the child of your aunt or uncle, so careful: a cousin is not the sister of your parent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Which of these is a spare-time activity?",
+    "choix": [
+      "doing your homework",
+      "playing the piano",
+      "brushing your teeth",
+      "going to bed"
+    ],
+    "bonneReponse": 1,
+    "explication": "Spare-time activities are things you enjoy doing when you are not at school, like playing the piano, painting or swimming. Homework is for school, and brushing your teeth and going to bed are daily routines."
+  },
+  {
+    "type": "qcm",
+    "enonce": "It was raining, ___ we stayed inside.",
+    "choix": [
+      "because",
+      "so",
+      "or",
+      "but"
+    ],
+    "bonneReponse": 1,
+    "explication": "'So' shows the result: it was raining, so we stayed inside. 'Because' gives a reason, so 'We stayed inside because it was raining' is also correct, but 'It was raining because we stayed inside' makes no sense.",
+    "defi": true
+  },
+  {
+    "type": "saisie",
+    "enonce": "Where is Lily?",
+    "texte": "Dear Sam,\nI am at the seaside with Grandma. The weather is sunny, but the sea is cold. Yesterday we built a big sandcastle, and I found a red shell. I miss you!\nLove, Lily",
+    "reponses": [
+      "Lily is at the seaside.",
+      "She is at the seaside.",
+      "She's at the seaside.",
+      "Lily is at the seaside with Grandma.",
+      "She's at the seaside with Grandma."
+    ],
+    "accents": "stricts",
+    "phrase": true,
+    "majuscules": "strictes",
+    "astuce": "Read the whole postcard before you answer.",
+    "explication": "Lily says 'I am at the seaside with Grandma' at the start of the postcard. Answer with a full sentence that starts with a capital letter and ends with a full stop."
+  },
+  {
+    "type": "saisie",
+    "enonce": "What colour is the shell that Lily found?",
+    "texte": "Dear Sam,\nI am at the seaside with Grandma. The weather is sunny, but the sea is cold. Yesterday we built a big sandcastle, and I found a red shell. I miss you!\nLove, Lily",
+    "reponses": [
+      "The shell is red.",
+      "It is red.",
+      "It's red.",
+      "The shell Lily found is red.",
+      "The shell that Lily found is red."
+    ],
+    "accents": "stricts",
+    "phrase": true,
+    "majuscules": "strictes",
+    "explication": "Look for the sentence that talks about the shell. Lily wrote that she found a red shell, so the colour is red. You can answer with a full sentence, using 'It' to avoid repeating 'the shell'."
+  },
+  {
+    "type": "association",
+    "enonce": "Match each word to its meaning.",
+    "paires": [
+      [
+        "a canteen",
+        "a place where you eat lunch at school"
+      ],
+      [
+        "a playground",
+        "an outdoor area where you play at break"
+      ],
+      [
+        "a whiteboard",
+        "a board you write on with markers"
+      ],
+      [
+        "a library",
+        "a room with books you can borrow"
+      ]
+    ],
+    "explication": "A canteen is where you eat lunch, a playground is outside for playing at break, a whiteboard is where the teacher writes with markers, and a library is full of books you can borrow."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Put these times in order, from the earliest to the latest.",
+    "elements": [
+      "a quarter to eight",
+      "eight o'clock",
+      "half past eight",
+      "twenty to nine"
+    ],
+    "explication": "A quarter to eight is 7:45, fifteen minutes before eight o'clock (8:00). Half past eight is 8:30, and twenty to nine is 8:40, twenty minutes before nine. 'To' means before the hour, 'past' means after the hour."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "To make most plurals in English, you add -s to the word.",
+    "vrai": true,
+    "explication": "Vrai. Most plurals add -s: one dog, two dogs. Some plurals are irregular, like tooth → teeth, so you need to learn them."
   }
 ]
