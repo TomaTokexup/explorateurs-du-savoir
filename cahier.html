@@ -39,6 +39,8 @@
 
         <!-- Zone de la question -->
         <section class="question" id="zone-question" hidden>
+            <!-- Barre d'avancement de la partie (remplie par script.js) -->
+            <div class="barre" id="barre" hidden><span></span></div>
             <!-- Texte support facultatif (champ "texte"), affiché comme une page de livre -->
             <blockquote class="texte-support" id="texte-support" hidden></blockquote>
             <p class="badge-defi" id="badge-defi" hidden>⭐ Défi</p>
@@ -63,6 +65,8 @@
         <!-- Écran de fin -->
         <section class="bilan" id="bilan" hidden>
             <p class="score" id="score"></p>
+            <!-- Étoiles gagnées sur le thème (pas pour la révision mélangée ni la série) -->
+            <p class="bilan-etoiles" id="bilan-etoiles" hidden></p>
             <p id="message-bilan"></p>
             <!-- Affiché seulement si l'élève a réussi au moins un défi -->
             <p class="message-defi" id="message-defi" hidden></p>

@@ -133,6 +133,93 @@ function afficherErreur(message, erreur) {
   console.error(erreur);
 }
 
+// ---------- 2 bis. Mémoire du navigateur, étoiles et petites fêtes ----------
+// Le navigateur garde quelques nombres (records, étoiles) dans localStorage.
+// Il peut être indisponible (navigation privée, réglages) : on fait alors comme si c'était 0.
+function lireNombre(cle) {
+  try {
+    return Number(localStorage.getItem(cle)) || 0;
+  } catch (erreur) {
+    return 0;
+  }
+}
+
+function ecrireNombre(cle, valeur) {
+  try {
+    localStorage.setItem(cle, String(valeur));
+  } catch (erreur) {
+    // rien d'enregistré, ce n'est pas grave
+  }
+}
+
+// Étoiles gagnées sur un thème : 1 dès la moitié, 2 dès 80 %, 3 pour un sans-faute
+function etoilesPour(bonnes, total) {
+  if (total === 0) return 0;
+  if (bonnes === total) return 3;
+  if (bonnes / total >= 0.8) return 2;
+  if (bonnes / total >= 0.5) return 1;
+  return 0;
+}
+
+function cleEtoilesDe(idNiveau, idMatiere, idTheme) {
+  return "etoiles-" + idNiveau + "-" + idMatiere + "-" + idTheme;
+}
+
+// Trois étoiles, pleines ou vides (ex. ★★☆ pour 2)
+function creerEtoiles(nombre) {
+  const bloc = document.createElement("span");
+  bloc.className = "etoiles";
+  bloc.setAttribute("aria-label", nombre + " étoile" + (nombre > 1 ? "s" : "") + " sur 3");
+  for (let i = 0; i < 3; i++) {
+    const etoile = document.createElement("span");
+    etoile.className = "etoile" + (i < nombre ? " pleine" : "");
+    etoile.setAttribute("aria-hidden", "true");
+    etoile.textContent = "★";
+    bloc.appendChild(etoile);
+  }
+  return bloc;
+}
+
+// Si l'enfant a demandé « moins d'animations » à son appareil, on ne fait pas la fête à l'écran
+function animationsReduites() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+// Une gerbe de petites étoiles qui jaillit d'un élément (bonne réponse)
+function gerbeEtoiles(element) {
+  if (animationsReduites() || !element) return;
+  const cadre = element.getBoundingClientRect();
+  for (let i = 0; i < 8; i++) {
+    const etincelle = document.createElement("span");
+    etincelle.className = "etincelle";
+    etincelle.textContent = "★";
+    const angle = (i / 8) * 2 * Math.PI;
+    etincelle.style.left = (cadre.left + 30) + "px";
+    etincelle.style.top = (cadre.top + cadre.height / 2) + "px";
+    etincelle.style.setProperty("--dx", Math.round(Math.cos(angle) * 60) + "px");
+    etincelle.style.setProperty("--dy", Math.round(Math.sin(angle) * 45) + "px");
+    document.body.appendChild(etincelle);
+    setTimeout(function () { etincelle.remove(); }, 800);
+  }
+}
+
+// Une pluie de confettis (beau score, nouveau record)
+function confettis() {
+  if (animationsReduites()) return;
+  const couleurs = ["#2f6fdb", "#d9433a", "#7a4cc2", "#2e9e6a", "#ffcf3f", "#ff8a3d"];
+  for (let i = 0; i < 70; i++) {
+    const morceau = document.createElement("span");
+    morceau.className = "confetti";
+    morceau.style.left = Math.random() * 100 + "vw";
+    morceau.style.background = couleurs[i % couleurs.length];
+    morceau.style.animationDelay = Math.random() * 0.6 + "s";
+    morceau.style.animationDuration = 1.8 + Math.random() * 1.4 + "s";
+    morceau.style.setProperty("--derive", Math.round(Math.random() * 160 - 80) + "px");
+    document.body.appendChild(morceau);
+    setTimeout(function () { morceau.remove(); }, 4000);
+  }
+}
+
 // ---------- 3. Page "niveau" : les cahiers ----------
 async function pageNiveau() {
   const idNiveau = parametres.get("niveau");
@@ -150,8 +237,9 @@ async function pageNiveau() {
   for (const matiere of MATIERES) {
     // Un cahier est disponible si son sommaire existe
     let disponible = true;
+    let themes = [];
     try {
-      await lireJSON(dossierDonnees(idNiveau, matiere) + "index.json");
+      themes = await lireJSON(dossierDonnees(idNiveau, matiere) + "index.json");
     } catch (erreur) {
       disponible = false;
     }
@@ -170,6 +258,18 @@ async function pageNiveau() {
     etiquette.querySelector(".nom").textContent = matiere.nom;
     etiquette.querySelector(".precision").textContent = matiere.precision || "";
     cahier.appendChild(etiquette);
+
+    // Pastille des étoiles gagnées dans ce cahier (seulement s'il y en a)
+    const gagnees = themes.reduce(function (somme, theme) {
+      return somme + lireNombre(cleEtoilesDe(idNiveau, matiere.id, theme.id));
+    }, 0);
+    if (gagnees > 0) {
+      const pastille = document.createElement("span");
+      pastille.className = "cahier-etoiles";
+      pastille.textContent = "★ " + gagnees + " / " + themes.length * 3;
+      pastille.setAttribute("aria-label", gagnees + " étoiles gagnées sur " + themes.length * 3);
+      cahier.appendChild(pastille);
+    }
 
     if (!disponible) {
       const tampon = document.createElement("span");
@@ -264,6 +364,7 @@ async function pageCahier() {
         throw new Error("thème « " + idTheme + " » absent du sommaire");
       }
       nomDuQuiz = theme.titre;
+      cleEtoiles = cleEtoilesDe(idNiveau, idMatiere, theme.id);
       banque = await lireJSON(dossier + theme.id + ".json");
       nombreParPartie = NOMBRE_QUESTIONS_THEME;
     }
@@ -304,7 +405,9 @@ function afficherSommaire(themes, lienCahier, dossier) {
       .then(function (questions) { compte.textContent = questions.length + " questions"; })
       .catch(function () { compte.textContent = "fichier manquant"; });
 
-    lien.append(titre, pointilles, compte);
+    const etoiles = creerEtoiles(lireNombre(cleEtoilesDe(parametres.get("niveau"), parametres.get("matiere"), theme.id)));
+
+    lien.append(titre, pointilles, etoiles, compte);
     const element = document.createElement("li");
     element.appendChild(lien);
     liste.appendChild(element);
@@ -323,6 +426,7 @@ let numeroQuestion = 0;        // index de la question affichée
 let score = 0;                 // nombre de bonnes réponses
 let defisReussis = 0;          // nombre de questions « Défi » réussies
 let niveauDesDefis = "";       // niveau réel des défis (ex. "P5"), fixé par pageCahier
+let cleEtoiles = null;         // où ranger les étoiles du thème (null pour la révision mélangée)
 
 const ACCENTS = ["é", "è", "ê", "à", "â", "ç", "ù", "û", "ô", "î", "ï", "ë"];
 
@@ -403,6 +507,9 @@ function afficherQuestion() {
   const question = questions[numeroQuestion];
   document.getElementById("progression").textContent =
     "Question " + (numeroQuestion + 1) + " sur " + questions.length;
+  const barre = document.getElementById("barre");
+  barre.hidden = false;
+  barre.firstElementChild.style.width = ((numeroQuestion + 1) / questions.length) * 100 + "%";
   afficherEnTete(question);
 
   const type = typeDe(question);
@@ -712,13 +819,33 @@ function afficherOrdre(question) {
 
   function deplacer(position, sens, classeBouton) {
     const cible = position + sens;
+    // Hauteur des deux étiquettes AVANT l'échange, pour les faire glisser ensuite
+    const hautAvant = liste.children[position].getBoundingClientRect().top;
+    const hautCible = liste.children[cible].getBoundingClientRect().top;
     const element = ordre[position];
     ordre[position] = ordre[cible];
     ordre[cible] = element;
     dessiner();
+    // Glissement : chaque étiquette repart de son ancienne place et rejoint la nouvelle
+    if (!animationsReduites()) {
+      glisser(liste.children[cible], hautAvant, true);      // celle qu'on a déplacée
+      glisser(liste.children[position], hautCible, false);  // celle qui lui laisse la place
+    }
     // On garde le focus sur la même flèche de l'étiquette déplacée (pratique au clavier)
     const bouton = liste.children[cible].querySelector(classeBouton);
     if (bouton && !bouton.disabled) { bouton.focus(); }
+  }
+
+  // Fait partir une étiquette de son ancienne hauteur jusqu'à sa nouvelle place.
+  // L'étiquette déplacée passe au premier plan et se soulève un peu pendant le trajet.
+  function glisser(ligne, ancienHaut, auPremierPlan) {
+    const ecart = ancienHaut - ligne.getBoundingClientRect().top;
+    if (auPremierPlan) { ligne.classList.add("en-mouvement"); }
+    const animation = ligne.animate([
+      { transform: "translateY(" + ecart + "px)" + (auPremierPlan ? " scale(1.04)" : "") },
+      { transform: "translateY(0)" }
+    ], { duration: 280, easing: "cubic-bezier(0.2, 0.8, 0.3, 1)" });
+    animation.onfinish = function () { ligne.classList.remove("en-mouvement"); };
   }
 
   function dessiner() {
@@ -831,6 +958,9 @@ function afficherCorrection(question, estJuste, rappel) {
   }
   ecrireTexte(document.getElementById("explication"), rappel + question.explication);
   correction.hidden = false;
+  if (estJuste) {
+    gerbeEtoiles(verdict);   // après l'affichage : la gerbe part de l'endroit où est écrit « Bravo »
+  }
 
   const derniereQuestion = numeroQuestion === questions.length - 1;
   boutonSuivant.textContent = derniereQuestion ? "Voir mon score" : "Question suivante";
@@ -863,6 +993,34 @@ function afficherBilan() {
   }
   document.getElementById("message-bilan").textContent = message;
 
+  // Étoiles du thème : on garde la meilleure partie (pas pour la révision mélangée)
+  const zoneEtoiles = document.getElementById("bilan-etoiles");
+  zoneEtoiles.innerHTML = "";
+  zoneEtoiles.hidden = cleEtoiles === null;
+  if (cleEtoiles !== null) {
+    const gagnees = etoilesPour(score, questions.length);
+    const meilleur = lireNombre(cleEtoiles);
+    if (gagnees > meilleur) {
+      ecrireNombre(cleEtoiles, gagnees);
+    }
+    zoneEtoiles.appendChild(creerEtoiles(gagnees));
+    const texte = document.createElement("span");
+    texte.className = "bilan-etoiles-texte";
+    if (gagnees > meilleur && meilleur > 0) {
+      texte.textContent = "Nouveau meilleur score sur ce thème !";
+    } else if (gagnees === 0) {
+      texte.textContent = "La moitié de bonnes réponses = 1 étoile";
+    } else if (gagnees < 3) {
+      texte.textContent = gagnees === 1 ? "80 % de bonnes réponses = 2 étoiles" : "Un sans-faute = 3 étoiles";
+    } else {
+      texte.textContent = "Sans-faute !";
+    }
+    zoneEtoiles.appendChild(texte);
+  }
+  if (score / questions.length >= 0.8) {
+    confettis();
+  }
+
   // Défis réussis : on ne les signale que s'il y en a (un défi raté n'est pas mentionné)
   const messageDefi = document.getElementById("message-defi");
   if (defisReussis > 0) {
@@ -889,19 +1047,11 @@ let cleRecord = "";         // nom sous lequel le record est rangé dans le navi
 // Le record est gardé dans le navigateur (localStorage). Celui-ci peut être indisponible
 // (navigation privée, réglages) : dans ce cas, le jeu fonctionne simplement sans record.
 function lireRecord() {
-  try {
-    return Number(localStorage.getItem(cleRecord)) || 0;
-  } catch (erreur) {
-    return 0;
-  }
+  return lireNombre(cleRecord);
 }
 
 function ecrireRecord(valeur) {
-  try {
-    localStorage.setItem(cleRecord, String(valeur));
-  } catch (erreur) {
-    // pas de record enregistré, ce n'est pas grave
-  }
+  ecrireNombre(cleRecord, valeur);
 }
 
 function lancerSerie(banque, cle) {
@@ -935,6 +1085,7 @@ function questionSerie() {
     pioche = melanger(banqueSerie);     // toutes les questions ont été vues : on recommence un tour
   }
   const question = pioche.pop();
+  document.getElementById("barre").hidden = true;    // une série n'a pas de fin prévue : pas de barre
   const estAffirmation = typeDe(question) === "vraifaux";
   let estVraie;
   let bonne = "";        // pour un QCM : la bonne réponse, rappelée en cas d'erreur
@@ -1007,6 +1158,9 @@ function corrigerSerie(question, bonne, estJuste, boutonChoisi) {
     boutonSuivant.dataset.fin = "oui";
   }
   correction.hidden = false;
+  if (estJuste) {
+    gerbeEtoiles(verdict);
+  }
   boutonSuivant.hidden = false;
   boutonSuivant.focus();
 }
@@ -1021,12 +1175,14 @@ function finirSerie() {
   document.getElementById("progression").textContent = "Terminé !";
   document.getElementById("bilan").hidden = false;
   document.getElementById("score").textContent = serie;
+  document.getElementById("bilan-etoiles").hidden = true;   // pas d'étoiles pour la série : c'est le record qui compte
   let message = serie === 0
     ? "Pas de chance ! Retente ta chance."
     : "Tu as enchaîné " + serie + " bonne" + (serie > 1 ? "s" : "") + " réponse" + (serie > 1 ? "s" : "") + " !";
   document.getElementById("message-bilan").textContent = message;
   const messageRecord = document.getElementById("message-defi");
   if (nouveauRecord) {
+    confettis();
     messageRecord.textContent = "🏆 Nouveau record !";
     messageRecord.hidden = false;
   } else if (ancienRecord > 0) {

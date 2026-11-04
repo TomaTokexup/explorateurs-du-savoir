@@ -3,6 +3,9 @@
    Idée directrice : une page de cahier d'écolier (lignes Seyès,
    marge rouge, encre bleue) et des matières rangées comme des
    cahiers avec leur protège-cahier de couleur.
+   Version ludique (04/11) : couvertures à motifs avec élastique,
+   intercalaires de couleur pour les classes, surligneur jaune,
+   étoiles à gagner et petites fêtes quand on réussit.
    ========================================================= */
 
 /* ---------- 1. Variables (les "réglages" du design) ---------- */
@@ -21,6 +24,14 @@
   --anglais: #7a4cc2;
   --decouverte: #2e9e6a;
   --programmation: #cf4a8a;
+
+  /* Intercalaires des classes, surligneur et étoiles */
+  --p3: #ffcf3f;              /* jaune */
+  --p4: #ff9a52;              /* orange */
+  --p5: #ff7eb0;              /* rose */
+  --surligneur: #ffe066;
+  --etoile: #f5a800;
+  --etoile-vide: #d9dfea;
 
   /* Corrections */
   --juste: #2e9e6a;
@@ -98,6 +109,14 @@ a {
   letter-spacing: -0.01em;
 }
 
+/* Le nom du site, comme passé au surligneur jaune */
+body[data-page="accueil"] .entete h1 span {
+  padding: 0 0.12em;
+  background: linear-gradient(transparent 58%, var(--surligneur) 58%, var(--surligneur) 92%, transparent 92%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 .entete p {
   max-width: 34em;
   margin: 12px 0 0;
@@ -114,7 +133,7 @@ a {
 .niveaux {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0;
+  margin: 36px 0 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
@@ -122,26 +141,48 @@ a {
 }
 
 /* Chaque niveau ressemble à une étiquette de porte de classe */
+/* Chaque classe est un intercalaire de couleur, avec son onglet en haut */
 .niveau {
+  --fond: white;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 22px 12px 18px;
   border: 3px solid var(--encre);
-  border-radius: var(--rayon);
-  background: white;
+  border-radius: 6px var(--rayon) var(--rayon) var(--rayon);
+  background: var(--fond);
   text-decoration: none;
   box-shadow: 0 5px 0 var(--encre);
+  transform: rotate(var(--penche, 0deg));
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
+/* L'onglet de l'intercalaire */
+.niveau::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -3px;
+  width: 46%;
+  height: 15px;
+  border: 3px solid var(--encre);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  background: var(--fond);
+}
+
+.niveaux li:nth-child(1) .niveau { --fond: var(--p3); --penche: -1.5deg; }
+.niveaux li:nth-child(2) .niveau { --fond: var(--p4); --penche: 1deg; }
+.niveaux li:nth-child(3) .niveau { --fond: var(--p5); --penche: -0.5deg; }
+
 .niveau:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 0 var(--encre);
+  transform: translateY(-4px) rotate(0deg);
+  box-shadow: 0 9px 0 var(--encre);
 }
 
 .niveau:active {
-  transform: translateY(3px);
+  transform: translateY(3px) rotate(0deg);
   box-shadow: 0 2px 0 var(--encre);
 }
 
@@ -156,7 +197,7 @@ a {
   margin-top: 8px;
   font-size: 1rem;
   text-align: center;
-  color: var(--encre-douce);
+  color: var(--encre);
 }
 
 /* ---------- 4. La grille des cahiers (matières) ---------- */
@@ -180,19 +221,67 @@ a {
   padding: 18px 16px;
   border-radius: 6px 12px 12px 6px;    /* le dos du cahier est à gauche */
   background-color: var(--couleur);
+  /* Deux couches : le motif propre à chaque matière (plus bas), puis un léger dégradé de couleur */
+  background-image: var(--motif, none),
+    linear-gradient(160deg, color-mix(in srgb, var(--couleur) 78%, white), var(--couleur) 55%, color-mix(in srgb, var(--couleur) 80%, black));
+  background-size: var(--taille-motif, auto), 100% 100%;
   color: var(--encre);
   text-decoration: none;
-  box-shadow: inset 10px 0 0 rgba(0, 0, 0, 0.12), 0 3px 0 rgba(35, 48, 90, 0.18);
+  box-shadow: inset 10px 0 0 rgba(0, 0, 0, 0.14), 0 6px 0 color-mix(in srgb, var(--couleur) 55%, black);
   transition: transform 0.15s ease;
+}
+
+/* Les points de couture du dos */
+.cahier::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 4px;
+  border-left: 2px dashed rgba(255, 255, 255, 0.45);
+}
+
+/* L'élastique qui ferme le cahier */
+.cahier::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 18px;
+  width: 9px;
+  background: color-mix(in srgb, var(--couleur) 45%, black);
+  opacity: 0.6;
+}
+
+/* Un motif de couverture par matière (dessiné en CSS, sans image) */
+.cahier.maths {
+  --motif: linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+           linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  --taille-motif: 14px 14px, 14px 14px;
+  background-size: var(--taille-motif), 100% 100%;
+}
+.cahier.francais {
+  --motif: repeating-linear-gradient(transparent 0 14px, rgba(255, 255, 255, 0.2) 14px 16px);
+}
+.cahier.anglais {
+  --motif: radial-gradient(rgba(255, 255, 255, 0.22) 2px, transparent 2.5px);
+  --taille-motif: 16px 16px;
+}
+.cahier.decouverte {
+  --motif: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.14) 0 6px, transparent 6px 15px);
 }
 
 /* L'étiquette blanche collée sur le cahier */
 .etiquette {
+  position: relative;
+  z-index: 1;                          /* au-dessus de l'élastique */
   background: white;
   border-radius: 8px;
   padding: 12px 10px;
   text-align: center;
   border: 2px solid rgba(35, 48, 90, 0.12);
+  box-shadow: 0 2px 0 rgba(35, 48, 90, 0.15);
+  transform: rotate(-2deg);
 }
 
 .etiquette .icone {
@@ -221,7 +310,11 @@ a {
 }
 
 a.cahier:hover {
-  transform: translateY(-4px) rotate(-1deg);
+  transform: translateY(-5px) rotate(-1.5deg);
+}
+
+a.cahier:active {
+  transform: translateY(2px);
 }
 
 /* Matière pas encore disponible */
@@ -232,6 +325,7 @@ a.cahier:hover {
 
 .cahier.bientot .tampon {
   position: absolute;
+  z-index: 1;                          /* au-dessus de l'élastique */
   bottom: 14px;
   right: 10px;
   transform: rotate(-8deg);
@@ -295,10 +389,17 @@ a.cahier:hover {
   display: none;
 }
 
-/* Sommaire du cahier : titre ........ niveau, comme une table des matières */
-.sommaire ol {
+/* Sommaire du cahier : deux façons de jouer, puis la table des matières */
+.sommaire:not([hidden]) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
   max-width: 640px;
-  margin: 0;
+}
+
+.sommaire ol {
+  grid-column: 1 / -1;
+  margin: calc(var(--ligne-cahier) / 2) 0 0;
   padding-left: 1.6em;
   font-size: 1.35rem;
 }
@@ -315,25 +416,40 @@ a.cahier:hover {
 
 .chapitre {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 12px;
   min-height: var(--ligne-cahier);
-  padding: 6px 0;
+  margin: 0 0 10px;
+  padding: 10px 14px;
+  border: 2px solid color-mix(in srgb, var(--encre) 14%, white);
+  border-left: 6px solid var(--couleur);
+  border-radius: 6px var(--rayon) var(--rayon) 6px;
+  background: white;
   text-decoration: none;
+  transition: transform 0.12s ease;
+}
+
+.chapitre:hover {
+  transform: translateX(4px);
 }
 
 .chapitre-titre {
+  flex: 1;
   font-weight: 700;
 }
 
 .chapitre-pointilles {
-  flex: 1;
-  border-bottom: 3px dotted color-mix(in srgb, var(--encre) 35%, transparent);
-  transform: translateY(-5px);
+  display: none;                       /* remplacés par la carte et ses étoiles */
+}
+
+.chapitre .etoiles {
+  font-size: 1.35rem;
 }
 
 .chapitre-compte {
-  font-size: 1rem;
+  flex-basis: 100%;
+  font-size: 0.95rem;
   color: var(--encre-douce);
   white-space: nowrap;
 }
@@ -347,33 +463,43 @@ a.cahier:hover {
   color: white;
 }
 
-/* Le bloc "Révision mélangée", en tête du sommaire */
+/* Les deux grands boutons en tête du sommaire : révision mélangée (couleur de la matière)
+   et série Vrai ou faux (surligneur jaune) */
 .melange {
   display: block;
-  max-width: 640px;
-  margin-bottom: var(--ligne-cahier);
-  padding: 14px 20px;
-  border: 3px dashed var(--couleur);
+  padding: 14px 18px 16px;
+  border: 3px solid var(--encre);
   border-radius: var(--rayon);
-  background: white;
+  background: var(--couleur);
+  color: white;
   text-decoration: none;
+  box-shadow: 0 5px 0 var(--encre);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .melange-titre {
   display: block;
   font-family: var(--police-titre);
   font-weight: 600;
-  font-size: 1.5rem;
-  color: var(--couleur);
+  font-size: 1.45rem;
+  line-height: 1.2;
 }
 
 .melange-detail {
   display: block;
-  color: var(--encre-douce);
+  margin-top: 4px;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .melange:hover {
-  background: color-mix(in srgb, var(--couleur) 8%, white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 var(--encre);
+}
+
+.melange:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 var(--encre);
 }
 
 .chapitre:hover .chapitre-titre {
@@ -431,7 +557,8 @@ a.cahier:hover {
   background: white;
   color: var(--encre);
   cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 5px 0 var(--couleur);
+  transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .reponse:hover:not(:disabled) {
@@ -439,7 +566,8 @@ a.cahier:hover {
 }
 
 .reponse:active:not(:disabled) {
-  transform: scale(0.97);
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--couleur);
 }
 
 .reponse:disabled {
@@ -450,12 +578,16 @@ a.cahier:hover {
 .reponse.juste {
   border-color: var(--juste);
   background-color: var(--juste-fond);
+  box-shadow: 0 5px 0 var(--juste);
+  animation: rebond 0.35s ease;
 }
 
 .reponse.faux {
   border-color: var(--faux);
   background-color: var(--faux-fond);
+  box-shadow: 0 5px 0 var(--faux);
   text-decoration: line-through;
+  animation: secousse 0.35s ease;
 }
 
 .reponse.attenuee {
@@ -485,7 +617,7 @@ a.cahier:hover {
   margin: 0 0 4px;
 }
 
-.correction.juste .verdict { color: var(--juste); }
+.correction.juste .verdict { color: var(--juste); animation: rebond 0.4s ease; }
 .correction.faux .verdict  { color: var(--faux); }
 
 .correction .explication {
@@ -504,6 +636,12 @@ a.cahier:hover {
   background: var(--encre);
   color: white;
   cursor: pointer;
+  box-shadow: 0 5px 0 color-mix(in srgb, var(--encre) 55%, black);
+}
+
+.bouton-suivant:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--encre) 55%, black);
 }
 
 .bouton-suivant:hover {
@@ -514,13 +652,23 @@ a.cahier:hover {
   display: none;
 }
 
-/* Écran de fin */
+/* Écran de fin : le score, comme un coup de tampon de la maîtresse */
 .bilan .score {
+  display: inline-block;
   font-family: var(--police-titre);
   font-size: clamp(3rem, 10vw, 5rem);
   font-weight: 600;
-  margin: 0;
+  line-height: 1.1;
+  margin: 8px 0 10px;
+  padding: 6px 26px;
+  border: 5px solid var(--couleur);
+  border-radius: 20px;
+  outline: 2px solid var(--couleur);
+  outline-offset: 4px;
   color: var(--couleur);
+  background: white;
+  transform: rotate(-4deg);
+  animation: tampon 0.45s cubic-bezier(0.2, 1.4, 0.4, 1);
 }
 
 /* ---------- 6. Écrans étroits (téléphones) ---------- */
@@ -569,6 +717,7 @@ a.cahier:hover {
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
+    animation: none !important;
   }
 }
 
@@ -779,7 +928,8 @@ a.cahier:hover {
 
 /* Écran de score : défis réussis */
 .message-defi {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   margin: 4px 0 16px;
   padding: 8px 16px;
   border-radius: var(--rayon);
@@ -788,6 +938,10 @@ a.cahier:hover {
   font-family: var(--police-titre);
   font-weight: 600;
   font-size: 1.2rem;
+}
+
+.message-defi[hidden] {
+  display: none;    /* sinon « display: block » ci-dessus l'emporterait sur l'attribut hidden */
 }
 
 /* ---------- 12. Exercices « association » et « ordre » ---------- */
@@ -900,6 +1054,14 @@ a.cahier:hover {
   background: white;
 }
 
+/* L'étiquette qu'on vient de déplacer : au-dessus des autres, avec une ombre, le temps du glissement */
+.ordre-element.en-mouvement {
+  position: relative;
+  z-index: 1;
+  border-color: var(--couleur);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--encre) 22%, transparent);
+}
+
 .ordre-element::before {
   content: counter(etape);
   flex: none;
@@ -942,7 +1104,8 @@ a.cahier:hover {
 
 /* ---------- 13. Série « Vrai ou faux » ---------- */
 .vraifaux-lien {
-  border-style: dotted;
+  background: var(--surligneur);
+  color: var(--encre);
 }
 
 .proposition {
@@ -982,4 +1145,151 @@ a.cahier:hover {
 
 .lien-arreter[hidden] {
   display: none;    /* sinon « display: block » ci-dessus l'emporterait sur l'attribut hidden */
+}
+
+/* ---------- 14. Version ludique : progression, étoiles et petites fêtes ---------- */
+
+/* La barre d'avancement de la partie */
+.barre {
+  height: 14px;
+  margin: calc(var(--ligne-cahier) * -0.5) 0 24px;
+  border: 2px solid var(--encre);
+  border-radius: 999px;
+  background: white;
+  overflow: hidden;
+}
+
+.barre[hidden] {
+  display: none;
+}
+
+.barre span {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  /* rayures, comme un coup de crayon de couleur */
+  background: repeating-linear-gradient(-45deg, var(--couleur) 0 8px, color-mix(in srgb, var(--couleur) 75%, white) 8px 16px);
+  transition: width 0.4s ease;
+}
+
+/* Trois étoiles, pleines ou vides */
+.etoiles {
+  display: inline-flex;
+  gap: 2px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.etoile {
+  color: var(--etoile-vide);
+}
+
+.etoile.pleine {
+  color: var(--etoile);
+  text-shadow: 0 1px 0 color-mix(in srgb, var(--etoile) 60%, black);
+}
+
+/* La pastille des étoiles gagnées, collée sur la couverture du cahier */
+.cahier-etoiles {
+  position: absolute;
+  z-index: 2;
+  top: -12px;
+  right: -10px;
+  padding: 4px 10px;
+  border: 2px solid var(--encre);
+  border-radius: 999px;
+  background: var(--surligneur);
+  color: var(--encre);
+  font-family: var(--police-titre);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transform: rotate(6deg);
+}
+
+/* Les étoiles du bilan arrivent l'une après l'autre */
+.bilan-etoiles {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 0 0 8px;
+}
+
+.bilan-etoiles[hidden] {
+  display: none;
+}
+
+.bilan-etoiles .etoiles {
+  font-size: 2.6rem;
+}
+
+.bilan-etoiles .etoile {
+  animation: apparition 0.4s cubic-bezier(0.2, 1.6, 0.4, 1) backwards;
+}
+
+.bilan-etoiles .etoile:nth-child(2) { animation-delay: 0.25s; }
+.bilan-etoiles .etoile:nth-child(3) { animation-delay: 0.5s; }
+
+.bilan-etoiles-texte {
+  color: var(--encre-douce);
+}
+
+/* Gerbe d'étoiles d'une bonne réponse, et confettis du bilan */
+.etincelle {
+  position: fixed;
+  z-index: 10;
+  color: var(--etoile);
+  font-size: 1.2rem;
+  pointer-events: none;
+  animation: etincelle 0.75s ease-out forwards;
+}
+
+.confetti {
+  position: fixed;
+  z-index: 10;
+  top: -16px;
+  width: 9px;
+  height: 14px;
+  border-radius: 2px;
+  pointer-events: none;
+  animation: chute 2.5s linear forwards;
+}
+
+@keyframes rebond {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+@keyframes secousse {
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(-6px); }
+  75%      { transform: translateX(6px); }
+}
+
+@keyframes tampon {
+  from { transform: rotate(-4deg) scale(1.8); opacity: 0; }
+  to   { transform: rotate(-4deg) scale(1); opacity: 1; }
+}
+
+@keyframes apparition {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+
+@keyframes etincelle {
+  from { transform: translate(0, 0) scale(1); opacity: 1; }
+  to   { transform: translate(var(--dx), var(--dy)) scale(0.4); opacity: 0; }
+}
+
+@keyframes chute {
+  to { transform: translate(var(--derive), 110vh) rotate(720deg); }
+}
+
+@media (max-width: 560px) {
+  .sommaire:not([hidden]) {
+    grid-template-columns: 1fr;
+  }
 }
