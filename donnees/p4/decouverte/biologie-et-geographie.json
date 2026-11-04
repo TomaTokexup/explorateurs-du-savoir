@@ -219,5 +219,131 @@
     "vrai": true,
     "explication": "Vrai. Ces 17 objectifs mondiaux, appelés Objectifs de développement durable, visent à protéger la planète et à améliorer la vie des humains d'ici 2030.",
     "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Les poissons de la mare respirent grâce à un gaz présent dans l'eau. Lequel ?",
+    "choix": [
+      "Le dioxyde de carbone",
+      "L'oxygène",
+      "Le sel",
+      "La vapeur d'eau"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les poissons ont des branchies qui captent l'oxygène dissous dans l'eau : c'est un exemple d'interaction entre les êtres vivants et leur milieu. Le dioxyde de carbone est un gaz qu'ils rejettent, il ne leur sert pas à respirer."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Parmi ces phrases, laquelle décrit la météo et non le climat ?",
+    "choix": [
+      "En France, les étés sont souvent chauds.",
+      "Dans le désert, il pleut très peu chaque année.",
+      "Aujourd'hui, il pleut et il fait 8 °C à Paris.",
+      "Les régions polaires sont très froides."
+    ],
+    "bonneReponse": 2,
+    "explication": "La météo, c'est le temps qu'il fait aujourd'hui ou demain, et elle change vite. Le climat, c'est le temps habituel d'une région, observé sur plusieurs années."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une région au climat polaire, quel temps fait-il le plus souvent ?",
+    "choix": [
+      "Il fait très froid, avec souvent de la neige et de la glace.",
+      "Il fait très chaud et sec toute l'année.",
+      "Il fait doux et il pleut toute l'année.",
+      "Il fait chaud et humide toute l'année."
+    ],
+    "bonneReponse": 0,
+    "explication": "Les régions polaires, autour des pôles, ont des températures très basses. Il y a beaucoup de neige et de glace, même en été."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi a-t-on intérêt à recycler le verre ?",
+    "choix": [
+      "Il fait augmenter la quantité de déchets.",
+      "Il rend le verre plus fragile.",
+      "Il permet d'économiser du sable et de l'énergie.",
+      "Il oblige à jeter le verre dans le bac jaune."
+    ],
+    "bonneReponse": 2,
+    "explication": "Le verre usagé sert à fabriquer de nouvelles bouteilles. On prend donc moins de sable, et on consomme moins d'énergie pour fondre le verre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel geste permet d'économiser l'eau pendant qu'on se lave les dents ?",
+    "choix": [
+      "Laisser couler l'eau pendant qu'on se lave les dents.",
+      "Laisser l'eau couler pour la garder fraîche.",
+      "Ouvrir en grand le robinet du lavabo.",
+      "Fermer le robinet pendant qu'on se lave les dents."
+    ],
+    "bonneReponse": 3,
+    "explication": "Quand le robinet coule pour rien, l'eau est gaspillée. Fermer le robinet entre deux gestes économise l'eau, une ressource précieuse."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quelle unité utilise-t-on pour mesurer la température de l'air ?",
+    "reponses": [
+      "°C",
+      "°c",
+      "degrés Celsius",
+      "degré Celsius",
+      "degrés celsius",
+      "degré celsius"
+    ],
+    "accents": "toleres",
+    "explication": "On mesure la température de l'air avec un thermomètre, en degrés Celsius (°C). Par exemple, l'eau pure gèle à 0 °C et bout à 100 °C."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quelle chaîne de montagnes sépare la France de l'Espagne ?",
+    "reponses": [
+      "Pyrénées",
+      "Pyrenees",
+      "les Pyrénées",
+      "Les Pyrénées"
+    ],
+    "accents": "toleres",
+    "explication": "On la repère sur une carte de relief de l'Europe : elle se trouve à la frontière sud de la France. Pour décrire le relief d'un pays, on regarde les couleurs de la carte, qui montrent l'altitude."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque habitat à la particularité du climat qui l'explique.",
+    "paires": [
+      [
+        "Maison sur pilotis",
+        "Zone souvent inondée"
+      ],
+      [
+        "Chalet en bois au toit pentu",
+        "Montagne enneigée en hiver"
+      ],
+      [
+        "Maison blanche aux murs épais",
+        "Pays très chaud et sec"
+      ],
+      [
+        "Igloo en neige",
+        "Région polaire très froide"
+      ]
+    ],
+    "explication": "Les maisons s'adaptent au climat : les pilotis protègent de l'eau, le toit pentu laisse glisser la neige, les murs épais gardent la fraîcheur, et l'igloo isole du grand froid."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Sur un baromètre, range ces indications de la pression la plus basse à la pression la plus haute.",
+    "elements": [
+      "Tempête",
+      "Pluie",
+      "Variable",
+      "Beau temps"
+    ],
+    "explication": "Quand la pression de l'air baisse, le temps se gâte : pluie, puis tempête si elle baisse beaucoup. Quand elle monte, le beau temps arrive. L'aiguille du baromètre va donc de « Tempête » (basse pression) à « Beau temps » (haute pression), en passant par « Pluie » et « Variable »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un sac en plastique jeté dans la nature disparaît en quelques mois.",
+    "vrai": false,
+    "explication": "Faux. Un sac en plastique met plusieurs dizaines, voire plusieurs centaines d'années à se dégrader : il pollue donc la nature pendant très longtemps."
   }
 ]

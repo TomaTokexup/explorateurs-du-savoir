@@ -204,5 +204,120 @@
     "enonce": "Le son peut voyager dans le vide, par exemple dans l'espace.",
     "vrai": false,
     "explication": "Faux. Le son a besoin d'une matière pour voyager : l'air, l'eau ou un solide comme le bois. Dans l'espace, il n'y a pas d'air, donc aucun son ne peut s'y propager."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quels muscles t'aident à te tenir droit et à te pencher en avant ?",
+    "choix": [
+      "Les mollets",
+      "Les pectoraux",
+      "Les abdominaux",
+      "Les avant-bras"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les abdominaux sont les muscles du ventre. Ils travaillent quand tu te redresses ou que tu te penches, et ils soutiennent ton dos."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom du gros os de la jambe, situé entre le genou et la cheville ?",
+    "reponses": [
+      "tibia"
+    ],
+    "accents": "toleres",
+    "explication": "Le tibia est l'os principal de la jambe : il porte le poids du corps. Il est plus épais que le péroné, qui est l'autre os de la jambe."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment une personne sourde peut-elle comprendre ce que dit quelqu'un sans l'entendre ?",
+    "choix": [
+      "En parlant plus fort près de son oreille",
+      "En lisant sur les lèvres de la personne qui parle",
+      "En portant un casque très fort",
+      "En sentant les vibrations du sol avec ses pieds"
+    ],
+    "bonneReponse": 1,
+    "explication": "La lecture labiale consiste à regarder le visage et le mouvement de la bouche de celui qui parle. Parler plus fort ne sert à rien si l'oreille ne fonctionne pas."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque partie du squelette à son type d'articulation.",
+    "paires": [
+      [
+        "Les os du crâne",
+        "Articulation fixe (immobile)"
+      ],
+      [
+        "L'épaule",
+        "Articulation à rotule"
+      ],
+      [
+        "Les doigts",
+        "Articulation à charnière"
+      ]
+    ],
+    "explication": "Les os du crâne sont soudés entre eux : ils ne bougent pas. L'épaule tourne dans toutes les directions : c'est une rotule. Les doigts se plient dans un seul sens, comme une porte : c'est une charnière."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quand tu parles ou chantes, quelle partie de ton corps vibre pour produire le son ?",
+    "choix": [
+      "Les dents",
+      "Les oreilles",
+      "Les cordes vocales",
+      "Le nez"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les cordes vocales sont dans la gorge. Quand l'air qui sort de tes poumons les fait vibrer, elles produisent le son de ta voix."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces sons du moins fort au plus fort.",
+    "elements": [
+      "Un chuchotement",
+      "Une conversation à voix normale",
+      "Un marteau-piqueur"
+    ],
+    "explication": "Un chuchotement est très doux, une conversation est plus forte, et le marteau-piqueur est le plus fort. Un bruit très fort peut abîmer l'oreille, c'est pour cela que les ouvriers portent des protections."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu es tout près d'une enceinte qui joue très fort. Quel est le meilleur réflexe pour protéger tes oreilles ?",
+    "choix": [
+      "Parler plus fort pour couvrir le bruit",
+      "Rester tout près de l'enceinte",
+      "T'éloigner de la source de bruit",
+      "Mettre le volume encore plus haut"
+    ],
+    "bonneReponse": 2,
+    "explication": "Plus on s'éloigne d'un bruit fort, moins il est fort à nos oreilles. Il faut donc s'éloigner de la source de bruit pour protéger son audition."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment s'appelle la partie blanche et solide qui entoure l'œil ?",
+    "choix": [
+      "La rétine",
+      "La cornée",
+      "La sclérotique",
+      "L'iris"
+    ],
+    "bonneReponse": 2,
+    "explication": "La sclérotique est le blanc de l'œil : c'est une enveloppe solide qui protège l'œil. La cornée, elle, est la partie transparente située devant l'œil.",
+    "defi": true
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom de l'articulation qui relie le pied à la jambe ?",
+    "reponses": [
+      "cheville",
+      "la cheville"
+    ],
+    "accents": "toleres",
+    "explication": "La cheville est une articulation : c'est elle qui permet au pied de se plier vers le haut et vers le bas."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les canaux semi-circulaires de l'oreille aident à garder l'équilibre.",
+    "vrai": true,
+    "explication": "Vrai. Ces canaux détectent les mouvements de la tête, ce qui renseigne le cerveau sur la position de ton corps. L'audition, elle, est assurée par la cochlée."
   }
 ]

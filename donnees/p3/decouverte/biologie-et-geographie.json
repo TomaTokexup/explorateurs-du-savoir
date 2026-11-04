@@ -189,5 +189,126 @@
     "enonce": "Une fleur se transforme en graine, puis la graine devient un fruit.",
     "vrai": false,
     "explication": "Faux. C'est le fruit qui se forme à partir de la fleur, et les graines se trouvent à l'intérieur du fruit. Par exemple, la pomme contient les pépins."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Où se trouvent les graines d'un pin ?",
+    "choix": [
+      "Dans des fruits sucrés",
+      "Dans les racines",
+      "Dans les cônes",
+      "Dans les fleurs colorées"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le pin ne fait pas de fruit : ses graines se forment à l'intérieur des cônes. Quand les cônes s'ouvrent, les graines sont libérées et peuvent donner de nouveaux pins."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans le cycle de l'eau, comment s'appelle l'eau qui coule sur le sol après la pluie et rejoint les rivières ?",
+    "reponses": [
+      "ruissellement",
+      "le ruissellement"
+    ],
+    "accents": "toleres",
+    "explication": "Le ruissellement, c'est l'eau de pluie qui glisse sur le sol, par exemple dans une pente ou une rue, puis rejoint les rivières et finit dans la mer."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel moyen de transport roule sur des rails dans la ville ?",
+    "choix": [
+      "Le tramway",
+      "Le bus",
+      "Le vélo",
+      "La trottinette"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le tramway roule sur des rails posés dans la rue. Le bus roule sur la route comme une voiture."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la ville, où les enfants apprennent-ils à lire et à compter ?",
+    "choix": [
+      "La gare",
+      "L'école",
+      "Le marché",
+      "Le stade"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'école est un service de la ville où les élèves apprennent à lire, à écrire et à compter avec leurs maîtres."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque partie de la fleur à son rôle.",
+    "paires": [
+      [
+        "L'étamine",
+        "Elle fabrique le pollen"
+      ],
+      [
+        "Le pistil",
+        "Il contient les ovules"
+      ],
+      [
+        "Le pétale",
+        "Il est souvent coloré et parfumé"
+      ],
+      [
+        "Le sépale",
+        "Il protège le bouton avant l'ouverture"
+      ]
+    ],
+    "explication": "L'étamine fabrique le pollen et le pistil contient les ovules, qui deviendront des graines. Les pétales sont souvent colorés et parfumés, et les sépales protègent le bouton avant qu'il s'ouvre."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces lieux du centre-ville vers la campagne, du plus proche du centre au plus éloigné.",
+    "elements": [
+      "Le centre-ville, avec ses magasins et ses bureaux",
+      "Les quartiers avec des immeubles d'habitation",
+      "La périphérie, avec des maisons et des jardins",
+      "Les champs et les forêts de la campagne"
+    ],
+    "explication": "En s'éloignant du centre-ville, il y a de moins en moins de magasins et d'immeubles, et de plus en plus de maisons avec jardins, puis de champs et de forêts."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces éléments trouve-t-on surtout à la campagne, plutôt qu'en ville ?",
+    "choix": [
+      "De grands immeubles",
+      "Des champs cultivés",
+      "Une gare routière",
+      "Beaucoup de magasins"
+    ],
+    "bonneReponse": 1,
+    "explication": "À la campagne, il y a beaucoup d'espace : on y trouve des champs, des prés et des fermes. En ville, les immeubles, les magasins et les transports sont nombreux et serrés les uns contre les autres."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi une flaque d'eau sèche-t-elle plus vite en plein soleil ?",
+    "choix": [
+      "Parce que l'eau gèle au soleil.",
+      "Parce que l'eau de la flaque s'écoule vers la rivière.",
+      "Parce que l'eau de la flaque retombe en pluie.",
+      "Parce que le Soleil chauffe l'eau, qui s'évapore plus vite."
+    ],
+    "bonneReponse": 3,
+    "explication": "La chaleur du Soleil fait passer l'eau liquide à l'état de vapeur : c'est l'évaporation. Plus il fait chaud, plus l'eau s'évapore vite."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Quand l'eau de mer s'évapore, le sel part avec la vapeur d'eau.",
+    "vrai": false,
+    "explication": "Faux. Seule l'eau s'évapore : le sel reste dans la mer. C'est pour cela que la vapeur qui retombe en pluie est de l'eau douce."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans la ville, dans quel magasin achète-t-on du pain ?",
+    "reponses": [
+      "boulangerie",
+      "la boulangerie",
+      "une boulangerie"
+    ],
+    "accents": "toleres",
+    "explication": "On achète du pain à la boulangerie, un commerce que l'on trouve dans presque tous les quartiers d'une ville."
   }
 ]

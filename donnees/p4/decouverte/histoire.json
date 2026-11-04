@@ -260,5 +260,123 @@
     "enonce": "Dans le système féodal, les paysans serfs pouvaient quitter leurs terres quand ils le voulaient.",
     "vrai": false,
     "explication": "Faux. Les serfs étaient attachés à la terre du seigneur : ils devaient demander la permission pour la quitter."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pendant le Paléolithique, avec quel matériau les hommes fabriquent-ils surtout leurs outils ?",
+    "choix": [
+      "Le bronze",
+      "La pierre taillée",
+      "Le fer",
+      "L'or"
+    ],
+    "bonneReponse": 1,
+    "explication": "Au Paléolithique, les hommes ne savent pas encore travailler les métaux. Ils taillent la pierre, comme le silex, pour fabriquer leurs outils. Le bronze et le fer arrivent beaucoup plus tard."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Au Moyen Âge, comment les paysans s'éclairaient-ils le soir ?",
+    "choix": [
+      "Avec l'électricité",
+      "Avec des bougies ou des chandelles",
+      "Avec des lampadaires à gaz",
+      "Avec des lampes au néon"
+    ],
+    "bonneReponse": 1,
+    "explication": "Il n'y a ni électricité ni gaz au Moyen Âge. Le soir, on s'éclaire à la chandelle ou à la lampe à huile, et les maisons restent donc très sombres."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Avant la Révolution française, qui payait la plus grande partie des impôts ?",
+    "choix": [
+      "Le clergé",
+      "La noblesse",
+      "Le tiers état",
+      "Le roi"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le tiers état, c'est-à-dire les paysans, les artisans et les bourgeois, payait la plus grande partie des impôts. Le clergé et la noblesse en étaient largement exemptés.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel roi de France rendait la justice sous un chêne, à Vincennes ?",
+    "choix": [
+      "Louis XIV",
+      "Saint Louis",
+      "Louis XVI",
+      "Philippe Auguste"
+    ],
+    "bonneReponse": 1,
+    "explication": "Saint Louis (Louis IX) est roi de France au XIIIe siècle. Il est célèbre pour sa justice et sa piété, et il rendait la justice sous un chêne."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel siècle vient juste avant le XVe siècle ?",
+    "choix": [
+      "XVIe siècle",
+      "XIVe siècle",
+      "XVe siècle",
+      "XIe siècle"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les siècles se suivent : le XIVe siècle est juste avant le XVe siècle, puis vient le XVIe siècle. Le XVe siècle ne peut pas se placer avant lui-même."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans le système féodal, comment appelle-t-on le seigneur à qui un vassal promet fidélité ?",
+    "reponses": [
+      "suzerain",
+      "le suzerain",
+      "son suzerain"
+    ],
+    "accents": "toleres",
+    "explication": "Le vassal promet fidélité et aide à un seigneur plus puissant, son suzerain. En échange, le suzerain lui donne une terre, le fief, et le protège."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle la cérémonie qui fait d'un écuyer un chevalier ?",
+    "reponses": [
+      "adoubement",
+      "l'adoubement"
+    ],
+    "accents": "toleres",
+    "explication": "Au Moyen Âge, le jeune écuyer devient chevalier lors de l'adoubement. Un chevalier le frappe légèrement de l'épée sur l'épaule pour le faire chevalier."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque élément du château à sa description.",
+    "paires": [
+      [
+        "Le donjon",
+        "Tour haute et solide du seigneur"
+      ],
+      [
+        "Les remparts",
+        "Murs qui protègent la ville"
+      ],
+      [
+        "Le moulin banal",
+        "Moulin du seigneur pour moudre le blé"
+      ]
+    ],
+    "explication": "Le donjon est la tour fortifiée où vit le seigneur. Les remparts sont les murs qui protègent la ville. Le moulin banal appartient au seigneur : les paysans doivent y moudre leur blé."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces événements du plus ancien au plus récent.",
+    "elements": [
+      "La bataille de Hastings, en Angleterre",
+      "Le départ de la première croisade",
+      "L'arrivée de la peste noire en France",
+      "La fin de la guerre de Cent Ans"
+    ],
+    "explication": "La bataille de Hastings a lieu en 1066, puis la première croisade part en 1096. La peste noire arrive en France en 1348, et la guerre de Cent Ans se termine en 1453."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Au Moyen Âge, la plupart des paysans savaient lire et écrire.",
+    "vrai": false,
+    "explication": "Faux. La plupart des paysans ne savaient ni lire ni écrire. L'instruction était réservée à une minorité, comme les moines et les clercs."
   }
 ]

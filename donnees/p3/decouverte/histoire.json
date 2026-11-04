@@ -205,5 +205,125 @@
     "enonce": "Pendant la préhistoire, les hommes vivaient en petits groupes, souvent dans des abris naturels ou des grottes.",
     "vrai": true,
     "explication": "Vrai. Les hommes préhistoriques vivaient en petits groupes et utilisaient les abris naturels, comme les grottes ou les creux de rochers, pour se protéger."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Des archéologues trouvent des morceaux d'argile cuite, en forme de bol, dans un ancien village. Que peut-on en conclure ?",
+    "choix": [
+      "Les hommes utilisaient déjà des objets en fer",
+      "Les hommes ne mangeaient que des fruits",
+      "Les hommes savaient fabriquer des récipients en terre cuite",
+      "Les bols ont été apportés par des voyageurs modernes"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les bols en argile cuite sont des traces laissées par les hommes. Ils montrent qu'ils savaient fabriquer des récipients pour conserver ou cuire leurs aliments."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un ancien campement, on trouve des os d'animaux cassés et des pointes en pierre. Que peut-on en conclure ?",
+    "choix": [
+      "Les animaux vivaient dans des maisons",
+      "Les hommes chassaient et mangeaient ces animaux",
+      "Les pointes en pierre étaient des jouets",
+      "Personne n'a vécu à cet endroit"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les os cassés sont les restes des repas, et les pointes en pierre ont servi à chasser. Ces traces montrent ce que faisaient les hommes sur place."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi les groupes d'hommes préhistoriques changeaient-ils souvent de campement ?",
+    "choix": [
+      "Parce que les champs de blé étaient trop petits",
+      "Pour suivre les animaux et trouver de la nourriture",
+      "Parce qu'ils voulaient construire une ville",
+      "Pour remplacer leurs outils en pierre par du fer"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les hommes préhistoriques vivaient de la chasse et de la cueillette. Quand la nourriture manquait, ils allaient là où se trouvaient les animaux et les fruits."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Avec quoi les hommes préhistoriques fabriquaient-ils leurs peintures dans les grottes ?",
+    "choix": [
+      "De la peinture achetée en tube",
+      "Des pigments de terre colorée et du charbon de bois",
+      "Des feutres et des crayons",
+      "De l'encre de stylo"
+    ],
+    "bonneReponse": 1,
+    "explication": "Ils broyaient de la terre colorée (rouge, jaune, brune) et utilisaient du charbon de bois pour le noir. Ils appliquaient ces couleurs avec les doigts, des pinceaux en poils ou en soufflant dans un os creux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pour construire une hutte, les hommes préhistoriques utilisaient surtout :",
+    "choix": [
+      "Des briques de terre cuite",
+      "Des blocs de béton",
+      "Des branches et des peaux d'animaux",
+      "Des plaques de métal"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les hommes préhistoriques prenaient les matériaux dans la nature : branches, bois, peaux et pierres. Ils n'avaient ni briques, ni béton, ni métal."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle, en France, la liste officielle des bâtiments protégés pour leur valeur historique ?",
+    "reponses": [
+      "monuments historiques",
+      "monument historique",
+      "les monuments historiques"
+    ],
+    "accents": "toleres",
+    "explication": "En France, les bâtiments les plus importants sont inscrits sur la liste des monuments historiques. Par exemple, la cathédrale de Chartres ou le château de Versailles y figurent."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Pendant la préhistoire, les chasseurs chassaient un grand animal couvert de longs poils, avec de très longues défenses, dans les régions froides. Quel est son nom ?",
+    "reponses": [
+      "mammouth",
+      "le mammouth"
+    ],
+    "accents": "toleres",
+    "explication": "Le mammouth ressemblait à un éléphant, mais il avait de longs poils pour résister au froid. Ses défenses, très longues, étaient en fait des dents."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque geste de protection à son but.",
+    "paires": [
+      [
+        "Classer un château monument historique",
+        "Empêcher sa démolition"
+      ],
+      [
+        "Restaurer les vitraux d'une église",
+        "Réparer ce qui est abîmé"
+      ],
+      [
+        "Apprendre une danse à des enfants",
+        "Transmettre une tradition"
+      ],
+      [
+        "Fermer une grotte aux visiteurs",
+        "Protéger ses peintures"
+      ]
+    ],
+    "explication": "Pour garder notre patrimoine, on le protège des destructions, on le répare quand il est abîmé, on le fait vivre de génération en génération et on limite les dégâts causés par les visiteurs."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces étapes de la fabrication d'un outil en pierre taillée, dans l'ordre où on les fait.",
+    "elements": [
+      "Choisir un bloc de pierre dure",
+      "Frapper la pierre avec un percuteur pour détacher des éclats",
+      "Retoucher les bords pour obtenir un tranchant"
+    ],
+    "explication": "On choisit d'abord une pierre assez dure, puis on frappe dessus pour détacher des éclats. Enfin, on retouche les bords pour qu'ils deviennent coupants."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les hommes préhistoriques utilisaient des outils en fer dès le Paléolithique.",
+    "vrai": false,
+    "explication": "Faux. Au Paléolithique, les outils sont en pierre taillée. Le fer n'est travaillé que bien plus tard, à l'âge du fer."
   }
 ]

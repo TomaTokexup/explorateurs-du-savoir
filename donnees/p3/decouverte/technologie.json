@@ -213,5 +213,110 @@
     "enonce": "Plus on éloigne un aimant d'un trombone, plus l'attraction diminue.",
     "vrai": true,
     "explication": "Vrai. La force de l'aimant est la plus grande tout près de lui. Un trombone collé à l'aimant reste attiré, mais un trombone posé plus loin ne l'est plus."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi certaines portes de placard ont-elles un petit aimant ?",
+    "choix": [
+      "Pour la rendre plus lourde",
+      "Pour attirer la porte et la garder fermée",
+      "Pour la peindre",
+      "Pour la rendre électrique"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'aimant attire la partie en métal de la porte, qui reste ainsi fermée toute seule. C'est le même principe que l'aimant d'un frigo qui tient une feuille sur la porte."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi un aimant peut-il ramasser des clous posés sur une table, sans les toucher avec la main ?",
+    "choix": [
+      "Il chauffe les clous et les fait monter",
+      "Il rend les clous plus lourds",
+      "Il attire les clous en fer sans les toucher",
+      "Il les colle avec une colle invisible"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un aimant attire le fer à distance : il n'a pas besoin de toucher le clou. C'est pour cela qu'on utilise un gros aimant pour tenir ou soulever des objets en fer."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un vieux vêtement en coton usagé est envoyé dans une usine de recyclage. Que peut-on en fabriquer ?",
+    "choix": [
+      "Du verre",
+      "Des chiffons",
+      "De l'aluminium",
+      "Des piles"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les vieux vêtements en coton sont découpés et transformés en chiffons. Le recyclage permet de donner une seconde vie à un objet au lieu de le jeter."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une boîte de conserve en métal, bien vide, se jette dans quel bac ?",
+    "choix": [
+      "Le conteneur à verre",
+      "La poubelle des ordures ménagères",
+      "Le bac jaune",
+      "Le composteur"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les emballages en métal, comme les boîtes de conserve et les canettes, se jettent dans le bac jaune avec les autres emballages recyclables. Le verre, lui, va dans le conteneur à verre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Parmi ces objets, lequel un aimant n'attire-t-il pas ?",
+    "choix": [
+      "Un clou en fer",
+      "Une boîte de conserve en acier",
+      "Une canette en aluminium",
+      "Une vis en fer"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le fer et l'acier sont attirés par un aimant, mais l'aluminium ne l'est pas. Il faut donc penser à regarder de quel métal est fait l'objet."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Le papier est fabriqué à partir de fibres prises dans les arbres. De quel matériau viennent ces fibres ? (un seul mot)",
+    "reponses": [
+      "bois",
+      "le bois"
+    ],
+    "accents": "toleres",
+    "explication": "Les fibres du bois sont broyées, mélangées à de l'eau pour faire une pâte, puis séchées. Le papier recyclé est fabriqué de la même façon, mais à partir de vieux papiers."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Un matériau qui ne laisse pas passer le courant électrique est appelé un ... (un seul mot)",
+    "reponses": [
+      "isolant",
+      "un isolant"
+    ],
+    "accents": "toleres",
+    "explication": "Un matériau qui laisse passer le courant est un conducteur, comme le fer. Un isolant bloque le courant : le plastique et le bois en sont des exemples."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque objet à la matière dont il est fait.",
+    "paires": [
+      [
+        "Un pot de confiture",
+        "Le verre"
+      ],
+      [
+        "Un vieux journal",
+        "Le papier"
+      ],
+      [
+        "Un sac de courses jetable",
+        "Le plastique"
+      ]
+    ],
+    "explication": "Un pot de confiture est en verre, un journal est en papier et un sac de courses jetable est en plastique. Connaître la matière permet de savoir dans quel bac le jeter."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un aimant attire une règle en plastique.",
+    "vrai": false,
+    "explication": "Faux. Le plastique n'est pas attiré par un aimant : seuls certains métaux, comme le fer, l'acier et le nickel, le sont."
   }
 ]

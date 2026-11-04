@@ -131,6 +131,7 @@ Consignes générales :
 - Si l'énoncé contient une liste (par exemple des événements A, B et C), écris chaque élément sur sa propre ligne en les séparant par \\n dans le texte JSON.
 - Dans "reponses", inutile de répéter une réponse avec une majuscule : le site ignore les majuscules.
 - n'utilise que les notions des objectifs ci-dessus : une notion qui n'y figure pas (par exemple multiplier des nombres décimaux si seules l'addition et la soustraction sont au programme) est interdite, sauf dans une question « défi » ;
+- les objectifs de révision et de défi ne servent qu'à quelques questions (une ou deux par lot) ; toutes les autres portent sur les objectifs du niveau ;
 
 Rédige exactement {nb_qcm} questions de type "qcm", {nb_saisies} de type "saisie", {nb_associations} de type "association", {nb_ordres} de type "ordre" et {nb_vraifaux} de type "vraifaux".
 

@@ -182,5 +182,107 @@
     "enonce": "Certains feux pour piétons émettent un son pour aider les personnes aveugles à traverser.",
     "vrai": true,
     "explication": "Vrai. Ces feux sonores font un bip ou un tic-tac quand le bonhomme est vert, ce qui permet de traverser en sécurité."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu regardes une tablette pendant longtemps. Quel geste aide à reposer tes yeux ?",
+    "choix": [
+      "Rapprocher l'écran le plus possible de ton visage",
+      "Regarder un objet loin de toi de temps en temps",
+      "Garder les yeux fixés sur l'écran sans bouger les yeux",
+      "Augmenter la luminosité de l'écran au maximum"
+    ],
+    "bonneReponse": 1,
+    "explication": "Quand on regarde de près pendant longtemps, les muscles de l'œil se fatiguent. Regarder au loin de temps en temps les détend."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quels aliments aident surtout le corps à construire ses muscles ?",
+    "choix": [
+      "La viande, le poisson et les œufs",
+      "Les bonbons et les gâteaux",
+      "L'huile et le beurre",
+      "L'eau et les jus de fruits"
+    ],
+    "bonneReponse": 0,
+    "explication": "La viande, le poisson, les œufs, mais aussi les lentilles, apportent des protéines : ce sont elles qui servent à construire et réparer les muscles. Les sucres et les graisses donnent surtout de l'énergie."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur ce schéma de l'œil vu de face, comment s'appelle la partie n° 2 ?",
+    "choix": [
+      "La paupière",
+      "Le blanc de l'œil",
+      "Les cils",
+      "La pupille"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les cils poussent au bord des paupières. Ils arrêtent la poussière et les petits insectes avant qu'ils n'atteignent l'œil.",
+    "image": "images/p4/decouverte/oeil-face-2-4-3.svg",
+    "alt": "Schéma : un œil vu de face, avec 3 parties numérotées"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi ne voit-on rien dans une pièce complètement noire ?",
+    "choix": [
+      "Parce que nos pupilles se ferment complètement",
+      "Parce que nos yeux ne voient que le jour",
+      "Parce qu'il n'y a pas de lumière pour éclairer les objets",
+      "Parce que le cerveau s'endort pendant la nuit"
+    ],
+    "bonneReponse": 2,
+    "explication": "Pour voir, nos yeux ont besoin de lumière. Sans lumière, les objets ne peuvent pas être vus, même si nos yeux sont ouverts."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi faut-il bien mâcher ses aliments avant de les avaler ?",
+    "choix": [
+      "Pour qu'ils aillent plus vite dans le sang",
+      "Pour les couper en petits morceaux faciles à digérer",
+      "Pour que le goût dure plus longtemps",
+      "Pour éviter d'avoir faim plus tard"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les dents broient les aliments et la salive commence à les transformer. Plus les morceaux sont petits, plus l'estomac les digère facilement."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Selon les recommandations, combien de portions de fruits et légumes faut-il manger au minimum par jour ?",
+    "reponses": [
+      "5 portions",
+      "cinq portions",
+      "5",
+      "cinq"
+    ],
+    "accents": "toleres",
+    "explication": "On conseille au moins 5 portions de fruits et légumes par jour. Une portion correspond par exemple à un fruit ou à une poignée de légumes."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle le liquide fabriqué dans la bouche, qui mouille les aliments et commence à les digérer ?",
+    "reponses": [
+      "salive",
+      "la salive"
+    ],
+    "accents": "toleres",
+    "explication": "La salive mouille les aliments pour qu'ils glissent mieux, et elle commence déjà à transformer certains aliments, comme le pain. La digestion commence donc dans la bouche."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces organes dans l'ordre où les aliments les traversent pendant la digestion.",
+    "elements": [
+      "La bouche",
+      "L'œsophage",
+      "L'estomac",
+      "L'intestin grêle",
+      "Le gros intestin"
+    ],
+    "explication": "Les aliments sont mâchés dans la bouche, descendent par l'œsophage jusqu'à l'estomac, où ils sont brassés. Dans l'intestin grêle, les nutriments passent dans le sang. Le gros intestin récupère l'eau, et les déchets sont rejetés."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le sucre est le seul aliment qui donne de l'énergie au corps.",
+    "vrai": false,
+    "explication": "Faux. Le pain, les pâtes, le riz et les pommes de terre donnent aussi de l'énergie au corps : ce sont des aliments riches en glucides."
   }
 ]

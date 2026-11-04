@@ -218,5 +218,120 @@
     "enonce": "Bouger régulièrement, par exemple en marchant, en faisant du vélo ou en jouant, aide le cœur et les poumons à rester en bonne santé.",
     "vrai": true,
     "explication": "Vrai. L'activité physique régulière renforce le cœur et les poumons et améliore la circulation du sang. C'est bon pour la santé à tout âge."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pendant une crise d'asthme, que se passe-t-il dans les poumons ?",
+    "choix": [
+      "Les bronches se rétrécissent et l'air passe mal",
+      "Le cœur s'arrête de battre",
+      "Les alvéoles se remplissent de sang",
+      "Les poumons deviennent plus gros"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'asthme est une maladie des bronches : pendant une crise, elles se resserrent et gonflent, ce qui fait siffler la respiration et donne l'impression de manquer d'air."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi les parois des alvéoles sont-elles très fines ?",
+    "choix": [
+      "Pour fabriquer des globules rouges",
+      "Pour que l'oxygène passe facilement dans le sang",
+      "Pour mieux retenir l'air dans les poumons",
+      "Pour être plus solides quand on respire fort"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'oxygène traverse la paroi de l'alvéole pour passer dans le sang : plus la paroi est fine, plus le passage est rapide."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quand tu expires, que fait ton diaphragme ?",
+    "choix": [
+      "Il se contracte et descend",
+      "Il se détend et remonte",
+      "Il reste bloqué en bas",
+      "Il gonfle les poumons"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pendant l'expiration, le diaphragme se relâche et remonte : la cage thoracique se rétrécit et l'air sort des poumons."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi les veines paraissent-elles bleues sous la peau ?",
+    "choix": [
+      "Parce que le sang des veines est bleu",
+      "Parce que le sang est toujours rouge, mais la lumière qui traverse la peau le fait paraître bleu",
+      "Parce que les veines sont en plastique",
+      "Parce que le sang devient bleu quand il manque d'oxygène"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le sang est toujours rouge, même dans les veines, où il est juste plus foncé car il contient moins d'oxygène. La couleur bleue vient de la façon dont la lumière traverse la peau."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pendant une course, pourquoi respires-tu plus vite et ton cœur bat-il plus fort ?",
+    "choix": [
+      "Parce que tes muscles ont besoin de plus d'oxygène",
+      "Parce que ton estomac digère plus vite",
+      "Parce que tes poumons deviennent plus petits",
+      "Parce que ton sang devient bleu"
+    ],
+    "bonneReponse": 0,
+    "explication": "Quand tu cours, tes muscles travaillent beaucoup et consomment plus d'oxygène. Tu respires plus vite pour en faire entrer davantage, et ton cœur bat plus fort pour l'envoyer plus vite aux muscles par le sang."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de cavités le cœur humain possède-t-il ? Donne le nombre.",
+    "reponses": [
+      "4",
+      "quatre"
+    ],
+    "accents": "toleres",
+    "explication": "Le cœur a quatre cavités : deux oreillettes, qui reçoivent le sang, et deux ventricules, qui le poussent vers les artères."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle le battement que tu sens au poignet ou au cou, qui correspond aux battements du cœur ? Réponds par un mot.",
+    "reponses": [
+      "pouls"
+    ],
+    "accents": "toleres",
+    "explication": "Le pouls est le battement des artères, que l'on sent à chaque fois que le cœur envoie le sang dans le corps."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque partie du cœur à son rôle.",
+    "paires": [
+      [
+        "L'oreillette",
+        "Reçoit le sang qui arrive au cœur"
+      ],
+      [
+        "Le ventricule",
+        "Pousse le sang vers les artères"
+      ],
+      [
+        "Les valvules",
+        "Empêchent le sang de revenir en arrière"
+      ]
+    ],
+    "explication": "Les oreillettes reçoivent le sang qui arrive au cœur, les ventricules le poussent vers les artères, et les valvules, comme de petites portes, empêchent le sang de repartir dans le mauvais sens."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces étapes dans l'ordre du trajet du sang dans la grande circulation, depuis le cœur jusqu'au retour au cœur.",
+    "elements": [
+      "Le sang sort du cœur par le ventricule gauche",
+      "Il part dans l'aorte puis dans les artères",
+      "Il arrive dans les capillaires des organes",
+      "Il revient au cœur par les veines"
+    ],
+    "explication": "Le ventricule gauche pousse le sang dans l'aorte, puis les artères se ramifient jusqu'aux capillaires. Là, le sang donne oxygène et nutriments aux cellules, puis il revient au cœur par les veines."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Se laver les mains régulièrement aide à éviter de transmettre des microbes qui donnent des rhumes.",
+    "vrai": true,
+    "explication": "Vrai. Les microbes du rhume passent facilement des mains au nez et à la bouche, et se laver les mains limite leur propagation."
   }
 ]

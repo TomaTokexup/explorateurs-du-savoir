@@ -214,5 +214,125 @@
     "enonce": "L'énergie du vent est une énergie renouvelable.",
     "vrai": true,
     "explication": "Vrai. Le vent est sans cesse renouvelé grâce à la chaleur du Soleil, il ne s'épuise pas comme le pétrole ou le charbon."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un fil électrique touche une personne qui reste collée dessus. Que faut-il faire en premier ?",
+    "choix": [
+      "La tirer par les bras pour la dégager",
+      "Couper le courant, puis appeler les secours (112)",
+      "Lui verser de l'eau dessus",
+      "Attendre que le fil tombe tout seul"
+    ],
+    "bonneReponse": 1,
+    "explication": "Ne touche jamais la personne avec la main : le courant passerait aussi dans ton corps. Il faut d'abord couper le courant (au tableau électrique ou en débranchant), puis appeler les secours au 112, le numéro d'urgence européen."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle transformation d'énergie a lieu dans l'ampoule d'une lampe de poche allumée ?",
+    "choix": [
+      "De la lumière vers de l'électricité",
+      "De l'électricité vers de la lumière et de la chaleur",
+      "De l'électricité vers du son",
+      "Aucune : l'énergie ne change pas"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'électricité venant de la pile arrive dans l'ampoule, qui la transforme en lumière. Une partie devient aussi de la chaleur : c'est pour cela que l'ampoule chauffe."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la chaîne Soleil → herbe → vache → homme, quel maillon reçoit son énergie directement du Soleil ?",
+    "choix": [
+      "La vache",
+      "L'homme",
+      "L'herbe",
+      "Le Soleil"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les plantes utilisent la lumière du Soleil pour grandir. La vache mange l'herbe, puis l'homme mange la vache : chaque maillon reçoit son énergie du maillon précédent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi les fils électriques sont-ils entourés d'une gaine en plastique ?",
+    "choix": [
+      "Pour qu'ils soient plus jolis",
+      "Parce que le plastique est un isolant qui protège du courant",
+      "Pour que le courant passe plus vite",
+      "Pour rendre les fils plus lourds"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le métal à l'intérieur du fil conduit le courant. Le plastique autour est un isolant : il empêche le courant de passer dans la main de celui qui touche le fil. Un fil dénudé est donc dangereux."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces éléments n'est pas une source d'énergie renouvelable ?",
+    "choix": [
+      "Le vent",
+      "Le Soleil",
+      "L'eau qui coule",
+      "Le pétrole"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le vent, le Soleil et l'eau se renouvellent sans fin. Le pétrole est une énergie fossile : il s'est formé pendant des millions d'années et il finira par manquer."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel métal, très utilisé pour fabriquer les trombones, est attiré par un aimant ? (un seul mot)",
+    "reponses": [
+      "fer",
+      "le fer"
+    ],
+    "accents": "toleres",
+    "explication": "Un aimant attire le fer, mais il n'attire pas les autres métaux comme l'aluminium. Teste un trombone avec un aimant pour le vérifier."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel appareil de la cuisine utilise l'électricité pour garder les aliments au frais ? (un seul mot)",
+    "reponses": [
+      "réfrigérateur",
+      "refrigerateur",
+      "frigo",
+      "le réfrigérateur",
+      "le frigo"
+    ],
+    "accents": "toleres",
+    "explication": "Le réfrigérateur, aussi appelé frigo, fonctionne en permanence grâce à un moteur électrique qui garde l'intérieur froid."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque énergie renouvelable à son utilisation principale.",
+    "paires": [
+      [
+        "L'eau d'une rivière qui coule",
+        "Produire de l'électricité"
+      ],
+      [
+        "Le bois d'une forêt",
+        "Chauffer une maison"
+      ],
+      [
+        "Le vent qui souffle sur la mer",
+        "Faire avancer un bateau à voile"
+      ]
+    ],
+    "explication": "L'eau qui coule fait tourner des turbines pour produire de l'électricité. Le bois sert surtout à chauffer, et le vent pousse les voiliers."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes de la chaîne d'énergie d'une lampe de vélo alimentée par une dynamo, dans l'ordre des étapes.",
+    "elements": [
+      "Le cycliste pédale et fait tourner la roue",
+      "La roue fait tourner la dynamo",
+      "La dynamo produit de l'électricité",
+      "Le courant arrive jusqu'à la lampe",
+      "La lampe transforme l'électricité en lumière"
+    ],
+    "explication": "On part de l'énergie du cycliste, qui fait bouger la roue, puis on suit son chemin jusqu'à la lumière. Chaque étape reçoit l'énergie de la précédente."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Quand une lampe s'allume, l'énergie électrique disparaît.",
+    "vrai": false,
+    "explication": "Faux. L'énergie ne disparaît pas : elle se transforme en lumière et en chaleur."
   }
 ]

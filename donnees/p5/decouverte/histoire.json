@@ -228,5 +228,125 @@
     "enonce": "La Révolution française commence sous le règne de Napoléon.",
     "vrai": false,
     "explication": "Faux. En 1789, le roi de France est Louis XVI. Napoléon Bonaparte ne devient empereur qu'en 1804, après la Révolution."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces pays ne faisait pas partie des six pays fondateurs de la Communauté économique européenne en 1957 ?",
+    "choix": [
+      "Les Pays-Bas",
+      "Le Luxembourg",
+      "L'Espagne",
+      "La France"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les six pays fondateurs sont la France, l'Allemagne, l'Italie, la Belgique, les Pays-Bas et le Luxembourg. L'Espagne n'a rejoint la Communauté qu'en 1986."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom du programme européen qui permet aux étudiants de partir étudier dans une université d'un autre pays de l'Union européenne ?",
+    "reponses": [
+      "Erasmus"
+    ],
+    "accents": "toleres",
+    "explication": "Erasmus est un programme lancé en 1987 par l'Union européenne. Il aide des milliers d'étudiants à passer une partie de leurs études dans un autre pays européen."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque pays à son peintre célèbre.",
+    "paires": [
+      [
+        "L'Italie",
+        "Léonard de Vinci"
+      ],
+      [
+        "Les Pays-Bas",
+        "Rembrandt"
+      ],
+      [
+        "L'Espagne",
+        "Pablo Picasso"
+      ],
+      [
+        "La France",
+        "Claude Monet"
+      ]
+    ],
+    "explication": "Léonard de Vinci a peint la Joconde en Italie, Rembrandt est néerlandais, Picasso est espagnol et Monet est français. Chaque pays a ses artistes, c'est une part de sa culture."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces événements de l'histoire religieuse de l'Europe, du plus ancien au plus récent.",
+    "elements": [
+      "Luther critique la vente des indulgences",
+      "Henri IV signe l'édit de Nantes",
+      "Louis XIV révoque l'édit de Nantes"
+    ],
+    "explication": "Luther critique la vente des indulgences en 1517, au début de la Réforme. Henri IV signe l'édit de Nantes en 1598, qui accorde la tolérance aux protestants. Louis XIV le révoque en 1685."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les objectifs de développement durable de l'ONU concernent seulement les pays d'Europe.",
+    "vrai": false,
+    "explication": "Faux. Les 17 objectifs de développement durable, adoptés par l'ONU en 2015, concernent tous les pays du monde. Ils visent par exemple l'égalité entre les filles et les garçons ou la protection de la planète."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel navigateur portugais a ouvert la route maritime vers l'Inde, en contournant l'Afrique, à la fin du XVe siècle ?",
+    "choix": [
+      "Christophe Colomb",
+      "Vasco de Gama",
+      "Marco Polo",
+      "Jacques Cartier"
+    ],
+    "bonneReponse": 1,
+    "explication": "En 1498, Vasco de Gama arrive en Inde en contournant l'Afrique par le sud. Christophe Colomb, lui, cherchait à rejoindre l'Asie par l'ouest et arriva en Amérique. Marco Polo avait voyagé par la terre, bien plus tôt."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pendant la Première Guerre mondiale, beaucoup d'hommes partent au front. Que change cela pour la vie des femmes ?",
+    "choix": [
+      "Elles restent uniquement à la maison",
+      "Les hommes continuent les mêmes métiers dans les usines",
+      "Elles travaillent davantage hors de la maison, dans les usines et les champs",
+      "Rien ne change pour les familles"
+    ],
+    "bonneReponse": 2,
+    "explication": "Pour remplacer les hommes partis au front, les femmes prennent souvent leur place dans les usines et les champs. C'est un changement de la vie quotidienne pendant la guerre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une démocratie, qui prend les décisions importantes pour le pays ?",
+    "choix": [
+      "Un seul roi, qui décide seul",
+      "Les citoyens, qui choisissent leurs représentants par un vote",
+      "L'armée",
+      "Les personnes les plus riches du pays"
+    ],
+    "bonneReponse": 1,
+    "explication": "Dans une démocratie, le pouvoir appartient au peuple : les citoyens votent pour choisir ceux qui les représentent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le plat traditionnel de la Hongrie ?",
+    "choix": [
+      "Le sushi",
+      "La pizza",
+      "Le goulasch",
+      "Le couscous"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le goulasch est une soupe épicée à la viande et au paprika, typique de la Hongrie. Chaque pays de l'Union a ses plats traditionnels, qui font partie de sa culture."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans quelle ville se trouve le siège de la Commission européenne ?",
+    "reponses": [
+      "Bruxelles",
+      "bruxelles",
+      "Brussel",
+      "Brussels"
+    ],
+    "accents": "toleres",
+    "explication": "La Commission européenne, qui propose les lois de l'Union européenne, siège à Bruxelles, en Belgique. Le Parlement européen se réunit, lui, à Strasbourg et à Bruxelles."
   }
 ]

@@ -216,5 +216,126 @@
     "enonce": "Des ciseaux sont formés de deux leviers qui tournent autour d'une même vis.",
     "vrai": true,
     "explication": "Vrai. Chaque moitié des ciseaux est un levier. La vis du milieu permet à la lame de tourner, et les ciseaux coupent avec moins d'effort que les doigts."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une bille lâchée en haut d'une pente descend toute seule. Quelle force la fait descendre ?",
+    "choix": [
+      "Le magnétisme",
+      "La gravité",
+      "La poussée de l'eau",
+      "Le vent"
+    ],
+    "bonneReponse": 1,
+    "explication": "La gravité est une force : elle attire tous les objets vers le centre de la Terre, donc vers le bas. C'est elle qui fait descendre la bille."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle la force qui attire tous les objets vers le sol et leur donne un poids ?",
+    "reponses": [
+      "gravité",
+      "la gravité",
+      "pesanteur",
+      "la pesanteur",
+      "attraction terrestre",
+      "l'attraction terrestre"
+    ],
+    "accents": "toleres",
+    "explication": "La Terre attire tous les objets vers son centre : c'est la gravité, qu'on appelle aussi pesanteur. C'est elle qui donne un poids aux objets et qui les fait tomber."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque outil à ce qu'il permet d'ouvrir ou de retirer.",
+    "paires": [
+      [
+        "Un pied-de-biche",
+        "Un clou planté dans une planche"
+      ],
+      [
+        "Un casse-noix",
+        "La coquille d'une noix"
+      ],
+      [
+        "Un ouvre-bouteille",
+        "La capsule d'une bouteille"
+      ]
+    ],
+    "explication": "Ces outils sont des leviers : le long bras permet d'appliquer une petite force qui devient une grande force au bout de l'outil. Le point d'appui est l'endroit où l'outil s'appuie."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les étapes dans l'ordre pour soulever une charge avec une manivelle, deux roues dentées et un tambour.",
+    "elements": [
+      "Tu tournes la manivelle.",
+      "La petite roue dentée tourne.",
+      "Elle entraîne la grande roue dentée.",
+      "Le tambour s'enroule et soulève la charge."
+    ],
+    "explication": "Le mouvement part de la manivelle, passe à la petite roue dentée, puis à la grande, et enfin au tambour qui soulève la charge. Chaque étape cause la suivante."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Mettre des rouleaux sous une caisse augmente le frottement entre la caisse et le sol.",
+    "vrai": false,
+    "explication": "Faux. Les rouleaux font rouler la caisse au lieu de la faire glisser : le frottement diminue, donc la caisse se déplace avec moins d'effort."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une poulie fixe est une roue accrochée en haut, avec une corde qui passe dans sa gorge. Quel est son intérêt principal ?",
+    "choix": [
+      "Elle multiplie la force par deux",
+      "Elle change le sens de la force : on tire vers le bas pour soulever la charge",
+      "Elle rend la charge plus légère",
+      "Elle fait tourner la charge plus vite"
+    ],
+    "bonneReponse": 1,
+    "explication": "Avec une poulie fixe, on tire la corde vers le bas et la charge monte. L'effort n'est pas réduit, mais la poulie permet de tirer dans un sens plus pratique."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces gestes fait tourner l'objet sur lui-même ?",
+    "choix": [
+      "Pousser une chaise",
+      "Tirer un tiroir",
+      "Tourner un robinet",
+      "Pousser une caisse"
+    ],
+    "bonneReponse": 2,
+    "explication": "Tourner un robinet, c'est le faire tourner sur lui-même. Les trois autres gestes déplacent l'objet en avant, en arrière ou sur le côté."
+  },
+  {
+    "type": "qcm",
+    "enonce": "En hiver, on répand du sable sur une route verglacée. Pourquoi ?",
+    "choix": [
+      "Pour rendre la route plus lisse",
+      "Pour augmenter le frottement et éviter de glisser",
+      "Pour alourdir les voitures",
+      "Pour faire fondre la neige plus vite"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le sable crée des petites aspérités sur la route. Les pneus accrochent mieux, le frottement augmente et la voiture glisse moins."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quand tu pousses un mur avec tes mains, le mur te pousse aussi, mais dans le sens ... (un seul mot)",
+    "reponses": [
+      "contraire",
+      "opposé",
+      "inverse"
+    ],
+    "accents": "toleres",
+    "explication": "Le mur pousse sur toi avec la même force que la tienne, mais dans le sens contraire. C'est pour cela que, sur des patins à roulettes, tu recules quand tu pousses un mur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une petite roue dentée entraîne une grande roue dentée. La grande roue tourne-t-elle plus vite ou moins vite que la petite ?",
+    "choix": [
+      "Plus vite, car elle est plus grande",
+      "Moins vite",
+      "Exactement aussi vite",
+      "Elle ne tourne plus"
+    ],
+    "bonneReponse": 1,
+    "explication": "Quand la grande roue fait un tour, la petite en fait plus. La grande roue tourne donc moins vite, mais elle peut pousser ou soulever avec plus de force."
   }
 ]

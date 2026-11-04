@@ -213,5 +213,122 @@
     "enonce": "Les planètes tournent autour du Soleil sur des trajectoires appelées orbites.",
     "vrai": true,
     "explication": "Vrai. Chaque planète suit une orbite, c'est-à-dire un trajet presque circulaire autour du Soleil."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Il est 15 h à Paris. Quelle heure est-il à Londres, le même jour ?",
+    "choix": [
+      "14 h",
+      "15 h",
+      "16 h",
+      "13 h"
+    ],
+    "bonneReponse": 0,
+    "explication": "Londres est une heure en retard sur Paris, donc il est 14 h. Les deux villes changent d'heure en même temps, donc cet écart d'une heure reste le même toute l'année."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment s'appelle la roche fondue qui sort d'un volcan pendant une éruption et coule sur ses pentes ?",
+    "choix": [
+      "La lave",
+      "Le sable",
+      "Le calcaire",
+      "La glace"
+    ],
+    "bonneReponse": 0,
+    "explication": "Sous le volcan, la roche est si chaude qu'elle fond : c'est le magma. Quand il sort pendant une éruption et coule sur les pentes, on l'appelle la lave. En refroidissant, elle redevient de la roche dure."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel paysage trouve-t-on surtout dans les Alpes, en haute montagne ?",
+    "choix": [
+      "Des dunes de sable",
+      "Des glaciers et des sommets enneigés",
+      "Des marais et des canaux",
+      "Une forêt de palmiers"
+    ],
+    "bonneReponse": 1,
+    "explication": "En haute montagne, il fait très froid : la neige ne fond pas et forme des glaciers, de grandes rivières de glace qui descendent lentement dans les vallées."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le relief du nord de l'Allemagne ?",
+    "choix": [
+      "Des plaines",
+      "Des montagnes très hautes",
+      "Des volcans actifs",
+      "Des plateaux de plus de 3 000 m d'altitude"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le nord de l'Allemagne est une grande plaine avec peu de collines. Sur une carte physique, les plaines sont souvent colorées en vert clair."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un atlas, un lieu a pour coordonnées 40° N et 4° E. Que veut dire « 4° E » ?",
+    "choix": [
+      "Le lieu est à 4° à l'est du méridien de Greenwich",
+      "Le lieu est à 4° au nord de l'équateur",
+      "Le lieu est à 4° au sud de l'équateur",
+      "Le lieu est à 4 km de l'équateur"
+    ],
+    "bonneReponse": 0,
+    "explication": "La première valeur (40° N) est la latitude, qui se lit par rapport à l'équateur. La seconde (4° E) est la longitude, qui se lit par rapport au méridien de Greenwich : E veut dire est, O veut dire ouest."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de planètes tournent autour du Soleil dans notre système solaire ? Écris le nombre en chiffres.",
+    "reponses": [
+      "8",
+      "huit"
+    ],
+    "accents": "toleres",
+    "explication": "Il y a 8 planètes autour du Soleil. Pluton n'est plus considérée comme une planète depuis 2006."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Après un séisme sous la mer, d'immenses vagues envahissent les côtes. Comment s'appelle ce phénomène naturel ?",
+    "reponses": [
+      "tsunami",
+      "un tsunami"
+    ],
+    "accents": "toleres",
+    "explication": "Un tsunami est une série de très grosses vagues créées quand le fond de la mer bouge brusquement pendant un séisme. Ce n'est pas une vague du vent, comme celles qu'on voit sur la plage."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque planète à la phrase qui la décrit.",
+    "paires": [
+      [
+        "Mercure",
+        "la planète la plus proche du Soleil"
+      ],
+      [
+        "La Terre",
+        "la planète où vivent les êtres humains"
+      ],
+      [
+        "Neptune",
+        "la planète la plus éloignée du Soleil"
+      ]
+    ],
+    "explication": "Mercure tourne le plus près du Soleil, Neptune est la plus éloignée, et la Terre est notre planète, celle où nous vivons."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces phases de la Lune dans l'ordre où on les voit pendant la première moitié du mois, de la première à la dernière.",
+    "elements": [
+      "Nouvelle lune",
+      "Premier croissant",
+      "Premier quartier",
+      "Lune gibbeuse croissante",
+      "Pleine lune"
+    ],
+    "explication": "Après la nouvelle lune, la partie éclairée de la Lune grandit chaque nuit : on voit d'abord un fin croissant, puis le premier quartier, puis une lune gibbeuse. La pleine lune arrive environ deux semaines après la nouvelle lune."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "L'équateur se trouve à 90° de latitude nord.",
+    "vrai": false,
+    "explication": "Faux. L'équateur est à 0° de latitude. C'est le pôle Nord qui est à 90° de latitude nord."
   }
 ]
