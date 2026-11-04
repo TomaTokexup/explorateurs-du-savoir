@@ -302,5 +302,107 @@
     "enonce": "Au pluriel, les noms terminés par -s, -x ou -z prennent un « s ».",
     "vrai": false,
     "explication": "Faux. Ces noms ne changent pas au pluriel : un nez, des nez ; un prix, des prix."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète : « Il range ___ jouets dans sa chambre. »",
+    "choix": [
+      "ses",
+      "ces",
+      "c'est",
+      "s'est"
+    ],
+    "bonneReponse": 0,
+    "explication": "« Ses » est un déterminant possessif : ses jouets, ce sont les jouets à lui. « Ces » sert à montrer (ces jouets-là). « C'est » et « s'est » contiennent un verbe."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le féminin de « un vendeur » est :",
+    "choix": [
+      "vendeure",
+      "vendeuse",
+      "vendeusse",
+      "vendeurse"
+    ],
+    "bonneReponse": 1,
+    "explication": "Beaucoup de noms en -eur ont un féminin en -euse : un danseur → une danseuse, un vendeur → une vendeuse."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel mot commence par deux « c » ?",
+    "choix": [
+      "acheter",
+      "accepter",
+      "acteur",
+      "arriver"
+    ],
+    "bonneReponse": 1,
+    "explication": "Certains mots commencent par « ac » suivi d'un second c, comme accepter ou accueillir. Dans « acteur », il n'y a qu'un seul c après le a."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris au pluriel : un hôpital → des ___.",
+    "reponses": [
+      "hôpitaux"
+    ],
+    "accents": "stricts",
+    "explication": "La plupart des noms en -al font leur pluriel en -aux : un animal → des animaux, un hôpital → des hôpitaux."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Le féminin de « un acteur » est « une ___ ». (un seul mot)",
+    "reponses": [
+      "actrice"
+    ],
+    "accents": "stricts",
+    "explication": "Beaucoup de noms en -teur font leur féminin en -trice : un acteur → une actrice, un directeur → une directrice. Attention, d'autres font -euse : un chanteur → une chanteuse."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète avec « sans » ou « s'en » : « Il est parti ___ dire au revoir. »",
+    "reponses": [
+      "sans"
+    ],
+    "accents": "stricts",
+    "explication": "« sans » veut dire « pas avec » : sans manteau, sans dire au revoir. Ici, on peut dire « Il est parti sans dire au revoir », donc on écrit « sans »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris au pluriel : un coffre-fort → des ___.",
+    "reponses": [
+      "coffres-forts"
+    ],
+    "accents": "stricts",
+    "explication": "Dans un nom composé formé de deux mots, les deux mots prennent la marque du pluriel : « coffre » (nom) prend un s, et « fort » (adjectif) aussi.",
+    "defi": true
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque nom masculin à son féminin.",
+    "paires": [
+      [
+        "un loup",
+        "une louve"
+      ],
+      [
+        "un roi",
+        "une reine"
+      ],
+      [
+        "un neveu",
+        "une nièce"
+      ],
+      [
+        "un héros",
+        "une héroïne"
+      ]
+    ],
+    "explication": "Certains féminins se forment en changeant la fin du mot (loup → louve, héros → héroïne). D'autres sont des mots différents qu'il faut apprendre : roi → reine, neveu → nièce."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Quand deux sujets au singulier sont reliés par « et », le verbe se met au pluriel.",
+    "vrai": true,
+    "explication": "Vrai. Avec « Léa et Tom », on a deux sujets qui forment un pluriel, donc le verbe se met au pluriel : Léa et Tom jouent."
   }
 ]

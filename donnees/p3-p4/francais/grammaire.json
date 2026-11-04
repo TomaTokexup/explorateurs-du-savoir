@@ -339,5 +339,100 @@
     ],
     "bonneReponse": 1,
     "explication": "Devant un nom masculin qui commence par une voyelle ou un h muet, on écrit « cet ». On dit « un ami », donc « cet ami ». « Ce » se met devant un nom masculin qui commence par une consonne."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quel texte les phrases sont-elles bien délimitées ?",
+    "choix": [
+      "le chat dort. Il est fatigué.",
+      "Le chat dort. il est fatigué.",
+      "Le chat dort. Il est fatigué.",
+      "Le chat dort Il est fatigué."
+    ],
+    "bonneReponse": 2,
+    "explication": "Une phrase commence par une majuscule et se termine par un point. « Le chat dort. » et « Il est fatigué. » sont deux phrases bien délimitées. Dans les autres textes, il manque une majuscule ou un point."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel pronom personnel peut remplacer « Mes amis et moi » dans une phrase ?",
+    "choix": [
+      "il",
+      "ils",
+      "nous",
+      "vous"
+    ],
+    "bonneReponse": 2,
+    "explication": "« Mes amis et moi » désigne plusieurs personnes, dont je fais partie : on utilise « nous ». « Ils » ne convient pas car la personne qui parle est incluse dans le groupe."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est l'infinitif du verbe « mangeons » ?",
+    "reponses": [
+      "manger"
+    ],
+    "accents": "stricts",
+    "explication": "L'infinitif est la forme du verbe qu'on trouve dans le dictionnaire. « Mangeons » vient de « manger », un verbe du 1er groupe qui se termine par -er."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase : « Regarde ___ oiseau qui chante dans le jardin. »",
+    "choix": [
+      "ce",
+      "cet",
+      "cette",
+      "ces"
+    ],
+    "bonneReponse": 1,
+    "explication": "On écrit « cet » devant un nom masculin qui commence par une voyelle ou un h muet : cet oiseau, cet arbre. On écrit « ce » devant une consonne : ce chat."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel mot interrogatif faut-il pour demander la personne dans « ___ a cassé la fenêtre ? » ?",
+    "choix": [
+      "Quand",
+      "Où",
+      "Qui",
+      "Pourquoi"
+    ],
+    "bonneReponse": 2,
+    "explication": "« Qui » sert à demander une personne. « Quand » demande le moment, « où » le lieu et « pourquoi » la raison."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque déterminant à sa catégorie.",
+    "paires": [
+      [
+        "mon",
+        "déterminant possessif"
+      ],
+      [
+        "cette",
+        "déterminant démonstratif"
+      ],
+      [
+        "une",
+        "article indéfini"
+      ],
+      [
+        "les",
+        "article défini"
+      ]
+    ],
+    "explication": "« Mon » indique à qui appartient quelque chose (possessif). « Cette » désigne un nom précis (démonstratif). « Une » présente un nom qu'on ne précise pas (indéfini). « Les » est l'article défini du pluriel."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le verbe « finir » appartient au 1er groupe.",
+    "vrai": false,
+    "explication": "Faux. « Finir » est un verbe du 2e groupe : son infinitif se termine par -ir et on dit « nous finissons »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète avec le pronom relatif qui convient : « Le gâteau ___ tu as préparé est délicieux. »",
+    "reponses": [
+      "que"
+    ],
+    "accents": "stricts",
+    "explication": "On écrit « que » car il remplace « le gâteau », qui est le COD du verbe « as préparé » : tu as préparé le gâteau. « Qui » remplacerait le sujet du verbe."
   }
 ]

@@ -335,5 +335,114 @@
     "enonce": "Le participe présent de « jouer » s'écrit « jouent ».",
     "vrai": false,
     "explication": "Faux. Le participe présent se termine par -ant : « jouant ». « Jouent » est la forme de la 3e personne du pluriel (ils jouent)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pour demander à toute la classe de faire attention, la maîtresse dit : « ___ attentifs ! » (verbe être, impératif présent, avec « vous »)",
+    "choix": [
+      "Êtes",
+      "Soyez",
+      "Sois",
+      "Serez"
+    ],
+    "bonneReponse": 1,
+    "explication": "À l'impératif, « être » a les formes sois (tu), soyons (nous) et soyez (vous). Exemple : « Soyez prudents en traversant ! »"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Conjugue au conditionnel présent le verbe « venir » avec « nous ». Tape le pronom et le verbe.",
+    "reponses": [
+      "nous viendrions"
+    ],
+    "accents": "stricts",
+    "explication": "Le conditionnel présent se forme avec le radical du futur (viendr-) et les terminaisons de l'imparfait (-ions avec « nous »). Exemple : « Nous viendrions avec plaisir si on nous invitait. »"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque verbe à l'infinitif à son participe présent.",
+    "paires": [
+      [
+        "partir",
+        "partant"
+      ],
+      [
+        "savoir",
+        "sachant"
+      ],
+      [
+        "faire",
+        "faisant"
+      ],
+      [
+        "aller",
+        "allant"
+      ]
+    ],
+    "explication": "En général, on prend la forme « nous » du présent, on enlève -ons et on ajoute -ant : nous partons → partant, nous faisons → faisant, nous allons → allant. Attention aux exceptions : savoir → sachant, être → étant, avoir → ayant."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans « Il faut que tu viennes », le verbe « venir » est au subjonctif présent.",
+    "vrai": true,
+    "explication": "Vrai. Après « il faut que », on met le verbe au subjonctif présent : que je vienne, que tu viennes, qu'il vienne."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Je doute qu'il ___ la vérité. (verbe dire, subjonctif présent)",
+    "choix": [
+      "dit",
+      "dirait",
+      "dira",
+      "dise"
+    ],
+    "bonneReponse": 3,
+    "explication": "Après « je doute que », le verbe se met au subjonctif présent : que je dise, que tu dises, qu'il dise. Exemple : « Je doute qu'il dise la vérité. »"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Demain, nous ___ au cinéma.",
+    "choix": [
+      "allons",
+      "irons",
+      "allions",
+      "sommes allés"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Demain » indique que l'action aura lieu plus tard : on utilise le futur. Avec « nous », le verbe « aller » est « nous irons ». Exemple : « Demain, nous irons au parc. »"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Conjugue au passé simple le verbe « avoir » avec « ils ». Tape le pronom et le verbe.",
+    "reponses": [
+      "ils eurent"
+    ],
+    "accents": "stricts",
+    "explication": "Au passé simple, « avoir » est irrégulier : il eut, ils eurent. Exemple : « Ils eurent peur quand l'orage éclata. »",
+    "astuce": "Écris la conjugaison sur ton brouillon, puis relis-la à voix haute pour vérifier.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Hier, pendant que je ___ mes chaussures, le téléphone sonna. (verbe mettre)",
+    "choix": [
+      "mis",
+      "mettrai",
+      "mets",
+      "mettais"
+    ],
+    "bonneReponse": 3,
+    "explication": "L'action « mettre ses chaussures » était en train de se dérouler quand une autre action est arrivée (le téléphone sonna) : on utilise l'imparfait, je mettais. Le passé simple sert à l'action qui survient."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sans ton aide, je ___ ce travail. (verbe finir, conditionnel présent)",
+    "choix": [
+      "finis",
+      "finissais",
+      "finirais",
+      "finirai"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le conditionnel présent sert à dire ce qui arriverait si une condition était remplie : ici, « sans ton aide ». Exemple : « Sans toi, je ne finirais pas à temps. »"
   }
 ]

@@ -327,5 +327,124 @@
     "enonce": "Le contraire de « rapide » est « vite ».",
     "vrai": false,
     "explication": "Faux. « Vite » est un adverbe qui a le même sens que « rapidement ». Le contraire de « rapide » est « lent »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est le contraire du mot « content » ?",
+    "choix": [
+      "heureux",
+      "triste",
+      "fatigué",
+      "gentil"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le contraire de « content » est « triste ». Un contraire a un sens opposé, comme « chaud » et « froid »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Le voleur est dans de beaux draps », que veut dire l'expression « être dans de beaux draps » ?",
+    "choix": [
+      "Il porte de beaux vêtements",
+      "Il est dans une situation difficile",
+      "Il dort dans un lit très confortable",
+      "Il est très propre"
+    ],
+    "bonneReponse": 1,
+    "explication": "Cette expression est au sens figuré : elle ne parle pas de draps. Elle veut dire être dans une situation difficile. Par exemple, si tu as cassé le vase de ta mère sans le dire, tu es dans de beaux draps."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la phrase : « Il fait très froid ; ___, je mets mon bonnet. »",
+    "choix": [
+      "donc",
+      "pourtant",
+      "mais",
+      "ou"
+    ],
+    "bonneReponse": 0,
+    "explication": "« Donc » annonce une conséquence : il fait froid, c'est pour cela que je mets mon bonnet. « Pourtant » et « mais » annonceraient une idée contraire."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans « refaire », « relire » et « repartir », que veut dire le préfixe « re- » ?",
+    "choix": [
+      "De nouveau",
+      "Ne pas",
+      "Avant",
+      "Très"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le préfixe « re- » veut dire « de nouveau » : refaire, c'est faire de nouveau ; relire, c'est lire de nouveau. Devant une voyelle, il devient souvent « ré- » : réécrire."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel mot est de la famille du mot « chaud » ?",
+    "choix": [
+      "chapeau",
+      "chaise",
+      "chaleur",
+      "chaussette"
+    ],
+    "bonneReponse": 2,
+    "explication": "Les mots de la même famille ont une partie commune, la racine. « Chaleur » vient de « chaud » : ils parlent tous les deux de la température. Les autres mots commencent seulement par les mêmes lettres."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le nom du médecin qui soigne les animaux ? (Un seul mot.)",
+    "reponses": [
+      "vétérinaire",
+      "veterinaire"
+    ],
+    "accents": "stricts",
+    "explication": "Le vétérinaire soigne les animaux, comme le médecin soigne les personnes. Ce mot précis te permet de nommer exactement la personne."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment appelle-t-on le petit d'une vache ? (Un seul mot.)",
+    "reponses": [
+      "veau"
+    ],
+    "accents": "stricts",
+    "explication": "Chaque animal a son mot pour son petit : le chiot pour le chien, le chaton pour le chat, le veau pour la vache."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque métier à ce qu'il fait.",
+    "paires": [
+      [
+        "pompier",
+        "éteint les incendies"
+      ],
+      [
+        "facteur",
+        "distribue le courrier"
+      ],
+      [
+        "pharmacien",
+        "vend des médicaments"
+      ],
+      [
+        "infirmière",
+        "soigne les malades"
+      ]
+    ],
+    "explication": "Un pompier éteint les incendies, un facteur distribue le courrier, un pharmacien vend des médicaments et une infirmière soigne les malades. Pense à ce que chaque personne fait dans son travail."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces mots du moins chaud au plus chaud.",
+    "elements": [
+      "glacé",
+      "frais",
+      "tiède",
+      "brûlant"
+    ],
+    "explication": "Glacé est très froid, frais un peu froid, tiède légèrement chaud et brûlant extrêmement chaud. Ces mots permettent d'être plus précis que « chaud » ou « froid »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les mots de la même famille s'écrivent de la même façon.",
+    "vrai": false,
+    "explication": "Faux. Les mots de la même famille ont une partie commune, la racine, mais ils ne s'écrivent pas forcément de la même façon : « lait » et « laitier », « chaud » et « chaleur »."
   }
 ]

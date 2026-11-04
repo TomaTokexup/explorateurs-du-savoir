@@ -325,5 +325,115 @@
     "enonce": "Le mot « pétale » désigne la partie de la plante qui se trouve sous la terre.",
     "vrai": false,
     "explication": "Faux. Le pétale est une partie colorée de la fleur. La partie de la plante qui se trouve sous la terre est la racine."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Lequel de ces mots est un mot composé, c'est-à-dire formé de deux mots ?",
+    "choix": [
+      "maison",
+      "chanter",
+      "essuie-glace",
+      "petit"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un mot composé est formé en réunissant deux mots : « essuie » et « glace » donnent « essuie-glace ». « Chanter » est un mot dérivé : il est formé d'une racine (chant-) et d'une terminaison, sans second mot."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Le boulanger a enfourné les baguettes », que veut dire le verbe « enfourner » ?",
+    "choix": [
+      "couper en morceaux",
+      "mettre dans le four",
+      "sortir du four",
+      "pétrir la pâte"
+    ],
+    "bonneReponse": 1,
+    "explication": "Quand on ne connaît pas un mot, on regarde sa forme et le contexte : on reconnaît « four » dans « enfourner », et les baguettes sont mises au four. Le sens est donc « mettre dans le four »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans quelle phrase le verbe « dévorer » est-il employé au sens figuré ?",
+    "choix": [
+      "Le loup dévore la brebis.",
+      "Il a dévoré son livre en une nuit.",
+      "Le lion dévore sa proie.",
+      "Il dévore une pomme."
+    ],
+    "bonneReponse": 1,
+    "explication": "Au sens propre, « dévorer » veut dire manger avidement un aliment ou une proie. Au sens figuré, il exprime une action très rapide ou très intense : lire un livre en une nuit n'est pas le manger."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Le vol pour Rome a deux heures de retard », que désigne le mot « vol » ?",
+    "choix": [
+      "Le fait de prendre ce qui n'est pas à soi",
+      "Le trajet d'un avion",
+      "Un groupe d'oiseaux",
+      "Le mouvement des ailes"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un même mot peut avoir plusieurs sens : c'est le contexte qui permet de choisir. Ici, on parle de Rome et de retard : le vol est le trajet d'un avion."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est l'adverbe formé à partir de l'adjectif « doux » ?",
+    "choix": [
+      "douxement",
+      "doucement",
+      "douçment",
+      "doucemment"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour former un adverbe en -ment, on part de la forme féminine de l'adjectif : « douce » devient « doucement ». Exemple : « lent » → « lentement »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Le suffixe « -iste » désigne souvent une personne qui pratique une activité. Comment s'appelle la personne qui joue du piano ? (un seul mot)",
+    "reponses": [
+      "pianiste",
+      "un pianiste",
+      "une pianiste"
+    ],
+    "accents": "stricts",
+    "explication": "Piano + -iste donne pianiste. On retrouve ce suffixe dans cycliste, dentiste ou fleuriste."
+  },
+  {
+    "type": "saisie",
+    "enonce": "La racine latine « -cide » veut dire « qui tue ». Quel mot désigne un produit qui tue les insectes ? (un seul mot)",
+    "reponses": [
+      "insecticide"
+    ],
+    "accents": "stricts",
+    "explication": "Cette racine latine se trouve à la fin du mot : « insecte » + « -cide » donne « insecticide ». On trouve la même racine dans « herbicide », qui tue les mauvaises herbes.",
+    "defi": true
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot familier au mot courant qui a le même sens.",
+    "paires": [
+      [
+        "un bouquin",
+        "un livre"
+      ],
+      [
+        "une bagnole",
+        "une voiture"
+      ],
+      [
+        "le boulot",
+        "le travail"
+      ],
+      [
+        "la flotte",
+        "l'eau"
+      ]
+    ],
+    "explication": "On n'emploie pas les mêmes mots avec ses copains et dans un texte écrit. « Bouquin », « bagnole », « boulot » et « flotte » appartiennent au langage familier ; à l'école, on utilise le langage courant."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le mot « gigantesque » exprime une intensité plus forte que « grand ».",
+    "vrai": true,
+    "explication": "Vrai. « Gigantesque » est plus fort que « grand » : il dit que quelque chose est encore plus grand, comme « brûlant » est plus fort que « chaud »."
   }
 ]

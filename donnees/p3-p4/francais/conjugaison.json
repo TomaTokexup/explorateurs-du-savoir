@@ -372,5 +372,114 @@
     "enonce": "Au futur, les verbes du 1er groupe gardent l'infinitif entier avant d'ajouter les terminaisons : « je chanterai ».",
     "vrai": true,
     "explication": "Vrai. Pour les verbes du 1er groupe, on part de l'infinitif entier : chanter + -ai donne chanterai."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle forme du verbe « vouloir » est au présent avec « je » ?",
+    "choix": [
+      "je veut",
+      "je voulais",
+      "je veux",
+      "je voudrai"
+    ],
+    "bonneReponse": 2,
+    "explication": "Au présent, « vouloir » se conjugue : je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quand j'étais petit, j'___ un chien. (verbe avoir, à l'imparfait)",
+    "choix": [
+      "ai",
+      "avais",
+      "aurai",
+      "avait"
+    ],
+    "bonneReponse": 1,
+    "explication": "À l'imparfait, « avoir » se conjugue : j'avais, tu avais, il avait, nous avions, vous aviez, ils avaient. Avec « je », la terminaison est -ais."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Chaque hiver, Paul et moi ___ de la luge. (verbe faire, à l'imparfait) Écris seulement le verbe.",
+    "reponses": [
+      "faisions",
+      "nous faisions"
+    ],
+    "accents": "stricts",
+    "explication": "À l'imparfait, « faire » prend le radical fais- : nous faisions, vous faisiez. « Paul et moi » remplace « nous »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la bonne forme du verbe « finir » à l'impératif présent avec « nous » ?",
+    "choix": [
+      "nous finissons",
+      "nous finirons",
+      "Finissons",
+      "Finissez"
+    ],
+    "bonneReponse": 2,
+    "explication": "À l'impératif, on ne met pas le pronom : on dit « Finissons ! » (terminaison -ons)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle phrase est correcte ?",
+    "choix": [
+      "Les élèves chante une chanson.",
+      "Les élèves chantent une chanson.",
+      "Les élèves chantons une chanson.",
+      "Les élèves chantez une chanson."
+    ],
+    "bonneReponse": 1,
+    "explication": "Avec « ils » ou « les élèves », le verbe prend la terminaison -ent : les élèves chantent.",
+    "astuce": "Remplace « Les élèves » par « ils » et récite la conjugaison du verbe au présent."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque pronom à la forme du verbe « être » au présent.",
+    "paires": [
+      [
+        "je",
+        "suis"
+      ],
+      [
+        "tu",
+        "es"
+      ],
+      [
+        "elle",
+        "est"
+      ],
+      [
+        "vous",
+        "êtes"
+      ]
+    ],
+    "explication": "« Être » est irrégulier au présent : je suis, tu es, il/elle est, nous sommes, vous êtes, ils/elles sont."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans la phrase « Il a mangé sa soupe. », le verbe est au présent.",
+    "vrai": false,
+    "explication": "Faux. « a mangé » est au passé composé : on forme le passé composé avec « avoir » au présent + le participe passé « mangé »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un jour, les élèves ___ une chanson pour la directrice. (verbe chanter, au passé simple)",
+    "choix": [
+      "chantaient",
+      "chantèrent",
+      "chanteront",
+      "chantent"
+    ],
+    "bonneReponse": 1,
+    "explication": "Au passé simple, les verbes en -er prennent -èrent avec « ils » : ils chantèrent. « Chantaient » est à l'imparfait, « chanteront » au futur et « chantent » au présent."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Conjugue au futur le verbe « être » avec le pronom « vous ». Tape le pronom et le verbe.",
+    "reponses": [
+      "vous serez"
+    ],
+    "accents": "stricts",
+    "explication": "Au futur, « être » a un radical irrégulier, ser- : je serai, tu seras, il sera, nous serons, vous serez, ils seront."
   }
 ]

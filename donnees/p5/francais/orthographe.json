@@ -299,5 +299,95 @@
     "enonce": "Avec le sujet « elle », un verbe du 1er groupe se termine par -s au présent.",
     "vrai": false,
     "explication": "Faux. Avec « elle », le verbe se termine par -e au présent : elle chante, elle joue."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète : « ___ à moi, je n'ai rien à dire. »",
+    "choix": [
+      "Quand",
+      "Quant",
+      "Qu'en",
+      "Quent"
+    ],
+    "bonneReponse": 1,
+    "explication": "« Quant à » veut dire « pour ce qui est de ». On écrit « quand » pour parler du temps (Quand tu arrives, dis-le-moi) et « qu'en » pour une question sur « en »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Elle a ___ son manteau dans l'armoire.",
+    "choix": [
+      "mise",
+      "mis",
+      "mit",
+      "mi"
+    ],
+    "bonneReponse": 1,
+    "explication": "Avec « avoir », le participe passé reste « mis » quand le complément (son manteau) est placé après le verbe. « Mit » est une autre forme du verbe mettre, qu'on n'utilise pas ici."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris l'adjectif « léger » au féminin : une valise ___.",
+    "reponses": [
+      "légère"
+    ],
+    "accents": "stricts",
+    "explication": "Les adjectifs en -er font leur féminin en -ère : léger → légère, cher → chère."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris l'adjectif « gros » au féminin : une pomme ___.",
+    "reponses": [
+      "grosse"
+    ],
+    "accents": "stricts",
+    "explication": "Certains adjectifs doublent leur consonne finale au féminin : gros → grosse, bon → bonne."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Écris au pluriel : un pneu → des ___ (un seul mot).",
+    "reponses": [
+      "pneus"
+    ],
+    "accents": "stricts",
+    "explication": "La plupart des noms en -eu prennent un x au pluriel (des jeux, des feux), mais quelques-uns prennent un s : des pneus, des bleus."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Complète avec « la » ou « l'a » (un seul mot) : « Le gâteau est délicieux : Léa ___ fait hier. »",
+    "reponses": [
+      "l'a",
+      "l’a"
+    ],
+    "accents": "stricts",
+    "explication": "Ici « l' » remplace « le gâteau » et « a » est le verbe avoir : on peut mettre « avait » à la place de « a » (Léa l'avait fait hier). « La » serait un article, toujours suivi d'un nom."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque phrase au mot qui complète le trou.",
+    "paires": [
+      [
+        "Il ___ levé très tôt.",
+        "s'est"
+      ],
+      [
+        "___ l'heure de partir.",
+        "C'est"
+      ],
+      [
+        "Chacun range ___ propres affaires.",
+        "ses"
+      ],
+      [
+        "Regarde ___ nuages-là !",
+        "ces"
+      ]
+    ],
+    "explication": "« S'est » est suivi d'un participe passé (il s'est levé). « C'est » veut dire « cela est ». « Ses » montre à qui appartiennent les affaires (les siennes). « Ces » sert à montrer (ces nuages-là)."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Avec l'auxiliaire « être », le participe passé s'accorde avec le sujet.",
+    "vrai": true,
+    "explication": "Vrai. « Elles sont parties », « Léa est arrivée » : le participe passé prend le genre et le nombre du sujet."
   }
 ]

@@ -337,5 +337,134 @@
     "enonce": "Un sous-titre annonce une partie du texte, comme un titre plus petit.",
     "vrai": true,
     "explication": "Vrai. Le sous-titre, souvent écrit en caractères plus petits que le titre, indique de quoi parle une partie du texte."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quand Rose arrive-t-elle chez Hugo ?",
+    "texte": "Ce samedi-là, Hugo guettait depuis le matin la fenêtre du salon. Sa grand-mère Rose devait venir à dix heures, mais l'horloge du couloir marquait déjà onze heures et demie quand une sonnette retentit enfin. « Tu es en retard, mamie ! » lança Hugo en ouvrant la porte. Rose sourit, s'essuya les pieds sur le paillasson et posa sur la table une boîte en carton, ficelée avec soin. « Elle vient de loin, dit-elle à voix basse, et tu ne dois pas l'ouvrir avant le dîner. » Hugo tourna la boîte dans ses mains. Elle était légère, et quelque chose remua à l'intérieur, comme un petit grattement. Il ouvrit la bouche pour poser une question, mais sa grand-mère avait déjà filé vers la cuisine, son grand châle flottant derrière elle comme une voile.",
+    "choix": [
+      "À dix heures, comme prévu",
+      "À onze heures et demie",
+      "Au moment du dîner",
+      "Juste avant midi, après un coup de téléphone"
+    ],
+    "bonneReponse": 1,
+    "explication": "Repère les mots qui indiquent l'heure : Rose devait venir à dix heures, mais l'horloge marque onze heures et demie quand la sonnette retentit. L'heure prévue n'est pas toujours l'heure d'arrivée réelle."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qu'est-ce qui laisse penser que la boîte contient peut-être un petit animal ?",
+    "texte": "Ce samedi-là, Hugo guettait depuis le matin la fenêtre du salon. Sa grand-mère Rose devait venir à dix heures, mais l'horloge du couloir marquait déjà onze heures et demie quand une sonnette retentit enfin. « Tu es en retard, mamie ! » lança Hugo en ouvrant la porte. Rose sourit, s'essuya les pieds sur le paillasson et posa sur la table une boîte en carton, ficelée avec soin. « Elle vient de loin, dit-elle à voix basse, et tu ne dois pas l'ouvrir avant le dîner. » Hugo tourna la boîte dans ses mains. Elle était légère, et quelque chose remua à l'intérieur, comme un petit grattement. Il ouvrit la bouche pour poser une question, mais sa grand-mère avait déjà filé vers la cuisine, son grand châle flottant derrière elle comme une voile.",
+    "choix": [
+      "La boîte est très lourde",
+      "Rose a dit qu'elle était vide",
+      "Une étiquette indique le nom d'un animal",
+      "La boîte est légère et quelque chose remue à l'intérieur"
+    ],
+    "bonneReponse": 3,
+    "explication": "Le texte ne dit pas ce qu'il y a dans la boîte : il faut réunir les indices. Hugo sent qu'elle est légère et entend quelque chose bouger, ce qui suggère un être vivant."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel objet du texte annonce l'arrivée de Rose ? Écris un seul mot.",
+    "texte": "Ce samedi-là, Hugo guettait depuis le matin la fenêtre du salon. Sa grand-mère Rose devait venir à dix heures, mais l'horloge du couloir marquait déjà onze heures et demie quand une sonnette retentit enfin. « Tu es en retard, mamie ! » lança Hugo en ouvrant la porte. Rose sourit, s'essuya les pieds sur le paillasson et posa sur la table une boîte en carton, ficelée avec soin. « Elle vient de loin, dit-elle à voix basse, et tu ne dois pas l'ouvrir avant le dîner. » Hugo tourna la boîte dans ses mains. Elle était légère, et quelque chose remua à l'intérieur, comme un petit grattement. Il ouvrit la bouche pour poser une question, mais sa grand-mère avait déjà filé vers la cuisine, son grand châle flottant derrière elle comme une voile.",
+    "reponses": [
+      "sonnette",
+      "la sonnette",
+      "une sonnette"
+    ],
+    "accents": "stricts",
+    "explication": "Cherche dans le texte ce qui se passe au moment où Rose arrive : une sonnette retentit. Le mot exact se trouve dans la phrase qui parle de l'arrivée."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Que demande Rose à Hugo au sujet de la boîte ?",
+    "texte": "Ce samedi-là, Hugo guettait depuis le matin la fenêtre du salon. Sa grand-mère Rose devait venir à dix heures, mais l'horloge du couloir marquait déjà onze heures et demie quand une sonnette retentit enfin. « Tu es en retard, mamie ! » lança Hugo en ouvrant la porte. Rose sourit, s'essuya les pieds sur le paillasson et posa sur la table une boîte en carton, ficelée avec soin. « Elle vient de loin, dit-elle à voix basse, et tu ne dois pas l'ouvrir avant le dîner. » Hugo tourna la boîte dans ses mains. Elle était légère, et quelque chose remua à l'intérieur, comme un petit grattement. Il ouvrit la bouche pour poser une question, mais sa grand-mère avait déjà filé vers la cuisine, son grand châle flottant derrière elle comme une voile.",
+    "choix": [
+      "De poser la boîte sur la table",
+      "De ne pas l'ouvrir avant le dîner",
+      "De rapporter la boîte chez elle",
+      "De la ranger dans la cuisine"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les paroles de Rose sont entre guillemets : relis-les pour trouver ce qu'elle dit. Quand un personnage donne une consigne, elle est souvent écrite directement dans ses paroles."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qu'est-ce qu'Adam propose à Sofia ?",
+    "texte": "Le mercredi, la chorale de la classe de Sofia répétait pour la fête de l'école. Sofia, elle, avait perdu sa voix deux jours plus tôt, si bien qu'elle ne pouvait plus que chuchoter. Son frère Adam, qui adorait la taquiner, lui proposa de chanter à sa place en cachette. « Tu n'oseras jamais ! » soupira-t-elle. Le lendemain, Madame Roux réclama les paroles, et Sofia découvrit que son cahier jaune avait disparu. Elle chercha partout, sous les bancs, dans son casier, jusqu'au moment où elle aperçut un coin jaune qui dépassait du livre de sciences de son frère. Ce soir-là, Adam s'approcha d'elle, rougissant, et lui tendit un petit carnet neuf sur lequel il avait recopié toutes les chansons, de sa plus belle écriture. « Pardon », murmura-t-il.",
+    "choix": [
+      "De chanter à sa place en cachette",
+      "De lui prêter son cahier de sciences",
+      "D'aller parler à Madame Roux",
+      "De répéter la chanson dehors, seul"
+    ],
+    "bonneReponse": 0,
+    "explication": "Repère la phrase où Adam parle à Sofia juste après le constat qu'elle a perdu sa voix. Le texte dit ce qu'il propose, avec les mots « lui proposa de chanter à sa place »."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Depuis combien de jours Sofia a-t-elle perdu sa voix ? Écris ta réponse en chiffres, avec l'unité (jours).",
+    "texte": "Le mercredi, la chorale de la classe de Sofia répétait pour la fête de l'école. Sofia, elle, avait perdu sa voix deux jours plus tôt, si bien qu'elle ne pouvait plus que chuchoter. Son frère Adam, qui adorait la taquiner, lui proposa de chanter à sa place en cachette. « Tu n'oseras jamais ! » soupira-t-elle. Le lendemain, Madame Roux réclama les paroles, et Sofia découvrit que son cahier jaune avait disparu. Elle chercha partout, sous les bancs, dans son casier, jusqu'au moment où elle aperçut un coin jaune qui dépassait du livre de sciences de son frère. Ce soir-là, Adam s'approcha d'elle, rougissant, et lui tendit un petit carnet neuf sur lequel il avait recopié toutes les chansons, de sa plus belle écriture. « Pardon », murmura-t-il.",
+    "reponses": [
+      "2",
+      "2 jours"
+    ],
+    "accents": "stricts",
+    "explication": "Le texte donne un nombre écrit en lettres : « deux jours plus tôt ». En chiffres, on écrit 2. Pense à bien lire le moment de la phrase : il s'agit de la perte de la voix, pas du cahier."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi Adam offre-t-il un carnet neuf à Sofia ?",
+    "texte": "Le mercredi, la chorale de la classe de Sofia répétait pour la fête de l'école. Sofia, elle, avait perdu sa voix deux jours plus tôt, si bien qu'elle ne pouvait plus que chuchoter. Son frère Adam, qui adorait la taquiner, lui proposa de chanter à sa place en cachette. « Tu n'oseras jamais ! » soupira-t-elle. Le lendemain, Madame Roux réclama les paroles, et Sofia découvrit que son cahier jaune avait disparu. Elle chercha partout, sous les bancs, dans son casier, jusqu'au moment où elle aperçut un coin jaune qui dépassait du livre de sciences de son frère. Ce soir-là, Adam s'approcha d'elle, rougissant, et lui tendit un petit carnet neuf sur lequel il avait recopié toutes les chansons, de sa plus belle écriture. « Pardon », murmura-t-il.",
+    "choix": [
+      "Parce qu'il a perdu son propre carnet",
+      "Pour se faire pardonner d'avoir caché son cahier",
+      "Parce que Madame Roux le lui a demandé",
+      "Pour qu'elle écrive ses propres chansons"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le texte ne le dit pas directement. Réunis les indices : le cahier jaune de Sofia a disparu, un coin jaune dépasse du livre d'Adam, puis Adam rougit, dit « Pardon » et offre un carnet avec toutes les chansons. Il s'excuse donc d'avoir caché le cahier.",
+    "defi": true
+  },
+  {
+    "type": "association",
+    "enonce": "Dans un dialogue, relie chaque signe à son rôle.",
+    "paires": [
+      [
+        "Les guillemets « »",
+        "Ouvrir et fermer le dialogue"
+      ],
+      [
+        "Le tiret –",
+        "Un autre personnage parle"
+      ],
+      [
+        "Le point d'interrogation",
+        "Le personnage pose une question"
+      ],
+      [
+        "Les deux-points :",
+        "Annoncer les paroles"
+      ]
+    ],
+    "explication": "Les deux-points annoncent les paroles, les guillemets ouvrent et ferment le dialogue, et le tiret montre qu'un autre personnage prend la parole. Le point d'interrogation termine une question."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les parties de cette lettre dans l'ordre où elles apparaissent, de haut en bas.",
+    "elements": [
+      "Le lieu et la date, en haut à droite",
+      "La formule d'appel : « Chère Léa, »",
+      "Le corps de la lettre, avec les nouvelles",
+      "La formule de politesse, puis la signature"
+    ],
+    "explication": "Dans une lettre, on écrit d'abord le lieu et la date, puis on salue la personne, ensuite on raconte ce qu'on veut dire, et enfin on termine par une formule de politesse suivie de sa signature."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une nouvelle est, en général, plus courte qu'un roman.",
+    "vrai": true,
+    "explication": "Vrai. Une nouvelle est un récit court, qu'on peut lire d'une seule traite, alors qu'un roman est un long récit qui raconte une histoire plus développée."
   }
 ]

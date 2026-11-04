@@ -421,5 +421,135 @@
     ],
     "bonneReponse": 2,
     "explication": "Le texte décrit le menton de Sami, collant de sucre. Relie cet indice à la phrase où il regarde le pot de miel vide : ce sont deux indices qui vont dans le même sens."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi Yasmine pense-t-elle à chercher le bonnet dans le jardin ?",
+    "texte": "Ce matin-là, le ciel de Lyon était si gris que Yasmine avait enfilé son manteau rouge avant même de prendre son petit-déjeuner. Dans le couloir, son frère Jules grommelait : il avait perdu son bonnet bleu, celui que sa grand-mère lui avait tricoté l'année dernière. « Il est forcément dans la voiture ! » lança leur mère depuis la cuisine. Pourtant, la voiture était vide. Yasmine, qui adorait les énigmes, se mit à réfléchir. Elle se souvint que Jules avait joué au ballon dans le jardin, la veille au soir. Elle sortit donc, et le vent faisait danser les feuilles mortes sur l'allée. Sous le vieux banc, quelque chose de bleu dépassait de la terre humide. C'était bien le bonnet, mais il était couvert de boue, car le chat du voisin s'en était servi comme d'un coussin. Quand Jules arriva en courant, il éclata de rire en découvrant son bonnet.",
+    "choix": [
+      "Parce que sa mère lui a demandé de sortir",
+      "Parce qu'elle a entendu le chat miauler dans le jardin",
+      "Parce que Jules a joué au ballon dans le jardin la veille au soir",
+      "Parce que le vent a peut-être emporté le bonnet hors de la voiture"
+    ],
+    "bonneReponse": 2,
+    "explication": "Pour retrouver un objet perdu, on se demande où on est allé récemment. Yasmine relie deux informations : Jules a joué dehors la veille, donc le bonnet a pu tomber là-bas."
+  },
+  {
+    "type": "saisie",
+    "enonce": "D'après le texte, quelle saison de l'année est-ce ? Écris un seul mot.",
+    "texte": "Ce matin-là, le ciel de Lyon était si gris que Yasmine avait enfilé son manteau rouge avant même de prendre son petit-déjeuner. Dans le couloir, son frère Jules grommelait : il avait perdu son bonnet bleu, celui que sa grand-mère lui avait tricoté l'année dernière. « Il est forcément dans la voiture ! » lança leur mère depuis la cuisine. Pourtant, la voiture était vide. Yasmine, qui adorait les énigmes, se mit à réfléchir. Elle se souvint que Jules avait joué au ballon dans le jardin, la veille au soir. Elle sortit donc, et le vent faisait danser les feuilles mortes sur l'allée. Sous le vieux banc, quelque chose de bleu dépassait de la terre humide. C'était bien le bonnet, mais il était couvert de boue, car le chat du voisin s'en était servi comme d'un coussin. Quand Jules arriva en courant, il éclata de rire en découvrant son bonnet.",
+    "reponses": [
+      "automne"
+    ],
+    "accents": "stricts",
+    "explication": "Le texte ne donne pas le nom de la saison : il faut relier les indices. Un ciel gris, un manteau, des feuilles mortes et un vent qui les fait tourbillonner sont typiques de la fin de l'année."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les événements dans l'ordre où ils se sont réellement produits, du plus ancien au plus récent.",
+    "texte": "Ce matin-là, le ciel de Lyon était si gris que Yasmine avait enfilé son manteau rouge avant même de prendre son petit-déjeuner. Dans le couloir, son frère Jules grommelait : il avait perdu son bonnet bleu, celui que sa grand-mère lui avait tricoté l'année dernière. « Il est forcément dans la voiture ! » lança leur mère depuis la cuisine. Pourtant, la voiture était vide. Yasmine, qui adorait les énigmes, se mit à réfléchir. Elle se souvint que Jules avait joué au ballon dans le jardin, la veille au soir. Elle sortit donc, et le vent faisait danser les feuilles mortes sur l'allée. Sous le vieux banc, quelque chose de bleu dépassait de la terre humide. C'était bien le bonnet, mais il était couvert de boue, car le chat du voisin s'en était servi comme d'un coussin. Quand Jules arriva en courant, il éclata de rire en découvrant son bonnet.",
+    "elements": [
+      "Jules joue au ballon dans le jardin, la veille au soir.",
+      "Jules se plaint dans le couloir : son bonnet a disparu.",
+      "Yasmine trouve le bonnet sous le vieux banc.",
+      "Jules éclate de rire en voyant son bonnet."
+    ],
+    "explication": "Le jeu de ballon a eu lieu la veille. Le matin, Jules s'aperçoit que son bonnet a disparu. Ensuite, Yasmine le retrouve dans le jardin, puis Jules rit en le découvrant."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le narrateur du texte est Yasmine, qui raconte elle-même l'histoire.",
+    "texte": "Ce matin-là, le ciel de Lyon était si gris que Yasmine avait enfilé son manteau rouge avant même de prendre son petit-déjeuner. Dans le couloir, son frère Jules grommelait : il avait perdu son bonnet bleu, celui que sa grand-mère lui avait tricoté l'année dernière. « Il est forcément dans la voiture ! » lança leur mère depuis la cuisine. Pourtant, la voiture était vide. Yasmine, qui adorait les énigmes, se mit à réfléchir. Elle se souvint que Jules avait joué au ballon dans le jardin, la veille au soir. Elle sortit donc, et le vent faisait danser les feuilles mortes sur l'allée. Sous le vieux banc, quelque chose de bleu dépassait de la terre humide. C'était bien le bonnet, mais il était couvert de boue, car le chat du voisin s'en était servi comme d'un coussin. Quand Jules arriva en courant, il éclata de rire en découvrant son bonnet.",
+    "vrai": false,
+    "defi": true,
+    "explication": "Faux. Le narrateur n'est pas un personnage de l'histoire : il parle de Yasmine et de Jules à la troisième personne (« elle », « il »). Quand le narrateur dit « je », il fait partie de l'histoire."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi Chloé se penche-t-elle aussitôt vers la boîte ?",
+    "texte": "Au sommet du col, le refuge ressemblait à une vieille grange oubliée par le temps. Oscar, les joues rouges de froid, poussa la porte et s'arrêta net. Derrière le comptoir, une femme aux cheveux blancs versait du chocolat chaud dans trois tasses. « Vous êtes en retard, dit-elle sans se retourner. Les autres sont déjà partis. » Sa grande sœur Chloé retira ses gants en soupirant : elle n'avait aucune envie de redescendre dans le brouillard. Pourtant, quand la femme posa une boîte en bois sur la table, Chloé se pencha aussitôt. À l'intérieur, une petite lampe clignotait doucement. « Elle vous guidera jusqu'à la cabane, expliqua la femme. Ne la lâchez surtout pas, même si le brouillard devient épais. »",
+    "choix": [
+      "Parce qu'elle veut se réchauffer les mains",
+      "Parce qu'elle est pressée de partir en randonnée",
+      "Parce qu'elle est curieuse de savoir ce qu'il y a dedans",
+      "Parce qu'elle veut aider la femme à verser le chocolat"
+    ],
+    "bonneReponse": 2,
+    "explication": "Chloé ne voulait pas repartir, mais le mot « Pourtant » signale un changement : elle devient curieuse dès qu'elle voit la boîte. Son geste montre donc son envie de savoir ce qu'elle contient."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi la femme demande-t-elle de ne pas lâcher la lampe ?",
+    "texte": "Au sommet du col, le refuge ressemblait à une vieille grange oubliée par le temps. Oscar, les joues rouges de froid, poussa la porte et s'arrêta net. Derrière le comptoir, une femme aux cheveux blancs versait du chocolat chaud dans trois tasses. « Vous êtes en retard, dit-elle sans se retourner. Les autres sont déjà partis. » Sa grande sœur Chloé retira ses gants en soupirant : elle n'avait aucune envie de redescendre dans le brouillard. Pourtant, quand la femme posa une boîte en bois sur la table, Chloé se pencha aussitôt. À l'intérieur, une petite lampe clignotait doucement. « Elle vous guidera jusqu'à la cabane, expliqua la femme. Ne la lâchez surtout pas, même si le brouillard devient épais. »",
+    "choix": [
+      "Parce que la lampe est très fragile",
+      "Parce que le brouillard peut cacher le chemin",
+      "Parce que la lampe appartient au refuge et doit être rendue",
+      "Parce que la cabane est fermée le soir"
+    ],
+    "bonneReponse": 1,
+    "explication": "La lampe sert de guide. Quand le brouillard est épais, on ne voit plus le chemin : il faut donc garder la lampe avec soi pour la suivre."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque phrase du texte à ce qu'elle laisse deviner.",
+    "texte": "Au sommet du col, le refuge ressemblait à une vieille grange oubliée par le temps. Oscar, les joues rouges de froid, poussa la porte et s'arrêta net. Derrière le comptoir, une femme aux cheveux blancs versait du chocolat chaud dans trois tasses. « Vous êtes en retard, dit-elle sans se retourner. Les autres sont déjà partis. » Sa grande sœur Chloé retira ses gants en soupirant : elle n'avait aucune envie de redescendre dans le brouillard. Pourtant, quand la femme posa une boîte en bois sur la table, Chloé se pencha aussitôt. À l'intérieur, une petite lampe clignotait doucement. « Elle vous guidera jusqu'à la cabane, expliqua la femme. Ne la lâchez surtout pas, même si le brouillard devient épais. »",
+    "paires": [
+      [
+        "les joues d'Oscar sont rouges",
+        "il a froid"
+      ],
+      [
+        "la femme ne se retourne pas",
+        "elle est occupée à préparer des boissons"
+      ],
+      [
+        "une petite lampe clignote doucement",
+        "la lampe est allumée"
+      ],
+      [
+        "Chloé soupire en retirant ses gants",
+        "elle est fatiguée ou découragée"
+      ]
+    ],
+    "explication": "Les indices du texte permettent de deviner des choses qui ne sont pas écrites. Les joues rouges montrent le froid, et une lampe qui clignote est allumée."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi Léon hésite-t-il au début de l'histoire ?",
+    "texte": "Avant que le soleil ne se lève, la ruelle de Saint-Véran sentait déjà le pain chaud. Léon, les mains enfoncées dans les poches de son anorak, observait la vitrine éclairée du coin. Une femme au tablier couvert de farine y disposait des pains dorés, un par un, avec des gestes lents et précis. Léon hésita : sa mère l'avait envoyé chercher du pain, mais il avait oublié son argent sur la table de la cuisine. « Tu cherches quelque chose, mon garçon ? » demanda la femme sans lever les yeux. Léon bredouilla qu'il revenait tout de suite. Pourtant, la femme lui glissa un petit pain tiède dans la main. « Tu me rendras la monnaie demain, dit-elle en souriant. Ici, on se fait confiance. »",
+    "choix": [
+      "Parce qu'il ne sait pas où se trouve la boulangerie",
+      "Parce qu'il a peur de la femme",
+      "Parce qu'il a oublié son argent à la maison",
+      "Parce qu'il veut attendre que le soleil se lève"
+    ],
+    "bonneReponse": 2,
+    "explication": "Léon doit acheter du pain, mais il n'a pas son argent. Il relie donc deux informations : sa mère l'envoie et il a oublié son porte-monnaie."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel sentiment la femme montre-t-elle envers Léon à la fin du texte ?",
+    "texte": "Avant que le soleil ne se lève, la ruelle de Saint-Véran sentait déjà le pain chaud. Léon, les mains enfoncées dans les poches de son anorak, observait la vitrine éclairée du coin. Une femme au tablier couvert de farine y disposait des pains dorés, un par un, avec des gestes lents et précis. Léon hésita : sa mère l'avait envoyé chercher du pain, mais il avait oublié son argent sur la table de la cuisine. « Tu cherches quelque chose, mon garçon ? » demanda la femme sans lever les yeux. Léon bredouilla qu'il revenait tout de suite. Pourtant, la femme lui glissa un petit pain tiède dans la main. « Tu me rendras la monnaie demain, dit-elle en souriant. Ici, on se fait confiance. »",
+    "choix": [
+      "de la colère",
+      "de la méfiance",
+      "de la confiance",
+      "de l'ennui"
+    ],
+    "bonneReponse": 2,
+    "explication": "Malgré l'argent oublié, la femme donne le pain et compte sur Léon pour revenir payer. Son sourire et ses paroles montrent qu'elle lui fait confiance."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quel est le métier probable de la femme ? Écris un seul mot.",
+    "texte": "Avant que le soleil ne se lève, la ruelle de Saint-Véran sentait déjà le pain chaud. Léon, les mains enfoncées dans les poches de son anorak, observait la vitrine éclairée du coin. Une femme au tablier couvert de farine y disposait des pains dorés, un par un, avec des gestes lents et précis. Léon hésita : sa mère l'avait envoyé chercher du pain, mais il avait oublié son argent sur la table de la cuisine. « Tu cherches quelque chose, mon garçon ? » demanda la femme sans lever les yeux. Léon bredouilla qu'il revenait tout de suite. Pourtant, la femme lui glissa un petit pain tiède dans la main. « Tu me rendras la monnaie demain, dit-elle en souriant. Ici, on se fait confiance. »",
+    "reponses": [
+      "boulangère",
+      "boulangere"
+    ],
+    "accents": "stricts",
+    "explication": "Le texte ne dit pas son métier. Les indices (le tablier couvert de farine, les pains dorés, le pain chaud avant le lever du soleil) permettent de deviner qu'elle travaille dans une boulangerie."
   }
 ]

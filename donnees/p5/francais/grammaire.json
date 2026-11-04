@@ -312,5 +312,109 @@
     "enonce": "Dans la phrase « Ma tarte, Léa l'a préparée hier. », « Ma tarte » est le sujet du verbe.",
     "vrai": false,
     "explication": "Faux. « Ma tarte » est le complément d'objet direct (COD), placé avant le verbe : il est repris par le pronom « l' ». Le sujet est « Léa », celle qui fait l'action."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Demain matin, Marc prendra le bus pour aller à l'école. », quel groupe est un complément circonstanciel de temps ?",
+    "choix": [
+      "le bus",
+      "Marc",
+      "Demain matin",
+      "pour aller à l'école"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le complément circonstanciel de temps indique quand se passe l'action. « Demain matin » répond à la question « quand ? » et peut se déplacer : « Marc prendra le bus demain matin. »"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans la phrase « Il a téléphoné à son grand-père. », écris le complément d'objet indirect (COI).",
+    "reponses": [
+      "à son grand-père"
+    ],
+    "accents": "stricts",
+    "explication": "Le COI est relié au verbe par une préposition, souvent « à » ou « de ». Pose la question « il a téléphoné à qui ? » → « à son grand-père »."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque phrase à la fonction du groupe entre crochets.",
+    "paires": [
+      [
+        "Il écrit [une lettre].",
+        "COD (complément d'objet direct)"
+      ],
+      [
+        "Il pense [à son chien].",
+        "COI (complément d'objet indirect)"
+      ],
+      [
+        "Nous jouons [dans le parc].",
+        "complément circonstanciel de lieu"
+      ]
+    ],
+    "explication": "Le COD se trouve sans préposition et répond à « quoi ? » ou « qui ? ». Le COI commence par « à » ou « de ». Le complément circonstanciel de lieu répond à la question « où ? »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « La maison de mon oncle est grande. », quelle est la fonction de « de mon oncle » ?",
+    "choix": [
+      "complément du nom",
+      "COD",
+      "sujet",
+      "complément circonstanciel de lieu"
+    ],
+    "bonneReponse": 0,
+    "explication": "« De mon oncle » complète le nom « maison » : il précise de quelle maison on parle. Il commence par une préposition (de) et fait partie du groupe sujet « la maison de mon oncle »."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle phrase est une phrase complexe, c'est-à-dire qu'elle contient deux verbes conjugués ?",
+    "choix": [
+      "Le chat dort sur le canapé.",
+      "Le chat dort et le chien aboie.",
+      "Le petit chat noir dort.",
+      "Sur le canapé, le chat dort."
+    ],
+    "bonneReponse": 1,
+    "explication": "Une phrase complexe contient plusieurs propositions, donc plusieurs verbes conjugués : « dort » et « aboie ». Les autres phrases n'ont qu'un verbe conjugué : ce sont des phrases simples."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un complément circonstanciel peut souvent être déplacé ou supprimé dans la phrase.",
+    "vrai": true,
+    "explication": "Vrai. « Demain, Léa ira à la piscine » peut devenir « Léa ira à la piscine demain » ou « Léa ira à la piscine ». Le COD, lui, ne peut ni se déplacer ni se supprimer facilement."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Mon vélo est vieux, je prends le tien. », quel mot est un pronom possessif ?",
+    "choix": [
+      "vieux",
+      "je",
+      "le tien",
+      "mon"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le pronom possessif remplace un nom déjà cité et montre à qui appartient quelque chose : « le tien » remplace « ton vélo ». « Mon » est un déterminant possessif : il est placé devant un nom."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans la phrase « Voici le parc dans lequel nous jouons. », quel mot est un pronom relatif ?",
+    "choix": [
+      "dans",
+      "parc",
+      "lequel",
+      "jouons"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le pronom relatif relie la proposition relative au nom qu'il remplace : ici, « lequel » remplace « le parc ». « Dans » est une préposition, et non un pronom."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans la phrase « Ces chaussures sont trop petites pour mon frère. », écris le déterminant démonstratif.",
+    "reponses": [
+      "Ces",
+      "ces"
+    ],
+    "accents": "stricts",
+    "explication": "Le déterminant démonstratif (ce, cet, cette, ces) se place devant le nom et montre de quoi l'on parle. Ici, « Ces » est placé devant « chaussures »."
   }
 ]
