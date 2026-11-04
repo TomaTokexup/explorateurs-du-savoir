@@ -212,5 +212,125 @@
     "enonce": "Dans la table de multiplication de 4, chaque résultat est le double du résultat correspondant dans la table de 2.",
     "vrai": true,
     "explication": "Vrai. Par exemple, 2 × 3 = 6 et 4 × 3 = 12 : 12 est bien le double de 6. Cela marche pour toute la table de 4."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel nombre vient juste après 6 999 quand on compte de 1 en 1 ?",
+    "choix": [
+      "6 000",
+      "6 100",
+      "7 000",
+      "7 100"
+    ],
+    "bonneReponse": 2,
+    "explication": "Quand on passe de 6 999 à 7 000, le chiffre des milliers passe de 6 à 7 et les autres chiffres deviennent 0. Par exemple, 19 devient 20 : on a un changement de dizaine, et ici un changement de millier."
+  },
+  {
+    "type": "saisie",
+    "enonce": "En partant de 2 450, on ajoute 1 000 trois fois. Quel nombre obtient-on ? (écris le nombre en chiffres)",
+    "reponses": [
+      "5 450",
+      "5450"
+    ],
+    "accents": "toleres",
+    "explication": "Ajouter 1 000, c'est augmenter le chiffre des milliers de 1. Trois fois de suite, 2 450 devient 3 450, puis 4 450, puis 5 450."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque situation au nombre total d'objets.",
+    "paires": [
+      [
+        "Dix paquets de 100 billes",
+        "1 000"
+      ],
+      [
+        "Cinq paquets de 1 000 autocollants",
+        "5 000"
+      ],
+      [
+        "Trois paquets de 100 cartes",
+        "300"
+      ],
+      [
+        "Deux paquets de 1 250 feuilles",
+        "2 500"
+      ]
+    ],
+    "explication": "Pour un paquet de 100, multiplie par le nombre de paquets : 10 × 100 = 1 000. Pour chaque situation, fais le calcul : 5 × 1 000 = 5 000, 3 × 100 = 300, 2 × 1 250 = 2 500."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Parmi ces nombres, lequel est à la fois un multiple de 2 et de 5 ?",
+    "choix": [
+      "15",
+      "24",
+      "35",
+      "40"
+    ],
+    "bonneReponse": 3,
+    "explication": "Un multiple de 2 et de 5 est aussi un multiple de 10, donc il se termine par 0. Le 40 se termine par 0, alors que 15 et 35 sont multiples de 5 seulement, et 24 est multiple de 2 seulement."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Complète la suite : 7 ; 14 ; 21 ; 28 ; … Quel est le nombre suivant ?",
+    "choix": [
+      "30",
+      "35",
+      "38",
+      "42"
+    ],
+    "bonneReponse": 1,
+    "explication": "On ajoute toujours 7 à chaque nombre : 21 + 7 = 28, puis 28 + 7 = 35. Ces nombres sont dans la table de 7."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel nombre se trouve exactement au milieu de 400 et de 600 ?",
+    "choix": [
+      "450",
+      "500",
+      "550",
+      "1 000"
+    ],
+    "bonneReponse": 1,
+    "explication": "De 400 à 600, il y a 200 de différence. La moitié de 200 est 100, donc on ajoute 100 à 400 : 400 + 100 = 500. Le milieu est à égale distance des deux nombres."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien faut-il ajouter à 37 pour obtenir 100 ? (écris le nombre)",
+    "reponses": [
+      "63"
+    ],
+    "accents": "toleres",
+    "explication": "On complète d'abord jusqu'à la dizaine suivante : 37 + 3 = 40. Puis on complète jusqu'à 100 : 40 + 60 = 100. Donc 3 + 60 = 63."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel signe faut-il écrire entre ces deux nombres : 806 … 860 ?",
+    "choix": [
+      "<",
+      ">",
+      "=",
+      "+"
+    ],
+    "bonneReponse": 0,
+    "explication": "Les deux nombres ont 8 centaines. On compare alors les dizaines : 0 dizaine dans 806, 6 dizaines dans 860. Donc 806 est plus petit : 806 < 860. La pointe du signe est tournée vers le plus petit nombre."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces nombres du plus petit au plus grand.",
+    "elements": [
+      "2 089",
+      "2 098",
+      "2 809",
+      "2 890",
+      "2 908"
+    ],
+    "explication": "Tous ces nombres ont 2 milliers. On compare d'abord les centaines (0, 8 ou 9), puis les dizaines quand les centaines sont égales : 2 089 < 2 098, et 2 809 < 2 890."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans le nombre 2 407, le chiffre des dizaines est 7.",
+    "vrai": false,
+    "explication": "Faux. Dans 2 407, il y a 2 milliers, 4 centaines, 0 dizaine et 7 unités. Le 7 est le chiffre des unités."
   }
 ]

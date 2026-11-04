@@ -201,5 +201,125 @@
     "enonce": "Le nombre 1 entier et 3/4 est plus petit que 1,5.",
     "vrai": false,
     "explication": "Faux. 3/4 = 0,75, donc 1 entier et 3/4 = 1,75. Ce nombre est plus grand que 1,5 : il se place sur la droite graduée entre 1 et 2, après le milieu."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans le nombre 52 417, combien vaut le chiffre 2 ?",
+    "choix": [
+      "20",
+      "200",
+      "2 000",
+      "20 000"
+    ],
+    "bonneReponse": 2,
+    "explication": "Dans 52 417, le chiffre 2 est à la place des milliers : il vaut 2 000. Le 5 est à la place des dizaines de milliers et vaut 50 000."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Arrondis 47 320 à la dizaine de milliers la plus proche. (écris le nombre)",
+    "reponses": [
+      "50 000",
+      "50000"
+    ],
+    "accents": "toleres",
+    "explication": "Pour arrondir à la dizaine de milliers, on regarde le chiffre des milliers : c'est 7, donc on arrondit vers le haut. 47 320 est plus proche de 50 000 que de 40 000."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque nombre décimal à son écriture fractionnaire.",
+    "paires": [
+      [
+        "0,7",
+        "7/10"
+      ],
+      [
+        "0,9",
+        "9/10"
+      ],
+      [
+        "1,2",
+        "1 et 2/10"
+      ],
+      [
+        "2,5",
+        "2 et 5/10"
+      ]
+    ],
+    "explication": "Le chiffre placé après la virgule indique les dixièmes : 0,7 = 7/10 et 0,9 = 9/10. Pour 1,2, on a 1 entier et 2 dixièmes : 1 et 2/10. Pour 2,5, on a 2 entiers et 5 dixièmes : 2 et 5/10."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces nombres d'habitants du plus petit au plus grand.",
+    "elements": [
+      "12 405 habitants",
+      "12 450 habitants",
+      "12 504 habitants",
+      "12 540 habitants"
+    ],
+    "explication": "Les quatre nombres ont 12 milliers. On compare d'abord les centaines : 4 centaines dans 12 405 et 12 450, 5 centaines dans 12 504 et 12 540. Puis, à centaines égales, on compare les dizaines : 12 405 < 12 450 et 12 504 < 12 540."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Comment s'écrit 150 en chiffres romains ?",
+    "choix": [
+      "CV",
+      "CCL",
+      "CL",
+      "LC"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le C (100) suivi du L (50) donne 100 + 50 = 150. Quand une lettre est placée après une lettre plus grande, on additionne."
+  },
+  {
+    "type": "qcm",
+    "enonce": "En comptant de 25 en 25 à partir de 0, quel nombre vient après 175 ?",
+    "choix": [
+      "180",
+      "200",
+      "275",
+      "190"
+    ],
+    "bonneReponse": 1,
+    "explication": "On ajoute 25 à chaque étape : 175 + 25 = 200. On n'ajoute pas 5 ni 100."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Une ville compte 38 750 habitants. Combien d'habitants faut-il ajouter pour atteindre 40 000 habitants ? (écris le nombre)",
+    "reponses": [
+      "1 250",
+      "1250"
+    ],
+    "accents": "toleres",
+    "explication": "On avance par étapes : 38 750 + 250 = 39 000, puis 39 000 + 1 000 = 40 000. Il faut donc ajouter 250 + 1 000 = 1 250 habitants."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une bouteille contient 1,5 L de jus. Que représente le chiffre 5 ?",
+    "choix": [
+      "5 litres",
+      "5 dixièmes de litre",
+      "5 centièmes de litre",
+      "5 millilitres"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le 5 est placé après la virgule : c'est le chiffre des dixièmes. 0,5 L représente un demi-litre, soit 500 mL."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur une droite graduée, où se place le nombre 4 et 3/4 ?",
+    "choix": [
+      "Entre 3 et 4",
+      "Entre 4 et 5",
+      "Entre 4 et 4,5",
+      "Entre 5 et 6"
+    ],
+    "bonneReponse": 1,
+    "explication": "4 et 3/4 vaut 4 entiers et trois quarts. Il est après 4, mais aussi après 4 et 1/2 (4,5), et avant 5 : il se place entre 4 et 5."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une fraction impropre est plus petite que 1.",
+    "vrai": false,
+    "explication": "Faux. Une fraction impropre a un numérateur plus grand que son dénominateur, donc elle est plus grande que 1. Par exemple, 5/3 = 1 entier et 2/3."
   }
 ]

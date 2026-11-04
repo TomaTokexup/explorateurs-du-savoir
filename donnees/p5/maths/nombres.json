@@ -207,5 +207,124 @@
     "enonce": "Pour estimer 4 987 + 2 012, on peut calculer 5 000 + 2 000 et trouver environ 7 000.",
     "vrai": true,
     "explication": "Vrai. Pour estimer, on remplace chaque nombre par un nombre rond proche : 4 987 est proche de 5 000 et 2 012 est proche de 2 000. La somme est donc environ 7 000."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur une droite graduée, quel est le nombre entier juste plus petit que 0 ?",
+    "choix": [
+      "1",
+      "−1",
+      "10",
+      "−10"
+    ],
+    "bonneReponse": 1,
+    "explication": "Les nombres négatifs sont situés à gauche de 0 sur la droite graduée. Le premier nombre entier à gauche de 0 est −1 : plus on s'éloigne de 0 vers la gauche, plus le nombre est petit, donc −10 est bien plus petit que −1."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel est l'écriture de 5/4 sous la forme d'un nombre mixte ?",
+    "choix": [
+      "1 entier et 1/4",
+      "4 entiers et 1/5",
+      "5 entiers et 4",
+      "1 entier et 4/5"
+    ],
+    "bonneReponse": 0,
+    "explication": "Dans 5/4, il y a 4 quarts dans 1 entier. Il reste 1 quart : 5/4 = 1 entier et 1/4. Le dénominateur (4) reste le même dans la partie fractionnaire."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur un article en magasin, on lit « réduction de 50 % ». Cela signifie que :",
+    "choix": [
+      "On paie la moitié du prix",
+      "On paie le double du prix",
+      "On paie 50 € de moins",
+      "On paie un quart du prix"
+    ],
+    "bonneReponse": 0,
+    "explication": "50 % signifie 50 sur 100, soit la moitié. Avec une réduction de 50 %, on paie donc la moitié du prix affiché."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien y a-t-il de dizaines dans 370 ?",
+    "choix": [
+      "3",
+      "37",
+      "307",
+      "73"
+    ],
+    "bonneReponse": 1,
+    "explication": "Une dizaine vaut 10 unités. Dans 370, il y a 37 dizaines, car 370 : 10 = 37. On peut aussi compter 10, 20, 30... jusqu'à 370 en comptant les dizaines une à une."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien vaut 3,5 × 10 ?",
+    "choix": [
+      "3,50",
+      "35",
+      "350",
+      "13,5"
+    ],
+    "bonneReponse": 1,
+    "explication": "Multiplier par 10 décale tous les chiffres d'un rang vers la gauche : les unités deviennent des dizaines. Ainsi 3,5 × 10 = 35 (3 unités et 5 dixièmes deviennent 3 dizaines et 5 unités)."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans le nombre 6,04, combien y a-t-il de centièmes en tout ?",
+    "reponses": [
+      "604"
+    ],
+    "accents": "toleres",
+    "explication": "Une unité vaut 100 centièmes. Dans 6,04, il y a 6 unités, soit 6 × 100 = 600 centièmes, plus 4 centièmes : 600 + 4 = 604 centièmes."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Continue la suite, de 250 000 en 250 000 : 500 000 ; 750 000 ; 1 000 000 ; … Quel est le nombre suivant ?",
+    "reponses": [
+      "1 250 000",
+      "1250000"
+    ],
+    "accents": "toleres",
+    "explication": "On ajoute toujours 250 000 au nombre précédent. Ici, 1 000 000 + 250 000 = 1 250 000. On peut le vérifier en comptant de 250 000 en 250 000 sur une droite graduée."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque nombre à son arrondi à la centaine de milliers la plus proche.",
+    "paires": [
+      [
+        "3 349 000",
+        "3 300 000"
+      ],
+      [
+        "3 351 000",
+        "3 400 000"
+      ],
+      [
+        "3 452 000",
+        "3 500 000"
+      ],
+      [
+        "3 551 000",
+        "3 600 000"
+      ]
+    ],
+    "explication": "Pour arrondir à la centaine de milliers, on regarde le chiffre des dizaines de milliers : s'il vaut 5 ou plus, on arrondit au-dessus, sinon au-dessous. Ainsi 3 349 000 devient 3 300 000 (4 < 5), mais 3 351 000 devient 3 400 000 (5)."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces nombres du plus petit au plus grand.",
+    "elements": [
+      "1 089 000",
+      "1 890 000",
+      "1 908 000",
+      "1 980 000"
+    ],
+    "explication": "Tous ces nombres sont proches de 1 million. On compare d'abord les centaines de milliers : 0 pour 1 089 000, 8 pour 1 890 000, 9 pour les deux autres. Entre 1 908 000 et 1 980 000, les centaines de milliers sont égales (9) ; c'est la dizaine de milliers qui départage : 0 pour 1 908 000 et 8 pour 1 980 000."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le nombre 16 est à la fois un nombre carré et un nombre triangulaire.",
+    "vrai": false,
+    "explication": "Faux. 16 est un nombre carré, car 4 × 4 = 16. Mais ce n'est pas un nombre triangulaire : les nombres triangulaires sont 1, 3, 6, 10, 15, 21… (on fait des ronds de points en formant un triangle)."
   }
 ]

@@ -201,5 +201,113 @@
     "enonce": "Deux diagrammes en barres ayant des échelles différentes peuvent être comparés directement en regardant seulement la hauteur des barres.",
     "vrai": false,
     "explication": "Faux. Il faut d'abord lire la valeur indiquée sur l'axe de chaque graphique : une même hauteur peut représenter des nombres très différents si les graduations ne sont pas les mêmes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un tableau de Carroll, les colonnes classent les formes en « rouge » ou « pas rouge », et les lignes en « rond » ou « pas rond ». Dans quelle case place-t-on un carré bleu ?",
+    "choix": [
+      "Rouge et rond",
+      "Pas rouge et pas rond",
+      "Rouge et pas rond",
+      "Pas rouge et rond"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le carré bleu n'est pas rouge et n'est pas rond : il va dans la case « pas rouge » et « pas rond ». Dans un tableau de Carroll, chaque objet se place au croisement de son critère de colonne et de son critère de ligne."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Léa fait un pictogramme : un dessin de billet représente 6 billets vendus. Elle a vendu 24 billets. Combien de dessins de billet doit-elle dessiner ?",
+    "choix": [
+      "6",
+      "18",
+      "4",
+      "144"
+    ],
+    "bonneReponse": 2,
+    "explication": "On cherche combien de fois 6 tient dans 24 : 6 × 4 = 24. Léa doit donc dessiner 4 billets."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Graphique A : une graduation vaut 1 bonbon, et la barre de Mia atteint 8 graduations.\nGraphique B : une graduation vaut 2 bonbons, et la barre de Tom atteint 5 graduations.\nQui a le plus de bonbons ?",
+    "choix": [
+      "Mia",
+      "Tom",
+      "Ils en ont autant",
+      "On ne peut pas savoir"
+    ],
+    "bonneReponse": 1,
+    "explication": "Il faut calculer le nombre de bonbons de chaque barre : Mia a 8 × 1 = 8 bonbons, Tom a 5 × 2 = 10 bonbons. Tom en a le plus, même si sa barre est plus basse."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur l'axe vertical d'un diagramme en barres, les graduations sont 0, 20, 40, 60… Une barre s'arrête aux trois quarts du chemin entre 0 et 40. Quelle valeur indique-t-elle ?",
+    "choix": [
+      "10",
+      "20",
+      "30",
+      "40"
+    ],
+    "bonneReponse": 2,
+    "explication": "Entre 0 et 40, il y a 40 unités. Un quart fait 10, donc trois quarts font 3 × 10 = 30."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Ce diagramme de Venn classe des enfants selon deux critères. Où faut-il placer un enfant qui ne sait pas nager et qui n'a pas de chien ?",
+    "choix": [
+      "Dans le cercle « Sait nager » seulement",
+      "Dans la zone commune aux deux cercles",
+      "Dans le cercle « A un chien » seulement",
+      "En dehors des deux cercles"
+    ],
+    "bonneReponse": 3,
+    "explication": "Cet enfant ne vérifie aucun des deux critères, donc il n'est dans aucun cercle. On le place dans le rectangle, à l'extérieur des cercles.",
+    "image": "images/p3/maths/venn-42aa89aa.svg",
+    "alt": "Un diagramme de Venn à deux cercles"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans une école, 12 élèves aiment le rouge, 8 élèves aiment le bleu et 5 élèves aiment le vert. Combien d'élèves ont répondu en tout ?",
+    "reponses": [
+      "25",
+      "25 élèves"
+    ],
+    "accents": "toleres",
+    "explication": "On additionne les trois nombres d'élèves : 12 + 8 + 5 = 25 élèves.",
+    "astuce": "Pose l'addition en colonnes sur ton cahier de brouillon."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Ce diagramme en barres montre le nombre de sorties faites par la classe chaque jour de la semaine. Combien de sorties la classe a-t-elle faites du lundi au jeudi ?",
+    "reponses": [
+      "23",
+      "23 sorties"
+    ],
+    "accents": "toleres",
+    "explication": "Il faut lire la hauteur de chaque barre puis tout additionner : 4 + 7 + 3 + 9 = 23 sorties.",
+    "image": "images/p3/maths/barres-f6689c53.svg",
+    "alt": "Un diagramme en barres"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à sa définition.",
+    "paires": [
+      [
+        "Enquête",
+        "Questions posées à plusieurs personnes"
+      ],
+      [
+        "Donnée",
+        "Une information recueillie"
+      ],
+      [
+        "Effectif",
+        "Nombre d'élèves dans une catégorie"
+      ],
+      [
+        "Catégorie",
+        "Groupe qui a un point commun"
+      ]
+    ],
+    "explication": "Une enquête consiste à poser des questions. Les données sont les réponses recueillies. L'effectif compte les personnes d'une même catégorie, et une catégorie regroupe ce qui se ressemble."
   }
 ]

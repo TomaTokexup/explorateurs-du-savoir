@@ -190,5 +190,124 @@
     "enonce": "Un cylindre possède des sommets.",
     "vrai": false,
     "explication": "Faux. Un cylindre a deux faces rondes (les bases) et une face courbe, mais il n'a pas de sommet : il n'a pas de coin ni de pointe."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur une carte, une ville est repérée par sa longitude et sa latitude. À quoi sert la latitude ?",
+    "choix": [
+      "Indiquer sa position à l'est ou à l'ouest",
+      "Indiquer sa position au nord ou au sud de l'équateur",
+      "Indiquer sa distance en kilomètres par rapport à la mer",
+      "Indiquer le numéro de la case où elle se trouve"
+    ],
+    "bonneReponse": 1,
+    "explication": "La latitude indique la position au nord ou au sud de l'équateur, qui est la ligne horizontale de référence (0°). La longitude, elle, indique la position à l'est ou à l'ouest."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un patron est formé d'un grand rectangle et de deux disques. Quel solide peut-on fabriquer avec ce patron ?",
+    "choix": [
+      "Un cône",
+      "Un cylindre",
+      "Un cube",
+      "Une pyramide à base carrée"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le grand rectangle s'enroule pour faire la face courbe, et les deux disques forment les deux bases : on obtient un cylindre. Un cône n'a qu'un seul disque et une pointe."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Parmi ces objets, lequel est un solide creux, c'est-à-dire vide à l'intérieur ?",
+    "choix": [
+      "Un dé en bois",
+      "Un morceau de craie",
+      "Un rouleau de papier toilette vide",
+      "Une boule de pâte à modeler"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un solide plein est rempli de matière dans tout son volume, comme le dé ou la craie. Un solide creux a un espace vide à l'intérieur, comme un rouleau de papier toilette."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de faces courbes a un cylindre ?",
+    "choix": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un cylindre a deux faces plates en forme de disque (les bases) et une seule face courbe qui fait le tour du solide. Beaucoup d'élèves comptent les deux disques à tort."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un triangle, la somme des trois angles mesure :",
+    "choix": [
+      "90°",
+      "180°",
+      "270°",
+      "360°"
+    ],
+    "bonneReponse": 1,
+    "explication": "La somme des angles d'un triangle vaut 180°, c'est-à-dire un demi-tour. Pour le vérifier, déchire les trois coins d'un triangle en papier et place-les côte à côte : ils forment un angle plat.",
+    "defi": true
+  },
+  {
+    "type": "saisie",
+    "enonce": "Quelle direction est à l'opposé de celle de la flèche rouge ? Écris le nom complet.",
+    "reponses": [
+      "sud-est",
+      "sud est"
+    ],
+    "accents": "toleres",
+    "explication": "Les directions opposées sont : nord et sud, est et ouest, nord-ouest et sud-est. Si tu fais un demi-tour depuis le nord-ouest, tu te retrouves face au sud-est.",
+    "image": "images/p5/maths/rose-no.svg",
+    "alt": "Une rose des vents avec une flèche rouge"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de faces a un prisme à base triangulaire ?",
+    "reponses": [
+      "5",
+      "cinq"
+    ],
+    "accents": "toleres",
+    "explication": "Le prisme a deux faces triangulaires (les bases) et trois faces rectangulaires autour : 2 + 3 = 5 faces."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque figure au nombre de ses axes de symétrie.",
+    "paires": [
+      [
+        "Un losange qui n'est pas un carré",
+        "2 axes de symétrie"
+      ],
+      [
+        "Un cercle",
+        "une infinité d'axes de symétrie"
+      ],
+      [
+        "Un triangle scalène",
+        "aucun axe de symétrie"
+      ]
+    ],
+    "explication": "Le losange non carré a deux axes, qui passent par ses diagonales. Le cercle a une infinité d'axes, car toute droite qui passe par son centre en est un. Le triangle scalène n'a aucun côté égal, donc aucun axe."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Dans un repère, range ces points du plus à gauche au plus à droite.",
+    "elements": [
+      "A (2 ; 5)",
+      "B (3 ; 1)",
+      "C (4 ; 4)",
+      "D (6 ; 0)"
+    ],
+    "explication": "Le premier nombre des coordonnées indique le déplacement horizontal, vers la droite. Pour ranger de gauche à droite, on compare seulement ce premier nombre : 2, puis 3, puis 4, puis 6. Le second nombre indique la hauteur et ne compte pas ici."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un cône a deux bases circulaires.",
+    "vrai": false,
+    "explication": "Faux. Un cône a une seule base circulaire, et il se termine par une pointe appelée sommet."
   }
 ]

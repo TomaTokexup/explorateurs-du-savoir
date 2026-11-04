@@ -130,6 +130,7 @@ Consignes générales :
 - Pars d'un exemple concret (de préférence illustré par une figure) plutôt que de demander une définition abstraite.
 - Si l'énoncé contient une liste (par exemple des événements A, B et C), écris chaque élément sur sa propre ligne en les séparant par \\n dans le texte JSON.
 - Dans "reponses", inutile de répéter une réponse avec une majuscule : le site ignore les majuscules.
+- n'utilise que les notions des objectifs ci-dessus : une notion qui n'y figure pas (par exemple multiplier des nombres décimaux si seules l'addition et la soustraction sont au programme) est interdite, sauf dans une question « défi » ;
 
 Rédige exactement {nb_qcm} questions de type "qcm", {nb_saisies} de type "saisie", {nb_associations} de type "association", {nb_ordres} de type "ordre" et {nb_vraifaux} de type "vraifaux".
 
@@ -197,6 +198,7 @@ Figures (facultatif, surtout en géométrie) :
 {liste_schemas}
     La question demande le NOM d'une partie numérotée (« Comment s'appelle la partie n° 2 ? »), et les choix sont de vrais noms (la rétine, le tympan, la zone tempérée…), jamais des numéros. L'énoncé ne nomme pas les parties numérotées.
 - N'utilise aucune autre forme, et n'écris jamais de champ "image" toi-même.
+- dans un diagramme ou un graphique, choisis des valeurs qui tombent sur une graduation ou exactement au milieu de deux graduations, pour que l'élève puisse les lire ;
 
 Type "association" (l'élève relie chaque élément de gauche à un élément de droite) :
 - "paires" : 3 à 5 paires ["élément de gauche", "élément de droite"], chaque texte de 40 caractères au plus ;

@@ -205,5 +205,126 @@
     "enonce": "Le calcul 7 × 5 donne le même résultat que 7 + 5.",
     "vrai": false,
     "explication": "Faux. 7 × 5 signifie 5 + 5 + 5 + 5 + 5 + 5 + 5 (ou 7 + 7 + 7 + 7 + 7), c'est-à-dire une addition répétée qui vaut 35. 7 + 5 ne vaut que 12."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle est la meilleure estimation de 398 − 207 avant de calculer ?",
+    "choix": [
+      "100",
+      "200",
+      "300",
+      "600"
+    ],
+    "bonneReponse": 1,
+    "explication": "Pour estimer, on arrondit : 398 est proche de 400 et 207 est proche de 200. Donc 400 − 200 = 200, le résultat est environ 200."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Un cinéma a 12 rangées de 9 sièges. Combien de sièges y a-t-il en tout ?",
+    "reponses": [
+      "108",
+      "108 sièges"
+    ],
+    "accents": "toleres",
+    "explication": "Les rangées ont toutes le même nombre de sièges : on multiplie 12 × 9. On peut calculer 10 × 9 = 90, puis 2 × 9 = 18, et 90 + 18 = 108."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien font 2 × 9 ?",
+    "choix": [
+      "11",
+      "16",
+      "18",
+      "29"
+    ],
+    "bonneReponse": 2,
+    "explication": "Multiplier, c'est additionner plusieurs fois le même nombre : 2 × 9 = 9 + 9 = 18."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque nombre à sa moitié.",
+    "paires": [
+      [
+        "80",
+        "40"
+      ],
+      [
+        "260",
+        "130"
+      ],
+      [
+        "500",
+        "250"
+      ],
+      [
+        "620",
+        "310"
+      ]
+    ],
+    "explication": "La moitié d'un nombre, c'est le partager en deux parts égales. Par exemple, la moitié de 260 : 200 : 2 = 100 et 60 : 2 = 30, donc 100 + 30 = 130."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Calcule 16 × 4.",
+    "reponses": [
+      "64"
+    ],
+    "accents": "toleres",
+    "explication": "On décompose 16 en 10 + 6 : 10 × 4 = 40 et 6 × 4 = 24, puis 40 + 24 = 64.",
+    "astuce": "Pose la multiplication en colonnes sur ton brouillon."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces calculs du plus petit résultat au plus grand résultat.",
+    "elements": [
+      "4 × 6",
+      "3 × 9",
+      "5 × 6",
+      "4 × 8"
+    ],
+    "explication": "On calcule chaque produit avec les tables : 4 × 6 = 24, 3 × 9 = 27, 5 × 6 = 30 et 4 × 8 = 32."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Prendre les trois quarts d'un nombre revient à le diviser par 3.",
+    "vrai": false,
+    "explication": "Faux. Prendre les trois quarts, c'est d'abord diviser par 4 puis multiplier par 3. Par exemple, les trois quarts de 20 valent 20 ÷ 4 × 3 = 15."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 12 × 15 en décomposant 15 en 10 + 5.",
+    "choix": [
+      "150",
+      "170",
+      "180",
+      "190"
+    ],
+    "bonneReponse": 2,
+    "explication": "On calcule 12 × 10 = 120 et 12 × 5 = 60, puis 120 + 60 = 180.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une classe de 28 élèves, il y a 13 filles. Combien y a-t-il de garçons ?",
+    "choix": [
+      "15 garçons",
+      "41 garçons",
+      "13 garçons",
+      "25 garçons"
+    ],
+    "bonneReponse": 0,
+    "explication": "Pour trouver les garçons, on enlève les filles au total : 28 − 13 = 15."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 280 + 90.",
+    "choix": [
+      "290",
+      "380",
+      "370",
+      "460"
+    ],
+    "bonneReponse": 2,
+    "explication": "On ajoute les dizaines : 28 dizaines + 9 dizaines = 37 dizaines, donc 280 + 90 = 370."
   }
 ]

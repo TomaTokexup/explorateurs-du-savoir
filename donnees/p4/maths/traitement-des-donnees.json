@@ -220,5 +220,133 @@
     "enonce": "Pour suivre l'évolution de la taille d'une plante chaque semaine, un diagramme circulaire est le plus adapté.",
     "vrai": false,
     "explication": "Faux. Un diagramme circulaire montre des parts d'un tout à un moment donné. Pour suivre une évolution dans le temps, un graphique en ligne est mieux adapté."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un diagramme en blocs, un carré représente 2 élèves. Une colonne est formée de 4 carrés empilés. Combien d'élèves cette colonne représente-t-elle ?",
+    "choix": [
+      "4",
+      "8",
+      "6",
+      "2"
+    ],
+    "bonneReponse": 1,
+    "explication": "Chaque carré vaut 2 élèves, donc 4 carrés valent 4 × 2 = 8 élèves. Erreur fréquente : compter seulement les carrés (4) sans tenir compte de leur valeur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Ce graphique en ligne montre la température relevée à midi chaque jour. Entre quels jours la température a-t-elle le plus baissé ?",
+    "choix": [
+      "Lundi et mardi",
+      "Mercredi et jeudi",
+      "Jeudi et vendredi",
+      "Mardi et mercredi"
+    ],
+    "bonneReponse": 2,
+    "explication": "Pour trouver la plus forte baisse, on cherche la ligne qui descend le plus. Entre jeudi (15 °C) et vendredi (10 °C), la température baisse de 5 °C : c'est la plus grande baisse. Entre mercredi et jeudi, la baisse n'est que de 3 °C.",
+    "image": "images/p4/maths/courbe-c20a8fc9.svg",
+    "alt": "Un graphique en ligne"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une classe de 25 élèves, il y a 13 filles et 12 garçons. On choisit un élève au hasard. Qui a le plus de chances d'être choisi ?",
+    "choix": [
+      "Une fille",
+      "Un garçon",
+      "Autant de chances",
+      "On ne peut pas savoir"
+    ],
+    "bonneReponse": 0,
+    "explication": "Il y a un peu plus de filles que de garçons, donc une fille a un peu plus de chances d'être choisie. La différence est petite, mais elle existe : on compare simplement les deux nombres (13 et 12)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Ce diagramme de Venn classe des enfants selon deux activités. Combien d'enfants font du piano ?",
+    "choix": [
+      "3",
+      "4",
+      "6",
+      "1"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le cercle du piano contient Max (zone commune) et les enfants qui font seulement du piano : Inès, Sami et Ali. On additionne : 1 + 3 = 4. Erreur fréquente : oublier la zone commune.",
+    "image": "images/p4/maths/venn-758d5fd8.svg",
+    "alt": "Un diagramme de Venn à deux cercles"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans un sac, il y a 5 billes rouges et aucune bille bleue. On tire une bille sans regarder. Comment dit-on « tirer une bille bleue » ?",
+    "choix": [
+      "C'est certain",
+      "C'est impossible",
+      "C'est peu probable",
+      "Une chance sur deux"
+    ],
+    "bonneReponse": 1,
+    "explication": "Il n'y a aucune bille bleue dans le sac : on ne peut pas en tirer une. C'est donc impossible. Au contraire, tirer une bille rouge est certain."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Ce diagramme en barres montre le nombre de clients d'une boulangerie lundi et mardi. Combien de clients y a-t-il eu en tout sur ces deux jours ?",
+    "reponses": [
+      "220",
+      "220 clients"
+    ],
+    "accents": "toleres",
+    "astuce": "Pose l'addition en colonnes sur ton cahier de brouillon.",
+    "explication": "On lit les deux barres : 120 clients lundi et 100 clients mardi. On additionne : 120 + 100 = 220 clients.",
+    "image": "images/p4/maths/barres-c4822de2.svg",
+    "alt": "Un diagramme en barres"
+  },
+  {
+    "type": "saisie",
+    "enonce": "Ce graphique en ligne montre le nombre de crêpes vendues chaque mois. Combien de crêpes de plus a-t-on vendues en mars qu'en janvier ?",
+    "reponses": [
+      "30",
+      "30 crêpes"
+    ],
+    "accents": "toleres",
+    "explication": "On lit la valeur de janvier (20 crêpes) et celle de mars (50 crêpes). La différence est 50 − 20 = 30 crêpes.",
+    "image": "images/p4/maths/courbe-b97d849e.svg",
+    "alt": "Un graphique en ligne"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque situation au graphique le plus adapté.",
+    "paires": [
+      [
+        "Comparer les cartes de 4 joueurs",
+        "Diagramme en barres"
+      ],
+      [
+        "Suivre le poids d'un bébé chaque mois",
+        "Graphique en ligne"
+      ],
+      [
+        "Qui fait judo, piano ou les deux ?",
+        "Diagramme de Venn"
+      ],
+      [
+        "Classer selon 2 critères oui / non",
+        "Tableau de Carroll"
+      ]
+    ],
+    "explication": "Le diagramme en barres sert à comparer des quantités, le graphique en ligne à suivre une évolution dans le temps, le diagramme de Venn à montrer deux groupes qui peuvent se chevaucher, et le tableau de Carroll à classer selon deux critères oui / non."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Une roue est partagée en 10 parts égales : 6 parts rouges, 3 parts vertes et 1 part bleue. On la fait tourner une fois. Range ces événements du moins probable au plus probable : obtenir du bleu, obtenir du vert, obtenir du rouge.",
+    "elements": [
+      "Obtenir du bleu",
+      "Obtenir du vert",
+      "Obtenir du rouge"
+    ],
+    "explication": "Il y a 1 part bleue sur 10, 3 parts vertes sur 10 et 6 parts rouges sur 10. Plus il y a de parts d'une couleur, plus cette couleur a de chances d'être obtenue : le bleu est le moins probable, puis le vert, puis le rouge."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Si on lance un dé 60 fois, chaque face sort exactement 10 fois.",
+    "vrai": false,
+    "explication": "Faux. Le hasard ne donne pas des résultats parfaitement équilibrés : on peut obtenir plus de 10 fois un 6 et moins de 10 fois un 2. En moyenne, chaque face sort environ 10 fois, mais rarement exactement 10 fois."
   }
 ]

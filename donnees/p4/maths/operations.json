@@ -209,5 +209,124 @@
     "enonce": "Dans l'égalité x − 9 = 14, la valeur de x est 5.",
     "vrai": false,
     "explication": "Faux. Pour trouver x, on fait l'opération inverse : x = 14 + 9 = 23. Vérification : 23 − 9 = 14. Si on calcule 14 − 9, on ne trouve pas la bonne valeur de x."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 45 + 18 − 30.",
+    "choix": [
+      "93",
+      "57",
+      "33",
+      "15"
+    ],
+    "bonneReponse": 2,
+    "explication": "On calcule dans l'ordre, de gauche à droite : 45 + 18 = 63, puis 63 − 30 = 33."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le produit de deux facteurs vaut 36. Un des facteurs est 9. Quel est l'autre facteur ?",
+    "choix": [
+      "27",
+      "4",
+      "6",
+      "45"
+    ],
+    "bonneReponse": 1,
+    "explication": "Il faut chercher le nombre qui, multiplié par 9, donne 36 : 9 × 4 = 36, donc l'autre facteur est 4."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sans calculer exactement, quelle est la valeur approchée de 412 ÷ 4 ?",
+    "choix": [
+      "10",
+      "100",
+      "20",
+      "1 000"
+    ],
+    "bonneReponse": 1,
+    "explication": "412 est proche de 400, et 400 ÷ 4 = 100. On estime donc le résultat à 100 avant de faire le calcul exact."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 84 ÷ 4.",
+    "choix": [
+      "24",
+      "21",
+      "31",
+      "12"
+    ],
+    "bonneReponse": 1,
+    "explication": "On décompose 84 en 80 + 4 : 80 ÷ 4 = 20 et 4 ÷ 4 = 1, donc 20 + 1 = 21."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Calcule 3,7 + 2,5.",
+    "choix": [
+      "5,12",
+      "6,2",
+      "5,2",
+      "6,12"
+    ],
+    "bonneReponse": 1,
+    "explication": "On additionne les unités et les dixièmes : 3 + 2 = 5 et 7 dixièmes + 5 dixièmes = 12 dixièmes, soit 1 et 2 dixièmes. Donc 5 + 1,2 = 6,2. Attention à ne pas écrire 5,12."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Calcule 8,4 − 3,9.",
+    "reponses": [
+      "4,5",
+      "4.5"
+    ],
+    "accents": "toleres",
+    "explication": "On peut penser à 8,4 − 4 = 4,4, puis ajouter 0,1 car 3,9 = 4 − 0,1 : 4,4 + 0,1 = 4,5."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans l'égalité n − 15 = 27, quelle est la valeur de n ?",
+    "reponses": [
+      "42"
+    ],
+    "accents": "toleres",
+    "explication": "Si on enlève 15 à n et qu'on trouve 27, alors n = 27 + 15 = 42. Vérification : 42 − 15 = 27."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque expression à son résultat.",
+    "paires": [
+      [
+        "3 × 15",
+        "45"
+      ],
+      [
+        "64 ÷ 8",
+        "8"
+      ],
+      [
+        "120 − 45",
+        "75"
+      ],
+      [
+        "500 ÷ 5",
+        "100"
+      ]
+    ],
+    "explication": "3 × 15 = 45 ; 64 ÷ 8 = 8 ; 120 − 45 = 75 ; 500 ÷ 5 = 100."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces calculs du plus petit résultat au plus grand résultat.",
+    "elements": [
+      "3 + 4,8",
+      "6,9 + 1,2",
+      "12,5 − 4,3",
+      "9 − 0,5"
+    ],
+    "explication": "3 + 4,8 = 7,8 ; 6,9 + 1,2 = 8,1 ; 12,5 − 4,3 = 8,2 ; 9 − 0,5 = 8,5. Les résultats sont donc bien rangés du plus petit au plus grand."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour vérifier que 352 + 128 = 480, on peut calculer 480 − 128 et retrouver 352.",
+    "vrai": true,
+    "explication": "Vrai. Si l'addition est juste, soustraire l'un des nombres au résultat donne l'autre : 480 − 128 = 352."
   }
 ]

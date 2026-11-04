@@ -470,5 +470,126 @@
     "enonce": "Un rectangle a deux axes de symétrie.",
     "vrai": true,
     "explication": "Vrai. Un rectangle a un axe de symétrie vertical et un axe horizontal, qui coupent chacun ses côtés en deux parties identiques. Un carré en a quatre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un papillon est symétrique. Si on plie une photo de papillon le long de son axe de symétrie, que se passe-t-il ?",
+    "choix": [
+      "Les deux moitiés se superposent exactement.",
+      "Les deux moitiés restent décalées l'une par rapport à l'autre.",
+      "La photo se coupe en plusieurs morceaux.",
+      "Les deux moitiés deviennent plus grandes."
+    ],
+    "bonneReponse": 0,
+    "explication": "L'axe de symétrie partage la figure en deux moitiés identiques, qui se superposent quand on plie le long de cet axe. C'est comme pour les ailes du papillon."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Comment s'appelle un polygone qui a 7 côtés ?",
+    "reponses": [
+      "heptagone"
+    ],
+    "accents": "toleres",
+    "explication": "Un polygone a autant de côtés que d'angles. « Hepta » vient du grec et veut dire sept, comme dans « hexagone » (6 côtés) ou « octogone » (8 côtés)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel outil faut-il utiliser pour mesurer un angle en degrés ?",
+    "choix": [
+      "La règle",
+      "L'équerre",
+      "Le rapporteur",
+      "Le compas"
+    ],
+    "bonneReponse": 2,
+    "explication": "Le rapporteur est un demi-cercle gradué de 0° à 180°. On place son centre au sommet de l'angle et on lit la graduation où passe un des côtés de l'angle."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le château est au sud-ouest du village. Par rapport au château, dans quelle direction se trouve le village ?",
+    "choix": [
+      "Le sud-ouest",
+      "Le nord-est",
+      "Le nord-ouest",
+      "Le sud-est"
+    ],
+    "bonneReponse": 1,
+    "explication": "Quand on change de point de vue, les directions s'inversent : le sud-ouest devient le nord-est. Le village est donc au nord-est du château.",
+    "astuce": "Dessine une rose des vents avec le château au centre, puis place le village."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien d'arêtes a une pyramide à base carrée ?",
+    "reponses": [
+      "8",
+      "huit"
+    ],
+    "accents": "toleres",
+    "explication": "Une arête est un bord où se rencontrent deux faces. La base carrée a 4 arêtes, et il y a 4 arêtes qui montent jusqu'au sommet : 4 + 4 = 8.",
+    "astuce": "Dessine la pyramide, puis compte les bords un par un : d'abord ceux de la base, ensuite ceux qui montent vers le sommet."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mesure d'angle à son nom.",
+    "paires": [
+      [
+        "30°",
+        "Angle aigu"
+      ],
+      [
+        "90°",
+        "Angle droit"
+      ],
+      [
+        "120°",
+        "Angle obtus"
+      ],
+      [
+        "180°",
+        "Angle plat"
+      ]
+    ],
+    "explication": "Un angle aigu est plus petit que 90°. Un angle droit mesure 90°. Un angle obtus est compris entre 90° et 180°. Un angle plat mesure 180° (un demi-tour)."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces tours du plus petit au plus grand.",
+    "elements": [
+      "Un quart de tour",
+      "Un demi-tour",
+      "Trois quarts de tour",
+      "Un tour complet"
+    ],
+    "explication": "Un quart de tour vaut 90°, un demi-tour 180°, trois quarts de tour 270° et un tour complet 360°. Plus on tourne, plus l'angle est grand."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un triangle rectangle a trois angles droits.",
+    "vrai": false,
+    "explication": "Faux. Un triangle rectangle n'a qu'un seul angle droit ; ses deux autres angles sont aigus. Essaie de dessiner un triangle avec deux angles droits : ses côtés ne se rejoignent jamais !"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un fil à plomb est une ficelle avec un poids au bout. Quand on la laisse pendre, quelle direction indique-t-elle ?",
+    "choix": [
+      "Horizontale",
+      "Verticale",
+      "Oblique",
+      "Courbe"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le poids tire la ficelle vers le bas : elle indique la direction verticale, celle d'un mur bien droit. L'horizontale, c'est celle de la surface de l'eau calme ou d'une étagère."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de faces a un pavé droit, comme une boîte à chaussures ?",
+    "choix": [
+      "4",
+      "6",
+      "8",
+      "12"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un pavé droit a 6 faces rectangulaires : dessus, dessous, devant, derrière, gauche et droite. Attention à ne pas confondre avec ses 8 sommets et ses 12 arêtes."
   }
 ]

@@ -216,5 +216,127 @@
     "enonce": "Si 20 élèves sur 40 ont choisi le football, cela représente 20 % des élèves.",
     "vrai": false,
     "explication": "Faux. 20 élèves sur 40, c'est la moitié de la classe, soit 50 %. Pour trouver le pourcentage, on calcule 20 ÷ 40 = 0,5, puis 0,5 × 100 = 50 %."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Dans une classe de 24 élèves, un secteur d'un diagramme circulaire représente un tiers de la classe. Combien d'élèves ce secteur représente-t-il ?",
+    "choix": [
+      "3 élèves",
+      "8 élèves",
+      "12 élèves",
+      "72 élèves"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un tiers veut dire partager la classe en 3 parts égales. On calcule 24 ÷ 3 = 8 élèves."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Une classe de 25 élèves a une moyenne de 8 points à un test. Quel est le total des points de la classe ? (Réponse en points)",
+    "reponses": [
+      "200",
+      "200 points"
+    ],
+    "accents": "toleres",
+    "explication": "Si chaque élève avait exactement 8 points, la classe aurait 8 × 25 = 200 points en tout. Pour retrouver le total, on multiplie la moyenne par le nombre d'élèves."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un graphique en barres a un axe vertical gradué 0, 10, 20, 50, 100, avec le même écart entre chaque graduation. Pourquoi ce type de graphique peut-il tromper quelqu'un ?",
+    "choix": [
+      "Les barres sont de couleurs différentes.",
+      "Les graduations ne sont pas régulières : un même écart ne correspond pas à la même valeur.",
+      "Il n'y a pas de titre.",
+      "Les barres sont trop hautes pour la feuille."
+    ],
+    "bonneReponse": 1,
+    "explication": "Sur un axe gradué, chaque écart doit correspondre à une même quantité. Ici, l'écart entre 0 et 10 vaut 10, mais celui entre 50 et 100 vaut 50 : les barres paraissent donc plus proches qu'elles ne le sont."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Ce graphique en ligne montre la hauteur d'une plante chaque semaine. Entre la semaine 2 et la semaine 3, que s'est-il passé pour la plante ?",
+    "choix": [
+      "Elle a grandi de 1 cm.",
+      "Elle n'a pas grandi.",
+      "Elle a grandi de 4 cm.",
+      "Elle a rétréci."
+    ],
+    "bonneReponse": 1,
+    "explication": "Quand la ligne est horizontale entre deux dates, la valeur ne change pas. La plante mesure 4 cm à la semaine 2 et encore 4 cm à la semaine 3. Ne pas confondre la hauteur (4 cm) avec la croissance entre les deux semaines.",
+    "image": "images/p5/maths/courbe-919d42df.svg",
+    "alt": "Un graphique en ligne"
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque calcul à son résultat.",
+    "paires": [
+      [
+        "(4 + 6 + 8) ÷ 3",
+        "6"
+      ],
+      [
+        "(12 + 18) ÷ 2",
+        "15"
+      ],
+      [
+        "(2 + 4 + 6 + 8) ÷ 4",
+        "5"
+      ],
+      [
+        "(8 + 9 + 13) ÷ 3",
+        "10"
+      ]
+    ],
+    "explication": "Pour calculer une moyenne, on additionne toutes les données, puis on divise la somme par le nombre de données. Par exemple, (4 + 6 + 8) ÷ 3 = 18 ÷ 3 = 6."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces parts d'un disque du plus petit au plus grand.",
+    "elements": [
+      "Un quart du disque",
+      "Trois dixièmes du disque",
+      "Deux cinquièmes du disque"
+    ],
+    "explication": "Un quart vaut 25 centièmes, trois dixièmes valent 30 centièmes et deux cinquièmes valent 40 centièmes. Plus le nombre de centièmes est grand, plus la part est grande."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Si la moyenne des 3 contrôles d'un élève est 12, le total de ses points est 36.",
+    "vrai": true,
+    "explication": "Vrai. Le total est égal à la moyenne multipliée par le nombre de données : 12 × 3 = 36."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Dans une école, 45 élèves préfèrent le foot et 38 élèves préfèrent le tennis. Chaque élève ne choisit qu'un seul sport. Combien d'élèves ont choisi l'un de ces deux sports en tout ?",
+    "reponses": [
+      "83"
+    ],
+    "accents": "toleres",
+    "explication": "Les groupes ne se mélangent pas, on additionne les deux nombres : 45 + 38 = 83 élèves."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Ce diagramme montre le sport préféré de 30 élèves. Le directeur ne peut proposer qu'un seul sport à la fête de l'école. Lequel doit-il choisir pour que le plus d'élèves soient contents ?",
+    "choix": [
+      "Le tennis",
+      "Le football",
+      "La danse",
+      "Le choix se fait au hasard."
+    ],
+    "bonneReponse": 1,
+    "explication": "Le football a été choisi par 18 élèves, soit plus que le tennis ou la danse (6 élèves chacun). Pour décider, on regarde la barre la plus haute.",
+    "image": "images/p5/maths/barres-7e552cf1.svg",
+    "alt": "Un diagramme en barres"
+  },
+  {
+    "type": "qcm",
+    "enonce": "Les températures relevées à midi pendant 3 jours sont 2 °C, 5 °C et 11 °C. Quelle est la moyenne de ces trois températures ?",
+    "choix": [
+      "5 °C",
+      "6 °C",
+      "9 °C",
+      "18 °C"
+    ],
+    "bonneReponse": 1,
+    "explication": "On additionne les trois températures : 2 + 5 + 11 = 18, puis on divise par le nombre de données : 18 ÷ 3 = 6. La moyenne est donc 6 °C. Attention : 18 est le total, pas la moyenne."
   }
 ]

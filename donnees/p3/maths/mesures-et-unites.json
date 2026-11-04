@@ -191,5 +191,127 @@
     "enonce": "Une heure dure 60 minutes.",
     "vrai": true,
     "explication": "Vrai. Une heure contient 60 minutes, et chaque minute contient 60 secondes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Il est 3 h 15 de l'après-midi. Comment écrit-on cette heure avec l'horloge de 24 heures ?",
+    "choix": [
+      "15 h 15",
+      "3 h 15",
+      "13 h 15",
+      "15 h 3"
+    ],
+    "bonneReponse": 0,
+    "explication": "L'horloge de 24 heures compte les heures de 0 à 23. Pour l'après-midi, on ajoute 12 à l'heure : 3 h + 12 h = 15 h. Les minutes ne changent pas, donc il est 15 h 15."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de millimètres (mm) y a-t-il dans 1 décimètre (dm) ?",
+    "choix": [
+      "10 mm",
+      "100 mm",
+      "1 000 mm",
+      "10 000 mm"
+    ],
+    "bonneReponse": 1,
+    "explication": "1 dm = 10 cm et 1 cm = 10 mm, donc 1 dm = 10 × 10 mm = 100 mm. Beaucoup d'élèves oublient une étape et répondent 10 mm."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de centimes y a-t-il dans 2,35 € ? (réponse en centimes)",
+    "reponses": [
+      "235",
+      "235 centimes",
+      "235 c"
+    ],
+    "accents": "toleres",
+    "explication": "1 € = 100 centimes. Donc 2 € = 200 centimes, et 2,35 € = 200 centimes + 35 centimes = 235 centimes."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Combien de jours y a-t-il au mois de février d'une année qui n'est pas bissextile ? (réponse en jours)",
+    "reponses": [
+      "28",
+      "28 jours"
+    ],
+    "accents": "toleres",
+    "explication": "Le mois de février compte 28 jours, sauf une année bissextile où il en compte 29. Pour retenir les mois de 30 et 31 jours, on peut compter les mois sur ses doigts."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque durée à son équivalent.",
+    "paires": [
+      [
+        "1 semaine",
+        "7 jours"
+      ],
+      [
+        "1 jour",
+        "24 heures"
+      ],
+      [
+        "1 heure",
+        "60 minutes"
+      ],
+      [
+        "1 minute",
+        "60 secondes"
+      ]
+    ],
+    "explication": "Une semaine compte 7 jours, un jour compte 24 heures, une heure compte 60 minutes et une minute compte 60 secondes."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces masses de la plus légère à la plus lourde.",
+    "elements": [
+      "1 kg 800 g",
+      "2 kg",
+      "2 kg 250 g",
+      "2,5 kg"
+    ],
+    "explication": "En grammes : 1 kg 800 g = 1 800 g ; 2 kg = 2 000 g ; 2 kg 250 g = 2 250 g ; 2,5 kg = 2 500 g. Ces valeurs se suivent dans l'ordre croissant.",
+    "astuce": "Écris chaque masse en grammes dans ton brouillon avant de les ranger."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le périmètre d'un carré de 3 cm de côté est de 9 cm.",
+    "vrai": false,
+    "explication": "Faux. Un carré a quatre côtés égaux : son périmètre est 4 × 3 cm = 12 cm. L'élève qui écrit 9 cm a oublié un côté."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de millilitres (ml) y a-t-il dans 1 litre (l) ?",
+    "choix": [
+      "10 ml",
+      "100 ml",
+      "1 000 ml",
+      "10 000 ml"
+    ],
+    "bonneReponse": 2,
+    "explication": "1 l = 10 dl = 100 cl = 1 000 ml. Une petite cuillère contient environ 5 ml : il en faudrait 200 pour remplir une bouteille d'un litre."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel mot désigne la longueur du contour d'une figure ?",
+    "choix": [
+      "L'aire",
+      "Le périmètre",
+      "La hauteur",
+      "La largeur"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le périmètre est la longueur tout autour d'une figure. Pour un carré de 2 cm de côté, on fait 2 + 2 + 2 + 2 = 8 cm. L'aire, elle, mesure la surface à l'intérieur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quelle unité de masse est la plus adaptée pour peser un camion ?",
+    "choix": [
+      "le gramme (g)",
+      "le kilogramme (kg)",
+      "la tonne (t)",
+      "le milligramme (mg)"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un camion pèse plusieurs milliers de kilogrammes. La tonne (t) est l'unité la plus adaptée pour les très grandes masses : 1 t = 1 000 kg."
   }
 ]

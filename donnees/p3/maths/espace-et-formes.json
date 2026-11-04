@@ -207,5 +207,132 @@
     "enonce": "Un rectangle a ses 4 côtés de même longueur.",
     "vrai": false,
     "explication": "Faux. Dans un rectangle, les côtés opposés ont la même longueur, mais les deux longueurs sont différentes : deux côtés sont longs et deux sont courts. Seul le carré a ses 4 côtés de même longueur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Tu es face au sud. Tu fais un quart de tour vers la gauche, dans le sens contraire des aiguilles d'une montre. Dans quelle direction es-tu maintenant ?",
+    "choix": [
+      "Ouest",
+      "Est",
+      "Nord",
+      "Sud-Est"
+    ],
+    "bonneReponse": 1,
+    "explication": "Face au sud, ta main gauche pointe vers l'est : un quart de tour à gauche te mène donc vers l'est. Attention, tourner à droite te mènerait vers l'ouest.",
+    "astuce": "Dessine une petite rose des vents sur ton brouillon et place-toi dessus."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Sur une horloge, la grande aiguille pointe vers le 12 et les deux aiguilles forment un angle plat. Quelle heure indique l'horloge ?",
+    "reponses": [
+      "6 h",
+      "6h",
+      "6 heures",
+      "6 h 00",
+      "6h00",
+      "6:00",
+      "18 h",
+      "18h",
+      "18 heures",
+      "18 h 00",
+      "18h00",
+      "18:00"
+    ],
+    "accents": "toleres",
+    "explication": "Un angle plat est un demi-tour : les deux aiguilles sont alignées et opposées. Si la grande aiguille est sur le 12, la petite est sur le 6, donc il est 6 heures. On peut aussi dire 18 h si c'est le soir."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une diagonale est un segment qui relie deux sommets qui ne sont pas côte à côte. Combien un rectangle a-t-il de diagonales ?",
+    "choix": [
+      "1",
+      "2",
+      "4",
+      "6"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un rectangle a 4 sommets. Les segments qui relient deux sommets voisins sont des côtés ; il reste 2 diagonales, qui se croisent en leur milieu.",
+    "defi": true
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque mot à sa définition.",
+    "paires": [
+      [
+        "Régulier",
+        "Côtés et angles tous égaux"
+      ],
+      [
+        "Irrégulier",
+        "Côtés ou angles pas tous égaux"
+      ],
+      [
+        "Sommet",
+        "Le coin où deux côtés se rejoignent"
+      ]
+    ],
+    "explication": "Une figure régulière a tous ses côtés et tous ses angles égaux, comme le carré. Si ce n'est pas le cas, elle est irrégulière, comme le rectangle qui n'est pas un carré. Le sommet est le coin de la figure."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Une porte entrouverte forme avec le mur un angle d'environ 30°. Quel type d'angle la porte forme-t-elle avec le mur ?",
+    "choix": [
+      "Un angle droit",
+      "Un angle obtus",
+      "Un angle aigu",
+      "Un angle plat"
+    ],
+    "bonneReponse": 2,
+    "explication": "Un angle aigu est plus petit qu'un angle droit (90°). Une porte à peine ouverte forme donc un angle aigu."
+  },
+  {
+    "type": "saisie",
+    "enonce": "En tournant sur toi-même pour faire un tour complet, combien de quarts de tour fais-tu ?",
+    "reponses": [
+      "4",
+      "quatre"
+    ],
+    "accents": "toleres",
+    "explication": "Un quart de tour correspond à un angle droit (90°). Un tour complet est composé de 4 quarts de tour, donc de 4 angles droits."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range les positions suivantes des aiguilles d'une horloge, de l'angle le plus petit au plus grand.",
+    "elements": [
+      "Les aiguilles indiquent 2 h",
+      "Les aiguilles indiquent 9 h",
+      "Les aiguilles indiquent 5 h"
+    ],
+    "explication": "Compte les espaces entre les deux aiguilles, par le plus court chemin. À 2 h, il y a 2 espaces : l'angle est aigu. À 9 h, il y a 3 espaces, un quart de tour : c'est un angle droit. À 5 h, il y a 5 espaces : l'angle est obtus, plus grand qu'un angle droit."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur un échiquier, la case C4 est repérée par une lettre et un chiffre. Que désigne le chiffre 4 ?",
+    "choix": [
+      "La colonne",
+      "La ligne",
+      "La couleur de la case",
+      "La distance à l'entrée"
+    ],
+    "bonneReponse": 1,
+    "explication": "La lettre donne la colonne (la bande verticale) et le chiffre donne la ligne (la bande horizontale) : C4 est dans la colonne C, à la ligne 4."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un triangle isocèle a seulement deux côtés de même longueur. Combien d'axes de symétrie a-t-il ?",
+    "choix": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "bonneReponse": 1,
+    "explication": "Un axe de symétrie partage la figure en deux moitiés identiques qui se superposent. Dans un triangle isocèle, seule la ligne qui part du sommet entre les deux côtés égaux et coupe le côté opposé en son milieu convient."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Un pavé droit est un cube particulier.",
+    "vrai": false,
+    "explication": "Faux. C'est l'inverse : un cube est un pavé droit particulier, dont les arêtes ont la même longueur. Un pavé droit peut avoir des faces rectangulaires, alors qu'un cube n'a que des faces carrées."
   }
 ]

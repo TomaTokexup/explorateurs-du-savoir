@@ -190,5 +190,128 @@
     "enonce": "Une heure et demie dure 90 minutes.",
     "vrai": true,
     "explication": "Vrai. Une heure fait 60 minutes et une demi-heure fait 30 minutes, donc 60 + 30 = 90 minutes."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un cube a une arête de 3 cm. Quel est son volume ?",
+    "choix": [
+      "9 cm³",
+      "27 cm³",
+      "12 cm³",
+      "18 cm³"
+    ],
+    "bonneReponse": 1,
+    "explication": "Le volume d'un cube se calcule en multipliant ses trois dimensions égales : 3 × 3 × 3 = 27. Un volume s'écrit en cm³ (centimètres cubes)."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un cycliste roule à 20 km/h. Combien de temps met-il pour parcourir 60 km ?",
+    "choix": [
+      "40 h",
+      "2 h",
+      "3 h",
+      "1 h 20 min"
+    ],
+    "bonneReponse": 2,
+    "explication": "Pour trouver une durée, on divise la distance par la vitesse : 60 ÷ 20 = 3. Il met donc 3 heures. Attention à l'unité de la vitesse : elle est donnée en km par heure."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Un ruban mesure 2 m et un autre ruban mesure 35 cm. Quelle est la longueur totale des deux rubans, en cm ?",
+    "reponses": [
+      "235",
+      "235 cm"
+    ],
+    "accents": "toleres",
+    "explication": "Pour additionner des longueurs, il faut les écrire dans la même unité : 2 m = 200 cm, puis 200 + 35 = 235 cm."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Combien de décimètres carrés (dm²) y a-t-il dans 2 m² ?",
+    "choix": [
+      "20 dm²",
+      "200 dm²",
+      "2 000 dm²",
+      "200 cm²"
+    ],
+    "bonneReponse": 1,
+    "explication": "1 m = 10 dm, donc un carré de 1 m de côté contient 10 × 10 = 100 petits carrés de 1 dm². Pour une aire, on passe de m² à dm² en multipliant par 100, et non par 10."
+  },
+  {
+    "type": "association",
+    "enonce": "Relie chaque instrument à la grandeur qu'il permet de mesurer.",
+    "paires": [
+      [
+        "règle graduée",
+        "la longueur"
+      ],
+      [
+        "balance",
+        "la masse"
+      ],
+      [
+        "verre doseur",
+        "la capacité"
+      ],
+      [
+        "montre",
+        "la durée"
+      ]
+    ],
+    "explication": "La règle mesure des longueurs, la balance des masses, le verre doseur des capacités (les quantités de liquide) et la montre des durées."
+  },
+  {
+    "type": "ordre",
+    "enonce": "Range ces volumes du plus petit au plus grand.",
+    "elements": [
+      "300 cm³",
+      "1 dm³",
+      "0,5 m³"
+    ],
+    "explication": "Il faut comparer dans la même unité : 1 dm³ = 1 000 cm³ et 1 m³ = 1 000 dm³. Ainsi 0,5 m³ = 500 dm³, qui est plus grand que 1 dm³, lui-même plus grand que 300 cm³."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "L'aire d'un carré de 4 cm de côté est de 8 cm².",
+    "vrai": false,
+    "explication": "Faux. Pour calculer l'aire d'un carré, on multiplie le côté par lui-même : 4 × 4 = 16 cm²."
+  },
+  {
+    "type": "saisie",
+    "enonce": "Un kilogramme de pommes coûte 2,40 €. Combien coûtent 3 kg de pommes, en euros ?",
+    "reponses": [
+      "7,20",
+      "7,20 €",
+      "7,20€",
+      "7,2",
+      "7,2 €"
+    ],
+    "accents": "toleres",
+    "explication": "3 kg coûtent 3 fois le prix d'1 kg : 2,40 € + 2,40 € + 2,40 € = 7,20 €. On peut aussi compter 3 × 2 € = 6 € et 3 × 40 centimes = 1,20 €, soit 7,20 €.",
+    "defi": true
+  },
+  {
+    "type": "qcm",
+    "enonce": "Sur une carte à l'échelle 1/50 000, une route mesure 4 cm. Quelle est sa longueur réelle ?",
+    "choix": [
+      "200 m",
+      "2 km",
+      "20 km",
+      "4 km"
+    ],
+    "bonneReponse": 1,
+    "explication": "L'échelle 1/50 000 signifie que 1 cm sur la carte représente 50 000 cm dans la réalité. Donc 4 cm représentent 4 × 50 000 = 200 000 cm, soit 2 000 m ou 2 km."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Un camion pèse 3,5 t. Quelle est sa masse en kilogrammes ?",
+    "choix": [
+      "3 500 kg",
+      "35 kg",
+      "350 kg",
+      "3 050 kg"
+    ],
+    "bonneReponse": 0,
+    "explication": "1 t = 1 000 kg. On peut décomposer : 3 t = 3 000 kg, puis 0,5 t = 500 kg. Le total est donc 3 500 kg."
   }
 ]
