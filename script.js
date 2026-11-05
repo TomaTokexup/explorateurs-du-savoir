@@ -459,6 +459,7 @@ let score = 0;                 // nombre de bonnes réponses
 let defisReussis = 0;          // nombre de questions « Défi » réussies
 let niveauDesDefis = "";       // niveau réel des défis (ex. "P5"), fixé par pageCahier
 let cleEtoiles = null;         // où ranger les étoiles du thème (null pour la révision mélangée)
+let debutDuTest = null;        // programmation : position de la 1re question du « petit test » (null sinon)
 
 const ACCENTS = ["é", "è", "ê", "à", "â", "ç", "ù", "û", "ô", "î", "ï", "ë"];
 
@@ -528,7 +529,17 @@ function lancerQuiz(banque, nombre) {
 // Une nouvelle partie : on tire au hasard des questions dans la banque
 // (un nouveau tirage à chaque fois qu'on clique sur "Recommencer")
 function demarrer() {
-  questions = melanger(banqueDuQuiz).slice(0, nombreParPartie).map(preparerQuestion);
+  const robots = banqueDuQuiz.filter(function (q) { return typeDe(q) === "robot"; });
+  if (robots.length > 0) {
+    // Programmation : d'abord TOUS les robots, dans l'ordre du fichier (du plus facile au plus difficile),
+    // puis un « petit test » avec les autres questions (QCM, vrai ou faux), mélangées
+    const test = melanger(banqueDuQuiz.filter(function (q) { return typeDe(q) !== "robot"; }));
+    questions = robots.concat(test).map(preparerQuestion);
+    debutDuTest = test.length > 0 ? robots.length : null;
+  } else {
+    questions = melanger(banqueDuQuiz).slice(0, nombreParPartie).map(preparerQuestion);
+    debutDuTest = null;
+  }
   numeroQuestion = 0;
   score = 0;
   defisReussis = 0;
@@ -537,8 +548,15 @@ function demarrer() {
 
 function afficherQuestion() {
   const question = questions[numeroQuestion];
-  document.getElementById("progression").textContent =
-    "Question " + (numeroQuestion + 1) + " sur " + questions.length;
+  let progression = "Question " + (numeroQuestion + 1) + " sur " + questions.length;
+  if (debutDuTest !== null) {
+    progression = numeroQuestion < debutDuTest
+      ? "Exercice " + (numeroQuestion + 1) + " sur " + debutDuTest
+      : "Petit test : question " + (numeroQuestion - debutDuTest + 1) + " sur " + (questions.length - debutDuTest);
+  }
+  document.getElementById("progression").textContent = progression;
+  // Annonce du petit test, seulement sur sa première question
+  document.getElementById("annonce-test").hidden = numeroQuestion !== debutDuTest;
   const barre = document.getElementById("barre");
   barre.hidden = false;
   barre.firstElementChild.style.width = ((numeroQuestion + 1) / questions.length) * 100 + "%";
@@ -998,6 +1016,9 @@ function afficherCorrection(question, estJuste, rappel) {
 
   const derniereQuestion = numeroQuestion === questions.length - 1;
   boutonSuivant.textContent = derniereQuestion ? "Voir mon score" : "Question suivante";
+  if (debutDuTest !== null && numeroQuestion < debutDuTest) {
+    boutonSuivant.textContent = numeroQuestion === debutDuTest - 1 ? "Passer au petit test" : "Exercice suivant";
+  }
   boutonSuivant.hidden = false;
   boutonSuivant.focus();
 }

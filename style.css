@@ -1611,3 +1611,15 @@ button.bloc:disabled { opacity: 0.4; cursor: default; transform: none; }
 @media (max-width: 560px) {
   .terrain { width: 100%; }
 }
+
+/* Annonce du « petit test » qui suit les exercices du robot */
+.annonce-test {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border-radius: var(--rayon);
+  background: var(--surligneur);
+  font-weight: 700;
+  animation: apparition 0.4s ease-out;
+}
+
+.annonce-test[hidden] { display: none; }

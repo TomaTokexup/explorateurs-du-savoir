@@ -56,7 +56,7 @@
   },
   {
     "titre": "Sa gauche, pas la tienne !",
-    "texte": "Le robot tourne vers SA gauche ou SA droite. Quand il regarde vers le bas de l'écran, sa gauche est de ton côté droit !\nAstuce : penche la tête, ou tourne ta feuille, pour regarder dans la même direction que lui.",
+    "texte": "Le robot tourne vers SA gauche ou SA droite. Quand il regarde vers le bas de l'écran, sa gauche est de ton côté droit !\nAstuce : mets-toi à sa place. Imagine que tu marches dans la grille, dans la même direction que lui : de quel côté est ta main gauche ?",
     "demo": {
       "grille": {
         "largeur": 4,
