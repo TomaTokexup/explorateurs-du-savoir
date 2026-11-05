@@ -1,0 +1,66 @@
+[
+  {
+    "titre": "Un bug, c'est quoi ?",
+    "texte": "Un bug est une erreur dans un programme. L'ordinateur ne s'en rend pas compte : il fait exactement ce qui est écrit, même si ce n'est pas ce qu'on voulait !\nEn anglais, « bug » veut dire « insecte ». On raconte qu'autrefois, un vrai insecte coincé dans un ordinateur l'empêchait de fonctionner."
+  },
+  {
+    "titre": "Observer le bug",
+    "texte": "Ce robot devait monter de 2 cases, puis aller à droite jusqu'à l'étoile. Lance le programme et regarde ce qui se passe.\nQuand le robot se cogne, le bloc en rouge montre où le problème apparaît. L'erreur peut être dans ce bloc, ou juste avant.",
+    "demo": {
+      "grille": {
+        "largeur": 4,
+        "hauteur": 4
+      },
+      "depart": {
+        "x": 0,
+        "y": 3,
+        "direction": "nord"
+      },
+      "cible": {
+        "x": 2,
+        "y": 1
+      },
+      "programme": [
+        "avancer",
+        "avancer",
+        "gauche",
+        "avancer",
+        "avancer"
+      ]
+    }
+  },
+  {
+    "titre": "Les bugs les plus fréquents",
+    "texte": "🐞 Un bloc oublié, ou un bloc en trop.\n🐞 « Tourner à gauche » au lieu de « Tourner à droite ».\n🐞 Un mauvais nombre de tours dans une boucle.\n🐞 Un bloc placé dans une boucle au lieu d'être placé après.\nPense à ces suspects quand tu cherches une erreur !"
+  },
+  {
+    "titre": "Corriger",
+    "texte": "Le robot a tourné du mauvais côté : on remplace « Tourner à gauche » par « Tourner à droite », et cette fois il arrive sur l'étoile.\nRegarder, trouver l'erreur, corriger, puis relancer pour vérifier : c'est ça, déboguer !",
+    "demo": {
+      "grille": {
+        "largeur": 4,
+        "hauteur": 4
+      },
+      "depart": {
+        "x": 0,
+        "y": 3,
+        "direction": "nord"
+      },
+      "cible": {
+        "x": 2,
+        "y": 1
+      },
+      "programme": [
+        "avancer",
+        "avancer",
+        "droite",
+        "avancer",
+        "avancer"
+      ]
+    }
+  },
+  {
+    "titre": "À toi de jouer !",
+    "texte": "Dans les exercices, le programme est déjà écrit, mais il contient un bug. Lance-le d'abord pour observer ce qui se passe, puis corrige-le : retire un bloc avec ✕, ajoute un bloc, change le nombre de tours…\nPour ajouter un bloc dans une boucle, touche d'abord le titre de la boucle : elle s'entoure de jaune.\nTu t'es perdu ? Le bouton « ↺ Programme de départ » remet le programme du début. Pense à la vitesse 🐢 pour bien suivre le robot."
+  }
+]

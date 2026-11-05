@@ -10,5 +10,9 @@
   {
     "id": "conditions",
     "titre": "Les conditions"
+  },
+  {
+    "id": "bugs",
+    "titre": "Chasse aux bugs"
   }
 ]

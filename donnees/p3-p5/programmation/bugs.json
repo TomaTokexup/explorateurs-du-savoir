@@ -1,0 +1,273 @@
+[
+  {
+    "type": "robot",
+    "enonce": "Le robot devait s'arrêter sur l'étoile, mais il la dépasse. Trouve le bug !",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 0,
+      "y": 2,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 3,
+      "y": 2
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite"
+    ],
+    "programmeDepart": [
+      "avancer",
+      "avancer",
+      "avancer",
+      "avancer"
+    ],
+    "solution": [
+      "avancer",
+      "avancer",
+      "avancer"
+    ],
+    "explication": "Il y avait un « Avancer » en trop : le robot faisait 4 pas au lieu de 3. En retirant un bloc, il s'arrête pile sur l'étoile."
+  },
+  {
+    "type": "robot",
+    "enonce": "Le robot se cogne contre le bord au lieu d'aller vers l'étoile. Trouve le bug !",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 0,
+      "y": 4,
+      "direction": "nord"
+    },
+    "cible": {
+      "x": 3,
+      "y": 1
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite"
+    ],
+    "programmeDepart": [
+      "avancer",
+      "avancer",
+      "avancer",
+      "gauche",
+      "avancer",
+      "avancer",
+      "avancer"
+    ],
+    "solution": [
+      "avancer",
+      "avancer",
+      "avancer",
+      "droite",
+      "avancer",
+      "avancer",
+      "avancer"
+    ],
+    "explication": "Le robot tournait du mauvais côté : il fallait « Tourner à droite » pour aller vers l'étoile, pas « Tourner à gauche »."
+  },
+  {
+    "type": "robot",
+    "enonce": "La boucle ne fait pas avancer le robot assez loin. Trouve le bug !",
+    "grille": {
+      "largeur": 7,
+      "hauteur": 3
+    },
+    "depart": {
+      "x": 0,
+      "y": 1,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 6,
+      "y": 1
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter"
+    ],
+    "maxBlocs": 3,
+    "programmeDepart": [
+      {
+        "repeter": 5,
+        "faire": [
+          "avancer"
+        ]
+      }
+    ],
+    "solution": [
+      {
+        "repeter": 6,
+        "faire": [
+          "avancer"
+        ]
+      }
+    ],
+    "explication": "Il faut 6 pas pour atteindre l'étoile, mais la boucle n'en faisait que 5. Le bon nombre de tours est 6."
+  },
+  {
+    "type": "robot",
+    "enonce": "Le robot devait monter l'escalier jusqu'à l'étoile, mais il se cogne. Trouve le bug !",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 0,
+      "y": 4,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 4,
+      "y": 0
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter"
+    ],
+    "maxBlocs": 5,
+    "programmeDepart": [
+      {
+        "repeter": 4,
+        "faire": [
+          "avancer",
+          "gauche",
+          "avancer"
+        ]
+      },
+      "droite"
+    ],
+    "solution": [
+      {
+        "repeter": 4,
+        "faire": [
+          "avancer",
+          "gauche",
+          "avancer",
+          "droite"
+        ]
+      }
+    ],
+    "explication": "« Tourner à droite » était placé après la boucle : après chaque marche, le robot restait tourné vers le haut. Placé dans la boucle, il remet le robot face à la droite à la fin de chaque marche."
+  },
+  {
+    "type": "robot",
+    "enonce": "Le robot devait suivre le bord de la grille jusqu'à l'étoile, mais il se cogne. Trouve le bug !",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 0,
+      "y": 4,
+      "direction": "nord"
+    },
+    "cible": {
+      "x": 4,
+      "y": 0
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter",
+      "si_mur"
+    ],
+    "maxBlocs": 4,
+    "programmeDepart": [
+      {
+        "repeter": 8,
+        "faire": [
+          {
+            "si": "mur_devant",
+            "faire": [
+              "gauche"
+            ]
+          },
+          "avancer"
+        ]
+      }
+    ],
+    "solution": [
+      {
+        "repeter": 8,
+        "faire": [
+          {
+            "si": "mur_devant",
+            "faire": [
+              "droite"
+            ]
+          },
+          "avancer"
+        ]
+      }
+    ],
+    "explication": "Arrivé en haut, le robot tournait à gauche et se cognait contre le bord. Pour suivre le bord jusqu'à l'étoile, il doit tourner à droite."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qu'est-ce qu'un bug ?",
+    "choix": [
+      "Une erreur dans un programme",
+      "Un robot qui fonctionne très bien",
+      "Un bloc « Répéter »",
+      "Un ordinateur éteint"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un bug est une erreur dans un programme. La machine suit le programme tel qu'il est écrit, avec l'erreur."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le robot se cogne contre un mur. Que fais-tu en premier ?",
+    "choix": [
+      "Je regarde quel bloc l'a fait cogner",
+      "J'efface tout et je recommence",
+      "Je relance sans rien changer",
+      "Je change tous les blocs au hasard"
+    ],
+    "bonneReponse": 0,
+    "explication": "On commence par observer : le bloc en rouge montre où le problème apparaît. Il suffit souvent de corriger un seul bloc."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le robot devait avancer de 5 cases, mais il n'en fait que 4. Son programme : « Répéter 4 fois : Avancer ». Où est le bug ?",
+    "choix": [
+      "Dans le nombre de tours : il en faut 5",
+      "Dans le bloc « Avancer »",
+      "Il faut tourner à droite",
+      "Il n'y a pas de bug"
+    ],
+    "bonneReponse": 0,
+    "explication": "La boucle fait avancer le robot d'une case à chaque tour. Pour 5 cases, il faut 5 tours."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Quand un programme a un bug, l'ordinateur montre toujours où est l'erreur.",
+    "vrai": false,
+    "explication": "Faux. L'ordinateur fait ce qui est écrit sans savoir ce qu'on voulait. C'est au programmeur d'observer et de trouver l'erreur."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les programmeurs professionnels font aussi des bugs.",
+    "vrai": true,
+    "explication": "Vrai. Tous les programmeurs font des erreurs. Une grande partie de leur travail consiste à les chercher et à les corriger."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour trouver un bug, il est utile de regarder le programme s'exécuter lentement, bloc par bloc.",
+    "vrai": true,
+    "explication": "Vrai. En suivant le robot pas à pas, on voit le moment exact où il fait autre chose que ce qu'on voulait."
+  }
+]

@@ -1263,6 +1263,7 @@ function finirSerie() {
 //     "depart": {"x": 0, "y": 4, "direction": "est"}, "cible": {"x": 3, "y": 2},
 //     "murs": [[2, 3]], "blocs": ["avancer", "gauche", "droite", "repeter", "si_mur"], "maxBlocs": 7,
 //     "solution": [...], "explication": "..." }
+//   + "programmeDepart": [...] (chasse aux bugs) : un programme faux, déjà écrit, que l'élève corrige
 // Les instructions d'un programme (même format pour "solution" et pour le programme de l'élève) :
 //   "avancer", "gauche", "droite"                         → instructions simples
 //   { "repeter": 3, "faire": [ ... ] }                    → boucle (instructions simples et « si »)
@@ -1641,7 +1642,10 @@ function afficherRobot(question) {
   const terrain = creerTerrain(question);
   const autorises = question.blocs || ["avancer", "gauche", "droite"];
   const max = question.maxBlocs || null;
-  let programme = [];
+  // Chasse aux bugs : l'exercice peut fournir un programme de départ (faux) que l'élève corrige
+  const depart = question.programmeDepart || null;
+  function copieDuDepart() { return depart ? JSON.parse(JSON.stringify(depart)) : []; }
+  let programme = copieDuDepart();
   let ouverts = [];            // pile des conteneurs ouverts, du plus extérieur au plus intérieur
   let essais = 0;
   let enCours = false;
@@ -1652,7 +1656,9 @@ function afficherRobot(question) {
 
   const aide = document.createElement("p");
   aide.className = "consigne-type";
-  aide.textContent = "Touche les blocs pour construire ton programme, puis appuie sur ▶ Lancer.";
+  aide.textContent = depart
+    ? "🐞 Ce programme a un bug ! Lance-le pour voir où ça coince, puis corrige-le."
+    : "Touche les blocs pour construire ton programme, puis appuie sur ▶ Lancer.";
 
   const palette = document.createElement("div");
   palette.className = "palette";
@@ -1675,6 +1681,20 @@ function afficherRobot(question) {
   effacer.className = "bouton-effacer";
   effacer.textContent = "🗑️ Tout effacer";
   actions.append(lancer, effacer);
+  // Pour un programme à corriger : revenir au programme de départ, si l'élève s'est perdu
+  const recommencer = document.createElement("button");
+  recommencer.type = "button";
+  recommencer.className = "bouton-effacer";
+  recommencer.textContent = "↺ Programme de départ";
+  recommencer.hidden = depart === null;
+  recommencer.addEventListener("click", function () {
+    programme = copieDuDepart();
+    ouverts = [];
+    effacerMessage();
+    terrain.revenirAuDepart();
+    dessiner();
+  });
+  actions.appendChild(recommencer);
 
   // Les boutons de la palette (un par bloc autorisé) + le bouton qui ferme le conteneur ouvert
   const boutonsPalette = [];
@@ -1740,6 +1760,7 @@ function afficherRobot(question) {
     fermer.disabled = enCours;
     lancer.disabled = enCours || programme.length === 0;
     effacer.disabled = enCours || programme.length === 0;
+    recommencer.disabled = enCours;
     if (programme.length === 0) {
       const vide = document.createElement("li");
       vide.className = "programme-vide";
