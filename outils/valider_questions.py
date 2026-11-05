@@ -363,6 +363,32 @@ def verifier_robot(question, numero):
             erreurs.append(f"Question {numero} : le mur {mur} est sur le départ ou sur la cible")
         deja_vus.append(mur)
 
+    # Contrôle 3 bis : les pièces (facultatives) sont des cases libres de la grille, sans doublon
+    pieces = question.get("pieces", [])
+    if not isinstance(pieces, list):
+        erreurs.append(f"Question {numero} : 'pieces' doit être une liste")
+        return erreurs
+
+    deja_vues = []
+    for piece in pieces:
+        if not (isinstance(piece, list) and len(piece) == 2):
+            erreurs.append(f"Question {numero} : chaque pièce doit être une case [x, y]")
+            continue
+        x, y = piece
+        if not (isinstance(x, int) and 0 <= x < largeur and isinstance(y, int) and 0 <= y < hauteur):
+            erreurs.append(f"Question {numero} : la pièce {piece} est hors de la grille")
+        if piece in deja_vues:
+            erreurs.append(f"Question {numero} : la pièce {piece} est en double")
+        if piece in murs:
+            erreurs.append(f"Question {numero} : la pièce {piece} est sur un mur")
+        if piece == [depart["x"], depart["y"]] or piece == [cible["x"], cible["y"]]:
+            erreurs.append(f"Question {numero} : la pièce {piece} est sur le départ ou sur la sortie")
+        deja_vues.append(piece)
+
+    necessaires = question.get("piecesNecessaires", len(pieces))
+    if "piecesNecessaires" in question and not (isinstance(necessaires, int) and 1 <= necessaires <= len(pieces)):
+        erreurs.append(f"Question {numero} : 'piecesNecessaires' doit être un entier de 1 à {len(pieces)}")
+        
     # Contrôle 4 : les blocs proposés à l'élève
     BLOCS_CONNUS = ("avancer", "gauche", "droite", "repeter", "si_mur")
     blocs = question.get("blocs")
