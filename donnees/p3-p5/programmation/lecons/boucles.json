@@ -1,0 +1,94 @@
+[
+  {
+    "titre": "Toujours la même chose…",
+    "texte": "Pour faire avancer le robot de 6 cases, il faut écrire 6 fois « Avancer ». C'est long, et on peut facilement se tromper en comptant !\nRegarde ce programme : il marche, mais il est bien répétitif.",
+    "demo": {
+      "grille": {
+        "largeur": 7,
+        "hauteur": 3
+      },
+      "depart": {
+        "x": 0,
+        "y": 1,
+        "direction": "est"
+      },
+      "cible": {
+        "x": 6,
+        "y": 1
+      },
+      "programme": [
+        "avancer",
+        "avancer",
+        "avancer",
+        "avancer",
+        "avancer",
+        "avancer"
+      ]
+    }
+  },
+  {
+    "titre": "La boucle « Répéter »",
+    "texte": "Une boucle répète plusieurs fois les blocs qu'elle contient.\n« 🔁 Répéter 6 fois : Avancer » fait exactement la même chose que 6 blocs « Avancer », mais avec 2 blocs seulement !",
+    "demo": {
+      "grille": {
+        "largeur": 7,
+        "hauteur": 3
+      },
+      "depart": {
+        "x": 0,
+        "y": 1,
+        "direction": "est"
+      },
+      "cible": {
+        "x": 6,
+        "y": 1
+      },
+      "programme": [
+        {
+          "repeter": 6,
+          "faire": [
+            "avancer"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "titre": "Répéter un motif",
+    "texte": "Une boucle peut contenir plusieurs blocs. Ici, le robot monte un escalier : il répète « Avancer, Tourner à gauche, Avancer, Tourner à droite ».\nPour écrire une boucle, cherche le motif, c'est-à-dire le petit morceau de chemin qui revient toujours pareil. Puis compte combien de fois il revient.",
+    "demo": {
+      "grille": {
+        "largeur": 5,
+        "hauteur": 5
+      },
+      "depart": {
+        "x": 0,
+        "y": 4,
+        "direction": "est"
+      },
+      "cible": {
+        "x": 4,
+        "y": 0
+      },
+      "programme": [
+        {
+          "repeter": 4,
+          "faire": [
+            "avancer",
+            "gauche",
+            "avancer",
+            "droite"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "titre": "Construire une boucle",
+    "texte": "Touche « 🔁 Répéter » : la boucle apparaît, entourée de jaune. Les blocs que tu touches ensuite vont dedans.\nChoisis le nombre de tours avec les boutons − et +.\nQuand ta boucle est finie, touche « ✔ Fin de la boucle » pour ajouter des blocs après elle. Pour remettre des blocs dans une boucle, touche son titre."
+  },
+  {
+    "titre": "À toi de jouer !",
+    "texte": "Dans les exercices, le nombre de blocs est limité : sans boucle, tu n'y arriveras pas !\nAvant de construire ton programme, cherche ce qui se répète, et compte combien de fois. À la fin, un petit test t'attend."
+  }
+]

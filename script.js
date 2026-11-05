@@ -53,8 +53,9 @@ const MATIERES = [
     tranches: { p3: "p3-p5", p4: "p3-p5", p5: "p3-p5" } },
   { id: "decouverte",    nom: "Découverte du monde", icone: "🌍" },
   // La programmation n'est pas au programme de l'école : un seul parcours, commun à la P3, la P4 et la P5
+  // "parcours" : des étapes à suivre dans l'ordre, sans révision mélangée ni série Vrai ou faux
   { id: "programmation", nom: "Programmation",       icone: "🤖", precision: "Bonus",
-    tranches: { p3: "p3-p5", p4: "p3-p5", p5: "p3-p5" } }
+    tranches: { p3: "p3-p5", p4: "p3-p5", p5: "p3-p5" }, parcours: true }
 ];
 
 // Nombre de questions tirées au hasard à chaque partie, dans la banque de questions.
@@ -327,7 +328,7 @@ async function pageCahier() {
     // Pas de thème choisi : on affiche le sommaire
     if (idTheme === null) {
       document.title = matiere.nom + " " + niveau.nom + " – Explorateurs du Savoir";
-      afficherSommaire(themes, lienCahier, dossier);
+      afficherSommaire(themes, lienCahier, dossier, matiere);
       return;
     }
 
@@ -412,10 +413,16 @@ async function pageCahier() {
   }
 }
 
-function afficherSommaire(themes, lienCahier, dossier) {
+function afficherSommaire(themes, lienCahier, dossier, matiere) {
   document.getElementById("progression").textContent = "Choisis un thème, ou révise tout d'un coup.";
   document.getElementById("lien-melange").href = lienCahier + "&theme=melange";
   document.getElementById("lien-vraifaux").href = lienCahier + "&theme=vraifaux";
+  if (matiere.parcours) {
+    document.getElementById("progression").textContent =
+      "Suis les étapes dans l'ordre : chacune commence par une petite leçon.";
+    document.getElementById("lien-melange").hidden = true;
+    document.getElementById("lien-vraifaux").hidden = true;
+  }
 
   // Comme dans une table des matières : titre ........ nombre de questions
   const liste = document.getElementById("liste-themes");
@@ -1300,7 +1307,7 @@ function simulerRobot(config, programme, blocsAffiches) {
       const element = elements ? elements[i] : null;
       if (typeof bloc !== "string") {
         for (let tour = 0; tour < bloc.repeter && !choc; tour++) {
-          etapes.push({ x: x, y: y, direction: direction, element: element, tour: tour + 1 });
+          etapes.push({ x: x, y: y, direction: direction, element: element, tour: tour + 1, tours: bloc.repeter });
           executer(bloc.faire, element ? element.enfants : null);
         }
         continue;
@@ -1413,6 +1420,7 @@ function animerRobot(terrain, resultat, quandFini) {
     const etape = resultat.etapes[i];
     allume = etape.element ? etape.element.ligne : null;
     if (allume) { allume.classList.add("en-cours"); }
+    if (etape.tour && allume) { afficherTour(allume, etape.tour, etape.tours); }
     if (etape.choc) {
       terrain.pion.classList.add("cogne");
       if (allume) { allume.classList.add("bug"); }
@@ -1424,6 +1432,22 @@ function animerRobot(terrain, resultat, quandFini) {
     setTimeout(suivante, duree);
   }
   suivante();
+}
+
+// Compteur de tours d'une boucle pendant l'exécution : « tour 2 / 3 », à côté du titre de la boucle
+function afficherTour(ligneBoucle, tour, tours) {
+  const titre = ligneBoucle.querySelector(".bloc-titre");
+  let compteur = titre.querySelector(".compteur-tours");
+  if (!compteur) {
+    compteur = document.createElement("span");
+    compteur.className = "compteur-tours";
+    titre.appendChild(compteur);
+  }
+  compteur.textContent = "tour " + tour + " / " + tours;
+  // On relance la petite animation à chaque nouveau tour
+  compteur.classList.remove("nouveau-tour");
+  compteur.getBoundingClientRect();
+  compteur.classList.add("nouveau-tour");
 }
 
 // Une étiquette de bloc, pour les leçons et la correction (sans bouton)
@@ -1468,6 +1492,7 @@ function creerDemo(demo) {
     bouton.disabled = true;
     terrain.revenirAuDepart();
     liste.querySelectorAll(".bug").forEach(function (b) { b.classList.remove("bug"); });
+    liste.querySelectorAll(".compteur-tours").forEach(function (c) { c.remove(); });
     setTimeout(function () {
       animerRobot(terrain, simulerRobot(demo, demo.programme, elements), function () {
         bouton.disabled = false;

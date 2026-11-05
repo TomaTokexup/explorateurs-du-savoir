@@ -1,0 +1,352 @@
+[
+  {
+    "type": "robot",
+    "enonce": "Le robot doit traverser toute la grille. Tu n'as droit qu'à 3 blocs !",
+    "grille": {
+      "largeur": 8,
+      "hauteur": 3
+    },
+    "depart": {
+      "x": 0,
+      "y": 1,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 7,
+      "y": 1
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter"
+    ],
+    "maxBlocs": 3,
+    "solution": [
+      {
+        "repeter": 7,
+        "faire": [
+          "avancer"
+        ]
+      }
+    ],
+    "explication": "Le robot doit avancer 7 fois. Avec « Répéter 7 fois : Avancer », il suffit de 2 blocs."
+  },
+  {
+    "type": "robot",
+    "enonce": "Guide le robot jusqu'à l'étoile avec 5 blocs au maximum.",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 0,
+      "y": 4,
+      "direction": "nord"
+    },
+    "cible": {
+      "x": 4,
+      "y": 0
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter"
+    ],
+    "maxBlocs": 5,
+    "solution": [
+      {
+        "repeter": 4,
+        "faire": [
+          "avancer"
+        ]
+      },
+      "droite",
+      {
+        "repeter": 4,
+        "faire": [
+          "avancer"
+        ]
+      }
+    ],
+    "explication": "Deux boucles : « Répéter 4 fois : Avancer » pour monter, « Tourner à droite », puis encore « Répéter 4 fois : Avancer »."
+  },
+  {
+    "type": "robot",
+    "enonce": "Fais monter l'escalier au robot, avec 5 blocs au maximum.",
+    "grille": {
+      "largeur": 6,
+      "hauteur": 6
+    },
+    "depart": {
+      "x": 0,
+      "y": 5,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 5,
+      "y": 0
+    },
+    "murs": [
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter"
+    ],
+    "maxBlocs": 5,
+    "solution": [
+      {
+        "repeter": 5,
+        "faire": [
+          "avancer",
+          "gauche",
+          "avancer",
+          "droite"
+        ]
+      }
+    ],
+    "explication": "Le motif « Avancer, Tourner à gauche, Avancer, Tourner à droite » fait monter une marche. Il faut le répéter 5 fois."
+  },
+  {
+    "type": "robot",
+    "enonce": "Le robot doit sauter les 3 haies pour atteindre l'étoile. 9 blocs au maximum !",
+    "grille": {
+      "largeur": 7,
+      "hauteur": 3
+    },
+    "depart": {
+      "x": 0,
+      "y": 2,
+      "direction": "nord"
+    },
+    "cible": {
+      "x": 6,
+      "y": 2
+    },
+    "murs": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        5,
+        2
+      ]
+    ],
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter"
+    ],
+    "maxBlocs": 9,
+    "solution": [
+      {
+        "repeter": 3,
+        "faire": [
+          "avancer",
+          "droite",
+          "avancer",
+          "avancer",
+          "droite",
+          "avancer",
+          "gauche",
+          "gauche"
+        ]
+      }
+    ],
+    "explication": "Pour sauter une haie, le robot monte, avance de 2 cases, redescend, puis se tourne vers le haut. Ce motif se répète 3 fois."
+  },
+  {
+    "type": "robot",
+    "enonce": "Fais le tour du lac jusqu'à l'étoile, avec 6 blocs au maximum.",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 0,
+      "y": 0,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 0,
+      "y": 4
+    },
+    "murs": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter"
+    ],
+    "maxBlocs": 6,
+    "solution": [
+      {
+        "repeter": 3,
+        "faire": [
+          "avancer",
+          "avancer",
+          "avancer",
+          "avancer",
+          "droite"
+        ]
+      }
+    ],
+    "explication": "Le robot longe un côté du lac (4 cases), puis tourne à droite. Il recommence 3 fois pour arriver en bas à gauche."
+  },
+  {
+    "type": "qcm",
+    "enonce": "À quoi sert une boucle « Répéter » ?",
+    "choix": [
+      "À répéter des blocs plusieurs fois sans les réécrire",
+      "À faire reculer le robot",
+      "À effacer le programme",
+      "À arrêter le robot"
+    ],
+    "bonneReponse": 0,
+    "explication": "Une boucle répète les blocs qu'elle contient. Le programme est plus court et on se trompe moins en comptant."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le robot exécute « Répéter 3 fois : Avancer, Avancer ». De combien de cases avance-t-il ?",
+    "choix": [
+      "6 cases",
+      "3 cases",
+      "2 cases",
+      "5 cases"
+    ],
+    "bonneReponse": 0,
+    "explication": "À chaque tour de boucle, le robot avance de 2 cases. Il fait 3 tours : 3 × 2 = 6 cases."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le robot regarde vers le haut. Il exécute « Répéter 4 fois : Tourner à droite ». Vers où regarde-t-il à la fin ?",
+    "choix": [
+      "Vers le haut",
+      "Vers la droite",
+      "Vers le bas",
+      "Vers la gauche"
+    ],
+    "bonneReponse": 0,
+    "explication": "4 quarts de tour font un tour complet : le robot revient dans sa direction de départ, vers le haut."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Quel programme fait avancer le robot de 8 cases ?",
+    "choix": [
+      "Répéter 4 fois : Avancer, Avancer",
+      "Répéter 8 fois : Avancer, Avancer",
+      "Répéter 4 fois : Avancer",
+      "Répéter 2 fois : Avancer, Avancer, Avancer"
+    ],
+    "bonneReponse": 0,
+    "explication": "4 tours de 2 cases font 8 cases. Les autres programmes font avancer le robot de 16, 4 ou 6 cases."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "« Répéter 5 fois : Avancer » utilise moins de blocs qu'écrire 5 fois « Avancer ».",
+    "vrai": true,
+    "explication": "Vrai. La boucle utilise 2 blocs (la boucle et « Avancer ») au lieu de 5."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Dans une boucle, on ne peut mettre qu'un seul bloc.",
+    "vrai": false,
+    "explication": "Faux. Une boucle peut contenir plusieurs blocs : ils sont tous répétés, dans l'ordre, à chaque tour."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Les blocs placés après une boucle sont répétés eux aussi.",
+    "vrai": false,
+    "explication": "Faux. Seuls les blocs placés dans la boucle sont répétés. Ceux qui viennent après ne s'exécutent qu'une fois, quand la boucle est finie."
+  }
+]

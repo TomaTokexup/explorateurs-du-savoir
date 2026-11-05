@@ -5,7 +5,7 @@
   "note": "Un seul parcours pour la P3, la P4 et la P5 : aucun élève n'a été initié. Chaque étape commence par une leçon (donnees/p3-p5/programmation/lecons/<etape>.json).",
   "domaines": {
     "sequence": {
-      "titre": "1. Les instructions",
+      "titre": "Les instructions",
       "objectifs": [
         "Comprendre qu'une machine suit des instructions une par une, dans l'ordre",
         "Connaître les instructions du robot : avancer, tourner à gauche, tourner à droite",
@@ -14,26 +14,26 @@
       ]
     },
     "boucles": {
-      "titre": "2. Les boucles",
+      "titre": "Les boucles",
       "objectifs": [
         "Repérer des instructions qui se répètent",
         "Utiliser « répéter N fois » pour raccourcir un programme"
       ]
     },
     "conditions": {
-      "titre": "3. Les conditions",
+      "titre": "Les conditions",
       "objectifs": [
         "Comprendre « si… alors… sinon »"
       ]
     },
     "variables": {
-      "titre": "4. Les variables",
+      "titre": "Les variables",
       "objectifs": [
         "Garder une valeur dans une variable (un score, un compteur)"
       ]
     },
     "bugs": {
-      "titre": "5. Chasse aux bugs",
+      "titre": "Chasse aux bugs",
       "objectifs": [
         "Trouver et corriger l'erreur d'un programme"
       ]

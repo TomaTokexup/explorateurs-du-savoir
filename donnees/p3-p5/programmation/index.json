@@ -1,6 +1,10 @@
 [
   {
     "id": "sequence",
-    "titre": "1. Les instructions"
+    "titre": "Les instructions"
+  },
+  {
+    "id": "boucles",
+    "titre": "Les boucles"
   }
 ]

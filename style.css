@@ -1377,7 +1377,8 @@ a.cahier:active {
 
 .demo-cote,
 .robot-cote {
-  flex: 1 1 220px;
+  /* Au moins 260 px pour les blocs : si la grille est large, le programme passe dessous */
+  flex: 1 1 260px;
   min-width: 0;
 }
 
@@ -1513,13 +1514,13 @@ button.bloc:disabled { opacity: 0.4; cursor: default; transform: none; }
 
 .programme-boucle {
   flex-basis: 100%;
-  margin-left: 14px;
+  margin-left: 8px;
   padding: 8px;
   border-radius: 8px;
   background: color-mix(in srgb, var(--bloc-repeter) 25%, white);
 }
 
-.bloc-titre { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.programme .bloc-titre { flex: 1 1 auto; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; white-space: nowrap; cursor: pointer; }
 
 .tours {
   width: 28px;
@@ -1623,3 +1624,22 @@ button.bloc:disabled { opacity: 0.4; cursor: default; transform: none; }
 }
 
 .annonce-test[hidden] { display: none; }
+
+/* Cahier « parcours » (programmation) : pas de révision mélangée ni de série */
+.melange[hidden] { display: none; }
+
+.palette[hidden] { display: none; }
+
+/* Compteur de tours d'une boucle pendant que le robot joue le programme */
+.compteur-tours {
+  margin-left: 4px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: white;
+  color: var(--bloc-repeter);
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.compteur-tours.nouveau-tour { animation: rebond 0.35s; }
