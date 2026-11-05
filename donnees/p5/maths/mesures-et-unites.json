@@ -284,7 +284,13 @@
       "7,20 €",
       "7,20€",
       "7,2",
-      "7,2 €"
+      "7,2 €",
+      "7.2€",
+      "7.20",
+      "7.20 €",
+      "7.20€",
+      "7.2",
+      "7.2 €"
     ],
     "accents": "toleres",
     "explication": "3 kg coûtent 3 fois le prix d'1 kg : 2,40 € + 2,40 € + 2,40 € = 7,20 €. On peut aussi compter 3 × 2 € = 6 € et 3 × 40 centimes = 1,20 €, soit 7,20 €.",
