@@ -1726,3 +1726,64 @@ button.bloc:disabled { opacity: 0.4; cursor: default; transform: none; }
   border-color: var(--couleur);
   background: color-mix(in srgb, var(--couleur) 6%, white);
 }
+
+/* ---------- 16. Programmation : les pièces et la variable « pièces » ---------- */
+/* La grille et la boîte de la variable sont réunies dans un même cadre */
+.terrain-cadre {
+  flex: 0 0 auto;
+  width: min(100%, calc(var(--colonnes) * 56px));
+}
+
+.terrain-cadre .terrain { width: 100%; }
+
+.piece { display: block; font-size: 0.85em; }
+.piece.ramassee { animation: ramassee 0.4s forwards; }
+
+@keyframes ramassee {
+  to { transform: translateY(-60%) scale(1.4); opacity: 0; }
+}
+
+/* Sortie fermée : un cadenas, qui devient l'étoile quand il y a assez de pièces */
+.case.cible.fermee span { animation: none; }
+
+/* La variable : une boîte avec une étiquette, et sa valeur dedans */
+.variable {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.variable-etiquette {
+  padding: 4px 10px;
+  border-radius: 6px 6px 0 0;
+  background: var(--encre);
+  color: white;
+  font-family: var(--police-titre);
+  font-size: 0.95rem;
+}
+
+.variable-valeur {
+  min-width: 2.2em;
+  padding: 4px 10px;
+  border: 3px solid var(--encre);
+  border-radius: 8px;
+  background: #fff6cc;
+  font-family: var(--police-titre);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.variable-valeur.nouveau-tour { animation: rebond 0.35s; }
+
+.variable-but {
+  flex-basis: 100%;
+  font-size: 0.9rem;
+  color: var(--encre-douce);
+}
+
+@media (max-width: 560px) {
+  .terrain-cadre { width: 100%; }
+}

@@ -12,6 +12,10 @@
     "titre": "Les conditions"
   },
   {
+    "id": "variables",
+    "titre": "Les variables"
+  },
+  {
     "id": "bugs",
     "titre": "Chasse aux bugs"
   }

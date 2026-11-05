@@ -505,7 +505,7 @@ function preparerQuestion(question) {
 
 // Met une réponse tapée sous une forme "standard" avant de la comparer :
 // minuscules, espaces en trop supprimés, ponctuation finale ignorée,
-// apostrophe typographique ’ remplacée par '.
+// apostrophe typographique ’ remplacée par ', virgule et point décimaux confondus (7,20 = 7.20).
 // Si les accents sont tolérés, ils sont aussi retirés (é → e).
 function normaliser(texte, accentsToleres, majusculesStrictes) {
   let resultat = (majusculesStrictes ? texte : texte.toLowerCase())
@@ -513,7 +513,9 @@ function normaliser(texte, accentsToleres, majusculesStrictes) {
     .replace(/\s+/g, " ")
     .trim()
     .replace(/[.!?;]+$/, "")
-    .trim();
+    .trim()
+    // Nombre à virgule : on accepte la virgule (écriture française) comme le point (calculatrice, anglais)
+    .replace(/(\d),(\d)/g, "$1.$2");
   if (accentsToleres) {
     resultat = resultat.normalize("NFD").replace(/[̀-ͯ]/g, "");
   }
@@ -1264,6 +1266,8 @@ function finirSerie() {
 //     "murs": [[2, 3]], "blocs": ["avancer", "gauche", "droite", "repeter", "si_mur"], "maxBlocs": 7,
 //     "solution": [...], "explication": "..." }
 //   + "programmeDepart": [...] (chasse aux bugs) : un programme faux, déjà écrit, que l'élève corrige
+//   + "pieces": [[1, 3], [2, 3]] (variables) : des pièces à ramasser ; la variable « pièces » les compte,
+//     et la sortie ne s'ouvre que si elle vaut au moins "piecesNecessaires" (par défaut : toutes les pièces)
 // Les instructions d'un programme (même format pour "solution" et pour le programme de l'élève) :
 //   "avancer", "gauche", "droite"                         → instructions simples
 //   { "repeter": 3, "faire": [ ... ] }                    → boucle (instructions simples et « si »)
@@ -1323,6 +1327,9 @@ function simulerRobot(config, programme, blocsAffiches) {
   let direction = config.depart.direction;
   const etapes = [];
   let choc = false;
+  // La variable « pièces » : combien de pièces le robot a ramassées
+  const pieces = new Set((config.pieces || []).map(function (p) { return p[0] + "," + p[1]; }));
+  let ramassees = 0;
 
   // La case devant le robot est-elle un mur ou en dehors de la grille ?
   function murDevant() {
@@ -1362,19 +1369,42 @@ function simulerRobot(config, programme, blocsAffiches) {
         const sens = bloc === "droite" ? 1 : 3;
         direction = DIRECTIONS[(DIRECTIONS.indexOf(direction) + sens) % 4];
       }
-      etapes.push({ x: x, y: y, direction: direction, element: element });
+      const etape = { x: x, y: y, direction: direction, element: element };
+      // Une pièce sur la case : le robot la ramasse (une seule fois) et la variable augmente de 1
+      if (bloc === "avancer" && pieces.has(x + "," + y)) {
+        pieces.delete(x + "," + y);
+        ramassees++;
+        etape.ramasse = true;
+        etape.pieces = ramassees;
+      }
+      etapes.push(etape);
     }
   }
   executer(programme, blocsAffiches);
+  const surLaSortie = !choc && x === config.cible.x && y === config.cible.y;
+  const necessaires = piecesNecessaires(config);
   return {
     etapes: etapes,
     choc: choc,
-    arrive: !choc && x === config.cible.x && y === config.cible.y
+    surLaSortie: surLaSortie,
+    pieces: ramassees,
+    necessaires: necessaires,
+    arrive: surLaSortie && ramassees >= necessaires
   };
 }
 
-// Dessine la grille, l'étoile, les murs et le robot. Renvoie de quoi déplacer le robot.
+// Nombre de pièces qu'il faut pour ouvrir la sortie (0 s'il n'y a pas de pièces)
+function piecesNecessaires(config) {
+  const total = (config.pieces || []).length;
+  return config.piecesNecessaires !== undefined ? config.piecesNecessaires : total;
+}
+
+// Dessine la grille, l'étoile, les murs, les pièces et le robot. Renvoie de quoi déplacer le robot.
+// "element" est un cadre qui contient la grille et, s'il y a des pièces, la boîte de la variable.
 function creerTerrain(config) {
+  const cadre = document.createElement("div");
+  cadre.className = "terrain-cadre";
+  cadre.style.setProperty("--colonnes", config.grille.largeur);
   const terrain = document.createElement("div");
   terrain.className = "terrain";
   terrain.style.setProperty("--colonnes", config.grille.largeur);
@@ -1382,6 +1412,9 @@ function creerTerrain(config) {
   terrain.setAttribute("role", "img");
 
   const murs = new Set((config.murs || []).map(function (m) { return m[0] + "," + m[1]; }));
+  const piecesSet = new Set((config.pieces || []).map(function (p) { return p[0] + "," + p[1]; }));
+  const avecPieces = piecesSet.size > 0;
+  const necessaires = piecesNecessaires(config);
   for (let y = 0; y < config.grille.hauteur; y++) {
     for (let x = 0; x < config.grille.largeur; x++) {
       const case_ = document.createElement("span");
@@ -1392,6 +1425,12 @@ function creerTerrain(config) {
         const etoile = document.createElement("span");
         etoile.textContent = "⭐";
         case_.appendChild(etoile);
+      }
+      if (piecesSet.has(x + "," + y)) {
+        const piece = document.createElement("span");
+        piece.className = "piece";
+        piece.textContent = "🪙";
+        case_.appendChild(piece);
       }
       terrain.appendChild(case_);
     }
@@ -1410,6 +1449,43 @@ function creerTerrain(config) {
     '<rect x="13" y="24" width="14" height="4" rx="2" fill="#2b2b52"/>' +
     '</svg>';
   terrain.appendChild(pion);
+  cadre.appendChild(terrain);
+
+  // La variable « pièces », comme une boîte avec une étiquette, sous la grille
+  const boite = document.createElement("div");
+  boite.className = "variable";
+  const valeur = document.createElement("span");
+  const etoileCible = terrain.children[config.cible.y * config.grille.largeur + config.cible.x].firstChild;
+  if (avecPieces) {
+    const etiquette = document.createElement("span");
+    etiquette.className = "variable-etiquette";
+    etiquette.textContent = "pièces";
+    valeur.className = "variable-valeur";
+    const but = document.createElement("span");
+    but.className = "variable-but";
+    but.textContent = "La sortie s'ouvre à " + necessaires + (necessaires > 1 ? " pièces." : " pièce.");
+    boite.append(etiquette, valeur, but);
+    cadre.appendChild(boite);
+  }
+
+  // Change la valeur de la variable ; la sortie s'ouvre quand il y a assez de pièces
+  function changerPieces(nombre, avecAnimation) {
+    if (!avecPieces) { return; }
+    valeur.textContent = nombre;
+    const ouverte = nombre >= necessaires;
+    etoileCible.textContent = ouverte ? "⭐" : "🔒";
+    etoileCible.parentNode.classList.toggle("fermee", !ouverte);
+    if (avecAnimation) {
+      valeur.classList.remove("nouveau-tour");
+      valeur.getBoundingClientRect();
+      valeur.classList.add("nouveau-tour");
+    }
+  }
+  function ramasser(x, y, nombre) {
+    const piece = terrain.children[y * config.grille.largeur + x].querySelector(".piece");
+    if (piece) { piece.classList.add("ramassee"); }
+    changerPieces(nombre, true);
+  }
 
   let angle = 0;   // on cumule l'angle pour que le robot tourne toujours du bon côté
   let directionActuelle = config.depart.direction;
@@ -1433,6 +1509,9 @@ function creerTerrain(config) {
     directionActuelle = config.depart.direction;
     pion.classList.remove("cogne", "arrive");
     if (typeof eteindreRegard === "function") { eteindreRegard(); }
+    // Les pièces reviennent à leur place et la variable repart de 0
+    terrain.querySelectorAll(".piece.ramassee").forEach(function (p) { p.classList.remove("ramassee"); });
+    changerPieces(0, false);
     placer(config.depart.x, config.depart.y, config.depart.direction, true);
   }
   // Pendant une question « mur devant ? », la case regardée s'allume un instant :
@@ -1455,8 +1534,8 @@ function creerTerrain(config) {
     terrain.classList.remove("regard-bord");
   }
   revenirAuDepart();
-  return { element: terrain, pion: pion, placer: placer, revenirAuDepart: revenirAuDepart,
-    montrerDevant: montrerDevant, eteindreRegard: eteindreRegard };
+  return { element: cadre, pion: pion, placer: placer, revenirAuDepart: revenirAuDepart,
+    montrerDevant: montrerDevant, eteindreRegard: eteindreRegard, ramasser: ramasser };
 }
 
 // Vitesse du robot, choisie par l'élève (et gardée dans le navigateur pour la prochaine fois).
@@ -1541,6 +1620,7 @@ function animerRobot(terrain, resultat, quandFini) {
       // Le glissement du robot dure un peu moins qu'une étape (au plus 0,6 s)
       terrain.pion.style.transitionDuration = Math.min(600, VITESSES[vitesseRobot].pas * 0.75) + "ms";
       terrain.placer(etape.x, etape.y, etape.direction);
+      if (etape.ramasse) { terrain.ramasser(etape.x, etape.y, etape.pieces); }
     }
     i++;
     const sansMouvement = etape.tour !== undefined || etape.reponse !== undefined;
@@ -2033,9 +2113,14 @@ function afficherRobot(question) {
       terminer(false);
       return;
     }
-    message.textContent = (resultat.choc
-      ? "Bong ! Le robot s'est cogné. Le bloc en rouge est celui qui pose problème."
-      : "Le robot s'est arrêté, mais pas sur l'étoile.") +
+    let explication = "Le robot s'est arrêté, mais pas sur l'étoile.";
+    if (resultat.choc) {
+      explication = "Bong ! Le robot s'est cogné. Le bloc en rouge est celui qui pose problème.";
+    } else if (resultat.surLaSortie) {
+      explication = "Le robot est sur la sortie, mais la variable « pièces » vaut " + resultat.pieces +
+        " : il en faut " + resultat.necessaires + ". La sortie reste fermée !";
+    }
+    message.textContent = explication +
       " Corrige ton programme et relance ! (" + restants + (restants > 1 ? " essais restants)" : " essai restant)");
     message.className = "message-robot attention";
     const nouveaux = dessiner();
