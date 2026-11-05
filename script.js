@@ -1656,9 +1656,10 @@ function afficherRobot(question) {
 
   const aide = document.createElement("p");
   aide.className = "consigne-type";
-  aide.textContent = depart
+  aide.textContent = (depart
     ? "🐞 Ce programme a un bug ! Lance-le pour voir où ça coince, puis corrige-le."
-    : "Touche les blocs pour construire ton programme, puis appuie sur ▶ Lancer.";
+    : "Touche les blocs pour construire ton programme, puis appuie sur ▶ Lancer.") +
+    " Tu peux aussi attraper un bloc et le faire glisser où tu veux.";
 
   const palette = document.createElement("div");
   palette.className = "palette";
@@ -1703,8 +1704,11 @@ function afficherRobot(question) {
     bouton.type = "button";
     bouton.className = "bloc bloc-" + nom;
     bouton.textContent = BLOCS[nom].icone + " " + BLOCS[nom].texte;
-    bouton.addEventListener("click", function () { ajouter(nom); });
+    bouton.addEventListener("click", function () {
+      if (!clicBloque) { ajouter(nom); }
+    });
     bouton.dataset.nom = nom;
+    rendreDeplacable(bouton, null, null, null, nom);   // on peut aussi le faire glisser dans le programme
     boutonsPalette.push(bouton);
     palette.appendChild(bouton);
   });
@@ -1724,11 +1728,15 @@ function afficherRobot(question) {
     return true;
   }
 
+  function nouveauBloc(nom) {
+    if (nom === "repeter") { return { repeter: 2, faire: [] }; }
+    if (nom === "si_mur") { return { si: "mur_devant", faire: [] }; }
+    return nom;
+  }
+
   function ajouter(nom) {
     if (enCours || (max && compterBlocs(programme) >= max) || !permis(nom)) { return; }
-    let bloc = nom;
-    if (nom === "repeter") { bloc = { repeter: 2, faire: [] }; }
-    if (nom === "si_mur") { bloc = { si: "mur_devant", faire: [] }; }
+    const bloc = nouveauBloc(nom);
     listeOuverte().push(bloc);
     if (typeof bloc !== "string") { ouverts.push(bloc); }   // un nouveau conteneur s'ouvre
     effacerMessage();
@@ -1745,8 +1753,11 @@ function afficherRobot(question) {
   // Renvoie la liste des éléments affichés, dans la même forme que le programme (pour l'animation).
   function dessiner() {
     liste.innerHTML = "";
+    // Chaque liste affichée garde le tableau qu'elle représente (pour savoir où lâcher un bloc)
+    liste.listeBlocs = programme;
+    liste.conteneur = null;
     const elements = programme.map(function (bloc, i) {
-      return dessinerBloc(bloc, liste, [], function () { programme.splice(i, 1); });
+      return dessinerBloc(bloc, liste, [], programme, i);
     });
     const nombre = compterBlocs(programme);
     compteur.textContent = max ? "Blocs : " + nombre + " / " + max : "Blocs : " + nombre;
@@ -1770,10 +1781,13 @@ function afficherRobot(question) {
     return elements;
   }
 
-  // "parents" : les conteneurs qui entourent ce bloc (pour le rouvrir au bon endroit)
-  function dessinerBloc(bloc, parent, parents, retirer) {
+  // "parents" : les conteneurs qui entourent ce bloc (pour le rouvrir au bon endroit) ;
+  // "listeParent" et "index" : où se trouve ce bloc dans le programme (pour le retirer ou le déplacer)
+  function dessinerBloc(bloc, parent, parents, listeParent, index) {
     const ligne = document.createElement("li");
     ligne.className = "bloc bloc-" + nomDuBloc(bloc);
+    rendreDeplacable(ligne, bloc, listeParent, index, null);
+    function retirer() { listeParent.splice(index, 1); }
     const croix = document.createElement("button");
     croix.type = "button";
     croix.className = "bloc-retirer";
@@ -1832,8 +1846,10 @@ function afficherRobot(question) {
     });
     const dedans = document.createElement("ol");
     dedans.className = "programme-dedans";
+    dedans.listeBlocs = bloc.faire;
+    dedans.conteneur = bloc;
     const enfants = bloc.faire.map(function (b, j) {
-      return dessinerBloc(b, dedans, parents.concat([bloc]), function () { bloc.faire.splice(j, 1); });
+      return dessinerBloc(b, dedans, parents.concat([bloc]), bloc.faire, j);
     });
     if (bloc.faire.length === 0) {
       const vide = document.createElement("li");
@@ -1844,6 +1860,139 @@ function afficherRobot(question) {
     ligne.append(titre, croix, dedans);
     parent.appendChild(ligne);
     return { ligne: ligne, enfants: enfants };
+  }
+
+  // --- Attraper-glisser ---
+  // On peut faire glisser un bloc de la palette jusqu'à l'endroit voulu du programme, ou déplacer
+  // un bloc du programme (y compris pour le mettre dans une boucle ou l'en sortir).
+  // Écrit avec les « pointer events » : ça marche à la souris comme au doigt (tablette, téléphone).
+  let glisse = null;        // le glissement en cours (null s'il n'y en a pas)
+  let clicBloque = false;   // après un glissement, on ignore le « clic » que le navigateur envoie au lâcher
+
+  // Mêmes règles que pour la palette : une boucle seulement dans le programme principal,
+  // une condition dans le programme principal ou dans une boucle
+  function peutAllerDans(nom, conteneur) {
+    if (nom === "repeter") { return conteneur === null; }
+    if (nom === "si_mur") { return conteneur === null || estBoucle(conteneur); }
+    return true;
+  }
+
+  // "bloc", "listeOrigine", "indexOrigine" : pour un bloc du programme ; "nomNouveau" : pour un bloc de la palette
+  function rendreDeplacable(element, bloc, listeOrigine, indexOrigine, nomNouveau) {
+    element.addEventListener("pointerdown", function (evenement) {
+      if (enCours || glisse || evenement.button > 0) { return; }
+      // Les petits boutons d'un bloc (✕, −, +) gardent leur rôle : on ne glisse pas depuis eux
+      if (evenement.target !== element && evenement.target.closest("button")) { return; }
+      evenement.stopPropagation();   // un bloc dans une boucle : c'est lui qu'on attrape, pas la boucle
+      glisse = {
+        element: element, bloc: bloc, listeOrigine: listeOrigine, indexOrigine: indexOrigine,
+        nom: nomNouveau || nomDuBloc(bloc), nouveau: nomNouveau !== null,
+        x0: evenement.clientX, y0: evenement.clientY, actif: false, cible: null
+      };
+      window.addEventListener("pointermove", pendantGlisser);
+      window.addEventListener("pointerup", finGlisser);
+      window.addEventListener("pointercancel", annulerGlisser);
+    });
+  }
+
+  function pendantGlisser(evenement) {
+    if (!glisse) { return; }
+    if (!glisse.actif) {
+      // On ne commence à glisser qu'après quelques pixels : un simple toucher reste un clic
+      if (Math.hypot(evenement.clientX - glisse.x0, evenement.clientY - glisse.y0) < 6) { return; }
+      if (glisse.nouveau && max !== null && compterBlocs(programme) >= max) { nettoyerGlisser(); return; }
+      commencerGlisser();
+    }
+    evenement.preventDefault();
+    glisse.fantome.style.left = evenement.clientX - glisse.decalX + "px";
+    glisse.fantome.style.top = evenement.clientY - glisse.decalY + "px";
+    chercherCible(evenement.clientX, evenement.clientY);
+    // Près du haut ou du bas de l'écran, la page défile toute seule
+    if (evenement.clientY < 50) { window.scrollBy(0, -12); }
+    if (evenement.clientY > window.innerHeight - 50) { window.scrollBy(0, 12); }
+  }
+
+  function commencerGlisser() {
+    glisse.actif = true;
+    const cadre = glisse.element.getBoundingClientRect();
+    glisse.decalX = glisse.x0 - cadre.left;
+    glisse.decalY = glisse.y0 - cadre.top;
+    // Le « fantôme » : une copie du bloc qui suit le doigt ou la souris
+    glisse.fantome = glisse.element.cloneNode(true);
+    glisse.fantome.classList.add("fantome");
+    glisse.fantome.style.width = cadre.width + "px";
+    document.body.appendChild(glisse.fantome);
+    if (!glisse.nouveau) { glisse.element.classList.add("en-deplacement"); }
+    glisse.repere = document.createElement("li");
+    glisse.repere.className = "repere-insertion";
+    zone.classList.add("depot-possible");
+  }
+
+  // Trouve où le bloc serait lâché, et y montre un trait jaune
+  function chercherCible(x, y) {
+    glisse.repere.remove();
+    glisse.cible = null;
+    const dessous = document.elementFromPoint(x, y);
+    if (!dessous || !zone.contains(dessous)) { return; }
+    let ol = dessous.closest("ol.programme, ol.programme-dedans");
+    if (!ol || !zone.contains(ol)) { ol = liste; }   // dans la zone, mais sous la liste : à la fin
+    if (!glisse.nouveau && glisse.element.contains(ol)) { return; }   // pas un conteneur dans lui-même
+    if (!peutAllerDans(glisse.nom, ol.conteneur)) { return; }
+    // On s'insère avant le premier bloc dont le milieu est plus bas que le doigt
+    const blocs = Array.from(ol.children).filter(function (li) { return li.classList.contains("bloc"); });
+    let index = blocs.length;
+    for (let i = 0; i < blocs.length; i++) {
+      const cadre = blocs[i].getBoundingClientRect();
+      if (y < cadre.top + cadre.height / 2) { index = i; break; }
+    }
+    ol.insertBefore(glisse.repere, blocs[index] || null);
+    glisse.cible = { liste: ol.listeBlocs, conteneur: ol.conteneur, index: index };
+  }
+
+  function finGlisser() {
+    const g = glisse;
+    nettoyerGlisser();
+    if (!g || !g.actif) { return; }   // simple toucher : le navigateur enverra un « clic » normal
+    clicBloque = true;
+    setTimeout(function () { clicBloque = false; }, 0);
+    if (!g.cible) { dessiner(); return; }   // lâché ailleurs : rien ne change
+    let bloc;
+    let index = g.cible.index;
+    if (g.nouveau) {
+      bloc = nouveauBloc(g.nom);
+    } else {
+      bloc = g.bloc;
+      g.listeOrigine.splice(g.indexOrigine, 1);
+      // Dans la même liste, vers le bas : retirer le bloc a décalé les suivants d'un cran
+      if (g.listeOrigine === g.cible.liste && g.indexOrigine < index) { index--; }
+    }
+    g.cible.liste.splice(index, 0, bloc);
+    // Un nouveau conteneur s'ouvre (comme avec un clic) ; sinon, on referme tout
+    ouverts = [];
+    if (g.nouveau && typeof bloc !== "string") {
+      ouverts = g.cible.conteneur ? [g.cible.conteneur, bloc] : [bloc];
+    }
+    effacerMessage();
+    dessiner();
+  }
+
+  function annulerGlisser() {
+    const actif = glisse && glisse.actif;
+    nettoyerGlisser();
+    if (actif) { dessiner(); }
+  }
+
+  function nettoyerGlisser() {
+    window.removeEventListener("pointermove", pendantGlisser);
+    window.removeEventListener("pointerup", finGlisser);
+    window.removeEventListener("pointercancel", annulerGlisser);
+    if (glisse && glisse.actif) {
+      glisse.fantome.remove();
+      glisse.repere.remove();
+      glisse.element.classList.remove("en-deplacement");
+      zone.classList.remove("depot-possible");
+    }
+    glisse = null;
   }
 
   effacer.addEventListener("click", function () {

@@ -61,6 +61,6 @@
   },
   {
     "titre": "À toi de jouer !",
-    "texte": "Dans les exercices, le programme est déjà écrit, mais il contient un bug. Lance-le d'abord pour observer ce qui se passe, puis corrige-le : retire un bloc avec ✕, ajoute un bloc, change le nombre de tours…\nPour ajouter un bloc dans une boucle, touche d'abord le titre de la boucle : elle s'entoure de jaune.\nTu t'es perdu ? Le bouton « ↺ Programme de départ » remet le programme du début. Pense à la vitesse 🐢 pour bien suivre le robot."
+    "texte": "Dans les exercices, le programme est déjà écrit, mais il contient un bug. Lance-le d'abord pour observer ce qui se passe, puis corrige-le : retire un bloc avec ✕, ajoute un bloc, change le nombre de tours…\nPour déplacer un bloc, attrape-le et fais-le glisser au bon endroit, même dans une boucle ou pour l'en sortir.\nTu t'es perdu ? Le bouton « ↺ Programme de départ » remet le programme du début. Pense à la vitesse 🐢 pour bien suivre le robot."
   }
 ]

@@ -85,7 +85,7 @@
   },
   {
     "titre": "Construire une boucle",
-    "texte": "Touche « 🔁 Répéter » : la boucle apparaît, entourée de jaune. Les blocs que tu touches ensuite vont dedans.\nChoisis le nombre de tours avec les boutons − et +.\nQuand ta boucle est finie, touche « ✔ Fin de la boucle » pour ajouter des blocs après elle. Pour remettre des blocs dans une boucle, touche son titre."
+    "texte": "Touche « 🔁 Répéter » : la boucle apparaît, entourée de jaune. Les blocs que tu touches ensuite vont dedans.\nChoisis le nombre de tours avec les boutons − et +.\nQuand ta boucle est finie, touche « ✔ Fin de la boucle » pour ajouter des blocs après elle. Pour remettre des blocs dans une boucle, touche son titre.\nTu peux aussi attraper un bloc et le faire glisser dans une boucle, ou l'en sortir."
   },
   {
     "titre": "À toi de jouer !",

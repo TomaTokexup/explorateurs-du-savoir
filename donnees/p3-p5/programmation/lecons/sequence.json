@@ -81,6 +81,6 @@
   },
   {
     "titre": "À toi de jouer !",
-    "texte": "Dans les exercices, touche les blocs pour construire ton programme, puis appuie sur ▶ Lancer.\nSi le robot se cogne ou rate l'étoile, ce n'est pas grave : trouve le bloc qui pose problème, corrige-le et relance. Chercher et corriger les erreurs s'appelle « déboguer » : les programmeurs le font tous les jours !\nTu as 3 essais par exercice."
+    "texte": "Dans les exercices, touche les blocs pour construire ton programme, puis appuie sur ▶ Lancer. Tu peux aussi attraper un bloc et le faire glisser à l'endroit que tu veux, par exemple entre deux autres blocs.\nSi le robot se cogne ou rate l'étoile, ce n'est pas grave : trouve le bloc qui pose problème, corrige-le et relance. Chercher et corriger les erreurs s'appelle « déboguer » : les programmeurs le font tous les jours !\nTu as 3 essais par exercice."
   }
 ]

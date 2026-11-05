@@ -9,7 +9,7 @@
     "depart": {
       "x": 0,
       "y": 2,
-      "direction": "nord"
+      "direction": "est"
     },
     "cible": {
       "x": 3,

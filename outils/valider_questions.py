@@ -214,6 +214,95 @@ def deplier(solution):
                 instructions.extend(instruction["faire"])
     return instructions
 
+DIRECTIONS = ["nord", "est", "sud", "ouest"]
+PAS = {"nord": (0, -1), "est": (1, 0), "sud": (0, 1), "ouest": (-1, 0)}
+
+
+def simuler(depart, programme, largeur, hauteur, murs):
+    """Fait jouer un programme au robot.
+    Renvoie (x, y, choc) : la case d'arrivée, et le numéro de l'instruction
+    qui fait cogner le robot (None s'il ne se cogne pas)."""
+    x = depart["x"]
+    y = depart["y"]
+    direction = depart["direction"]
+    a_faire = deplier(programme)
+    numero_instruction = 0
+    while a_faire:
+        instruction = a_faire.pop(0)
+
+        # Un « si mur devant » : on regarde la case devant le robot
+        if isinstance(instruction, dict):
+            dx, dy = PAS[direction]
+            devant_x, devant_y = x + dx, y + dy
+            dans_la_grille = 0 <= devant_x < largeur and 0 <= devant_y < hauteur
+            if not dans_la_grille or [devant_x, devant_y] in murs:
+                a_faire = instruction["faire"] + a_faire   # ses instructions passent en premier
+            continue
+
+        numero_instruction += 1
+        if instruction == "avancer":
+            dx, dy = PAS[direction]
+            nouveau_x, nouveau_y = x + dx, y + dy
+            dans_la_grille = 0 <= nouveau_x < largeur and 0 <= nouveau_y < hauteur
+            if not dans_la_grille or [nouveau_x, nouveau_y] in murs:
+                return x, y, numero_instruction
+            x, y = nouveau_x, nouveau_y
+        elif instruction == "droite":
+            direction = DIRECTIONS[(DIRECTIONS.index(direction) + 1) % 4]
+        elif instruction == "gauche":
+            direction = DIRECTIONS[(DIRECTIONS.index(direction) - 1) % 4]
+    return x, y, None
+
+
+def verifier_programme(programme, blocs, numero, nom):
+    """Vérifie qu'un programme (la solution ou le programme de départ) n'utilise que des blocs
+    autorisés, et que ses boucles et ses « si » sont bien formés.
+    Renvoie deux choses : la liste des erreurs, et le nombre de blocs du programme."""
+    erreurs = []
+    if not (isinstance(programme, list) and len(programme) > 0):
+        erreurs.append(f"Question {numero} : '{nom}' doit être une liste d'instructions")
+        return erreurs, 0
+
+    nombre_de_blocs = 0
+    for instruction in programme:
+        if isinstance(instruction, str):
+            nombre_de_blocs += 1
+            if instruction not in blocs:
+                erreurs.append(f"Question {numero} : dans '{nom}', l'instruction '{instruction}' n'est pas dans 'blocs'")
+
+        elif isinstance(instruction, dict) and "si" in instruction:
+            erreurs_si, nombre = verifier_si(instruction, blocs, numero)
+            erreurs.extend(erreurs_si)
+            nombre_de_blocs += nombre
+
+        elif isinstance(instruction, dict):
+            tours = instruction.get("repeter")
+            faire = instruction.get("faire")
+            if "repeter" not in blocs:
+                erreurs.append(f"Question {numero} : '{nom}' utilise une boucle, mais 'repeter' n'est pas dans 'blocs'")
+            if not (isinstance(tours, int) and 2 <= tours <= 10):
+                erreurs.append(f"Question {numero} : 'repeter' doit être un entier de 2 à 10")
+            if not (isinstance(faire, list) and len(faire) > 0):
+                erreurs.append(f"Question {numero} : le 'faire' d'une boucle doit être une liste non vide")
+                continue
+            nombre_de_blocs += 1   # la boucle elle-même
+            for element in faire:
+                if isinstance(element, str) and element in ("avancer", "gauche", "droite"):
+                    nombre_de_blocs += 1
+                    if element not in blocs:
+                        erreurs.append(f"Question {numero} : dans '{nom}', l'instruction '{element}' n'est pas dans 'blocs'")
+                elif isinstance(element, dict) and "si" in element:
+                    erreurs_si, nombre = verifier_si(element, blocs, numero)
+                    erreurs.extend(erreurs_si)
+                    nombre_de_blocs += nombre
+                else:
+                    erreurs.append(f"Question {numero} : une boucle ne peut contenir que des instructions simples et des « si »")
+        else:
+            erreurs.append(f"Question {numero} : instruction inconnue dans '{nom}' : {instruction}")
+
+    return erreurs, nombre_de_blocs
+
+
 def verifier_robot(question, numero):
     """Contrôles propres aux exercices « robot »."""
     erreurs = []
@@ -281,48 +370,16 @@ def verifier_robot(question, numero):
         erreurs.append(f"Question {numero} : 'blocs' doit être une liste non vide prise parmi {BLOCS_CONNUS}")
         return erreurs
 
-    # Contrôle 5 : la solution n'utilise que des blocs autorisés, et ses boucles sont bien formées
+    # Contrôle 5 : la solution, et le programme de départ s'il y en a un (chasse aux bugs),
+    # n'utilisent que des blocs autorisés, avec des boucles et des « si » bien formés
     solution = question.get("solution")
-    if not (isinstance(solution, list) and len(solution) > 0):
-        erreurs.append(f"Question {numero} : 'solution' doit être une liste d'instructions")
-        return erreurs
+    erreurs_solution, nombre_de_blocs = verifier_programme(solution, blocs, numero, "solution")
+    erreurs.extend(erreurs_solution)
 
-    nombre_de_blocs = 0
-    for instruction in solution:
-        if isinstance(instruction, str):
-            nombre_de_blocs += 1
-            if instruction not in blocs:
-                erreurs.append(f"Question {numero} : l'instruction '{instruction}' n'est pas dans 'blocs'")
-        
-        elif isinstance(instruction, dict) and "si" in instruction:
-            erreurs_si, nombre = verifier_si(instruction, blocs, numero)
-            erreurs.extend(erreurs_si)
-            nombre_de_blocs += nombre
-
-        elif isinstance(instruction, dict):
-            tours = instruction.get("repeter")
-            faire = instruction.get("faire")
-            if "repeter" not in blocs:
-                erreurs.append(f"Question {numero} : la solution utilise une boucle, mais 'repeter' n'est pas dans 'blocs'")
-            if not (isinstance(tours, int) and 2 <= tours <= 10):
-                erreurs.append(f"Question {numero} : 'repeter' doit être un entier de 2 à 10")
-            if not (isinstance(faire, list) and len(faire) > 0):
-                erreurs.append(f"Question {numero} : le 'faire' d'une boucle doit être une liste non vide")
-                continue
-            nombre_de_blocs += 1   # la boucle elle-même
-            for element in faire:
-                if isinstance(element, str) and element in ("avancer", "gauche", "droite"):
-                    nombre_de_blocs += 1
-                    if element not in blocs:
-                        erreurs.append(f"Question {numero} : l'instruction '{element}' n'est pas dans 'blocs'")
-                elif isinstance(element, dict) and "si" in element:
-                    erreurs_si, nombre = verifier_si(element, blocs, numero)
-                    erreurs.extend(erreurs_si)
-                    nombre_de_blocs += nombre
-                else:
-                    erreurs.append(f"Question {numero} : une boucle ne peut contenir que des instructions simples et des « si »")
-        else:
-            erreurs.append(f"Question {numero} : instruction inconnue dans la solution : {instruction}")
+    programme_depart = question.get("programmeDepart")
+    if programme_depart is not None:
+        erreurs_depart, blocs_depart = verifier_programme(programme_depart, blocs, numero, "programmeDepart")
+        erreurs.extend(erreurs_depart)
 
     # Contrôle 6 : le nombre de blocs maximum (facultatif)
     max_blocs = question.get("maxBlocs")
@@ -330,7 +387,9 @@ def verifier_robot(question, numero):
         if not isinstance(max_blocs, int):
             erreurs.append(f"Question {numero} : 'maxBlocs' doit être un entier")
         elif nombre_de_blocs > max_blocs:
-            erreurs.append(f"Question {numero} : la solution utilise {nombre_de_blocs} blocs, plus que 'maxBlocs' ({max_blocs})")   
+            erreurs.append(f"Question {numero} : la solution utilise {nombre_de_blocs} blocs, plus que 'maxBlocs' ({max_blocs})")
+        elif programme_depart is not None and not erreurs_depart and blocs_depart > max_blocs:
+            erreurs.append(f"Question {numero} : le programme de départ utilise {blocs_depart} blocs, plus que 'maxBlocs' ({max_blocs})")   
 
     # Contrôle 8 : pas de champs propres aux autres types
     for champ in ("choix", "bonneReponse", "reponses", "paires", "elements", "vrai"):
@@ -341,48 +400,21 @@ def verifier_robot(question, numero):
     if erreurs:
         return erreurs   # inutile de simuler une solution mal écrite
 
-    DIRECTIONS = ["nord", "est", "sud", "ouest"]
-    PAS = {"nord": (0, -1), "est": (1, 0), "sud": (0, 1), "ouest": (-1, 0)}
-
-    x = depart["x"]
-    y = depart["y"]
-    direction = depart["direction"]
-    a_faire = deplier(solution)
-    numero_instruction = 0
-    while a_faire:
-        instruction = a_faire.pop(0)
-
-        # Un « si mur devant » : on regarde la case devant le robot
-        if isinstance(instruction, dict):
-            dx, dy = PAS[direction]
-            devant_x = x + dx
-            devant_y = y + dy
-            dans_la_grille = 0 <= devant_x < largeur and 0 <= devant_y < hauteur
-            if not dans_la_grille or [devant_x, devant_y] in murs:
-                a_faire = instruction["faire"] + a_faire   # ses instructions passent en premier
-            continue
-
-        numero_instruction += 1
-        
-        if instruction == "avancer":
-            dx, dy = PAS[direction]
-            nouveau_x = x + dx
-            nouveau_y = y + dy
-            dans_la_grille = 0 <= nouveau_x < largeur and 0 <= nouveau_y < hauteur
-            if not dans_la_grille or [nouveau_x, nouveau_y] in murs:
-                erreurs.append(f"Question {numero} : la solution fait cogner le robot (instruction n°{numero_instruction})")
-                return erreurs
-            x = nouveau_x
-            y = nouveau_y
-        elif instruction == "droite":
-            direction = DIRECTIONS[(DIRECTIONS.index(direction) + 1) % 4]
-        elif instruction == "gauche":
-            direction = DIRECTIONS[(DIRECTIONS.index(direction) - 1) % 4]
-
-    if x != cible["x"] or y != cible["y"]:
+    x, y, choc = simuler(depart, solution, largeur, hauteur, murs)
+    if choc is not None:
+        erreurs.append(f"Question {numero} : la solution fait cogner le robot (instruction n°{choc})")
+    elif x != cible["x"] or y != cible["y"]:
         erreurs.append(f"Question {numero} : la solution arrête le robot en ({x}, {y}), pas sur l'étoile")
 
+    # Contrôle 9 : le programme de départ (chasse aux bugs) doit contenir un bug,
+    # c'est-à-dire ne PAS amener le robot sur l'étoile
+    if programme_depart is not None:
+        x, y, choc = simuler(depart, programme_depart, largeur, hauteur, murs)
+        if choc is None and x == cible["x"] and y == cible["y"]:
+            erreurs.append(f"Question {numero} : le programme de départ marche déjà : il n'y a pas de bug à trouver")
+
     return erreurs
+
 
 def resume_question(question):
     """Un résumé qui identifie une question : son énoncé, et pour les exercices « relier » et

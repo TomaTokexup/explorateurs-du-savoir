@@ -80,7 +80,7 @@
   },
   {
     "titre": "Construire une condition",
-    "texte": "Touche « ❓ Si mur devant » : le bloc apparaît, entouré de jaune. Les blocs que tu touches ensuite vont dedans. Touche « ✔ Fin du si » pour continuer après lui.\nPour mettre une condition dans une boucle, construis d'abord la boucle, puis, quand elle est entourée de jaune, touche « ❓ Si mur devant »."
+    "texte": "Touche « ❓ Si mur devant » : le bloc apparaît, entouré de jaune. Les blocs que tu touches ensuite vont dedans. Touche « ✔ Fin du si » pour continuer après lui.\nPour mettre une condition dans une boucle, construis d'abord la boucle, puis, quand elle est entourée de jaune, touche « ❓ Si mur devant ».\nTu peux aussi faire glisser un « Si » dans une boucle, ou glisser des blocs dans un « Si »."
   },
   {
     "titre": "À toi de jouer !",
