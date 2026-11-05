@@ -1431,22 +1431,94 @@ function creerTerrain(config) {
     angle = { nord: 0, est: 90, sud: 180, ouest: 270 }[config.depart.direction];
     directionActuelle = config.depart.direction;
     pion.classList.remove("cogne", "arrive");
+    if (typeof eteindreRegard === "function") { eteindreRegard(); }
     placer(config.depart.x, config.depart.y, config.depart.direction, true);
   }
+  // Pendant une question « mur devant ? », la case regardée s'allume un instant :
+  // en jaune si elle est libre, en rouge si c'est un mur. Si c'est le bord, c'est le cadre qui clignote.
+  function montrerDevant(x, y, direction, mur) {
+    terrain.querySelectorAll(".regard, .regard-mur").forEach(function (c) { c.classList.remove("regard", "regard-mur"); });
+    terrain.classList.remove("regard-bord");
+    const nx = x + PAS[direction][0];
+    const ny = y + PAS[direction][1];
+    const dehors = nx < 0 || ny < 0 || nx >= config.grille.largeur || ny >= config.grille.hauteur;
+    if (dehors) {
+      terrain.getBoundingClientRect();
+      terrain.classList.add("regard-bord");
+    } else {
+      terrain.children[ny * config.grille.largeur + nx].classList.add(mur ? "regard-mur" : "regard");
+    }
+  }
+  function eteindreRegard() {
+    terrain.querySelectorAll(".regard, .regard-mur").forEach(function (c) { c.classList.remove("regard", "regard-mur"); });
+    terrain.classList.remove("regard-bord");
+  }
   revenirAuDepart();
-  return { element: terrain, pion: pion, placer: placer, revenirAuDepart: revenirAuDepart };
+  return { element: terrain, pion: pion, placer: placer, revenirAuDepart: revenirAuDepart,
+    montrerDevant: montrerDevant, eteindreRegard: eteindreRegard };
+}
+
+// Vitesse du robot, choisie par l'élève (et gardée dans le navigateur pour la prochaine fois).
+// "pas" : durée d'un déplacement ou d'une rotation ; "question" : durée d'un début de tour
+// ou d'une question « mur devant ? » (sans mouvement), en millisecondes.
+const VITESSES = {
+  lente:   { nom: "🐢 Lente",   pas: 1000, question: 1000 },
+  normale: { nom: "🚶 Normale", pas: 450,  question: 250 },
+  rapide:  { nom: "🐇 Rapide",  pas: 180,  question: 90 }
+};
+let vitesseRobot = lireVitesse();
+
+function lireVitesse() {
+  try {
+    const vitesse = localStorage.getItem("vitesse-robot");
+    if (VITESSES[vitesse]) { return vitesse; }
+  } catch (erreur) {
+    // navigateur qui refuse la mémoire locale : on garde la vitesse normale
+  }
+  return "normale";
+}
+
+function choisirVitesse(vitesse) {
+  vitesseRobot = vitesse;
+  try { localStorage.setItem("vitesse-robot", vitesse); } catch (erreur) { /* tant pis */ }
+  // Tous les sélecteurs de la page (leçon et exercice) montrent le même choix
+  document.querySelectorAll(".vitesse button").forEach(function (bouton) {
+    bouton.setAttribute("aria-pressed", bouton.dataset.vitesse === vitesse ? "true" : "false");
+  });
+}
+
+// Trois boutons « 🐢 Lente / 🚶 Normale / 🐇 Rapide ». On peut changer même pendant que le robot joue.
+function creerSelecteurVitesse() {
+  const groupe = document.createElement("div");
+  groupe.className = "vitesse";
+  groupe.setAttribute("role", "group");
+  groupe.setAttribute("aria-label", "Vitesse du robot");
+  const titre = document.createElement("span");
+  titre.className = "vitesse-titre";
+  titre.textContent = "Vitesse :";
+  groupe.appendChild(titre);
+  Object.keys(VITESSES).forEach(function (vitesse) {
+    const bouton = document.createElement("button");
+    bouton.type = "button";
+    bouton.dataset.vitesse = vitesse;
+    bouton.textContent = VITESSES[vitesse].nom;
+    bouton.setAttribute("aria-pressed", vitesse === vitesseRobot ? "true" : "false");
+    bouton.addEventListener("click", function () { choisirVitesse(vitesse); });
+    groupe.appendChild(bouton);
+  });
+  return groupe;
 }
 
 // Joue les étapes d'une simulation une par une, en allumant le bloc en cours.
+// La vitesse est relue à chaque étape : un changement de vitesse agit tout de suite.
 // "quandFini" reçoit le résultat de la simulation.
 function animerRobot(terrain, resultat, quandFini) {
-  const duree = animationsReduites() ? 120 : 450;
-  const dureeCourte = animationsReduites() ? 80 : 250;   // pour un début de tour ou une question « mur devant ? »
   let i = 0;
   let allume = null;
   function suivante() {
     if (allume) { allume.classList.remove("en-cours"); }
     if (i >= resultat.etapes.length) {
+      terrain.eteindreRegard();
       if (resultat.arrive) { terrain.pion.classList.add("arrive"); }
       quandFini(resultat);
       return;
@@ -1455,19 +1527,24 @@ function animerRobot(terrain, resultat, quandFini) {
     allume = etape.element ? etape.element.ligne : null;
     if (allume) { allume.classList.add("en-cours"); }
     if (etape.tour && allume) { afficherPastille(allume, "tour " + etape.tour + " / " + etape.tours, ""); }
-    if (etape.reponse !== undefined && allume) {
-      afficherPastille(allume, etape.reponse ? "oui, mur !" : "non", etape.reponse ? "oui" : "non");
+    terrain.eteindreRegard();
+    if (etape.reponse !== undefined) {
+      terrain.montrerDevant(etape.x, etape.y, etape.direction, etape.reponse);
+      if (allume) { afficherPastille(allume, etape.reponse ? "oui, mur !" : "non", etape.reponse ? "oui" : "non"); }
     }
     if (etape.choc) {
       terrain.pion.classList.add("cogne");
       if (allume) { allume.classList.add("bug"); }
       allume = null;
     } else {
+      // Le glissement du robot dure un peu moins qu'une étape (au plus 0,6 s)
+      terrain.pion.style.transitionDuration = Math.min(600, VITESSES[vitesseRobot].pas * 0.75) + "ms";
       terrain.placer(etape.x, etape.y, etape.direction);
     }
     i++;
     const sansMouvement = etape.tour !== undefined || etape.reponse !== undefined;
-    setTimeout(suivante, sansMouvement ? dureeCourte : duree);
+    const vitesse = VITESSES[vitesseRobot];
+    setTimeout(suivante, sansMouvement ? vitesse.question : vitesse.pas);
   }
   suivante();
 }
@@ -1549,7 +1626,7 @@ function creerDemo(demo) {
   const legende = document.createElement("p");
   legende.className = "consigne-type";
   legende.textContent = "Le programme :";
-  cote.append(legende, liste, bouton);
+  cote.append(legende, liste, bouton, creerSelecteurVitesse());
   boite.append(terrain.element, cote);
   return boite;
 }
@@ -1822,6 +1899,7 @@ function afficherRobot(question) {
     liste.querySelectorAll("button").forEach(function (b) { b.disabled = true; });
     actions.hidden = true;
     palette.hidden = true;
+    selecteur.hidden = true;
     message.hidden = true;
     const rappel = estJuste ? "" : "Une solution : " + programmeEnTexte(question.solution) + ". ";
     afficherCorrection(question, estJuste, rappel);
@@ -1830,7 +1908,8 @@ function afficherRobot(question) {
   zone.append(compteur, liste);
   const cote = document.createElement("div");
   cote.className = "robot-cote";
-  cote.append(palette, zone, actions, message);
+  const selecteur = creerSelecteurVitesse();
+  cote.append(palette, zone, actions, selecteur, message);
   const plateau = document.createElement("div");
   plateau.className = "robot-plateau";
   plateau.append(terrain.element, cote);

@@ -5,7 +5,7 @@
   },
   {
     "titre": "Le robot regarde devant lui",
-    "texte": "Le bloc « ❓ Si mur devant » pose une question au robot : y a-t-il un mur, ou le bord de la grille, sur la case juste devant toi ?\nSi oui, il fait les blocs placés dedans. Si non, il les saute et passe à la suite. Regarde : la première fois, la réponse est « non » ; la deuxième fois, c'est « oui ».",
+    "texte": "Le bloc « ❓ Si mur devant » pose une question au robot : y a-t-il un mur, ou le bord de la grille, sur la case juste devant toi ?\nSi oui, il fait les blocs placés dedans. Si non, il les saute et passe à la suite.\nRegarde bien la case devant le robot : elle s'allume en jaune si elle est libre, en rouge si c'est un mur. Choisis la vitesse 🐢 pour avoir le temps de tout suivre.",
     "demo": {
       "grille": {
         "largeur": 4,
