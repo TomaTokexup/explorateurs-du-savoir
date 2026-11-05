@@ -1,0 +1,86 @@
+[
+  {
+    "titre": "Un programme, c'est quoi ?",
+    "texte": "Un ordinateur, une console de jeux ou un robot ne réfléchissent pas tout seuls. Ils suivent des instructions, une par une, exactement comme on les a écrites.\nUne liste d'instructions s'appelle un programme. Écrire un programme, c'est programmer !"
+  },
+  {
+    "titre": "Les instructions du robot",
+    "texte": "Notre robot comprend trois instructions.\n⬆️ Avancer : il avance d'une case, droit devant lui.\n↩️ Tourner à gauche et ↪️ Tourner à droite : il fait un quart de tour sur place. Attention, il ne change pas de case !\nRegarde ses yeux : ils montrent dans quelle direction il va avancer. Appuie sur « Regarder ».",
+    "demo": {
+      "grille": {
+        "largeur": 4,
+        "hauteur": 4
+      },
+      "depart": {
+        "x": 0,
+        "y": 3,
+        "direction": "nord"
+      },
+      "cible": {
+        "x": 1,
+        "y": 1
+      },
+      "programme": [
+        "avancer",
+        "avancer",
+        "droite",
+        "avancer"
+      ]
+    }
+  },
+  {
+    "titre": "L'ordre compte",
+    "texte": "Le robot suit les instructions dans l'ordre, de haut en bas. Si on change l'ordre, il fait un autre chemin !\nIci, il commence par tourner, puis il avance : il ne monte plus d'abord, et il n'arrive pas sur l'étoile.",
+    "demo": {
+      "grille": {
+        "largeur": 4,
+        "hauteur": 4
+      },
+      "depart": {
+        "x": 0,
+        "y": 3,
+        "direction": "nord"
+      },
+      "cible": {
+        "x": 1,
+        "y": 1
+      },
+      "programme": [
+        "droite",
+        "avancer",
+        "avancer",
+        "gauche",
+        "avancer"
+      ]
+    }
+  },
+  {
+    "titre": "Sa gauche, pas la tienne !",
+    "texte": "Le robot tourne vers SA gauche ou SA droite. Quand il regarde vers le bas de l'écran, sa gauche est de ton côté droit !\nAstuce : penche la tête, ou tourne ta feuille, pour regarder dans la même direction que lui.",
+    "demo": {
+      "grille": {
+        "largeur": 4,
+        "hauteur": 4
+      },
+      "depart": {
+        "x": 1,
+        "y": 0,
+        "direction": "sud"
+      },
+      "cible": {
+        "x": 3,
+        "y": 1
+      },
+      "programme": [
+        "avancer",
+        "gauche",
+        "avancer",
+        "avancer"
+      ]
+    }
+  },
+  {
+    "titre": "À toi de jouer !",
+    "texte": "Dans les exercices, touche les blocs pour construire ton programme, puis appuie sur ▶ Lancer.\nSi le robot se cogne ou rate l'étoile, ce n'est pas grave : trouve le bloc qui pose problème, corrige-le et relance. Chercher et corriger les erreurs s'appelle « déboguer » : les programmeurs le font tous les jours !\nTu as 3 essais par exercice."
+  }
+]

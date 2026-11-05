@@ -28,6 +28,8 @@
 //   Association : { "type": "association", "enonce": "Relie…", "paires": [["le cœur", "pompe le sang"], …], "explication": "..." }
 //   Ordre       : { "type": "ordre", "enonce": "Range…", "elements": ["1er", "2e", "3e"], "explication": "..." }
 //                 ("elements" est écrit dans le BON ordre ; le site le mélange)
+//   Vrai ou faux : { "type": "vraifaux", "enonce": "Une affirmation.", "vrai": true, "explication": "..." }
+//   Robot       : voir la partie 5 ter (programmation), avec les leçons
 //
 // Un cahier s'active tout seul dès que son index.json existe :
 // pas besoin de modifier ce code pour ajouter une matière ou un thème.
@@ -50,7 +52,9 @@ const MATIERES = [
   { id: "anglais",       nom: "Anglais",             icone: "💬", precision: "Langue 2",
     tranches: { p3: "p3-p5", p4: "p3-p5", p5: "p3-p5" } },
   { id: "decouverte",    nom: "Découverte du monde", icone: "🌍" },
-  { id: "programmation", nom: "Programmation",       icone: "🤖", precision: "Bonus" }
+  // La programmation n'est pas au programme de l'école : un seul parcours, commun à la P3, la P4 et la P5
+  { id: "programmation", nom: "Programmation",       icone: "🤖", precision: "Bonus",
+    tranches: { p3: "p3-p5", p4: "p3-p5", p5: "p3-p5" } }
 ];
 
 // Nombre de questions tirées au hasard à chaque partie, dans la banque de questions.
@@ -347,6 +351,7 @@ async function pageCahier() {
     }
 
     let banque;          // toutes les questions disponibles pour ce quiz
+    let lecon = null;    // la leçon du thème, s'il y en a une (programmation)
     let nombreParPartie; // combien on en tire à chaque partie
     let nomDuQuiz;
 
@@ -367,6 +372,8 @@ async function pageCahier() {
       cleEtoiles = cleEtoilesDe(idNiveau, idMatiere, theme.id);
       banque = await lireJSON(dossier + theme.id + ".json");
       nombreParPartie = NOMBRE_QUESTIONS_THEME;
+      // Une leçon est facultative : si le fichier n'existe pas, on passe directement aux exercices
+      lecon = await lireJSON(dossier + "lecons/" + theme.id + ".json").catch(function () { return null; });
     }
 
     const sousTitre = document.getElementById("sous-titre");
@@ -374,7 +381,32 @@ async function pageCahier() {
     sousTitre.hidden = false;
     document.title = nomDuQuiz + " – " + matiere.nom + " " + niveau.nom;
 
-    lancerQuiz(banque, nombreParPartie);
+    if (!lecon) {
+      lancerQuiz(banque, nombreParPartie);
+      return;
+    }
+    // Avec une leçon : on la montre d'abord, puis les exercices. Le bouton « Revoir la leçon »
+    // la rouvre à tout moment, et on revient ensuite exactement là où on en était.
+    brancherLecon();
+    const boutonLecon = document.getElementById("bouton-lecon");
+    boutonLecon.addEventListener("click", function () {
+      const zones = [document.getElementById("zone-question"), document.getElementById("bilan")];
+      const visibles = zones.filter(function (zone) { return !zone.hidden; });
+      const progression = document.getElementById("progression").textContent;
+      zones.forEach(function (zone) { zone.hidden = true; });
+      boutonLecon.hidden = true;
+      ouvrirLecon(lecon, function () {
+        visibles.forEach(function (zone) { zone.hidden = false; });
+        document.getElementById("progression").textContent = progression;
+        boutonLecon.hidden = false;
+      }, "Reprendre les exercices");
+      window.scrollTo(0, 0);
+    });
+    ouvrirLecon(lecon, function () {
+      boutonLecon.hidden = false;
+      lancerQuiz(banque, nombreParPartie);
+      window.scrollTo(0, 0);
+    }, "C'est parti : les exercices !");
   } catch (erreur) {
     afficherErreur("Impossible de charger les exercices : " + erreur.message, erreur);
   }
@@ -521,6 +553,8 @@ function afficherQuestion() {
     afficherOrdre(question);
   } else if (type === "vraifaux") {
     afficherVraiFaux(question);
+  } else if (type === "robot") {
+    afficherRobot(question);
   } else {
     afficherQcm(question);
   }
@@ -1192,6 +1226,566 @@ function finirSerie() {
     messageRecord.hidden = true;
   }
   document.getElementById("bouton-recommencer").textContent = "Rejouer";
+}
+
+// ---------- 5 ter. Programmation : le robot sur une grille, et les leçons ----------
+// Type "robot" : l'élève assemble des blocs (avancer, tourner, répéter) pour guider
+// le robot jusqu'à l'étoile. Coordonnées : x = colonne (0 à gauche), y = ligne (0 en haut).
+//   { "type": "robot", "enonce": "...", "grille": {"largeur": 5, "hauteur": 5},
+//     "depart": {"x": 0, "y": 4, "direction": "est"}, "cible": {"x": 3, "y": 2},
+//     "murs": [[2, 3]], "blocs": ["avancer", "gauche", "droite", "repeter"], "maxBlocs": 7,
+//     "solution": ["avancer", {"repeter": 2, "faire": ["avancer"]}, ...], "explication": "..." }
+// Le validateur Python simule "solution" pour vérifier qu'elle mène bien à l'étoile.
+
+const DIRECTIONS = ["nord", "est", "sud", "ouest"];       // dans le sens des aiguilles d'une montre
+const PAS = { nord: [0, -1], est: [1, 0], sud: [0, 1], ouest: [-1, 0] };
+const ESSAIS_ROBOT = 3;                                   // nombre de lancements avant la correction
+const BLOCS = {
+  avancer: { icone: "⬆️", texte: "Avancer" },
+  gauche:  { icone: "↩️", texte: "Tourner à gauche" },
+  droite:  { icone: "↪️", texte: "Tourner à droite" },
+  repeter: { icone: "🔁", texte: "Répéter" }
+};
+
+// Nombre de blocs d'un programme : une boucle compte 1, plus ce qu'elle contient
+function compterBlocs(programme) {
+  return programme.reduce(function (total, bloc) {
+    return total + (typeof bloc === "string" ? 1 : 1 + compterBlocs(bloc.faire));
+  }, 0);
+}
+
+// Texte lisible d'un programme, pour la correction : « Avancer, Répéter 3 fois (Avancer, Tourner à droite) »
+function programmeEnTexte(programme) {
+  return programme.map(function (bloc) {
+    if (typeof bloc === "string") { return BLOCS[bloc].texte; }
+    return "Répéter " + bloc.repeter + " fois (" + programmeEnTexte(bloc.faire) + ")";
+  }).join(", ");
+}
+
+// Exécute un programme « sur le papier » et renvoie la liste des positions successives.
+// Chaque étape garde le bloc qui l'a produite (pour l'allumer pendant l'animation).
+// La simulation s'arrête au premier choc contre un mur ou le bord de la grille.
+function simulerRobot(config, programme, blocsAffiches) {
+  const murs = new Set((config.murs || []).map(function (m) { return m[0] + "," + m[1]; }));
+  let x = config.depart.x;
+  let y = config.depart.y;
+  let direction = config.depart.direction;
+  const etapes = [];
+  let choc = false;
+
+  function executer(liste, elements) {
+    for (let i = 0; i < liste.length && !choc; i++) {
+      const bloc = liste[i];
+      const element = elements ? elements[i] : null;
+      if (typeof bloc !== "string") {
+        for (let tour = 0; tour < bloc.repeter && !choc; tour++) {
+          etapes.push({ x: x, y: y, direction: direction, element: element, tour: tour + 1 });
+          executer(bloc.faire, element ? element.enfants : null);
+        }
+        continue;
+      }
+      if (bloc === "avancer") {
+        const nx = x + PAS[direction][0];
+        const ny = y + PAS[direction][1];
+        const dehors = nx < 0 || ny < 0 || nx >= config.grille.largeur || ny >= config.grille.hauteur;
+        if (dehors || murs.has(nx + "," + ny)) {
+          choc = true;
+          etapes.push({ x: x, y: y, direction: direction, element: element, choc: true });
+          return;
+        }
+        x = nx;
+        y = ny;
+      } else {
+        const sens = bloc === "droite" ? 1 : 3;
+        direction = DIRECTIONS[(DIRECTIONS.indexOf(direction) + sens) % 4];
+      }
+      etapes.push({ x: x, y: y, direction: direction, element: element });
+    }
+  }
+  executer(programme, blocsAffiches);
+  const fin = { x: x, y: y };
+  return {
+    etapes: etapes,
+    choc: choc,
+    arrive: !choc && fin.x === config.cible.x && fin.y === config.cible.y
+  };
+}
+
+// Dessine la grille, l'étoile, les murs et le robot. Renvoie de quoi déplacer le robot.
+function creerTerrain(config) {
+  const terrain = document.createElement("div");
+  terrain.className = "terrain";
+  terrain.style.setProperty("--colonnes", config.grille.largeur);
+  terrain.style.setProperty("--lignes", config.grille.hauteur);
+  terrain.setAttribute("role", "img");
+
+  const murs = new Set((config.murs || []).map(function (m) { return m[0] + "," + m[1]; }));
+  for (let y = 0; y < config.grille.hauteur; y++) {
+    for (let x = 0; x < config.grille.largeur; x++) {
+      const case_ = document.createElement("span");
+      case_.className = "case" + ((x + y) % 2 ? " sombre" : "");
+      if (murs.has(x + "," + y)) { case_.classList.add("mur"); }
+      if (x === config.cible.x && y === config.cible.y) {
+        case_.classList.add("cible");
+        const etoile = document.createElement("span");
+        etoile.textContent = "⭐";
+        case_.appendChild(etoile);
+      }
+      terrain.appendChild(case_);
+    }
+  }
+
+  // Le robot : une petite tête dessinée en SVG, dont les yeux montrent où il regarde
+  const pion = document.createElement("span");
+  pion.className = "robot-pion";
+  pion.innerHTML =
+    '<svg viewBox="0 0 40 40" aria-hidden="true">' +
+    '<line x1="20" y1="2" x2="20" y2="8" stroke="#2b2b52" stroke-width="2.5"/>' +
+    '<circle cx="20" cy="3" r="2.6" fill="#ff7eb0"/>' +
+    '<rect x="6" y="8" width="28" height="26" rx="8" fill="#5b8def" stroke="#2b2b52" stroke-width="2.5"/>' +
+    '<circle cx="14" cy="15" r="3.6" fill="white"/><circle cx="26" cy="15" r="3.6" fill="white"/>' +
+    '<circle cx="14" cy="14" r="1.8" fill="#2b2b52"/><circle cx="26" cy="14" r="1.8" fill="#2b2b52"/>' +
+    '<rect x="13" y="24" width="14" height="4" rx="2" fill="#2b2b52"/>' +
+    '</svg>';
+  terrain.appendChild(pion);
+
+  let angle = 0;   // on cumule l'angle pour que le robot tourne toujours du bon côté
+  let directionActuelle = config.depart.direction;
+  function placer(x, y, direction, sansAnimation) {
+    const ecart = (DIRECTIONS.indexOf(direction) - DIRECTIONS.indexOf(directionActuelle) + 4) % 4;
+    angle += ecart === 3 ? -90 : ecart * 90;
+    directionActuelle = direction;
+    if (sansAnimation) { pion.classList.add("sans-transition"); }
+    pion.style.left = (x / config.grille.largeur) * 100 + "%";
+    pion.style.top = (y / config.grille.hauteur) * 100 + "%";
+    pion.style.transform = "rotate(" + angle + "deg)";
+    if (sansAnimation) {
+      pion.getBoundingClientRect();           // force le navigateur à appliquer la position tout de suite
+      pion.classList.remove("sans-transition");
+    }
+    terrain.setAttribute("aria-label", "Grille de " + config.grille.largeur + " cases sur " +
+      config.grille.hauteur + ". Le robot regarde vers le " + direction + ".");
+  }
+  function revenirAuDepart() {
+    angle = { nord: 0, est: 90, sud: 180, ouest: 270 }[config.depart.direction];
+    directionActuelle = config.depart.direction;
+    pion.classList.remove("cogne", "arrive");
+    placer(config.depart.x, config.depart.y, config.depart.direction, true);
+  }
+  revenirAuDepart();
+  return { element: terrain, pion: pion, placer: placer, revenirAuDepart: revenirAuDepart };
+}
+
+// Joue les étapes d'une simulation une par une, en allumant le bloc en cours.
+// "quandFini" reçoit le résultat de la simulation.
+function animerRobot(terrain, resultat, quandFini) {
+  const duree = animationsReduites() ? 120 : 450;
+  let i = 0;
+  let allume = null;
+  function suivante() {
+    if (allume) { allume.classList.remove("en-cours"); }
+    if (i >= resultat.etapes.length) {
+      if (resultat.arrive) { terrain.pion.classList.add("arrive"); }
+      quandFini(resultat);
+      return;
+    }
+    const etape = resultat.etapes[i];
+    allume = etape.element ? etape.element.ligne : null;
+    if (allume) { allume.classList.add("en-cours"); }
+    if (etape.choc) {
+      terrain.pion.classList.add("cogne");
+      if (allume) { allume.classList.add("bug"); }
+      allume = null;
+    } else {
+      terrain.placer(etape.x, etape.y, etape.direction);
+    }
+    i++;
+    setTimeout(suivante, duree);
+  }
+  suivante();
+}
+
+// Une étiquette de bloc, pour les leçons et la correction (sans bouton)
+function etiquetteBloc(bloc) {
+  const ligne = document.createElement("li");
+  ligne.className = "bloc bloc-" + (typeof bloc === "string" ? bloc : "repeter");
+  if (typeof bloc === "string") {
+    ligne.textContent = BLOCS[bloc].icone + " " + BLOCS[bloc].texte;
+    return { ligne: ligne, enfants: null };
+  }
+  const titre = document.createElement("span");
+  titre.className = "bloc-titre";
+  titre.textContent = "🔁 Répéter " + bloc.repeter + " fois";
+  const dedans = document.createElement("ol");
+  dedans.className = "programme-boucle";
+  const enfants = bloc.faire.map(function (b) {
+    const e = etiquetteBloc(b);
+    dedans.appendChild(e.ligne);
+    return e;
+  });
+  ligne.append(titre, dedans);
+  return { ligne: ligne, enfants: enfants };
+}
+
+// Petite démonstration (dans les leçons) : une grille et un programme qu'on regarde s'exécuter
+function creerDemo(demo) {
+  const boite = document.createElement("div");
+  boite.className = "demo-robot";
+  const terrain = creerTerrain(demo);
+  const liste = document.createElement("ol");
+  liste.className = "programme programme-demo";
+  const elements = demo.programme.map(function (bloc) {
+    const e = etiquetteBloc(bloc);
+    liste.appendChild(e.ligne);
+    return e;
+  });
+  const bouton = document.createElement("button");
+  bouton.type = "button";
+  bouton.className = "bouton-lancer";
+  bouton.textContent = "▶ Regarder";
+  bouton.addEventListener("click", function () {
+    bouton.disabled = true;
+    terrain.revenirAuDepart();
+    liste.querySelectorAll(".bug").forEach(function (b) { b.classList.remove("bug"); });
+    setTimeout(function () {
+      animerRobot(terrain, simulerRobot(demo, demo.programme, elements), function () {
+        bouton.disabled = false;
+        bouton.textContent = "↺ Revoir";
+      });
+    }, 300);
+  });
+  const cote = document.createElement("div");
+  cote.className = "demo-cote";
+  const legende = document.createElement("p");
+  legende.className = "consigne-type";
+  legende.textContent = "Le programme :";
+  cote.append(legende, liste, bouton);
+  boite.append(terrain.element, cote);
+  return boite;
+}
+
+// --- L'exercice "robot" ---
+function afficherRobot(question) {
+  const reponses = document.getElementById("reponses");
+  reponses.className = "robot";
+  const terrain = creerTerrain(question);
+  const autorises = question.blocs || ["avancer", "gauche", "droite"];
+  const max = question.maxBlocs || null;
+  let programme = [];          // le programme de l'élève, au même format que "solution"
+  let boucleOuverte = null;    // la boucle où vont les nouveaux blocs (null : dans le programme principal)
+  let essais = 0;
+  let enCours = false;
+  let elementsLances = [];     // les blocs affichés pendant le dernier lancement
+
+  const aide = document.createElement("p");
+  aide.className = "consigne-type";
+  aide.textContent = "Touche les blocs pour construire ton programme, puis appuie sur ▶ Lancer.";
+
+  const palette = document.createElement("div");
+  palette.className = "palette";
+  const zone = document.createElement("div");
+  zone.className = "zone-programme";
+  const compteur = document.createElement("p");
+  compteur.className = "compteur-blocs";
+  const liste = document.createElement("ol");
+  liste.className = "programme";
+  const message = document.createElement("p");
+  message.className = "message-robot";
+  message.setAttribute("aria-live", "polite");
+
+  const actions = document.createElement("div");
+  actions.className = "actions-robot";
+  const lancer = boutonValider("▶ Lancer");
+  lancer.classList.add("bouton-lancer");
+  const effacer = document.createElement("button");
+  effacer.type = "button";
+  effacer.className = "bouton-effacer";
+  effacer.textContent = "🗑️ Tout effacer";
+  actions.append(lancer, effacer);
+
+  // Les boutons de la palette (un par bloc autorisé) + « Fin de la boucle »
+  const boutonsPalette = [];
+  autorises.forEach(function (nom) {
+    const bouton = document.createElement("button");
+    bouton.type = "button";
+    bouton.className = "bloc bloc-" + nom;
+    bouton.textContent = BLOCS[nom].icone + " " + BLOCS[nom].texte;
+    bouton.addEventListener("click", function () { ajouter(nom); });
+    bouton.dataset.nom = nom;
+    boutonsPalette.push(bouton);
+    palette.appendChild(bouton);
+  });
+  const finBoucle = document.createElement("button");
+  finBoucle.type = "button";
+  finBoucle.className = "bloc bloc-fin";
+  finBoucle.textContent = "✔ Fin de la boucle";
+  finBoucle.addEventListener("click", function () { boucleOuverte = null; dessiner(); });
+  palette.appendChild(finBoucle);
+
+  function ajouter(nom) {
+    if (enCours || (max && compterBlocs(programme) >= max)) { return; }
+    if (nom === "repeter") {
+      const boucle = { repeter: 2, faire: [] };
+      programme.push(boucle);
+      boucleOuverte = boucle;
+    } else if (boucleOuverte) {
+      boucleOuverte.faire.push(nom);
+    } else {
+      programme.push(nom);
+    }
+    effacerMessage();
+    dessiner();
+  }
+
+  function effacerMessage() {
+    message.textContent = "";
+    message.className = "message-robot";
+  }
+
+  // Redessine le programme de l'élève. Chaque bloc a une croix pour le retirer ;
+  // une boucle a des boutons − et + pour choisir le nombre de tours.
+  // Renvoie la liste des éléments affichés, dans la même forme que le programme (pour l'animation).
+  function dessiner() {
+    liste.innerHTML = "";
+    const elements = programme.map(function (bloc, i) {
+      return dessinerBloc(bloc, liste, function () {
+        if (bloc === boucleOuverte) { boucleOuverte = null; }
+        programme.splice(i, 1);
+      });
+    });
+    const nombre = compterBlocs(programme);
+    compteur.textContent = max ? "Blocs : " + nombre + " / " + max : "Blocs : " + nombre;
+    compteur.classList.toggle("plein", max !== null && nombre >= max);
+    boutonsPalette.forEach(function (b) {
+      b.disabled = enCours || (max !== null && nombre >= max) || (b.dataset.nom === "repeter" && boucleOuverte !== null);
+    });
+    finBoucle.hidden = boucleOuverte === null;
+    finBoucle.disabled = enCours;
+    lancer.disabled = enCours || programme.length === 0;
+    effacer.disabled = enCours || programme.length === 0;
+    if (programme.length === 0) {
+      const vide = document.createElement("li");
+      vide.className = "programme-vide";
+      vide.textContent = "Ton programme est vide.";
+      liste.appendChild(vide);
+    }
+    return elements;
+  }
+
+  function dessinerBloc(bloc, parent, retirer) {
+    const ligne = document.createElement("li");
+    ligne.className = "bloc bloc-" + (typeof bloc === "string" ? bloc : "repeter");
+    const croix = document.createElement("button");
+    croix.type = "button";
+    croix.className = "bloc-retirer";
+    croix.textContent = "✕";
+    croix.setAttribute("aria-label", "Retirer ce bloc");
+    croix.disabled = enCours;
+    croix.addEventListener("click", function () { retirer(); effacerMessage(); dessiner(); });
+
+    if (typeof bloc === "string") {
+      const texte = document.createElement("span");
+      texte.textContent = BLOCS[bloc].icone + " " + BLOCS[bloc].texte;
+      ligne.append(texte, croix);
+      parent.appendChild(ligne);
+      return { ligne: ligne, enfants: null };
+    }
+
+    // Une boucle : « Répéter [−] 2 [+] fois », puis les blocs qu'elle contient
+    if (bloc === boucleOuverte) { ligne.classList.add("ouverte"); }
+    const titre = document.createElement("span");
+    titre.className = "bloc-titre";
+    const moins = document.createElement("button");
+    moins.type = "button";
+    moins.className = "tours";
+    moins.textContent = "−";
+    moins.setAttribute("aria-label", "Un tour de moins");
+    moins.disabled = enCours || bloc.repeter <= 2;
+    moins.addEventListener("click", function () { bloc.repeter--; dessiner(); });
+    const nombre = document.createElement("strong");
+    nombre.textContent = bloc.repeter;
+    const plus = document.createElement("button");
+    plus.type = "button";
+    plus.className = "tours";
+    plus.textContent = "+";
+    plus.setAttribute("aria-label", "Un tour de plus");
+    plus.disabled = enCours || bloc.repeter >= 10;
+    plus.addEventListener("click", function () { bloc.repeter++; dessiner(); });
+    titre.append("🔁 Répéter ", moins, nombre, plus, " fois");
+    titre.addEventListener("click", function (evenement) {
+      // Toucher le titre d'une boucle la rouvre : les prochains blocs iront dedans
+      if (evenement.target === titre && !enCours) { boucleOuverte = bloc; dessiner(); }
+    });
+    const dedans = document.createElement("ol");
+    dedans.className = "programme-boucle";
+    const enfants = bloc.faire.map(function (b, j) {
+      return dessinerBloc(b, dedans, function () { bloc.faire.splice(j, 1); });
+    });
+    if (bloc.faire.length === 0) {
+      const vide = document.createElement("li");
+      vide.className = "programme-vide";
+      vide.textContent = "Ajoute des blocs dans la boucle.";
+      dedans.appendChild(vide);
+    }
+    ligne.append(titre, croix, dedans);
+    parent.appendChild(ligne);
+    return { ligne: ligne, enfants: enfants };
+  }
+
+  effacer.addEventListener("click", function () {
+    programme = [];
+    boucleOuverte = null;
+    effacerMessage();
+    terrain.revenirAuDepart();
+    dessiner();
+  });
+
+  lancer.addEventListener("click", function () {
+    // Une boucle vide ne fait rien : on prévient l'élève plutôt que de lancer
+    if (programme.some(function (b) { return typeof b !== "string" && b.faire.length === 0; })) {
+      message.textContent = "Une boucle est vide : ajoute-lui des blocs, ou retire-la.";
+      message.className = "message-robot attention";
+      return;
+    }
+    boucleOuverte = null;
+    enCours = true;
+    effacerMessage();
+    terrain.revenirAuDepart();
+    elementsLances = dessiner();
+    const resultat = simulerRobot(question, programme, elementsLances);
+    setTimeout(function () { animerRobot(terrain, resultat, finDuLancement); }, 250);
+  });
+
+  function finDuLancement(resultat) {
+    essais++;
+    enCours = false;
+    if (resultat.arrive) {
+      dessiner();
+      terminer(true);
+      return;
+    }
+    const restants = ESSAIS_ROBOT - essais;
+    if (restants <= 0) {
+      dessiner();
+      terminer(false);
+      return;
+    }
+    message.textContent = (resultat.choc
+      ? "Bong ! Le robot s'est cogné. Le bloc en rouge est celui qui pose problème."
+      : "Le robot s'est arrêté, mais pas sur l'étoile.") +
+      " Corrige ton programme et relance ! (" + restants + (restants > 1 ? " essais restants)" : " essai restant)");
+    message.className = "message-robot attention";
+    const nouveaux = dessiner();
+    // Le programme a été redessiné : on retrouve le bloc fautif à la même place pour le laisser en rouge
+    if (resultat.choc) {
+      const chemin = cheminDe(elementsLances, resultat.etapes[resultat.etapes.length - 1].element);
+      let fautif = chemin ? nouveaux[chemin[0]] : null;
+      if (fautif && chemin.length > 1) { fautif = fautif.enfants[chemin[1]]; }
+      if (fautif) { fautif.ligne.classList.add("bug"); }
+    }
+  }
+
+  // Position d'un bloc affiché dans l'arbre du programme : [i] ou [i, j] pour un bloc dans une boucle
+  function cheminDe(elements, cible) {
+    for (let i = 0; i < elements.length; i++) {
+      if (elements[i] === cible) { return [i]; }
+      const dedans = elements[i].enfants ? elements[i].enfants.indexOf(cible) : -1;
+      if (dedans >= 0) { return [i, dedans]; }
+    }
+    return null;
+  }
+
+  function terminer(estJuste) {
+    enCours = true;   // plus rien ne bouge
+    dessiner();
+    liste.querySelectorAll("button").forEach(function (b) { b.disabled = true; });
+    actions.hidden = true;
+    palette.hidden = true;
+    message.hidden = true;
+    const rappel = estJuste ? "" : "Une solution : " + programmeEnTexte(question.solution) + ". ";
+    afficherCorrection(question, estJuste, rappel);
+  }
+
+  zone.append(compteur, liste);
+  const cote = document.createElement("div");
+  cote.className = "robot-cote";
+  cote.append(palette, zone, actions, message);
+  const plateau = document.createElement("div");
+  plateau.className = "robot-plateau";
+  plateau.append(terrain.element, cote);
+  reponses.append(aide, plateau);
+  dessiner();
+}
+
+// --- Les leçons (programmation) ---
+// donnees/<groupe>/<matiere>/lecons/<theme>.json : une liste d'écrans
+//   [ { "titre": "...", "texte": "Un paragraphe.\nUn autre paragraphe.", "image": "...", "alt": "...",
+//       "demo": { "grille": ..., "depart": ..., "cible": ..., "murs": [...], "programme": [...] } }, ... ]
+let ecransLecon = [];
+let numeroEcran = 0;
+let quandLeconFinie = null;    // ce qu'on fait en quittant la leçon (lancer ou reprendre le quiz)
+
+let texteFinLecon = "";        // texte du bouton du dernier écran
+
+function ouvrirLecon(ecrans, quandFinie, texteFin) {
+  ecransLecon = ecrans;
+  texteFinLecon = texteFin;
+  numeroEcran = 0;
+  quandLeconFinie = quandFinie;
+  document.getElementById("lecon").hidden = false;
+  afficherEcran();
+}
+
+function afficherEcran() {
+  const ecran = ecransLecon[numeroEcran];
+  const dernier = numeroEcran === ecransLecon.length - 1;
+  document.getElementById("progression").textContent =
+    "Leçon – écran " + (numeroEcran + 1) + " sur " + ecransLecon.length;
+  ecrireTexte(document.getElementById("lecon-titre"), ecran.titre);
+
+  const texte = document.getElementById("lecon-texte");
+  texte.innerHTML = "";
+  (ecran.texte || "").split("\n").forEach(function (paragraphe) {
+    const p = document.createElement("p");
+    ecrireTexte(p, paragraphe);
+    texte.appendChild(p);
+  });
+
+  const figure = document.getElementById("lecon-figure");
+  const image = figure.querySelector("img");
+  if (ecran.image) {
+    image.src = ecran.image;
+    image.alt = ecran.alt || "";
+    figure.hidden = false;
+  } else {
+    image.removeAttribute("src");
+    figure.hidden = true;
+  }
+
+  const demo = document.getElementById("lecon-demo");
+  demo.innerHTML = "";
+  if (ecran.demo) { demo.appendChild(creerDemo(ecran.demo)); }
+
+  document.getElementById("lecon-precedent").hidden = numeroEcran === 0;
+  const suivant = document.getElementById("lecon-suivant");
+  suivant.textContent = dernier ? texteFinLecon : "Suivant →";
+  suivant.classList.toggle("dernier", dernier);
+}
+
+function brancherLecon() {
+  document.getElementById("lecon-precedent").addEventListener("click", function () {
+    numeroEcran--;
+    afficherEcran();
+  });
+  document.getElementById("lecon-suivant").addEventListener("click", function () {
+    if (numeroEcran < ecransLecon.length - 1) {
+      numeroEcran++;
+      afficherEcran();
+    } else {
+      document.getElementById("lecon").hidden = true;
+      quandLeconFinie();
+    }
+  });
 }
 
 // ---------- 6. Démarrage selon la page ----------

@@ -23,6 +23,22 @@
         </h1>
         <h2 class="sous-titre" id="sous-titre" hidden></h2>
         <p class="progression" id="progression"></p>
+        <!-- Affiché seulement pour un thème qui a une leçon (programmation) -->
+        <button class="bouton-lecon" id="bouton-lecon" type="button" hidden>📘 Revoir la leçon</button>
+
+        <!-- Leçon : une suite d'écrans, avant les exercices (remplie par script.js) -->
+        <section class="lecon" id="lecon" hidden>
+            <h3 class="lecon-titre" id="lecon-titre"></h3>
+            <div class="lecon-texte" id="lecon-texte"></div>
+            <figure class="figure" id="lecon-figure" hidden>
+                <img src="" alt="">
+            </figure>
+            <div id="lecon-demo"></div>
+            <div class="lecon-boutons">
+                <button class="lecon-precedent" id="lecon-precedent" type="button">← Précédent</button>
+                <button class="bouton-suivant" id="lecon-suivant" type="button">Suivant →</button>
+            </div>
+        </section>
 
         <!-- Sommaire : affiché quand aucun thème n'est choisi -->
         <nav class="sommaire" id="sommaire" aria-label="Thèmes" hidden>

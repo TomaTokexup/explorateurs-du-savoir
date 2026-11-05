@@ -1,0 +1,298 @@
+[
+  {
+    "type": "robot",
+    "enonce": "Le robot regarde vers la droite. Guide-le jusqu'à l'étoile.",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 0,
+      "y": 2,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 3,
+      "y": 2
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite"
+    ],
+    "solution": [
+      "avancer",
+      "avancer",
+      "avancer"
+    ],
+    "explication": "Le robot regarde déjà vers l'étoile : il suffit d'avancer 3 fois."
+  },
+  {
+    "type": "robot",
+    "enonce": "Guide le robot jusqu'à l'étoile.",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 0,
+      "y": 4,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 2,
+      "y": 2
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite"
+    ],
+    "solution": [
+      "avancer",
+      "avancer",
+      "gauche",
+      "avancer",
+      "avancer"
+    ],
+    "explication": "Le robot avance de 2 cases vers la droite, tourne à gauche pour regarder vers le haut, puis avance encore de 2 cases."
+  },
+  {
+    "type": "robot",
+    "enonce": "Le robot regarde vers le haut. Évite les murs pour atteindre l'étoile.",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 2,
+      "y": 4,
+      "direction": "nord"
+    },
+    "cible": {
+      "x": 4,
+      "y": 1
+    },
+    "murs": [
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite"
+    ],
+    "solution": [
+      "avancer",
+      "avancer",
+      "avancer",
+      "droite",
+      "avancer",
+      "avancer"
+    ],
+    "explication": "Le robot monte de 3 cases, tourne à droite, puis avance de 2 cases jusqu'à l'étoile."
+  },
+  {
+    "type": "robot",
+    "enonce": "Attention : le robot regarde vers le bas de l'écran. Guide-le jusqu'à l'étoile.",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 2,
+      "y": 0,
+      "direction": "sud"
+    },
+    "cible": {
+      "x": 4,
+      "y": 2
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite"
+    ],
+    "solution": [
+      "avancer",
+      "avancer",
+      "gauche",
+      "avancer",
+      "avancer"
+    ],
+    "explication": "Quand le robot regarde vers le bas, sa gauche est de ton côté droit. Il descend de 2 cases, tourne à SA gauche, puis avance de 2 cases."
+  },
+  {
+    "type": "robot",
+    "enonce": "Le robot doit contourner le mur pour atteindre l'étoile.",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 0,
+      "y": 0,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 0,
+      "y": 2
+    },
+    "murs": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite"
+    ],
+    "solution": [
+      "avancer",
+      "avancer",
+      "avancer",
+      "avancer",
+      "droite",
+      "avancer",
+      "avancer",
+      "droite",
+      "avancer",
+      "avancer",
+      "avancer",
+      "avancer"
+    ],
+    "explication": "Le robot traverse toute la ligne du haut, tourne à droite pour descendre de 2 cases, puis tourne encore à droite pour revenir vers la gauche."
+  },
+  {
+    "type": "robot",
+    "enonce": "Trouve le chemin le plus court : 6 blocs au maximum !",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 0,
+      "y": 4,
+      "direction": "nord"
+    },
+    "cible": {
+      "x": 3,
+      "y": 2
+    },
+    "murs": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite"
+    ],
+    "maxBlocs": 6,
+    "solution": [
+      "avancer",
+      "avancer",
+      "droite",
+      "avancer",
+      "avancer",
+      "avancer"
+    ],
+    "explication": "Le chemin le plus court : monter de 2 cases, tourner à droite, puis avancer de 3 cases. Tourner d'abord à droite demande plus de blocs."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Qu'est-ce qu'un programme ?",
+    "choix": [
+      "Une suite d'instructions que la machine suit dans l'ordre",
+      "Un dessin qui montre comment est faite la machine",
+      "Une machine qui réfléchit toute seule",
+      "L'écran de l'ordinateur"
+    ],
+    "bonneReponse": 0,
+    "explication": "Un programme est une liste d'instructions. La machine les exécute une par une, dans l'ordre, sans rien deviner."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le robot regarde vers la droite de l'écran. Il exécute « Tourner à gauche », puis « Avancer ». Vers où s'est-il déplacé ?",
+    "choix": [
+      "Vers le haut de l'écran",
+      "Vers le bas de l'écran",
+      "Vers la gauche de l'écran",
+      "Il n'a pas bougé"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le robot regarde vers la droite. En tournant à sa gauche, il se met à regarder vers le haut. Puis il avance d'une case vers le haut."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le robot regarde vers le bas de l'écran. Il tourne à droite. Vers où regarde-t-il maintenant ?",
+    "choix": [
+      "Vers la gauche de l'écran",
+      "Vers la droite de l'écran",
+      "Vers le haut de l'écran",
+      "Toujours vers le bas"
+    ],
+    "bonneReponse": 0,
+    "explication": "Mets-toi à la place du robot : il regarde vers le bas, donc sa droite est de ton côté gauche. Après un quart de tour à droite, il regarde vers la gauche de l'écran."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le robot regarde vers le haut. Léo veut le faire avancer de 2 cases vers le haut. Il écrit : « Avancer, Tourner à droite, Avancer ». Que fait le robot ?",
+    "choix": [
+      "Il avance d'une case vers le haut, puis d'une case vers la droite",
+      "Il avance de 2 cases vers le haut",
+      "Il avance de 2 cases vers la droite",
+      "Il tourne sur lui-même sans avancer"
+    ],
+    "bonneReponse": 0,
+    "explication": "Le robot fait exactement ce qui est écrit, même si ce n'est pas ce que Léo voulait. Pour monter de 2 cases, il fallait écrire « Avancer, Avancer », sans tourner."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Si un programme contient une erreur, l'ordinateur devine ce qu'on voulait dire et la corrige tout seul.",
+    "vrai": false,
+    "explication": "Faux. L'ordinateur suit les instructions telles qu'elles sont écrites. C'est au programmeur de trouver l'erreur et de la corriger."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le bloc « Tourner à droite » fait avancer le robot d'une case vers la droite.",
+    "vrai": false,
+    "explication": "Faux. « Tourner à droite » fait seulement pivoter le robot sur place. Pour changer de case, il faut ensuite « Avancer »."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "« Avancer puis tourner » et « tourner puis avancer » ne mènent pas le robot sur la même case.",
+    "vrai": true,
+    "explication": "Vrai. Dans le premier cas, le robot avance tout droit avant de tourner. Dans le second, il tourne d'abord, puis avance dans une autre direction. L'ordre des instructions compte."
+  }
+]

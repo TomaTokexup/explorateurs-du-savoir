@@ -1293,3 +1293,321 @@ a.cahier:active {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- 15. Programmation : leçons et robot sur une grille ---------- */
+
+/* Couleur de chaque sorte de bloc (comme les familles de blocs de Scratch) */
+:root {
+  --bloc-avancer: #2f6fdb;
+  --bloc-tourner: #7a4cc2;
+  --bloc-repeter: #e08a00;
+}
+
+/* --- Les leçons --- */
+.bouton-lecon {
+  font-family: var(--police-titre);
+  font-size: 1rem;
+  padding: 6px 14px;
+  margin: 0 0 12px;
+  border: 2px solid var(--couleur);
+  border-radius: 999px;
+  background: white;
+  color: var(--couleur);
+  cursor: pointer;
+}
+
+.bouton-lecon[hidden] { display: none; }
+
+.lecon {
+  padding: 18px 20px;
+  border: 3px solid var(--couleur);
+  border-radius: var(--rayon);
+  background: white;
+  box-shadow: 0 6px 0 color-mix(in srgb, var(--couleur) 30%, white);
+}
+
+.lecon[hidden] { display: none; }
+
+.lecon-titre {
+  font-family: var(--police-titre);
+  font-size: 1.5rem;
+  color: var(--couleur);
+  margin: 0 0 10px;
+}
+
+.lecon-texte p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.lecon-boutons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.lecon-boutons .bouton-suivant { margin-left: auto; }
+.lecon-boutons .bouton-suivant.dernier { background: var(--couleur); }
+
+.lecon-precedent {
+  margin-top: 24px;
+  font-family: var(--police-titre);
+  font-size: 1.05rem;
+  padding: 10px 16px;
+  border: 2px solid var(--encre-douce);
+  border-radius: var(--rayon);
+  background: white;
+  color: var(--encre-douce);
+  cursor: pointer;
+}
+
+.lecon-precedent[hidden] { display: none; }
+
+.demo-robot,
+.robot-plateau {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: flex-start;
+  margin: 8px 0 4px;
+}
+
+.demo-cote,
+.robot-cote {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+/* --- La grille --- */
+.terrain {
+  position: relative;
+  flex: 0 0 auto;
+  width: min(100%, calc(var(--colonnes) * 56px));
+  aspect-ratio: var(--colonnes) / var(--lignes);
+  display: grid;
+  grid-template-columns: repeat(var(--colonnes), 1fr);
+  grid-template-rows: repeat(var(--lignes), 1fr);
+  border: 3px solid var(--encre);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f4f8ff;
+}
+
+.case {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.4rem, 7vw, 2rem);
+  border-right: 1px solid #d6e2f5;
+  border-bottom: 1px solid #d6e2f5;
+}
+
+/* Une case sur deux un peu plus foncée, comme un damier : plus facile de compter les cases */
+.case.sombre { background-color: #e6eefc; }
+
+.case.mur {
+  background-color: #8a5a44;
+  background-image:
+    linear-gradient(90deg, transparent 47%, #6d4433 47% 53%, transparent 53%),
+    linear-gradient(transparent 47%, #6d4433 47% 53%, transparent 53%);
+  background-size: 50% 50%, 100% 50%;
+}
+
+.case.cible span { display: block; animation: scintille 1.6s ease-in-out infinite; }
+
+@keyframes scintille {
+  50% { transform: scale(1.15); }
+}
+
+.robot-pion {
+  position: absolute;
+  width: calc(100% / var(--colonnes));
+  height: calc(100% / var(--lignes));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.35s ease, top 0.35s ease, transform 0.35s ease;
+  z-index: 1;
+}
+
+.robot-pion svg { width: 84%; height: 84%; display: block; }
+.robot-pion.sans-transition { transition: none; }
+.robot-pion.cogne svg { animation: secousse 0.4s; }
+.robot-pion.arrive svg { animation: rebond 0.6s; }
+
+/* --- Les blocs --- */
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.bloc {
+  --c: var(--bloc-avancer);
+  font-family: var(--police-titre);
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: var(--c);
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--c) 60%, black);
+}
+
+.bloc-gauche,
+.bloc-droite { --c: var(--bloc-tourner); }
+.bloc-repeter { --c: var(--bloc-repeter); }
+.bloc-fin { --c: var(--encre-douce); }
+
+button.bloc { cursor: pointer; }
+button.bloc:active { transform: translateY(3px); box-shadow: 0 1px 0 color-mix(in srgb, var(--c) 60%, black); }
+button.bloc:disabled { opacity: 0.4; cursor: default; transform: none; }
+.bloc[hidden] { display: none; }
+
+.zone-programme {
+  padding: 10px;
+  border: 2px dashed var(--encre-douce);
+  border-radius: var(--rayon);
+  background: #fbfbff;
+}
+
+.compteur-blocs {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: var(--encre-douce);
+}
+
+.compteur-blocs.plein { color: var(--faux); font-weight: 700; }
+
+.programme,
+.programme-boucle {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.programme .bloc {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px 6px 12px;
+  transition: outline-color 0.2s;
+  outline: 3px solid transparent;
+  outline-offset: 2px;
+}
+
+.programme .bloc > span:first-child { flex: 1; }
+
+/* Une boucle « enveloppe » ses blocs, comme une pince */
+.programme .bloc-repeter { padding-bottom: 10px; }
+.programme .bloc-repeter.ouverte { outline-color: var(--surligneur); }
+
+.programme-boucle {
+  flex-basis: 100%;
+  margin-left: 14px;
+  padding: 8px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--bloc-repeter) 25%, white);
+}
+
+.bloc-titre { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+
+.tours {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: var(--bloc-repeter);
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.tours:disabled { opacity: 0.5; cursor: default; }
+
+.bloc-retirer {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.bloc-retirer:disabled { visibility: hidden; }
+
+.programme-vide {
+  color: var(--encre-douce);
+  font-style: italic;
+  padding: 4px 2px;
+}
+
+/* Le bloc en train de s'exécuter s'allume ; celui qui fait cogner le robot passe en rouge */
+.programme .bloc.en-cours { outline-color: var(--etoile); transform: scale(1.03); }
+.programme .bloc.bug { --c: var(--faux); outline-color: var(--faux); }
+
+.actions-robot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.actions-robot[hidden] { display: none; }
+
+.bouton-effacer {
+  font-family: var(--police-titre);
+  font-size: 1rem;
+  padding: 0 14px;
+  min-height: 52px;
+  border: 2px solid var(--encre-douce);
+  border-radius: var(--rayon);
+  background: white;
+  color: var(--encre-douce);
+  cursor: pointer;
+}
+
+.bouton-effacer:disabled { opacity: 0.4; cursor: default; }
+
+.demo-cote .bouton-lancer {
+  margin-top: 12px;
+  font-family: var(--police-titre);
+  font-size: 1.1rem;
+  padding: 10px 18px;
+  border: none;
+  border-radius: var(--rayon);
+  background: var(--couleur);
+  color: white;
+  cursor: pointer;
+}
+
+.demo-cote .bouton-lancer:disabled { opacity: 0.5; cursor: default; }
+
+.message-robot {
+  margin: 12px 0 0;
+  min-height: 1.4em;
+}
+
+.message-robot.attention {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--faux-fond);
+  color: var(--faux);
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .terrain { width: 100%; }
+}

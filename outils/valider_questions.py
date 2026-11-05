@@ -4,7 +4,7 @@ import json
 import sys
 from pathlib import Path
 
-TYPES_CONNUS = ["qcm", "saisie", "association", "ordre", "vraifaux"]
+TYPES_CONNUS = ["qcm", "saisie", "association", "ordre", "vraifaux", "robot"]
 CHAMPS_COMMUNS = ["enonce", "explication"]
 
 
@@ -53,6 +53,8 @@ def verifier_question(question, numero):
         erreurs.extend(verifier_ordre(question, numero))
     elif type_question == "vraifaux":
         erreurs.extend(verifier_vraifaux(question, numero))
+    elif type_question == "robot":
+        erreurs.extend(verifier_robot(question, numero))
 
     return erreurs
 
@@ -182,6 +184,154 @@ def verifier_vraifaux(question, numero):
     for champ in ("choix", "bonneReponse", "reponses", "paires", "elements"):
         if champ in question:
             erreurs.append(f"Question {numero} : champ '{champ}' inutile pour un vrai ou faux")
+
+    return erreurs
+
+def deplier(solution):
+    """Remplace chaque boucle par ses instructions, répétées le bon nombre de fois."""
+    instructions = []
+    for instruction in solution:
+        if isinstance(instruction, str):
+            instructions.append(instruction)
+        else:
+            for tour in range(instruction["repeter"]):
+                instructions.extend(instruction["faire"])
+    return instructions
+
+def verifier_robot(question, numero):
+    """Contrôles propres aux exercices « robot »."""
+    erreurs = []
+
+    # Contrôle 1 : la grille a une largeur et une hauteur entières, de 3 à 8
+    grille = question.get("grille")
+    if not isinstance(grille, dict):
+        erreurs.append(f"Question {numero} : 'grille' manquante")
+        return erreurs
+
+    largeur = grille.get("largeur")
+    hauteur = grille.get("hauteur")
+    if not (isinstance(largeur, int) and 3 <= largeur <= 8):
+        erreurs.append(f"Question {numero} : 'largeur' doit être un entier de 3 à 8")
+    if not (isinstance(hauteur, int) and 3 <= hauteur <= 8):
+        erreurs.append(f"Question {numero} : 'hauteur' doit être un entier de 3 à 8")
+    if erreurs:
+        return erreurs
+
+    # Contrôle 2 : le départ et la cible sont des cases de la grille
+    for nom in ("depart", "cible"):
+        position = question.get(nom)
+        if not isinstance(position, dict):
+            erreurs.append(f"Question {numero} : '{nom}' manquant")
+            continue
+        x = position.get("x")
+        y = position.get("y")
+        if not (isinstance(x, int) and 0 <= x < largeur and isinstance(y, int) and 0 <= y < hauteur):
+            erreurs.append(f"Question {numero} : '{nom}' doit être une case de la grille")
+    if erreurs:
+        return erreurs
+
+    depart = question["depart"]
+    cible = question["cible"]
+    if depart.get("direction") not in ("nord", "est", "sud", "ouest"):
+        erreurs.append(f"Question {numero} : la direction du départ doit être nord, est, sud ou ouest")
+    if depart["x"] == cible["x"] and depart["y"] == cible["y"]:
+        erreurs.append(f"Question {numero} : le départ ne doit pas être sur la cible")
+
+    # Contrôle 3 : les murs (facultatifs) sont des cases de la grille, sans doublon,
+    # et jamais sur le départ ni sur la cible
+    murs = question.get("murs", [])
+    if not isinstance(murs, list):
+        erreurs.append(f"Question {numero} : 'murs' doit être une liste")
+        return erreurs
+
+    deja_vus = []
+    for mur in murs:
+        if not (isinstance(mur, list) and len(mur) == 2):
+            erreurs.append(f"Question {numero} : chaque mur doit être une case [x, y]")
+            continue
+        x, y = mur
+        if not (isinstance(x, int) and 0 <= x < largeur and isinstance(y, int) and 0 <= y < hauteur):
+            erreurs.append(f"Question {numero} : le mur {mur} est hors de la grille")
+        if mur in deja_vus:
+            erreurs.append(f"Question {numero} : le mur {mur} est en double")
+        if mur == [depart["x"], depart["y"]] or mur == [cible["x"], cible["y"]]:
+            erreurs.append(f"Question {numero} : le mur {mur} est sur le départ ou sur la cible")
+        deja_vus.append(mur)
+
+    # Contrôle 4 : les blocs proposés à l'élève
+    BLOCS_CONNUS = ("avancer", "gauche", "droite", "repeter")
+    blocs = question.get("blocs")
+    if not (isinstance(blocs, list) and len(blocs) > 0 and all(b in BLOCS_CONNUS for b in blocs)):
+        erreurs.append(f"Question {numero} : 'blocs' doit être une liste non vide prise parmi {BLOCS_CONNUS}")
+        return erreurs
+
+    # Contrôle 5 : la solution n'utilise que des blocs autorisés, et ses boucles sont bien formées
+    solution = question.get("solution")
+    if not (isinstance(solution, list) and len(solution) > 0):
+        erreurs.append(f"Question {numero} : 'solution' doit être une liste d'instructions")
+        return erreurs
+
+    nombre_de_blocs = 0
+    for instruction in solution:
+        if isinstance(instruction, str):
+            nombre_de_blocs += 1
+            if instruction not in blocs:
+                erreurs.append(f"Question {numero} : l'instruction '{instruction}' n'est pas dans 'blocs'")
+        elif isinstance(instruction, dict):
+            tours = instruction.get("repeter")
+            faire = instruction.get("faire")
+            if "repeter" not in blocs:
+                erreurs.append(f"Question {numero} : la solution utilise une boucle, mais 'repeter' n'est pas dans 'blocs'")
+            if not (isinstance(tours, int) and 2 <= tours <= 10):
+                erreurs.append(f"Question {numero} : 'repeter' doit être un entier de 2 à 10")
+            if not (isinstance(faire, list) and len(faire) > 0 and all(i in blocs and i != "repeter" for i in faire)):
+                erreurs.append(f"Question {numero} : 'faire' doit être une liste d'instructions simples autorisées")
+            else:
+                nombre_de_blocs += 1 + len(faire)
+        else:
+            erreurs.append(f"Question {numero} : instruction inconnue dans la solution : {instruction}")
+
+    # Contrôle 6 : le nombre de blocs maximum (facultatif)
+    max_blocs = question.get("maxBlocs")
+    if max_blocs is not None:
+        if not isinstance(max_blocs, int):
+            erreurs.append(f"Question {numero} : 'maxBlocs' doit être un entier")
+        elif nombre_de_blocs > max_blocs:
+            erreurs.append(f"Question {numero} : la solution utilise {nombre_de_blocs} blocs, plus que 'maxBlocs' ({max_blocs})")   
+
+    # Contrôle 8 : pas de champs propres aux autres types
+    for champ in ("choix", "bonneReponse", "reponses", "paires", "elements", "vrai"):
+        if champ in question:
+            erreurs.append(f"Question {numero} : champ '{champ}' inutile pour un exercice robot")
+            
+    # Contrôle 7 : on fait jouer la solution, le robot doit finir sur l'étoile sans se cogner
+    if erreurs:
+        return erreurs   # inutile de simuler une solution mal écrite
+
+    DIRECTIONS = ["nord", "est", "sud", "ouest"]
+    PAS = {"nord": (0, -1), "est": (1, 0), "sud": (0, 1), "ouest": (-1, 0)}
+
+    x = depart["x"]
+    y = depart["y"]
+    direction = depart["direction"]
+    for numero_instruction, instruction in enumerate(deplier(solution), start=1):
+        if instruction == "avancer":
+            dx, dy = PAS[direction]
+            nouveau_x = x + dx
+            nouveau_y = y + dy
+            dans_la_grille = 0 <= nouveau_x < largeur and 0 <= nouveau_y < hauteur
+            if not dans_la_grille or [nouveau_x, nouveau_y] in murs:
+                erreurs.append(f"Question {numero} : la solution fait cogner le robot (instruction n°{numero_instruction})")
+                return erreurs
+            x = nouveau_x
+            y = nouveau_y
+        elif instruction == "droite":
+            direction = DIRECTIONS[(DIRECTIONS.index(direction) + 1) % 4]
+        elif instruction == "gauche":
+            direction = DIRECTIONS[(DIRECTIONS.index(direction) - 1) % 4]
+
+    if x != cible["x"] or y != cible["y"]:
+        erreurs.append(f"Question {numero} : la solution arrête le robot en ({x}, {y}), pas sur l'étoile")
 
     return erreurs
 
