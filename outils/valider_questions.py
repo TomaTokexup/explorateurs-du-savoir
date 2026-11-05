@@ -218,15 +218,16 @@ DIRECTIONS = ["nord", "est", "sud", "ouest"]
 PAS = {"nord": (0, -1), "est": (1, 0), "sud": (0, 1), "ouest": (-1, 0)}
 
 
-def simuler(depart, programme, largeur, hauteur, murs):
+def simuler(depart, programme, largeur, hauteur, murs, pieces):
     """Fait jouer un programme au robot.
-    Renvoie (x, y, choc) : la case d'arrivée, et le numéro de l'instruction
-    qui fait cogner le robot (None s'il ne se cogne pas)."""
+    Renvoie (x, y, choc, pieces) : la case d'arrivée, et le numéro de l'instruction
+    qui fait cogner le robot (None s'il ne se cogne pas) et le nombre de pièces ramassées."""
     x = depart["x"]
     y = depart["y"]
     direction = depart["direction"]
     a_faire = deplier(programme)
     numero_instruction = 0
+    ramassees = [] # les pieces deja ramassées
     while a_faire:
         instruction = a_faire.pop(0)
 
@@ -245,13 +246,16 @@ def simuler(depart, programme, largeur, hauteur, murs):
             nouveau_x, nouveau_y = x + dx, y + dy
             dans_la_grille = 0 <= nouveau_x < largeur and 0 <= nouveau_y < hauteur
             if not dans_la_grille or [nouveau_x, nouveau_y] in murs:
-                return x, y, numero_instruction
+                return x, y, numero_instruction, len(ramassees)
             x, y = nouveau_x, nouveau_y
+            # Vérifier si le robot ramasse une pièce
+            if [x, y] in pieces and [x, y] not in ramassees:
+                ramassees.append([x, y])
         elif instruction == "droite":
             direction = DIRECTIONS[(DIRECTIONS.index(direction) + 1) % 4]
         elif instruction == "gauche":
             direction = DIRECTIONS[(DIRECTIONS.index(direction) - 1) % 4]
-    return x, y, None
+    return x, y, None, len(ramassees)  # pas de choc, on renvoie le nombre de pièces ramassées
 
 
 def verifier_programme(programme, blocs, numero, nom):
@@ -388,7 +392,7 @@ def verifier_robot(question, numero):
     necessaires = question.get("piecesNecessaires", len(pieces))
     if "piecesNecessaires" in question and not (isinstance(necessaires, int) and 1 <= necessaires <= len(pieces)):
         erreurs.append(f"Question {numero} : 'piecesNecessaires' doit être un entier de 1 à {len(pieces)}")
-        
+
     # Contrôle 4 : les blocs proposés à l'élève
     BLOCS_CONNUS = ("avancer", "gauche", "droite", "repeter", "si_mur")
     blocs = question.get("blocs")
@@ -426,17 +430,19 @@ def verifier_robot(question, numero):
     if erreurs:
         return erreurs   # inutile de simuler une solution mal écrite
 
-    x, y, choc = simuler(depart, solution, largeur, hauteur, murs)
+    x, y, choc, nb_pieces = simuler(depart, solution, largeur, hauteur, murs, pieces)
     if choc is not None:
         erreurs.append(f"Question {numero} : la solution fait cogner le robot (instruction n°{choc})")
     elif x != cible["x"] or y != cible["y"]:
         erreurs.append(f"Question {numero} : la solution arrête le robot en ({x}, {y}), pas sur l'étoile")
+    elif nb_pieces < necessaires:
+        erreurs.append(f"Question {numero} : la solution ramasse {nb_pieces} pièces, moins que 'piecesNecessaires' ({necessaires})")
 
     # Contrôle 9 : le programme de départ (chasse aux bugs) doit contenir un bug,
     # c'est-à-dire ne PAS amener le robot sur l'étoile
     if programme_depart is not None:
-        x, y, choc = simuler(depart, programme_depart, largeur, hauteur, murs)
-        if choc is None and x == cible["x"] and y == cible["y"]:
+        x, y, choc, nb_pieces = simuler(depart, programme_depart, largeur, hauteur, murs, pieces)
+        if choc is None and x == cible["x"] and y == cible["y"] and nb_pieces >= necessaires:
             erreurs.append(f"Question {numero} : le programme de départ marche déjà : il n'y a pas de bug à trouver")
 
     return erreurs
