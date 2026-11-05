@@ -1,0 +1,241 @@
+[
+  {
+    "type": "robot",
+    "enonce": "Le robot doit suivre le bord de la grille jusqu'à l'étoile. 4 blocs au maximum !",
+    "grille": {
+      "largeur": 5,
+      "hauteur": 5
+    },
+    "depart": {
+      "x": 0,
+      "y": 4,
+      "direction": "nord"
+    },
+    "cible": {
+      "x": 4,
+      "y": 0
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter",
+      "si_mur"
+    ],
+    "maxBlocs": 4,
+    "solution": [{"repeter": 8, "faire": [{"si": "mur_devant", "faire": ["droite"]}, "avancer"]}],
+    "explication": "À chaque tour, le robot regarde devant lui : s'il voit le bord, il tourne à droite, puis il avance. 8 tours suffisent : 4 cases vers le haut, puis 4 vers la droite."
+  },
+  {
+    "type": "robot",
+    "enonce": "Fais faire au robot presque tout le tour de la grille. 4 blocs au maximum !",
+    "grille": {
+      "largeur": 4,
+      "hauteur": 4
+    },
+    "depart": {
+      "x": 0,
+      "y": 0,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 0,
+      "y": 3
+    },
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter",
+      "si_mur"
+    ],
+    "maxBlocs": 4,
+    "solution": [
+      {
+        "repeter": 9,
+        "faire": [
+          {
+            "si": "mur_devant",
+            "faire": [
+              "droite"
+            ]
+          },
+          "avancer"
+        ]
+      }
+    ],
+    "explication": "Le robot avance, et tourne à droite chaque fois que le bord l'arrête. Il fait 9 pas : 3 vers la droite, 3 vers le bas et 3 vers la gauche."
+  },
+  {
+    "type": "robot",
+    "enonce": "Les murs ne sont pas à la même distance : le robot doit tourner à gauche chaque fois qu'un mur l'arrête. 4 blocs au maximum !",
+    "grille": {
+      "largeur": 6,
+      "hauteur": 6
+    },
+    "depart": {
+      "x": 0,
+      "y": 5,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 2,
+      "y": 3
+    },
+    "murs": [
+      [
+        5,
+        5
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter",
+      "si_mur"
+    ],
+    "maxBlocs": 4,
+    "solution": [
+      {
+        "repeter": 8,
+        "faire": [
+          {
+            "si": "mur_devant",
+            "faire": [
+              "gauche"
+            ]
+          },
+          "avancer"
+        ]
+      }
+    ],
+    "explication": "« Répéter 8 fois : si mur devant, tourner à gauche ; avancer ». Le robot n'a pas besoin de connaître les distances : il tourne quand il rencontre un mur."
+  },
+  {
+    "type": "robot",
+    "enonce": "Des rochers bloquent le chemin. Le robot doit monter d'une case pour passer chaque rocher. 6 blocs au maximum !",
+    "grille": {
+      "largeur": 6,
+      "hauteur": 3
+    },
+    "depart": {
+      "x": 0,
+      "y": 2,
+      "direction": "est"
+    },
+    "cible": {
+      "x": 5,
+      "y": 0
+    },
+    "murs": [
+      [
+        2,
+        2
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "blocs": [
+      "avancer",
+      "gauche",
+      "droite",
+      "repeter",
+      "si_mur"
+    ],
+    "maxBlocs": 6,
+    "solution": [
+      {
+        "repeter": 5,
+        "faire": [
+          {
+            "si": "mur_devant",
+            "faire": [
+              "gauche",
+              "avancer",
+              "droite"
+            ]
+          },
+          "avancer"
+        ]
+      }
+    ],
+    "explication": "Devant un rocher, le robot tourne à gauche, monte d'une case, se remet vers la droite, puis avance. Sinon, il avance tout droit. 5 tours suffisent."
+  },
+  {
+    "type": "qcm",
+    "enonce": "« S'il pleut, alors je prends mon parapluie. » Quelle est la condition ?",
+    "choix": [
+      "« Il pleut »",
+      "« Je prends mon parapluie »",
+      "« Alors »",
+      "« Mon parapluie »"
+    ],
+    "bonneReponse": 0,
+    "explication": "La condition est la question qu'on se pose : est-ce qu'il pleut ? Si la réponse est oui, on fait l'action : prendre son parapluie."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le robot exécute « Si mur devant : Tourner à droite ». Il n'y a pas de mur devant lui. Que fait-il ?",
+    "choix": [
+      "Rien : il passe au bloc suivant",
+      "Il tourne à droite",
+      "Il avance d'une case",
+      "Il s'arrête définitivement"
+    ],
+    "bonneReponse": 0,
+    "explication": "La réponse à la question « mur devant ? » est non : le robot saute les blocs placés dans la condition et continue le programme."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Pourquoi place-t-on souvent un « Si mur devant » dans une boucle ?",
+    "choix": [
+      "Pour que le robot vérifie à chaque tour s'il y a un mur",
+      "Pour que le robot aille plus vite",
+      "Pour enlever les murs de la grille",
+      "Pour que la boucle s'arrête tout de suite"
+    ],
+    "bonneReponse": 0,
+    "explication": "Dans une boucle, la condition est vérifiée à chaque tour. Le robot peut ainsi réagir au bon moment, sans qu'on compte les cases à l'avance."
+  },
+  {
+    "type": "qcm",
+    "enonce": "Le robot regarde vers la droite et un mur est juste devant lui. Il exécute « Si mur devant : Tourner à gauche », puis « Avancer ». Vers où s'est-il déplacé ?",
+    "choix": [
+      "Vers le haut de l'écran",
+      "Vers la droite de l'écran",
+      "Vers le bas de l'écran",
+      "Il ne bouge pas"
+    ],
+    "bonneReponse": 0,
+    "explication": "Il y a un mur : le robot tourne à sa gauche et regarde maintenant vers le haut. Puis il avance d'une case vers le haut."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Le bloc « Si mur devant » fait toujours tourner le robot.",
+    "vrai": false,
+    "explication": "Faux. Les blocs placés dans la condition ne sont exécutés que s'il y a un mur devant le robot. Sinon, il les saute."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Une condition est une question dont la réponse est oui ou non.",
+    "vrai": true,
+    "explication": "Vrai. « Y a-t-il un mur devant ? », « Est-ce qu'il pleut ? » : on répond par oui ou par non, et on agit selon la réponse."
+  },
+  {
+    "type": "vraifaux",
+    "enonce": "Pour le robot, le bord de la grille compte comme un mur.",
+    "vrai": true,
+    "explication": "Vrai. Le robot ne peut pas sortir de la grille : s'il est au bord, la réponse à « mur devant ? » est oui."
+  }
+]

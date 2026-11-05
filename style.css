@@ -1301,6 +1301,7 @@ a.cahier:active {
   --bloc-avancer: #2f6fdb;
   --bloc-tourner: #7a4cc2;
   --bloc-repeter: #e08a00;
+  --bloc-si: #1f9d8f;
 }
 
 /* --- Les leçons --- */
@@ -1463,6 +1464,7 @@ a.cahier:active {
 .bloc-gauche,
 .bloc-droite { --c: var(--bloc-tourner); }
 .bloc-repeter { --c: var(--bloc-repeter); }
+.bloc-si_mur { --c: var(--bloc-si); }
 .bloc-fin { --c: var(--encre-douce); }
 
 button.bloc { cursor: pointer; }
@@ -1486,7 +1488,7 @@ button.bloc:disabled { opacity: 0.4; cursor: default; transform: none; }
 .compteur-blocs.plein { color: var(--faux); font-weight: 700; }
 
 .programme,
-.programme-boucle {
+.programme-dedans {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1509,15 +1511,16 @@ button.bloc:disabled { opacity: 0.4; cursor: default; transform: none; }
 .programme .bloc > span:first-child { flex: 1; }
 
 /* Une boucle « enveloppe » ses blocs, comme une pince */
-.programme .bloc-repeter { padding-bottom: 10px; }
-.programme .bloc-repeter.ouverte { outline-color: var(--surligneur); }
+.programme .bloc-repeter,
+.programme .bloc-si_mur { padding-bottom: 10px; }
+.programme .bloc.ouverte { outline-color: var(--surligneur); }
 
-.programme-boucle {
+.programme-dedans {
   flex-basis: 100%;
   margin-left: 8px;
   padding: 8px;
   border-radius: 8px;
-  background: color-mix(in srgb, var(--bloc-repeter) 25%, white);
+  background: color-mix(in srgb, var(--c) 25%, white);
 }
 
 .programme .bloc-titre { flex: 1 1 auto; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; white-space: nowrap; cursor: pointer; }
@@ -1631,7 +1634,7 @@ button.bloc:disabled { opacity: 0.4; cursor: default; transform: none; }
 .palette[hidden] { display: none; }
 
 /* Compteur de tours d'une boucle pendant que le robot joue le programme */
-.compteur-tours {
+.pastille-execution {
   margin-left: 4px;
   padding: 2px 10px;
   border-radius: 999px;
@@ -1642,4 +1645,8 @@ button.bloc:disabled { opacity: 0.4; cursor: default; transform: none; }
   white-space: nowrap;
 }
 
-.compteur-tours.nouveau-tour { animation: rebond 0.35s; }
+.pastille-execution.nouveau-tour { animation: rebond 0.35s; }
+
+/* Réponse d'une condition pendant l'exécution */
+.pastille-execution.oui { color: var(--faux); }
+.pastille-execution.non { color: var(--encre-douce); }

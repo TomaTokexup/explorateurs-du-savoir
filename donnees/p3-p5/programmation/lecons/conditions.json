@@ -1,0 +1,89 @@
+[
+  {
+    "titre": "Si… alors…",
+    "texte": "Dans la vie, on décide souvent selon la situation : « S'il pleut, alors je prends mon parapluie. »\n« Il pleut » est une condition : une question dont la réponse est oui ou non. Si la réponse est oui, on fait l'action. Si elle est non, on ne la fait pas."
+  },
+  {
+    "titre": "Le robot regarde devant lui",
+    "texte": "Le bloc « ❓ Si mur devant » pose une question au robot : y a-t-il un mur, ou le bord de la grille, sur la case juste devant toi ?\nSi oui, il fait les blocs placés dedans. Si non, il les saute et passe à la suite. Regarde : la première fois, la réponse est « non » ; la deuxième fois, c'est « oui ».",
+    "demo": {
+      "grille": {
+        "largeur": 4,
+        "hauteur": 3
+      },
+      "depart": {
+        "x": 0,
+        "y": 1,
+        "direction": "est"
+      },
+      "cible": {
+        "x": 2,
+        "y": 0
+      },
+      "murs": [
+        [
+          3,
+          1
+        ]
+      ],
+      "programme": [
+        {
+          "si": "mur_devant",
+          "faire": [
+            "gauche"
+          ]
+        },
+        "avancer",
+        "avancer",
+        {
+          "si": "mur_devant",
+          "faire": [
+            "gauche"
+          ]
+        },
+        "avancer"
+      ]
+    }
+  },
+  {
+    "titre": "Une condition dans une boucle",
+    "texte": "Dans une boucle, le robot pose la question à chaque tour. Il avance tout droit, et tourne seulement quand un mur l'arrête.\nAvec ces 4 blocs, il suit le bord de la grille sans qu'on ait besoin de compter les cases !",
+    "demo": {
+      "grille": {
+        "largeur": 4,
+        "hauteur": 4
+      },
+      "depart": {
+        "x": 0,
+        "y": 3,
+        "direction": "nord"
+      },
+      "cible": {
+        "x": 3,
+        "y": 0
+      },
+      "programme": [
+        {
+          "repeter": 6,
+          "faire": [
+            {
+              "si": "mur_devant",
+              "faire": [
+                "droite"
+              ]
+            },
+            "avancer"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "titre": "Construire une condition",
+    "texte": "Touche « ❓ Si mur devant » : le bloc apparaît, entouré de jaune. Les blocs que tu touches ensuite vont dedans. Touche « ✔ Fin du si » pour continuer après lui.\nPour mettre une condition dans une boucle, construis d'abord la boucle, puis, quand elle est entourée de jaune, touche « ❓ Si mur devant »."
+  },
+  {
+    "titre": "À toi de jouer !",
+    "texte": "Pour chaque exercice, demande-toi : où le robot doit-il tourner ? Est-ce toujours juste devant un mur ? Si oui, une condition dans une boucle fera le travail.\nLe nombre de blocs est limité : il faudra être malin ! À la fin, un petit test t'attend."
+  }
+]
