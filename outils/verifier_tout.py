@@ -1,4 +1,4 @@
-"""Vérifie toutes les banques de questions du site d'un coup.
+"""Vérifie toutes les  banques de questions du site d'un coup.
 Utilisé à la main avant un commit, et automatiquement par GitHub à chaque push."""
 import json
 import sys
