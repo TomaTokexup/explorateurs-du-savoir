@@ -16,3 +16,7 @@ images/exemples/
 #le programme de francais
 programme/sources/
 programme/**/*.pdf
+
+# Fichiers cache de pytest et de python
+.pytest_cache/
+__pycache__/
