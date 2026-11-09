@@ -1,6 +1,6 @@
 # Recette GitHub Actions : à chaque push (et à chaque pull request),
 # GitHub vérifie automatiquement toutes les banques de questions.
-name: Vérifier les questions
+name: Vérifier les questions et tester le site
 
 on:
   push:
@@ -20,3 +20,24 @@ jobs:
 
       - name: Vérifier toutes les banques de questions
         run: python outils/verifier_tout.py
+
+  
+  tester-le-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code du dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer pytest et Playwright
+        run: pip install -r requirements-tests.txt
+
+      - name: Installer le navigateur Chromium
+        run: python -m playwright install --with-deps chromium
+
+      - name: Lancer les tests du site
+        run: python -m pytest
