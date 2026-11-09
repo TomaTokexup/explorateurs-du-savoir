@@ -9,6 +9,38 @@
    ========================================================= */
 
 /* ---------- 1. Variables (les "réglages" du design) ---------- */
+/* ---------- 0. Polices, hébergées avec le site ----------
+   Fredoka pour les titres, Andika (conçue pour les jeunes lecteurs) pour le texte.
+   Les fichiers sont dans polices/ : la page ne contacte aucun service extérieur (comme Google Fonts),
+   ce qui protège la vie privée des visiteurs. Licence SIL OFL 1.1 (polices/OFL-*.txt). */
+@font-face {
+  font-family: "Fredoka";
+  font-weight: 500;
+  font-display: swap;
+  src: url("polices/fredoka-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Fredoka";
+  font-weight: 600;
+  font-display: swap;
+  src: url("polices/fredoka-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Andika";
+  font-weight: 400;
+  font-display: swap;
+  src: url("polices/andika-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Andika";
+  font-weight: 700;
+  font-display: swap;
+  src: url("polices/andika-700.woff2") format("woff2");
+}
+
 :root {
   /* Couleurs de base */
   --papier: #fdfdfb;          /* fond de la page */
@@ -1791,4 +1823,36 @@ button.bloc:disabled { opacity: 0.4; cursor: default; transform: none; }
 
 @media (max-width: 560px) {
   .terrain-cadre { width: 100%; }
+}
+
+/* ---------- 17. Page « Mentions légales et confidentialité » ---------- */
+.mentions {
+  max-width: 680px;
+  padding: 6px 22px 14px;
+  background: color-mix(in srgb, white 85%, transparent);
+  border-radius: var(--rayon);
+}
+
+.mentions h2 {
+  margin: 22px 0 8px;
+  font-size: 1.3rem;
+  color: var(--encre);
+}
+
+.mentions p,
+.mentions li {
+  line-height: 1.6;
+}
+
+.mentions ul {
+  padding-left: 1.2em;
+}
+
+.mentions li {
+  margin-bottom: 8px;
+}
+
+.mentions a {
+  color: var(--encre);
+  font-weight: 700;
 }
