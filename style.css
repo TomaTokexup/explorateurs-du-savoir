@@ -20,10 +20,12 @@
 
   /* Couleur de chaque matière (protège-cahiers) */
   --maths: #2f6fdb;
-  --francais: #d9433a;
+  /* Couleurs assez foncées pour que le texte blanc posé dessus reste bien lisible
+     (contraste d'au moins 4,5 : la règle d'accessibilité WCAG AA) */
+  --francais: #c13a32;
   --anglais: #7a4cc2;
-  --decouverte: #2e9e6a;
-  --programmation: #cf4a8a;
+  --decouverte: #25845a;
+  --programmation: #b83a78;
 
   /* Intercalaires des classes, surligneur et étoiles */
   --p3: #ffcf3f;              /* jaune */
@@ -34,9 +36,9 @@
   --etoile-vide: #d9dfea;
 
   /* Corrections */
-  --juste: #2e9e6a;
+  --juste: #217a53;
   --juste-fond: #e3f5ec;
-  --faux: #d9433a;
+  --faux: #c13a32;
   --faux-fond: #fdeceb;
 
   /* Typographie */
@@ -294,9 +296,12 @@ body[data-page="accueil"] .entete h1 span {
   display: block;
   font-family: var(--police-titre);
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.2;
-  overflow-wrap: anywhere;
+  /* Un mot trop long est coupé avec un tiret, à un endroit correct (« Mathéma-tiques »),
+     plutôt que n'importe où (« Mathématique-s ») */
+  hyphens: auto;
+  overflow-wrap: normal;
 }
 
 .etiquette .precision {
@@ -1300,8 +1305,8 @@ a.cahier:active {
 :root {
   --bloc-avancer: #2f6fdb;
   --bloc-tourner: #7a4cc2;
-  --bloc-repeter: #e08a00;
-  --bloc-si: #1f9d8f;
+  --bloc-repeter: #a86400;
+  --bloc-si: #16786e;
 }
 
 /* --- Les leçons --- */

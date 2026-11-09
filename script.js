@@ -174,6 +174,7 @@ function cleEtoilesDe(idNiveau, idMatiere, idTheme) {
 function creerEtoiles(nombre) {
   const bloc = document.createElement("span");
   bloc.className = "etoiles";
+  bloc.setAttribute("role", "img");   // un « dessin » d'étoiles, que le lecteur d'écran lit grâce à son étiquette
   bloc.setAttribute("aria-label", nombre + " étoile" + (nombre > 1 ? "s" : "") + " sur 3");
   for (let i = 0; i < 3; i++) {
     const etoile = document.createElement("span");
@@ -373,8 +374,12 @@ async function pageCahier() {
       cleEtoiles = cleEtoilesDe(idNiveau, idMatiere, theme.id);
       banque = await lireJSON(dossier + theme.id + ".json");
       nombreParPartie = NOMBRE_QUESTIONS_THEME;
-      // Une leçon est facultative : si le fichier n'existe pas, on passe directement aux exercices
-      lecon = await lireJSON(dossier + "lecons/" + theme.id + ".json").catch(function () { return null; });
+      // Les leçons n'existent que dans les cahiers « parcours » (programmation) ; ailleurs, on ne
+      // les cherche même pas (sinon le navigateur note une erreur 404 à chaque quiz).
+      // Une leçon reste facultative : si le fichier n'existe pas, on passe directement aux exercices.
+      if (matiere.parcours) {
+        lecon = await lireJSON(dossier + "lecons/" + theme.id + ".json").catch(function () { return null; });
+      }
     }
 
     const sousTitre = document.getElementById("sous-titre");
